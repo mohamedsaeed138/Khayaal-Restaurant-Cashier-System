@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.BtnBills = new FontAwesome.Sharp.IconButton();
             this.BtnPurchase = new FontAwesome.Sharp.IconButton();
@@ -42,8 +41,6 @@
             this.Homelabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelMenu.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -277,16 +274,6 @@
             this.panelDesktop.Size = new System.Drawing.Size(591, 399);
             this.panelDesktop.TabIndex = 2;
             // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 1D;
-            this.guna2DragControl1.TargetControl = this.panelMenu;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this.panelMenu;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -296,7 +283,6 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -324,7 +310,5 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Homelabel;
         private Button button1;
         private Panel panelDesktop;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

@@ -137,11 +137,5 @@
       <DependentUpon>Restaurant_Cafe.mdf</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SideBar\SideBar.csproj">
-      <Project>{f8cf994b-55e6-4b4e-94bb-5c5d65adb4e1}</Project>
-      <Name>SideBar</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
