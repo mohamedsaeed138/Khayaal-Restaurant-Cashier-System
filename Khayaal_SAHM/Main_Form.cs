@@ -16,5 +16,10 @@ namespace SAHM_Version_ALPHA_0._1
         {
             InitializeComponent();
         }
+
+        private void bunifuSwitch1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
