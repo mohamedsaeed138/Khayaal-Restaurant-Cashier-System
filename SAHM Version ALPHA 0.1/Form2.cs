@@ -8,7 +8,7 @@ namespace SAHM_Version_ALPHA_0._1
     public partial class LoginS : Form
     {
         //Change it because it's different for evryone !!
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\C# Projects\SAHM\Restaurant_Cafe DB\Restaurant_Cafe.mdf"";Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Documents\GitHub\New folder\Solution3\SAHM Version ALPHA 0.1\DataBase\Restaurant_Cafe.mdf"";Integrated Security=True;Connect Timeout=30");
         public LoginS()
         {
             InitializeComponent();
