@@ -1,22 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using Microsoft.VisualBasic.ApplicationServices;
+using System.Windows.Forms;
 
 namespace SAHM_Version_ALPHA_0._1
 {
     public partial class LoginS : Form
     {
         //Change it because it's different for evryone !!
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Documents\GitHub\New folder\Solution3\SAHM Version ALPHA 0.1\DataBase\Restaurant_Cafe.mdf"";Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\C# Projects\SAHM\Restaurant_Cafe DB\Restaurant_Cafe.mdf"";Integrated Security=True;Connect Timeout=30");
         public LoginS()
         {
             InitializeComponent();
@@ -24,7 +16,7 @@ namespace SAHM_Version_ALPHA_0._1
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-                this.Close();
+            this.Close();
         }
 
         private void login_B_Click(object sender, EventArgs e)
@@ -46,7 +38,7 @@ namespace SAHM_Version_ALPHA_0._1
 
                     SqlCommand loginCOM = new SqlCommand($"INSERT INTO CR.Users_Login_History(User_Name, Date)VALUES('{txt_user}', GETDATE())", con);
                     loginCOM.ExecuteNonQuery();
-                    
+
                     //Put the new form here
 
                     /*Main_Form main_Form = new Main_Form();

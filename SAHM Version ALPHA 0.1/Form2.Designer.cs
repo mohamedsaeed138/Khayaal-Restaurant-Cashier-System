@@ -1,4 +1,5 @@
-﻿namespace SAHM_Version_ALPHA_0._1
+﻿
+namespace SAHM_Version_ALPHA_0._1
 {
     partial class LoginS
     {
