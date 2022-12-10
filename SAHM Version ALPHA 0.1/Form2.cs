@@ -60,5 +60,10 @@ namespace SAHM_Version_ALPHA_0._1
                 con.Close();
             }
         }
+
+        private void login_B_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
