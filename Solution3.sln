@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAHM Version ALPHA 0.1", "SAHM Version ALPHA 0.1\SAHM Version ALPHA 0.1.csproj", "{2B3D809B-F181-45BD-A99C-5A288535D298}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SideBar", "..\SideBar\SideBar.csproj", "{1E0F6554-8777-43D7-B3E5-808E07DB600E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2B3D809B-F181-45BD-A99C-5A288535D298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B3D809B-F181-45BD-A99C-5A288535D298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B3D809B-F181-45BD-A99C-5A288535D298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E0F6554-8777-43D7-B3E5-808E07DB600E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E0F6554-8777-43D7-B3E5-808E07DB600E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E0F6554-8777-43D7-B3E5-808E07DB600E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E0F6554-8777-43D7-B3E5-808E07DB600E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
