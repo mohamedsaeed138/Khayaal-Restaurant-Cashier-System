@@ -60,6 +60,7 @@ namespace SAHM_Version_ALPHA_0._1
             this.login_B.Size = new System.Drawing.Size(254, 59);
             this.login_B.TabIndex = 7;
             this.login_B.Text = "Login";
+            this.login_B.Click += new System.EventHandler(this.login_B_Click_1);
             // 
             // guna2ControlBox1
             // 
