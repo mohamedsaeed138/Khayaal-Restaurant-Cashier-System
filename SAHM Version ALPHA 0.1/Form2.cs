@@ -24,7 +24,7 @@ namespace SAHM_Version_ALPHA_0._1
 
         private void gunaControlBox1_Click(object sender, EventArgs e)
         {
-                Application.Exit();
+                this.Close();
         }
 
         private void login_B_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace SAHM_Version_ALPHA_0._1
                     SqlCommand loginCOM = new SqlCommand($"INSERT INTO CR.Users_Login_History(User_Name, Date)VALUES('{txt_user}', GETDATE())", con);
                     loginCOM.ExecuteNonQuery();
                     
-                    //Name the new form here
+                    //Put the new form here
 
                     /*Main_Form main_Form = new Main_Form();
                     main_Form.Show();*/
