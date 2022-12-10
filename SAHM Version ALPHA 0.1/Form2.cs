@@ -22,7 +22,7 @@ namespace SAHM_Version_ALPHA_0._1
             InitializeComponent();
         }
 
-        private void gunaControlBox1_Click(object sender, EventArgs e)
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
                 this.Close();
         }
