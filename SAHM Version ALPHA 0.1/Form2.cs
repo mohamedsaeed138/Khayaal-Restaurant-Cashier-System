@@ -19,9 +19,7 @@ namespace SAHM_Version_ALPHA_0._1
             this.Close();
         }
 
-        
-
-        private void login_B_Click_1(object sender, EventArgs e)
+        private void login_B_Click(object sender, EventArgs e)
         {
             String txt_user, txt_pass;
             txt_user = Username.Text;
