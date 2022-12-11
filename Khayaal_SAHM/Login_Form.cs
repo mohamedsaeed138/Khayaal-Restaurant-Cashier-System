@@ -1,5 +1,4 @@
-﻿using Connection_Strings;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace SAHM_Version_ALPHA_0._1
 {
