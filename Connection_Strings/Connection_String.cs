@@ -6,7 +6,7 @@
     /// </summary>
     public class Connection_String
     {
-        public static string Value = MS;//Change Value When You Want To Change The Connection Strin Wich Fits Your PC 
+        public static string Value = HS;//Change Value When You Want To Change The Connection Strin Wich Fits Your PC 
         private static string MS = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=E:\SAHM\Khayaal_SAHM\DataBase\Restaurant_Cafe.mdf;Integrated Security = True; Connect Timeout = 30";
         private static string HS = @"";//GHAREEB Enter Your Connection String
         private static string AG = @"";//GHAREEB Enter Your Connection String

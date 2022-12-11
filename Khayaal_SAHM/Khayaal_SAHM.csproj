@@ -151,11 +151,5 @@
       <DependentUpon>Restaurant_Cafe.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary2\Connection_Strings.csproj">
-      <Project>{74487a79-c799-4288-b21d-9bc052629bb8}</Project>
-      <Name>Connection_Strings</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
