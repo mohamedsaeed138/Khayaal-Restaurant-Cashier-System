@@ -76,7 +76,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Connection_String.cs" />
     <Compile Include="Loading_Form.cs">
       <SubType>Form</SubType>
