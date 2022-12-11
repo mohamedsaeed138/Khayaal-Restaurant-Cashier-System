@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -118,16 +119,25 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> 2a0f341abf6b1dab229e317c8f33e559976c9c6c
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.bunifuCheckbox1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 2a0f341abf6b1dab229e317c8f33e559976c9c6c
             this.Name = "Main_Form";
             this.Text = "Main_Form";
             this.ResumeLayout(false);
@@ -135,11 +145,14 @@
         }
 
         #endregion
+<<<<<<< HEAD
 
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Bunifu.Framework.UI.BunifuColorTransition bunifuColorTransition1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+=======
+>>>>>>> 2a0f341abf6b1dab229e317c8f33e559976c9c6c
     }
 }
