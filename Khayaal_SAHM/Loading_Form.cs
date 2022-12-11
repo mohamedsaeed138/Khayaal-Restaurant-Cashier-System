@@ -29,9 +29,9 @@ namespace Khayaal_SAHM
                 {
                     timer1.Stop();
 
-                    Thread loginS = new Thread(logins_TH);
-                    loginS.SetApartmentState(ApartmentState.STA);
-                    loginS.Start();
+                    Thread login_Start_Thread = new Thread(Start_A_Login_Form);
+                    login_Start_Thread.SetApartmentState(ApartmentState.STA);
+                    login_Start_Thread.Start();
 
                     this.Close();
                 }
@@ -42,7 +42,7 @@ namespace Khayaal_SAHM
             }
         }
 
-        static void logins_TH()
+        static void Start_A_Login_Form()
         {
             Application.Run(new Login_Form());
         }
