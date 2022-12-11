@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SAHM_Version_ALPHA_0._1
+namespace Khayaal_SAHM
 {
     public partial class Loading_Screen_Form : Form
     {

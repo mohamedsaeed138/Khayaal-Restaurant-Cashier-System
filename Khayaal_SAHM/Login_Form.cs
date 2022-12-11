@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 using System.Windows.Forms;
-namespace SAHM_Version_ALPHA_0._1
+namespace Khayaal_SAHM
 {
 
     public partial class Login_Form : Form

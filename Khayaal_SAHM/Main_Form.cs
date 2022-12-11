@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-namespace SAHM_Version_ALPHA_0._1
+namespace Khayaal_SAHM
 {
     public partial class Main_Form : Form
     {

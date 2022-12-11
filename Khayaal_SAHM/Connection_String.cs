@@ -1,4 +1,4 @@
-﻿namespace SAHM_Version_ALPHA_0._1
+﻿namespace Khayaal_SAHM
 {
     //USE it FOR SQL CONNNECTION OBJECT
     /// <summary>
