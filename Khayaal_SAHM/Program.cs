@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-
 namespace Khayaal_SAHM
 {
     internal static class Program

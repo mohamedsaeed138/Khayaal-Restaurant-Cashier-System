@@ -32,7 +32,7 @@ namespace Khayaal_SAHM
                     Thread Login_Start_Thread = new Thread(Start_A_Login_Form);
                     Login_Start_Thread.SetApartmentState(ApartmentState.STA);
                     Login_Start_Thread.Start();
-
+                    Thread.Sleep(100);
                     this.Close();
                 }
             }
