@@ -1,4 +1,4 @@
-﻿namespace SAHM_Version_ALPHA_0._1.Main_Form_and_Sub_Forms
+﻿namespace Khayaal_SAHM
 {
     partial class Main_Form
     {
