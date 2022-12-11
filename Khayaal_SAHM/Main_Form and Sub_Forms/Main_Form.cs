@@ -1,7 +1,14 @@
-﻿using System.Windows.Forms;
-//we will add any sub form like booking or items etc in the same folder
-//and we will use the same namespace Khayaal_SAHM 
-namespace Khayaal_SAHM
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SAHM_Version_ALPHA_0._1.Main_Form_and_Sub_Forms
 {
     public partial class Main_Form : Form
     {
