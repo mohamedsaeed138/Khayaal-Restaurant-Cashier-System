@@ -16,5 +16,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         {
             InitializeComponent();
         }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
