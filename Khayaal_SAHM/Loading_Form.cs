@@ -17,8 +17,10 @@ namespace Khayaal_SAHM
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             timer1.Start();
             timer1.Interval = 1;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -80,5 +80,10 @@ namespace Khayaal_SAHM
                 LoginCon.Close();
             }
         }
+
+        private void Login_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

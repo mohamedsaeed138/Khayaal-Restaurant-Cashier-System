@@ -29,5 +29,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         {
 
         }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

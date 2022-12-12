@@ -54,7 +54,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(115, 627);
+            this.guna2Panel1.Size = new System.Drawing.Size(115, 604);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -169,7 +169,7 @@
             this.taskBar.Location = new System.Drawing.Point(115, 0);
             this.taskBar.Name = "taskBar";
             this.taskBar.ShadowDecoration.Parent = this.taskBar;
-            this.taskBar.Size = new System.Drawing.Size(1065, 23);
+            this.taskBar.Size = new System.Drawing.Size(950, 23);
             this.taskBar.TabIndex = 1;
             this.taskBar.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
@@ -179,7 +179,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(115, 23);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1065, 604);
+            this.guna2Panel3.Size = new System.Drawing.Size(950, 581);
             this.guna2Panel3.TabIndex = 2;
             this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             // 
@@ -195,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 627);
+            this.ClientSize = new System.Drawing.Size(1065, 604);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.taskBar);
             this.Controls.Add(this.guna2Panel1);
@@ -203,6 +203,7 @@
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Form";
+            this.Load += new System.EventHandler(this.Main_Form_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
