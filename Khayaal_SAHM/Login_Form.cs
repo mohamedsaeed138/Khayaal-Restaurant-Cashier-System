@@ -10,6 +10,8 @@ namespace Khayaal_SAHM
         public Login_Form()
         {
             InitializeComponent();
+
         }
+
     }
 }

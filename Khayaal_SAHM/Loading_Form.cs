@@ -11,7 +11,9 @@ namespace Khayaal_SAHM
         public Loading_Screen_Form()
         {
             InitializeComponent();
+
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
