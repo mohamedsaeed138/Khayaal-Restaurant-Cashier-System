@@ -1,4 +1,5 @@
 ﻿using Khayaal_SAHM.Main_Form_and_Children_Forms;
+using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -47,7 +48,7 @@ namespace Khayaal_SAHM
 
         static void Start_A_Login_Form()
         {
-            Application.Run(new Main_Form());
+            Application.Run(new Add_Mdi_Form());
         }
 
     }

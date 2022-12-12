@@ -233,6 +233,12 @@
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.Designer.cs">
+      <DependentUpon>Add_Mdi_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.resx">
+      <DependentUpon>Add_Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
