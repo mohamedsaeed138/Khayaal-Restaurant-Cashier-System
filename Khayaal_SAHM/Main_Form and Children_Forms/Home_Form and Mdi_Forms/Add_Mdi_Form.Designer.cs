@@ -36,7 +36,7 @@
             this.Lbl_Unit_Price = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_Add = new Guna.UI2.WinForms.Guna2Button();
             this.TB_Item_Name = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmb_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Lbl_Category = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
@@ -54,10 +54,11 @@
             this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Location = new System.Drawing.Point(218, 156);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
@@ -80,10 +81,11 @@
             this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Location = new System.Drawing.Point(218, 214);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "";
@@ -108,7 +110,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(12, 117);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(0, 0);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = null;
             // 
@@ -168,10 +170,10 @@
             this.TB_Item_Name.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.TB_Item_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TB_Item_Name.FocusedState.Parent = this.TB_Item_Name;
-            this.TB_Item_Name.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.TB_Item_Name.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.TB_Item_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TB_Item_Name.HoverState.Parent = this.TB_Item_Name;
-            this.TB_Item_Name.Location = new System.Drawing.Point(218, 46);
+            this.TB_Item_Name.Location = new System.Drawing.Point(218, 36);
             this.TB_Item_Name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_Item_Name.Name = "TB_Item_Name";
             this.TB_Item_Name.PasswordChar = '\0';
@@ -182,27 +184,29 @@
             this.TB_Item_Name.TabIndex = 9;
             this.TB_Item_Name.TextChanged += new System.EventHandler(this.TB_Item_Name_TextChanged);
             // 
-            // guna2ComboBox1
+            // cmb_category
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(218, 95);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2ComboBox1.TabIndex = 10;
+            
+            this.cmb_category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.cmb_category.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.cmb_category.BorderRadius = 10;
+            this.cmb_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.cmb_category.FocusedColor = System.Drawing.Color.Empty;
+            this.cmb_category.FocusedState.Parent = this.cmb_category;
+            this.cmb_category.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cmb_category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.cmb_category.FormattingEnabled = true;
+            this.cmb_category.HoverState.Parent = this.cmb_category;
+            this.cmb_category.ItemHeight = 30;
+            this.cmb_category.ItemsAppearance.Parent = this.cmb_category;
+            this.cmb_category.Location = new System.Drawing.Point(218, 95);
+            this.cmb_category.Name = "cmb_category";
+            this.cmb_category.ShadowDecoration.Parent = this.cmb_category;
+            this.cmb_category.Size = new System.Drawing.Size(200, 36);
+            this.cmb_category.TabIndex = 10;
             // 
             // Lbl_Category
             // 
@@ -222,7 +226,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(550, 400);
             this.Controls.Add(this.Lbl_Category);
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.cmb_category);
             this.Controls.Add(this.TB_Item_Name);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.Lbl_Unit_Price);
@@ -234,6 +238,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Mdi_Form";
             this.Text = "Add_Mdi_Form";
+            this.Load += new System.EventHandler(this.Add_Mdi_Form_load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,7 +253,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_Unit_Price;
         private Guna.UI2.WinForms.Guna2Button btn_Add;
         private Guna.UI2.WinForms.Guna2TextBox TB_Item_Name;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_category;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_Category;
     }
 }
