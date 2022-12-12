@@ -32,6 +32,16 @@ namespace Khayaal_SAHM
 
         private void Login_B_Click_1(object sender, EventArgs e)
         {
+            Enter_a_Login();
+        }
+
+        private void Password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+                Enter_a_Login();
+        }
+        private void Enter_a_Login()
+        {
             String txt_user, txt_pass;
             txt_user = Username.Text;
             txt_pass = Password.Text;

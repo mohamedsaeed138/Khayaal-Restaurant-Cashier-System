@@ -52,10 +52,11 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(-5, -11);
+            this.guna2Panel1.Location = new System.Drawing.Point(-4, -9);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(401, 481);
+            this.guna2Panel1.Size = new System.Drawing.Size(301, 391);
             this.guna2Panel1.TabIndex = 0;
             // 
             // label2
@@ -64,9 +65,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(30, 294);
+            this.label2.Location = new System.Drawing.Point(22, 239);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(320, 45);
+            this.label2.Size = new System.Drawing.Size(265, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "Khayaal Restaurant";
             // 
@@ -76,9 +78,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(86, 237);
+            this.label1.Location = new System.Drawing.Point(64, 193);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 45);
+            this.label1.Size = new System.Drawing.Size(174, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome To";
             // 
@@ -87,10 +90,11 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.BorderRadius = 20;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 23);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 19);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(370, 135);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(278, 110);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -114,15 +118,15 @@
             this.Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Username.HoverState.Parent = this.Username;
-            this.Username.Location = new System.Drawing.Point(405, 88);
-            this.Username.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Username.Location = new System.Drawing.Point(304, 72);
+            this.Username.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Username.Name = "Username";
             this.Username.PasswordChar = '\0';
             this.Username.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Username.PlaceholderText = "";
             this.Username.SelectedText = "";
             this.Username.ShadowDecoration.Parent = this.Username;
-            this.Username.Size = new System.Drawing.Size(281, 59);
+            this.Username.Size = new System.Drawing.Size(211, 48);
             this.Username.TabIndex = 1;
             // 
             // label3
@@ -131,9 +135,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(411, 42);
+            this.label3.Location = new System.Drawing.Point(308, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 38);
+            this.label3.Size = new System.Drawing.Size(117, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "Username";
             // 
@@ -156,16 +161,17 @@
             this.Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Password.HoverState.Parent = this.Password;
-            this.Password.Location = new System.Drawing.Point(405, 234);
-            this.Password.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Password.Location = new System.Drawing.Point(304, 190);
+            this.Password.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
             this.Password.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Password.PlaceholderText = "";
             this.Password.SelectedText = "";
             this.Password.ShadowDecoration.Parent = this.Password;
-            this.Password.Size = new System.Drawing.Size(281, 59);
+            this.Password.Size = new System.Drawing.Size(211, 48);
             this.Password.TabIndex = 3;
+            this.Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
             // label4
             // 
@@ -173,9 +179,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(411, 188);
+            this.label4.Location = new System.Drawing.Point(308, 153);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 38);
+            this.label4.Size = new System.Drawing.Size(112, 30);
             this.label4.TabIndex = 4;
             this.label4.Text = "Password";
             // 
@@ -188,10 +195,11 @@
             this.Login_B.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_B.ForeColor = System.Drawing.Color.White;
             this.Login_B.HoverState.Parent = this.Login_B;
-            this.Login_B.Location = new System.Drawing.Point(438, 339);
+            this.Login_B.Location = new System.Drawing.Point(328, 275);
+            this.Login_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Login_B.Name = "Login_B";
             this.Login_B.ShadowDecoration.Parent = this.Login_B;
-            this.Login_B.Size = new System.Drawing.Size(222, 59);
+            this.Login_B.Size = new System.Drawing.Size(166, 48);
             this.Login_B.TabIndex = 5;
             this.Login_B.Text = "Login";
             this.Login_B.Click += new System.EventHandler(this.Login_B_Click_1);
@@ -202,10 +210,11 @@
             this.Close_B.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             this.Close_B.HoverState.Parent = this.Close_B;
             this.Close_B.IconColor = System.Drawing.Color.White;
-            this.Close_B.Location = new System.Drawing.Point(690, -3);
+            this.Close_B.Location = new System.Drawing.Point(518, -2);
+            this.Close_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Close_B.Name = "Close_B";
             this.Close_B.ShadowDecoration.Parent = this.Close_B;
-            this.Close_B.Size = new System.Drawing.Size(34, 30);
+            this.Close_B.Size = new System.Drawing.Size(26, 24);
             this.Close_B.TabIndex = 6;
             this.Close_B.Click += new System.EventHandler(this.Close_B_Click);
             // 
@@ -219,10 +228,10 @@
             // 
             // Login_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(726, 461);
+            this.ClientSize = new System.Drawing.Size(544, 375);
             this.Controls.Add(this.Close_B);
             this.Controls.Add(this.Login_B);
             this.Controls.Add(this.label4);
@@ -232,6 +241,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Form";
