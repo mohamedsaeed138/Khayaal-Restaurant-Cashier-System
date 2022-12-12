@@ -59,7 +59,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private void Fill_ComboBox(string Category = null)
         {
 
-            if (Category != null)
+            if (Category != null && dt != null)
                 dt.Rows.Add(Add_Category_Text_Box.Text);
             Category_Combo_Box.DataSource = dt;
             Category_Combo_Box.DisplayMember = "Category";

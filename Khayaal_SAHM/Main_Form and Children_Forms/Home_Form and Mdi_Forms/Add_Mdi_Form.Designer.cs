@@ -44,6 +44,7 @@
             this.Add_Category_Button = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.New_Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // Unite_Price_Text_Box
@@ -63,14 +64,14 @@
             this.Unite_Price_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Unite_Price_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Unite_Price_Text_Box.HoverState.Parent = this.Unite_Price_Text_Box;
-            this.Unite_Price_Text_Box.Location = new System.Drawing.Point(199, 186);
+            this.Unite_Price_Text_Box.Location = new System.Drawing.Point(276, 212);
             this.Unite_Price_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Unite_Price_Text_Box.Name = "Unite_Price_Text_Box";
             this.Unite_Price_Text_Box.PasswordChar = '\0';
             this.Unite_Price_Text_Box.PlaceholderText = "";
             this.Unite_Price_Text_Box.SelectedText = "";
             this.Unite_Price_Text_Box.ShadowDecoration.Parent = this.Unite_Price_Text_Box;
-            this.Unite_Price_Text_Box.Size = new System.Drawing.Size(200, 43);
+            this.Unite_Price_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Unite_Price_Text_Box.TabIndex = 4;
             this.Unite_Price_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Unite_Price_Text_Box_KeyPress);
             // 
@@ -91,27 +92,27 @@
             this.Item_Description_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Item_Description_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Item_Description_Text_Box.HoverState.Parent = this.Item_Description_Text_Box;
-            this.Item_Description_Text_Box.Location = new System.Drawing.Point(199, 241);
+            this.Item_Description_Text_Box.Location = new System.Drawing.Point(276, 277);
             this.Item_Description_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Item_Description_Text_Box.Name = "Item_Description_Text_Box";
             this.Item_Description_Text_Box.PasswordChar = '\0';
             this.Item_Description_Text_Box.PlaceholderText = "";
             this.Item_Description_Text_Box.SelectedText = "";
             this.Item_Description_Text_Box.ShadowDecoration.Parent = this.Item_Description_Text_Box;
-            this.Item_Description_Text_Box.Size = new System.Drawing.Size(200, 43);
+            this.Item_Description_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Item_Description_Text_Box.TabIndex = 5;
             this.Item_Description_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Item_Description_Text_Box_KeyPress);
             // 
             // Item_Name_Lbl
             // 
             this.Item_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.Item_Name_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Item_Name_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Item_Name_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Item_Name_Lbl.Location = new System.Drawing.Point(34, 21);
+            this.Item_Name_Lbl.Location = new System.Drawing.Point(3, 32);
             this.Item_Name_Lbl.Name = "Item_Name_Lbl";
-            this.Item_Name_Lbl.Size = new System.Drawing.Size(79, 20);
+            this.Item_Name_Lbl.Size = new System.Drawing.Size(143, 34);
             this.Item_Name_Lbl.TabIndex = 4;
-            this.Item_Name_Lbl.Text = "Item Name ";
+            this.Item_Name_Lbl.Text = "Item Name : ";
             // 
             // guna2HtmlLabel2
             // 
@@ -125,24 +126,24 @@
             // Item_Description_Lbl
             // 
             this.Item_Description_Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.Item_Description_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Item_Description_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Item_Description_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Item_Description_Lbl.Location = new System.Drawing.Point(33, 241);
+            this.Item_Description_Lbl.Location = new System.Drawing.Point(6, 277);
             this.Item_Description_Lbl.Name = "Item_Description_Lbl";
-            this.Item_Description_Lbl.Size = new System.Drawing.Size(110, 20);
+            this.Item_Description_Lbl.Size = new System.Drawing.Size(208, 34);
             this.Item_Description_Lbl.TabIndex = 6;
-            this.Item_Description_Lbl.Text = "Item Description";
+            this.Item_Description_Lbl.Text = "Item Description : ";
             // 
             // Unit_Price_Lbl
             // 
             this.Unit_Price_Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.Unit_Price_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Unit_Price_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Unit_Price_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Unit_Price_Lbl.Location = new System.Drawing.Point(33, 186);
+            this.Unit_Price_Lbl.Location = new System.Drawing.Point(6, 212);
             this.Unit_Price_Lbl.Name = "Unit_Price_Lbl";
-            this.Unit_Price_Lbl.Size = new System.Drawing.Size(63, 20);
+            this.Unit_Price_Lbl.Size = new System.Drawing.Size(129, 34);
             this.Unit_Price_Lbl.TabIndex = 7;
-            this.Unit_Price_Lbl.Text = "Unit Price";
+            this.Unit_Price_Lbl.Text = "Unit Price : ";
             // 
             // Item_Name_Text_Box
             // 
@@ -161,14 +162,14 @@
             this.Item_Name_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Item_Name_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Item_Name_Text_Box.HoverState.Parent = this.Item_Name_Text_Box;
-            this.Item_Name_Text_Box.Location = new System.Drawing.Point(199, 14);
+            this.Item_Name_Text_Box.Location = new System.Drawing.Point(276, 32);
             this.Item_Name_Text_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Item_Name_Text_Box.Name = "Item_Name_Text_Box";
             this.Item_Name_Text_Box.PasswordChar = '\0';
             this.Item_Name_Text_Box.PlaceholderText = "";
             this.Item_Name_Text_Box.SelectedText = "";
             this.Item_Name_Text_Box.ShadowDecoration.Parent = this.Item_Name_Text_Box;
-            this.Item_Name_Text_Box.Size = new System.Drawing.Size(200, 43);
+            this.Item_Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Item_Name_Text_Box.TabIndex = 1;
             this.Item_Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Item_Name_Text_Box_KeyPress);
             // 
@@ -189,30 +190,30 @@
             this.Category_Combo_Box.HoverState.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.ItemHeight = 30;
             this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Location = new System.Drawing.Point(199, 65);
+            this.Category_Combo_Box.Location = new System.Drawing.Point(276, 92);
             this.Category_Combo_Box.Name = "Category_Combo_Box";
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Size = new System.Drawing.Size(200, 36);
+            this.Category_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Category_Combo_Box.TabIndex = 2;
             this.Category_Combo_Box.TabStop = false;
             // 
             // Category_Lbl
             // 
             this.Category_Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.Category_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Category_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Category_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Category_Lbl.Location = new System.Drawing.Point(34, 65);
+            this.Category_Lbl.Location = new System.Drawing.Point(6, 92);
             this.Category_Lbl.Name = "Category_Lbl";
-            this.Category_Lbl.Size = new System.Drawing.Size(62, 20);
+            this.Category_Lbl.Size = new System.Drawing.Size(120, 34);
             this.Category_Lbl.TabIndex = 11;
-            this.Category_Lbl.Text = "Category";
+            this.Category_Lbl.Text = "Category :";
             // 
             // Add_a_New_Cat_Lbl
             // 
             this.Add_a_New_Cat_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Add_a_New_Cat_Lbl.Font = new System.Drawing.Font("Tahoma", 8F);
             this.Add_a_New_Cat_Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(199, 162);
+            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(3, 188);
             this.Add_a_New_Cat_Lbl.Name = "Add_a_New_Cat_Lbl";
             this.Add_a_New_Cat_Lbl.Size = new System.Drawing.Size(103, 15);
             this.Add_a_New_Cat_Lbl.TabIndex = 12;
@@ -235,14 +236,14 @@
             this.Add_Category_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Add_Category_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Add_Category_Text_Box.HoverState.Parent = this.Add_Category_Text_Box;
-            this.Add_Category_Text_Box.Location = new System.Drawing.Point(199, 110);
+            this.Add_Category_Text_Box.Location = new System.Drawing.Point(276, 148);
             this.Add_Category_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Add_Category_Text_Box.Name = "Add_Category_Text_Box";
             this.Add_Category_Text_Box.PasswordChar = '\0';
             this.Add_Category_Text_Box.PlaceholderText = "";
             this.Add_Category_Text_Box.SelectedText = "";
             this.Add_Category_Text_Box.ShadowDecoration.Parent = this.Add_Category_Text_Box;
-            this.Add_Category_Text_Box.Size = new System.Drawing.Size(137, 43);
+            this.Add_Category_Text_Box.Size = new System.Drawing.Size(179, 43);
             this.Add_Category_Text_Box.TabIndex = 2;
             this.Add_Category_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Add_Category_Text_Box_KeyPress);
             // 
@@ -255,11 +256,11 @@
             this.Add_Item_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Add_Item_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Item_Button.HoverState.Parent = this.Add_Item_Button;
-            this.Add_Item_Button.Location = new System.Drawing.Point(199, 293);
+            this.Add_Item_Button.Location = new System.Drawing.Point(12, 345);
             this.Add_Item_Button.Name = "Add_Item_Button";
             this.Add_Item_Button.ShadowDecoration.Parent = this.Add_Item_Button;
-            this.Add_Item_Button.Size = new System.Drawing.Size(200, 43);
-            this.Add_Item_Button.TabIndex = 15;
+            this.Add_Item_Button.Size = new System.Drawing.Size(526, 43);
+            this.Add_Item_Button.TabIndex = 6;
             this.Add_Item_Button.Text = "Add";
             // 
             // Add_Category_Button
@@ -271,7 +272,7 @@
             this.Add_Category_Button.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.Add_Category_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Add_Category_Button.HoverState.Parent = this.Add_Category_Button;
-            this.Add_Category_Button.Location = new System.Drawing.Point(344, 110);
+            this.Add_Category_Button.Location = new System.Drawing.Point(463, 148);
             this.Add_Category_Button.Name = "Add_Category_Button";
             this.Add_Category_Button.ShadowDecoration.Parent = this.Add_Category_Button;
             this.Add_Category_Button.Size = new System.Drawing.Size(55, 43);
@@ -295,12 +296,24 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 17;
             // 
+            // New_Category_Label
+            // 
+            this.New_Category_Label.BackColor = System.Drawing.Color.Transparent;
+            this.New_Category_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.New_Category_Label.ForeColor = System.Drawing.Color.White;
+            this.New_Category_Label.Location = new System.Drawing.Point(3, 148);
+            this.New_Category_Label.Name = "New_Category_Label";
+            this.New_Category_Label.Size = new System.Drawing.Size(182, 34);
+            this.New_Category_Label.TabIndex = 18;
+            this.New_Category_Label.Text = "New Category ?";
+            // 
             // Add_Mdi_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(550, 400);
+            this.Controls.Add(this.New_Category_Label);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.Add_Category_Button);
             this.Controls.Add(this.Add_Item_Button);
@@ -340,5 +353,6 @@
         private Guna.UI2.WinForms.Guna2Button Add_Category_Button;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel New_Category_Label;
     }
 }
