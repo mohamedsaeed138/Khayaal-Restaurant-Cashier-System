@@ -7,9 +7,9 @@
     /// </summary>
     public class Connection_String
     {
-        public static string Value = HS;//Change Value When You Want To Change The Connection Strin Wich Fits Your PC 
-        private static string HS = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\GitHub\SAHM\Khayaal_SAHM\DataBase\Restaurant_Cafe.mdf;Integrated Security=True;Connect Timeout=30"; 
-        private static string AR = @"";//Aml Enter Your Connection String
+        public static string Value = MS;
+        private static string HS = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\GitHub\SAHM\Khayaal_SAHM\DataBase\Restaurant_Cafe.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string AR = @"";
         private static string KS = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\SAHM\SAHM\Khayaal_SAHM\DataBase\Restaurant_Cafe.mdf;Integrated Security=True;Connect Timeout=30";
         private static string MS = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=E:\SAHM\Khayaal_SAHM\DataBase\Restaurant_Cafe.mdf;Integrated Security = True; Connect Timeout = 30";
         private static string AG = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\SOM DH\SAHM\Khayaal_SAHM\DataBase\Restaurant_Cafe.mdf"";Integrated Security=True";
