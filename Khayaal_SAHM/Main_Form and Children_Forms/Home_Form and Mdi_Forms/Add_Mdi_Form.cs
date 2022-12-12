@@ -80,7 +80,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 if (Ensure_No_Duplicated_Categories(Add_Category_Text_Box.Text))
                     Fill_ComboBox(Add_Category_Text_Box.Text);
                 else
+                {
+
                     MessageBox.Show("The Category is Already Existed", "Information", MessageBoxButtons.OK);
+                    Add_Category_Text_Box.Text = string.Empty;
+                }
             }
             else
                 MessageBox.Show("Enter a New Category Name", "Error", MessageBoxButtons.OK);
