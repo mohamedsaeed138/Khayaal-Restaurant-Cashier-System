@@ -15,5 +15,6 @@ namespace Khayaal_SAHM
             Application.Run(new Loading_Screen_Form());
             //Application.Run(new Main_Form());//For testing your form Quickly
         }
+
     }
 }
