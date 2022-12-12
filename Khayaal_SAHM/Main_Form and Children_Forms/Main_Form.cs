@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 {
@@ -10,29 +9,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
             InitializeComponent();
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Main_Form_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
