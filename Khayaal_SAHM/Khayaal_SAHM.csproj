@@ -263,7 +263,6 @@
     <Compile Include="Main_Form and Children_Forms\Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Validation_Handler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Loading_Form.resx">
