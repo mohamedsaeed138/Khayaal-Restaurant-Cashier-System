@@ -1,10 +1,9 @@
-﻿using System.Data;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms;
 using System;
+using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using Khayaal_SAHM.Main_Form_and_Children_Forms;
 
 namespace Khayaal_SAHM
 {
@@ -19,7 +18,7 @@ namespace Khayaal_SAHM
 
         }
 
-        
+
 
         static void Mainformstart()
         {
@@ -59,10 +58,10 @@ namespace Khayaal_SAHM
                 }
                 else
                 {
-                    MessageBox.Show("Wrong Data!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Wrong Username or Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch(Exception EX)
+            catch (Exception EX)
             {
                 MessageBox.Show(EX.Message);
             }
