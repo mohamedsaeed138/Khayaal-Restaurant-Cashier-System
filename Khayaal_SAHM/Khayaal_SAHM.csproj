@@ -305,6 +305,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\button off.PNG" />
+    <None Include="Resources\button on.PNG" />
     <EmbeddedResource Include="DataBase\Restaurant_Cafe.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

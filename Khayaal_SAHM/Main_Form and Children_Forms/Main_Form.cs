@@ -21,5 +21,20 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         {
 
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
