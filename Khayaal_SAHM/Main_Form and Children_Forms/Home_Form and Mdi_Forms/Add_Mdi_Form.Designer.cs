@@ -256,10 +256,10 @@
             this.Add_Item_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Add_Item_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Item_Button.HoverState.Parent = this.Add_Item_Button;
-            this.Add_Item_Button.Location = new System.Drawing.Point(12, 358);
+            this.Add_Item_Button.Location = new System.Drawing.Point(12, 343);
             this.Add_Item_Button.Name = "Add_Item_Button";
             this.Add_Item_Button.ShadowDecoration.Parent = this.Add_Item_Button;
-            this.Add_Item_Button.Size = new System.Drawing.Size(526, 43);
+            this.Add_Item_Button.Size = new System.Drawing.Size(526, 49);
             this.Add_Item_Button.TabIndex = 6;
             this.Add_Item_Button.Text = "Add";
             // 
