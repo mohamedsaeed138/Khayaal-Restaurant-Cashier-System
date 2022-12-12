@@ -56,7 +56,6 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(115, 604);
             this.guna2Panel1.TabIndex = 0;
-           
             // 
             // iconButton4
             // 
@@ -171,7 +170,6 @@
             this.taskBar.ShadowDecoration.Parent = this.taskBar;
             this.taskBar.Size = new System.Drawing.Size(950, 23);
             this.taskBar.TabIndex = 1;
-           
             // 
             // guna2Panel3
             // 
@@ -181,7 +179,6 @@
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
             this.guna2Panel3.Size = new System.Drawing.Size(950, 581);
             this.guna2Panel3.TabIndex = 2;
-            
             // 
             // guna2DragControl1
             // 
@@ -203,7 +200,6 @@
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Form";
-     
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
