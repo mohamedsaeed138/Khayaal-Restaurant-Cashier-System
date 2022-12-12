@@ -28,82 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Lbl_Item_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.components = new System.ComponentModel.Container();
+            this.Unite_Price_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Item_Description_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Item_Name_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Lbl_Item_Description = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Lbl_Unit_Price = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btn_Add = new Guna.UI2.WinForms.Guna2Button();
-            this.TB_Item_Name = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmb_category = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Lbl_Category = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Item_Description_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Unit_Price_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Item_Name_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Category_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Add_a_New_Cat_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Add_Category_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Add_Item_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Add_Category_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.SuspendLayout();
             // 
-            // guna2TextBox2
+            // Unite_Price_Text_Box
             // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.guna2TextBox2.BorderRadius = 10;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(218, 156);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox2.TabIndex = 1;
+            this.Unite_Price_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Unite_Price_Text_Box.BorderRadius = 10;
+            this.Unite_Price_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Unite_Price_Text_Box.DefaultText = "";
+            this.Unite_Price_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Unite_Price_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Unite_Price_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Unite_Price_Text_Box.DisabledState.Parent = this.Unite_Price_Text_Box;
+            this.Unite_Price_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Unite_Price_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Unite_Price_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Unite_Price_Text_Box.FocusedState.Parent = this.Unite_Price_Text_Box;
+            this.Unite_Price_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Unite_Price_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Unite_Price_Text_Box.HoverState.Parent = this.Unite_Price_Text_Box;
+            this.Unite_Price_Text_Box.Location = new System.Drawing.Point(199, 186);
+            this.Unite_Price_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Unite_Price_Text_Box.Name = "Unite_Price_Text_Box";
+            this.Unite_Price_Text_Box.PasswordChar = '\0';
+            this.Unite_Price_Text_Box.PlaceholderText = "";
+            this.Unite_Price_Text_Box.SelectedText = "";
+            this.Unite_Price_Text_Box.ShadowDecoration.Parent = this.Unite_Price_Text_Box;
+            this.Unite_Price_Text_Box.Size = new System.Drawing.Size(200, 43);
+            this.Unite_Price_Text_Box.TabIndex = 4;
+            this.Unite_Price_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Unite_Price_Text_Box_KeyPress);
             // 
-            // guna2TextBox3
+            // Item_Description_Text_Box
             // 
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.guna2TextBox3.BorderRadius = 10;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(218, 214);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox3.TabIndex = 2;
+            this.Item_Description_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Item_Description_Text_Box.BorderRadius = 10;
+            this.Item_Description_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Item_Description_Text_Box.DefaultText = "";
+            this.Item_Description_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Item_Description_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Item_Description_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Item_Description_Text_Box.DisabledState.Parent = this.Item_Description_Text_Box;
+            this.Item_Description_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Item_Description_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Item_Description_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Item_Description_Text_Box.FocusedState.Parent = this.Item_Description_Text_Box;
+            this.Item_Description_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Item_Description_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Item_Description_Text_Box.HoverState.Parent = this.Item_Description_Text_Box;
+            this.Item_Description_Text_Box.Location = new System.Drawing.Point(199, 241);
+            this.Item_Description_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Item_Description_Text_Box.Name = "Item_Description_Text_Box";
+            this.Item_Description_Text_Box.PasswordChar = '\0';
+            this.Item_Description_Text_Box.PlaceholderText = "";
+            this.Item_Description_Text_Box.SelectedText = "";
+            this.Item_Description_Text_Box.ShadowDecoration.Parent = this.Item_Description_Text_Box;
+            this.Item_Description_Text_Box.Size = new System.Drawing.Size(200, 43);
+            this.Item_Description_Text_Box.TabIndex = 5;
+            this.Item_Description_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Item_Description_Text_Box_KeyPress);
             // 
-            // Lbl_Item_Name
+            // Item_Name_Lbl
             // 
-            this.Lbl_Item_Name.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Item_Name.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.Lbl_Item_Name.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Item_Name.Location = new System.Drawing.Point(34, 36);
-            this.Lbl_Item_Name.Name = "Lbl_Item_Name";
-            this.Lbl_Item_Name.Size = new System.Drawing.Size(79, 20);
-            this.Lbl_Item_Name.TabIndex = 4;
-            this.Lbl_Item_Name.Text = "Item Name ";
+            this.Item_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Item_Name_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Item_Name_Lbl.ForeColor = System.Drawing.Color.White;
+            this.Item_Name_Lbl.Location = new System.Drawing.Point(34, 21);
+            this.Item_Name_Lbl.Name = "Item_Name_Lbl";
+            this.Item_Name_Lbl.Size = new System.Drawing.Size(79, 20);
+            this.Item_Name_Lbl.TabIndex = 4;
+            this.Item_Name_Lbl.Text = "Item Name ";
             // 
             // guna2HtmlLabel2
             // 
@@ -114,110 +122,178 @@
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = null;
             // 
-            // Lbl_Item_Description
+            // Item_Description_Lbl
             // 
-            this.Lbl_Item_Description.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Item_Description.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.Lbl_Item_Description.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Item_Description.Location = new System.Drawing.Point(34, 214);
-            this.Lbl_Item_Description.Name = "Lbl_Item_Description";
-            this.Lbl_Item_Description.Size = new System.Drawing.Size(110, 20);
-            this.Lbl_Item_Description.TabIndex = 6;
-            this.Lbl_Item_Description.Text = "Item Description";
+            this.Item_Description_Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Item_Description_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Item_Description_Lbl.ForeColor = System.Drawing.Color.White;
+            this.Item_Description_Lbl.Location = new System.Drawing.Point(33, 241);
+            this.Item_Description_Lbl.Name = "Item_Description_Lbl";
+            this.Item_Description_Lbl.Size = new System.Drawing.Size(110, 20);
+            this.Item_Description_Lbl.TabIndex = 6;
+            this.Item_Description_Lbl.Text = "Item Description";
             // 
-            // Lbl_Unit_Price
+            // Unit_Price_Lbl
             // 
-            this.Lbl_Unit_Price.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Unit_Price.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.Lbl_Unit_Price.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Unit_Price.Location = new System.Drawing.Point(34, 156);
-            this.Lbl_Unit_Price.Name = "Lbl_Unit_Price";
-            this.Lbl_Unit_Price.Size = new System.Drawing.Size(63, 20);
-            this.Lbl_Unit_Price.TabIndex = 7;
-            this.Lbl_Unit_Price.Text = "Unit Price";
+            this.Unit_Price_Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Unit_Price_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Unit_Price_Lbl.ForeColor = System.Drawing.Color.White;
+            this.Unit_Price_Lbl.Location = new System.Drawing.Point(33, 186);
+            this.Unit_Price_Lbl.Name = "Unit_Price_Lbl";
+            this.Unit_Price_Lbl.Size = new System.Drawing.Size(63, 20);
+            this.Unit_Price_Lbl.TabIndex = 7;
+            this.Unit_Price_Lbl.Text = "Unit Price";
             // 
-            // btn_Add
+            // Item_Name_Text_Box
             // 
-            this.btn_Add.AutoRoundedCorners = true;
-            this.btn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.btn_Add.BorderColor = System.Drawing.Color.Empty;
-            this.btn_Add.BorderRadius = 23;
-            this.btn_Add.CheckedState.Parent = this.btn_Add;
-            this.btn_Add.CustomImages.Parent = this.btn_Add;
-            this.btn_Add.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.HoverState.Parent = this.btn_Add;
-            this.btn_Add.Location = new System.Drawing.Point(170, 296);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.ShadowDecoration.Parent = this.btn_Add;
-            this.btn_Add.Size = new System.Drawing.Size(185, 48);
-            this.btn_Add.TabIndex = 8;
-            this.btn_Add.Text = "Add";
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            this.Item_Name_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Item_Name_Text_Box.BorderRadius = 10;
+            this.Item_Name_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Item_Name_Text_Box.DefaultText = "";
+            this.Item_Name_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Item_Name_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Item_Name_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Item_Name_Text_Box.DisabledState.Parent = this.Item_Name_Text_Box;
+            this.Item_Name_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Item_Name_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Item_Name_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Item_Name_Text_Box.FocusedState.Parent = this.Item_Name_Text_Box;
+            this.Item_Name_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Item_Name_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Item_Name_Text_Box.HoverState.Parent = this.Item_Name_Text_Box;
+            this.Item_Name_Text_Box.Location = new System.Drawing.Point(199, 14);
+            this.Item_Name_Text_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Item_Name_Text_Box.Name = "Item_Name_Text_Box";
+            this.Item_Name_Text_Box.PasswordChar = '\0';
+            this.Item_Name_Text_Box.PlaceholderText = "";
+            this.Item_Name_Text_Box.SelectedText = "";
+            this.Item_Name_Text_Box.ShadowDecoration.Parent = this.Item_Name_Text_Box;
+            this.Item_Name_Text_Box.Size = new System.Drawing.Size(200, 43);
+            this.Item_Name_Text_Box.TabIndex = 1;
+            this.Item_Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Item_Name_Text_Box_KeyPress);
             // 
-            // TB_Item_Name
+            // Category_Combo_Box
             // 
-            this.TB_Item_Name.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.TB_Item_Name.BorderRadius = 10;
-            this.TB_Item_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TB_Item_Name.DefaultText = "";
-            this.TB_Item_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TB_Item_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TB_Item_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TB_Item_Name.DisabledState.Parent = this.TB_Item_Name;
-            this.TB_Item_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TB_Item_Name.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.TB_Item_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TB_Item_Name.FocusedState.Parent = this.TB_Item_Name;
-            this.TB_Item_Name.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TB_Item_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TB_Item_Name.HoverState.Parent = this.TB_Item_Name;
-            this.TB_Item_Name.Location = new System.Drawing.Point(218, 36);
-            this.TB_Item_Name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TB_Item_Name.Name = "TB_Item_Name";
-            this.TB_Item_Name.PasswordChar = '\0';
-            this.TB_Item_Name.PlaceholderText = "";
-            this.TB_Item_Name.SelectedText = "";
-            this.TB_Item_Name.ShadowDecoration.Parent = this.TB_Item_Name;
-            this.TB_Item_Name.Size = new System.Drawing.Size(200, 31);
-            this.TB_Item_Name.TabIndex = 9;
-            this.TB_Item_Name.TextChanged += new System.EventHandler(this.TB_Item_Name_TextChanged);
+            this.Category_Combo_Box.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Category_Combo_Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Category_Combo_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Category_Combo_Box.BorderRadius = 10;
+            this.Category_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Category_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Category_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Category_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Category_Combo_Box.FocusedState.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Category_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Category_Combo_Box.FormattingEnabled = true;
+            this.Category_Combo_Box.HoverState.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.ItemHeight = 30;
+            this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Location = new System.Drawing.Point(199, 65);
+            this.Category_Combo_Box.Name = "Category_Combo_Box";
+            this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Size = new System.Drawing.Size(200, 36);
+            this.Category_Combo_Box.TabIndex = 2;
+            this.Category_Combo_Box.TabStop = false;
             // 
-            // cmb_category
+            // Category_Lbl
             // 
-            
-            this.cmb_category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmb_category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.cmb_category.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.cmb_category.BorderRadius = 10;
-            this.cmb_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.cmb_category.FocusedColor = System.Drawing.Color.Empty;
-            this.cmb_category.FocusedState.Parent = this.cmb_category;
-            this.cmb_category.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.cmb_category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.cmb_category.FormattingEnabled = true;
-            this.cmb_category.HoverState.Parent = this.cmb_category;
-            this.cmb_category.ItemHeight = 30;
-            this.cmb_category.ItemsAppearance.Parent = this.cmb_category;
-            this.cmb_category.Location = new System.Drawing.Point(218, 95);
-            this.cmb_category.Name = "cmb_category";
-            this.cmb_category.ShadowDecoration.Parent = this.cmb_category;
-            this.cmb_category.Size = new System.Drawing.Size(200, 36);
-            this.cmb_category.TabIndex = 10;
+            this.Category_Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Category_Lbl.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.Category_Lbl.ForeColor = System.Drawing.Color.White;
+            this.Category_Lbl.Location = new System.Drawing.Point(34, 65);
+            this.Category_Lbl.Name = "Category_Lbl";
+            this.Category_Lbl.Size = new System.Drawing.Size(62, 20);
+            this.Category_Lbl.TabIndex = 11;
+            this.Category_Lbl.Text = "Category";
             // 
-            // Lbl_Category
+            // Add_a_New_Cat_Lbl
             // 
-            this.Lbl_Category.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Category.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.Lbl_Category.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Category.Location = new System.Drawing.Point(35, 95);
-            this.Lbl_Category.Name = "Lbl_Category";
-            this.Lbl_Category.Size = new System.Drawing.Size(62, 20);
-            this.Lbl_Category.TabIndex = 11;
-            this.Lbl_Category.Text = "Category";
+            this.Add_a_New_Cat_Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Add_a_New_Cat_Lbl.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.Add_a_New_Cat_Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(199, 162);
+            this.Add_a_New_Cat_Lbl.Name = "Add_a_New_Cat_Lbl";
+            this.Add_a_New_Cat_Lbl.Size = new System.Drawing.Size(103, 15);
+            this.Add_a_New_Cat_Lbl.TabIndex = 12;
+            this.Add_a_New_Cat_Lbl.Text = "Add a New Category";
+            // 
+            // Add_Category_Text_Box
+            // 
+            this.Add_Category_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Add_Category_Text_Box.BorderRadius = 10;
+            this.Add_Category_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Add_Category_Text_Box.DefaultText = "";
+            this.Add_Category_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Add_Category_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Add_Category_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Add_Category_Text_Box.DisabledState.Parent = this.Add_Category_Text_Box;
+            this.Add_Category_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Add_Category_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Category_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Add_Category_Text_Box.FocusedState.Parent = this.Add_Category_Text_Box;
+            this.Add_Category_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Add_Category_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Add_Category_Text_Box.HoverState.Parent = this.Add_Category_Text_Box;
+            this.Add_Category_Text_Box.Location = new System.Drawing.Point(199, 110);
+            this.Add_Category_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Add_Category_Text_Box.Name = "Add_Category_Text_Box";
+            this.Add_Category_Text_Box.PasswordChar = '\0';
+            this.Add_Category_Text_Box.PlaceholderText = "";
+            this.Add_Category_Text_Box.SelectedText = "";
+            this.Add_Category_Text_Box.ShadowDecoration.Parent = this.Add_Category_Text_Box;
+            this.Add_Category_Text_Box.Size = new System.Drawing.Size(137, 43);
+            this.Add_Category_Text_Box.TabIndex = 2;
+            this.Add_Category_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Add_Category_Text_Box_KeyPress);
+            // 
+            // Add_Item_Button
+            // 
+            this.Add_Item_Button.BorderRadius = 10;
+            this.Add_Item_Button.CheckedState.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.CustomImages.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Add_Item_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.Add_Item_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Item_Button.HoverState.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.Location = new System.Drawing.Point(199, 293);
+            this.Add_Item_Button.Name = "Add_Item_Button";
+            this.Add_Item_Button.ShadowDecoration.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.Size = new System.Drawing.Size(200, 43);
+            this.Add_Item_Button.TabIndex = 15;
+            this.Add_Item_Button.Text = "Add";
+            // 
+            // Add_Category_Button
+            // 
+            this.Add_Category_Button.BorderRadius = 10;
+            this.Add_Category_Button.CheckedState.Parent = this.Add_Category_Button;
+            this.Add_Category_Button.CustomImages.Parent = this.Add_Category_Button;
+            this.Add_Category_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Category_Button.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Add_Category_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Add_Category_Button.HoverState.Parent = this.Add_Category_Button;
+            this.Add_Category_Button.Location = new System.Drawing.Point(344, 110);
+            this.Add_Category_Button.Name = "Add_Category_Button";
+            this.Add_Category_Button.ShadowDecoration.Parent = this.Add_Category_Button;
+            this.Add_Category_Button.Size = new System.Drawing.Size(55, 43);
+            this.Add_Category_Button.TabIndex = 16;
+            this.Add_Category_Button.Text = "Add";
+            this.Add_Category_Button.Click += new System.EventHandler(this.Add_Category_Button_Click);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(504, -1);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 17;
             // 
             // Add_Mdi_Form
             // 
@@ -225,16 +301,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(550, 400);
-            this.Controls.Add(this.Lbl_Category);
-            this.Controls.Add(this.cmb_category);
-            this.Controls.Add(this.TB_Item_Name);
-            this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.Lbl_Unit_Price);
-            this.Controls.Add(this.Lbl_Item_Description);
+            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.Add_Category_Button);
+            this.Controls.Add(this.Add_Item_Button);
+            this.Controls.Add(this.Add_Category_Text_Box);
+            this.Controls.Add(this.Add_a_New_Cat_Lbl);
+            this.Controls.Add(this.Category_Lbl);
+            this.Controls.Add(this.Category_Combo_Box);
+            this.Controls.Add(this.Item_Name_Text_Box);
+            this.Controls.Add(this.Unit_Price_Lbl);
+            this.Controls.Add(this.Item_Description_Lbl);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.Lbl_Item_Name);
-            this.Controls.Add(this.guna2TextBox3);
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.Item_Name_Lbl);
+            this.Controls.Add(this.Item_Description_Text_Box);
+            this.Controls.Add(this.Unite_Price_Text_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Mdi_Form";
             this.Text = "Add_Mdi_Form";
@@ -245,15 +325,20 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_Item_Name;
+        private Guna.UI2.WinForms.Guna2TextBox Unite_Price_Text_Box;
+        private Guna.UI2.WinForms.Guna2TextBox Item_Description_Text_Box;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Item_Name_Lbl;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_Item_Description;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_Unit_Price;
-        private Guna.UI2.WinForms.Guna2Button btn_Add;
-        private Guna.UI2.WinForms.Guna2TextBox TB_Item_Name;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_category;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_Category;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Item_Description_Lbl;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Unit_Price_Lbl;
+        private Guna.UI2.WinForms.Guna2TextBox Item_Name_Text_Box;
+        private Guna.UI2.WinForms.Guna2ComboBox Category_Combo_Box;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Category_Lbl;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Add_a_New_Cat_Lbl;
+        private Guna.UI2.WinForms.Guna2TextBox Add_Category_Text_Box;
+        private Guna.UI2.WinForms.Guna2Button Add_Item_Button;
+        private Guna.UI2.WinForms.Guna2Button Add_Category_Button;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
