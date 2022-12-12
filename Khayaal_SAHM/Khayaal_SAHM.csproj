@@ -233,11 +233,23 @@
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Sub_Forms\Home_Form\Item.cs">
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.Designer.cs">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main_Form and Sub_Forms\Home_Form\Item.Designer.cs">
-      <DependentUpon>Item.cs</DependentUpon>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -246,9 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Sub_Forms\Home_Form\Item.resx">
-      <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -295,6 +304,7 @@
       <DependentUpon>Restaurant_Cafe.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
