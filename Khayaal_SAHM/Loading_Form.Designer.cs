@@ -37,19 +37,19 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Loading_Screen
+            // Loading_Screen_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(801, 477);
+            this.ClientSize = new System.Drawing.Size(736, 379);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(801, 477);
-            this.MinimumSize = new System.Drawing.Size(801, 477);
-            this.Name = "Loading_Screen";
+            this.MaximumSize = new System.Drawing.Size(736, 379);
+            this.MinimumSize = new System.Drawing.Size(736, 379);
+            this.Name = "Loading_Screen_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KHAYAAL";
             this.Load += new System.EventHandler(this.Form1_Load);
