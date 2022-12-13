@@ -274,11 +274,11 @@
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.Designer.cs">
       <DependentUpon>Home_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.cs">
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Item_User_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.Designer.cs">
-      <DependentUpon>Items.cs</DependentUpon>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Item_User_Control.Designer.cs">
+      <DependentUpon>Item_User_Control.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Main_Form.cs">
       <SubType>Form</SubType>
