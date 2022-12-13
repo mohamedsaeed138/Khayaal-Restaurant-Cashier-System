@@ -7,15 +7,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
     public partial class Main_Form : Form
     {
         private IconButton Current_Button;
-        private readonly Panel Left_Border_Btn;
         private Form Current_Child_Form;
         public Main_Form()
         {
 
             InitializeComponent();
-            Left_Border_Btn = new Panel();
-            Left_Border_Btn.Size = new Size(7, 52);
-            Panel_Menu.Controls.Add(Left_Border_Btn);
+          
             this.Text = String.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -50,10 +47,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
                 Current_Button.IconColor = Color.FromArgb(255, 255, 255);
                 Current_Button.TextImageRelation = TextImageRelation.ImageAboveText;
                 Current_Button.ImageAlign = ContentAlignment.TopCenter;
-                Left_Border_Btn.BackColor = color;
-                Left_Border_Btn.Location = new Point(0, Current_Button.Location.Y);
-                Left_Border_Btn.Visible = true;
-                Left_Border_Btn.BringToFront();
 
 
             }
@@ -116,6 +109,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         }
         private void Btn_Best_Seller_Click(object sender, EventArgs e)
         {
+            Activate_Btn(sender, RGBColors.color1);
             Open_Child_form(new Best_Seller_Form.Best_Seller_Form());
         }
 
@@ -143,8 +137,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         }
 
-
-
-
+        private void Main_Form_Shown(object sender, EventArgs e)
+        {
+            BtnHome.PerformClick();
+        }
     }
 }
