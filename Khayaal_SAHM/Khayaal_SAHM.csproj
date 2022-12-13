@@ -262,17 +262,17 @@
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.Designer.cs">
       <DependentUpon>Add_Mdi_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.Designer.cs">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form.Designer.cs">
-      <DependentUpon>Home_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Items_Form.cs">
       <SubType>Form</SubType>
@@ -285,11 +285,6 @@
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main_Form and Children_Forms\Main_Form1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Main_Form.resx</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Purchase_Form.cs">
       <SubType>Form</SubType>
@@ -326,7 +321,7 @@
     <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.resx">
       <DependentUpon>Add_Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form.resx">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.resx">
       <DependentUpon>Home_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Items_Form.resx">
