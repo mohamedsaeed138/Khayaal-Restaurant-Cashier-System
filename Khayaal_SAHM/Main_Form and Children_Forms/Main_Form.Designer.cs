@@ -46,7 +46,6 @@
             this.Btn_Raw_Material = new FontAwesome.Sharp.IconButton();
             this.Btn_Booking = new FontAwesome.Sharp.IconButton();
             this.BtnHome = new FontAwesome.Sharp.IconButton();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Panel_Menu.SuspendLayout();
             this.Panel_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -325,11 +324,6 @@
             this.BtnHome.UseVisualStyleBackColor = false;
             this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 10;
-            this.guna2Elipse2.TargetControl = this.BtnHome;
-            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +362,5 @@
         private FontAwesome.Sharp.IconButton Btn_Minimize;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private FontAwesome.Sharp.IconButton Btn_Items;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }
