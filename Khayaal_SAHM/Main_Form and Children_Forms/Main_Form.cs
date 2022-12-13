@@ -12,7 +12,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         {
 
             InitializeComponent();
-          
+
             this.Text = String.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;

@@ -336,7 +336,6 @@
     <EmbeddedResource Include="Main_Form and Children_Forms\Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Main_Form1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Purchases_Form and Mdi_Forms\Purchase_Form.resx">
       <DependentUpon>Purchase_Form.cs</DependentUpon>
