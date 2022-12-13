@@ -1,4 +1,4 @@
-﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms
+﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_Forms
 {
     partial class Raw_Materials_Form
     {

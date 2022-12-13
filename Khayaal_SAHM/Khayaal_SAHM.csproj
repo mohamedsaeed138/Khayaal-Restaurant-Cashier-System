@@ -304,10 +304,10 @@
     <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Raw_Materials_Form.Designer.cs">
       <DependentUpon>Raw_Materials_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Relations_Form\Relations_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Relations_Form and Mdi_Forms\Relations_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Relations_Form\Relations_Form.Designer.cs">
+    <Compile Include="Main_Form and Children_Forms\Relations_Form and Mdi_Forms\Relations_Form.Designer.cs">
       <DependentUpon>Relations_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -347,7 +347,7 @@
     <EmbeddedResource Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Raw_Materials_Form.resx">
       <DependentUpon>Raw_Materials_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Relations_Form\Relations_Form.resx">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Relations_Form and Mdi_Forms\Relations_Form.resx">
       <DependentUpon>Relations_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -1,4 +1,4 @@
-﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms
+﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 {
     partial class Relations_Form
     {

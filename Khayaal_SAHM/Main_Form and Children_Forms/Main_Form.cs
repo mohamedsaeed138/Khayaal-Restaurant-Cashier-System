@@ -1,5 +1,4 @@
 ﻿using FontAwesome.Sharp;
-using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -8,7 +7,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
     public partial class Main_Form : Form
     {
         private IconButton Current_Button;
-        private Panel Left_Border_Btn;
+        private readonly Panel Left_Border_Btn;
         private Form Current_Child_Form;
         public Main_Form()
         {
@@ -24,10 +23,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         }
         private void Open_Child_form(Form Child_Form)
         {
-            if (Current_Child_Form != null)
-            {
-                Current_Child_Form.Close();
-            }
+            Current_Child_Form?.Close();
             Current_Child_Form = Child_Form;
             Child_Form.TopLevel = false;
             Child_Form.FormBorderStyle = FormBorderStyle.None;
@@ -85,38 +81,38 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         private void BtnHome_Click(object sender, System.EventArgs e)
         {
             Activate_Btn(sender, RGBColors.color1);
-            Open_Child_form(new Home_Form());
+            Open_Child_form(new Home_Form_and_Mdi_Forms.Home_Form());
         }
 
         private void Btn_Booking_Click(object sender, EventArgs e)
         {
             Activate_Btn(sender, RGBColors.color1);
-            Open_Child_form(new Booking_Form());
+            Open_Child_form(new Booking_Form_and_Mdi_Forms.Booking_Form());
 
         }
 
         private void Btn_Raw_Material_Click(object sender, EventArgs e)
         {
             Activate_Btn(sender, RGBColors.color1);
-            Open_Child_form(new Raw_Materials_Form());
+            Open_Child_form(new Raw_Materials_Form_and_Mdi_Forms.Raw_Materials_Form());
         }
 
         private void Btn_Relations_Click(object sender, EventArgs e)
         {
             Activate_Btn(sender, RGBColors.color1);
-            Open_Child_form(new Relations_Form());
+            Open_Child_form(new Relations_Form_and_Mdi_Forms.Relations_Form());
         }
 
         private void Btn_Bills_Click(object sender, EventArgs e)
         {
             Activate_Btn(sender, RGBColors.color1);
-            Open_Child_form(new Bills_Form());
+            Open_Child_form(new Bills_Form_and_Mdi_Forms.Bills_Form());
         }
 
         private void Btn_Purchases_Click(object sender, EventArgs e)
         {
             Activate_Btn(sender, RGBColors.color1);
-            Open_Child_form(new Purchase_Form());
+            Open_Child_form(new Purchases_Form_and_Mdi_Forms.Purchase_Form());
         }
 
         private void Btn_Maximize_Click(object sender, EventArgs e)
@@ -130,6 +126,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
                 WindowState = FormWindowState.Normal;
             }
         }
+
 
 
 
