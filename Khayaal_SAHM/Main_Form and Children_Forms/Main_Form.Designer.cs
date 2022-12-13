@@ -75,7 +75,7 @@
             this.Btn_Best_Seller.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Best_Seller.FlatAppearance.BorderSize = 0;
             this.Btn_Best_Seller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Best_Seller.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Best_Seller.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Best_Seller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Best_Seller.IconChar = FontAwesome.Sharp.IconChar.Cutlery;
             this.Btn_Best_Seller.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
@@ -86,7 +86,7 @@
             this.Btn_Best_Seller.Name = "Btn_Best_Seller";
             this.Btn_Best_Seller.Size = new System.Drawing.Size(75, 52);
             this.Btn_Best_Seller.TabIndex = 7;
-            this.Btn_Best_Seller.Text = "Best Seller";
+            this.Btn_Best_Seller.Text = "Best Sales";
             this.Btn_Best_Seller.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Best_Seller.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Btn_Best_Seller.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@
             this.Btn_Purchases.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Purchases.FlatAppearance.BorderSize = 0;
             this.Btn_Purchases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Purchases.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Purchases.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_Purchases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Purchases.IconChar = FontAwesome.Sharp.IconChar.Receipt;
             this.Btn_Purchases.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
@@ -123,7 +123,7 @@
             this.Btn_Purchases.Name = "Btn_Purchases";
             this.Btn_Purchases.Size = new System.Drawing.Size(75, 52);
             this.Btn_Purchases.TabIndex = 5;
-            this.Btn_Purchases.Text = "Purchases";
+            this.Btn_Purchases.Text = "Purchase";
             this.Btn_Purchases.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Purchases.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Btn_Purchases.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             this.Btn_Bills.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Bills.FlatAppearance.BorderSize = 0;
             this.Btn_Bills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Bills.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Bills.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_Bills.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Bills.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
             this.Btn_Bills.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
@@ -158,7 +158,7 @@
             this.Btn_Relations.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Relations.FlatAppearance.BorderSize = 0;
             this.Btn_Relations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Relations.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Relations.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_Relations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Relations.IconChar = FontAwesome.Sharp.IconChar.ShareNodes;
             this.Btn_Relations.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
@@ -181,7 +181,7 @@
             this.Btn_Raw_Material.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Raw_Material.FlatAppearance.BorderSize = 0;
             this.Btn_Raw_Material.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Raw_Material.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Raw_Material.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_Raw_Material.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Raw_Material.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
             this.Btn_Raw_Material.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
@@ -204,7 +204,7 @@
             this.Btn_Booking.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Booking.FlatAppearance.BorderSize = 0;
             this.Btn_Booking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Booking.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Booking.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_Booking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Booking.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.Btn_Booking.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
@@ -227,7 +227,7 @@
             this.BtnHome.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.BtnHome.FlatAppearance.BorderSize = 0;
             this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BtnHome.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.BtnHome.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
