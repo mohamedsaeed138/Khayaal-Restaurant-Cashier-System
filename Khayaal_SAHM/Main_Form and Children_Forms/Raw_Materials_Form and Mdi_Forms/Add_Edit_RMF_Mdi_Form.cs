@@ -115,7 +115,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         private static DataTable Select_Category_AS_Data_Table()
         {
 
-            string sql = "select Category from CR.Items GROUP BY Category";
+            string sql = "select Category from CR.Raw_Materials GROUP BY Category";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);

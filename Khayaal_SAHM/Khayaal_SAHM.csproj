@@ -250,16 +250,16 @@
     <Compile Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form.Designer.cs">
       <DependentUpon>Best_Seller_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Bills_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Bills_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Bills_Form.Designer.cs">
+    <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Bills_Form.Designer.cs">
       <DependentUpon>Bills_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Booking_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Booking_Form.Designer.cs">
+    <Compile Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.Designer.cs">
       <DependentUpon>Booking_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Edit_HF_Mdi_Form.cs">
@@ -286,10 +286,10 @@
     <Compile Include="Main_Form and Children_Forms\Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Purchase_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Purchases_Form and Mdi_Forms\Purchase_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Purchase_Form.Designer.cs">
+    <Compile Include="Main_Form and Children_Forms\Purchases_Form and Mdi_Forms\Purchase_Form.Designer.cs">
       <DependentUpon>Purchase_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Add_Edit_RMF_Mdi_Form.cs">
@@ -298,16 +298,16 @@
     <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Add_Edit_RMF_Mdi_Form.Designer.cs">
       <DependentUpon>Add_Edit_RMF_Mdi_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Raw_Materials_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form.Designer.cs">
+    <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Raw_Materials_Form.Designer.cs">
       <DependentUpon>Raw_Materials_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Relations_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Relations_Form\Relations_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Relations_Form.Designer.cs">
+    <Compile Include="Main_Form and Children_Forms\Relations_Form\Relations_Form.Designer.cs">
       <DependentUpon>Relations_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -321,10 +321,10 @@
     <EmbeddedResource Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form.resx">
       <DependentUpon>Best_Seller_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form.resx">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Bills_Form.resx">
       <DependentUpon>Bills_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Booking_Form.resx">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.resx">
       <DependentUpon>Booking_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Edit_HF_Mdi_Form.resx">
@@ -338,16 +338,16 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Main_Form1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Purchase_Form.resx">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Purchases_Form and Mdi_Forms\Purchase_Form.resx">
       <DependentUpon>Purchase_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Add_Edit_RMF_Mdi_Form.resx">
       <DependentUpon>Add_Edit_RMF_Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Raw_Materials_Form.resx">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Raw_Materials_Form.resx">
       <DependentUpon>Raw_Materials_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Relations_Form.resx">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Relations_Form\Relations_Form.resx">
       <DependentUpon>Relations_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
