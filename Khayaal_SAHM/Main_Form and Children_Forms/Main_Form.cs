@@ -142,5 +142,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
             }
             
         }
+
+        private void Btn_Items_Click(object sender, EventArgs e)
+        {
+            Open_Child_form(new Items_Form());
+        }
     }
 }
