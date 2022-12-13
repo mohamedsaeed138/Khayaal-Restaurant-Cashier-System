@@ -46,7 +46,6 @@
             this.Panel_Child = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Panel_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.Panel_Control.SuspendLayout();
@@ -326,11 +325,6 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 30;
-            this.guna2Elipse2.TargetControl = this.BtnHome;
-            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +364,5 @@
         private FontAwesome.Sharp.IconButton Btn_Minimize;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private FontAwesome.Sharp.IconButton Btn_Best_Seller;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }
