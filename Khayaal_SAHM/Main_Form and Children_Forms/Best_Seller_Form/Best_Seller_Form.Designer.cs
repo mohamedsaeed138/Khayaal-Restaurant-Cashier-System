@@ -60,7 +60,7 @@
             this.guna2ComboBox1.ItemHeight = 30;
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Location = new System.Drawing.Point(352, 43);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(160, 36);
@@ -73,8 +73,8 @@
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(621, 56);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(563, 59);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -86,8 +86,8 @@
             this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(794, 56);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Location = new System.Drawing.Point(770, 59);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(121, 20);
             this.dateTimePicker2.TabIndex = 8;
@@ -108,7 +108,7 @@
             this.Search_Text_Box.FocusedState.Parent = this.Search_Text_Box;
             this.Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search_Text_Box.HoverState.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.Location = new System.Drawing.Point(37, 43);
+            this.Search_Text_Box.Location = new System.Drawing.Point(52, 43);
             this.Search_Text_Box.Name = "Search_Text_Box";
             this.Search_Text_Box.PasswordChar = '\0';
             this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -138,8 +138,8 @@
             this.Best_Sales_Data_Grid_View.EnableHeadersVisualStyles = false;
             this.Best_Sales_Data_Grid_View.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.Best_Sales_Data_Grid_View.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.Best_Sales_Data_Grid_View.Location = new System.Drawing.Point(37, 98);
-            this.Best_Sales_Data_Grid_View.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Best_Sales_Data_Grid_View.Location = new System.Drawing.Point(49, 99);
+            this.Best_Sales_Data_Grid_View.Margin = new System.Windows.Forms.Padding(2);
             this.Best_Sales_Data_Grid_View.Name = "Best_Sales_Data_Grid_View";
             this.Best_Sales_Data_Grid_View.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.Best_Sales_Data_Grid_View.RowHeadersWidth = 51;
@@ -153,7 +153,7 @@
             this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Category_Label.Location = new System.Drawing.Point(352, 11);
-            this.Category_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Category_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Category_Label.Name = "Category_Label";
             this.Category_Label.Size = new System.Drawing.Size(80, 27);
             this.Category_Label.TabIndex = 11;
@@ -164,8 +164,8 @@
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(621, 11);
-            this.From_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Label.Location = new System.Drawing.Point(563, 11);
+            this.From_Label.Margin = new System.Windows.Forms.Padding(2);
             this.From_Label.Name = "From_Label";
             this.From_Label.Size = new System.Drawing.Size(46, 27);
             this.From_Label.TabIndex = 12;
@@ -176,8 +176,8 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(794, 11);
-            this.To_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Label.Location = new System.Drawing.Point(770, 11);
+            this.To_Label.Margin = new System.Windows.Forms.Padding(2);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(25, 27);
             this.To_Label.TabIndex = 13;
@@ -188,8 +188,8 @@
             this.Count_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Label.Location = new System.Drawing.Point(28, 543);
-            this.Count_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Count_Label.Location = new System.Drawing.Point(49, 543);
+            this.Count_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Label.Name = "Count_Label";
             this.Count_Label.Size = new System.Drawing.Size(64, 27);
             this.Count_Label.TabIndex = 14;
@@ -201,17 +201,18 @@
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Count_Value_Label.Location = new System.Drawing.Point(96, 543);
-            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Value_Label.Name = "Count_Value_Label";
             this.Count_Value_Label.Size = new System.Drawing.Size(3, 2);
             this.Count_Value_Label.TabIndex = 15;
+            this.Count_Value_Label.Text = null;
             // 
             // Best_Seller_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(949, 581);
+            this.ClientSize = new System.Drawing.Size(974, 581);
             this.Controls.Add(this.Count_Value_Label);
             this.Controls.Add(this.Count_Label);
             this.Controls.Add(this.To_Label);
