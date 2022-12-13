@@ -142,9 +142,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         }
 
-        private void Btn_Items_Click(object sender, EventArgs e)
+        private void Btn_Best_Seller_Click(object sender, EventArgs e)
         {
-            Open_Child_form(new Items_Form());
+            Open_Child_form(new Best_Seller_Form.Best_Seller_Form());
         }
+
+
     }
 }
