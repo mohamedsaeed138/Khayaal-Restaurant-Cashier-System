@@ -53,6 +53,11 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Azure.Core, Version=1.24.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Core.1.24.0\lib\net461\Azure.Core.dll</HintPath>
@@ -239,17 +244,23 @@
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Bills_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Bills_Form.Designer.cs">
+      <DependentUpon>Bills_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Booking_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Booking_Form.Designer.cs">
+      <DependentUpon>Booking_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.Designer.cs">
       <DependentUpon>Add_Mdi_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.Designer.cs">
-      <DependentUpon>Home_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.cs">
       <SubType>UserControl</SubType>
@@ -257,11 +268,35 @@
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form.Designer.cs">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Purchase_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Purchase_Form.Designer.cs">
+      <DependentUpon>Purchase_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form.Designer.cs">
+      <DependentUpon>Raw_Materials_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Relations_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Relations_Form.Designer.cs">
+      <DependentUpon>Relations_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -271,11 +306,31 @@
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form.resx">
+      <DependentUpon>Bills_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Booking_Form.resx">
+      <DependentUpon>Booking_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Mdi_Form.resx">
       <DependentUpon>Add_Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form.resx">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Main_Form1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Purchase_Form.resx">
+      <DependentUpon>Purchase_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Raw_Materials_Form.resx">
+      <DependentUpon>Raw_Materials_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Relations_Form.resx">
+      <DependentUpon>Relations_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -314,6 +369,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Logo.ico" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\Logo.ico.bmp" />
+    <None Include="Resources\Image_Khayaal.Image.png" />
     <None Include="Resources\button off.PNG" />
     <None Include="Resources\button on.PNG" />
     <EmbeddedResource Include="DataBase\Restaurant_Cafe.mdf">
