@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Forms;
+
 namespace Khayaal_SAHM
 {
     internal static class Program
@@ -9,9 +11,9 @@ namespace Khayaal_SAHM
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Loading_Screen_Form());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Loading_Screen_Form());
 
         }
 

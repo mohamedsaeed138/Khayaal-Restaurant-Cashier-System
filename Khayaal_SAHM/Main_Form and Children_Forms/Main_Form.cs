@@ -114,6 +114,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
             Activate_Btn(sender, RGBColors.color1);
             Open_Child_form(new Purchases_Form_and_Mdi_Forms.Purchase_Form());
         }
+        private void Btn_Best_Seller_Click(object sender, EventArgs e)
+        {
+            Open_Child_form(new Best_Seller_Form.Best_Seller_Form());
+        }
 
         private void Btn_Maximize_Click(object sender, EventArgs e)
         {
@@ -139,10 +143,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         }
 
-        private void Btn_Best_Seller_Click(object sender, EventArgs e)
-        {
-            Open_Child_form(new Best_Seller_Form.Best_Seller_Form());
-        }
+
 
 
     }
