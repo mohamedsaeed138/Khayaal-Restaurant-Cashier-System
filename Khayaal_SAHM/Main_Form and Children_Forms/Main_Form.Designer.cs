@@ -253,7 +253,7 @@
             this.Panel_Control.Location = new System.Drawing.Point(91, 0);
             this.Panel_Control.Name = "Panel_Control";
             this.Panel_Control.ShadowDecoration.Parent = this.Panel_Control;
-            this.Panel_Control.Size = new System.Drawing.Size(949, 23);
+            this.Panel_Control.Size = new System.Drawing.Size(974, 23);
             this.Panel_Control.TabIndex = 1;
             // 
             // Btn_Minimize
@@ -265,7 +265,7 @@
             this.Btn_Minimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Minimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.Btn_Minimize.IconSize = 19;
-            this.Btn_Minimize.Location = new System.Drawing.Point(816, 0);
+            this.Btn_Minimize.Location = new System.Drawing.Point(841, 0);
             this.Btn_Minimize.Name = "Btn_Minimize";
             this.Btn_Minimize.Size = new System.Drawing.Size(45, 23);
             this.Btn_Minimize.TabIndex = 2;
@@ -283,7 +283,7 @@
             this.Btn_Maximize.IconFont = FontAwesome.Sharp.IconFont.Regular;
             this.Btn_Maximize.IconSize = 19;
             this.Btn_Maximize.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Maximize.Location = new System.Drawing.Point(859, 0);
+            this.Btn_Maximize.Location = new System.Drawing.Point(884, 0);
             this.Btn_Maximize.Name = "Btn_Maximize";
             this.Btn_Maximize.Size = new System.Drawing.Size(45, 23);
             this.Btn_Maximize.TabIndex = 1;
@@ -298,7 +298,7 @@
             this.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             this.Btn_Exit.HoverState.Parent = this.Btn_Exit;
             this.Btn_Exit.IconColor = System.Drawing.Color.White;
-            this.Btn_Exit.Location = new System.Drawing.Point(904, 0);
+            this.Btn_Exit.Location = new System.Drawing.Point(929, 0);
             this.Btn_Exit.Name = "Btn_Exit";
             this.Btn_Exit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(14)))));
             this.Btn_Exit.ShadowDecoration.BorderRadius = 0;
@@ -314,7 +314,7 @@
             this.Panel_Child.Location = new System.Drawing.Point(91, 23);
             this.Panel_Child.Name = "Panel_Child";
             this.Panel_Child.ShadowDecoration.Parent = this.Panel_Child;
-            this.Panel_Child.Size = new System.Drawing.Size(949, 581);
+            this.Panel_Child.Size = new System.Drawing.Size(974, 581);
             this.Panel_Child.TabIndex = 2;
             // 
             // guna2DragControl1
@@ -329,7 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 604);
+            this.ClientSize = new System.Drawing.Size(1065, 604);
             this.Controls.Add(this.Panel_Child);
             this.Controls.Add(this.Panel_Control);
             this.Controls.Add(this.Panel_Menu);

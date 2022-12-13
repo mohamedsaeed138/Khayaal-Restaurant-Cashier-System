@@ -286,6 +286,11 @@
     <Compile Include="Main_Form and Children_Forms\Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Main_Form1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main_Form.resx</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Purchases_Form and Mdi_Forms\Purchase_Form.cs">
       <SubType>Form</SubType>
     </Compile>
