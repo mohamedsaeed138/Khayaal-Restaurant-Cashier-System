@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms;
+using System;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM
@@ -14,7 +15,7 @@ namespace Khayaal_SAHM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Main_Form_and_Children_Forms.Main_Form());
-
+            Application.Run(new Main_Form());
         }
 
     }
