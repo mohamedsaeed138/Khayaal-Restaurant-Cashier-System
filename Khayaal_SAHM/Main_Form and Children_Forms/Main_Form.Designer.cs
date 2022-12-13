@@ -53,7 +53,7 @@
             // 
             // Panel_Menu
             // 
-            this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Panel_Menu.Controls.Add(this.Btn_Best_Seller);
             this.Panel_Menu.Controls.Add(this.guna2PictureBox1);
             this.Panel_Menu.Controls.Add(this.Btn_Purchases);
@@ -71,7 +71,7 @@
             // 
             // Btn_Best_Seller
             // 
-            this.Btn_Best_Seller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Btn_Best_Seller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Btn_Best_Seller.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Best_Seller.FlatAppearance.BorderSize = 0;
             this.Btn_Best_Seller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -94,6 +94,7 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -107,7 +108,7 @@
             // 
             // Btn_Purchases
             // 
-            this.Btn_Purchases.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Btn_Purchases.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Btn_Purchases.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Purchases.FlatAppearance.BorderSize = 0;
             this.Btn_Purchases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,7 +131,7 @@
             // 
             // Btn_Bills
             // 
-            this.Btn_Bills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Btn_Bills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Btn_Bills.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Bills.FlatAppearance.BorderSize = 0;
             this.Btn_Bills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,7 +154,7 @@
             // 
             // Btn_Relations
             // 
-            this.Btn_Relations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Btn_Relations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Btn_Relations.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Relations.FlatAppearance.BorderSize = 0;
             this.Btn_Relations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -176,7 +177,7 @@
             // 
             // Btn_Raw_Material
             // 
-            this.Btn_Raw_Material.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Btn_Raw_Material.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Btn_Raw_Material.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Raw_Material.FlatAppearance.BorderSize = 0;
             this.Btn_Raw_Material.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -199,7 +200,7 @@
             // 
             // Btn_Booking
             // 
-            this.Btn_Booking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Btn_Booking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Btn_Booking.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Btn_Booking.FlatAppearance.BorderSize = 0;
             this.Btn_Booking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,7 +223,7 @@
             // 
             // BtnHome
             // 
-            this.BtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.BtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.BtnHome.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.BtnHome.FlatAppearance.BorderSize = 0;
             this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -244,7 +245,7 @@
             // 
             // Panel_Control
             // 
-            this.Panel_Control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Panel_Control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Panel_Control.Controls.Add(this.Btn_Minimize);
             this.Panel_Control.Controls.Add(this.Btn_Maximize);
             this.Panel_Control.Controls.Add(this.Btn_Exit);
