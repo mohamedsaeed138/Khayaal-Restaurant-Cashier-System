@@ -320,11 +320,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Restaurant_CafeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Restaurant_CafeDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Loading_Form.resx">
       <DependentUpon>Loading_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,17 +380,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Restaurant_CafeDataSet.xsc">
-      <DependentUpon>Restaurant_CafeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Restaurant_CafeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Restaurant_CafeDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Restaurant_CafeDataSet.xss">
-      <DependentUpon>Restaurant_CafeDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
