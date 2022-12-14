@@ -16,7 +16,7 @@ namespace Khayaal_SAHM
             //Application.Run(new Loading_Screen_Form());
             // Application.Run(new Main_Form_and_Children_Forms.Best_Seller_Form.Best_Seller_Form());
 
-            Application.Run(new Main_Form_and_Children_Forms.Best_Seller_Form.Best_Seller_Form()); ;
+            Application.Run(new Main_Form_and_Children_Forms.Best_Seller_Form.Best_Sales_Form()); ;
 
             //Application.Run(new Home_Form());
             //Application.Run(new Main_Form());

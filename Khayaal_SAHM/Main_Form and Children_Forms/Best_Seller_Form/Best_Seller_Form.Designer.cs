@@ -1,6 +1,6 @@
 ﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
 {
-    partial class Best_Seller_Form
+    partial class Best_Sales_Form
     {
         /// <summary>
         /// Required designer variable.
