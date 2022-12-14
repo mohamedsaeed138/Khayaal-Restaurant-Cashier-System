@@ -125,6 +125,7 @@
             this.Search_Text_Box.Size = new System.Drawing.Size(352, 44);
             this.Search_Text_Box.TabIndex = 9;
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
+            this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
             // Category_Label
             // 

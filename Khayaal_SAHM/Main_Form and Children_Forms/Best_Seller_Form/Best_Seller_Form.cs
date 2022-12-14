@@ -28,7 +28,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
         public void Fill_Combo_Box()
         {
             conn.Open();
-            string sql = "select Category from CR.Items GROUP BY Category";
+            string sql = "SELECT Category FROM CR.Items GROUP BY Category";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -103,6 +103,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
         private void To_Date_Picker_ValueChanged(object sender, EventArgs e)
         {
             Choose_Query();
+        }
+
+        private void Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Search_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+           || (Search_Text_Box.Text.Length > 1 && Search_Text_Box.Text[Search_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Search_Text_Box.Text.Length == 0))
+
+            {
+                e.Handled = true;
+            }
         }
     }
 }
