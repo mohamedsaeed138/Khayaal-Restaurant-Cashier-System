@@ -244,6 +244,12 @@
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form - Copy.Designer.cs">
+      <DependentUpon>Best_Seller_Form - Copy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form - Copy.resx">
+      <DependentUpon>Best_Seller_Form - Copy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form.resx">
       <DependentUpon>Best_Seller_Form.cs</DependentUpon>
