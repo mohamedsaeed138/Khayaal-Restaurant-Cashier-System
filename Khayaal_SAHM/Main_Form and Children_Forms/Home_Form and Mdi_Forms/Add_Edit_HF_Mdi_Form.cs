@@ -128,11 +128,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
         private static DataTable Select_Category_AS_Data_Table()
         {
-
+            conn.Open();
             string sql = "select Category from CR.Items GROUP BY Category";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            conn.Close();
             return dt;
 
         }
