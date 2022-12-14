@@ -47,8 +47,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             SqlDataAdapter da = new SqlDataAdapter(Command);
             DataTable dt = new DataTable();
             conn.Open();
-            try { da.Fill(dt); }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            da.Fill(dt);
+
 
             conn.Close();
             Best_Seller_Table.Rows.Clear();
