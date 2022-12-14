@@ -78,7 +78,7 @@
             this.Btn_Best_Seller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Best_Seller.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Best_Seller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Best_Seller.IconChar = FontAwesome.Sharp.IconChar.Cutlery;
+            this.Btn_Best_Seller.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.Btn_Best_Seller.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Best_Seller.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_Best_Seller.IconSize = 25;
