@@ -52,7 +52,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Btn_Print = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.restaurant_CafeDataSet = new Khayaal_SAHM.Restaurant_CafeDataSet();
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +65,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurant_CafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -328,8 +326,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this.Btn_Add_Item;
+           
             // 
             // dataGridView1
             // 
@@ -348,12 +345,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             // restaurant_CafeDataSet
             // 
-            this.restaurant_CafeDataSet.DataSetName = "Restaurant_CafeDataSet";
-            this.restaurant_CafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // restaurantCafeDataSetBindingSource
             // 
-            this.restaurantCafeDataSetBindingSource.DataSource = this.restaurant_CafeDataSet;
             this.restaurantCafeDataSetBindingSource.Position = 0;
             // 
             // Item_Name
@@ -394,7 +388,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurant_CafeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -427,6 +420,5 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.BindingSource restaurantCafeDataSetBindingSource;
-        private Restaurant_CafeDataSet restaurant_CafeDataSet;
     }
 }

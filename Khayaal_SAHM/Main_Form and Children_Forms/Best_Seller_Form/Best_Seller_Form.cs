@@ -17,13 +17,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
 
         public Best_Seller_Form()
         {
-            DateTime Current = DateTime.Now;
+
             InitializeComponent();
-            Fill_Combo_Box();
-            From_Date_Picker.Value = Current;
-            To_Date_Picker.Value = Current;
+
             Fill_Table($"SELECT[Name] as [Item],COUNT(Name) as Quntity, [Category] From CR.Bills_Details  GROUP BY Name ,Category ORDER BY Quntity DESC;");
 
+            Fill_Combo_Box();
         }
         public void Fill_Combo_Box()
         {
@@ -62,7 +61,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
         }
         void Choose_Query()
         {
-            if (From_Date_Picker.Value.Year > To_Date_Picker.Value.Year && From_Date_Picker.Value.Day > To_Date_Picker.Value.Day && From_Date_Picker.Value.Month > To_Date_Picker.Value.Month)
+            if (From_Date_Picker.Value.Year == To_Date_Picker.Value.Year && From_Date_Picker.Value.Day > To_Date_Picker.Value.Day && From_Date_Picker.Value.Month > To_Date_Picker.Value.Month)
                 MessageBox.Show(From_Date_Picker.Value.TimeOfDay.ToString());
             else if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
                 Fill_Table($"SELECT[Name] as [Item],COUNT(Name) as Quntity, [Category] From CR.Bills_Details WHERE Date BETWEEN '{HDF(From_Date_Picker.Value, "From")}' and '{HDF(To_Date_Picker.Value, "To")}'   GROUP BY Name ,Category ORDER BY Quntity DESC;");
