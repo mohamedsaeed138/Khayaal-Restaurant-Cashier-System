@@ -20,9 +20,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
 
             InitializeComponent();
 
+            Fill_Combo_Box();
             Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details  GROUP BY Name ,Category ORDER BY [Total] , Quntity  DESC;");
 
-            Fill_Combo_Box();
+
         }
         public void Fill_Combo_Box()
         {
