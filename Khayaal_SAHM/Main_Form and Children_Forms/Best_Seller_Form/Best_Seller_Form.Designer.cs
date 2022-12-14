@@ -30,6 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
@@ -39,7 +46,7 @@
             this.To_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Best_Seller_Table = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Best_Seller_Table = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +71,7 @@
             this.Category_Combo_Box.ItemHeight = 30;
             this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Location = new System.Drawing.Point(352, 43);
-            this.Category_Combo_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Category_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Category_Combo_Box.Name = "Category_Combo_Box";
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Size = new System.Drawing.Size(160, 36);
@@ -80,7 +87,7 @@
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.From_Date_Picker.Location = new System.Drawing.Point(563, 59);
-            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Date_Picker.Name = "From_Date_Picker";
             this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.From_Date_Picker.TabIndex = 7;
@@ -95,7 +102,7 @@
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.To_Date_Picker.Location = new System.Drawing.Point(770, 59);
-            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.To_Date_Picker.TabIndex = 8;
@@ -118,7 +125,7 @@
             this.Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search_Text_Box.HoverState.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Location = new System.Drawing.Point(52, 43);
-            this.Search_Text_Box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
             this.Search_Text_Box.Name = "Search_Text_Box";
             this.Search_Text_Box.PasswordChar = '\0';
             this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -136,7 +143,7 @@
             this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Category_Label.Location = new System.Drawing.Point(352, 11);
-            this.Category_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Category_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Category_Label.Name = "Category_Label";
             this.Category_Label.Size = new System.Drawing.Size(80, 27);
             this.Category_Label.TabIndex = 11;
@@ -148,7 +155,7 @@
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.From_Label.Location = new System.Drawing.Point(563, 11);
-            this.From_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Label.Margin = new System.Windows.Forms.Padding(2);
             this.From_Label.Name = "From_Label";
             this.From_Label.Size = new System.Drawing.Size(46, 27);
             this.From_Label.TabIndex = 12;
@@ -160,7 +167,7 @@
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.To_Label.Location = new System.Drawing.Point(770, 11);
-            this.To_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Label.Margin = new System.Windows.Forms.Padding(2);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(25, 27);
             this.To_Label.TabIndex = 13;
@@ -172,7 +179,7 @@
             this.Count_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Count_Label.Location = new System.Drawing.Point(49, 543);
-            this.Count_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Count_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Label.Name = "Count_Label";
             this.Count_Label.Size = new System.Drawing.Size(64, 27);
             this.Count_Label.TabIndex = 14;
@@ -184,7 +191,7 @@
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Count_Value_Label.Location = new System.Drawing.Point(96, 543);
-            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Value_Label.Name = "Count_Value_Label";
             this.Count_Value_Label.Size = new System.Drawing.Size(3, 2);
             this.Count_Value_Label.TabIndex = 15;
@@ -194,61 +201,134 @@
             // 
             this.Best_Seller_Table.AllowUserToAddRows = false;
             this.Best_Seller_Table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Best_Seller_Table.AllowUserToResizeColumns = false;
+            this.Best_Seller_Table.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Best_Seller_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Best_Seller_Table.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.Best_Seller_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Best_Seller_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Best_Seller_Table.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.Best_Seller_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Best_Seller_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Best_Seller_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Best_Seller_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Best_Seller_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Best_Seller_Table.ColumnHeadersHeight = 48;
+            this.Best_Seller_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Best_Seller_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.Best_Seller_Table.DoubleBuffered = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Best_Seller_Table.DefaultCellStyle = dataGridViewCellStyle7;
             this.Best_Seller_Table.EnableHeadersVisualStyles = false;
-            this.Best_Seller_Table.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.Best_Seller_Table.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.Best_Seller_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Best_Seller_Table.Location = new System.Drawing.Point(70, 100);
+            this.Best_Seller_Table.MultiSelect = false;
             this.Best_Seller_Table.Name = "Best_Seller_Table";
             this.Best_Seller_Table.ReadOnly = true;
-            this.Best_Seller_Table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Best_Seller_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.Best_Seller_Table.RowHeadersVisible = false;
+            this.Best_Seller_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Best_Seller_Table.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.Best_Seller_Table.RowTemplate.Height = 37;
+            this.Best_Seller_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Best_Seller_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.Best_Seller_Table.Size = new System.Drawing.Size(875, 439);
-            this.Best_Seller_Table.TabIndex = 16;
+            this.Best_Seller_Table.TabIndex = 17;
+            this.Best_Seller_Table.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Best_Seller_Table.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Best_Seller_Table.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Best_Seller_Table.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Best_Seller_Table.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Best_Seller_Table.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Best_Seller_Table.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.Best_Seller_Table.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Best_Seller_Table.ThemeStyle.HeaderStyle.Height = 48;
+            this.Best_Seller_Table.ThemeStyle.ReadOnly = true;
+            this.Best_Seller_Table.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Best_Seller_Table.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Best_Seller_Table.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.Best_Seller_Table.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Best_Seller_Table.ThemeStyle.RowsStyle.Height = 37;
+            this.Best_Seller_Table.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Best_Seller_Table.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             // 
             // Column1
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column1.HeaderText = "Item";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column2.HeaderText = "Category";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column3.HeaderText = "Quntity";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column4.HeaderText = "Total";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Best_Seller_Formcp
+            // Best_Seller_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,7 +345,7 @@
             this.Controls.Add(this.From_Date_Picker);
             this.Controls.Add(this.Category_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Best_Seller_Formcp";
+            this.Name = "Best_Seller_Form";
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).EndInit();
             this.ResumeLayout(false);
@@ -283,7 +363,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel To_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Value_Label;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid Best_Seller_Table;
+        private Guna.UI2.WinForms.Guna2DataGridView Best_Seller_Table;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
