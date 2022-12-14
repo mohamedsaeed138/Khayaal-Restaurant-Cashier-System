@@ -57,6 +57,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
 
                 Best_Seller_Table.Rows.Add((string)row[0], (string)row[1], (int)row[2], (double)row[3]);
             }
+            try
+            {
+                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+            }
+            catch { }
             Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
         }
         void Choose_Query()
@@ -112,6 +117,36 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             {
                 e.Handled = true;
             }
+        }
+
+        private void Table_Croll_Bar_Scroll(object sender, ScrollEventArgs e)
+        {
+            try
+            {
+                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+
+                Best_Seller_Table.FirstDisplayedScrollingRowIndex = Best_Seller_Table.Rows[e.NewValue].Index;
+            }
+            catch { }
+
+        }
+
+        private void Best_Seller_Table_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            try
+            {
+                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+            }
+            catch { }
+        }
+
+        private void Best_Seller_Table_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            try
+            {
+                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+            }
+            catch { }
         }
     }
 }
