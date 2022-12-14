@@ -56,8 +56,9 @@ namespace Khayaal_SAHM
                 {
                     txt_user = Username.Text;
                     txt_pass = Password.Text;
-
-                    SqlCommand loginCOM = new SqlCommand($"INSERT INTO CR.Users_Login_History(User_Name, Date)VALUES(N'{txt_user}', GETDATE());", LoginCon);
+                    SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;", LoginCon);
+                    loginCOM.ExecuteNonQuery();
+                    loginCOM = new SqlCommand($"INSERT INTO CR.Users_Login_History(User_Name, Date)VALUES(N'{txt_user}', GETDATE());", LoginCon);
                     loginCOM.ExecuteNonQuery();
 
                     Thread Mainformthread = new Thread(Mainformstart);
