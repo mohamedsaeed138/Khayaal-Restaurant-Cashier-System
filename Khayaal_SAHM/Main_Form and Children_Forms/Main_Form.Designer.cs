@@ -244,7 +244,7 @@
             this.Home_Off.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Home_Off.TabIndex = 8;
             this.Home_Off.TabStop = false;
-            this.Home_Off.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            
             // 
             // Home_On
             // 
