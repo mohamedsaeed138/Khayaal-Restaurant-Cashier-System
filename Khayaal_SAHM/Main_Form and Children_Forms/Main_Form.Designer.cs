@@ -62,7 +62,7 @@
             // 
             // Panel_Menu
             // 
-            this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.Panel_Menu.Controls.Add(this.guna2PictureBox7);
             this.Panel_Menu.Controls.Add(this.guna2PictureBox6);
             this.Panel_Menu.Controls.Add(this.guna2PictureBox5);
@@ -81,7 +81,7 @@
             // 
             // Panel_Control
             // 
-            this.Panel_Control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Panel_Control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.Panel_Control.Controls.Add(this.Btn_Minimize);
             this.Panel_Control.Controls.Add(this.Btn_Maximize);
             this.Panel_Control.Controls.Add(this.Btn_Exit);
