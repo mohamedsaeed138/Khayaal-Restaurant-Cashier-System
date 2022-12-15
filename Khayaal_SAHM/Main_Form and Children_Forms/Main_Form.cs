@@ -105,7 +105,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
         private void Btn_Purchases_Click(object sender, EventArgs e)
         {
             Activate_Btn(sender, RGBColors.color1);
-            Open_Child_form(new Purchases_Form_and_Mdi_Forms.Purchase_Form());
+            Open_Child_form(new Purchases_Form_and_Mdi_Forms.Purchases_Form());
         }
         private void Btn_Best_Seller_Click(object sender, EventArgs e)
         {

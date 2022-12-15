@@ -3,9 +3,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_Forms
+namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 {
-    public partial class Raw_Materials_Form : Form
+    public partial class Purchases_Form : Form
     {
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
 
@@ -15,7 +15,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
             Choose_Query();
         }
 
-        public Raw_Materials_Form()
+        public Purchases_Form()
         {
 
             InitializeComponent();

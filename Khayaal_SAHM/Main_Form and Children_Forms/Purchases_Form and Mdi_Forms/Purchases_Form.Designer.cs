@@ -1,6 +1,6 @@
-﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
+﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 {
-    partial class Relations_Form
+    partial class Purchases_Form
     {
         /// <summary>
         /// Required designer variable.
