@@ -41,14 +41,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             DataRow row = dt_item.NewRow();
             dt_item.Rows.InsertAt(row, 0);
             row["Name"] = "All";
-            Category_Combo_Box.DataSource = dt_item;
-            Category_Combo_Box.DisplayMember = "Name";
+            Item_Combo_Box.DataSource = dt_item;
+            Item_Combo_Box.DisplayMember = "Name";
 
             DataRow row2 = dt_item.NewRow();
             dt_item.Rows.InsertAt(row2, 0);
             row["Name"] = "All";
-            Category_Combo_Box.DataSource = dt_raw;
-            Category_Combo_Box.DisplayMember = "Name";
+            Item_Combo_Box.DataSource = dt_raw;
+            Item_Combo_Box.DisplayMember = "Name";
 
         }
 
@@ -78,11 +78,25 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         }
         void Choose_Query()
         {
-            if ()
+            if (Search_Text_Box.Text == string.Empty && Item_Combo_Box.Text == "All")
                 Fill_Item_Raw_Combo_Boxes();
-            else if ()
+            else if (true)
+                Fill_Item_Raw_Combo_Boxes();
+            else if (true)
+                Fill_Item_Raw_Combo_Boxes();
+            else if (true)
+                Fill_Item_Raw_Combo_Boxes();
+            else if (true)
+                Fill_Item_Raw_Combo_Boxes();
+            else if (true)
+                Fill_Item_Raw_Combo_Boxes();
+            else if (true)
+                Fill_Item_Raw_Combo_Boxes();
+            else
+                Fill_Item_Raw_Combo_Boxes();
 
-                Fill_Item_Raw_Combo_Boxes();
+
+
         }
 
 
