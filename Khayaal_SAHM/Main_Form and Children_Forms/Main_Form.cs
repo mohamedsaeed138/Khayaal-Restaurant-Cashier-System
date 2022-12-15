@@ -1,9 +1,6 @@
-﻿using FontAwesome.Sharp;
-using Guna.UI2.WinForms;
-using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
 using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms
@@ -33,15 +30,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
             Panel_Child.Controls.Add(Child_Form);
             Child_Form.BringToFront();
             Child_Form.Show();
-            
+
         }
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(241, 102, 103);
 
         }
-        //Methods
-        
+
 
 
 
@@ -50,7 +46,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
             Application.Exit();
         }
 
-        
+
         private void Btn_Maximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -75,34 +71,27 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         }
 
-        private void Main_Form_Shown(object sender, EventArgs e)
+        private void Home_OFF_Click(object sender, EventArgs e)
         {
-        }
-
-        
-
-   
-
-
-
-        private void Home_Off_Click(object sender, EventArgs e)
-        {
-            if (Home_Off.Visible == true)
+            if (Home_OFF.Visible == true)
             {
-                Home_On.Visible = true;
-                Home_Off.Visible = false;
-                Open_Child_form(new Home_Form());
-
+                Home_ON.Visible = true;
+                Home_OFF.Visible = false;
             }
-            if (Current_Form == new Home_Form()) ;
+            Open_Child_form(new Home_Form());
+            if (Current_Form != Current_Child_Form)
+            {
+                if (Home_OFF.Visible == true)
+                {
+                    Home_ON.Visible = true;
+                    Home_OFF.Visible = false;
+                    Open_Child_form(new Home_Form());
+
+                }
+                if (Current_Form == new Home_Form()) ;
                 return;
 
-        }
-
-        private void Home_On_Click(object sender, EventArgs e)
-        {
-           
+            }
         }
     }
-
 }
