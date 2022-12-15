@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -41,13 +42,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             DataRow row = dt_item.NewRow();
             dt_item.Rows.InsertAt(row, 0);
             row["Name"] = "All";
-            Item_Combo_Box.DataSource = dt_item;
+            Item_Combo_Box.DataSource = dt_item.DataSet;
             Item_Combo_Box.DisplayMember = "Name";
 
             DataRow row2 = dt_item.NewRow();
             dt_item.Rows.InsertAt(row2, 0);
             row["Name"] = "All";
-            Item_Combo_Box.DataSource = dt_raw;
+            Item_Combo_Box.DataSource = dt_raw.DataSet;
             Item_Combo_Box.DisplayMember = "Name";
 
         }
@@ -151,6 +152,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
                 Table_Croll_Bar.Maximum = Relations_Table.Rows.Count - 1;
             }
             catch { }
+        }
+        
+        DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+
+        private void Relations_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (Relations_Table.Columns[e.ColumnIndex].Name == "Delete")
+                {
+
+                }
+
+            }
         }
     }
 }
