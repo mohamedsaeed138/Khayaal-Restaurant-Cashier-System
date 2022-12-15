@@ -21,6 +21,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
             InitializeComponent();
 
+            Current_Child_Form?.Close();
+            Current_Child_Form = new Home_Form();
+            Current_Child_Form.TopLevel = false;
+            Current_Child_Form.FormBorderStyle = FormBorderStyle.None;
+            Current_Child_Form.Dock = DockStyle.Fill;
+            Panel_Child.Controls.Add(Current_Child_Form);
+            Current_Child_Form.BringToFront();
+            Current_Child_Form.Show();
             this.Text = String.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -369,6 +377,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
                 return;
 
             }
+        }
+
+        private void Main_Form_Shown(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -79,6 +79,8 @@
             // Panel_Menu
             // 
             this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Panel_Menu.Controls.Add(this.Home_ON);
+            this.Panel_Menu.Controls.Add(this.Home_OFF);
             this.Panel_Menu.Controls.Add(this.Side_Bar_Icon);
             this.Panel_Menu.Controls.Add(this.Credit_OFF);
             this.Panel_Menu.Controls.Add(this.Best_Sales_OFF);
@@ -88,10 +90,8 @@
             this.Panel_Menu.Controls.Add(this.Raw_OFF);
             this.Panel_Menu.Controls.Add(this.Booking_OFF);
             this.Panel_Menu.Controls.Add(this.Best_Sales_ON);
-            this.Panel_Menu.Controls.Add(this.Home_OFF);
             this.Panel_Menu.Controls.Add(this.Booking_ON);
             this.Panel_Menu.Controls.Add(this.Credit_ON);
-            this.Panel_Menu.Controls.Add(this.Home_ON);
             this.Panel_Menu.Controls.Add(this.Purchase_ON);
             this.Panel_Menu.Controls.Add(this.Raw_ON);
             this.Panel_Menu.Controls.Add(this.Bills_ON);
@@ -222,7 +222,7 @@
             // 
             this.Home_OFF.BorderRadius = 10;
             this.Home_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.Home_OFF.Location = new System.Drawing.Point(10, 84);
+            this.Home_OFF.Location = new System.Drawing.Point(10, 81);
             this.Home_OFF.Name = "Home_OFF";
             this.Home_OFF.ShadowDecoration.Parent = this.Home_OFF;
             this.Home_OFF.Size = new System.Drawing.Size(71, 56);
@@ -259,7 +259,7 @@
             // 
             this.Home_ON.BorderRadius = 10;
             this.Home_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button;
-            this.Home_ON.Location = new System.Drawing.Point(10, 84);
+            this.Home_ON.Location = new System.Drawing.Point(10, 81);
             this.Home_ON.Name = "Home_ON";
             this.Home_ON.ShadowDecoration.Parent = this.Home_ON;
             this.Home_ON.Size = new System.Drawing.Size(71, 56);
@@ -410,6 +410,7 @@
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Form";
+            this.Shown += new System.EventHandler(this.Main_Form_Shown);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Side_Bar_Icon)).EndInit();
