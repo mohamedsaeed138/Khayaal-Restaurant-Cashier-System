@@ -41,7 +41,7 @@
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.From_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.To_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -138,17 +138,17 @@
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
-            // Category_Label
+            // Total_Label
             // 
-            this.Category_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Category_Label.Location = new System.Drawing.Point(352, 11);
-            this.Category_Label.Margin = new System.Windows.Forms.Padding(2);
-            this.Category_Label.Name = "Category_Label";
-            this.Category_Label.Size = new System.Drawing.Size(80, 27);
-            this.Category_Label.TabIndex = 11;
-            this.Category_Label.Text = "Category";
+            this.Total_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Total_Label.Location = new System.Drawing.Point(352, 11);
+            this.Total_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Total_Label.Name = "Total_Label";
+            this.Total_Label.Size = new System.Drawing.Size(47, 27);
+            this.Total_Label.TabIndex = 11;
+            this.Total_Label.Text = "Total";
             // 
             // From_Label
             // 
@@ -350,7 +350,7 @@
             this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
             this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
             // 
-            // Best_Sales_Form
+            // Bills_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -362,13 +362,13 @@
             this.Controls.Add(this.Count_Label);
             this.Controls.Add(this.To_Label);
             this.Controls.Add(this.From_Label);
-            this.Controls.Add(this.Category_Label);
+            this.Controls.Add(this.Total_Label);
             this.Controls.Add(this.Search_Text_Box);
             this.Controls.Add(this.To_Date_Picker);
             this.Controls.Add(this.From_Date_Picker);
             this.Controls.Add(this.Category_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Best_Sales_Form";
+            this.Name = "Bills_Form";
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).EndInit();
             this.ResumeLayout(false);
@@ -381,7 +381,7 @@
         private System.Windows.Forms.DateTimePicker From_Date_Picker;
         private System.Windows.Forms.DateTimePicker To_Date_Picker;
         private Guna.UI2.WinForms.Guna2TextBox Search_Text_Box;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Category_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Total_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel From_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel To_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Label;

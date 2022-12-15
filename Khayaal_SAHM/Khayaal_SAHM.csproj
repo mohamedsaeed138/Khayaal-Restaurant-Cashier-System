@@ -384,11 +384,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.png" />
-    <None Include="Resources\image.png" />
-    <None Include="Resources\Logo.ico.bmp" />
     <None Include="Resources\Image_Khayaal.Image.png" />
-    <None Include="Resources\button off.PNG" />
-    <None Include="Resources\button on.PNG" />
     <EmbeddedResource Include="DataBase\Restaurant_Cafe.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
