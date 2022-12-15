@@ -79,22 +79,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         }
         void Choose_Query()
         {
-            if (Search_Text_Box.Text == string.Empty && Item_Combo_Box.Text == "All")
-                Fill_Item_Raw_Combo_Boxes();
-            else if (true)
-                Fill_Item_Raw_Combo_Boxes();
-            else if (true)
-                Fill_Item_Raw_Combo_Boxes();
-            else if (true)
-                Fill_Item_Raw_Combo_Boxes();
-            else if (true)
-                Fill_Item_Raw_Combo_Boxes();
-            else if (true)
-                Fill_Item_Raw_Combo_Boxes();
-            else if (true)
-                Fill_Item_Raw_Combo_Boxes();
-            else
-                Fill_Item_Raw_Combo_Boxes();
+            if (Search_Text_Box.Text != string.Empty && Item_Combo_Box.Text != "All" && Raw_Combo_Box.Text != "All")
+                Fill_Table($"");
+            else if (Search_Text_Box.Text != string.Empty && Item_Combo_Box.Text != "All" && Raw_Combo_Box.Text == "All")
+                Fill_Table($"");
+            else if (Search_Text_Box.Text != string.Empty && Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text != "All")
+                Fill_Table($"");
+            else if (Search_Text_Box.Text != string.Empty && Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text == "All")
+                Fill_Table($"");
+            else if (Search_Text_Box.Text == string.Empty && Item_Combo_Box.Text != "All" && Raw_Combo_Box.Text != "All")
+                Fill_Table($"");
+            else if (Search_Text_Box.Text == string.Empty && Item_Combo_Box.Text != "All" && Raw_Combo_Box.Text == "All")
+                Fill_Table($"");
+            else if (Search_Text_Box.Text == string.Empty && Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text != "All")
+                Fill_Table($"");
+            else if (Search_Text_Box.Text == string.Empty && Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text == "All")
+                Fill_Table($"");
+
 
 
 
