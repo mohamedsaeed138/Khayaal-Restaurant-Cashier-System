@@ -264,6 +264,12 @@
     <Compile Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.Designer.cs">
       <DependentUpon>Booking_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Credit_Form\Credit_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Credit_Form\Credit_Form.Designer.cs">
+      <DependentUpon>Credit_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Edit_HF_Mdi_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.resx">
       <DependentUpon>Booking_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Credit_Form\Credit_Form.resx">
+      <DependentUpon>Credit_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Edit_HF_Mdi_Form.resx">
       <DependentUpon>Add_Edit_HF_Mdi_Form.cs</DependentUpon>

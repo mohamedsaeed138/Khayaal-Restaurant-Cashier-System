@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Panel_Menu = new Guna.UI2.WinForms.Guna2Panel();
-            this.Panel_Control = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_Exit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.Panel_Child = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.Btn_Minimize = new FontAwesome.Sharp.IconButton();
-            this.Btn_Maximize = new FontAwesome.Sharp.IconButton();
             this.Side_Bar_Icon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Credit_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Best_Sales_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -55,8 +48,14 @@
             this.Raw_ON = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Bills_ON = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Relations_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Panel_Control = new Guna.UI2.WinForms.Guna2Panel();
+            this.Btn_Minimize = new FontAwesome.Sharp.IconButton();
+            this.Btn_Maximize = new FontAwesome.Sharp.IconButton();
+            this.Btn_Exit = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.Panel_Child = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Panel_Menu.SuspendLayout();
-            this.Panel_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Side_Bar_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Credit_OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_OFF)).BeginInit();
@@ -74,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Raw_ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Relations_ON)).BeginInit();
+            this.Panel_Control.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Menu
@@ -103,88 +103,6 @@
             this.Panel_Menu.Size = new System.Drawing.Size(91, 604);
             this.Panel_Menu.TabIndex = 0;
             // 
-            // Panel_Control
-            // 
-            this.Panel_Control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.Panel_Control.Controls.Add(this.Btn_Minimize);
-            this.Panel_Control.Controls.Add(this.Btn_Maximize);
-            this.Panel_Control.Controls.Add(this.Btn_Exit);
-            this.Panel_Control.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Control.Location = new System.Drawing.Point(91, 0);
-            this.Panel_Control.Name = "Panel_Control";
-            this.Panel_Control.ShadowDecoration.Parent = this.Panel_Control;
-            this.Panel_Control.Size = new System.Drawing.Size(974, 23);
-            this.Panel_Control.TabIndex = 1;
-            // 
-            // Btn_Exit
-            // 
-            this.Btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Exit.CustomIconSize = 8F;
-            this.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.Btn_Exit.HoverState.Parent = this.Btn_Exit;
-            this.Btn_Exit.IconColor = System.Drawing.Color.White;
-            this.Btn_Exit.Location = new System.Drawing.Point(929, 0);
-            this.Btn_Exit.Name = "Btn_Exit";
-            this.Btn_Exit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(14)))));
-            this.Btn_Exit.ShadowDecoration.BorderRadius = 0;
-            this.Btn_Exit.ShadowDecoration.Parent = this.Btn_Exit;
-            this.Btn_Exit.Size = new System.Drawing.Size(45, 23);
-            this.Btn_Exit.TabIndex = 0;
-            this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
-            // 
-            // Panel_Child
-            // 
-            this.Panel_Child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Panel_Child.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Child.Location = new System.Drawing.Point(91, 23);
-            this.Panel_Child.Name = "Panel_Child";
-            this.Panel_Child.ShadowDecoration.Parent = this.Panel_Child;
-            this.Panel_Child.Size = new System.Drawing.Size(974, 581);
-            this.Panel_Child.TabIndex = 2;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this.Panel_Control;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // Btn_Minimize
-            // 
-            this.Btn_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Minimize.FlatAppearance.BorderSize = 0;
-            this.Btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Minimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.Btn_Minimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Minimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.Btn_Minimize.IconSize = 19;
-            this.Btn_Minimize.Location = new System.Drawing.Point(840, 0);
-            this.Btn_Minimize.Name = "Btn_Minimize";
-            this.Btn_Minimize.Size = new System.Drawing.Size(45, 23);
-            this.Btn_Minimize.TabIndex = 2;
-            this.Btn_Minimize.UseVisualStyleBackColor = true;
-            this.Btn_Minimize.Click += new System.EventHandler(this.Btn_Minimize_Click);
-            // 
-            // Btn_Maximize
-            // 
-            this.Btn_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Maximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Btn_Maximize.FlatAppearance.BorderSize = 0;
-            this.Btn_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Maximize.IconChar = FontAwesome.Sharp.IconChar.Square;
-            this.Btn_Maximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Maximize.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            this.Btn_Maximize.IconSize = 19;
-            this.Btn_Maximize.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Maximize.Location = new System.Drawing.Point(884, 0);
-            this.Btn_Maximize.Name = "Btn_Maximize";
-            this.Btn_Maximize.Size = new System.Drawing.Size(45, 23);
-            this.Btn_Maximize.TabIndex = 1;
-            this.Btn_Maximize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_Maximize.UseVisualStyleBackColor = true;
-            this.Btn_Maximize.Click += new System.EventHandler(this.Btn_Maximize_Click);
-            // 
             // Side_Bar_Icon
             // 
             this.Side_Bar_Icon.BorderRadius = 10;
@@ -208,6 +126,7 @@
             this.Credit_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Credit_OFF.TabIndex = 14;
             this.Credit_OFF.TabStop = false;
+            this.Credit_OFF.Click += new System.EventHandler(this.Credit_OFF_Click_1);
             // 
             // Best_Sales_OFF
             // 
@@ -220,6 +139,7 @@
             this.Best_Sales_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Best_Sales_OFF.TabIndex = 21;
             this.Best_Sales_OFF.TabStop = false;
+            this.Best_Sales_OFF.Click += new System.EventHandler(this.Best_Sales_OFF_Click_1);
             // 
             // Purchase_OFF
             // 
@@ -232,6 +152,7 @@
             this.Purchase_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Purchase_OFF.TabIndex = 17;
             this.Purchase_OFF.TabStop = false;
+            this.Purchase_OFF.Click += new System.EventHandler(this.Purchase_OFF_Click_1);
             // 
             // Bills_OFF
             // 
@@ -244,6 +165,7 @@
             this.Bills_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Bills_OFF.TabIndex = 19;
             this.Bills_OFF.TabStop = false;
+            this.Bills_OFF.Click += new System.EventHandler(this.Bills_OFF_Click_1);
             // 
             // Relations_OFF
             // 
@@ -256,6 +178,7 @@
             this.Relations_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Relations_OFF.TabIndex = 20;
             this.Relations_OFF.TabStop = false;
+            this.Relations_OFF.Click += new System.EventHandler(this.Relations_OFF_Click_1);
             // 
             // Raw_OFF
             // 
@@ -268,6 +191,7 @@
             this.Raw_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Raw_OFF.TabIndex = 12;
             this.Raw_OFF.TabStop = false;
+            this.Raw_OFF.Click += new System.EventHandler(this.Raw_OFF_Click_1);
             // 
             // Booking_OFF
             // 
@@ -280,6 +204,7 @@
             this.Booking_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Booking_OFF.TabIndex = 9;
             this.Booking_OFF.TabStop = false;
+            this.Booking_OFF.Click += new System.EventHandler(this.Booking_OFF_Click_1);
             // 
             // Best_Sales_ON
             // 
@@ -304,6 +229,7 @@
             this.Home_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Home_OFF.TabIndex = 8;
             this.Home_OFF.TabStop = false;
+            this.Home_OFF.Click += new System.EventHandler(this.Home_OFF_Click);
             // 
             // Booking_ON
             // 
@@ -389,6 +315,88 @@
             this.Relations_ON.TabIndex = 13;
             this.Relations_ON.TabStop = false;
             // 
+            // Panel_Control
+            // 
+            this.Panel_Control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Panel_Control.Controls.Add(this.Btn_Minimize);
+            this.Panel_Control.Controls.Add(this.Btn_Maximize);
+            this.Panel_Control.Controls.Add(this.Btn_Exit);
+            this.Panel_Control.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_Control.Location = new System.Drawing.Point(91, 0);
+            this.Panel_Control.Name = "Panel_Control";
+            this.Panel_Control.ShadowDecoration.Parent = this.Panel_Control;
+            this.Panel_Control.Size = new System.Drawing.Size(974, 23);
+            this.Panel_Control.TabIndex = 1;
+            // 
+            // Btn_Minimize
+            // 
+            this.Btn_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Minimize.FlatAppearance.BorderSize = 0;
+            this.Btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Minimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.Btn_Minimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Btn_Minimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.Btn_Minimize.IconSize = 19;
+            this.Btn_Minimize.Location = new System.Drawing.Point(840, 0);
+            this.Btn_Minimize.Name = "Btn_Minimize";
+            this.Btn_Minimize.Size = new System.Drawing.Size(45, 23);
+            this.Btn_Minimize.TabIndex = 2;
+            this.Btn_Minimize.UseVisualStyleBackColor = true;
+            this.Btn_Minimize.Click += new System.EventHandler(this.Btn_Minimize_Click);
+            // 
+            // Btn_Maximize
+            // 
+            this.Btn_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Maximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Btn_Maximize.FlatAppearance.BorderSize = 0;
+            this.Btn_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Maximize.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.Btn_Maximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Btn_Maximize.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            this.Btn_Maximize.IconSize = 19;
+            this.Btn_Maximize.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_Maximize.Location = new System.Drawing.Point(884, 0);
+            this.Btn_Maximize.Name = "Btn_Maximize";
+            this.Btn_Maximize.Size = new System.Drawing.Size(45, 23);
+            this.Btn_Maximize.TabIndex = 1;
+            this.Btn_Maximize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Maximize.UseVisualStyleBackColor = true;
+            this.Btn_Maximize.Click += new System.EventHandler(this.Btn_Maximize_Click);
+            // 
+            // Btn_Exit
+            // 
+            this.Btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Exit.CustomIconSize = 8F;
+            this.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Btn_Exit.HoverState.Parent = this.Btn_Exit;
+            this.Btn_Exit.IconColor = System.Drawing.Color.White;
+            this.Btn_Exit.Location = new System.Drawing.Point(929, 0);
+            this.Btn_Exit.Name = "Btn_Exit";
+            this.Btn_Exit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(14)))));
+            this.Btn_Exit.ShadowDecoration.BorderRadius = 0;
+            this.Btn_Exit.ShadowDecoration.Parent = this.Btn_Exit;
+            this.Btn_Exit.Size = new System.Drawing.Size(45, 23);
+            this.Btn_Exit.TabIndex = 0;
+            this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
+            // 
+            // Panel_Child
+            // 
+            this.Panel_Child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Panel_Child.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Child.Location = new System.Drawing.Point(91, 23);
+            this.Panel_Child.Name = "Panel_Child";
+            this.Panel_Child.ShadowDecoration.Parent = this.Panel_Child;
+            this.Panel_Child.Size = new System.Drawing.Size(974, 581);
+            this.Panel_Child.TabIndex = 2;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.Panel_Control;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +412,6 @@
             this.Text = "Main_Form";
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Menu.PerformLayout();
-            this.Panel_Control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Side_Bar_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Credit_OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_OFF)).EndInit();
@@ -422,6 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Raw_ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Relations_ON)).EndInit();
+            this.Panel_Control.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
