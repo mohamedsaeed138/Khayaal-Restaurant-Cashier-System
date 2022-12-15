@@ -1,6 +1,4 @@
-﻿using Khayaal_SAHM.Main_Form_and_Children_Forms;
-using Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms;
-using System;
+﻿using System;
 using System.Windows.Forms;
 namespace Khayaal_SAHM
 {
@@ -20,7 +18,7 @@ namespace Khayaal_SAHM
             //Application.Run(new Main_Form_and_Children_Forms.Main_Form()); ;
 
             //Application.Run(new Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms.Relations_Form());
-            Application.Run(new Relations_Form());
+            Application.Run(new Main_Form_and_Children_Forms.Main_Form());
         }
 
     }

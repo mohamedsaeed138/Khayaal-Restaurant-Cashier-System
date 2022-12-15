@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -70,8 +71,27 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         }
 
+        private void Home_OFF_Click(object sender, EventArgs e)
+        {
+            if (Home_OFF.Visible == true)
+            {
+                Home_ON.Visible = true;
+                Home_OFF.Visible = false;
+            }
+            Open_Child_form(new Home_Form());
+            if (Current_Form != Current_Child_Form)
+            {
+                if (Home_OFF.Visible == true)
+                {
+                    Home_ON.Visible = true;
+                    Home_OFF.Visible = false;
+                    Open_Child_form(new Home_Form());
 
+                }
+                if (Current_Form == new Home_Form()) ;
+                return;
 
-
+            }
+        }
     }
 }
