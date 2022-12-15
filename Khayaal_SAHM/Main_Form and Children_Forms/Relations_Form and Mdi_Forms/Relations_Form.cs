@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -16,56 +17,63 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 
             InitializeComponent();
 
+            Fill_Item_Combo_Boxe();
+            Fill_Raw_Combo_Boxe();
 
-            Fill_Item_Raw_Combo_Boxes();
             Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed]FROM CR.Items_Relations ORDER BY [Item] ASC;");
 
 
         }
-        public void Fill_Item_Raw_Combo_Boxes()
+        public void Fill_Item_Combo_Boxe()
         {
 
 
-
-
-
-
-            SqlDataAdapter dai = new SqlDataAdapter("SELECT Name FROM CR.Items ORDER BY Name ASC;", conn);
-            DataTable dti = new DataTable();
+            SqlDataAdapter dai = new SqlDataAdapter("SELECT [Name] FROM CR.Items ORDER BY [Name] ASC;", conn);
+            DataTable dt1 = new DataTable();
             conn.Open();
-            dai.Fill(dti);
+            dai.Fill(dt1);
             conn.Close();
-            DataRow row1 = dti.NewRow();
-            dti.Rows.InsertAt(row1, 0);
+            DataRow row1 = dt1.NewRow();
+            dt1.Rows.InsertAt(row1, 0);
             row1["Name"] = "All";
-            Item_Combo_Box.DataSource = dti.DataSet;
+            Item_Combo_Box.DataSource = dt1;
+            Item_Combo_Box.DisplayMember = "Name";
 
-            conn.Open();
-            string sql_row = "SELECT Name FROM CR.Raw_Materials ORDER BY Name ASC;";
-            SqlDataAdapter da2 = new SqlDataAdapter(sql_row, conn);
+
+        }
+        public void Fill_Raw_Combo_Boxe()
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            SqlDataAdapter da2 = new SqlDataAdapter($"SELECT[Name] FROM CR.Raw_Materials ORDER BY[Name] ASC;", conn);
             DataTable dt2 = new DataTable();
+            conn.Open();
             da2.Fill(dt2);
             conn.Close();
             DataRow row2 = dt2.NewRow();
             dt2.Rows.InsertAt(row2, 0);
             row2["Name"] = "All";
-            Raw_Combo_Box.DataSource = dt2.DataSet;
-
-
-
+            Raw_Combo_Box.DataSource = dt2;
+            Raw_Combo_Box.DisplayMember = "Name";
         }
 
         void Fill_Table(string Query)//ok
         {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
 
-            SqlCommand Command = new SqlCommand(Query, conn);
-            SqlDataAdapter da = new SqlDataAdapter(Command);
+            SqlDataAdapter da = new SqlDataAdapter(Query, conn);
             DataTable dt = new DataTable();
-            conn.Open();
-            da.Fill(dt);
-
-
-            conn.Close();
+            try
+            {
+                conn.Open();
+                da.Fill(dt);
+                conn.Close();
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show(EX.Message);
+            }
             Relations_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
@@ -81,15 +89,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         }
         void Choose_Query()
         {
-
             if (Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text == "All")
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed]FROM CR.Items_Relations ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations ORDER BY [Item] ASC;");
             else if (Item_Combo_Box.Text != "All" && Raw_Combo_Box.Text != "All")
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed]FROM CR.Items_Relations WHERE [Raw_Material]=N'{Raw_Combo_Box.Text}' AND [Item]=N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}' and CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
             else if (Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text != "All")
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed]FROM CR.Items_Relations WHERE [Raw_Material]=N'{Raw_Combo_Box.Text}'  ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}'  ORDER BY [Item] ASC;");
             else
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed]FROM CR.Items_Relations WHERE [Item]=N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations WHERE CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
 
 
         }
@@ -154,12 +161,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             }
         }
 
-        private void Item_Combo_Box_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void Item_Combo_Box_TextChanged(object sender, EventArgs e)
         {
             Choose_Query();
         }
 
-        private void Raw_Combo_Box_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void Raw_Combo_Box_TextChanged(object sender, EventArgs e)
         {
             Choose_Query();
         }

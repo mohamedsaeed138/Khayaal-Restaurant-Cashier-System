@@ -39,7 +39,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Item_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Item_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Raw_Material_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Relations_Table = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -75,7 +74,7 @@
             this.Item_Combo_Box.ShadowDecoration.Parent = this.Item_Combo_Box;
             this.Item_Combo_Box.Size = new System.Drawing.Size(415, 36);
             this.Item_Combo_Box.TabIndex = 5;
-            this.Item_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Item_Combo_Box_SelectedIndexChanged);
+            this.Item_Combo_Box.TextChanged += new System.EventHandler(this.Item_Combo_Box_TextChanged);
             // 
             // Item_Label
             // 
@@ -88,18 +87,6 @@
             this.Item_Label.Size = new System.Drawing.Size(42, 27);
             this.Item_Label.TabIndex = 11;
             this.Item_Label.Text = "Item";
-            // 
-            // Raw_Material_Label
-            // 
-            this.Raw_Material_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Raw_Material_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Raw_Material_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Raw_Material_Label.Location = new System.Drawing.Point(508, 12);
-            this.Raw_Material_Label.Margin = new System.Windows.Forms.Padding(2);
-            this.Raw_Material_Label.Name = "Raw_Material_Label";
-            this.Raw_Material_Label.Size = new System.Drawing.Size(115, 27);
-            this.Raw_Material_Label.TabIndex = 12;
-            this.Raw_Material_Label.Text = "Raw Material";
             // 
             // Count_Label
             // 
@@ -309,13 +296,13 @@
             this.Raw_Combo_Box.HoverState.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.ItemHeight = 30;
             this.Raw_Combo_Box.ItemsAppearance.Parent = this.Raw_Combo_Box;
-            this.Raw_Combo_Box.Location = new System.Drawing.Point(508, 43);
+            this.Raw_Combo_Box.Location = new System.Drawing.Point(496, 43);
             this.Raw_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Raw_Combo_Box.Name = "Raw_Combo_Box";
             this.Raw_Combo_Box.ShadowDecoration.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.Size = new System.Drawing.Size(415, 36);
-            this.Raw_Combo_Box.TabIndex = 20;
-            this.Raw_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Raw_Combo_Box_SelectedIndexChanged);
+            this.Raw_Combo_Box.TabIndex = 19;
+            this.Raw_Combo_Box.TextChanged += new System.EventHandler(this.Raw_Combo_Box_TextChanged);
             // 
             // Relations_Form
             // 
@@ -328,7 +315,6 @@
             this.Controls.Add(this.Relations_Table);
             this.Controls.Add(this.Count_Value_Label);
             this.Controls.Add(this.Count_Label);
-            this.Controls.Add(this.Raw_Material_Label);
             this.Controls.Add(this.Item_Label);
             this.Controls.Add(this.Item_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -343,16 +329,15 @@
         #endregion
         private Guna.UI2.WinForms.Guna2ComboBox Item_Combo_Box;
         private Guna.UI2.WinForms.Guna2HtmlLabel Item_Label;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Raw_Material_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Value_Label;
         private Guna.UI2.WinForms.Guna2DataGridView Relations_Table;
         private Guna.UI2.WinForms.Guna2VScrollBar Table_Croll_Bar;
-        private Guna.UI2.WinForms.Guna2ComboBox Raw_Combo_Box;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Edite;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private Guna.UI2.WinForms.Guna2ComboBox Raw_Combo_Box;
     }
 }
