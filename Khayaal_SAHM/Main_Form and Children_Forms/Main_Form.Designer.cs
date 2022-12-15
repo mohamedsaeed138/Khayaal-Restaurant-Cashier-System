@@ -36,42 +36,66 @@
             this.Panel_Child = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Best_Sales_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Best_Sales_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Relations_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Bills_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Purchase_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Purchase_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Bills_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Credit_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Credit_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Relations_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Raw_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Raw_ON = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.Btn_Maximize = new FontAwesome.Sharp.IconButton();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Home_Off = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Home_On = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Home_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Booking_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Booking_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Home_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Side_Bar_Icon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Control.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_Off)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_On)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Relations_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bills_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Purchase_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Purchase_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bills_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Credit_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Credit_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Relations_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Raw_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Raw_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Booking_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Booking_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Side_Bar_Icon)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Menu
             // 
             this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.Panel_Menu.Controls.Add(this.guna2PictureBox7);
-            this.Panel_Menu.Controls.Add(this.guna2PictureBox6);
-            this.Panel_Menu.Controls.Add(this.guna2PictureBox5);
-            this.Panel_Menu.Controls.Add(this.guna2PictureBox4);
-            this.Panel_Menu.Controls.Add(this.guna2PictureBox3);
-            this.Panel_Menu.Controls.Add(this.guna2PictureBox2);
-            this.Panel_Menu.Controls.Add(this.Home_Off);
-            this.Panel_Menu.Controls.Add(this.Home_On);
-            this.Panel_Menu.Controls.Add(this.guna2PictureBox1);
+            this.Panel_Menu.Controls.Add(this.Credit_OFF);
+            this.Panel_Menu.Controls.Add(this.Best_Sales_OFF);
+            this.Panel_Menu.Controls.Add(this.Purchase_OFF);
+            this.Panel_Menu.Controls.Add(this.Bills_OFF);
+            this.Panel_Menu.Controls.Add(this.Relations_OFF);
+            this.Panel_Menu.Controls.Add(this.Raw_OFF);
+            this.Panel_Menu.Controls.Add(this.Booking_OFF);
+            this.Panel_Menu.Controls.Add(this.Best_Sales_ON);
+            this.Panel_Menu.Controls.Add(this.Home_OFF);
+            this.Panel_Menu.Controls.Add(this.Booking_ON);
+            this.Panel_Menu.Controls.Add(this.Credit_ON);
+            this.Panel_Menu.Controls.Add(this.Home_ON);
+            this.Panel_Menu.Controls.Add(this.Purchase_ON);
+            this.Panel_Menu.Controls.Add(this.Side_Bar_Icon);
+            this.Panel_Menu.Controls.Add(this.Raw_ON);
+            this.Panel_Menu.Controls.Add(this.Bills_ON);
+            this.Panel_Menu.Controls.Add(this.Relations_ON);
             this.Panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_Menu.Location = new System.Drawing.Point(0, 0);
             this.Panel_Menu.Name = "Panel_Menu";
@@ -126,6 +150,150 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // Best_Sales_ON
+            // 
+            this.Best_Sales_ON.BorderRadius = 10;
+            this.Best_Sales_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_6;
+            this.Best_Sales_ON.Location = new System.Drawing.Point(10, 474);
+            this.Best_Sales_ON.Name = "Best_Sales_ON";
+            this.Best_Sales_ON.ShadowDecoration.Parent = this.Best_Sales_ON;
+            this.Best_Sales_ON.Size = new System.Drawing.Size(71, 56);
+            this.Best_Sales_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Best_Sales_ON.TabIndex = 22;
+            this.Best_Sales_ON.TabStop = false;
+            // 
+            // Best_Sales_OFF
+            // 
+            this.Best_Sales_OFF.BorderRadius = 10;
+            this.Best_Sales_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_14;
+            this.Best_Sales_OFF.Location = new System.Drawing.Point(10, 474);
+            this.Best_Sales_OFF.Name = "Best_Sales_OFF";
+            this.Best_Sales_OFF.ShadowDecoration.Parent = this.Best_Sales_OFF;
+            this.Best_Sales_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Best_Sales_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Best_Sales_OFF.TabIndex = 21;
+            this.Best_Sales_OFF.TabStop = false;
+            // 
+            // Relations_OFF
+            // 
+            this.Relations_OFF.BorderRadius = 10;
+            this.Relations_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_11;
+            this.Relations_OFF.Location = new System.Drawing.Point(10, 279);
+            this.Relations_OFF.Name = "Relations_OFF";
+            this.Relations_OFF.ShadowDecoration.Parent = this.Relations_OFF;
+            this.Relations_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Relations_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Relations_OFF.TabIndex = 20;
+            this.Relations_OFF.TabStop = false;
+            // 
+            // Bills_OFF
+            // 
+            this.Bills_OFF.BorderRadius = 10;
+            this.Bills_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_12;
+            this.Bills_OFF.Location = new System.Drawing.Point(10, 344);
+            this.Bills_OFF.Name = "Bills_OFF";
+            this.Bills_OFF.ShadowDecoration.Parent = this.Bills_OFF;
+            this.Bills_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Bills_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Bills_OFF.TabIndex = 19;
+            this.Bills_OFF.TabStop = false;
+            // 
+            // Purchase_ON
+            // 
+            this.Purchase_ON.BorderRadius = 10;
+            this.Purchase_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_5;
+            this.Purchase_ON.Location = new System.Drawing.Point(10, 409);
+            this.Purchase_ON.Name = "Purchase_ON";
+            this.Purchase_ON.ShadowDecoration.Parent = this.Purchase_ON;
+            this.Purchase_ON.Size = new System.Drawing.Size(71, 56);
+            this.Purchase_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Purchase_ON.TabIndex = 18;
+            this.Purchase_ON.TabStop = false;
+            // 
+            // Purchase_OFF
+            // 
+            this.Purchase_OFF.BorderRadius = 10;
+            this.Purchase_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_13;
+            this.Purchase_OFF.Location = new System.Drawing.Point(10, 409);
+            this.Purchase_OFF.Name = "Purchase_OFF";
+            this.Purchase_OFF.ShadowDecoration.Parent = this.Purchase_OFF;
+            this.Purchase_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Purchase_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Purchase_OFF.TabIndex = 17;
+            this.Purchase_OFF.TabStop = false;
+            // 
+            // Bills_ON
+            // 
+            this.Bills_ON.BorderRadius = 10;
+            this.Bills_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_4;
+            this.Bills_ON.Location = new System.Drawing.Point(10, 344);
+            this.Bills_ON.Name = "Bills_ON";
+            this.Bills_ON.ShadowDecoration.Parent = this.Bills_ON;
+            this.Bills_ON.Size = new System.Drawing.Size(71, 56);
+            this.Bills_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Bills_ON.TabIndex = 16;
+            this.Bills_ON.TabStop = false;
+            // 
+            // Credit_ON
+            // 
+            this.Credit_ON.BorderRadius = 10;
+            this.Credit_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_7;
+            this.Credit_ON.Location = new System.Drawing.Point(10, 539);
+            this.Credit_ON.Name = "Credit_ON";
+            this.Credit_ON.ShadowDecoration.Parent = this.Credit_ON;
+            this.Credit_ON.Size = new System.Drawing.Size(71, 55);
+            this.Credit_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Credit_ON.TabIndex = 15;
+            this.Credit_ON.TabStop = false;
+            // 
+            // Credit_OFF
+            // 
+            this.Credit_OFF.BorderRadius = 10;
+            this.Credit_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_15;
+            this.Credit_OFF.Location = new System.Drawing.Point(10, 539);
+            this.Credit_OFF.Name = "Credit_OFF";
+            this.Credit_OFF.ShadowDecoration.Parent = this.Credit_OFF;
+            this.Credit_OFF.Size = new System.Drawing.Size(71, 55);
+            this.Credit_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Credit_OFF.TabIndex = 14;
+            this.Credit_OFF.TabStop = false;
+            // 
+            // Relations_ON
+            // 
+            this.Relations_ON.BorderRadius = 10;
+            this.Relations_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_3;
+            this.Relations_ON.Location = new System.Drawing.Point(10, 279);
+            this.Relations_ON.Name = "Relations_ON";
+            this.Relations_ON.ShadowDecoration.Parent = this.Relations_ON;
+            this.Relations_ON.Size = new System.Drawing.Size(71, 56);
+            this.Relations_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Relations_ON.TabIndex = 13;
+            this.Relations_ON.TabStop = false;
+            // 
+            // Raw_OFF
+            // 
+            this.Raw_OFF.BorderRadius = 10;
+            this.Raw_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_10;
+            this.Raw_OFF.Location = new System.Drawing.Point(10, 214);
+            this.Raw_OFF.Name = "Raw_OFF";
+            this.Raw_OFF.ShadowDecoration.Parent = this.Raw_OFF;
+            this.Raw_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Raw_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Raw_OFF.TabIndex = 12;
+            this.Raw_OFF.TabStop = false;
+            // 
+            // Raw_ON
+            // 
+            this.Raw_ON.BorderRadius = 10;
+            this.Raw_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_2;
+            this.Raw_ON.Location = new System.Drawing.Point(10, 214);
+            this.Raw_ON.Name = "Raw_ON";
+            this.Raw_ON.ShadowDecoration.Parent = this.Raw_ON;
+            this.Raw_ON.Size = new System.Drawing.Size(71, 56);
+            this.Raw_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Raw_ON.TabIndex = 11;
+            this.Raw_ON.TabStop = false;
+            // 
             // Btn_Minimize
             // 
             this.Btn_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -161,117 +329,70 @@
             this.Btn_Maximize.UseVisualStyleBackColor = true;
             this.Btn_Maximize.Click += new System.EventHandler(this.Btn_Maximize_Click);
             // 
-            // guna2PictureBox7
+            // Home_OFF
             // 
-            this.guna2PictureBox7.BorderRadius = 10;
-            this.guna2PictureBox7.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(12, 444);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
-            this.guna2PictureBox7.Size = new System.Drawing.Size(71, 56);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox7.TabIndex = 14;
-            this.guna2PictureBox7.TabStop = false;
+            this.Home_OFF.BorderRadius = 10;
+            this.Home_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.Home_OFF.Location = new System.Drawing.Point(10, 84);
+            this.Home_OFF.Name = "Home_OFF";
+            this.Home_OFF.ShadowDecoration.Parent = this.Home_OFF;
+            this.Home_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Home_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Home_OFF.TabIndex = 8;
+            this.Home_OFF.TabStop = false;
+            this.Home_OFF.Click += new System.EventHandler(this.guna2PictureBox3_Click);
             // 
-            // guna2PictureBox6
+            // Booking_OFF
             // 
-            this.guna2PictureBox6.BorderRadius = 10;
-            this.guna2PictureBox6.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(12, 382);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.ShadowDecoration.Parent = this.guna2PictureBox6;
-            this.guna2PictureBox6.Size = new System.Drawing.Size(71, 56);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox6.TabIndex = 13;
-            this.guna2PictureBox6.TabStop = false;
+            this.Booking_OFF.BorderRadius = 10;
+            this.Booking_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_9;
+            this.Booking_OFF.Location = new System.Drawing.Point(10, 149);
+            this.Booking_OFF.Name = "Booking_OFF";
+            this.Booking_OFF.ShadowDecoration.Parent = this.Booking_OFF;
+            this.Booking_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Booking_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Booking_OFF.TabIndex = 9;
+            this.Booking_OFF.TabStop = false;
             // 
-            // guna2PictureBox5
+            // Booking_ON
             // 
-            this.guna2PictureBox5.BorderRadius = 10;
-            this.guna2PictureBox5.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(12, 320);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
-            this.guna2PictureBox5.Size = new System.Drawing.Size(71, 56);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox5.TabIndex = 12;
-            this.guna2PictureBox5.TabStop = false;
+            this.Booking_ON.BorderRadius = 10;
+            this.Booking_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_1;
+            this.Booking_ON.Location = new System.Drawing.Point(10, 149);
+            this.Booking_ON.Name = "Booking_ON";
+            this.Booking_ON.ShadowDecoration.Parent = this.Booking_ON;
+            this.Booking_ON.Size = new System.Drawing.Size(71, 56);
+            this.Booking_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Booking_ON.TabIndex = 10;
+            this.Booking_ON.TabStop = false;
             // 
-            // guna2PictureBox4
+            // Home_ON
             // 
-            this.guna2PictureBox4.BorderRadius = 10;
-            this.guna2PictureBox4.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(12, 258);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(71, 56);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox4.TabIndex = 11;
-            this.guna2PictureBox4.TabStop = false;
+            this.Home_ON.BorderRadius = 10;
+            this.Home_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button;
+            this.Home_ON.Location = new System.Drawing.Point(10, 84);
+            this.Home_ON.Name = "Home_ON";
+            this.Home_ON.ShadowDecoration.Parent = this.Home_ON;
+            this.Home_ON.Size = new System.Drawing.Size(71, 56);
+            this.Home_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Home_ON.TabIndex = 7;
+            this.Home_ON.TabStop = false;
+            this.Home_ON.Click += new System.EventHandler(this.Home_On_Click);
             // 
-            // guna2PictureBox3
+            // Side_Bar_Icon
             // 
-            this.guna2PictureBox3.BorderRadius = 10;
-            this.guna2PictureBox3.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(12, 196);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(71, 56);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox3.TabIndex = 10;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BorderRadius = 10;
-            this.guna2PictureBox2.Image = global::Khayaal_SAHM.Properties.Resources.Button_9;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(12, 134);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(71, 56);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox2.TabIndex = 9;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // Home_Off
-            // 
-            this.Home_Off.BorderRadius = 10;
-            this.Home_Off.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.Home_Off.Location = new System.Drawing.Point(12, 72);
-            this.Home_Off.Name = "Home_Off";
-            this.Home_Off.ShadowDecoration.Parent = this.Home_Off;
-            this.Home_Off.Size = new System.Drawing.Size(71, 56);
-            this.Home_Off.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Home_Off.TabIndex = 8;
-            this.Home_Off.TabStop = false;
-            this.Home_Off.Click += new System.EventHandler(this.guna2PictureBox3_Click);
-            // 
-            // Home_On
-            // 
-            this.Home_On.BorderRadius = 10;
-            this.Home_On.Image = global::Khayaal_SAHM.Properties.Resources.Button;
-            this.Home_On.Location = new System.Drawing.Point(12, 72);
-            this.Home_On.Name = "Home_On";
-            this.Home_On.ShadowDecoration.Parent = this.Home_On;
-            this.Home_On.Size = new System.Drawing.Size(71, 56);
-            this.Home_On.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Home_On.TabIndex = 7;
-            this.Home_On.TabStop = false;
-            this.Home_On.Click += new System.EventHandler(this.Home_On_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(91, 67);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 6;
-            this.guna2PictureBox1.TabStop = false;
+            this.Side_Bar_Icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Side_Bar_Icon.BorderRadius = 10;
+            this.Side_Bar_Icon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Side_Bar_Icon.Image = global::Khayaal_SAHM.Properties.Resources.Side_Bar_Icon;
+            this.Side_Bar_Icon.Location = new System.Drawing.Point(0, 0);
+            this.Side_Bar_Icon.Margin = new System.Windows.Forms.Padding(2);
+            this.Side_Bar_Icon.Name = "Side_Bar_Icon";
+            this.Side_Bar_Icon.ShadowDecoration.Parent = this.Side_Bar_Icon;
+            this.Side_Bar_Icon.Size = new System.Drawing.Size(91, 65);
+            this.Side_Bar_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Side_Bar_Icon.TabIndex = 6;
+            this.Side_Bar_Icon.TabStop = false;
             // 
             // Main_Form
             // 
@@ -290,15 +411,23 @@
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Menu.PerformLayout();
             this.Panel_Control.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_Off)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_On)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Relations_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bills_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Purchase_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Purchase_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bills_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Credit_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Credit_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Relations_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Raw_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Raw_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Booking_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Booking_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Side_Bar_Icon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,14 +442,22 @@
         private Guna.UI2.WinForms.Guna2ControlBox Btn_Exit;
         private FontAwesome.Sharp.IconButton Btn_Maximize;
         private FontAwesome.Sharp.IconButton Btn_Minimize;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox Home_Off;
-        private Guna.UI2.WinForms.Guna2PictureBox Home_On;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox Side_Bar_Icon;
+        private Guna.UI2.WinForms.Guna2PictureBox Home_OFF;
+        private Guna.UI2.WinForms.Guna2PictureBox Home_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Booking_OFF;
+        private Guna.UI2.WinForms.Guna2PictureBox Booking_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Raw_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Relations_OFF;
+        private Guna.UI2.WinForms.Guna2PictureBox Bills_OFF;
+        private Guna.UI2.WinForms.Guna2PictureBox Purchase_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Purchase_OFF;
+        private Guna.UI2.WinForms.Guna2PictureBox Bills_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Credit_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Credit_OFF;
+        private Guna.UI2.WinForms.Guna2PictureBox Relations_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Raw_OFF;
+        private Guna.UI2.WinForms.Guna2PictureBox Best_Sales_ON;
+        private Guna.UI2.WinForms.Guna2PictureBox Best_Sales_OFF;
     }
 }
