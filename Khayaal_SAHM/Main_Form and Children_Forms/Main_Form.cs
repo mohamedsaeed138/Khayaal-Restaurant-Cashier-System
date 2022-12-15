@@ -3,11 +3,14 @@ using Guna.UI2.WinForms;
 using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
 using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 {
     public partial class Main_Form : Form
     {
+
         private Form Current_Form;
         private Form Current_Child_Form;
         public Main_Form()
@@ -78,42 +81,28 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         
 
+   
+
+
+
         private void Home_Off_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Home_Off_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
             if (Home_Off.Visible == true)
             {
                 Home_On.Visible = true;
                 Home_Off.Visible = false;
-            }
-            Open_Child_form(new Home_Form());
-            if (Current_Form != Current_Child_Form)
-            {
+                Open_Child_form(new Home_Form());
 
             }
-        
+            if (Current_Form == new Home_Form()) ;
+                return;
+
         }
 
         private void Home_On_Click(object sender, EventArgs e)
         {
-            if (Home_On.Visible == true)
-            {
-                Home_Off.Visible=true;
-                Home_On.Visible = false;
-            }
-            if (Current_Form!=new Home_Form())
-            {
-                return;
-            }
+           
         }
     }
+
 }
