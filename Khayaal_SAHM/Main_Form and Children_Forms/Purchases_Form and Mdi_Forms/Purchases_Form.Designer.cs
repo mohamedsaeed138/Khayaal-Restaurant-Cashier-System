@@ -37,47 +37,51 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Name_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
-            this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Name_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.From_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.To_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Best_Seller_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Sort_By_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Sort_By_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sub_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).BeginInit();
             this.SuspendLayout();
             // 
-            // Category_Combo_Box
+            // Name_Combo_Box
             // 
-            this.Category_Combo_Box.BackColor = System.Drawing.Color.Transparent;
-            this.Category_Combo_Box.BorderRadius = 10;
-            this.Category_Combo_Box.BorderThickness = 0;
-            this.Category_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Category_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Category_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Category_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
-            this.Category_Combo_Box.FocusedState.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Category_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Category_Combo_Box.FormattingEnabled = true;
-            this.Category_Combo_Box.HoverState.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.ItemHeight = 30;
-            this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Location = new System.Drawing.Point(352, 43);
-            this.Category_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.Category_Combo_Box.Name = "Category_Combo_Box";
-            this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Size = new System.Drawing.Size(160, 36);
-            this.Category_Combo_Box.TabIndex = 5;
-            this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
+            this.Name_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Name_Combo_Box.BorderRadius = 10;
+            this.Name_Combo_Box.BorderThickness = 0;
+            this.Name_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Name_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Name_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Name_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Name_Combo_Box.FocusedState.Parent = this.Name_Combo_Box;
+            this.Name_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Name_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Name_Combo_Box.FormattingEnabled = true;
+            this.Name_Combo_Box.HoverState.Parent = this.Name_Combo_Box;
+            this.Name_Combo_Box.ItemHeight = 30;
+            this.Name_Combo_Box.ItemsAppearance.Parent = this.Name_Combo_Box;
+            this.Name_Combo_Box.Location = new System.Drawing.Point(52, 43);
+            this.Name_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Name_Combo_Box.Name = "Name_Combo_Box";
+            this.Name_Combo_Box.ShadowDecoration.Parent = this.Name_Combo_Box;
+            this.Name_Combo_Box.Size = new System.Drawing.Size(150, 36);
+            this.Name_Combo_Box.TabIndex = 5;
+            this.Name_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // From_Date_Picker
             // 
@@ -87,7 +91,7 @@
             this.From_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.From_Date_Picker.Location = new System.Drawing.Point(563, 59);
+            this.From_Date_Picker.Location = new System.Drawing.Point(414, 43);
             this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Date_Picker.Name = "From_Date_Picker";
             this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
@@ -102,60 +106,31 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(770, 59);
+            this.To_Date_Picker.Location = new System.Drawing.Point(595, 43);
             this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.To_Date_Picker.TabIndex = 8;
             this.To_Date_Picker.ValueChanged += new System.EventHandler(this.To_Date_Picker_ValueChanged);
             // 
-            // Search_Text_Box
+            // Name_Label
             // 
-            this.Search_Text_Box.BorderRadius = 10;
-            this.Search_Text_Box.BorderThickness = 0;
-            this.Search_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Search_Text_Box.DefaultText = "";
-            this.Search_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Search_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Search_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Search_Text_Box.DisabledState.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Search_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Search_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Search_Text_Box.FocusedState.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Search_Text_Box.HoverState.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.Location = new System.Drawing.Point(49, 43);
-            this.Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
-            this.Search_Text_Box.Name = "Search_Text_Box";
-            this.Search_Text_Box.PasswordChar = '\0';
-            this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Search_Text_Box.PlaceholderText = "Search";
-            this.Search_Text_Box.SelectedText = "";
-            this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.Size = new System.Drawing.Size(264, 36);
-            this.Search_Text_Box.TabIndex = 9;
-            this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
-            this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
-            // 
-            // Category_Label
-            // 
-            this.Category_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Category_Label.Location = new System.Drawing.Point(352, 11);
-            this.Category_Label.Margin = new System.Windows.Forms.Padding(2);
-            this.Category_Label.Name = "Category_Label";
-            this.Category_Label.Size = new System.Drawing.Size(80, 27);
-            this.Category_Label.TabIndex = 11;
-            this.Category_Label.Text = "Category";
+            this.Name_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Name_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Name_Label.Location = new System.Drawing.Point(52, 11);
+            this.Name_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Name_Label.Name = "Name_Label";
+            this.Name_Label.Size = new System.Drawing.Size(53, 27);
+            this.Name_Label.TabIndex = 11;
+            this.Name_Label.Text = "Name";
             // 
             // From_Label
             // 
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(563, 11);
+            this.From_Label.Location = new System.Drawing.Point(414, 11);
             this.From_Label.Margin = new System.Windows.Forms.Padding(2);
             this.From_Label.Name = "From_Label";
             this.From_Label.Size = new System.Drawing.Size(46, 27);
@@ -167,7 +142,7 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(770, 11);
+            this.To_Label.Location = new System.Drawing.Point(595, 11);
             this.To_Label.Margin = new System.Windows.Forms.Padding(2);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(25, 27);
@@ -230,10 +205,13 @@
             this.Best_Seller_Table.ColumnHeadersHeight = 48;
             this.Best_Seller_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Best_Seller_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Name,
+            this.Quantity,
+            this.Unit_Price,
+            this.Sub_Total,
+            this.Date,
+            this.Notes,
+            this.Delete});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -295,42 +273,6 @@
             this.Best_Seller_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Best_Seller_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "Item";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "Category";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column3.HeaderText = "Quntity";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column4.HeaderText = "Total";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // Table_Croll_Bar
             // 
             this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -350,25 +292,117 @@
             this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
             this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
             // 
-            // Best_Sales_Form
+            // Sort_By_Combo_Box
+            // 
+            this.Sort_By_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Sort_By_Combo_Box.BorderRadius = 10;
+            this.Sort_By_Combo_Box.BorderThickness = 0;
+            this.Sort_By_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Sort_By_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Sort_By_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Sort_By_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Sort_By_Combo_Box.FocusedState.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Sort_By_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Sort_By_Combo_Box.FormattingEnabled = true;
+            this.Sort_By_Combo_Box.HoverState.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.ItemHeight = 30;
+            this.Sort_By_Combo_Box.ItemsAppearance.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.Location = new System.Drawing.Point(233, 43);
+            this.Sort_By_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Sort_By_Combo_Box.Name = "Sort_By_Combo_Box";
+            this.Sort_By_Combo_Box.ShadowDecoration.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.Size = new System.Drawing.Size(150, 36);
+            this.Sort_By_Combo_Box.TabIndex = 19;
+            // 
+            // Sort_By_Label
+            // 
+            this.Sort_By_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sort_By_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sort_By_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sort_By_Label.Location = new System.Drawing.Point(233, 11);
+            this.Sort_By_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sort_By_Label.Name = "Sort_By_Label";
+            this.Sort_By_Label.Size = new System.Drawing.Size(67, 27);
+            this.Sort_By_Label.TabIndex = 20;
+            this.Sort_By_Label.Text = "Sort_By";
+            this.Sort_By_Label.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
+            // 
+            // Name
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Name.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Unit_Price
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Unit_Price.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Unit_Price.HeaderText = "Unit Price";
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.ReadOnly = true;
+            // 
+            // Sub_Total
+            // 
+            this.Sub_Total.HeaderText = "Sub_Total";
+            this.Sub_Total.Name = "Sub_Total";
+            this.Sub_Total.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Notes
+            // 
+            dataGridViewCellStyle6.NullValue = "\"\"";
+            this.Notes.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Notes.HeaderText = "Notes";
+            this.Notes.Name = "Notes";
+            this.Notes.ReadOnly = true;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // Purchases_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Sort_By_Label);
+            this.Controls.Add(this.Sort_By_Combo_Box);
             this.Controls.Add(this.Table_Croll_Bar);
             this.Controls.Add(this.Best_Seller_Table);
             this.Controls.Add(this.Count_Value_Label);
             this.Controls.Add(this.Count_Label);
             this.Controls.Add(this.To_Label);
             this.Controls.Add(this.From_Label);
-            this.Controls.Add(this.Category_Label);
-            this.Controls.Add(this.Search_Text_Box);
+            this.Controls.Add(this.Name_Label);
             this.Controls.Add(this.To_Date_Picker);
             this.Controls.Add(this.From_Date_Picker);
-            this.Controls.Add(this.Category_Combo_Box);
+            this.Controls.Add(this.Name_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Best_Sales_Form";
+            this.Name = "Purchases_Form";
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).EndInit();
             this.ResumeLayout(false);
@@ -377,20 +411,24 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2ComboBox Category_Combo_Box;
+        private Guna.UI2.WinForms.Guna2ComboBox Name_Combo_Box;
         private System.Windows.Forms.DateTimePicker From_Date_Picker;
         private System.Windows.Forms.DateTimePicker To_Date_Picker;
-        private Guna.UI2.WinForms.Guna2TextBox Search_Text_Box;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Category_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Name_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel From_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel To_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Value_Label;
         private Guna.UI2.WinForms.Guna2DataGridView Best_Seller_Table;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Guna.UI2.WinForms.Guna2VScrollBar Table_Croll_Bar;
+        private Guna.UI2.WinForms.Guna2ComboBox Sort_By_Combo_Box;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sort_By_Label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unit_Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sub_Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
