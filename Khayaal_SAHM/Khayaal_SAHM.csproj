@@ -388,7 +388,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Logo.ico" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\image.png" />
     <None Include="Resources\Logo.ico.bmp" />
