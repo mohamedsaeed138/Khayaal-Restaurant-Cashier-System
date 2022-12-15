@@ -31,217 +31,53 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Panel_Menu = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_Best_Seller = new FontAwesome.Sharp.IconButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Btn_Purchases = new FontAwesome.Sharp.IconButton();
-            this.Btn_Bills = new FontAwesome.Sharp.IconButton();
-            this.Btn_Relations = new FontAwesome.Sharp.IconButton();
-            this.Btn_Raw_Material = new FontAwesome.Sharp.IconButton();
-            this.Btn_Booking = new FontAwesome.Sharp.IconButton();
-            this.BtnHome = new FontAwesome.Sharp.IconButton();
             this.Panel_Control = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_Minimize = new FontAwesome.Sharp.IconButton();
-            this.Btn_Maximize = new FontAwesome.Sharp.IconButton();
             this.Btn_Exit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Panel_Child = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Btn_Minimize = new FontAwesome.Sharp.IconButton();
+            this.Btn_Maximize = new FontAwesome.Sharp.IconButton();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Home_Off = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Home_On = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Panel_Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.Panel_Control.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_Off)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_On)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Menu
             // 
             this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Panel_Menu.Controls.Add(this.Btn_Best_Seller);
+            this.Panel_Menu.Controls.Add(this.guna2PictureBox7);
+            this.Panel_Menu.Controls.Add(this.guna2PictureBox6);
+            this.Panel_Menu.Controls.Add(this.guna2PictureBox5);
+            this.Panel_Menu.Controls.Add(this.guna2PictureBox4);
+            this.Panel_Menu.Controls.Add(this.guna2PictureBox3);
+            this.Panel_Menu.Controls.Add(this.guna2PictureBox2);
+            this.Panel_Menu.Controls.Add(this.Home_Off);
+            this.Panel_Menu.Controls.Add(this.Home_On);
             this.Panel_Menu.Controls.Add(this.guna2PictureBox1);
-            this.Panel_Menu.Controls.Add(this.Btn_Purchases);
-            this.Panel_Menu.Controls.Add(this.Btn_Bills);
-            this.Panel_Menu.Controls.Add(this.Btn_Relations);
-            this.Panel_Menu.Controls.Add(this.Btn_Raw_Material);
-            this.Panel_Menu.Controls.Add(this.Btn_Booking);
-            this.Panel_Menu.Controls.Add(this.BtnHome);
             this.Panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_Menu.Location = new System.Drawing.Point(0, 0);
             this.Panel_Menu.Name = "Panel_Menu";
             this.Panel_Menu.ShadowDecoration.Parent = this.Panel_Menu;
             this.Panel_Menu.Size = new System.Drawing.Size(91, 604);
             this.Panel_Menu.TabIndex = 0;
-            // 
-            // Btn_Best_Seller
-            // 
-            this.Btn_Best_Seller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Btn_Best_Seller.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.Btn_Best_Seller.FlatAppearance.BorderSize = 0;
-            this.Btn_Best_Seller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Best_Seller.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Best_Seller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Best_Seller.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.Btn_Best_Seller.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Best_Seller.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Best_Seller.IconSize = 25;
-            this.Btn_Best_Seller.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Best_Seller.Location = new System.Drawing.Point(10, 541);
-            this.Btn_Best_Seller.Name = "Btn_Best_Seller";
-            this.Btn_Best_Seller.Size = new System.Drawing.Size(75, 52);
-            this.Btn_Best_Seller.TabIndex = 7;
-            this.Btn_Best_Seller.Text = "Best Sales";
-            this.Btn_Best_Seller.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Best_Seller.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Btn_Best_Seller.UseVisualStyleBackColor = false;
-            this.Btn_Best_Seller.Click += new System.EventHandler(this.Btn_Best_Seller_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(91, 67);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 6;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // Btn_Purchases
-            // 
-            this.Btn_Purchases.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Btn_Purchases.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.Btn_Purchases.FlatAppearance.BorderSize = 0;
-            this.Btn_Purchases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Purchases.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Purchases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Purchases.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            this.Btn_Purchases.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Purchases.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Purchases.IconSize = 25;
-            this.Btn_Purchases.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Purchases.Location = new System.Drawing.Point(10, 466);
-            this.Btn_Purchases.Name = "Btn_Purchases";
-            this.Btn_Purchases.Size = new System.Drawing.Size(75, 52);
-            this.Btn_Purchases.TabIndex = 5;
-            this.Btn_Purchases.Text = "Purchase";
-            this.Btn_Purchases.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Purchases.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Btn_Purchases.UseVisualStyleBackColor = false;
-            this.Btn_Purchases.Click += new System.EventHandler(this.Btn_Purchases_Click);
-            // 
-            // Btn_Bills
-            // 
-            this.Btn_Bills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Btn_Bills.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.Btn_Bills.FlatAppearance.BorderSize = 0;
-            this.Btn_Bills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Bills.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Bills.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Bills.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.Btn_Bills.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Bills.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Bills.IconSize = 25;
-            this.Btn_Bills.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Bills.Location = new System.Drawing.Point(10, 389);
-            this.Btn_Bills.Name = "Btn_Bills";
-            this.Btn_Bills.Size = new System.Drawing.Size(75, 52);
-            this.Btn_Bills.TabIndex = 4;
-            this.Btn_Bills.Text = "Bills";
-            this.Btn_Bills.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Bills.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Btn_Bills.UseVisualStyleBackColor = false;
-            this.Btn_Bills.Click += new System.EventHandler(this.Btn_Bills_Click);
-            // 
-            // Btn_Relations
-            // 
-            this.Btn_Relations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Btn_Relations.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.Btn_Relations.FlatAppearance.BorderSize = 0;
-            this.Btn_Relations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Relations.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Relations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Relations.IconChar = FontAwesome.Sharp.IconChar.ShareNodes;
-            this.Btn_Relations.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Relations.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Relations.IconSize = 25;
-            this.Btn_Relations.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Relations.Location = new System.Drawing.Point(10, 306);
-            this.Btn_Relations.Name = "Btn_Relations";
-            this.Btn_Relations.Size = new System.Drawing.Size(75, 52);
-            this.Btn_Relations.TabIndex = 3;
-            this.Btn_Relations.Text = "Relations";
-            this.Btn_Relations.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Relations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Btn_Relations.UseVisualStyleBackColor = false;
-            this.Btn_Relations.Click += new System.EventHandler(this.Btn_Relations_Click);
-            // 
-            // Btn_Raw_Material
-            // 
-            this.Btn_Raw_Material.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Btn_Raw_Material.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.Btn_Raw_Material.FlatAppearance.BorderSize = 0;
-            this.Btn_Raw_Material.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Raw_Material.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Raw_Material.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Raw_Material.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
-            this.Btn_Raw_Material.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Raw_Material.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Raw_Material.IconSize = 25;
-            this.Btn_Raw_Material.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Raw_Material.Location = new System.Drawing.Point(10, 236);
-            this.Btn_Raw_Material.Name = "Btn_Raw_Material";
-            this.Btn_Raw_Material.Size = new System.Drawing.Size(75, 52);
-            this.Btn_Raw_Material.TabIndex = 2;
-            this.Btn_Raw_Material.Text = "Raw Mats";
-            this.Btn_Raw_Material.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Raw_Material.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Btn_Raw_Material.UseVisualStyleBackColor = false;
-            this.Btn_Raw_Material.Click += new System.EventHandler(this.Btn_Raw_Material_Click);
-            // 
-            // Btn_Booking
-            // 
-            this.Btn_Booking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Btn_Booking.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.Btn_Booking.FlatAppearance.BorderSize = 0;
-            this.Btn_Booking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Booking.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Booking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Booking.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.Btn_Booking.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Btn_Booking.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btn_Booking.IconSize = 25;
-            this.Btn_Booking.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_Booking.Location = new System.Drawing.Point(10, 159);
-            this.Btn_Booking.Name = "Btn_Booking";
-            this.Btn_Booking.Size = new System.Drawing.Size(75, 52);
-            this.Btn_Booking.TabIndex = 1;
-            this.Btn_Booking.Text = "Booking";
-            this.Btn_Booking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Booking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Btn_Booking.UseVisualStyleBackColor = false;
-            this.Btn_Booking.Click += new System.EventHandler(this.Btn_Booking_Click);
-            // 
-            // BtnHome
-            // 
-            this.BtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.BtnHome.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.BtnHome.FlatAppearance.BorderSize = 0;
-            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BtnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.BtnHome.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnHome.IconSize = 25;
-            this.BtnHome.Location = new System.Drawing.Point(10, 84);
-            this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(75, 52);
-            this.BtnHome.TabIndex = 0;
-            this.BtnHome.Text = "Home";
-            this.BtnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnHome.UseVisualStyleBackColor = false;
-            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // Panel_Control
             // 
@@ -255,6 +91,40 @@
             this.Panel_Control.ShadowDecoration.Parent = this.Panel_Control;
             this.Panel_Control.Size = new System.Drawing.Size(974, 23);
             this.Panel_Control.TabIndex = 1;
+            // 
+            // Btn_Exit
+            // 
+            this.Btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Exit.CustomIconSize = 8F;
+            this.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Btn_Exit.HoverState.Parent = this.Btn_Exit;
+            this.Btn_Exit.IconColor = System.Drawing.Color.White;
+            this.Btn_Exit.Location = new System.Drawing.Point(929, 0);
+            this.Btn_Exit.Name = "Btn_Exit";
+            this.Btn_Exit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(14)))));
+            this.Btn_Exit.ShadowDecoration.BorderRadius = 0;
+            this.Btn_Exit.ShadowDecoration.Parent = this.Btn_Exit;
+            this.Btn_Exit.Size = new System.Drawing.Size(45, 23);
+            this.Btn_Exit.TabIndex = 0;
+            this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
+            // 
+            // Panel_Child
+            // 
+            this.Panel_Child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Panel_Child.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Child.Location = new System.Drawing.Point(91, 23);
+            this.Panel_Child.Name = "Panel_Child";
+            this.Panel_Child.ShadowDecoration.Parent = this.Panel_Child;
+            this.Panel_Child.Size = new System.Drawing.Size(974, 581);
+            this.Panel_Child.TabIndex = 2;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.Panel_Control;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
             // 
             // Btn_Minimize
             // 
@@ -291,39 +161,117 @@
             this.Btn_Maximize.UseVisualStyleBackColor = true;
             this.Btn_Maximize.Click += new System.EventHandler(this.Btn_Maximize_Click);
             // 
-            // Btn_Exit
+            // guna2PictureBox7
             // 
-            this.Btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Exit.CustomIconSize = 8F;
-            this.Btn_Exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.Btn_Exit.HoverState.Parent = this.Btn_Exit;
-            this.Btn_Exit.IconColor = System.Drawing.Color.White;
-            this.Btn_Exit.Location = new System.Drawing.Point(929, 0);
-            this.Btn_Exit.Name = "Btn_Exit";
-            this.Btn_Exit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(14)))));
-            this.Btn_Exit.ShadowDecoration.BorderRadius = 0;
-            this.Btn_Exit.ShadowDecoration.Parent = this.Btn_Exit;
-            this.Btn_Exit.Size = new System.Drawing.Size(45, 23);
-            this.Btn_Exit.TabIndex = 0;
-            this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
+            this.guna2PictureBox7.BorderRadius = 10;
+            this.guna2PictureBox7.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(12, 444);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
+            this.guna2PictureBox7.Size = new System.Drawing.Size(71, 56);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox7.TabIndex = 14;
+            this.guna2PictureBox7.TabStop = false;
             // 
-            // Panel_Child
+            // guna2PictureBox6
             // 
-            this.Panel_Child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Panel_Child.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Child.Location = new System.Drawing.Point(91, 23);
-            this.Panel_Child.Name = "Panel_Child";
-            this.Panel_Child.ShadowDecoration.Parent = this.Panel_Child;
-            this.Panel_Child.Size = new System.Drawing.Size(974, 581);
-            this.Panel_Child.TabIndex = 2;
+            this.guna2PictureBox6.BorderRadius = 10;
+            this.guna2PictureBox6.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(12, 382);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.ShadowDecoration.Parent = this.guna2PictureBox6;
+            this.guna2PictureBox6.Size = new System.Drawing.Size(71, 56);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox6.TabIndex = 13;
+            this.guna2PictureBox6.TabStop = false;
             // 
-            // guna2DragControl1
+            // guna2PictureBox5
             // 
-            this.guna2DragControl1.TargetControl = this.Panel_Control;
+            this.guna2PictureBox5.BorderRadius = 10;
+            this.guna2PictureBox5.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(12, 320);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
+            this.guna2PictureBox5.Size = new System.Drawing.Size(71, 56);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox5.TabIndex = 12;
+            this.guna2PictureBox5.TabStop = false;
             // 
-            // guna2Elipse1
+            // guna2PictureBox4
             // 
-            this.guna2Elipse1.TargetControl = this;
+            this.guna2PictureBox4.BorderRadius = 10;
+            this.guna2PictureBox4.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(12, 258);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(71, 56);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox4.TabIndex = 11;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BorderRadius = 10;
+            this.guna2PictureBox3.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(12, 196);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(71, 56);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox3.TabIndex = 10;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BorderRadius = 10;
+            this.guna2PictureBox2.Image = global::Khayaal_SAHM.Properties.Resources.Button_9;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(12, 134);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(71, 56);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox2.TabIndex = 9;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // Home_Off
+            // 
+            this.Home_Off.BorderRadius = 10;
+            this.Home_Off.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.Home_Off.Location = new System.Drawing.Point(12, 72);
+            this.Home_Off.Name = "Home_Off";
+            this.Home_Off.ShadowDecoration.Parent = this.Home_Off;
+            this.Home_Off.Size = new System.Drawing.Size(71, 56);
+            this.Home_Off.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Home_Off.TabIndex = 8;
+            this.Home_Off.TabStop = false;
+            this.Home_Off.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            // 
+            // Home_On
+            // 
+            this.Home_On.BorderRadius = 10;
+            this.Home_On.Image = global::Khayaal_SAHM.Properties.Resources.Button;
+            this.Home_On.Location = new System.Drawing.Point(12, 72);
+            this.Home_On.Name = "Home_On";
+            this.Home_On.ShadowDecoration.Parent = this.Home_On;
+            this.Home_On.Size = new System.Drawing.Size(71, 56);
+            this.Home_On.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Home_On.TabIndex = 7;
+            this.Home_On.TabStop = false;
+            this.Home_On.Click += new System.EventHandler(this.Home_On_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(91, 67);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 6;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // Main_Form
             // 
@@ -340,8 +288,17 @@
             this.Text = "Main_Form";
             this.Shown += new System.EventHandler(this.Main_Form_Shown);
             this.Panel_Menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.Panel_Menu.PerformLayout();
             this.Panel_Control.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_Off)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_On)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,16 +310,17 @@
         private Guna.UI2.WinForms.Guna2Panel Panel_Child;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private FontAwesome.Sharp.IconButton BtnHome;
-        private FontAwesome.Sharp.IconButton Btn_Bills;
-        private FontAwesome.Sharp.IconButton Btn_Relations;
-        private FontAwesome.Sharp.IconButton Btn_Raw_Material;
-        private FontAwesome.Sharp.IconButton Btn_Booking;
-        private FontAwesome.Sharp.IconButton Btn_Purchases;
         private Guna.UI2.WinForms.Guna2ControlBox Btn_Exit;
         private FontAwesome.Sharp.IconButton Btn_Maximize;
         private FontAwesome.Sharp.IconButton Btn_Minimize;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private FontAwesome.Sharp.IconButton Btn_Best_Seller;
+        private Guna.UI2.WinForms.Guna2PictureBox Home_Off;
+        private Guna.UI2.WinForms.Guna2PictureBox Home_On;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

@@ -389,6 +389,24 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Side Bar Icon.png" />
+    <None Include="Resources\Rectangle 26.png" />
+    <None Include="Resources\Button-15.png" />
+    <None Include="Resources\Button-14.png" />
+    <None Include="Resources\Button-13.png" />
+    <None Include="Resources\Button-12.png" />
+    <None Include="Resources\Button-11.png" />
+    <None Include="Resources\Button-10.png" />
+    <None Include="Resources\Button-9.png" />
+    <None Include="Resources\Button-8.png" />
+    <None Include="Resources\Button-7.png" />
+    <None Include="Resources\Button-6.png" />
+    <None Include="Resources\Button-5.png" />
+    <None Include="Resources\Button-4.png" />
+    <None Include="Resources\Button-3.png" />
+    <None Include="Resources\Button-2.png" />
+    <None Include="Resources\Button-1.png" />
+    <None Include="Resources\Button.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\Image_Khayaal.Image.png" />
     <EmbeddedResource Include="DataBase\Restaurant_Cafe.mdf">
