@@ -37,7 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Total_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,37 +47,39 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Best_Seller_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Serial_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unite_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sub_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).BeginInit();
             this.SuspendLayout();
             // 
-            // Category_Combo_Box
+            // Total_Combo_Box
             // 
-            this.Category_Combo_Box.BackColor = System.Drawing.Color.Transparent;
-            this.Category_Combo_Box.BorderRadius = 10;
-            this.Category_Combo_Box.BorderThickness = 0;
-            this.Category_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Category_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Category_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Category_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
-            this.Category_Combo_Box.FocusedState.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Category_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Category_Combo_Box.FormattingEnabled = true;
-            this.Category_Combo_Box.HoverState.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.ItemHeight = 30;
-            this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Location = new System.Drawing.Point(352, 43);
-            this.Category_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.Category_Combo_Box.Name = "Category_Combo_Box";
-            this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Size = new System.Drawing.Size(160, 36);
-            this.Category_Combo_Box.TabIndex = 5;
-            this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
+            this.Total_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Total_Combo_Box.BorderRadius = 10;
+            this.Total_Combo_Box.BorderThickness = 0;
+            this.Total_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Total_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Total_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Total_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Total_Combo_Box.FocusedState.Parent = this.Total_Combo_Box;
+            this.Total_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Total_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Total_Combo_Box.FormattingEnabled = true;
+            this.Total_Combo_Box.HoverState.Parent = this.Total_Combo_Box;
+            this.Total_Combo_Box.ItemHeight = 30;
+            this.Total_Combo_Box.ItemsAppearance.Parent = this.Total_Combo_Box;
+            this.Total_Combo_Box.Location = new System.Drawing.Point(352, 43);
+            this.Total_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Total_Combo_Box.Name = "Total_Combo_Box";
+            this.Total_Combo_Box.ShadowDecoration.Parent = this.Total_Combo_Box;
+            this.Total_Combo_Box.Size = new System.Drawing.Size(160, 36);
+            this.Total_Combo_Box.TabIndex = 5;
+            this.Total_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // From_Date_Picker
             // 
@@ -230,10 +232,12 @@
             this.Best_Seller_Table.ColumnHeadersHeight = 48;
             this.Best_Seller_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Best_Seller_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Serial_Number,
+            this.Quantity,
+            this.Unite_Price,
+            this.Sub_Total,
+            this.Print,
+            this.Delete});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -295,42 +299,6 @@
             this.Best_Seller_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Best_Seller_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "Item";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "Category";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column3.HeaderText = "Quntity";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column4.HeaderText = "Total";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // Table_Croll_Bar
             // 
             this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -350,6 +318,60 @@
             this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
             this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
             // 
+            // Serial_Number
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Serial_Number.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Serial_Number.HeaderText = "Serial Number";
+            this.Serial_Number.Name = "Serial_Number";
+            this.Serial_Number.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Unite_Price
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Unite_Price.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Unite_Price.HeaderText = "Unite Price";
+            this.Unite_Price.Name = "Unite_Price";
+            this.Unite_Price.ReadOnly = true;
+            // 
+            // Sub_Total
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Sub_Total.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Sub_Total.HeaderText = "Sub total";
+            this.Sub_Total.Name = "Sub_Total";
+            this.Sub_Total.ReadOnly = true;
+            // 
+            // Print
+            // 
+            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print.HeaderText = "Print";
+            this.Print.Name = "Print";
+            this.Print.ReadOnly = true;
+            this.Print.Text = "Print";
+            this.Print.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // Bills_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,7 +388,7 @@
             this.Controls.Add(this.Search_Text_Box);
             this.Controls.Add(this.To_Date_Picker);
             this.Controls.Add(this.From_Date_Picker);
-            this.Controls.Add(this.Category_Combo_Box);
+            this.Controls.Add(this.Total_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Bills_Form";
             this.Text = "Best_Seller_Form";
@@ -377,7 +399,7 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2ComboBox Category_Combo_Box;
+        private Guna.UI2.WinForms.Guna2ComboBox Total_Combo_Box;
         private System.Windows.Forms.DateTimePicker From_Date_Picker;
         private System.Windows.Forms.DateTimePicker To_Date_Picker;
         private Guna.UI2.WinForms.Guna2TextBox Search_Text_Box;
@@ -387,10 +409,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Value_Label;
         private Guna.UI2.WinForms.Guna2DataGridView Best_Seller_Table;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Guna.UI2.WinForms.Guna2VScrollBar Table_Croll_Bar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Serial_Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unite_Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sub_Total;
+        private System.Windows.Forms.DataGridViewButtonColumn Print;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
