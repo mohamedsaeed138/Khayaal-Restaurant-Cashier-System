@@ -162,7 +162,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             {
                 if (Relations_Table.Columns[e.ColumnIndex].Name == "Delete")
                 {
-
+                    // Enter Query To Delete 
+                }
+                if (Relations_Table.Columns[e.ColumnIndex].Name == "Edite")
+                {
+                    //Enter Query To Edite
                 }
 
             }
