@@ -46,9 +46,6 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Best_Seller_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Sort_By_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Sort_By_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +53,10 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Sort_By_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Sort_By_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Add_Button = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,61 +274,6 @@
             this.Best_Seller_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Best_Seller_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
-            // Table_Croll_Bar
-            // 
-            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 8;
-            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Table_Croll_Bar.HoverState.Parent = null;
-            this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
-            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
-            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
-            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 18;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
-            this.Table_Croll_Bar.TabIndex = 18;
-            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
-            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
-            // 
-            // Sort_By_Combo_Box
-            // 
-            this.Sort_By_Combo_Box.BackColor = System.Drawing.Color.Transparent;
-            this.Sort_By_Combo_Box.BorderRadius = 10;
-            this.Sort_By_Combo_Box.BorderThickness = 0;
-            this.Sort_By_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Sort_By_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Sort_By_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Sort_By_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
-            this.Sort_By_Combo_Box.FocusedState.Parent = this.Sort_By_Combo_Box;
-            this.Sort_By_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Sort_By_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Sort_By_Combo_Box.FormattingEnabled = true;
-            this.Sort_By_Combo_Box.HoverState.Parent = this.Sort_By_Combo_Box;
-            this.Sort_By_Combo_Box.ItemHeight = 30;
-            this.Sort_By_Combo_Box.ItemsAppearance.Parent = this.Sort_By_Combo_Box;
-            this.Sort_By_Combo_Box.Location = new System.Drawing.Point(233, 43);
-            this.Sort_By_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.Sort_By_Combo_Box.Name = "Sort_By_Combo_Box";
-            this.Sort_By_Combo_Box.ShadowDecoration.Parent = this.Sort_By_Combo_Box;
-            this.Sort_By_Combo_Box.Size = new System.Drawing.Size(150, 36);
-            this.Sort_By_Combo_Box.TabIndex = 19;
-            // 
-            // Sort_By_Label
-            // 
-            this.Sort_By_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sort_By_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sort_By_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sort_By_Label.Location = new System.Drawing.Point(233, 11);
-            this.Sort_By_Label.Margin = new System.Windows.Forms.Padding(2);
-            this.Sort_By_Label.Name = "Sort_By_Label";
-            this.Sort_By_Label.Size = new System.Drawing.Size(67, 27);
-            this.Sort_By_Label.TabIndex = 20;
-            this.Sort_By_Label.Text = "Sort_By";
-            this.Sort_By_Label.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
-            // 
             // Name
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -383,12 +329,83 @@
             this.Delete.ReadOnly = true;
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // Table_Croll_Bar
+            // 
+            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Table_Croll_Bar.AutoRoundedCorners = true;
+            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Table_Croll_Bar.HoverState.Parent = null;
+            this.Table_Croll_Bar.LargeChange = 10;
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
+            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
+            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
+            this.Table_Croll_Bar.ScrollbarSize = 18;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.TabIndex = 18;
+            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
+            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
+            // 
+            // Sort_By_Combo_Box
+            // 
+            this.Sort_By_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Sort_By_Combo_Box.BorderRadius = 10;
+            this.Sort_By_Combo_Box.BorderThickness = 0;
+            this.Sort_By_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Sort_By_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Sort_By_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Sort_By_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Sort_By_Combo_Box.FocusedState.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Sort_By_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Sort_By_Combo_Box.FormattingEnabled = true;
+            this.Sort_By_Combo_Box.HoverState.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.ItemHeight = 30;
+            this.Sort_By_Combo_Box.ItemsAppearance.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.Location = new System.Drawing.Point(233, 43);
+            this.Sort_By_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Sort_By_Combo_Box.Name = "Sort_By_Combo_Box";
+            this.Sort_By_Combo_Box.ShadowDecoration.Parent = this.Sort_By_Combo_Box;
+            this.Sort_By_Combo_Box.Size = new System.Drawing.Size(150, 36);
+            this.Sort_By_Combo_Box.TabIndex = 19;
+            // 
+            // Sort_By_Label
+            // 
+            this.Sort_By_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sort_By_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sort_By_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sort_By_Label.Location = new System.Drawing.Point(233, 11);
+            this.Sort_By_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sort_By_Label.Name = "Sort_By_Label";
+            this.Sort_By_Label.Size = new System.Drawing.Size(67, 27);
+            this.Sort_By_Label.TabIndex = 20;
+            this.Sort_By_Label.Text = "Sort_By";
+            // 
+            // Add_Button
+            // 
+            this.Add_Button.BorderRadius = 10;
+            this.Add_Button.CheckedState.Parent = this.Add_Button;
+            this.Add_Button.CustomImages.Parent = this.Add_Button;
+            this.Add_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Button.HoverState.Parent = this.Add_Button;
+            this.Add_Button.Location = new System.Drawing.Point(777, 43);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.ShadowDecoration.Parent = this.Add_Button;
+            this.Add_Button.Size = new System.Drawing.Size(150, 36);
+            this.Add_Button.TabIndex = 22;
+            this.Add_Button.Text = "Add";
+            // 
             // Purchases_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Add_Button);
             this.Controls.Add(this.Sort_By_Label);
             this.Controls.Add(this.Sort_By_Combo_Box);
             this.Controls.Add(this.Table_Croll_Bar);
@@ -430,5 +447,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private Guna.UI2.WinForms.Guna2Button Add_Button;
     }
 }
