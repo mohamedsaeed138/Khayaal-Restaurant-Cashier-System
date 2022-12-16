@@ -2,48 +2,47 @@
 using System;
 using System.Threading;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Khayaal_SAHM
 {
     public partial class Loading_Screen_Form : Form
     {
-
+        private double count = 0;
+        SoundPlayer Intro = new SoundPlayer(@"C:\Intro_Music.wav");
 
         public Loading_Screen_Form()
         {
             InitializeComponent();
-
+            
+            Intro.Play();
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            timer1.Start();
-            timer1.Interval = 1;
+            
+            
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try
+            count++;
+            if (count == 5) 
             {
-                timer1.Interval += 1000;
-
-                if (timer1.Interval > 3000)
-                {
-                    timer1.Stop();
-
-                    Thread Login_Start_Thread = new Thread(Start_A_Login_Form);
-                    Login_Start_Thread.SetApartmentState(ApartmentState.STA);
-                    Login_Start_Thread.Start();
-                    Thread.Sleep(100);
-                    this.Close();
-                }
+                pictureBox1.Dispose();
             }
-            catch (Exception)
+            else if (count == 7)
             {
-                return;
+                Thread Login_Start_Thread = new Thread(Start_A_Login_Form);
+                Login_Start_Thread.SetApartmentState(ApartmentState.STA);
+                Login_Start_Thread.Start();
+                Thread.Sleep(100);
+                timer1.Enabled = false;
+                Intro.Stop();
+                this.Close();
             }
         }
 
