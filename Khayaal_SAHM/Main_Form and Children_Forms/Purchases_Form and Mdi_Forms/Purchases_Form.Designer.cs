@@ -326,7 +326,6 @@
             this.Sort_By_Label.Size = new System.Drawing.Size(67, 27);
             this.Sort_By_Label.TabIndex = 20;
             this.Sort_By_Label.Text = "Sort_By";
-            this.Sort_By_Label.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // Name
             // 
@@ -402,7 +401,7 @@
             this.Controls.Add(this.From_Date_Picker);
             this.Controls.Add(this.Name_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Purchases_Form";
+            //this.Name = "Purchases_Form";
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).EndInit();
             this.ResumeLayout(false);

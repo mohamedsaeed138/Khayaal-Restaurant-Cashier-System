@@ -12,6 +12,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         private void Search_Text_Box_TextChanged(object sender, EventArgs e)
         {
+            
             Choose_Query();
         }
 
@@ -21,9 +22,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
             InitializeComponent();
 
             Fill_Combo_Box();
-            Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details  GROUP BY Name ,Category ORDER BY [Total] , Quntity  DESC;");
+            Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials");
 
-
+        }
+        public void Fill_Category_Combo_Boxe()
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            SqlDataAdapter da2 = new SqlDataAdapter($"SELECT[Category] FROM CR.Raw_Materials Group BY[Category] ASC;", conn);
+            DataTable dt2 = new DataTable();
+            conn.Open();
+            da2.Fill(dt2);
+            conn.Close();
+            DataRow row2 = dt2.NewRow();
+            dt2.Rows.InsertAt(row2, 0);
+            row2["Category"] = "All";
+            Category_Combo_Box.DataSource = dt2;
+            Category_Combo_Box.DisplayMember = "Category";
         }
         public void Fill_Combo_Box()
         {
@@ -52,22 +67,25 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
 
             conn.Close();
-            Best_Seller_Table.Rows.Clear();
+            Raw_Material_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
 
-                Best_Seller_Table.Rows.Add((string)row[0], (string)row[1], (int)row[2], (double)row[3]);
+                Raw_Material_Table.Rows.Add((string)row[0], (string)row[1], (double)row[2], (int)row[3]);
             }
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
             }
             catch { }
-            Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
+            Count_Value_Label.Text = $"{Raw_Material_Table.Rows.Count}";
         }
         void Choose_Query()
         {
-
+            if (Search_Text_Box.Text == string.Empty && Category_Combo_Box.Text == "All" && Sorting_Combo_Box.Text == "Name"&&Qty_Combo_Combo_Box.Text=="All")
+            {
+                Fill_Table("select * from CR.Raw_Material ");
+            }
         }
 
 
@@ -106,9 +124,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
 
-                Best_Seller_Table.FirstDisplayedScrollingRowIndex = Best_Seller_Table.Rows[e.NewValue].Index;
+                Raw_Material_Table.FirstDisplayedScrollingRowIndex = Raw_Material_Table.Rows[e.NewValue].Index;
             }
             catch { }
 
@@ -118,7 +136,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
             }
             catch { }
         }
@@ -127,7 +145,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
             }
             catch { }
         }
