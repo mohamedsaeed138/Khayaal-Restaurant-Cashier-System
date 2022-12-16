@@ -12,7 +12,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         private void Search_Text_Box_TextChanged(object sender, EventArgs e)
         {
-            
+
             Choose_Query();
         }
 
@@ -20,11 +20,29 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         {
 
             InitializeComponent();
+            Fill_Qty_Combo_Box();
 
-            Fill_Combo_Box();
             Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials");
 
         }
+
+        private void Fill_Qty_Combo_Box()
+        {
+            DataTable dt2 = new DataTable("Qty");
+            dt2.Columns.Add("Qty", typeof(string));
+            dt2.Rows.Add(new object[] { "All" });
+            dt2.Rows.Add(new object[] { "<= 5" });
+            dt2.Rows.Add(new object[] { "<= 10" });
+            dt2.Rows.Add(new object[] { "<= 25" });
+            dt2.Rows.Add(new object[] { "<= 50" });
+            dt2.Rows.Add(new object[] { "<= 100" });
+            dt2.Rows.Add(new object[] { "<= 150" });
+
+            Qty_Combo_Box.DataSource = dt2;
+            Qty_Combo_Box.DisplayMember = "Qty";
+            Qty_Combo_Box.ValueMember = "Qty";
+        }
+
         public void Fill_Category_Combo_Boxe()
         {
             if (conn.State == ConnectionState.Open)
@@ -40,32 +58,28 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
             Category_Combo_Box.DataSource = dt2;
             Category_Combo_Box.DisplayMember = "Category";
         }
-        public void Fill_Combo_Box()
-        {
-            conn.Open();
-            string sql = "SELECT Category FROM CR.Items GROUP BY Category";
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            DataRow row = dt.NewRow();
-            dt.Rows.InsertAt(row, 0);
-            row["Category"] = "All";
-            Category_Combo_Box.DataSource = dt;
-            Category_Combo_Box.DisplayMember = "Category";
 
-        }
 
         void Fill_Table(string Query)
         {
+            if (ConnectionState.Open == conn.State)
+            { conn.Close(); }
 
-            SqlCommand Command = new SqlCommand(Query, conn);
-            SqlDataAdapter da = new SqlDataAdapter(Command);
+
+            SqlDataAdapter da = new SqlDataAdapter(Query, conn);
             DataTable dt = new DataTable();
             conn.Open();
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Qty_Combo_Box.Text);
+                MessageBox.Show(ex.Message);
 
-
+                conn.Close();
+            }
             conn.Close();
             Raw_Material_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
@@ -82,10 +96,41 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         }
         void Choose_Query()
         {
-            if (Search_Text_Box.Text == string.Empty && Category_Combo_Box.Text == "All" && Sorting_Combo_Box.Text == "Name"&&Qty_Combo_Combo_Box.Text=="All")
-            {
-                Fill_Table("select * from CR.Raw_Material ");
-            }
+            string selected = this.Qty_Combo_Box.GetItemText(this.Qty_Combo_Box.SelectedItem);
+            if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text != "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials ORDER BY [{Sorting_Combo_Box.Text}]");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text != "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials WHERE Quntity {selected} Name ASC;");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text != "All" && Sorting_Combo_Box.Text != "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials  WHERE Quntity {selected}  ORDER BY [{Sorting_Combo_Box.Text}]");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text != "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials ORDER BY [{Sorting_Combo_Box.Text}]");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty_Combo_Box.Text != "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials  WHERE Quntity {selected}");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty_Combo_Box.Text != "All" && Sorting_Combo_Box.Text != "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials  WHERE Quntity {selected} ORDER BY [ {Sorting_Combo_Box.Text} ]");
+            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials");
+            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text != "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials ORDER BY [ {Sorting_Combo_Box.Text} ]");
+            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text != "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials  WHERE Quntity {selected}");
+            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty_Combo_Box.Text != "All" && Sorting_Combo_Box.Text != "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials  WHERE Quntity {selected} ORDER BY [ {Sorting_Combo_Box.Text} ]");
+            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials");
+            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty_Combo_Box.Text == "All" && Sorting_Combo_Box.Text != "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials ORDER BY [ {Sorting_Combo_Box.Text} ]");
+            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty_Combo_Box.Text != "All" && Sorting_Combo_Box.Text == "Name")
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials  WHERE Quntity {selected}");
+            else
+                Fill_Table($"select [Name] as Name,[Category] as Category,[Qty] as Quntity,[Id] from CR.Raw_Materials  WHERE Quntity {selected} ORDER BY [ {Sorting_Combo_Box.Text} ]");
+
+
         }
 
 
@@ -150,6 +195,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
             catch { }
         }
 
+        private void Category_Combo_Box_TextChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
 
+        private void Qty_Combo_Combo_Box_TextChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
+
+        private void Sorting_Combo_Box_TextChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
     }
 }

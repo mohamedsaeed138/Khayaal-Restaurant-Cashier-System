@@ -170,5 +170,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         {
             Choose_Query();
         }
+
+        private void Item_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

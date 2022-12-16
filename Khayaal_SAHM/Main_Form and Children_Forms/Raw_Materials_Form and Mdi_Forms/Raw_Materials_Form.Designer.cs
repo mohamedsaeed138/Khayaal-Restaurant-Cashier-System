@@ -44,16 +44,16 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Raw_Material_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Sorting_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Qty_Combo_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Add_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Sorting_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Qty_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Add_Button = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.Raw_Material_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +80,7 @@
             this.Category_Combo_Box.Size = new System.Drawing.Size(131, 36);
             this.Category_Combo_Box.TabIndex = 5;
             this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
+            this.Category_Combo_Box.TextChanged += new System.EventHandler(this.Category_Combo_Box_TextChanged);
             // 
             // Search_Text_Box
             // 
@@ -269,101 +270,6 @@
             this.Raw_Material_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Raw_Material_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
-            // Table_Croll_Bar
-            // 
-            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 8;
-            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Table_Croll_Bar.HoverState.Parent = null;
-            this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
-            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
-            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
-            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 18;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
-            this.Table_Croll_Bar.TabIndex = 18;
-            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
-            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
-            // 
-            // Sorting_Combo_Box
-            // 
-            this.Sorting_Combo_Box.BackColor = System.Drawing.Color.Transparent;
-            this.Sorting_Combo_Box.BorderRadius = 10;
-            this.Sorting_Combo_Box.BorderThickness = 0;
-            this.Sorting_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Sorting_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Sorting_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Sorting_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
-            this.Sorting_Combo_Box.FocusedState.Parent = this.Sorting_Combo_Box;
-            this.Sorting_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Sorting_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Sorting_Combo_Box.FormattingEnabled = true;
-            this.Sorting_Combo_Box.HoverState.Parent = this.Sorting_Combo_Box;
-            this.Sorting_Combo_Box.ItemHeight = 30;
-            this.Sorting_Combo_Box.Items.AddRange(new object[] {
-            "Name",
-            "Category",
-            "Quantity"});
-            this.Sorting_Combo_Box.ItemsAppearance.Parent = this.Sorting_Combo_Box;
-            this.Sorting_Combo_Box.Location = new System.Drawing.Point(622, 43);
-            this.Sorting_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.Sorting_Combo_Box.Name = "Sorting_Combo_Box";
-            this.Sorting_Combo_Box.ShadowDecoration.Parent = this.Sorting_Combo_Box;
-            this.Sorting_Combo_Box.Size = new System.Drawing.Size(131, 36);
-            this.Sorting_Combo_Box.TabIndex = 19;
-            // 
-            // Qty_Combo_Combo_Box
-            // 
-            this.Qty_Combo_Combo_Box.BackColor = System.Drawing.Color.Transparent;
-            this.Qty_Combo_Combo_Box.BorderRadius = 10;
-            this.Qty_Combo_Combo_Box.BorderThickness = 0;
-            this.Qty_Combo_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Qty_Combo_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Qty_Combo_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Qty_Combo_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
-            this.Qty_Combo_Combo_Box.FocusedState.Parent = this.Qty_Combo_Combo_Box;
-            this.Qty_Combo_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Qty_Combo_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Qty_Combo_Combo_Box.FormattingEnabled = true;
-            this.Qty_Combo_Combo_Box.HoverState.Parent = this.Qty_Combo_Combo_Box;
-            this.Qty_Combo_Combo_Box.ItemHeight = 30;
-            this.Qty_Combo_Combo_Box.Items.AddRange(new object[] {
-            "All",
-            "<= 5 ",
-            "<= 10",
-            "<= 20",
-            "<= 50 ",
-            "<= 75",
-            "<= 100",
-            "<= 150",
-            "<= 200"});
-            this.Qty_Combo_Combo_Box.ItemsAppearance.Parent = this.Qty_Combo_Combo_Box;
-            this.Qty_Combo_Combo_Box.Location = new System.Drawing.Point(446, 43);
-            this.Qty_Combo_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.Qty_Combo_Combo_Box.Name = "Qty_Combo_Combo_Box";
-            this.Qty_Combo_Combo_Box.ShadowDecoration.Parent = this.Qty_Combo_Combo_Box;
-            this.Qty_Combo_Combo_Box.Size = new System.Drawing.Size(131, 36);
-            this.Qty_Combo_Combo_Box.TabIndex = 20;
-            // 
-            // Add_Button
-            // 
-            this.Add_Button.BorderRadius = 10;
-            this.Add_Button.CheckedState.Parent = this.Add_Button;
-            this.Add_Button.CustomImages.Parent = this.Add_Button;
-            this.Add_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Add_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Button.HoverState.Parent = this.Add_Button;
-            this.Add_Button.Location = new System.Drawing.Point(791, 43);
-            this.Add_Button.Name = "Add_Button";
-            this.Add_Button.ShadowDecoration.Parent = this.Add_Button;
-            this.Add_Button.Size = new System.Drawing.Size(131, 36);
-            this.Add_Button.TabIndex = 21;
-            this.Add_Button.Text = "Add";
-            // 
             // Column1
             // 
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -417,6 +323,93 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // Table_Croll_Bar
+            // 
+            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Table_Croll_Bar.AutoRoundedCorners = true;
+            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Table_Croll_Bar.HoverState.Parent = null;
+            this.Table_Croll_Bar.LargeChange = 10;
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
+            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
+            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
+            this.Table_Croll_Bar.ScrollbarSize = 18;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.TabIndex = 18;
+            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
+            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
+            // 
+            // Sorting_Combo_Box
+            // 
+            this.Sorting_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Sorting_Combo_Box.BorderRadius = 10;
+            this.Sorting_Combo_Box.BorderThickness = 0;
+            this.Sorting_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Sorting_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Sorting_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Sorting_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Sorting_Combo_Box.FocusedState.Parent = this.Sorting_Combo_Box;
+            this.Sorting_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Sorting_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Sorting_Combo_Box.FormattingEnabled = true;
+            this.Sorting_Combo_Box.HoverState.Parent = this.Sorting_Combo_Box;
+            this.Sorting_Combo_Box.ItemHeight = 30;
+            this.Sorting_Combo_Box.Items.AddRange(new object[] {
+            "Name",
+            "Category",
+            "Qty"});
+            this.Sorting_Combo_Box.ItemsAppearance.Parent = this.Sorting_Combo_Box;
+            this.Sorting_Combo_Box.Location = new System.Drawing.Point(622, 43);
+            this.Sorting_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Sorting_Combo_Box.Name = "Sorting_Combo_Box";
+            this.Sorting_Combo_Box.ShadowDecoration.Parent = this.Sorting_Combo_Box;
+            this.Sorting_Combo_Box.Size = new System.Drawing.Size(131, 36);
+            this.Sorting_Combo_Box.TabIndex = 19;
+            this.Sorting_Combo_Box.TextChanged += new System.EventHandler(this.Sorting_Combo_Box_TextChanged);
+            // 
+            // Qty_Combo_Box
+            // 
+            this.Qty_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Qty_Combo_Box.BorderRadius = 10;
+            this.Qty_Combo_Box.BorderThickness = 0;
+            this.Qty_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Qty_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Qty_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Qty_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Qty_Combo_Box.FocusedState.Parent = this.Qty_Combo_Box;
+            this.Qty_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Qty_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Qty_Combo_Box.FormattingEnabled = true;
+            this.Qty_Combo_Box.HoverState.Parent = this.Qty_Combo_Box;
+            this.Qty_Combo_Box.ItemHeight = 30;
+            this.Qty_Combo_Box.ItemsAppearance.Parent = this.Qty_Combo_Box;
+            this.Qty_Combo_Box.Location = new System.Drawing.Point(446, 43);
+            this.Qty_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Qty_Combo_Box.Name = "Qty_Combo_Box";
+            this.Qty_Combo_Box.ShadowDecoration.Parent = this.Qty_Combo_Box;
+            this.Qty_Combo_Box.Size = new System.Drawing.Size(131, 36);
+            this.Qty_Combo_Box.TabIndex = 20;
+            this.Qty_Combo_Box.TextChanged += new System.EventHandler(this.Qty_Combo_Combo_Box_TextChanged);
+            // 
+            // Add_Button
+            // 
+            this.Add_Button.BorderRadius = 10;
+            this.Add_Button.CheckedState.Parent = this.Add_Button;
+            this.Add_Button.CustomImages.Parent = this.Add_Button;
+            this.Add_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Button.HoverState.Parent = this.Add_Button;
+            this.Add_Button.Location = new System.Drawing.Point(791, 43);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.ShadowDecoration.Parent = this.Add_Button;
+            this.Add_Button.Size = new System.Drawing.Size(131, 36);
+            this.Add_Button.TabIndex = 21;
+            this.Add_Button.Text = "Add";
+            // 
             // Raw_Materials_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,7 +417,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
             this.Controls.Add(this.Add_Button);
-            this.Controls.Add(this.Qty_Combo_Combo_Box);
+            this.Controls.Add(this.Qty_Combo_Box);
             this.Controls.Add(this.Sorting_Combo_Box);
             this.Controls.Add(this.Table_Croll_Bar);
             this.Controls.Add(this.Raw_Material_Table);
@@ -455,7 +448,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView Raw_Material_Table;
         private Guna.UI2.WinForms.Guna2VScrollBar Table_Croll_Bar;
         private Guna.UI2.WinForms.Guna2ComboBox Sorting_Combo_Box;
-        private Guna.UI2.WinForms.Guna2ComboBox Qty_Combo_Combo_Box;
+        private Guna.UI2.WinForms.Guna2ComboBox Qty_Combo_Box;
         private Guna.UI2.WinForms.Guna2Button Add_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
