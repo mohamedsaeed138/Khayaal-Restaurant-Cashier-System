@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -52,18 +53,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 
 
             conn.Close();
-            Best_Seller_Table.Rows.Clear();
+            Bills_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
 
-                Best_Seller_Table.Rows.Add((string)row[0], (string)row[1], (int)row[2], (double)row[3]);
+                Bills_Table.Rows.Add((string)row[0], (string)row[1], (int)row[2], (double)row[3]);
             }
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
             }
             catch { }
-            Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
+            Count_Value_Label.Text = $"{Bills_Table.Rows.Count}";
         }
         void Choose_Query()
         {
@@ -119,9 +120,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
 
-                Best_Seller_Table.FirstDisplayedScrollingRowIndex = Best_Seller_Table.Rows[e.NewValue].Index;
+                Bills_Table.FirstDisplayedScrollingRowIndex = Bills_Table.Rows[e.NewValue].Index;
             }
             catch { }
 
@@ -131,7 +132,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
             }
             catch { }
         }
@@ -140,9 +141,22 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
             }
             catch { }
+        }
+
+        private void Bills_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Bills_Table.Columns[e.ColumnIndex].Name == "Print")
+            {
+                new Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Print.Print_Bill().Show();
+            }
+            if (Bills_Table.Columns[e.ColumnIndex].Name == "Edite")
+            {
+                //Enter Query To Edite
+            }
+
         }
     }
 }
