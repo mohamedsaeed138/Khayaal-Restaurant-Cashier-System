@@ -14,15 +14,18 @@ namespace Khayaal_SAHM
         /// <returns></returns>
         public static string String(string String)
         {
-
-            string[] Strings = String.Trim().Split(' ');
-            for (int i = 0; i < Strings.Length; i++)
+            if (String != string.Empty)
             {
-                Strings[i] = char.ToUpper(Strings[i][0]) + Strings[i].ToLower().Remove(0, 1);
 
+                string[] Strings = String.Trim().Split(' ');
+                for (int i = 0; i < Strings.Length; i++)
+                {
+                    Strings[i] = char.ToUpper(Strings[i][0]) + Strings[i].ToLower().Remove(0, 1);
+
+                }
+
+                String = string.Join(" ", Strings);
             }
-
-            String = string.Join(" ", Strings);
 
             return String;
         }
