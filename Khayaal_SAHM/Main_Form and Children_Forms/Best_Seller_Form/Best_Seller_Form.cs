@@ -19,7 +19,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             this.Controls.Clear();
             InitializeComponent();
             Fill_Combo_Box();
-            Fill_Table($"SELECT [Name] as [Item]  , COUNT(Name) as [Quantity],SUM(Sub_Total) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;\r\n");
+            Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;");
 
         }
         public Best_Sales_Form()
@@ -60,7 +60,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             foreach (DataRow row in dt.Rows)
             {
 
-                Best_Seller_Table.Rows.Add((string)row[0], (string)row[1], (int)row[2], (double)row[3]);
+                Best_Seller_Table.Rows.Add((string)row[0], (int)row[1], (double)row[2]);
             }
             try
             {
@@ -82,13 +82,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             {
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT [Name] as [Item]  , COUNT(Name) as [Quantity],SUM(Sub_Total) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;\r\n");
+                    Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;\r\n");
                 else if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT [Name] as [Item] , COUNT(Name) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Name Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%'  GROUP BY Name  ORDER BY [Total] , Quntity   DESC;");
+                    Fill_Table($"SELECT [Name] as [Item] , COUNT([Name]) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and [Name] Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%'  GROUP BY [Name]  ORDER BY [Total] , Quantity   DESC;");
                 else if (Category_Combo_Box.Text != "All" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT [Name] as [Item] , COUNT(Name) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Get_Item_Category([Item]) = N'{Category_Combo_Box.Text}'  GROUP BY Name ,Category ORDER BY [Total] , Quantity  DESC;");
+                    Fill_Table($"SELECT [Name] as [Item] , COUNT([Name]) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and CR.Get_Item_Category([Name]) = N'{Category_Combo_Box.Text}'  GROUP BY [Name]  ORDER BY [Total] , Quantity  DESC;");
                 else if (Category_Combo_Box.Text != "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT [Name] as [Item] , COUNT(Name) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Name Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%' and Get_Item_Category([Item]) = N'{Category_Combo_Box.Text}'  GROUP BY Name  ORDER BY [Total] , Quantity   DESC;");
+                    Fill_Table($"SELECT [Name] as [Item] , COUNT([Name]) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and [Name] Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%' and CR.Get_Item_Category([Name]) = N'{Category_Combo_Box.Text}'  GROUP BY [Name]  ORDER BY [Total] , Quantity   DESC;");
             }
         }
 
