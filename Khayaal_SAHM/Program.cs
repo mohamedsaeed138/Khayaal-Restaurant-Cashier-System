@@ -14,7 +14,7 @@ namespace Khayaal_SAHM
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new Loading_Screen_Form());
 
-            Application.Run(new Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Bills_Form());
+            Application.Run(new Main_Form_and_Children_Forms.Best_Seller_Form.Best_Sales_Form());
         }
 
     }
