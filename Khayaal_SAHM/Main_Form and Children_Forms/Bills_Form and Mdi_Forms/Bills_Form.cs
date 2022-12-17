@@ -17,33 +17,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 
         public Bills_Form()
         {
-
-            InitializeComponent();
-
-            Fill_Combo_Box();
-            Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details  GROUP BY Name ,Category ORDER BY [Total] , Quntity  DESC;");
-
-
+            Reload();
         }
-        public void Fill_Combo_Box()
+        void Reload()
         {
-            conn.Open();
-            string sql = "SELECT Sub_Total FROM CR.Bills_Details GROUP BY Sub_Total";
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            DataRow row = dt.NewRow();
-            dt.Rows.InsertAt(row, 0);
-            //row["Sub_Total"] = "All";
-            Total_Combo_Box.DataSource = dt;
-            Total_Combo_Box.DisplayMember = "Sub_Total";
-
+            InitializeComponent();
+            Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date from CR.Bills;");
         }
+
 
         void Fill_Table(string Query)
         {
-
+            if (ConnectionState.Open == conn.State)
+                conn.Close();
             SqlCommand Command = new SqlCommand(Query, conn);
             SqlDataAdapter da = new SqlDataAdapter(Command);
             DataTable dt = new DataTable();
@@ -52,34 +38,41 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 
 
             conn.Close();
-            Best_Seller_Table.Rows.Clear();
+            Bills_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
 
-                Best_Seller_Table.Rows.Add((string)row[0], (string)row[1], (int)row[2], (double)row[3]);
+                Bills_Table.Rows.Add((int)row[0], (string)row[1], (double)row[2], (DateTime)row[3]);
             }
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
             }
             catch { }
-            Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
+            Count_Value_Label.Text = $"{Bills_Table.Rows.Count}";
         }
         void Choose_Query()
         {
             if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
+            {
                 MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                From_Date_Picker.Value = To_Date_Picker.Value;
+
+
+            }
             else
             {
+                string Total = Formatter.String(Total_Search_Text_Box.Text);
+                string Serial = Formatter.String(Search_Serial_Number_Text_Box.Text);
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
-                if (Total_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}'   GROUP BY Name ,Category ORDER BY [Total] , Quntity   DESC;");
-                else if (Total_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Name Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%'  GROUP BY Name ,Category ORDER BY [Total] , Quntity   DESC;");
-                else if (Total_Combo_Box.Text != "All" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Category = N'{Total_Combo_Box.Text}'  GROUP BY Name ,Category ORDER BY [Total] , Quntity  DESC;");
-                else if (Total_Combo_Box.Text != "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Name Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%' and Category = N'{Total_Combo_Box.Text}'  GROUP BY Name ,Category ORDER BY [Total] , Quntity   DESC;");
+                if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text == "")
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
+                else if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text != "")
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Serial_Number]=N'{Serial}' AND Date BETWEEN '{From}' and '{To}' ;");
+                else if (Total_Search_Text_Box.Text != "" && Search_Serial_Number_Text_Box.Text == "")
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total}  AND Date BETWEEN '{From}' and '{To}' ;");
+                else if (Total_Search_Text_Box.Text != "" && Search_Serial_Number_Text_Box.Text != "")
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total} AND [Serial_Number]=N'{Serial}' AND Date BETWEEN '{From}' and '{To}' ;");
             }
         }
 
@@ -90,7 +83,58 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 
 
 
-        private void Category_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
+
+
+
+        private void Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8))
+
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Table_Croll_Bar_Scroll(object sender, ScrollEventArgs e)
+        {
+            try
+            {
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
+
+                Bills_Table.FirstDisplayedScrollingRowIndex = Bills_Table.Rows[e.NewValue].Index;
+            }
+            catch { }
+
+        }
+
+        private void Best_Seller_Table_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            try
+            {
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
+            }
+            catch { }
+        }
+
+        private void Best_Seller_Table_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            try
+            {
+                Table_Croll_Bar.Maximum = Bills_Table.Rows.Count - 1;
+            }
+            catch { }
+        }
+
+        private void Total_Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8))
+
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Total_Search_Text_Box_TextChanged(object sender, EventArgs e)
         {
             Choose_Query();
         }
@@ -103,46 +147,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
         private void To_Date_Picker_ValueChanged(object sender, EventArgs e)
         {
             Choose_Query();
-        }
-
-        private void Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Search_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-           || (Search_Text_Box.Text.Length > 1 && Search_Text_Box.Text[Search_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Search_Text_Box.Text.Length == 0))
-
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void Table_Croll_Bar_Scroll(object sender, ScrollEventArgs e)
-        {
-            try
-            {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
-
-                Best_Seller_Table.FirstDisplayedScrollingRowIndex = Best_Seller_Table.Rows[e.NewValue].Index;
-            }
-            catch { }
-
-        }
-
-        private void Best_Seller_Table_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            try
-            {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
-            }
-            catch { }
-        }
-
-        private void Best_Seller_Table_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
-        {
-            try
-            {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
-            }
-            catch { }
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
         }
         public void Fill_Combo_Box()
         {
+            Formatter.Check_Connection(conn);
             conn.Open();
             string sql = "SELECT Category FROM CR.Items GROUP BY Category";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
@@ -70,7 +71,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
         void Choose_Query()
         {
             if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
+            {
                 MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                From_Date_Picker.Value = To_Date_Picker.Value;
+
+
+            }
             else
             {
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");

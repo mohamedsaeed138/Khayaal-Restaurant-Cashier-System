@@ -26,7 +26,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         }
         public void Fill_Item_Combo_Boxe()
         {
-
+            Formatter.Check_Connection(conn);
 
             SqlDataAdapter dai = new SqlDataAdapter("SELECT [Name] FROM CR.Items ORDER BY [Name] ASC;", conn);
             DataTable dt1 = new DataTable();
@@ -43,8 +43,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         }
         public void Fill_Raw_Combo_Boxe()
         {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
+            Formatter.Check_Connection(conn);
             SqlDataAdapter da2 = new SqlDataAdapter($"SELECT[Name] FROM CR.Raw_Materials ORDER BY[Name] ASC;", conn);
             DataTable dt2 = new DataTable();
             conn.Open();
@@ -59,8 +58,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 
         void Fill_Table(string Query)//ok
         {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
+            Formatter.Check_Connection(conn);
 
             SqlDataAdapter da = new SqlDataAdapter(Query, conn);
             DataTable dt = new DataTable();

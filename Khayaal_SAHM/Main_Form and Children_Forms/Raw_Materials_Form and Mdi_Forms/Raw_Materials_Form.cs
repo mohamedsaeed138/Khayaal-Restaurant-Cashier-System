@@ -33,8 +33,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         public void Fill_Category_Combo_Box()
         {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
+            Formatter.Check_Connection(conn);
             SqlDataAdapter da2 = new SqlDataAdapter($"SELECT [Category] FROM CR.Raw_Materials Group BY [Category] ORDER BY [Category] ASC;", conn);
             DataTable dt2 = new DataTable();
             conn.Open();
@@ -51,9 +50,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         void Fill_Table(string Query)
         {
-            if (ConnectionState.Open == conn.State)
-            { conn.Close(); }
-
+            Formatter.Check_Connection(conn);
 
             SqlDataAdapter da = new SqlDataAdapter(Query, conn);
             DataTable dt = new DataTable();

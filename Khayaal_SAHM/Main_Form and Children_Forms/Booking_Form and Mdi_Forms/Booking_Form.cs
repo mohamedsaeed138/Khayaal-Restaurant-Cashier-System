@@ -30,8 +30,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         }
         public void Fill_Combo_Boxes()
         {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
+            Formatter.Check_Connection(conn);
             conn.Open();
             string sql = "SELECT [Number] FROM CR.Tables ORDER BY [Number]";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
@@ -59,8 +58,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
         void Fill_Table(string Query)
         {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
+            Formatter.Check_Connection(conn);
             SqlCommand Command = new SqlCommand(Query, conn);
             SqlDataAdapter da = new SqlDataAdapter(Command);
             DataTable dt = new DataTable();
@@ -85,7 +83,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         void Choose_Query()
         {
             if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
+            {
                 MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                From_Date_Picker.Value = To_Date_Picker.Value;
+
+
+            }
             else
             {
                 string Table_No = Table_Combo_Box.Text;

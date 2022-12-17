@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Khayaal_SAHM
 {
@@ -90,6 +91,12 @@ namespace Khayaal_SAHM
             return true;
         }
 
+        public static void Check_Connection(SqlConnection conn)
+        {
+
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+        }
 
     }
 
