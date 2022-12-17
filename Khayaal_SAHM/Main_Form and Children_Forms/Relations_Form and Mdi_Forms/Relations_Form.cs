@@ -15,13 +15,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         public Relations_Form()
         {
 
+            Reload();
+
+        }
+        void Reload()
+        {
+            this.Controls.Clear();
             InitializeComponent();
 
             Fill_Item_Combo_Boxe();
             Fill_Raw_Combo_Boxe();
 
             Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed]FROM CR.Items_Relations ORDER BY [Item] ASC;");
-
 
         }
         public void Fill_Item_Combo_Boxe()

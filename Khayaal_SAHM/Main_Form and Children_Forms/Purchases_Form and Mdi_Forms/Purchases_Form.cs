@@ -21,6 +21,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
         }
         void Reload()
         {
+            this.Controls.Clear();
             InitializeComponent();
             Sort_By_Combo_Box.SelectedIndex = 0;
             Fill_Combo_Box();
