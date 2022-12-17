@@ -234,11 +234,11 @@
   <ItemGroup>
     <Compile Include="Connection_String.cs" />
     <Compile Include="Formatter.cs" />
-    <Compile Include="Loading_Form.cs">
+    <Compile Include="Loading_Screen_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loading_Form.Designer.cs">
-      <DependentUpon>Loading_Form.cs</DependentUpon>
+    <Compile Include="Loading_Screen_Form.Designer.cs">
+      <DependentUpon>Loading_Screen_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
@@ -320,8 +320,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Loading_Form.resx">
-      <DependentUpon>Loading_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Loading_Screen_Form.resx">
+      <DependentUpon>Loading_Screen_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
@@ -398,6 +398,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Frame 42.png" />
+    <None Include="Resources\Frame 41.png" />
+    <None Include="Resources\Frame 40.png" />
+    <None Include="Resources\Frame 39.png" />
+    <None Include="Resources\Frame 38.png" />
+    <None Include="Resources\Frame 37.png" />
+    <None Include="Resources\Frame 36.png" />
+    <None Include="Resources\Credit.png" />
+    <None Include="Resources\SAHM GIF Intro.gif" />
     <None Include="Resources\Side Bar Icon.png" />
     <None Include="Resources\Rectangle 26.png" />
     <None Include="Resources\Button-15.png" />

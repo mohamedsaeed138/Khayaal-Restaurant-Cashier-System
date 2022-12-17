@@ -17,33 +17,50 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
         public Booking_Form()
         {
+            Reload();
 
+        }
+        void Reload()
+        {
+            this.Controls.Clear();
             InitializeComponent();
 
-            Fill_Combo_Box();
-            Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details  GROUP BY Name ,Category ORDER BY [Total] , Quntity  DESC;");
-
-
+            Fill_Combo_Boxes();
+            Fill_Table($"SELECT * FROM CR.Tables_Booking_Details ORDER BY [From]");
         }
-        public void Fill_Combo_Box()
+        public void Fill_Combo_Boxes()
         {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
             conn.Open();
-            string sql = "SELECT Category FROM CR.Items GROUP BY Category";
+            string sql = "SELECT [Number] FROM CR.Tables ORDER BY [Number]";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+            dt2.Columns.Add("Number");
+            DataRow row = dt2.NewRow();
+            dt2.Rows.InsertAt(row, 0);
+            row["Number"] = "All";
             da.Fill(dt);
             conn.Close();
-            DataRow row = dt.NewRow();
-            dt.Rows.InsertAt(row, 0);
-            row["Category"] = "All";
-            Category_Combo_Box.DataSource = dt;
-            Category_Combo_Box.DisplayMember = "Category";
+            foreach (DataRow row2 in dt.Rows)
+            {
+                dt2.Rows.Add((int)row2[0]);
+            }
+
+
+            Table_Combo_Box.DataSource = dt2;
+            Table_Combo_Box.DisplayMember = "Number";
+
 
         }
+
+
 
         void Fill_Table(string Query)
         {
-
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
             SqlCommand Command = new SqlCommand(Query, conn);
             SqlDataAdapter da = new SqlDataAdapter(Command);
             DataTable dt = new DataTable();
@@ -52,18 +69,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
 
             conn.Close();
-            Best_Seller_Table.Rows.Clear();
+            Booking_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
 
-                Best_Seller_Table.Rows.Add((string)row[0], (string)row[1], (int)row[2], (double)row[3]);
+                Booking_Table.Rows.Add((int)row[0], (string)row[1], (DateTime)row[2], (DateTime)row[3]);
             }
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Booking_Table.Rows.Count - 1;
             }
             catch { }
-            Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
+            Count_Value_Label.Text = $"{Booking_Table.Rows.Count}";
         }
         void Choose_Query()
         {
@@ -71,15 +88,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                 MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
+                string Table_No = Table_Combo_Box.Text;
+                string Name = Formatter.String(Search_Text_Box.Text);
+
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
-                if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}'   GROUP BY Name ,Category ORDER BY [Total] , Quntity   DESC;");
-                else if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Name Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%'  GROUP BY Name ,Category ORDER BY [Total] , Quntity   DESC;");
-                else if (Category_Combo_Box.Text != "All" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Category = N'{Category_Combo_Box.Text}'  GROUP BY Name ,Category ORDER BY [Total] , Quntity  DESC;");
-                else if (Category_Combo_Box.Text != "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and Name Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%' and Category = N'{Category_Combo_Box.Text}'  GROUP BY Name ,Category ORDER BY [Total] , Quntity   DESC;");
+                if (Table_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' ORDER BY [From] ");
+                else if (Table_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Name] LIKE '{Name}%' ORDER BY [From] ");
+                else if (Table_Combo_Box.Text != "All" && Search_Text_Box.Text == "")
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  ORDER BY [From] ");
+                else
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  AND [Name] LIKE '{Name}%'  ORDER BY [From] ");
             }
         }
 
@@ -119,9 +139,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Booking_Table.Rows.Count - 1;
 
-                Best_Seller_Table.FirstDisplayedScrollingRowIndex = Best_Seller_Table.Rows[e.NewValue].Index;
+                Booking_Table.FirstDisplayedScrollingRowIndex = Booking_Table.Rows[e.NewValue].Index;
             }
             catch { }
 
@@ -131,7 +151,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Booking_Table.Rows.Count - 1;
             }
             catch { }
         }
@@ -140,9 +160,88 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Booking_Table.Rows.Count - 1;
             }
             catch { }
+        }
+
+        private void Delete_Table_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Delete_Table_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '\r'))
+
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void Delete_Table_Text_Box_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == '\r')
+            {
+                if (Delete_Table_Text_Box.Text != string.Empty)
+                {
+                    if (ConnectionState.Open == conn.State)
+                        conn.Close();
+                    string Table = Delete_Table_Text_Box.Text;
+                    string Query = $"DELETE FROM CR.Tables_Booking_Details WHERE [Table_No]= {Table} ;";
+                    SqlCommand sqlCommand = new SqlCommand(Query, conn);
+                    conn.Open();
+                    try { sqlCommand.ExecuteNonQuery(); }
+                    catch { MessageBox.Show(Table); }
+                    sqlCommand = new SqlCommand($"DELETE FROM CR.Tables WHERE [Number]= {Table};", conn);
+                    sqlCommand.ExecuteNonQuery();
+                    conn.Close();
+
+                    Choose_Query();
+                }
+            }
+        }
+
+        private void Add_Table_Button_Click(object sender, EventArgs e)
+        {
+            bool Inserted = true;
+            DataTable Tables = new DataTable();
+            if (ConnectionState.Open == conn.State)
+            { conn.Close(); }
+            SqlDataAdapter Get_Tables = new SqlDataAdapter("SELECT [Number] FROM CR.Tables ORDER BY [Number]", conn);
+            conn.Open();
+            Get_Tables.Fill(Tables);
+            conn.Close();
+            int TableNo = 1;
+            foreach (DataRow row in Tables.Rows)
+            {
+                if ((int)row[0] != TableNo)
+                {
+                    if (ConnectionState.Open == conn.State)
+                        conn.Close();
+                    SqlCommand newtable = new SqlCommand($"INSERT INTO CR.Tables VALUES({TableNo});", conn);
+                    conn.Open();
+                    newtable.ExecuteNonQuery();
+                    conn.Close();
+                    this.Reload();
+                    Inserted = false;
+                    break;
+                }
+                else
+                    TableNo++;
+            }
+            if (Inserted)
+            {
+                if (ConnectionState.Open == conn.State)
+                    conn.Close();
+                SqlCommand newtable = new SqlCommand($"INSERT INTO CR.Tables VALUES({TableNo});", conn);
+                conn.Open();
+                newtable.ExecuteNonQuery();
+                conn.Close();
+                this.Reload();
+            }
+
         }
     }
 }

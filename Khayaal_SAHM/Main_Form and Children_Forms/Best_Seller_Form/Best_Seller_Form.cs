@@ -14,15 +14,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
         {
             Choose_Query();
         }
-
-        public Best_Sales_Form()
+        void Reload()
         {
-
+            this.Controls.Clear();
             InitializeComponent();
-
             Fill_Combo_Box();
             Fill_Table($"SELECT[Name] as [Item],[Category], COUNT(Name) as Quntity,SUM(Sub_Total) as [Total] From CR.Bills_Details  GROUP BY Name ,Category ORDER BY [Total] , Quntity  DESC;");
 
+        }
+        public Best_Sales_Form()
+        {
+            Reload();
 
         }
         public void Fill_Combo_Box()

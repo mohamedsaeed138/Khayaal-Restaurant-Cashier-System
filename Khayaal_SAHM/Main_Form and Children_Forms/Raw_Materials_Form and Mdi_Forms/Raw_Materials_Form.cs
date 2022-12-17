@@ -18,12 +18,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         public Raw_Materials_Form()
         {
-
+            Reload();
+        }
+        void Reload()
+        {
+            this.Controls.Clear();
             InitializeComponent();
             Sorting_Combo_Box.SelectedIndex = 0;
             Fill_Category_Combo_Box();
             Fill_Table($"SELECT [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials ORDER BY [Name]");
-
 
         }
 
@@ -115,9 +118,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
                 Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty != "" && Sorting_Combo_Box.Text == "Name")
                 Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [Name] ASC");
-            else //else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty != "" && Sorting_Combo_Box.Text != "Name")
+            else
                 Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE '{Search}%'  ORDER BY [{Sorting_Combo_Box.Text}]");
-
 
         }
 
@@ -178,10 +180,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
 
 
-        private void Qty_Combo_Combo_Box_TextChanged(object sender, EventArgs e)
-        {
-            Choose_Query();
-        }
+
 
         private void Sorting_Combo_Box_TextChanged(object sender, EventArgs e)
         {
