@@ -46,16 +46,16 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Booking_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Delete_Table = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Add_Table_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Delete_Table_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Delete_Table = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Add_Table_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Delete_Table_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Add_Booking_Button = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_Table)).BeginInit();
             this.SuspendLayout();
@@ -302,83 +302,6 @@
             this.Booking_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Booking_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
-            // Table_Croll_Bar
-            // 
-            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 8;
-            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Table_Croll_Bar.HoverState.Parent = null;
-            this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
-            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
-            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
-            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 18;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
-            this.Table_Croll_Bar.TabIndex = 18;
-            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
-            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
-            // 
-            // Delete_Table
-            // 
-            this.Delete_Table.BackColor = System.Drawing.Color.Transparent;
-            this.Delete_Table.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete_Table.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Delete_Table.Location = new System.Drawing.Point(591, 12);
-            this.Delete_Table.Margin = new System.Windows.Forms.Padding(2);
-            this.Delete_Table.Name = "Delete_Table";
-            this.Delete_Table.Size = new System.Drawing.Size(110, 27);
-            this.Delete_Table.TabIndex = 20;
-            this.Delete_Table.Text = "Delete Table";
-            // 
-            // Add_Table_Button
-            // 
-            this.Add_Table_Button.BorderRadius = 10;
-            this.Add_Table_Button.CheckedState.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.CustomImages.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Add_Table_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Table_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Table_Button.HoverState.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.Location = new System.Drawing.Point(704, 43);
-            this.Add_Table_Button.Name = "Add_Table_Button";
-            this.Add_Table_Button.ShadowDecoration.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.Size = new System.Drawing.Size(95, 36);
-            this.Add_Table_Button.TabIndex = 22;
-            this.Add_Table_Button.Text = "Add Table";
-            this.Add_Table_Button.Click += new System.EventHandler(this.Add_Table_Button_Click);
-            // 
-            // Delete_Table_Text_Box
-            // 
-            this.Delete_Table_Text_Box.BorderRadius = 10;
-            this.Delete_Table_Text_Box.BorderThickness = 0;
-            this.Delete_Table_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Delete_Table_Text_Box.DefaultText = "";
-            this.Delete_Table_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Delete_Table_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Delete_Table_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Delete_Table_Text_Box.DisabledState.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Delete_Table_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Delete_Table_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Delete_Table_Text_Box.FocusedState.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Delete_Table_Text_Box.HoverState.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.Location = new System.Drawing.Point(591, 42);
-            this.Delete_Table_Text_Box.Margin = new System.Windows.Forms.Padding(4);
-            this.Delete_Table_Text_Box.Name = "Delete_Table_Text_Box";
-            this.Delete_Table_Text_Box.PasswordChar = '\0';
-            this.Delete_Table_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Delete_Table_Text_Box.PlaceholderText = "Table No";
-            this.Delete_Table_Text_Box.SelectedText = "";
-            this.Delete_Table_Text_Box.ShadowDecoration.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.Size = new System.Drawing.Size(83, 36);
-            this.Delete_Table_Text_Box.TabIndex = 23;
-            this.Delete_Table_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Delete_Table_Text_Box_KeyPress);
-            this.Delete_Table_Text_Box.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Delete_Table_Text_Box_KeyUp);
-            // 
             // Column1
             // 
             dataGridViewCellStyle3.Format = "N2";
@@ -431,6 +354,83 @@
             this.Delete.ReadOnly = true;
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // Table_Croll_Bar
+            // 
+            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Table_Croll_Bar.AutoRoundedCorners = true;
+            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Table_Croll_Bar.HoverState.Parent = null;
+            this.Table_Croll_Bar.LargeChange = 10;
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
+            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
+            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
+            this.Table_Croll_Bar.ScrollbarSize = 18;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.TabIndex = 18;
+            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
+            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
+            // 
+            // Delete_Table
+            // 
+            this.Delete_Table.BackColor = System.Drawing.Color.Transparent;
+            this.Delete_Table.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_Table.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Delete_Table.Location = new System.Drawing.Point(591, 17);
+            this.Delete_Table.Margin = new System.Windows.Forms.Padding(2);
+            this.Delete_Table.Name = "Delete_Table";
+            this.Delete_Table.Size = new System.Drawing.Size(90, 22);
+            this.Delete_Table.TabIndex = 20;
+            this.Delete_Table.Text = "Delete Table";
+            // 
+            // Add_Table_Button
+            // 
+            this.Add_Table_Button.BorderRadius = 10;
+            this.Add_Table_Button.CheckedState.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.CustomImages.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Table_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Table_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Table_Button.HoverState.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.Location = new System.Drawing.Point(694, 42);
+            this.Add_Table_Button.Name = "Add_Table_Button";
+            this.Add_Table_Button.ShadowDecoration.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.Size = new System.Drawing.Size(95, 36);
+            this.Add_Table_Button.TabIndex = 22;
+            this.Add_Table_Button.Text = "Add Table";
+            this.Add_Table_Button.Click += new System.EventHandler(this.Add_Table_Button_Click);
+            // 
+            // Delete_Table_Text_Box
+            // 
+            this.Delete_Table_Text_Box.BorderRadius = 10;
+            this.Delete_Table_Text_Box.BorderThickness = 0;
+            this.Delete_Table_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Delete_Table_Text_Box.DefaultText = "";
+            this.Delete_Table_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Delete_Table_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Delete_Table_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Delete_Table_Text_Box.DisabledState.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Delete_Table_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Delete_Table_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Delete_Table_Text_Box.FocusedState.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Delete_Table_Text_Box.HoverState.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.Location = new System.Drawing.Point(591, 42);
+            this.Delete_Table_Text_Box.Margin = new System.Windows.Forms.Padding(4);
+            this.Delete_Table_Text_Box.Name = "Delete_Table_Text_Box";
+            this.Delete_Table_Text_Box.PasswordChar = '\0';
+            this.Delete_Table_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Delete_Table_Text_Box.PlaceholderText = "Table No";
+            this.Delete_Table_Text_Box.SelectedText = "";
+            this.Delete_Table_Text_Box.ShadowDecoration.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.Size = new System.Drawing.Size(83, 36);
+            this.Delete_Table_Text_Box.TabIndex = 23;
+            this.Delete_Table_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Delete_Table_Text_Box_KeyPress);
+            this.Delete_Table_Text_Box.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Delete_Table_Text_Box_KeyUp);
             // 
             // Add_Booking_Button
             // 
