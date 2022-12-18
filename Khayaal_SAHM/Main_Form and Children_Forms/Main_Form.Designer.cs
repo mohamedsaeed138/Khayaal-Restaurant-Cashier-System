@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Panel_Menu = new Guna.UI2.WinForms.Guna2Panel();
+            this.Home_ON = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Home_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Side_Bar_Icon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Credit_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Best_Sales_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -40,10 +42,8 @@
             this.Raw_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Booking_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Best_Sales_ON = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Home_OFF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Booking_ON = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Credit_ON = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Home_ON = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Purchase_ON = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Raw_ON = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Bills_ON = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -56,6 +56,8 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Panel_Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Side_Bar_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Credit_OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_OFF)).BeginInit();
@@ -65,10 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Raw_OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_ON)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Credit_ON)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Purchase_ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Raw_ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_ON)).BeginInit();
@@ -103,6 +103,31 @@
             this.Panel_Menu.Size = new System.Drawing.Size(91, 604);
             this.Panel_Menu.TabIndex = 0;
             // 
+            // Home_ON
+            // 
+            this.Home_ON.BorderRadius = 10;
+            this.Home_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button;
+            this.Home_ON.Location = new System.Drawing.Point(10, 81);
+            this.Home_ON.Name = "Home_ON";
+            this.Home_ON.ShadowDecoration.Parent = this.Home_ON;
+            this.Home_ON.Size = new System.Drawing.Size(71, 56);
+            this.Home_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Home_ON.TabIndex = 7;
+            this.Home_ON.TabStop = false;
+            // 
+            // Home_OFF
+            // 
+            this.Home_OFF.BorderRadius = 10;
+            this.Home_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
+            this.Home_OFF.Location = new System.Drawing.Point(10, 81);
+            this.Home_OFF.Name = "Home_OFF";
+            this.Home_OFF.ShadowDecoration.Parent = this.Home_OFF;
+            this.Home_OFF.Size = new System.Drawing.Size(71, 56);
+            this.Home_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Home_OFF.TabIndex = 8;
+            this.Home_OFF.TabStop = false;
+            this.Home_OFF.Click += new System.EventHandler(this.Home_OFF_Click);
+            // 
             // Side_Bar_Icon
             // 
             this.Side_Bar_Icon.BorderRadius = 10;
@@ -131,6 +156,7 @@
             // Best_Sales_OFF
             // 
             this.Best_Sales_OFF.BorderRadius = 10;
+            this.Best_Sales_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Best_Sales_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_14;
             this.Best_Sales_OFF.Location = new System.Drawing.Point(10, 474);
             this.Best_Sales_OFF.Name = "Best_Sales_OFF";
@@ -157,6 +183,7 @@
             // Bills_OFF
             // 
             this.Bills_OFF.BorderRadius = 10;
+            this.Bills_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Bills_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_12;
             this.Bills_OFF.Location = new System.Drawing.Point(10, 344);
             this.Bills_OFF.Name = "Bills_OFF";
@@ -170,6 +197,7 @@
             // Relations_OFF
             // 
             this.Relations_OFF.BorderRadius = 10;
+            this.Relations_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Relations_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_11;
             this.Relations_OFF.Location = new System.Drawing.Point(10, 279);
             this.Relations_OFF.Name = "Relations_OFF";
@@ -183,6 +211,7 @@
             // Raw_OFF
             // 
             this.Raw_OFF.BorderRadius = 10;
+            this.Raw_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Raw_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_10;
             this.Raw_OFF.Location = new System.Drawing.Point(10, 214);
             this.Raw_OFF.Name = "Raw_OFF";
@@ -196,6 +225,7 @@
             // Booking_OFF
             // 
             this.Booking_OFF.BorderRadius = 10;
+            this.Booking_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Booking_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_9;
             this.Booking_OFF.Location = new System.Drawing.Point(10, 149);
             this.Booking_OFF.Name = "Booking_OFF";
@@ -209,6 +239,7 @@
             // Best_Sales_ON
             // 
             this.Best_Sales_ON.BorderRadius = 10;
+            this.Best_Sales_ON.Cursor = System.Windows.Forms.Cursors.Default;
             this.Best_Sales_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_6;
             this.Best_Sales_ON.Location = new System.Drawing.Point(10, 474);
             this.Best_Sales_ON.Name = "Best_Sales_ON";
@@ -217,19 +248,6 @@
             this.Best_Sales_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Best_Sales_ON.TabIndex = 22;
             this.Best_Sales_ON.TabStop = false;
-            // 
-            // Home_OFF
-            // 
-            this.Home_OFF.BorderRadius = 10;
-            this.Home_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
-            this.Home_OFF.Location = new System.Drawing.Point(10, 81);
-            this.Home_OFF.Name = "Home_OFF";
-            this.Home_OFF.ShadowDecoration.Parent = this.Home_OFF;
-            this.Home_OFF.Size = new System.Drawing.Size(71, 56);
-            this.Home_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Home_OFF.TabIndex = 8;
-            this.Home_OFF.TabStop = false;
-            this.Home_OFF.Click += new System.EventHandler(this.Home_OFF_Click);
             // 
             // Booking_ON
             // 
@@ -254,18 +272,6 @@
             this.Credit_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Credit_ON.TabIndex = 15;
             this.Credit_ON.TabStop = false;
-            // 
-            // Home_ON
-            // 
-            this.Home_ON.BorderRadius = 10;
-            this.Home_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button;
-            this.Home_ON.Location = new System.Drawing.Point(10, 81);
-            this.Home_ON.Name = "Home_ON";
-            this.Home_ON.ShadowDecoration.Parent = this.Home_ON;
-            this.Home_ON.Size = new System.Drawing.Size(71, 56);
-            this.Home_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Home_ON.TabIndex = 7;
-            this.Home_ON.TabStop = false;
             // 
             // Purchase_ON
             // 
@@ -294,6 +300,7 @@
             // Bills_ON
             // 
             this.Bills_ON.BorderRadius = 10;
+            this.Bills_ON.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Bills_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_4;
             this.Bills_ON.Location = new System.Drawing.Point(10, 344);
             this.Bills_ON.Name = "Bills_ON";
@@ -413,6 +420,8 @@
             this.Shown += new System.EventHandler(this.Main_Form_Shown);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home_OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Side_Bar_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Credit_OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_OFF)).EndInit();
@@ -422,10 +431,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Raw_OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_ON)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Credit_ON)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home_ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Purchase_ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Raw_ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_ON)).EndInit();
