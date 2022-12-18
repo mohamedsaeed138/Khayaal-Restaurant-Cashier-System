@@ -23,7 +23,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             ReportDataSource DS = new ReportDataSource("DataSet", ds.Tables[0]);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(DS);
-            reportViewer1.LocalReport.ReportPath = @"E:\SAHM\Khayaal_SAHM\Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Report.rdlc";
+            reportViewer1.LocalReport.ReportPath = Report_Path.Value;
             this.reportViewer1.RefreshReport();
 
         }

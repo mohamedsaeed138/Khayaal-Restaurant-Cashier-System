@@ -255,6 +255,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Report_Path.cs" />
     <Compile Include="Connection_String.cs" />
     <Compile Include="Formatter.cs" />
     <Compile Include="Loading_Screen_Form.cs">
