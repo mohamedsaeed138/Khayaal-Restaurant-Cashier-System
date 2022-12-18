@@ -48,6 +48,7 @@
             this.Serial_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).BeginInit();
@@ -176,7 +177,6 @@
             // 
             this.Bills_Table.AllowUserToAddRows = false;
             this.Bills_Table.AllowUserToDeleteRows = false;
-            this.Bills_Table.AllowUserToResizeColumns = false;
             this.Bills_Table.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
@@ -207,6 +207,7 @@
             this.Serial_Number,
             this.Table_Number,
             this.Total_Cost,
+            this.Column1,
             this.Print,
             this.Delete});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -325,18 +326,28 @@
             this.Serial_Number.HeaderText = "Serial Number";
             this.Serial_Number.Name = "Serial_Number";
             this.Serial_Number.ReadOnly = true;
+            this.Serial_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Table_Number
             // 
             this.Table_Number.HeaderText = "Cashier";
             this.Table_Number.Name = "Table_Number";
             this.Table_Number.ReadOnly = true;
+            this.Table_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Total_Cost
             // 
             this.Total_Cost.HeaderText = "Total Cost";
             this.Total_Cost.Name = "Total_Cost";
             this.Total_Cost.ReadOnly = true;
+            this.Total_Cost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Date";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Print
             // 
@@ -397,6 +408,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Serial_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Print;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
