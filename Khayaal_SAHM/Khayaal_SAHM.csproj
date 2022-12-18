@@ -242,6 +242,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -279,6 +280,17 @@
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Bills_Form.Designer.cs">
       <DependentUpon>Bills_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Form.Designer.cs">
+      <DependentUpon>Print_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.cs">
       <SubType>Form</SubType>
@@ -354,6 +366,10 @@
     <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Bills_Form.resx">
       <DependentUpon>Bills_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Form.resx">
+      <DependentUpon>Print_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Report.rdlc" />
     <EmbeddedResource Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.resx">
       <DependentUpon>Booking_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,6 +404,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -152,6 +152,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
             Choose_Query();
         }
 
+        private void Bills_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = Bills_Table.Rows[e.RowIndex];
+            if (Bills_Table.Columns[e.ColumnIndex].Name == "Print")
+            {
+                Print__Form.Print_Form Form = new Print__Form.Print_Form((int)row.Cells[0].Value);
+                Form.Show();
+            }
 
+        }
     }
 }
