@@ -7,12 +7,12 @@
     /// </summary>
     public class Report_Path
     {
-        public const string Value = MS;
+        public const string Value = AG;
         private const string HS = @"";
         private const string AR = @"";
         private const string KS = @"";
         private const string MS = @"E:\SAHM\Khayaal_SAHM\Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Report.rdlc";
-        private const string AG = @"";
+        private const string AG = @"E:\SOM DH\SAHM\Khayaal_SAHM\Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Report.rdlc";
     }
 
 }

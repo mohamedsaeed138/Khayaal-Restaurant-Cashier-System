@@ -64,7 +64,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             SqlDataAdapter da = new SqlDataAdapter(Command);
             DataTable dt = new DataTable();
             conn.Open();
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            
+            
 
 
             conn.Close();
