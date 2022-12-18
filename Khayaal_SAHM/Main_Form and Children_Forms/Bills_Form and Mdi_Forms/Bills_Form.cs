@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+//Select [Name],Qty,Unit_Price,Sub_Total from cr.Bills_Details WHERE Serial_No=10;
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 {
     public partial class Bills_Form : Form
@@ -148,5 +148,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
         {
             Choose_Query();
         }
+
+
     }
 }
