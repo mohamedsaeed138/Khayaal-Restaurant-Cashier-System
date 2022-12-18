@@ -20,7 +20,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             InitializeComponent();
             Fill_Combo_Box();
             Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;");
-
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
         }
         public Best_Sales_Form()
         {

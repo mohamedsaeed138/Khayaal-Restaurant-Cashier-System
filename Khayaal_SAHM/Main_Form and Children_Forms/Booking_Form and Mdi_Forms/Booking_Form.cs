@@ -27,6 +27,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
             Fill_Combo_Boxes();
             Fill_Table($"SELECT * FROM CR.Tables_Booking_Details ORDER BY [From]");
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
         }
         public void Fill_Combo_Boxes()
         {
