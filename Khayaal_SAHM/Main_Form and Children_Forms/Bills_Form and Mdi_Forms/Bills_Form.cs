@@ -160,6 +160,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
                 Print__Form.Print_Form Form = new Print__Form.Print_Form((int)row.Cells[0].Value);
                 Form.Show();
             }
+            else if (Bills_Table.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                Formatter.Check_Connection(conn);
+                SqlCommand Delete = new SqlCommand($"DELETE CR.Bills_Details Where Serial_No={(int)row.Cells[0].Value};\nDELETE CR.Bills WHERE Serial_Number={(int)row.Cells[0].Value};", conn);
+                conn.Open();
+                Delete.ExecuteNonQuery();
+
+                conn.Close();
+                Choose_Query();
+                MessageBox.Show("Successfully Done!");
+            }
 
         }
     }

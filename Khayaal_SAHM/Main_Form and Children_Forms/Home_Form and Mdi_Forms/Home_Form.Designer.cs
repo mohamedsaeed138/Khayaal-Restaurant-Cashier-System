@@ -41,6 +41,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Btn_Add_Item = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,11 +56,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Sub_Lbl = new System.Windows.Forms.Label();
             this.Btn_Print = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Task_Bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -63,9 +63,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.splitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Task_Bar
@@ -77,7 +77,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Task_Bar.Location = new System.Drawing.Point(0, 0);
             this.Task_Bar.Name = "Task_Bar";
             this.Task_Bar.ShadowDecoration.Parent = this.Task_Bar;
-            this.Task_Bar.Size = new System.Drawing.Size(1065, 52);
+            this.Task_Bar.Size = new System.Drawing.Size(974, 52);
             this.Task_Bar.TabIndex = 0;
             // 
             // Date_Lbl
@@ -87,9 +87,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Date_Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(97)))));
             this.Date_Lbl.Location = new System.Drawing.Point(213, 10);
             this.Date_Lbl.Name = "Date_Lbl";
-            this.Date_Lbl.Size = new System.Drawing.Size(260, 29);
+            this.Date_Lbl.Size = new System.Drawing.Size(274, 29);
             this.Date_Lbl.TabIndex = 3;
-            this.Date_Lbl.Text = DateTime.Now.ToString();
+            this.Date_Lbl.Text = "12/18/2022 10:33:39 PM";
             // 
             // Name_Lbl
             // 
@@ -151,7 +151,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Clear_Btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Clear_Btn.IconSize = 22;
             this.Clear_Btn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Clear_Btn.Location = new System.Drawing.Point(153, 4);
+            this.Clear_Btn.Location = new System.Drawing.Point(133, 4);
             this.Clear_Btn.Name = "Clear_Btn";
             this.Clear_Btn.Size = new System.Drawing.Size(73, 27);
             this.Clear_Btn.TabIndex = 1;
@@ -173,8 +173,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1065, 552);
-            this.splitContainer1.SplitterDistance = 823;
+            this.splitContainer1.Size = new System.Drawing.Size(974, 529);
+            this.splitContainer1.SplitterDistance = 752;
             this.splitContainer1.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -184,7 +184,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.flowLayoutPanel1.Controls.Add(this.Btn_Add_Item);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(823, 552);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(823, 529);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // Btn_Add_Item
@@ -215,8 +215,38 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 552);
+            this.panel1.Size = new System.Drawing.Size(218, 529);
             this.panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Item_Name,
+            this.Qty,
+            this.Price});
+            this.dataGridView1.DataSource = this.restaurantCafeDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(235, 310);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // Item_Name
+            // 
+            this.Item_Name.HeaderText = "Item Name";
+            this.Item_Name.Name = "Item_Name";
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
             // 
             // panel2
             // 
@@ -324,53 +354,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Btn_Print.TabIndex = 4;
             this.Btn_Print.Text = "Print Bill";
             // 
-            // guna2Elipse1
-            // 
-           
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Item_Name,
-            this.Qty,
-            this.Price});
-            this.dataGridView1.DataSource = this.restaurantCafeDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(235, 310);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // restaurant_CafeDataSet
-            // 
-            // 
-            // restaurantCafeDataSetBindingSource
-            // 
-            this.restaurantCafeDataSetBindingSource.Position = 0;
-            // 
-            // Item_Name
-            // 
-            this.Item_Name.HeaderText = "Item Name";
-            this.Item_Name.Name = "Item_Name";
-            // 
-            // Qty
-            // 
-            this.Qty.HeaderText = "Qty";
-            this.Qty.Name = "Qty";
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            // 
             // Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(1065, 604);
+            this.ClientSize = new System.Drawing.Size(974, 581);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Task_Bar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -385,10 +374,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
