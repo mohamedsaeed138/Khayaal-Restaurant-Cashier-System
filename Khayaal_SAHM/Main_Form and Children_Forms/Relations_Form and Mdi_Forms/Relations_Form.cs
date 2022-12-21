@@ -26,7 +26,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             Fill_Item_Combo_Boxe();
             Fill_Raw_Combo_Boxe();
 
-            Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed]FROM CR.Items_Relations ORDER BY [Item] ASC;");
+            Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed] , [Id] FROM CR.Items_Relations ORDER BY [Item] ASC;");
 
         }
         public void Fill_Item_Combo_Boxe()
@@ -81,7 +81,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             foreach (DataRow row in dt.Rows)
             {
 
-                Relations_Table.Rows.Add((string)row[0], (string)row[1], (double)row[2]);
+                Relations_Table.Rows.Add((string)row[0], (string)row[1], (double)row[2], (int)row[3]);
             }
             try
             {
@@ -93,13 +93,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         void Choose_Query()
         {
             if (Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text == "All")
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations ORDER BY [Item] ASC;");
             else if (Item_Combo_Box.Text != "All" && Raw_Combo_Box.Text != "All")
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}' and CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}' and CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
             else if (Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text != "All")
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}'  ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}'  ORDER BY [Item] ASC;");
             else
-                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] FROM CR.Items_Relations WHERE CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
+                Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations WHERE CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
 
 
         }

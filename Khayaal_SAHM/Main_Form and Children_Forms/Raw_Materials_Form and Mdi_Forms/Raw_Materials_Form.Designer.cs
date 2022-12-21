@@ -393,7 +393,7 @@
             // 
             // ID
             // 
-            this.ID.HeaderText = "ID";
+            this.ID.HeaderText = "Id";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
