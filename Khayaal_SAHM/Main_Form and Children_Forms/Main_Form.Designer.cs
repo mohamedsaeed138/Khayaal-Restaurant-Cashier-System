@@ -118,6 +118,7 @@
             // Home_OFF
             // 
             this.Home_OFF.BorderRadius = 10;
+            this.Home_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Home_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_8;
             this.Home_OFF.Location = new System.Drawing.Point(10, 81);
             this.Home_OFF.Name = "Home_OFF";
@@ -143,6 +144,7 @@
             // Credit_OFF
             // 
             this.Credit_OFF.BorderRadius = 10;
+            this.Credit_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Credit_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_15;
             this.Credit_OFF.Location = new System.Drawing.Point(10, 539);
             this.Credit_OFF.Name = "Credit_OFF";
@@ -170,6 +172,7 @@
             // Purchase_OFF
             // 
             this.Purchase_OFF.BorderRadius = 10;
+            this.Purchase_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Purchase_OFF.Image = global::Khayaal_SAHM.Properties.Resources.Button_13;
             this.Purchase_OFF.Location = new System.Drawing.Point(10, 409);
             this.Purchase_OFF.Name = "Purchase_OFF";
@@ -300,7 +303,7 @@
             // Bills_ON
             // 
             this.Bills_ON.BorderRadius = 10;
-            this.Bills_ON.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Bills_ON.Cursor = System.Windows.Forms.Cursors.Default;
             this.Bills_ON.Image = global::Khayaal_SAHM.Properties.Resources.Button_4;
             this.Bills_ON.Location = new System.Drawing.Point(10, 344);
             this.Bills_ON.Name = "Bills_ON";

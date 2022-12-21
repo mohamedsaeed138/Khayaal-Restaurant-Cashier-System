@@ -138,7 +138,9 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\PresentationFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
@@ -286,6 +288,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Form.cs">
       <SubType>Form</SubType>
@@ -407,14 +410,17 @@
     </EmbeddedResource>
     <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xsd">
+    <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
-    </None>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xss">
       <DependentUpon>DataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
