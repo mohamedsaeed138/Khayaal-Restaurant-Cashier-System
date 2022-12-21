@@ -71,10 +71,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             catch (Exception)
             {
 
-               
+
             }
-            
-            
+
+
 
 
             conn.Close();
@@ -82,7 +82,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             foreach (DataRow row in dt.Rows)
             {
 
-                Booking_Table.Rows.Add((int)row[0], (string)row[1], (DateTime)row[2], (DateTime)row[3]);
+                Booking_Table.Rows.Add((int)row[0], (string)row[1], (DateTime)row[2], (DateTime)row[3], (int)row[4]);
             }
             try
             {

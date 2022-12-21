@@ -7,7 +7,7 @@
     /// </summary>
     public class Report_Path
     {
-        public const string Value = AG;
+        public const string Value = MS;
         private const string HS = @"";
         private const string AR = @"";
         private const string KS = @"";

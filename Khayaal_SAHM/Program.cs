@@ -1,4 +1,4 @@
-﻿using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms;
 using System;
 using System.Windows.Forms;
 namespace Khayaal_SAHM
@@ -14,7 +14,7 @@ namespace Khayaal_SAHM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new Loading_Screen_Form());
-            Application.Run(new Home_Form());
+            Application.Run(new Booking_Form());
             //Application.Run(new Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms.Home_Form());
         }
 
