@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -102,6 +103,7 @@ namespace Khayaal_SAHM
 
             if (conn.State == ConnectionState.Open)
                 conn.Close();
+
         }
 
     }
