@@ -36,26 +36,26 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Items_Main_Panel = new System.Windows.Forms.Panel();
             this.Items_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Order_Main_Panel = new System.Windows.Forms.Panel();
+            this.Order_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Clear_All_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Total_Nested_Panel = new System.Windows.Forms.Panel();
+            this.Order_Nested_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Home_Bar_Main_Panel = new System.Windows.Forms.Panel();
-            this.Home_Child_Labels = new System.Windows.Forms.Panel();
+            this.Home_Nested_Panel_Labels = new System.Windows.Forms.Panel();
             this.Date_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Khayaal_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Home_Child_Contorlers = new System.Windows.Forms.Panel();
+            this.Home_Nested_Panel_Controlers = new System.Windows.Forms.Panel();
             this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Add_Item_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Order_Nested_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.Total_Nested_Panel = new System.Windows.Forms.Panel();
-            this.Clear_All_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Order_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
             this.Home_Bar_Main_Panel.SuspendLayout();
-            this.Home_Child_Labels.SuspendLayout();
-            this.Home_Child_Contorlers.SuspendLayout();
+            this.Home_Nested_Panel_Labels.SuspendLayout();
+            this.Home_Nested_Panel_Controlers.SuspendLayout();
             this.SuspendLayout();
             // 
             // Order_Flow_Layout_Panel
@@ -77,9 +77,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Items_Main_Panel.Controls.Add(this.Items_Flow_Layout_Panel);
             this.Items_Main_Panel.Location = new System.Drawing.Point(0, 110);
             this.Items_Main_Panel.Name = "Items_Main_Panel";
-            this.Items_Main_Panel.Size = new System.Drawing.Size(670, 471);
+            this.Items_Main_Panel.Size = new System.Drawing.Size(658, 471);
             this.Items_Main_Panel.TabIndex = 11;
-            this.Items_Main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Main_Panel_Paint);
             // 
             // Items_Flow_Layout_Panel
             // 
@@ -107,7 +106,58 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Order_Main_Panel.Name = "Order_Main_Panel";
             this.Order_Main_Panel.Size = new System.Drawing.Size(316, 581);
             this.Order_Main_Panel.TabIndex = 12;
-            this.Order_Main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Order_Main_Panel_Paint);
+            // 
+            // Order_Label
+            // 
+            this.Order_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Order_Label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_Label.ForeColor = System.Drawing.Color.White;
+            this.Order_Label.Location = new System.Drawing.Point(11, 3);
+            this.Order_Label.Name = "Order_Label";
+            this.Order_Label.Size = new System.Drawing.Size(90, 47);
+            this.Order_Label.TabIndex = 28;
+            this.Order_Label.Tag = "";
+            this.Order_Label.Text = "Order";
+            this.Order_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Clear_All_Button
+            // 
+            this.Clear_All_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Clear_All_Button.BorderRadius = 10;
+            this.Clear_All_Button.CheckedState.Parent = this.Clear_All_Button;
+            this.Clear_All_Button.CustomImages.Parent = this.Clear_All_Button;
+            this.Clear_All_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Clear_All_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_All_Button.ForeColor = System.Drawing.Color.White;
+            this.Clear_All_Button.HoverState.Parent = this.Clear_All_Button;
+            this.Clear_All_Button.Location = new System.Drawing.Point(188, 10);
+            this.Clear_All_Button.Name = "Clear_All_Button";
+            this.Clear_All_Button.ShadowDecoration.Parent = this.Clear_All_Button;
+            this.Clear_All_Button.Size = new System.Drawing.Size(118, 36);
+            this.Clear_All_Button.TabIndex = 26;
+            this.Clear_All_Button.Text = "Clear All";
+            // 
+            // Total_Nested_Panel
+            // 
+            this.Total_Nested_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Total_Nested_Panel.BackColor = System.Drawing.Color.MintCream;
+            this.Total_Nested_Panel.Location = new System.Drawing.Point(11, 361);
+            this.Total_Nested_Panel.Name = "Total_Nested_Panel";
+            this.Total_Nested_Panel.Size = new System.Drawing.Size(295, 201);
+            this.Total_Nested_Panel.TabIndex = 1;
+            // 
+            // Order_Nested_Flow_Layout_Panel
+            // 
+            this.Order_Nested_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Order_Nested_Flow_Layout_Panel.AutoScroll = true;
+            this.Order_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.Aquamarine;
+            this.Order_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(11, 60);
+            this.Order_Nested_Flow_Layout_Panel.Name = "Order_Nested_Flow_Layout_Panel";
+            this.Order_Nested_Flow_Layout_Panel.Size = new System.Drawing.Size(295, 289);
+            this.Order_Nested_Flow_Layout_Panel.TabIndex = 0;
             // 
             // Home_Bar_Main_Panel
             // 
@@ -115,25 +165,24 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Home_Bar_Main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Home_Bar_Main_Panel.Controls.Add(this.Home_Child_Labels);
-            this.Home_Bar_Main_Panel.Controls.Add(this.Home_Child_Contorlers);
+            this.Home_Bar_Main_Panel.Controls.Add(this.Home_Nested_Panel_Labels);
+            this.Home_Bar_Main_Panel.Controls.Add(this.Home_Nested_Panel_Controlers);
             this.Home_Bar_Main_Panel.Location = new System.Drawing.Point(0, 0);
             this.Home_Bar_Main_Panel.Name = "Home_Bar_Main_Panel";
             this.Home_Bar_Main_Panel.Size = new System.Drawing.Size(658, 110);
             this.Home_Bar_Main_Panel.TabIndex = 10;
-            this.Home_Bar_Main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Home_Bar_Main_Panel_Paint);
             // 
-            // Home_Child_Labels
+            // Home_Nested_Panel_Labels
             // 
-            this.Home_Child_Labels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Home_Nested_Panel_Labels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.Home_Child_Labels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Home_Child_Labels.Controls.Add(this.Date_Label);
-            this.Home_Child_Labels.Controls.Add(this.Khayaal_Label);
-            this.Home_Child_Labels.Location = new System.Drawing.Point(0, 0);
-            this.Home_Child_Labels.Name = "Home_Child_Labels";
-            this.Home_Child_Labels.Size = new System.Drawing.Size(321, 110);
-            this.Home_Child_Labels.TabIndex = 1;
+            this.Home_Nested_Panel_Labels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Home_Nested_Panel_Labels.Controls.Add(this.Date_Label);
+            this.Home_Nested_Panel_Labels.Controls.Add(this.Khayaal_Label);
+            this.Home_Nested_Panel_Labels.Location = new System.Drawing.Point(0, 0);
+            this.Home_Nested_Panel_Labels.Name = "Home_Nested_Panel_Labels";
+            this.Home_Nested_Panel_Labels.Size = new System.Drawing.Size(321, 110);
+            this.Home_Nested_Panel_Labels.TabIndex = 1;
             // 
             // Date_Label
             // 
@@ -159,19 +208,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Khayaal_Label.Text = "Khayaal";
             this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Home_Child_Contorlers
+            // Home_Nested_Panel_Controlers
             // 
-            this.Home_Child_Contorlers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Home_Nested_Panel_Controlers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Home_Child_Contorlers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Home_Child_Contorlers.Controls.Add(this.Category_Combo_Box);
-            this.Home_Child_Contorlers.Controls.Add(this.Search_Text_Box);
-            this.Home_Child_Contorlers.Controls.Add(this.Add_Item_Button);
-            this.Home_Child_Contorlers.Location = new System.Drawing.Point(321, 0);
-            this.Home_Child_Contorlers.Name = "Home_Child_Contorlers";
-            this.Home_Child_Contorlers.Size = new System.Drawing.Size(337, 110);
-            this.Home_Child_Contorlers.TabIndex = 0;
+            this.Home_Nested_Panel_Controlers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Home_Nested_Panel_Controlers.Controls.Add(this.Category_Combo_Box);
+            this.Home_Nested_Panel_Controlers.Controls.Add(this.Search_Text_Box);
+            this.Home_Nested_Panel_Controlers.Controls.Add(this.Add_Item_Button);
+            this.Home_Nested_Panel_Controlers.Location = new System.Drawing.Point(321, 0);
+            this.Home_Nested_Panel_Controlers.Name = "Home_Nested_Panel_Controlers";
+            this.Home_Nested_Panel_Controlers.Size = new System.Drawing.Size(337, 110);
+            this.Home_Nested_Panel_Controlers.TabIndex = 0;
             // 
             // Category_Combo_Box
             // 
@@ -227,6 +276,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(312, 36);
             this.Search_Text_Box.TabIndex = 27;
+            this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
             // Add_Item_Button
             // 
@@ -244,59 +294,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Add_Item_Button.Size = new System.Drawing.Size(135, 36);
             this.Add_Item_Button.TabIndex = 25;
             this.Add_Item_Button.Text = "Add Item";
-            // 
-            // Order_Nested_Flow_Layout_Panel
-            // 
-            this.Order_Nested_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_Nested_Flow_Layout_Panel.AutoScroll = true;
-            this.Order_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.Aquamarine;
-            this.Order_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(11, 60);
-            this.Order_Nested_Flow_Layout_Panel.Name = "Order_Nested_Flow_Layout_Panel";
-            this.Order_Nested_Flow_Layout_Panel.Size = new System.Drawing.Size(295, 289);
-            this.Order_Nested_Flow_Layout_Panel.TabIndex = 0;
-            // 
-            // Total_Nested_Panel
-            // 
-            this.Total_Nested_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Total_Nested_Panel.BackColor = System.Drawing.Color.MintCream;
-            this.Total_Nested_Panel.Location = new System.Drawing.Point(11, 361);
-            this.Total_Nested_Panel.Name = "Total_Nested_Panel";
-            this.Total_Nested_Panel.Size = new System.Drawing.Size(295, 201);
-            this.Total_Nested_Panel.TabIndex = 1;
-            // 
-            // Clear_All_Button
-            // 
-            this.Clear_All_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Clear_All_Button.BorderRadius = 10;
-            this.Clear_All_Button.CheckedState.Parent = this.Clear_All_Button;
-            this.Clear_All_Button.CustomImages.Parent = this.Clear_All_Button;
-            this.Clear_All_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Clear_All_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear_All_Button.ForeColor = System.Drawing.Color.White;
-            this.Clear_All_Button.HoverState.Parent = this.Clear_All_Button;
-            this.Clear_All_Button.Location = new System.Drawing.Point(188, 10);
-            this.Clear_All_Button.Name = "Clear_All_Button";
-            this.Clear_All_Button.ShadowDecoration.Parent = this.Clear_All_Button;
-            this.Clear_All_Button.Size = new System.Drawing.Size(118, 36);
-            this.Clear_All_Button.TabIndex = 26;
-            this.Clear_All_Button.Text = "Clear All";
-            // 
-            // Order_Label
-            // 
-            this.Order_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Order_Label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_Label.ForeColor = System.Drawing.Color.White;
-            this.Order_Label.Location = new System.Drawing.Point(11, 3);
-            this.Order_Label.Name = "Order_Label";
-            this.Order_Label.Size = new System.Drawing.Size(90, 47);
-            this.Order_Label.TabIndex = 28;
-            this.Order_Label.Tag = "";
-            this.Order_Label.Text = "Order";
-            this.Order_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Order_Label.Click += new System.EventHandler(this.Order_Label_Click);
             // 
             // bunifuElipse1
             // 
@@ -326,9 +323,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Order_Main_Panel.ResumeLayout(false);
             this.Order_Main_Panel.PerformLayout();
             this.Home_Bar_Main_Panel.ResumeLayout(false);
-            this.Home_Child_Labels.ResumeLayout(false);
-            this.Home_Child_Labels.PerformLayout();
-            this.Home_Child_Contorlers.ResumeLayout(false);
+            this.Home_Nested_Panel_Labels.ResumeLayout(false);
+            this.Home_Nested_Panel_Labels.PerformLayout();
+            this.Home_Nested_Panel_Controlers.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,8 +340,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private System.Windows.Forms.Panel Home_Bar_Main_Panel;
         private Guna.UI2.WinForms.Guna2Button Add_Item_Button;
         private Guna.UI2.WinForms.Guna2ComboBox Category_Combo_Box;
-        private System.Windows.Forms.Panel Home_Child_Labels;
-        private System.Windows.Forms.Panel Home_Child_Contorlers;
+        private System.Windows.Forms.Panel Home_Nested_Panel_Labels;
+        private System.Windows.Forms.Panel Home_Nested_Panel_Controlers;
         private Guna.UI2.WinForms.Guna2HtmlLabel Date_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Khayaal_Label;
         private Guna.UI2.WinForms.Guna2TextBox Search_Text_Box;
