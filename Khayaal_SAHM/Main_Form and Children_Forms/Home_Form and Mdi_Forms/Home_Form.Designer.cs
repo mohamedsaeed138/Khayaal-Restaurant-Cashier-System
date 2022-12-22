@@ -32,7 +32,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             this.components = new System.ComponentModel.Container();
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Order_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Items_Main_Panel = new System.Windows.Forms.Panel();
             this.Items_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,7 +48,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Total_Nested_Panel = new System.Windows.Forms.Panel();
             this.Clear_All_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Order_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
@@ -57,11 +57,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Home_Child_Labels.SuspendLayout();
             this.Home_Child_Contorlers.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this.Order_Nested_Flow_Layout_Panel;
             // 
             // Order_Flow_Layout_Panel
             // 
@@ -297,10 +292,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Order_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Order_Label.Click += new System.EventHandler(this.Order_Label_Click);
             // 
-            // guna2Elipse2
+            // bunifuElipse1
             // 
-            this.guna2Elipse2.BorderRadius = 10;
-            this.guna2Elipse2.TargetControl = this.Total_Nested_Panel;
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this.Order_Nested_Flow_Layout_Panel;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 10;
+            this.bunifuElipse2.TargetControl = this.Total_Nested_Panel;
             // 
             // Home_Form
             // 
@@ -329,7 +329,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.BindingSource restaurantCafeDataSetBindingSource;
         private System.Windows.Forms.FlowLayoutPanel Order_Flow_Layout_Panel;
         private System.Windows.Forms.Panel Items_Main_Panel;
@@ -347,6 +346,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private Guna.UI2.WinForms.Guna2Button Clear_All_Button;
         private System.Windows.Forms.Panel Total_Nested_Panel;
         private System.Windows.Forms.FlowLayoutPanel Order_Nested_Flow_Layout_Panel;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
     }
 }
