@@ -77,7 +77,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Items_Main_Panel.Controls.Add(this.Items_Flow_Layout_Panel);
             this.Items_Main_Panel.Location = new System.Drawing.Point(0, 110);
             this.Items_Main_Panel.Name = "Items_Main_Panel";
-            this.Items_Main_Panel.Size = new System.Drawing.Size(658, 471);
+            this.Items_Main_Panel.Size = new System.Drawing.Size(670, 471);
             this.Items_Main_Panel.TabIndex = 11;
             this.Items_Main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Main_Panel_Paint);
             // 
@@ -90,7 +90,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Items_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Items_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 8);
             this.Items_Flow_Layout_Panel.Name = "Items_Flow_Layout_Panel";
-            this.Items_Flow_Layout_Panel.Size = new System.Drawing.Size(631, 463);
+            this.Items_Flow_Layout_Panel.Size = new System.Drawing.Size(643, 463);
             this.Items_Flow_Layout_Panel.TabIndex = 0;
             this.Items_Flow_Layout_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Flow_Layout_Panel_Paint);
             // 
@@ -247,6 +247,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             // Order_Nested_Flow_Layout_Panel
             // 
+            this.Order_Nested_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Order_Nested_Flow_Layout_Panel.AutoScroll = true;
             this.Order_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.Aquamarine;
             this.Order_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(11, 60);
             this.Order_Nested_Flow_Layout_Panel.Name = "Order_Nested_Flow_Layout_Panel";
@@ -255,6 +259,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             // Total_Nested_Panel
             // 
+            this.Total_Nested_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Total_Nested_Panel.BackColor = System.Drawing.Color.MintCream;
             this.Total_Nested_Panel.Location = new System.Drawing.Point(11, 361);
             this.Total_Nested_Panel.Name = "Total_Nested_Panel";
