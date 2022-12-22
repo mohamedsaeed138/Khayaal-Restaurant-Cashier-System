@@ -33,227 +33,207 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.components = new System.ComponentModel.Container();
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.Item_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Search_Item_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Order_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.Order_Lbl = new System.Windows.Forms.Label();
-            this.Add_Item_Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Btn_Save = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Items_Main_Panel = new System.Windows.Forms.Panel();
+            this.Items_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.Order_Main_Panel = new System.Windows.Forms.Panel();
+            this.Home_Bar_Main_Panel = new System.Windows.Forms.Panel();
+            this.Add_Item_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Home_Child_Contorlers = new System.Windows.Forms.Panel();
+            this.Home_Child_Labels = new System.Windows.Forms.Panel();
+            this.Khayaal_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.Items_Main_Panel.SuspendLayout();
+            this.Home_Bar_Main_Panel.SuspendLayout();
+            this.Home_Child_Contorlers.SuspendLayout();
+            this.Home_Child_Labels.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Item_Flow_Layout_Panel
-            // 
-            this.Item_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Item_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 118);
-            this.Item_Flow_Layout_Panel.Name = "Item_Flow_Layout_Panel";
-            this.Item_Flow_Layout_Panel.Size = new System.Drawing.Size(631, 463);
-            this.Item_Flow_Layout_Panel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 71);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Khayaal";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(5, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(320, 37);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "12/20/2022 4:45:27 PM";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(331, 60);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(161, 36);
-            this.guna2ComboBox1.TabIndex = 5;
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 10;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox2.FormattingEnabled = true;
-            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(508, 60);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(135, 36);
-            this.guna2ComboBox2.TabIndex = 6;
-            // 
-            // Search_Item_Text_Box
-            // 
-            this.Search_Item_Text_Box.BorderRadius = 10;
-            this.Search_Item_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Search_Item_Text_Box.DefaultText = "";
-            this.Search_Item_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Search_Item_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Search_Item_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Search_Item_Text_Box.DisabledState.Parent = this.Search_Item_Text_Box;
-            this.Search_Item_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Search_Item_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Search_Item_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Search_Item_Text_Box.FocusedState.Parent = this.Search_Item_Text_Box;
-            this.Search_Item_Text_Box.ForeColor = System.Drawing.Color.White;
-            this.Search_Item_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Search_Item_Text_Box.HoverState.Parent = this.Search_Item_Text_Box;
-            this.Search_Item_Text_Box.Location = new System.Drawing.Point(331, 13);
-            this.Search_Item_Text_Box.Name = "Search_Item_Text_Box";
-            this.Search_Item_Text_Box.PasswordChar = '\0';
-            this.Search_Item_Text_Box.PlaceholderText = "Search Item";
-            this.Search_Item_Text_Box.SelectedText = "";
-            this.Search_Item_Text_Box.ShadowDecoration.Parent = this.Search_Item_Text_Box;
-            this.Search_Item_Text_Box.Size = new System.Drawing.Size(312, 36);
-            this.Search_Item_Text_Box.TabIndex = 7;
             // 
             // Order_Flow_Layout_Panel
             // 
-            this.Order_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Order_Flow_Layout_Panel.AutoSize = true;
             this.Order_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Order_Flow_Layout_Panel.Location = new System.Drawing.Point(663, 60);
+            this.Order_Flow_Layout_Panel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Order_Flow_Layout_Panel.Location = new System.Drawing.Point(974, 0);
             this.Order_Flow_Layout_Panel.Name = "Order_Flow_Layout_Panel";
-            this.Order_Flow_Layout_Panel.Size = new System.Drawing.Size(295, 289);
+            this.Order_Flow_Layout_Panel.Size = new System.Drawing.Size(0, 581);
             this.Order_Flow_Layout_Panel.TabIndex = 8;
             // 
-            // Order_Lbl
+            // Items_Main_Panel
             // 
-            this.Order_Lbl.AutoSize = true;
-            this.Order_Lbl.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Order_Lbl.Location = new System.Drawing.Point(655, 4);
-            this.Order_Lbl.Name = "Order_Lbl";
-            this.Order_Lbl.Size = new System.Drawing.Size(107, 45);
-            this.Order_Lbl.TabIndex = 9;
-            this.Order_Lbl.Text = "Order";
-            // 
-            // Add_Item_Btn
-            // 
-            this.Add_Item_Btn.BorderRadius = 10;
-            this.Add_Item_Btn.CheckedState.Parent = this.Add_Item_Btn;
-            this.Add_Item_Btn.CustomImages.Parent = this.Add_Item_Btn;
-            this.Add_Item_Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Add_Item_Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Item_Btn.ForeColor = System.Drawing.Color.White;
-            this.Add_Item_Btn.HoverState.Parent = this.Add_Item_Btn;
-            this.Add_Item_Btn.Location = new System.Drawing.Point(844, 12);
-            this.Add_Item_Btn.Name = "Add_Item_Btn";
-            this.Add_Item_Btn.ShadowDecoration.Parent = this.Add_Item_Btn;
-            this.Add_Item_Btn.Size = new System.Drawing.Size(118, 36);
-            this.Add_Item_Btn.TabIndex = 10;
-            this.Add_Item_Btn.Text = "Add Item";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Items_Main_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.Btn_Save);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(663, 361);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 201);
-            this.panel1.TabIndex = 11;
+            this.Items_Main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Items_Main_Panel.Controls.Add(this.Items_Flow_Layout_Panel);
+            this.Items_Main_Panel.Location = new System.Drawing.Point(0, 110);
+            this.Items_Main_Panel.Name = "Items_Main_Panel";
+            this.Items_Main_Panel.Size = new System.Drawing.Size(658, 471);
+            this.Items_Main_Panel.TabIndex = 11;
+            this.Items_Main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Main_Panel_Paint);
             // 
-            // label3
+            // Items_Flow_Layout_Panel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(25, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 30);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Total : ";
+            this.Items_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Items_Flow_Layout_Panel.AutoScroll = true;
+            this.Items_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Items_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 8);
+            this.Items_Flow_Layout_Panel.Name = "Items_Flow_Layout_Panel";
+            this.Items_Flow_Layout_Panel.Size = new System.Drawing.Size(631, 463);
+            this.Items_Flow_Layout_Panel.TabIndex = 0;
+            this.Items_Flow_Layout_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Flow_Layout_Panel_Paint);
             // 
-            // Btn_Save
+            // Order_Main_Panel
             // 
-            this.Btn_Save.BorderRadius = 10;
-            this.Btn_Save.CheckedState.Parent = this.Btn_Save;
-            this.Btn_Save.CustomImages.Parent = this.Btn_Save;
-            this.Btn_Save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.Btn_Save.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.HoverState.Parent = this.Btn_Save;
-            this.Btn_Save.Location = new System.Drawing.Point(28, 82);
-            this.Btn_Save.Name = "Btn_Save";
-            this.Btn_Save.ShadowDecoration.Parent = this.Btn_Save;
-            this.Btn_Save.Size = new System.Drawing.Size(239, 36);
-            this.Btn_Save.TabIndex = 1;
-            this.Btn_Save.Text = "Save Bill";
+            this.Order_Main_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Order_Main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Order_Main_Panel.Location = new System.Drawing.Point(658, 0);
+            this.Order_Main_Panel.Name = "Order_Main_Panel";
+            this.Order_Main_Panel.Size = new System.Drawing.Size(316, 581);
+            this.Order_Main_Panel.TabIndex = 12;
+            this.Order_Main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Order_Main_Panel_Paint);
             // 
-            // guna2Button2
+            // Home_Bar_Main_Panel
             // 
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(28, 131);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(239, 36);
-            this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "Print Bill";
+            this.Home_Bar_Main_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Home_Bar_Main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Home_Bar_Main_Panel.Controls.Add(this.Home_Child_Labels);
+            this.Home_Bar_Main_Panel.Controls.Add(this.Home_Child_Contorlers);
+            this.Home_Bar_Main_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Home_Bar_Main_Panel.Name = "Home_Bar_Main_Panel";
+            this.Home_Bar_Main_Panel.Size = new System.Drawing.Size(658, 110);
+            this.Home_Bar_Main_Panel.TabIndex = 10;
+            this.Home_Bar_Main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Home_Bar_Main_Panel_Paint);
             // 
-            // label4
+            // Add_Item_Button
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(200, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 30);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "$ 101";
+            this.Add_Item_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add_Item_Button.BorderRadius = 10;
+            this.Add_Item_Button.CheckedState.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.CustomImages.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Add_Item_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Item_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Item_Button.HoverState.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.Location = new System.Drawing.Point(187, 60);
+            this.Add_Item_Button.Name = "Add_Item_Button";
+            this.Add_Item_Button.ShadowDecoration.Parent = this.Add_Item_Button;
+            this.Add_Item_Button.Size = new System.Drawing.Size(135, 36);
+            this.Add_Item_Button.TabIndex = 25;
+            this.Add_Item_Button.Text = "Add Item";
+            // 
+            // Category_Combo_Box
+            // 
+            this.Category_Combo_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Category_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Category_Combo_Box.BorderRadius = 10;
+            this.Category_Combo_Box.BorderThickness = 0;
+            this.Category_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Category_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Category_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Category_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Category_Combo_Box.FocusedState.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Category_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Category_Combo_Box.FormattingEnabled = true;
+            this.Category_Combo_Box.HoverState.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.ItemHeight = 30;
+            this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Location = new System.Drawing.Point(10, 60);
+            this.Category_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Category_Combo_Box.Name = "Category_Combo_Box";
+            this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Size = new System.Drawing.Size(161, 36);
+            this.Category_Combo_Box.TabIndex = 23;
+            // 
+            // Home_Child_Contorlers
+            // 
+            this.Home_Child_Contorlers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Home_Child_Contorlers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Home_Child_Contorlers.Controls.Add(this.Category_Combo_Box);
+            this.Home_Child_Contorlers.Controls.Add(this.Search_Text_Box);
+            this.Home_Child_Contorlers.Controls.Add(this.Add_Item_Button);
+            this.Home_Child_Contorlers.Location = new System.Drawing.Point(321, 0);
+            this.Home_Child_Contorlers.Name = "Home_Child_Contorlers";
+            this.Home_Child_Contorlers.Size = new System.Drawing.Size(337, 110);
+            this.Home_Child_Contorlers.TabIndex = 0;
+            // 
+            // Home_Child_Labels
+            // 
+            this.Home_Child_Labels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Home_Child_Labels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Home_Child_Labels.Controls.Add(this.guna2HtmlLabel1);
+            this.Home_Child_Labels.Controls.Add(this.Khayaal_Label);
+            this.Home_Child_Labels.Location = new System.Drawing.Point(0, 0);
+            this.Home_Child_Labels.Name = "Home_Child_Labels";
+            this.Home_Child_Labels.Size = new System.Drawing.Size(321, 110);
+            this.Home_Child_Labels.TabIndex = 1;
+            // 
+            // Khayaal_Label
+            // 
+            this.Khayaal_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Khayaal_Label.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Khayaal_Label.ForeColor = System.Drawing.Color.White;
+            this.Khayaal_Label.Location = new System.Drawing.Point(10, -3);
+            this.Khayaal_Label.Name = "Khayaal_Label";
+            this.Khayaal_Label.Size = new System.Drawing.Size(200, 73);
+            this.Khayaal_Label.TabIndex = 26;
+            this.Khayaal_Label.Text = "Khayaal";
+            this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 68);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(258, 39);
+            this.guna2HtmlLabel1.TabIndex = 27;
+            this.guna2HtmlLabel1.Text = "December 20 , 2022";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Search_Text_Box
+            // 
+            this.Search_Text_Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Search_Text_Box.BorderRadius = 10;
+            this.Search_Text_Box.BorderThickness = 0;
+            this.Search_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Search_Text_Box.DefaultText = "";
+            this.Search_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Search_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Search_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Search_Text_Box.DisabledState.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Search_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Search_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Search_Text_Box.FocusedState.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Search_Text_Box.HoverState.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.Location = new System.Drawing.Point(10, 13);
+            this.Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
+            this.Search_Text_Box.Name = "Search_Text_Box";
+            this.Search_Text_Box.PasswordChar = '\0';
+            this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Search_Text_Box.PlaceholderText = "Search";
+            this.Search_Text_Box.SelectedText = "";
+            this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.Size = new System.Drawing.Size(312, 36);
+            this.Search_Text_Box.TabIndex = 27;
             // 
             // Home_Form
             // 
@@ -261,22 +241,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Add_Item_Btn);
-            this.Controls.Add(this.Order_Lbl);
+            this.Controls.Add(this.Order_Main_Panel);
+            this.Controls.Add(this.Items_Main_Panel);
+            this.Controls.Add(this.Home_Bar_Main_Panel);
             this.Controls.Add(this.Order_Flow_Layout_Panel);
-            this.Controls.Add(this.Search_Item_Text_Box);
-            this.Controls.Add(this.guna2ComboBox2);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Item_Flow_Layout_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home_Form";
             this.Text = "Home_Form";
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Items_Main_Panel.ResumeLayout(false);
+            this.Home_Bar_Main_Panel.ResumeLayout(false);
+            this.Home_Child_Contorlers.ResumeLayout(false);
+            this.Home_Child_Labels.ResumeLayout(false);
+            this.Home_Child_Labels.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,19 +262,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.BindingSource restaurantCafeDataSetBindingSource;
-        private System.Windows.Forms.FlowLayoutPanel Item_Flow_Layout_Panel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2TextBox Search_Item_Text_Box;
         private System.Windows.Forms.FlowLayoutPanel Order_Flow_Layout_Panel;
-        private System.Windows.Forms.Label Order_Lbl;
-        private Guna.UI2.WinForms.Guna2Button Add_Item_Btn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button Btn_Save;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel Items_Main_Panel;
+        public System.Windows.Forms.Panel Order_Main_Panel;
+        private System.Windows.Forms.FlowLayoutPanel Items_Flow_Layout_Panel;
+        private System.Windows.Forms.Panel Home_Bar_Main_Panel;
+        private Guna.UI2.WinForms.Guna2Button Add_Item_Button;
+        private Guna.UI2.WinForms.Guna2ComboBox Category_Combo_Box;
+        private System.Windows.Forms.Panel Home_Child_Labels;
+        private System.Windows.Forms.Panel Home_Child_Contorlers;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Khayaal_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Search_Text_Box;
     }
 }
