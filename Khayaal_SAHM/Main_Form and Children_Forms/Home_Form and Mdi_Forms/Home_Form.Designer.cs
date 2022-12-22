@@ -95,7 +95,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Items_Nested_Flow_Layout_Panel.Name = "Items_Nested_Flow_Layout_Panel";
             this.Items_Nested_Flow_Layout_Panel.Size = new System.Drawing.Size(643, 463);
             this.Items_Nested_Flow_Layout_Panel.TabIndex = 0;
-            this.Items_Nested_Flow_Layout_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Flow_Layout_Panel_Paint);
             // 
             // Order_Main_Panel
             // 
@@ -396,7 +395,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Category_Label.TabIndex = 28;
             this.Category_Label.Text = "*Category";
             this.Category_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Category_Label.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // Home_Form
             // 
