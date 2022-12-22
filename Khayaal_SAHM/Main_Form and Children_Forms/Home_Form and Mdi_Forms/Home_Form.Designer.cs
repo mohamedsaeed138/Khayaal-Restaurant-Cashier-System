@@ -34,7 +34,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Order_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Items_Main_Panel = new System.Windows.Forms.Panel();
-            this.Items_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.Items_Nested_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Order_Main_Panel = new System.Windows.Forms.Panel();
             this.Order_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Clear_All_Button = new Guna.UI2.WinForms.Guna2Button();
@@ -50,9 +50,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Add_Item_Button = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Total_Label_Tmp = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Dolar_Sign_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Total_Label_Value = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Save_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Print_and_Save_Button = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
+            this.Total_Nested_Panel.SuspendLayout();
             this.Home_Bar_Main_Panel.SuspendLayout();
             this.Home_Nested_Panel_Labels.SuspendLayout();
             this.Home_Nested_Panel_Controlers.SuspendLayout();
@@ -74,30 +80,27 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Items_Main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Items_Main_Panel.Controls.Add(this.Items_Flow_Layout_Panel);
+            this.Items_Main_Panel.Controls.Add(this.Items_Nested_Flow_Layout_Panel);
             this.Items_Main_Panel.Location = new System.Drawing.Point(0, 110);
             this.Items_Main_Panel.Name = "Items_Main_Panel";
             this.Items_Main_Panel.Size = new System.Drawing.Size(658, 471);
             this.Items_Main_Panel.TabIndex = 11;
             // 
-            // Items_Flow_Layout_Panel
+            // Items_Nested_Flow_Layout_Panel
             // 
-            this.Items_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Items_Flow_Layout_Panel.AutoScroll = true;
-            this.Items_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Items_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 8);
-            this.Items_Flow_Layout_Panel.Name = "Items_Flow_Layout_Panel";
-            this.Items_Flow_Layout_Panel.Size = new System.Drawing.Size(643, 463);
-            this.Items_Flow_Layout_Panel.TabIndex = 0;
-            this.Items_Flow_Layout_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Flow_Layout_Panel_Paint);
+            this.Items_Nested_Flow_Layout_Panel.AutoScroll = true;
+            this.Items_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Items_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 8);
+            this.Items_Nested_Flow_Layout_Panel.Name = "Items_Nested_Flow_Layout_Panel";
+            this.Items_Nested_Flow_Layout_Panel.Size = new System.Drawing.Size(643, 463);
+            this.Items_Nested_Flow_Layout_Panel.TabIndex = 0;
+            this.Items_Nested_Flow_Layout_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Items_Flow_Layout_Panel_Paint);
             // 
             // Order_Main_Panel
             // 
             this.Order_Main_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_Main_Panel.BackColor = System.Drawing.Color.Cyan;
+            this.Order_Main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Order_Main_Panel.Controls.Add(this.Order_Label);
             this.Order_Main_Panel.Controls.Add(this.Clear_All_Button);
             this.Order_Main_Panel.Controls.Add(this.Total_Nested_Panel);
@@ -141,7 +144,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             this.Total_Nested_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Total_Nested_Panel.BackColor = System.Drawing.Color.MintCream;
+            this.Total_Nested_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Total_Nested_Panel.Controls.Add(this.Print_and_Save_Button);
+            this.Total_Nested_Panel.Controls.Add(this.Save_Button);
+            this.Total_Nested_Panel.Controls.Add(this.Total_Label_Value);
+            this.Total_Nested_Panel.Controls.Add(this.Dolar_Sign_Label);
+            this.Total_Nested_Panel.Controls.Add(this.Total_Label_Tmp);
             this.Total_Nested_Panel.Location = new System.Drawing.Point(11, 361);
             this.Total_Nested_Panel.Name = "Total_Nested_Panel";
             this.Total_Nested_Panel.Size = new System.Drawing.Size(295, 201);
@@ -153,7 +161,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Order_Nested_Flow_Layout_Panel.AutoScroll = true;
-            this.Order_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.Aquamarine;
+            this.Order_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.Order_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(11, 60);
             this.Order_Nested_Flow_Layout_Panel.Name = "Order_Nested_Flow_Layout_Panel";
             this.Order_Nested_Flow_Layout_Panel.Size = new System.Drawing.Size(295, 289);
@@ -305,6 +313,76 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this.Total_Nested_Panel;
             // 
+            // Total_Label_Tmp
+            // 
+            this.Total_Label_Tmp.BackColor = System.Drawing.Color.Transparent;
+            this.Total_Label_Tmp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Label_Tmp.ForeColor = System.Drawing.Color.White;
+            this.Total_Label_Tmp.Location = new System.Drawing.Point(38, 38);
+            this.Total_Label_Tmp.Name = "Total_Label_Tmp";
+            this.Total_Label_Tmp.Size = new System.Drawing.Size(65, 32);
+            this.Total_Label_Tmp.TabIndex = 28;
+            this.Total_Label_Tmp.Text = "Total : ";
+            this.Total_Label_Tmp.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Dolar_Sign_Label
+            // 
+            this.Dolar_Sign_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Dolar_Sign_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dolar_Sign_Label.ForeColor = System.Drawing.Color.White;
+            this.Dolar_Sign_Label.Location = new System.Drawing.Point(199, 38);
+            this.Dolar_Sign_Label.Name = "Dolar_Sign_Label";
+            this.Dolar_Sign_Label.Size = new System.Drawing.Size(15, 32);
+            this.Dolar_Sign_Label.TabIndex = 29;
+            this.Dolar_Sign_Label.Text = "$";
+            this.Dolar_Sign_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Total_Label_Value
+            // 
+            this.Total_Label_Value.BackColor = System.Drawing.Color.Transparent;
+            this.Total_Label_Value.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Label_Value.ForeColor = System.Drawing.Color.White;
+            this.Total_Label_Value.Location = new System.Drawing.Point(220, 38);
+            this.Total_Label_Value.Name = "Total_Label_Value";
+            this.Total_Label_Value.Size = new System.Drawing.Size(15, 32);
+            this.Total_Label_Value.TabIndex = 30;
+            this.Total_Label_Value.Text = "0";
+            this.Total_Label_Value.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Save_Button
+            // 
+            this.Save_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save_Button.BorderRadius = 10;
+            this.Save_Button.CheckedState.Parent = this.Save_Button;
+            this.Save_Button.CustomImages.Parent = this.Save_Button;
+            this.Save_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Save_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Button.ForeColor = System.Drawing.Color.White;
+            this.Save_Button.HoverState.Parent = this.Save_Button;
+            this.Save_Button.Location = new System.Drawing.Point(28, 82);
+            this.Save_Button.Name = "Save_Button";
+            this.Save_Button.ShadowDecoration.Parent = this.Save_Button;
+            this.Save_Button.Size = new System.Drawing.Size(239, 36);
+            this.Save_Button.TabIndex = 31;
+            this.Save_Button.Text = "Save";
+            // 
+            // Print_and_Save_Button
+            // 
+            this.Print_and_Save_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Print_and_Save_Button.BorderRadius = 10;
+            this.Print_and_Save_Button.CheckedState.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.CustomImages.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Print_and_Save_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Print_and_Save_Button.ForeColor = System.Drawing.Color.White;
+            this.Print_and_Save_Button.HoverState.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.Location = new System.Drawing.Point(28, 131);
+            this.Print_and_Save_Button.Name = "Print_and_Save_Button";
+            this.Print_and_Save_Button.ShadowDecoration.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.Size = new System.Drawing.Size(239, 36);
+            this.Print_and_Save_Button.TabIndex = 32;
+            this.Print_and_Save_Button.Text = "Print & Save";
+            // 
             // Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,6 +400,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Items_Main_Panel.ResumeLayout(false);
             this.Order_Main_Panel.ResumeLayout(false);
             this.Order_Main_Panel.PerformLayout();
+            this.Total_Nested_Panel.ResumeLayout(false);
+            this.Total_Nested_Panel.PerformLayout();
             this.Home_Bar_Main_Panel.ResumeLayout(false);
             this.Home_Nested_Panel_Labels.ResumeLayout(false);
             this.Home_Nested_Panel_Labels.PerformLayout();
@@ -336,7 +416,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private System.Windows.Forms.FlowLayoutPanel Order_Flow_Layout_Panel;
         private System.Windows.Forms.Panel Items_Main_Panel;
         public System.Windows.Forms.Panel Order_Main_Panel;
-        private System.Windows.Forms.FlowLayoutPanel Items_Flow_Layout_Panel;
+        private System.Windows.Forms.FlowLayoutPanel Items_Nested_Flow_Layout_Panel;
         private System.Windows.Forms.Panel Home_Bar_Main_Panel;
         private Guna.UI2.WinForms.Guna2Button Add_Item_Button;
         private Guna.UI2.WinForms.Guna2ComboBox Category_Combo_Box;
@@ -351,5 +431,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private System.Windows.Forms.FlowLayoutPanel Order_Nested_Flow_Layout_Panel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Total_Label_Value;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Dolar_Sign_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Total_Label_Tmp;
+        private Guna.UI2.WinForms.Guna2Button Print_and_Save_Button;
+        private Guna.UI2.WinForms.Guna2Button Save_Button;
     }
 }
