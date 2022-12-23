@@ -45,7 +45,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 
         private void Remove_Buttton_Click(object sender, System.EventArgs e)
         {
-            Add_Event?.Invoke(this, e);
+            Remove_Event?.Invoke(this, e);
         }
     }
 }

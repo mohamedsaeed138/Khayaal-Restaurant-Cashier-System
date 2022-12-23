@@ -44,11 +44,11 @@
             // Name_Label
             // 
             this.Name_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Name_Label.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_Label.ForeColor = System.Drawing.Color.White;
             this.Name_Label.Location = new System.Drawing.Point(10, 1);
             this.Name_Label.Name = "Name_Label";
-            this.Name_Label.Size = new System.Drawing.Size(78, 15);
+            this.Name_Label.Size = new System.Drawing.Size(85, 17);
             this.Name_Label.TabIndex = 2;
             this.Name_Label.Text = "Cheese Burger ";
             // 

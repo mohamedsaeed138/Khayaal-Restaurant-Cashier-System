@@ -87,6 +87,25 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 Item.Available = (bool)row[6];
 
                 Items_Nested_Flow_Layout_Panel.Controls.Add(Item);
+                Item.Remove_Event += (obj, e) =>
+                {
+                    if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
+                    {
+                        Formatter.Check_Connection(conn);
+
+
+                        SqlCommand Delete = new SqlCommand($"DELETE CR.Items_Relations WHERE Item_Id={((Item_User_Control)obj).Id};\nDELETE CR.Items Where Id ={((Item_User_Control)obj).Id};   ", conn);
+                        conn.Open();
+                        Delete.ExecuteNonQuery();
+                        conn.Close();
+                        ((Item_User_Control)obj).Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Finish Your Bill First!!");
+                    }
+
+                };
             }
         }
 
