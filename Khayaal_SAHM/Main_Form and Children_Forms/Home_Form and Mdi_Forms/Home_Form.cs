@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
@@ -16,7 +17,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             this.Controls.Clear();
             InitializeComponent();
+
+
             Fill_Combo_Box();
+
+        }
+        public void Fill_Items_Nested_Flow_Layout_Panel()
+        {
+            foreach (Control c in Items_Nested_Flow_Layout_Panel.Controls.OfType<Button>()) { }
         }
         public void Fill_Combo_Box()
         {
@@ -49,5 +57,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
 
 
+
+        // Test_Picure_Box.Image = Image.FromStream(new MemoryStream((byte[])row[0]));
+
+
     }
 }
+

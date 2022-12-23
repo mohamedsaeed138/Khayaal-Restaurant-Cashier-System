@@ -39,23 +39,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Order_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Clear_All_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Total_Nested_Panel = new System.Windows.Forms.Panel();
+            this.Print_and_Save_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Save_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Total_Label_Value = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Dolaar_Sign_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Total_Label_Tmp = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Order_Nested_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Home_Bar_Main_Panel = new System.Windows.Forms.Panel();
             this.Home_Nested_Panel_Labels = new System.Windows.Forms.Panel();
             this.Date_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Khayaal_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Home_Nested_Panel_Controlers = new System.Windows.Forms.Panel();
+            this.Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Add_Item_Button = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Total_Label_Tmp = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Dolaar_Sign_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Total_Label_Value = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Save_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Print_and_Save_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
@@ -155,6 +155,76 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Total_Nested_Panel.Size = new System.Drawing.Size(295, 201);
             this.Total_Nested_Panel.TabIndex = 1;
             // 
+            // Print_and_Save_Button
+            // 
+            this.Print_and_Save_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Print_and_Save_Button.BorderRadius = 10;
+            this.Print_and_Save_Button.CheckedState.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.CustomImages.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Print_and_Save_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Print_and_Save_Button.ForeColor = System.Drawing.Color.White;
+            this.Print_and_Save_Button.HoverState.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.Location = new System.Drawing.Point(28, 131);
+            this.Print_and_Save_Button.Name = "Print_and_Save_Button";
+            this.Print_and_Save_Button.ShadowDecoration.Parent = this.Print_and_Save_Button;
+            this.Print_and_Save_Button.Size = new System.Drawing.Size(239, 36);
+            this.Print_and_Save_Button.TabIndex = 32;
+            this.Print_and_Save_Button.Text = "Print & Save";
+            // 
+            // Save_Button
+            // 
+            this.Save_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save_Button.BorderRadius = 10;
+            this.Save_Button.CheckedState.Parent = this.Save_Button;
+            this.Save_Button.CustomImages.Parent = this.Save_Button;
+            this.Save_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Save_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Button.ForeColor = System.Drawing.Color.White;
+            this.Save_Button.HoverState.Parent = this.Save_Button;
+            this.Save_Button.Location = new System.Drawing.Point(28, 82);
+            this.Save_Button.Name = "Save_Button";
+            this.Save_Button.ShadowDecoration.Parent = this.Save_Button;
+            this.Save_Button.Size = new System.Drawing.Size(239, 36);
+            this.Save_Button.TabIndex = 31;
+            this.Save_Button.Text = "Save";
+            // 
+            // Total_Label_Value
+            // 
+            this.Total_Label_Value.BackColor = System.Drawing.Color.Transparent;
+            this.Total_Label_Value.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Label_Value.ForeColor = System.Drawing.Color.White;
+            this.Total_Label_Value.Location = new System.Drawing.Point(220, 38);
+            this.Total_Label_Value.Name = "Total_Label_Value";
+            this.Total_Label_Value.Size = new System.Drawing.Size(15, 32);
+            this.Total_Label_Value.TabIndex = 30;
+            this.Total_Label_Value.Text = "0";
+            this.Total_Label_Value.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Dolaar_Sign_Label
+            // 
+            this.Dolaar_Sign_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Dolaar_Sign_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dolaar_Sign_Label.ForeColor = System.Drawing.Color.White;
+            this.Dolaar_Sign_Label.Location = new System.Drawing.Point(199, 38);
+            this.Dolaar_Sign_Label.Name = "Dolaar_Sign_Label";
+            this.Dolaar_Sign_Label.Size = new System.Drawing.Size(15, 32);
+            this.Dolaar_Sign_Label.TabIndex = 29;
+            this.Dolaar_Sign_Label.Text = "$";
+            this.Dolaar_Sign_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Total_Label_Tmp
+            // 
+            this.Total_Label_Tmp.BackColor = System.Drawing.Color.Transparent;
+            this.Total_Label_Tmp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Label_Tmp.ForeColor = System.Drawing.Color.White;
+            this.Total_Label_Tmp.Location = new System.Drawing.Point(38, 38);
+            this.Total_Label_Tmp.Name = "Total_Label_Tmp";
+            this.Total_Label_Tmp.Size = new System.Drawing.Size(65, 32);
+            this.Total_Label_Tmp.TabIndex = 28;
+            this.Total_Label_Tmp.Text = "Total : ";
+            this.Total_Label_Tmp.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Order_Nested_Flow_Layout_Panel
             // 
             this.Order_Nested_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -230,6 +300,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Home_Nested_Panel_Controlers.Name = "Home_Nested_Panel_Controlers";
             this.Home_Nested_Panel_Controlers.Size = new System.Drawing.Size(337, 110);
             this.Home_Nested_Panel_Controlers.TabIndex = 0;
+            // 
+            // Category_Label
+            // 
+            this.Category_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Category_Label.Location = new System.Drawing.Point(10, 95);
+            this.Category_Label.Name = "Category_Label";
+            this.Category_Label.Size = new System.Drawing.Size(55, 15);
+            this.Category_Label.TabIndex = 28;
+            this.Category_Label.Text = "*Category";
+            this.Category_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Category_Combo_Box
             // 
@@ -313,88 +395,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this.Total_Nested_Panel;
-            // 
-            // Total_Label_Tmp
-            // 
-            this.Total_Label_Tmp.BackColor = System.Drawing.Color.Transparent;
-            this.Total_Label_Tmp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total_Label_Tmp.ForeColor = System.Drawing.Color.White;
-            this.Total_Label_Tmp.Location = new System.Drawing.Point(38, 38);
-            this.Total_Label_Tmp.Name = "Total_Label_Tmp";
-            this.Total_Label_Tmp.Size = new System.Drawing.Size(65, 32);
-            this.Total_Label_Tmp.TabIndex = 28;
-            this.Total_Label_Tmp.Text = "Total : ";
-            this.Total_Label_Tmp.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Dolaar_Sign_Label
-            // 
-            this.Dolaar_Sign_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Dolaar_Sign_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dolaar_Sign_Label.ForeColor = System.Drawing.Color.White;
-            this.Dolaar_Sign_Label.Location = new System.Drawing.Point(199, 38);
-            this.Dolaar_Sign_Label.Name = "Dolaar_Sign_Label";
-            this.Dolaar_Sign_Label.Size = new System.Drawing.Size(15, 32);
-            this.Dolaar_Sign_Label.TabIndex = 29;
-            this.Dolaar_Sign_Label.Text = "$";
-            this.Dolaar_Sign_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Total_Label_Value
-            // 
-            this.Total_Label_Value.BackColor = System.Drawing.Color.Transparent;
-            this.Total_Label_Value.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total_Label_Value.ForeColor = System.Drawing.Color.White;
-            this.Total_Label_Value.Location = new System.Drawing.Point(220, 38);
-            this.Total_Label_Value.Name = "Total_Label_Value";
-            this.Total_Label_Value.Size = new System.Drawing.Size(15, 32);
-            this.Total_Label_Value.TabIndex = 30;
-            this.Total_Label_Value.Text = "0";
-            this.Total_Label_Value.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Save_Button
-            // 
-            this.Save_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Save_Button.BorderRadius = 10;
-            this.Save_Button.CheckedState.Parent = this.Save_Button;
-            this.Save_Button.CustomImages.Parent = this.Save_Button;
-            this.Save_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.Save_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save_Button.ForeColor = System.Drawing.Color.White;
-            this.Save_Button.HoverState.Parent = this.Save_Button;
-            this.Save_Button.Location = new System.Drawing.Point(28, 82);
-            this.Save_Button.Name = "Save_Button";
-            this.Save_Button.ShadowDecoration.Parent = this.Save_Button;
-            this.Save_Button.Size = new System.Drawing.Size(239, 36);
-            this.Save_Button.TabIndex = 31;
-            this.Save_Button.Text = "Save";
-            // 
-            // Print_and_Save_Button
-            // 
-            this.Print_and_Save_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Print_and_Save_Button.BorderRadius = 10;
-            this.Print_and_Save_Button.CheckedState.Parent = this.Print_and_Save_Button;
-            this.Print_and_Save_Button.CustomImages.Parent = this.Print_and_Save_Button;
-            this.Print_and_Save_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.Print_and_Save_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Print_and_Save_Button.ForeColor = System.Drawing.Color.White;
-            this.Print_and_Save_Button.HoverState.Parent = this.Print_and_Save_Button;
-            this.Print_and_Save_Button.Location = new System.Drawing.Point(28, 131);
-            this.Print_and_Save_Button.Name = "Print_and_Save_Button";
-            this.Print_and_Save_Button.ShadowDecoration.Parent = this.Print_and_Save_Button;
-            this.Print_and_Save_Button.Size = new System.Drawing.Size(239, 36);
-            this.Print_and_Save_Button.TabIndex = 32;
-            this.Print_and_Save_Button.Text = "Print & Save";
-            // 
-            // Category_Label
-            // 
-            this.Category_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Category_Label.Location = new System.Drawing.Point(10, 95);
-            this.Category_Label.Name = "Category_Label";
-            this.Category_Label.Size = new System.Drawing.Size(55, 15);
-            this.Category_Label.TabIndex = 28;
-            this.Category_Label.Text = "*Category";
-            this.Category_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home_Form
             // 

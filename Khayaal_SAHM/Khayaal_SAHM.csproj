@@ -257,6 +257,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Order_User_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Order_User_Control.Designer.cs">
+      <DependentUpon>Order_User_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report_Path.cs" />
     <Compile Include="Connection_String.cs" />
     <Compile Include="Formatter.cs" />
@@ -454,7 +460,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Order_Query.sql" />
     <Content Include="Resources\Food_Dirnk _Template.jpg" />
     <None Include="Resources\Frame 42.png" />
     <None Include="Resources\Frame 41.png" />

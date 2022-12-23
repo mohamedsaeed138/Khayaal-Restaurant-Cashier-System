@@ -23,3 +23,9 @@ SELECT Id,Category,Name,Qty FROM CR.Raw_Materials
 EXEC CR.Decrease_Raw_Materials_Qty_Test @Item_Id=1,@Qty=1;
 SELECT [Name],Qty FROM CR.Raw_Materials_Test Where Qty<0;
 */--The good way
+
+
+/*IMAGE QUERY 
+UPDATE CR.Items SET Image=BulkColumn from Openrowset( Bulk 'E:\Food_Dirnk _Template.jpg', Single_Blob) as Item_Image  WHERE Id !=  1;
+SELECT * FROM CR.Items;
+SELECT Image from CR.Items */
