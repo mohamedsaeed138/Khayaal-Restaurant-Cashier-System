@@ -131,7 +131,6 @@
             // Edit_Buttton
             // 
             this.Edit_Buttton.BackColor = System.Drawing.Color.Transparent;
-            this.Edit_Buttton.BackgroundImage = global::Khayaal_SAHM.Properties.Resources.Edit_Item_Icon;
             this.Edit_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Edit_Buttton.BorderThickness = 1;
             this.Edit_Buttton.CheckedState.Parent = this.Edit_Buttton;
