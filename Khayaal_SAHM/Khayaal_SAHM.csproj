@@ -454,6 +454,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Order_Query.sql" />
     <Content Include="Resources\Food_Dirnk _Template.jpg" />
     <None Include="Resources\Frame 42.png" />
     <None Include="Resources\Frame 41.png" />
