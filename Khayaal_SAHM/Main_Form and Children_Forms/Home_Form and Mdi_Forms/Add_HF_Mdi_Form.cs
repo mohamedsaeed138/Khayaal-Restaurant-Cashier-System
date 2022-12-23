@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
-    public partial class Add_Edit_HF_Mdi_Form : Form
+    public partial class Add_HF_Mdi_Form : Form
     {
         private DataTable dt = Select_Category_AS_Data_Table();
         private int Receivede_Item_Id;
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
-        public Add_Edit_HF_Mdi_Form(int id, string category, string name, string description, float unite_price)
+        public Add_HF_Mdi_Form(int id, string category, string name, string description, float unite_price)
         {
             InitializeComponent();
             Receivede_Item_Id = id;
@@ -19,7 +19,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             Fill_ComboBox(category);
             Item_Description_Text_Box.Text = description;
         }
-        public Add_Edit_HF_Mdi_Form()
+        public Add_HF_Mdi_Form()
         {
             InitializeComponent();
             Fill_ComboBox();

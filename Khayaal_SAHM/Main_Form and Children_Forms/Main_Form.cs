@@ -85,21 +85,21 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         }
 
-    
 
-      
 
-       
 
-      
 
-       
 
-       
 
-      
 
-       
+
+
+
+
+
+
+
+
 
         private void Home_OFF_Click(object sender, EventArgs e)
         {
@@ -381,7 +381,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         private void Main_Form_Shown(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

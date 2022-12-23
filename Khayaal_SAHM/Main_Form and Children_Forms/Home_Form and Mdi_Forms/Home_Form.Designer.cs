@@ -388,6 +388,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Add_Item_Button.Size = new System.Drawing.Size(135, 36);
             this.Add_Item_Button.TabIndex = 25;
             this.Add_Item_Button.Text = "Add Item";
+            this.Add_Item_Button.Click += new System.EventHandler(this.Add_Item_Button_Click);
             // 
             // bunifuElipse1
             // 
@@ -416,6 +417,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home_Form";
             this.Text = "Home_Form";
+            this.TopMost = true;
             this.Items_Main_Panel.ResumeLayout(false);
             this.Order_Main_Panel.ResumeLayout(false);
             this.Order_Main_Panel.PerformLayout();

@@ -314,11 +314,11 @@
     <Compile Include="Main_Form and Children_Forms\Credit_Form\Credit_Form.Designer.cs">
       <DependentUpon>Credit_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Edit_HF_Mdi_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_HF_Mdi_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Edit_HF_Mdi_Form.Designer.cs">
-      <DependentUpon>Add_Edit_HF_Mdi_Form.cs</DependentUpon>
+    <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_HF_Mdi_Form.Designer.cs">
+      <DependentUpon>Add_HF_Mdi_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.cs">
       <SubType>Form</SubType>
@@ -386,8 +386,8 @@
     <EmbeddedResource Include="Main_Form and Children_Forms\Credit_Form\Credit_Form.resx">
       <DependentUpon>Credit_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_Edit_HF_Mdi_Form.resx">
-      <DependentUpon>Add_Edit_HF_Mdi_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Add_HF_Mdi_Form.resx">
+      <DependentUpon>Add_HF_Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Home_Form.resx">
       <DependentUpon>Home_Form.cs</DependentUpon>

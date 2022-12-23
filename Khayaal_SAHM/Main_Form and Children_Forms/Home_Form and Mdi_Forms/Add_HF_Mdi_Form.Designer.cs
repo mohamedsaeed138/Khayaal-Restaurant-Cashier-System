@@ -1,6 +1,6 @@
 ﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
-    partial class Add_Edit_HF_Mdi_Form
+    partial class Add_HF_Mdi_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Edit_HF_Mdi_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_HF_Mdi_Form));
             this.Unite_Price_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Item_Description_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Item_Name_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
