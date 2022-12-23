@@ -395,6 +395,9 @@
     <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Item_User_Control.resx">
       <DependentUpon>Item_User_Control.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Order_User_Control.resx">
+      <DependentUpon>Order_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
       <Generator>PublicResXFileCodeGenerator</Generator>

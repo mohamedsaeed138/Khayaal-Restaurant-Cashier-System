@@ -31,8 +31,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Order_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Items_Main_Panel = new System.Windows.Forms.Panel();
             this.Items_Nested_Flow_Layout_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Order_Main_Panel = new System.Windows.Forms.Panel();
@@ -57,24 +55,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
+            this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
             this.Total_Nested_Panel.SuspendLayout();
             this.Home_Bar_Main_Panel.SuspendLayout();
             this.Home_Nested_Panel_Labels.SuspendLayout();
             this.Home_Nested_Panel_Controlers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Order_Flow_Layout_Panel
-            // 
-            this.Order_Flow_Layout_Panel.AutoSize = true;
-            this.Order_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Order_Flow_Layout_Panel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Order_Flow_Layout_Panel.Location = new System.Drawing.Point(974, 0);
-            this.Order_Flow_Layout_Panel.Name = "Order_Flow_Layout_Panel";
-            this.Order_Flow_Layout_Panel.Size = new System.Drawing.Size(0, 581);
-            this.Order_Flow_Layout_Panel.TabIndex = 8;
             // 
             // Items_Main_Panel
             // 
@@ -94,12 +83,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Items_Nested_Flow_Layout_Panel.AutoScroll = true;
-            this.Items_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Items_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Items_Nested_Flow_Layout_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Items_Nested_Flow_Layout_Panel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Items_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 8);
             this.Items_Nested_Flow_Layout_Panel.Name = "Items_Nested_Flow_Layout_Panel";
-            this.Items_Nested_Flow_Layout_Panel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.Items_Nested_Flow_Layout_Panel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.Items_Nested_Flow_Layout_Panel.Size = new System.Drawing.Size(643, 463);
             this.Items_Nested_Flow_Layout_Panel.TabIndex = 0;
             // 
@@ -146,6 +135,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Clear_All_Button.Size = new System.Drawing.Size(118, 36);
             this.Clear_All_Button.TabIndex = 26;
             this.Clear_All_Button.Text = "Clear All";
+            this.Clear_All_Button.Click += new System.EventHandler(this.Clear_All_Button_Click);
             // 
             // Total_Nested_Panel
             // 
@@ -178,6 +168,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Print_and_Save_Button.Size = new System.Drawing.Size(239, 36);
             this.Print_and_Save_Button.TabIndex = 32;
             this.Print_and_Save_Button.Text = "Print & Save";
+            this.Print_and_Save_Button.Click += new System.EventHandler(this.Print_and_Save_Button_Click);
             // 
             // Save_Button
             // 
@@ -195,6 +186,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Save_Button.Size = new System.Drawing.Size(239, 36);
             this.Save_Button.TabIndex = 31;
             this.Save_Button.Text = "Save";
+            this.Save_Button.Click += new System.EventHandler(this.Save_Button_Click);
             // 
             // Total_Label_Value
             // 
@@ -347,6 +339,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Size = new System.Drawing.Size(161, 36);
             this.Category_Combo_Box.TabIndex = 23;
+            this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // Search_Text_Box
             // 
@@ -376,6 +369,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(312, 36);
             this.Search_Text_Box.TabIndex = 27;
+            this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
             // Add_Item_Button
@@ -419,11 +413,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Controls.Add(this.Order_Main_Panel);
             this.Controls.Add(this.Items_Main_Panel);
             this.Controls.Add(this.Home_Bar_Main_Panel);
-            this.Controls.Add(this.Order_Flow_Layout_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home_Form";
             this.Text = "Home_Form";
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).EndInit();
             this.Items_Main_Panel.ResumeLayout(false);
             this.Order_Main_Panel.ResumeLayout(false);
             this.Order_Main_Panel.PerformLayout();
@@ -433,14 +425,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Home_Nested_Panel_Labels.ResumeLayout(false);
             this.Home_Nested_Panel_Controlers.ResumeLayout(false);
             this.Home_Nested_Panel_Controlers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.BindingSource restaurantCafeDataSetBindingSource;
-        private System.Windows.Forms.FlowLayoutPanel Order_Flow_Layout_Panel;
         private System.Windows.Forms.Panel Items_Main_Panel;
         public System.Windows.Forms.Panel Order_Main_Panel;
         private System.Windows.Forms.FlowLayoutPanel Items_Nested_Flow_Layout_Panel;

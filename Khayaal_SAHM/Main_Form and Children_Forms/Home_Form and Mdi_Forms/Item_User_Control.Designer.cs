@@ -78,7 +78,7 @@
             // 
             this.Add_To_Order_Buttton.CheckedState.Parent = this.Add_To_Order_Buttton;
             this.Add_To_Order_Buttton.CustomImages.Parent = this.Add_To_Order_Buttton;
-            this.Add_To_Order_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(203)))), ((int)(((byte)(103)))));
+            this.Add_To_Order_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(173)))), ((int)(((byte)(98)))));
             this.Add_To_Order_Buttton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_To_Order_Buttton.ForeColor = System.Drawing.Color.White;
             this.Add_To_Order_Buttton.HoverState.Parent = this.Add_To_Order_Buttton;
@@ -170,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(19)))), ((int)(((byte)(34)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.Information_Button);
             this.Controls.Add(this.Edit_Buttton);
             this.Controls.Add(this.Remove_Buttton);

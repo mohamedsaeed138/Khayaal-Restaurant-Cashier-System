@@ -51,7 +51,6 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "Print_Form";
             this.Text = "Print_Form";
-            this.Load += new System.EventHandler(this.Print_Form_Load);
             this.ResumeLayout(false);
 
         }

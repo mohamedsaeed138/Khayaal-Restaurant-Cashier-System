@@ -52,7 +52,7 @@ namespace Khayaal_SAHM
         /// <param name="Date">The Date_Time_Picker Value</param>
         /// <param name="Case">The Case Of Formatting</param>
         /// <returns>String</returns>
-        public static string Date_Formating(DateTime Date, string Case)//activated
+        public static string Date_Formating(DateTime Date, string Case = "Normal")//activated
         {
             string Correct_Date;
             if (Case == "From_Payment")
@@ -60,7 +60,7 @@ namespace Khayaal_SAHM
             else if (Case == "To_Payment")
                 Correct_Date = $"{Date.Year}-{Date.Month}-{Date.Day} 23:59:59";
             else
-                Correct_Date = $"{Date.Year}-{Date.Month}-{Date.Day} 23:59:59";
+                Correct_Date = $"{Date.Year}-{Date.Month}-{Date.Day} {Date.Hour}:{Date.Minute}:{Date.Second}";
             return Correct_Date;
         }
         //Payment like (Bill,Best_Sales_Purchases)
