@@ -243,6 +243,26 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Edit_Item_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Edit_Item_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_Item_Icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Edit_Item_Icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frame_36 {
             get {
                 object obj = ResourceManager.GetObject("Frame 36", resourceCulture);
@@ -306,6 +326,16 @@ namespace Khayaal_SAHM.Properties {
         internal static System.Drawing.Bitmap Frame_42 {
             get {
                 object obj = ResourceManager.GetObject("Frame 42", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Info_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Info_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

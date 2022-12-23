@@ -28,10 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
+            this.Name_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Dollar_Sign_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Price_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Add_To_Order_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Remove_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Information_Button = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Edit_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Image_Picture_Box = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Image_Picture_Box)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // Name_Label
+            // 
+            this.Name_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Name_Label.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_Label.ForeColor = System.Drawing.Color.White;
+            this.Name_Label.Location = new System.Drawing.Point(10, 1);
+            this.Name_Label.Name = "Name_Label";
+            this.Name_Label.Size = new System.Drawing.Size(78, 15);
+            this.Name_Label.TabIndex = 2;
+            this.Name_Label.Text = "Cheese Burger ";
+            // 
+            // Dollar_Sign_Label
+            // 
+            this.Dollar_Sign_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Dollar_Sign_Label.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dollar_Sign_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(102)))), ((int)(((byte)(103)))));
+            this.Dollar_Sign_Label.Location = new System.Drawing.Point(9, 107);
+            this.Dollar_Sign_Label.Name = "Dollar_Sign_Label";
+            this.Dollar_Sign_Label.Size = new System.Drawing.Size(10, 19);
+            this.Dollar_Sign_Label.TabIndex = 3;
+            this.Dollar_Sign_Label.Text = "$";
+            // 
+            // Price_Label
+            // 
+            this.Price_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Price_Label.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Price_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(102)))), ((int)(((byte)(103)))));
+            this.Price_Label.Location = new System.Drawing.Point(19, 106);
+            this.Price_Label.Name = "Price_Label";
+            this.Price_Label.Size = new System.Drawing.Size(3, 2);
+            this.Price_Label.TabIndex = 4;
+            this.Price_Label.Text = null;
+            // 
+            // Add_To_Order_Buttton
+            // 
+            this.Add_To_Order_Buttton.CheckedState.Parent = this.Add_To_Order_Buttton;
+            this.Add_To_Order_Buttton.CustomImages.Parent = this.Add_To_Order_Buttton;
+            this.Add_To_Order_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(203)))), ((int)(((byte)(103)))));
+            this.Add_To_Order_Buttton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_To_Order_Buttton.ForeColor = System.Drawing.Color.White;
+            this.Add_To_Order_Buttton.HoverState.Parent = this.Add_To_Order_Buttton;
+            this.Add_To_Order_Buttton.Location = new System.Drawing.Point(60, 101);
+            this.Add_To_Order_Buttton.Name = "Add_To_Order_Buttton";
+            this.Add_To_Order_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Add_To_Order_Buttton.ShadowDecoration.Parent = this.Add_To_Order_Buttton;
+            this.Add_To_Order_Buttton.Size = new System.Drawing.Size(22, 22);
+            this.Add_To_Order_Buttton.TabIndex = 5;
+            this.Add_To_Order_Buttton.Text = "+";
+            this.Add_To_Order_Buttton.Click += new System.EventHandler(this.Add_To_Order_Buttton_Click);
+            // 
+            // Remove_Buttton
+            // 
+            this.Remove_Buttton.CheckedState.Parent = this.Remove_Buttton;
+            this.Remove_Buttton.CustomImages.Parent = this.Remove_Buttton;
+            this.Remove_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Remove_Buttton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove_Buttton.ForeColor = System.Drawing.Color.White;
+            this.Remove_Buttton.HoverState.Parent = this.Remove_Buttton;
+            this.Remove_Buttton.Location = new System.Drawing.Point(114, 101);
+            this.Remove_Buttton.Name = "Remove_Buttton";
+            this.Remove_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Remove_Buttton.ShadowDecoration.Parent = this.Remove_Buttton;
+            this.Remove_Buttton.Size = new System.Drawing.Size(22, 22);
+            this.Remove_Buttton.TabIndex = 6;
+            this.Remove_Buttton.Text = "x";
+            this.Remove_Buttton.Click += new System.EventHandler(this.Remove_Buttton_Click);
+            // 
+            // Information_Button
+            // 
+            this.Information_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Information_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Information_Button.BorderThickness = 1;
+            this.Information_Button.CheckedState.Parent = this.Information_Button;
+            this.Information_Button.CustomImages.Parent = this.Information_Button;
+            this.Information_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Information_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information_Button.ForeColor = System.Drawing.Color.White;
+            this.Information_Button.HoverState.Parent = this.Information_Button;
+            this.Information_Button.Image = global::Khayaal_SAHM.Properties.Resources.Info_Icon;
+            this.Information_Button.ImageSize = new System.Drawing.Size(3, 7);
+            this.Information_Button.Location = new System.Drawing.Point(125, 2);
+            this.Information_Button.Name = "Information_Button";
+            this.Information_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Information_Button.ShadowDecoration.Parent = this.Information_Button;
+            this.Information_Button.Size = new System.Drawing.Size(11, 11);
+            this.Information_Button.TabIndex = 8;
+            // 
+            // Edit_Buttton
+            // 
+            this.Edit_Buttton.BackColor = System.Drawing.Color.Transparent;
+            this.Edit_Buttton.BackgroundImage = global::Khayaal_SAHM.Properties.Resources.Edit_Item_Icon;
+            this.Edit_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Edit_Buttton.BorderThickness = 1;
+            this.Edit_Buttton.CheckedState.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.CustomImages.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Edit_Buttton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_Buttton.ForeColor = System.Drawing.Color.White;
+            this.Edit_Buttton.HoverState.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.Image = global::Khayaal_SAHM.Properties.Resources.Edit_Item_Icon1;
+            this.Edit_Buttton.ImageSize = new System.Drawing.Size(16, 16);
+            this.Edit_Buttton.Location = new System.Drawing.Point(87, 101);
+            this.Edit_Buttton.Name = "Edit_Buttton";
+            this.Edit_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Edit_Buttton.ShadowDecoration.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.Size = new System.Drawing.Size(22, 22);
+            this.Edit_Buttton.TabIndex = 7;
+            this.Edit_Buttton.Click += new System.EventHandler(this.Edit_Buttton_Click);
+            // 
+            // Image_Picture_Box
+            // 
+            this.Image_Picture_Box.BorderRadius = 10;
+            this.Image_Picture_Box.Location = new System.Drawing.Point(7, 18);
+            this.Image_Picture_Box.Name = "Image_Picture_Box";
+            this.Image_Picture_Box.ShadowDecoration.Parent = this.Image_Picture_Box;
+            this.Image_Picture_Box.Size = new System.Drawing.Size(129, 73);
+            this.Image_Picture_Box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image_Picture_Box.TabIndex = 1;
+            this.Image_Picture_Box.TabStop = false;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // Item_User_Control
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(19)))), ((int)(((byte)(34)))));
+            this.Controls.Add(this.Information_Button);
+            this.Controls.Add(this.Edit_Buttton);
+            this.Controls.Add(this.Remove_Buttton);
+            this.Controls.Add(this.Add_To_Order_Buttton);
+            this.Controls.Add(this.Price_Label);
+            this.Controls.Add(this.Dollar_Sign_Label);
+            this.Controls.Add(this.Name_Label);
+            this.Controls.Add(this.Image_Picture_Box);
+            this.Name = "Item_User_Control";
+            this.Size = new System.Drawing.Size(143, 141);
+            ((System.ComponentModel.ISupportInitialize)(this.Image_Picture_Box)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2PictureBox Image_Picture_Box;
+        private Guna.UI2.WinForms.Guna2CircleButton Edit_Buttton;
+        private Guna.UI2.WinForms.Guna2CircleButton Remove_Buttton;
+        private Guna.UI2.WinForms.Guna2CircleButton Add_To_Order_Buttton;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Price_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Dollar_Sign_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Name_Label;
+        private Guna.UI2.WinForms.Guna2CircleButton Information_Button;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

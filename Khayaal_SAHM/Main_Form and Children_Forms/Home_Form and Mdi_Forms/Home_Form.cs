@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
     public partial class Home_Form : Form
@@ -18,7 +19,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Controls.Clear();
             InitializeComponent();
 
-
+            Fill_Item_Panel();
             Fill_Combo_Box();
 
         }
@@ -56,9 +57,40 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             }
         }
 
+        public void Fill_Item_Panel()
+        {
+            Formatter.Check_Connection(conn);
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Id,[Name],Category,Unit_Price,[Image],[Description],Available FROM CR.Items;", conn);
+            DataTable dt = new DataTable();
+            conn.Open();
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conn.Close();
+            }
+            conn.Close();
+            Items_Nested_Flow_Layout_Panel.Controls.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                Item_User_Control Item = new Item_User_Control();
+                Item.Id = (int)row[0];
+                Item.Name = (string)row[1];
+                Item.Category = (string)row[2];
+                Item.Price = (double)row[3];
+                Item.Image = Image.FromStream(new MemoryStream((byte[])row[4]));
+                Item.Description = (string)row[5];
+                Item.Available = (bool)row[6];
+
+                Items_Nested_Flow_Layout_Panel.Controls.Add(Item);
+            }
+        }
 
 
-        // Test_Picure_Box.Image = Image.FromStream(new MemoryStream((byte[])row[0]));
 
 
     }

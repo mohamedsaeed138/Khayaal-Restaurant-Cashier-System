@@ -56,6 +56,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Add_Item_Button = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.restaurantCafeDataSetBindingSource)).BeginInit();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
@@ -89,10 +90,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             // Items_Nested_Flow_Layout_Panel
             // 
+            this.Items_Nested_Flow_Layout_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Items_Nested_Flow_Layout_Panel.AutoScroll = true;
-            this.Items_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Items_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Items_Nested_Flow_Layout_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Items_Nested_Flow_Layout_Panel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Items_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 8);
             this.Items_Nested_Flow_Layout_Panel.Name = "Items_Nested_Flow_Layout_Panel";
+            this.Items_Nested_Flow_Layout_Panel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Items_Nested_Flow_Layout_Panel.Size = new System.Drawing.Size(643, 463);
             this.Items_Nested_Flow_Layout_Panel.TabIndex = 0;
             // 
@@ -264,27 +271,29 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             // Date_Label
             // 
+            this.Date_Label.AutoSize = false;
             this.Date_Label.BackColor = System.Drawing.Color.Transparent;
             this.Date_Label.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date_Label.ForeColor = System.Drawing.Color.White;
             this.Date_Label.Location = new System.Drawing.Point(12, 68);
             this.Date_Label.Name = "Date_Label";
-            this.Date_Label.Size = new System.Drawing.Size(258, 39);
+            this.Date_Label.Size = new System.Drawing.Size(309, 39);
             this.Date_Label.TabIndex = 27;
             this.Date_Label.Text = "December 20 , 2022";
-            this.Date_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Date_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Khayaal_Label
             // 
+            this.Khayaal_Label.AutoSize = false;
             this.Khayaal_Label.BackColor = System.Drawing.Color.Transparent;
             this.Khayaal_Label.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Khayaal_Label.ForeColor = System.Drawing.Color.White;
             this.Khayaal_Label.Location = new System.Drawing.Point(10, -3);
             this.Khayaal_Label.Name = "Khayaal_Label";
-            this.Khayaal_Label.Size = new System.Drawing.Size(200, 73);
+            this.Khayaal_Label.Size = new System.Drawing.Size(311, 73);
             this.Khayaal_Label.TabIndex = 26;
             this.Khayaal_Label.Text = "Khayaal";
-            this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Home_Nested_Panel_Controlers
             // 
@@ -396,6 +405,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this.Total_Nested_Panel;
             // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 10;
+            this.bunifuElipse3.TargetControl = this.Items_Nested_Flow_Layout_Panel;
+            // 
             // Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +431,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Total_Nested_Panel.PerformLayout();
             this.Home_Bar_Main_Panel.ResumeLayout(false);
             this.Home_Nested_Panel_Labels.ResumeLayout(false);
-            this.Home_Nested_Panel_Labels.PerformLayout();
             this.Home_Nested_Panel_Controlers.ResumeLayout(false);
             this.Home_Nested_Panel_Controlers.PerformLayout();
             this.ResumeLayout(false);
@@ -451,5 +464,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private Guna.UI2.WinForms.Guna2Button Print_and_Save_Button;
         private Guna.UI2.WinForms.Guna2Button Save_Button;
         private Guna.UI2.WinForms.Guna2HtmlLabel Category_Label;
+        public Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
     }
 }
