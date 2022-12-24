@@ -165,7 +165,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!Serial_Number.Value, "DataSet")</Value>
+                <Value>=Fields!Serial_Number.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -554,7 +554,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!Total.Value, "DataSet")</Value>
+                <Value>=Fields!Total.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>

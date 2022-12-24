@@ -192,8 +192,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 
         private void Clear_All_Button_Click(object sender, EventArgs e)
         {
+
             Clear_Order_Nested_Flow_Layout_Panel();
-            Calculate_Total();
+
         }
         void Clear_Order_Nested_Flow_Layout_Panel()
         {
