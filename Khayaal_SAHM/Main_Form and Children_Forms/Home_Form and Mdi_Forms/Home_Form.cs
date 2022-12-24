@@ -125,9 +125,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                     {
                         if (((Item_User_Control)obj).Id == item.Id)
                         {
-                            item.Qty += 1;
-                            item.Sub_Total = item.Qty * item.Price;
 
+                            ((Order_User_Control)item).Qty += 1;
+                            ((Order_User_Control)item).Sub_Total = ((Order_User_Control)item).Qty * ((Order_User_Control)item).Price;
+                            if (!Check_Negative_Qty())
+                            {
+                                ((Order_User_Control)item).Qty -= 1;
+                                ((Order_User_Control)item).Sub_Total = ((Order_User_Control)item).Qty * ((Order_User_Control)item).Price;
+                            }
                             Calculate_Total();
                             return;
                         }
@@ -140,11 +145,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                     item2.Image = ((Item_User_Control)obj).Image;
                     item2.Sub_Total = item2.Price;
                     Order_Nested_Flow_Layout_Panel.Controls.Add(item2);
+                    if (!Check_Negative_Qty())
+                        item2.Dispose();
                     Calculate_Total();
                     item2.Increase_Event += (obj2, e2) =>
                     {
                         ((Order_User_Control)obj2).Qty += 1;
                         ((Order_User_Control)obj2).Sub_Total = ((Order_User_Control)obj2).Qty * ((Order_User_Control)obj2).Price;
+                        if (!Check_Negative_Qty())
+                        {
+                            ((Order_User_Control)obj2).Qty -= 1;
+                            ((Order_User_Control)obj2).Sub_Total = ((Order_User_Control)obj2).Qty * ((Order_User_Control)obj2).Price;
+                        }
                         Calculate_Total();
                     };
                     item2.Decrease_Event += (obj3, e2) =>
@@ -213,8 +225,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             if (Order_Nested_Flow_Layout_Panel.Controls.Count != 0)
             {
-                if (Create_a_Bill())
-                    MessageBox.Show("Successfully Saved");
+                Create_a_Bill();
+                MessageBox.Show("Successfully Saved");
             }
 
             else
@@ -225,54 +237,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             if (Order_Nested_Flow_Layout_Panel.Controls.Count != 0)
             {
-                if (Create_a_Bill())
-                {
-                    Bills_Form_and_Mdi_Forms.Print__Form.Print_Form Form = new Bills_Form_and_Mdi_Forms.Print__Form.Print_Form();
-                    Form.Show();
-                }
+                Create_a_Bill();
+
+                Bills_Form_and_Mdi_Forms.Print__Form.Print_Form Form = new Bills_Form_and_Mdi_Forms.Print__Form.Print_Form();
+                Form.Show();
+
             }
             else
                 MessageBox.Show("Insert Items To Your Bill First!!");
         }
-        bool Create_a_Bill()
+        void Create_a_Bill()
         {
 
-
-            Copy_Data_From_Orig_To_Test();
-            Formatter.Check_Connection(conn);
-            string Query = "";
-            foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())
+            if (Order_Nested_Flow_Layout_Panel.Controls.Count != 0)
             {
-                Query += $"EXEC CR.Decrease_Raw_Materials_Qty_Test @Item_Id={item.Id},@Qty={item.Qty};\r\n";
-            }
-            SqlCommand Decrease_From_Test = new SqlCommand(Query, conn);
-            Formatter.Check_Connection(conn);
-
-            conn.Open();
-            Decrease_From_Test.ExecuteNonQuery();
-            conn.Close();
-
-
-            SqlDataAdapter Check_Negative_Qty = new SqlDataAdapter("SELECT [Name],Qty FROM CR.Raw_Materials_Test Where Qty<0; \r\n", conn);
-            DataTable Negative_Qty = new DataTable();
-            Formatter.Check_Connection(conn);
-            conn.Open();
-            Check_Negative_Qty.Fill(Negative_Qty);
-            conn.Close();
-
-            if (Negative_Qty.Rows.Count > 0)
-            {
-                string Warning_Message = "You Need : ";
-                foreach (DataRow row in Negative_Qty.Rows)
-                {
-                    Warning_Message += $"{(-1 * (double)row[1])} Units more from {(string)row[0]}\n";
-                }
-                MessageBox.Show(Warning_Message + "\n To Create The Order");
                 Copy_Data_From_Orig_To_Test();
-                return false;
-            }
-            else
-            {
+                Formatter.Check_Connection(conn);
+                string Query = "";
 
 
                 foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())
@@ -304,11 +285,48 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 
                 Insert_Bills_Details_Query_Command.ExecuteNonQuery();
                 conn.Close();
-
-                return true;
             }
+            else
+                MessageBox.Show("Insert Items To Your Bill First!!");
+
+        }
+        bool Check_Negative_Qty()
+        {
+            Copy_Data_From_Orig_To_Test();
+            Formatter.Check_Connection(conn);
+            string Query = "";
+            foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())
+            {
+                Query += $"EXEC CR.Decrease_Raw_Materials_Qty_Test @Item_Id={item.Id},@Qty={item.Qty};\r\n";
+            }
+            SqlCommand Decrease_From_Test = new SqlCommand(Query, conn);
+            Formatter.Check_Connection(conn);
+
+            conn.Open();
+            Decrease_From_Test.ExecuteNonQuery();
+            conn.Close();
 
 
+            SqlDataAdapter Check_Negative_Qty = new SqlDataAdapter("SELECT [Name],Qty FROM CR.Raw_Materials_Test Where Qty<0; \r\n", conn);
+            DataTable Negative_Qty = new DataTable();
+            Formatter.Check_Connection(conn);
+            conn.Open();
+            Check_Negative_Qty.Fill(Negative_Qty);
+            conn.Close();
+            Copy_Data_From_Orig_To_Test();
+            if (Negative_Qty.Rows.Count > 0)
+            {
+                string Warning_Message = "You Need : ";
+                foreach (DataRow row in Negative_Qty.Rows)
+                {
+                    Warning_Message += $"{(-1 * (double)row[1])} Units more from {(string)row[0]}\n";
+                }
+                MessageBox.Show(Warning_Message + "\n To Create The Order");
+
+                return false;
+
+            }
+            return true;
 
         }
         void Calculate_Total()
@@ -358,6 +376,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
 
 
+
     }
+
+
+
 }
+
 
