@@ -113,7 +113,7 @@
             this.Remove_Button.CheckedState.Parent = this.Remove_Button;
             this.Remove_Button.CustomImages.Parent = this.Remove_Button;
             this.Remove_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Remove_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove_Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Button.ForeColor = System.Drawing.Color.White;
             this.Remove_Button.HoverState.Parent = this.Remove_Button;
             this.Remove_Button.Location = new System.Drawing.Point(259, 16);

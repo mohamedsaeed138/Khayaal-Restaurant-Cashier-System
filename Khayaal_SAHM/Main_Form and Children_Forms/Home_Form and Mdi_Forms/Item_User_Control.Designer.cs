@@ -73,6 +73,7 @@
             this.Price_Label.Name = "Price_Label";
             this.Price_Label.Size = new System.Drawing.Size(3, 2);
             this.Price_Label.TabIndex = 4;
+            this.Price_Label.Text = null;
             // 
             // Add_To_Order_Buttton
             // 
@@ -96,7 +97,7 @@
             this.Remove_Buttton.CheckedState.Parent = this.Remove_Buttton;
             this.Remove_Buttton.CustomImages.Parent = this.Remove_Buttton;
             this.Remove_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Remove_Buttton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove_Buttton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Buttton.ForeColor = System.Drawing.Color.White;
             this.Remove_Buttton.HoverState.Parent = this.Remove_Buttton;
             this.Remove_Buttton.Location = new System.Drawing.Point(117, 112);
