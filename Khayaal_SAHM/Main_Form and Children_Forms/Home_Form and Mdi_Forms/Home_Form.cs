@@ -335,7 +335,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
             {
-                Add_HF_Mdi_Form form = new Add_HF_Mdi_Form();
+                Add_Edit_HF_Mdi_Form form = new Add_Edit_HF_Mdi_Form();
                 form.MdiParent = this.Owner;
                 form.Referesh_Current_Form += (obj, ef) =>
                 {

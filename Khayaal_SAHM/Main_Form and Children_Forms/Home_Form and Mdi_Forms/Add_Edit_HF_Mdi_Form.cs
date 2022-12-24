@@ -8,13 +8,13 @@ using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
-    public partial class Add_HF_Mdi_Form : Form
+    public partial class Add_Edit_HF_Mdi_Form : Form
     {
         public event EventHandler Referesh_Current_Form = null;
         private DataTable dt = Select_Category_AS_Data_Table();
         private int Receivede_Item_Id;
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
-        public Add_HF_Mdi_Form(int id, string category, string name, string description, float unite_price)
+        public Add_Edit_HF_Mdi_Form(int id, string category, string name, string description, float unite_price)
         {
             InitializeComponent();
             Receivede_Item_Id = id;
@@ -23,18 +23,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             Fill_ComboBox(category);
             Description_Text_Box.Text = description;
         }
-        public Add_HF_Mdi_Form()
+        public Add_Edit_HF_Mdi_Form()
         {
             InitializeComponent();
             Fill_ComboBox();
         }
 
 
-        private void Add_Mdi_Form_load(object sender, EventArgs e)
-        {
-            Fill_ComboBox();
-
-        }
 
 
 
@@ -221,6 +216,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private void Add_HF_Mdi_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             Referesh_Current_Form?.Invoke(this, e);
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

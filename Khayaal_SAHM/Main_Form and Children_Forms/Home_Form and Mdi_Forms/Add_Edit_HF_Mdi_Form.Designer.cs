@@ -1,6 +1,6 @@
 ﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
-    partial class Add_HF_Mdi_Form
+    partial class Add_Edit_HF_Mdi_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_HF_Mdi_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Edit_HF_Mdi_Form));
             this.Unit_Price_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Description_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Item_Name_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Item_Description_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Unit_Price_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Name_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +46,8 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.New_Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Image_Picture_Box = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Choose_Image_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Image_Picture_Box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,15 +117,6 @@
             this.Item_Name_Lbl.Size = new System.Drawing.Size(143, 34);
             this.Item_Name_Lbl.TabIndex = 4;
             this.Item_Name_Lbl.Text = "Item Name : ";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(12, 117);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
-            this.guna2HtmlLabel2.TabIndex = 5;
-            this.guna2HtmlLabel2.Text = null;
             // 
             // Item_Description_Lbl
             // 
@@ -216,7 +208,7 @@
             this.Add_a_New_Cat_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Add_a_New_Cat_Lbl.Font = new System.Drawing.Font("Tahoma", 8F);
             this.Add_a_New_Cat_Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(3, 188);
+            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(276, 192);
             this.Add_a_New_Cat_Lbl.Name = "Add_a_New_Cat_Lbl";
             this.Add_a_New_Cat_Lbl.Size = new System.Drawing.Size(103, 15);
             this.Add_a_New_Cat_Lbl.TabIndex = 12;
@@ -259,10 +251,10 @@
             this.Add_Item_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Add_Item_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Item_Button.HoverState.Parent = this.Add_Item_Button;
-            this.Add_Item_Button.Location = new System.Drawing.Point(3, 477);
+            this.Add_Item_Button.Location = new System.Drawing.Point(191, 477);
             this.Add_Item_Button.Name = "Add_Item_Button";
             this.Add_Item_Button.ShadowDecoration.Parent = this.Add_Item_Button;
-            this.Add_Item_Button.Size = new System.Drawing.Size(526, 49);
+            this.Add_Item_Button.Size = new System.Drawing.Size(164, 49);
             this.Add_Item_Button.TabIndex = 6;
             this.Add_Item_Button.Text = "Add";
             this.Add_Item_Button.Click += new System.EventHandler(this.Add_Item_Button_Click);
@@ -313,8 +305,8 @@
             // 
             // Image_Picture_Box
             // 
-            this.Image_Picture_Box.BackColor = System.Drawing.Color.Silver;
-            this.Image_Picture_Box.BorderRadius = 10;
+            this.Image_Picture_Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Image_Picture_Box.BorderRadius = 20;
             this.Image_Picture_Box.Location = new System.Drawing.Point(276, 329);
             this.Image_Picture_Box.Name = "Image_Picture_Box";
             this.Image_Picture_Box.ShadowDecoration.Parent = this.Image_Picture_Box;
@@ -324,12 +316,30 @@
             this.Image_Picture_Box.TabStop = false;
             this.Image_Picture_Box.Click += new System.EventHandler(this.Image_Picture_Image_Click);
             // 
-            // Add_HF_Mdi_Form
+            // Choose_Image_Label
+            // 
+            this.Choose_Image_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Choose_Image_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.Choose_Image_Label.ForeColor = System.Drawing.Color.White;
+            this.Choose_Image_Label.Location = new System.Drawing.Point(6, 368);
+            this.Choose_Image_Label.Name = "Choose_Image_Label";
+            this.Choose_Image_Label.Size = new System.Drawing.Size(178, 34);
+            this.Choose_Image_Label.TabIndex = 21;
+            this.Choose_Image_Label.Text = "Choose Image :";
+            this.Choose_Image_Label.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // Add_Edit_HF_Mdi_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(550, 538);
+            this.Controls.Add(this.Choose_Image_Label);
             this.Controls.Add(this.Image_Picture_Box);
             this.Controls.Add(this.New_Category_Label);
             this.Controls.Add(this.guna2ControlBox1);
@@ -342,17 +352,15 @@
             this.Controls.Add(this.Name_Text_Box);
             this.Controls.Add(this.Unit_Price_Lbl);
             this.Controls.Add(this.Item_Description_Lbl);
-            this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.Item_Name_Lbl);
             this.Controls.Add(this.Description_Text_Box);
             this.Controls.Add(this.Unit_Price_Text_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Add_HF_Mdi_Form";
+            this.Name = "Add_Edit_HF_Mdi_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add_Mdi_Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_HF_Mdi_Form_FormClosed);
-            this.Load += new System.EventHandler(this.Add_Mdi_Form_load);
             ((System.ComponentModel.ISupportInitialize)(this.Image_Picture_Box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -363,7 +371,6 @@
         private Guna.UI2.WinForms.Guna2TextBox Unit_Price_Text_Box;
         private Guna.UI2.WinForms.Guna2TextBox Description_Text_Box;
         private Guna.UI2.WinForms.Guna2HtmlLabel Item_Name_Lbl;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel Item_Description_Lbl;
         private Guna.UI2.WinForms.Guna2HtmlLabel Unit_Price_Lbl;
         private Guna.UI2.WinForms.Guna2TextBox Name_Text_Box;
@@ -377,5 +384,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel New_Category_Label;
         private Guna.UI2.WinForms.Guna2PictureBox Image_Picture_Box;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Choose_Image_Label;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
