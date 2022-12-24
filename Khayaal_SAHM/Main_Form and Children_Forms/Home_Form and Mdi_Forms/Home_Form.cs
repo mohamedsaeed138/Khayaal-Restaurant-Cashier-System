@@ -18,7 +18,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             this.Controls.Clear();
             InitializeComponent();
-
             Fill_Item_Panel();
             Fill_Combo_Box();
 
@@ -58,7 +57,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             Formatter.Check_Connection(conn);
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Id,[Name],Category,Unit_Price,[Image],[Description] FROM CR.Items;", conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Id,[Name],Category,Unit_Price,[Image],[Description] FROM CR.Items ORDER BY Category,[Name] ;", conn);
             DataTable dt = new DataTable();
             conn.Open();
             da.Fill(dt);
@@ -198,7 +197,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
         void Clear_Order_Nested_Flow_Layout_Panel()
         {
+            Total_Label_Value.Text = "0";
             Order_Nested_Flow_Layout_Panel.Controls.Clear();
+
         }
 
         private void Save_Button_Click(object sender, EventArgs e)
@@ -333,7 +334,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
             if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
             {
-
+                Add_HF_Mdi_Form form = new Add_HF_Mdi_Form();
+                form.MdiParent = this.Owner;
+                form.Referesh_Current_Form += (obj, ef) =>
+                {
+                    this.Reload();
+                };
+                form.ShowDialog();
             }
             else
             {
