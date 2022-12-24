@@ -144,7 +144,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
 
 
-                    string Query = $"INSERT INTO CR.Raw_Materials ([Name],Category)\r\nVALUES(N'{Name}',N'{Category}') ;";
+                    string Query = $"INSERT INTO CR.Raw_Materials ([Name],Category,Qty)\r\nVALUES(N'{Name}',N'{Category}',0) ;";
                     SqlCommand Insert_Query = new SqlCommand(Query, conn);
                     try
                     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
@@ -21,8 +22,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
         }
         void Reload()
         {
+
+            Size old = this.Size;
             this.Controls.Clear();
+            this.Size = old;
             InitializeComponent();
+
             Sort_By_Combo_Box.SelectedIndex = 0;
             Fill_Combo_Box();
             Fill_Table($"select Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
@@ -118,15 +123,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             Choose_Query();
         }
 
-        private void Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Search_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-            //|| (Search_Text_Box.Text.Length > 1 && Search_Text_Box.Text[Search_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Search_Text_Box.Text.Length == 0))
 
-            // {
-            //     e.Handled = true;
-            // }
-        }
 
         private void Table_Croll_Bar_Scroll(object sender, ScrollEventArgs e)
         {
@@ -161,6 +158,45 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
         private void Sort_By_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
         {
             Choose_Query();
+        }
+
+        private void Add_Purchase_Button_Click(object sender, EventArgs e)
+        {
+            Add_PS_Mdi_Form form = new Add_PS_Mdi_Form();
+            form.MdiParent = this.Owner;
+            form.Referesh_Current_Form += (obj, ef) =>
+            {
+                this.Reload();
+            };
+            form.ShowDialog();
+        }
+
+        private void Purchases_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = Purchases_Table.Rows[e.RowIndex];
+
+
+
+                if (Purchases_Table.Columns[e.ColumnIndex].Name == "Delete")
+                {
+                    int id = (int)row.Cells[0].Value;
+                    try
+                    {
+                        string Query = $"DELETE CR.Purchases WHERE Id={id};";
+                        Formatter.Check_Connection(conn);
+                        SqlCommand Delete = new SqlCommand(Query, conn);
+                        conn.Open();
+                        Delete.ExecuteNonQuery();
+                        conn.Close();
+                        Choose_Query();
+                        MessageBox.Show("Successfully Done!");
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                }
+            }
+            catch { }
         }
     }
 }
