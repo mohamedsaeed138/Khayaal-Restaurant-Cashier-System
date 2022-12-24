@@ -134,7 +134,7 @@
             // 
             this.Edit_Buttton.BackColor = System.Drawing.Color.Transparent;
             this.Edit_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Edit_Buttton.BorderThickness = 1;
+            this.Edit_Buttton.BorderThickness = 2;
             this.Edit_Buttton.CheckedState.Parent = this.Edit_Buttton;
             this.Edit_Buttton.CustomImages.Parent = this.Edit_Buttton;
             this.Edit_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
