@@ -117,17 +117,18 @@
             this.Information_Button.CheckedState.Parent = this.Information_Button;
             this.Information_Button.CustomImages.Parent = this.Information_Button;
             this.Information_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Information_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Information_Button.ForeColor = System.Drawing.Color.White;
+            this.Information_Button.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Information_Button.HoverState.Parent = this.Information_Button;
-            this.Information_Button.Image = global::Khayaal_SAHM.Properties.Resources.Info_Icon;
-            this.Information_Button.ImageSize = new System.Drawing.Size(3, 7);
+            this.Information_Button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Information_Button.ImageSize = new System.Drawing.Size(5, 9);
             this.Information_Button.Location = new System.Drawing.Point(125, 2);
             this.Information_Button.Name = "Information_Button";
             this.Information_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Information_Button.ShadowDecoration.Parent = this.Information_Button;
-            this.Information_Button.Size = new System.Drawing.Size(11, 11);
+            this.Information_Button.Size = new System.Drawing.Size(15, 15);
             this.Information_Button.TabIndex = 8;
+            this.Information_Button.Text = "i";
             // 
             // Edit_Buttton
             // 
