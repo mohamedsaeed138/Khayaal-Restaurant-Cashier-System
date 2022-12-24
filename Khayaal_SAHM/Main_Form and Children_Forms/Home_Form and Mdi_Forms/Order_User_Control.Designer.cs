@@ -113,14 +113,14 @@
             this.Remove_Button.CheckedState.Parent = this.Remove_Button;
             this.Remove_Button.CustomImages.Parent = this.Remove_Button;
             this.Remove_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Remove_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Remove_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Button.ForeColor = System.Drawing.Color.White;
             this.Remove_Button.HoverState.Parent = this.Remove_Button;
-            this.Remove_Button.Location = new System.Drawing.Point(259, 19);
+            this.Remove_Button.Location = new System.Drawing.Point(259, 16);
             this.Remove_Button.Name = "Remove_Button";
             this.Remove_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Remove_Button.ShadowDecoration.Parent = this.Remove_Button;
-            this.Remove_Button.Size = new System.Drawing.Size(20, 20);
+            this.Remove_Button.Size = new System.Drawing.Size(24, 24);
             this.Remove_Button.TabIndex = 5;
             this.Remove_Button.Text = "x";
             this.Remove_Button.Click += new System.EventHandler(this.Remove_Button_Click);
@@ -128,18 +128,18 @@
             // Decrease_Button
             // 
             this.Decrease_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(203)))), ((int)(((byte)(103)))));
-            this.Decrease_Button.BorderThickness = 1;
+            this.Decrease_Button.BorderThickness = 2;
             this.Decrease_Button.CheckedState.Parent = this.Decrease_Button;
             this.Decrease_Button.CustomImages.Parent = this.Decrease_Button;
             this.Decrease_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Decrease_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Decrease_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Decrease_Button.ForeColor = System.Drawing.Color.White;
             this.Decrease_Button.HoverState.Parent = this.Decrease_Button;
-            this.Decrease_Button.Location = new System.Drawing.Point(195, 19);
+            this.Decrease_Button.Location = new System.Drawing.Point(195, 16);
             this.Decrease_Button.Name = "Decrease_Button";
             this.Decrease_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Decrease_Button.ShadowDecoration.Parent = this.Decrease_Button;
-            this.Decrease_Button.Size = new System.Drawing.Size(20, 20);
+            this.Decrease_Button.Size = new System.Drawing.Size(24, 24);
             this.Decrease_Button.TabIndex = 7;
             this.Decrease_Button.Text = "-";
             this.Decrease_Button.Click += new System.EventHandler(this.Decrease_Button_Click);
@@ -147,18 +147,18 @@
             // Increase_Button
             // 
             this.Increase_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(203)))), ((int)(((byte)(103)))));
-            this.Increase_Button.BorderThickness = 1;
+            this.Increase_Button.BorderThickness = 2;
             this.Increase_Button.CheckedState.Parent = this.Increase_Button;
             this.Increase_Button.CustomImages.Parent = this.Increase_Button;
             this.Increase_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Increase_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Increase_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Increase_Button.ForeColor = System.Drawing.Color.White;
             this.Increase_Button.HoverState.Parent = this.Increase_Button;
-            this.Increase_Button.Location = new System.Drawing.Point(129, 19);
+            this.Increase_Button.Location = new System.Drawing.Point(129, 16);
             this.Increase_Button.Name = "Increase_Button";
             this.Increase_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Increase_Button.ShadowDecoration.Parent = this.Increase_Button;
-            this.Increase_Button.Size = new System.Drawing.Size(20, 20);
+            this.Increase_Button.Size = new System.Drawing.Size(24, 24);
             this.Increase_Button.TabIndex = 8;
             this.Increase_Button.Text = "+";
             this.Increase_Button.Click += new System.EventHandler(this.Increase_Button_Click);
