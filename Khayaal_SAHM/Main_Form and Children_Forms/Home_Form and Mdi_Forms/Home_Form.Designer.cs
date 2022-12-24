@@ -85,7 +85,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Items_Nested_Flow_Layout_Panel.AutoScroll = true;
             this.Items_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Items_Nested_Flow_Layout_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Items_Nested_Flow_Layout_Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Items_Nested_Flow_Layout_Panel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Items_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(0, 8);
             this.Items_Nested_Flow_Layout_Panel.Name = "Items_Nested_Flow_Layout_Panel";
