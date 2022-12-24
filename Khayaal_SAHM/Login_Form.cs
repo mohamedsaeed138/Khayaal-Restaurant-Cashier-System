@@ -42,7 +42,7 @@ namespace Khayaal_SAHM
         }
         private void Enter_a_Login()
         {
-            String txt_user, txt_pass;
+            string txt_user, txt_pass;
             txt_user = Username.Text;
             txt_pass = Password.Text;
             try

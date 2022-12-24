@@ -297,13 +297,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 {
                     Insert_Bills_Details_Query += $"INSERT INTO CR.Bills_Details VALUES(CR.GET_Last_Bill_Serial(),{item.Id},{item.Qty},{item.Price},N'{item.Name}','{Current_Date}');\r\n";
                 }
+                Clear_Order_Nested_Flow_Layout_Panel();
                 Formatter.Check_Connection(conn);
                 SqlCommand Insert_Bills_Details_Query_Command = new SqlCommand(Insert_Bills_Details_Query, conn);
                 conn.Open();
 
                 Insert_Bills_Details_Query_Command.ExecuteNonQuery();
                 conn.Close();
-                Clear_Order_Nested_Flow_Layout_Panel();
+
                 return true;
             }
 
