@@ -5,6 +5,8 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
+
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
     public partial class Home_Form : Form
@@ -16,11 +18,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
         void Reload()
         {
+
             this.Controls.Clear();
             InitializeComponent();
+
             Fill_Item_Panel();
             Fill_Combo_Box();
 
+            Date_Time_Timer.Interval = 1000;
+            Date_Time_Timer.Tick += new EventHandler(Refreash_Time);
+
+            Date_Time_Timer.Enabled = true;
+
+        }
+
+        private void Refreash_Time(object sender, EventArgs e)
+        {
+            Date_Label.Text = DateTime.Now.ToString("ddd , dd MMM yyyy HH : mm : ss");
         }
 
         public void Fill_Combo_Box()
@@ -80,7 +94,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 {
                     if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                     {
-                        DialogResult r = MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
                         if (DialogResult.Yes == r)
                         {
                             Formatter.Check_Connection(conn);
@@ -90,7 +104,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                             Delete.ExecuteNonQuery();
                             conn.Close();
                             ((Item_User_Control)obj).Dispose();
-                            MessageBox.Show("Successfully Done!!");
+                            System.Windows.Forms.MessageBox.Show("Successfully Done!!");
                         }
 
                     }

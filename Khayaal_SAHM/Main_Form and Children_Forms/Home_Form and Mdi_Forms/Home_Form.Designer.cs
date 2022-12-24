@@ -57,6 +57,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Tool_Tip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.Date_Time_Timer = new System.Windows.Forms.Timer(this.components);
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
             this.Total_Nested_Panel.SuspendLayout();
@@ -266,7 +267,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // 
             this.Date_Label.AutoSize = false;
             this.Date_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Date_Label.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date_Label.ForeColor = System.Drawing.Color.White;
             this.Date_Label.Location = new System.Drawing.Point(12, 68);
             this.Date_Label.Name = "Date_Label";
@@ -414,6 +415,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Tool_Tip.TitleForeColor = System.Drawing.Color.White;
             this.Tool_Tip.ToolTipTitle = "Information";
             // 
+            // Date_Time_Timer
+            // 
+            this.Date_Time_Timer.Interval = 1000;
+            // 
             // Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,5 +473,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private Guna.UI2.WinForms.Guna2HtmlLabel Category_Label;
         public Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         public Guna.UI2.WinForms.Guna2HtmlToolTip Tool_Tip;
+        private System.Windows.Forms.Timer Date_Time_Timer;
     }
 }
