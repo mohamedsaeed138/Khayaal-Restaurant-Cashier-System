@@ -44,11 +44,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
             Bills_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
-                try
-                {
-                    Bills_Table.Rows.Add((int)row[0], (string)row[1], (double)row[2], (DateTime)row[3]);
-                }
-                catch (Exception) { }
+
+
+                Bills_Table.Rows.Add((int)row[0], (string)row[1], (double)row[2], (DateTime)row[3]);
+
+
             }
             try
             {
@@ -157,23 +157,28 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 
         private void Bills_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = Bills_Table.Rows[e.RowIndex];
-            if (Bills_Table.Columns[e.ColumnIndex].Name == "Print")
+            try
             {
-                Print__Form.Print_Form Form = new Print__Form.Print_Form((int)row.Cells[0].Value);
-                Form.Show();
-            }
-            else if (Bills_Table.Columns[e.ColumnIndex].Name == "Delete")
-            {
-                Formatter.Check_Connection(conn);
-                SqlCommand Delete = new SqlCommand($"DELETE CR.Bills_Details Where Serial_No={(int)row.Cells[0].Value};\nDELETE CR.Bills WHERE Serial_Number={(int)row.Cells[0].Value};", conn);
-                conn.Open();
-                Delete.ExecuteNonQuery();
+                DataGridViewRow row = Bills_Table.Rows[e.RowIndex];
+                if (Bills_Table.Columns[e.ColumnIndex].Name == "Print")
+                {
+                    Print__Form.Print_Form Form = new Print__Form.Print_Form((int)row.Cells[0].Value);
+                    Form.Show();
+                }
+                else if (Bills_Table.Columns[e.ColumnIndex].Name == "Delete")
+                {
+                    Formatter.Check_Connection(conn);
+                    SqlCommand Delete = new SqlCommand($"DELETE CR.Bills_Details Where Serial_No={(int)row.Cells[0].Value};\nDELETE CR.Bills WHERE Serial_Number={(int)row.Cells[0].Value};", conn);
+                    conn.Open();
+                    Delete.ExecuteNonQuery();
 
-                conn.Close();
-                Choose_Query();
-                MessageBox.Show("Successfully Done!");
+                    conn.Close();
+                    Choose_Query();
+                    MessageBox.Show("Successfully Done!");
+                }
             }
+            catch { }
+
 
         }
     }
