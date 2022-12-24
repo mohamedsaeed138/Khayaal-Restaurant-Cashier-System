@@ -9,13 +9,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private int id;
         private string name;
         private double price;
-        private double qty;
+        private int qty;
         private Image image;
         private double sub_total;
         public int Id { get { return id; } set { id = value; } }
         public new string Name { get { return name; } set { name = value; Name_Label.Text = value; } }
         public double Price { get { return price; } set { price = value; Price_Label.Text = $"{value}"; } }
-        public double Qty { get { return qty; } set { qty = value; Qty_Label.Text = $"{value}"; } }
+        public int Qty { get { return qty; } set { qty = value; Qty_Label.Text = $"{value}"; } }
         public double Sub_Total { get { return sub_total; } set { sub_total = value; Sub_Total_Label.Text = $"{value}"; } }
 
         public Image Image { get { return image; } set { image = value; Image_Picture_Box.Image = value; } }
