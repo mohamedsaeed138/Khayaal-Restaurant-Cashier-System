@@ -326,7 +326,6 @@
             this.Choose_Image_Label.Size = new System.Drawing.Size(178, 34);
             this.Choose_Image_Label.TabIndex = 21;
             this.Choose_Image_Label.Text = "Choose Image :";
-            this.Choose_Image_Label.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // bunifuElipse1
             // 

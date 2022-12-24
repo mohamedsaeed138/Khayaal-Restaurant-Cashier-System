@@ -104,8 +104,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 {
                     if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                     {
-                        Formatter.Check_Connection(conn);
-
+                        Item_User_Control i = (Item_User_Control)obj;
+                        Add_Edit_HF_Mdi_Form form = new Add_Edit_HF_Mdi_Form(i.Name, $"{i.Price}", $"{i.Description}", $"{i.Category}", i.Image, i.Id);
+                        form.MdiParent = this.Owner;
+                        form.Referesh_Current_Form += (obj2, ef) =>
+                        {
+                            this.Reload();
+                        };
+                        form.ShowDialog();
                     }
                     else
                     {

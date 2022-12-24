@@ -10,26 +10,40 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
     public partial class Add_Edit_HF_Mdi_Form : Form
     {
+        int id;
+        bool Add = true;
         public event EventHandler Referesh_Current_Form = null;
         private DataTable dt = Select_Category_AS_Data_Table();
-        private int Receivede_Item_Id;
+
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
         public Add_Edit_HF_Mdi_Form(int id, string category, string name, string description, float unite_price)
         {
-            InitializeComponent();
-            Receivede_Item_Id = id;
-            Name_Text_Box.Text = name;
-            Unit_Price_Text_Box.Text = $"{unite_price}";
-            Fill_ComboBox(category);
-            Description_Text_Box.Text = description;
+
+
         }
         public Add_Edit_HF_Mdi_Form()
         {
+            Reload();
+        }
+        public Add_Edit_HF_Mdi_Form(string name, string price, string description, string category, Image image, int id)
+        {
+            Add = false;
+            Reload();
+            this.id = id;
+            Name_Text_Box.Text = name;
+            Unit_Price_Text_Box.Text = $"{price}";
+            Description_Text_Box.Text = description;
+            Category_Combo_Box.Text = category;
+            Image_Picture_Box.Image = image;
+            Add_Item_Button.Text = "Edit";
+        }
+
+        void Reload()
+        {
+            this.Controls.Clear();
             InitializeComponent();
             Fill_ComboBox();
         }
-
-
 
 
 
@@ -172,38 +186,77 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 string Price = Formatter.Float(Unit_Price_Text_Box.Text);
                 string Description = Formatter.String(Description_Text_Box.Text);
                 Image Image = Image_Picture_Box.Image;
-
-                Formatter.Check_Connection(conn);
                 if (Image_Picture_Box.Image == null)
                     Image = Resources.Food_Drink_Template;
-                string Query = $"INSERT INTO CR.Items([Name],Category,Unit_Price,[Description])\r\nVALUES(N'{Name}',N'{Category}',{Price},N'{Description}') ;";
-                SqlCommand Insert_Query = new SqlCommand(Query, conn);
-                try
+                Formatter.Check_Connection(conn);
+                if (Add)
                 {
-                    SqlCommand Insert_Image = new SqlCommand($"Update CR.Items SET Image = @Image WHERE Name =N'{Name}';", conn);
-                    Insert_Image.CommandType = CommandType.Text;
-                    Insert_Image.Parameters.AddWithValue("@Image", ImageToByteArray(Image));
 
 
-                    Formatter.Check_Connection(conn);
-                    conn.Open();
 
-                    Insert_Query.ExecuteNonQuery();
-                    Insert_Image.ExecuteNonQuery();
-                    conn.Close();
-                    this.Close();
 
-                    MessageBox.Show("Successfully Done");
+                    string Query = $"INSERT INTO CR.Items([Name],Category,Unit_Price,[Description])\r\nVALUES(N'{Name}',N'{Category}',{Price},N'{Description}') ;";
+                    SqlCommand Insert_Query = new SqlCommand(Query, conn);
+                    try
+                    {
+                        SqlCommand Insert_Image = new SqlCommand($"Update CR.Items SET Image = @Image WHERE Name =N'{Name}';", conn);
+                        Insert_Image.CommandType = CommandType.Text;
+                        Insert_Image.Parameters.AddWithValue("@Image", ImageToByteArray(Image));
+
+
+                        Formatter.Check_Connection(conn);
+                        conn.Open();
+
+                        Insert_Query.ExecuteNonQuery();
+                        Insert_Image.ExecuteNonQuery();
+                        conn.Close();
+                        this.Close();
+
+                        MessageBox.Show("Successfully Done");
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
-
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
 
-                }
-                finally
-                {
-                    conn.Close();
+                    string Query = $"Update CR.Items SET Category = N'{Category}',Name=N'{Name}',Unit_Price={Price},Description=N'{Description}' WHERE Id ={id};";
+                    SqlCommand Update_Query = new SqlCommand(Query, conn);
+                    try
+                    {
+                        SqlCommand Update_Image = new SqlCommand($"Update CR.Items SET Image = @Image WHERE Id ={id};", conn);
+                        Update_Image.CommandType = CommandType.Text;
+                        Update_Image.Parameters.AddWithValue("@Image", ImageToByteArray(Image));
+
+
+                        Formatter.Check_Connection(conn);
+                        conn.Open();
+
+                        Update_Query.ExecuteNonQuery();
+                        Update_Image.ExecuteNonQuery();
+                        conn.Close();
+                        this.Close();
+
+                        MessageBox.Show("Successfully Done");
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
 
             }
@@ -218,9 +271,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             Referesh_Current_Form?.Invoke(this, e);
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
