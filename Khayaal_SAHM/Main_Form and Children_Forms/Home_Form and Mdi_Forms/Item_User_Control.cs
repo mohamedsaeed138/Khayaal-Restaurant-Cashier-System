@@ -27,10 +27,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             InitializeComponent();
         }
 
-        public override string ToString()
-        {
-            return $"Name : {Name}";
-        }
+        public override string ToString() => $"Name : {Name},Category : {Category},Price : {Price} ,Description : {Description}";
+
+
+
+
 
         private void Add_To_Order_Buttton_Click(object sender, System.EventArgs e)
         {

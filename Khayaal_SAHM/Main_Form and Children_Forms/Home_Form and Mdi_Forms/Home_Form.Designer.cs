@@ -56,6 +56,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Tool_Tip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
             this.Total_Nested_Panel.SuspendLayout();
@@ -405,6 +406,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.bunifuElipse3.ElipseRadius = 10;
             this.bunifuElipse3.TargetControl = this.Items_Nested_Flow_Layout_Panel;
             // 
+            // Tool_Tip
+            // 
+            this.Tool_Tip.AllowLinksHandling = true;
+            this.Tool_Tip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Tool_Tip.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Tool_Tip.TitleForeColor = System.Drawing.Color.White;
+            this.Tool_Tip.ToolTipTitle = "Information";
+            // 
             // Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,5 +467,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private Guna.UI2.WinForms.Guna2Button Save_Button;
         private Guna.UI2.WinForms.Guna2HtmlLabel Category_Label;
         public Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        public Guna.UI2.WinForms.Guna2HtmlToolTip Tool_Tip;
     }
 }

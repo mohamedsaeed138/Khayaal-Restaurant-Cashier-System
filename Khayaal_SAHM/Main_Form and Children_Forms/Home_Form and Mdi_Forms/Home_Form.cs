@@ -73,7 +73,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 Item.Price = (double)row[3];
                 Item.Image = Image.FromStream(new MemoryStream((byte[])row[4]));
                 Item.Description = (string)row[5];
-
+                Tool_Tip.SetToolTip(Item.Controls["Information_Button"], Item.ToString());
 
                 Items_Nested_Flow_Layout_Panel.Controls.Add(Item);
                 Item.Remove_Event += (obj, e) =>
@@ -349,6 +349,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             }
 
         }
+
+
     }
 }
 

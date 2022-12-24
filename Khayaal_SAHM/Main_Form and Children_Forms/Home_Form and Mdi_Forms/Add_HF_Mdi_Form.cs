@@ -169,10 +169,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
         private void Add_Item_Button_Click(object sender, EventArgs e)
         {
-            //command.CommandText = "INSERT INTO table VALUES (@VALUE)";
-            //command.Parameters.Add(new VerticaParameter("VALUE", VerticaType.Binary));
-            //command.Parameters["VALUE"].Value = bytes;
-            if (Name_Text_Box.Text != "" && Unit_Price_Text_Box.Text != "" && Description_Text_Box.Text != "")
+
+            if (Name_Text_Box.Text != "" && Unit_Price_Text_Box.Text != "")
             {
                 string Name = Formatter.String(Name_Text_Box.Text);
                 string Category = Formatter.String(Category_Combo_Box.Text);
