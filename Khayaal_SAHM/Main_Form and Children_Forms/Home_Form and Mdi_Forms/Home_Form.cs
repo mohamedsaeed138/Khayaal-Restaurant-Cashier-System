@@ -268,22 +268,21 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 Copy_Data_From_Orig_To_Test();
                 Formatter.Check_Connection(conn);
                 string Query = "";
-
-
                 foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())
                 {
                     Query += $"EXEC CR.Decrease_Raw_Materials_Qty @Item_Id={item.Id},@Qty={item.Qty};\r\n";
-                    SqlCommand Decrease_From_Orig = new SqlCommand(Query, conn);
-                    Formatter.Check_Connection(conn);
-
-                    conn.Open();
-                    Decrease_From_Orig.ExecuteNonQuery();
-                    conn.Close();
                 }
-                Copy_Data_From_Orig_To_Test();
+                SqlCommand Decrease_From_Orig = new SqlCommand(Query, conn);
                 Formatter.Check_Connection(conn);
+
+                conn.Open();
+                Decrease_From_Orig.ExecuteNonQuery();
+                conn.Close();
+                Copy_Data_From_Orig_To_Test();
+
                 string Current_Date = Formatter.Date_Formating(DateTime.Now);
                 SqlCommand Create_a_Bill = new SqlCommand($" INSERT INTO CR.Bills VALUES('{Current_Date}',CR.Get_Last_User_Name_Logged());\r\n", conn);
+                Formatter.Check_Connection(conn);
                 conn.Open();
                 Create_a_Bill.ExecuteNonQuery();
                 conn.Close();
