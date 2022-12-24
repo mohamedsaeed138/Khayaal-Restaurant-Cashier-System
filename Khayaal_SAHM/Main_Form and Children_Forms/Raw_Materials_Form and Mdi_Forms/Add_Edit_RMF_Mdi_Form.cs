@@ -7,46 +7,41 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 {
     public partial class Add_Edit_RMF_Mdi_Form : Form
     {
-
+        int id;
+        bool Add = true;
+        public event EventHandler Referesh_Current_Form = null;
         private DataTable dt = Select_Category_AS_Data_Table();
-        private int Receivede_Item_Id;
+
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
-        public Add_Edit_RMF_Mdi_Form(int id, string category, string name)
-        {
-            InitializeComponent();
-            Receivede_Item_Id = id;
-            Raw_Material_Name_Text_Box.Text = name;
 
-            Fill_ComboBox(category);
-
-        }
         public Add_Edit_RMF_Mdi_Form()
         {
+            Reload();
+        }
+        public Add_Edit_RMF_Mdi_Form(string name, string category, int id)
+        {
+            Add = false;
+            Reload();
+            this.id = id;
+            Name_Text_Box.Text = name;
+
+            Category_Combo_Box.Text = category;
+
+            Add_Raw_Button.Text = "Edit";
+        }
+
+        void Reload()
+        {
+            this.Controls.Clear();
             InitializeComponent();
             Fill_ComboBox();
         }
-
-
-        private void Add_Mdi_Form_load(object sender, EventArgs e)
-        {
-            Fill_ComboBox();
-
-        }
-
-
-
-
-
-
-
-
-
 
         private void Fill_ComboBox(string Category = null)
         {
 
             if (Category != null && dt != null)
-                dt.Rows.Add(Add_Category_Text_Box.Text);
+                dt.Rows.Add(Category);
             Category_Combo_Box.DataSource = dt;
             Category_Combo_Box.DisplayMember = "Category";
             if (Category != null)
@@ -63,8 +58,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         {
             if (Add_Category_Text_Box.Text != String.Empty)
             {
-                if (Ensure_No_Duplicated_Categories(Add_Category_Text_Box.Text))
-                    Fill_ComboBox(Add_Category_Text_Box.Text);
+                string Category = Formatter.String(Add_Category_Text_Box.Text);
+                if (Ensure_No_Duplicated_Categories(Category))
+                    Fill_ComboBox(Category);
                 else
                 {
 
@@ -93,10 +89,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
             return existed;
 
         }
-        private void Item_Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        private void Raw_Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Raw_Material_Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-           || (Raw_Material_Name_Text_Box.Text.Length > 1 && Raw_Material_Name_Text_Box.Text[Raw_Material_Name_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Raw_Material_Name_Text_Box.Text.Length == 0))
+            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+           || (Name_Text_Box.Text.Length > 1 && Name_Text_Box.Text[Name_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
@@ -114,13 +110,107 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         }
         private static DataTable Select_Category_AS_Data_Table()
         {
-
+            conn.Open();
             string sql = "select Category from CR.Raw_Materials GROUP BY Category";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            conn.Close();
             return dt;
 
+        }
+
+
+
+
+
+        private void Add_RMF_Mdi_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Referesh_Current_Form?.Invoke(this, e);
+        }
+
+        private void Add_Raw_Button_Click_1(object sender, EventArgs e)
+        {
+
+            if (Name_Text_Box.Text != "")
+            {
+                string Name = Formatter.String(Name_Text_Box.Text);
+                string Category = Formatter.String(Category_Combo_Box.Text);
+
+                Formatter.Check_Connection(conn);
+                if (Add)
+                {
+
+
+
+
+                    string Query = $"INSERT INTO CR.Raw_Materials ([Name],Category)\r\nVALUES(N'{Name}',N'{Category}') ;";
+                    SqlCommand Insert_Query = new SqlCommand(Query, conn);
+                    try
+                    {
+
+                        Formatter.Check_Connection(conn);
+                        conn.Open();
+
+                        Insert_Query.ExecuteNonQuery();
+
+                        conn.Close();
+                        this.Close();
+
+                        MessageBox.Show("Successfully Done");
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+                else
+                {
+
+                    string Query = $"Update CR.Raw_Materials SET Category = N'{Category}',Name=N'{Name}'  WHERE Id ={id};";
+                    SqlCommand Update_Query = new SqlCommand(Query, conn);
+                    try
+                    {
+
+
+                        Formatter.Check_Connection(conn);
+                        conn.Open();
+
+                        Update_Query.ExecuteNonQuery();
+
+                        conn.Close();
+                        this.Close();
+
+                        MessageBox.Show("Successfully Done");
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Fill Empty Fields");
+            }
+        }
+
+        private void Add_Edit_RMF_Mdi_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Referesh_Current_Form?.Invoke(this, e);
         }
     }
 }

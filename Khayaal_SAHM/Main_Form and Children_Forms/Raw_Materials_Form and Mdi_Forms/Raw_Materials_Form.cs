@@ -203,5 +203,53 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         {
             Choose_Query();
         }
+
+        private void Add_Button_Click(object sender, EventArgs e)
+        {
+            Add_Edit_RMF_Mdi_Form form = new Add_Edit_RMF_Mdi_Form();
+            form.MdiParent = this.Owner;
+            form.Referesh_Current_Form += (obj, ef) =>
+            {
+                this.Reload();
+            };
+            form.ShowDialog();
+        }
+
+        private void Raw_Material_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = Raw_Material_Table.Rows[e.RowIndex];
+                string name = (string)row.Cells[0].Value;
+                string category = (string)row.Cells[1].Value;
+                int id = (int)row.Cells[3].Value;
+                if (Raw_Material_Table.Columns[e.ColumnIndex].Name == "Edit")
+                {
+                    Add_Edit_RMF_Mdi_Form form = new Add_Edit_RMF_Mdi_Form(name, category, id);
+                    form.MdiParent = this.Owner;
+                    form.Referesh_Current_Form += (obj2, ef) =>
+                    {
+                        this.Reload();
+                    };
+                    form.ShowDialog();
+                }
+                else if (Raw_Material_Table.Columns[e.ColumnIndex].Name == "Delete")
+                {
+                    try
+                    {
+                        string Query = $"DELETE CR.Items_Relations WHERE Raw_Id={id};\nDELETE CR.Raw_Materials Where Id={id};";
+                        Formatter.Check_Connection(conn);
+                        SqlCommand Delete = new SqlCommand(Query, conn);
+                        conn.Open();
+                        Delete.ExecuteNonQuery();
+                        conn.Close();
+                        Choose_Query();
+                        MessageBox.Show("Successfully Done!");
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                }
+            }
+            catch { }
+        }
     }
 }
