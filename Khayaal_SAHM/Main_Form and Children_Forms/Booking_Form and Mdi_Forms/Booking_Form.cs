@@ -17,21 +17,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
         public Booking_Form()
         {
+            InitializeComponent();
             Reload();
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
 
         }
         void Reload()
         {
-            this.Controls.Clear();
-
-            InitializeComponent();
-            Fill_Combo_Boxes();
+            Fill_Combo_Box();
             Fill_Table($"SELECT * FROM CR.Tables_Booking_Details ORDER BY [From]");
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
-
         }
-        public void Fill_Combo_Boxes()
+        public void Fill_Combo_Box()
         {
+            Table_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
             conn.Open();
             string sql = "SELECT [Number] FROM CR.Tables ORDER BY [Number]";
@@ -201,19 +199,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             {
                 if (Delete_Table_Text_Box.Text != string.Empty)
                 {
-                    if (ConnectionState.Open == conn.State)
+                    DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == r)
+                    {
+                        Formatter.Check_Connection(conn);
+                        string Table = Delete_Table_Text_Box.Text;
+                        string Query = $"DELETE FROM CR.Tables_Booking_Details WHERE [Table_No]= {Table} ;";
+                        SqlCommand sqlCommand = new SqlCommand(Query, conn);
+                        conn.Open();
+                        try { sqlCommand.ExecuteNonQuery(); }
+                        catch { MessageBox.Show(Table); }
+                        sqlCommand = new SqlCommand($"DELETE FROM CR.Tables WHERE [Number]= {Table};", conn);
+                        sqlCommand.ExecuteNonQuery();
                         conn.Close();
-                    string Table = Delete_Table_Text_Box.Text;
-                    string Query = $"DELETE FROM CR.Tables_Booking_Details WHERE [Table_No]= {Table} ;";
-                    SqlCommand sqlCommand = new SqlCommand(Query, conn);
-                    conn.Open();
-                    try { sqlCommand.ExecuteNonQuery(); }
-                    catch { MessageBox.Show(Table); }
-                    sqlCommand = new SqlCommand($"DELETE FROM CR.Tables WHERE [Number]= {Table};", conn);
-                    sqlCommand.ExecuteNonQuery();
-                    conn.Close();
 
-                    Reload();
+                        Reload();
+                    }
+
                 }
             }
         }
