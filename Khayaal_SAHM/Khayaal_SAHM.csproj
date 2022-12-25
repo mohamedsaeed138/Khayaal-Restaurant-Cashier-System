@@ -55,8 +55,7 @@
     </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Screenshot %28501%291668896236.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
@@ -493,6 +492,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Screenshot %28501%291668896236.ico" />
     <None Include="Resources\Info_Icon.png" />
     <None Include="Resources\Edit_Item_Icon.png" />
     <Content Include="Resources\Food_Dirnk _Template.jpg" />
