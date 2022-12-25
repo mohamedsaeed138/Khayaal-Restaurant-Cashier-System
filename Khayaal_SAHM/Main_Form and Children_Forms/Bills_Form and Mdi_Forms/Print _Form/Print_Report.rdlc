@@ -196,13 +196,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.8037in</Width>
+              <Width>1.60255in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.43912in</Width>
+              <Width>0.98079in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.43912in</Width>
+              <Width>0.8926in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.43912in</Width>
@@ -225,7 +225,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -234,6 +236,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -255,7 +258,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox4</rd:DefaultName>
@@ -264,6 +269,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -285,7 +291,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -294,6 +302,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -315,7 +324,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -324,6 +335,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -350,7 +362,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Name</rd:DefaultName>
@@ -359,6 +373,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -380,7 +395,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Unit_Price</rd:DefaultName>
@@ -389,6 +406,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -410,7 +428,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Qty</rd:DefaultName>
@@ -419,6 +439,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -440,7 +461,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Sub_Total</rd:DefaultName>
@@ -449,6 +472,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -483,7 +507,7 @@
         <Top>2.03in</Top>
         <Left>0.17583in</Left>
         <Height>0.5in</Height>
-        <Width>5.12106in</Width>
+        <Width>4.91506in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -634,19 +658,22 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Total_With_Tax</rd:DefaultName>
         <Top>4.06771in</Top>
-        <Left>0.78in</Left>
+        <Left>1.08208in</Left>
         <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Width>1.22917in</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -664,7 +691,9 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -677,6 +706,7 @@
           <Border>
             <Style>None</Style>
           </Border>
+          <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -694,19 +724,22 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>4.06771in</Top>
         <Left>0.17583in</Left>
         <Height>0.25in</Height>
-        <Width>0.45995in</Width>
+        <Width>0.8037in</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -724,19 +757,22 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
         <Top>3.53646in</Top>
         <Left>1.04897in</Left>
         <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Width>1.26228in</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>

@@ -47,25 +47,28 @@ namespace Khayaal_SAHM
             txt_pass = Password.Text;
             try
             {
-                LoginCon.Open();
                 SqlCommand Verify_Login_Command = new SqlCommand($"Select * From CR.Users WHERE User_Name =N'{txt_user}' AND Password=N'{txt_pass}';", LoginCon);
                 SqlDataAdapter loginQ_adapter = new SqlDataAdapter(Verify_Login_Command);
                 DataTable loginQ_DT = new DataTable();
+                LoginCon.Open();
                 loginQ_adapter.Fill(loginQ_DT);
+                LoginCon.Close();
                 if (loginQ_DT.Rows.Count > 0)
                 {
                     txt_user = Username.Text;
                     txt_pass = Password.Text;
-                    SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;", LoginCon);
+                    SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(User_Name, Date)VALUES(N'{txt_user}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
+                    LoginCon.Open();
                     loginCOM.ExecuteNonQuery();
-                    loginCOM = new SqlCommand($"INSERT INTO CR.Users_Login_History(User_Name, Date)VALUES(N'{txt_user}', GETDATE());", LoginCon);
-                    loginCOM.ExecuteNonQuery();
+                    LoginCon.Close();
 
+
+                    this.Close();
                     Thread Mainformthread = new Thread(Mainformstart);
                     Mainformthread.SetApartmentState(ApartmentState.STA);
                     Mainformthread.Start();
 
-                    this.Close();
+
                 }
                 else
                 {

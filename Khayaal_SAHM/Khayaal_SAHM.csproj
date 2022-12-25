@@ -466,7 +466,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Khayaal_SAHM_TemporaryKey.pfx" />
     <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
