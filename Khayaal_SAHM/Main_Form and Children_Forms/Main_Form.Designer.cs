@@ -421,7 +421,6 @@
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Form";
-            this.Shown += new System.EventHandler(this.Main_Form_Shown);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Home_ON)).EndInit();

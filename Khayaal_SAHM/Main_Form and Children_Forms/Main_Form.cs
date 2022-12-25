@@ -78,11 +78,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
 
         private void Btn_Minimize_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Minimized;
-            }
-
+            WindowState = FormWindowState.Minimized;
         }
 
 
