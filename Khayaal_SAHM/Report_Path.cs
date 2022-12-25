@@ -7,7 +7,7 @@
     /// </summary>
     public class Report_Path
     {
-        public const string Value = HS;
+        public const string Value = MS;
         private const string HS = @"C:\Users\User\Documents\GitHub\SAHM\Khayaal_SAHM\Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Report.rdlc";
         private const string AR = @"";
         private const string KS = @"";

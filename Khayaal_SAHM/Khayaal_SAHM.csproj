@@ -16,7 +16,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>E:\SAHM Project\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,9 +26,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>SAHM</ProductName>
+    <PublisherName>Mohamed Saeed</PublisherName>
+    <SuiteName>SAHM Accountant Managment</SuiteName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <ApplicationVersion>0.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -58,6 +63,18 @@
     <ApplicationIcon>Screenshot %28501%291668896236.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EBB6E4B9816E08A22EB37A571853651B8CEF9CAB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Khayaal_SAHM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Azure.Core, Version=1.26.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Core.1.26.0\lib\net461\Azure.Core.dll</HintPath>
@@ -446,6 +463,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Khayaal_SAHM_TemporaryKey.pfx" />
     <None Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -495,7 +513,6 @@
     <Content Include="Screenshot %28501%291668896236.ico" />
     <None Include="Resources\Info_Icon.png" />
     <None Include="Resources\Edit_Item_Icon.png" />
-    <Content Include="Resources\Food_Dirnk _Template.jpg" />
     <None Include="Resources\Frame 42.png" />
     <None Include="Resources\Frame 41.png" />
     <None Include="Resources\Frame 40.png" />
@@ -525,9 +542,9 @@
     <None Include="Resources\Button.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\Image_Khayaal.Image.png" />
-    <EmbeddedResource Include="DataBase\Restaurant_Cafe.mdf">
+    <Content Include="DataBase\Restaurant_Cafe.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Content>
     <Content Include="DataBase\Restaurant_Cafe_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Restaurant_Cafe.mdf</DependentUpon>
