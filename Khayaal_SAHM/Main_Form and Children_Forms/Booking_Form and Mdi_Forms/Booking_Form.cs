@@ -19,6 +19,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         {
             InitializeComponent();
             Reload();
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+            To_Date_Picker.Value = DateTime.Now.AddYears(10);
 
 
         }
@@ -26,10 +28,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         {
             Fill_Combo_Box();
             Fill_Table($"SELECT * FROM CR.Tables_Booking_Details ORDER BY [From]");
-            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
-                To_Date_Picker.Value = DateTime.Now;
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
-            To_Date_Picker.Value = DateTime.Now;
+
+
         }
         public void Fill_Combo_Box()
         {
@@ -263,6 +263,57 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                 this.Reload();
             }
 
+        }
+
+        private void Booking_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = Booking_Table.Rows[e.RowIndex];
+                int table = (int)row.Cells[0].Value;
+                string name = (string)row.Cells[1].Value;
+
+                string from = Formatter.Date_Formating((DateTime)row.Cells[2].Value);
+                string to = Formatter.Date_Formating((DateTime)row.Cells[3].Value);
+                int id = (int)row.Cells[4].Value;
+                if (Booking_Table.Columns[e.ColumnIndex].Name == "Edit")
+                {
+                    Add_Edit_BG_Mdi_Form form = new Add_Edit_BG_Mdi_Form(name, from, to, table, id);
+                    form.MdiParent = this.Owner;
+                    form.Referesh_Current_Form += (obj2, ef) =>
+                    {
+                        this.Reload();
+                    };
+                    form.ShowDialog();
+                }
+                else if (Booking_Table.Columns[e.ColumnIndex].Name == "Delete")
+                {
+                    try
+                    {
+                        string Query = $"DELETE CR.Tables_Booking_Details WHERE Id={id};\n";
+                        Formatter.Check_Connection(conn);
+                        SqlCommand Delete = new SqlCommand(Query, conn);
+                        conn.Open();
+                        Delete.ExecuteNonQuery();
+                        conn.Close();
+                        Choose_Query();
+                        MessageBox.Show("Successfully Done!");
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void Add_Booking_Button_Click(object sender, EventArgs e)
+        {
+            Add_Edit_BG_Mdi_Form form = new Add_Edit_BG_Mdi_Form();
+            form.MdiParent = this.Owner;
+            form.Referesh_Current_Form += (obj, ef) =>
+            {
+                this.Reload();
+            };
+            form.ShowDialog();
         }
     }
 }

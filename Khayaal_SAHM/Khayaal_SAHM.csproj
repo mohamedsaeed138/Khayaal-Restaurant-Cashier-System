@@ -257,6 +257,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Add_Edit_BG_Mdi_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Add_Edit_BG_Mdi_Form.Designer.cs">
+      <DependentUpon>Add_Edit_BG_Mdi_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Home_Form and Mdi_Forms\Order_User_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -392,6 +398,9 @@
       <DependentUpon>Print_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\Print_Report.rdlc" />
+    <EmbeddedResource Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Add_Edit_BG_Mdi_Form.resx">
+      <DependentUpon>Add_Edit_BG_Mdi_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Booking_Form and Mdi_Forms\Booking_Form.resx">
       <DependentUpon>Booking_Form.cs</DependentUpon>
     </EmbeddedResource>

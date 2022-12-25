@@ -6,7 +6,7 @@ using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 {
-    public partial class Add_PS_Mdi_Form : Form
+    public partial class Add_BG_Mdi_Form : Form
     {
 
 
@@ -15,7 +15,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
 
-        public Add_PS_Mdi_Form()
+        public Add_BG_Mdi_Form()
         {
             Reload();
         }
@@ -105,7 +105,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
                     Insert_Query.ExecuteNonQuery();
 
                     conn.Close();
-                    this.Close();
+                    Qty_Text_Box.Text = "";
+                    Unit_Price_Text_Box.Text = "";
+                    Notes_Text_Box.Text = "";
 
                     MessageBox.Show("Successfully Done");
                 }

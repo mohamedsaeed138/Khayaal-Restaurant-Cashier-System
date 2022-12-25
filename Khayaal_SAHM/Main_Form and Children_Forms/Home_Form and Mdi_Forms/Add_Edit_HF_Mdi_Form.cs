@@ -210,14 +210,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                         Insert_Query.ExecuteNonQuery();
                         Insert_Image.ExecuteNonQuery();
                         conn.Close();
-                        this.Close();
+                        Name_Text_Box.Text = "";
+                        Unit_Price_Text_Box.Text = "";
+                        Description_Text_Box.Text = "";
+
+                        Image_Picture_Box.Image = null;
 
                         MessageBox.Show("Successfully Done");
                     }
 
-                    catch (Exception ex)
+                    catch
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There is an Item With Same Name");
 
                     }
                     finally
@@ -248,9 +252,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                         MessageBox.Show("Successfully Done");
                     }
 
-                    catch (Exception ex)
+                    catch
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There is an Item With Same Name");
 
                     }
                     finally

@@ -1,6 +1,6 @@
 ﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 {
-    partial class Add_PS_Mdi_Form
+    partial class Add_BG_Mdi_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_PS_Mdi_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_BG_Mdi_Form));
             this.Unit_Price_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Item_Name_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Unit_Price_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -233,7 +233,7 @@
             this.Notes_Label.TabIndex = 25;
             this.Notes_Label.Text = "Notes : ";
             // 
-            // Add_PS_Mdi_Form
+            // Add_BG_Mdi_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -251,7 +251,7 @@
             this.Controls.Add(this.Unit_Price_Text_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Add_PS_Mdi_Form";
+            this.Name = "Add_BG_Mdi_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add_Mdi_Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_PS_Mdi_Form_FormClosed);

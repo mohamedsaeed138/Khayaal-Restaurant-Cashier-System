@@ -279,11 +279,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnExpr1;
+            private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnExpr2;
+            private global::System.Data.DataColumn columnSub_Total;
             
-            private global::System.Data.DataColumn columnExpr3;
+            private global::System.Data.DataColumn columnUnit_Price;
+            
+            private global::System.Data.DataColumn columnQty;
             
             private global::System.Data.DataColumn columnSerial_Number;
             
@@ -291,15 +293,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             private global::System.Data.DataColumn columnCashier_User_Name;
             
-            private global::System.Data.DataColumn columnExpr4;
-            
-            private global::System.Data.DataColumn columnName;
-            
-            private global::System.Data.DataColumn columnQty;
-            
-            private global::System.Data.DataColumn columnUnit_Price;
-            
-            private global::System.Data.DataColumn columnSub_Total;
+            private global::System.Data.DataColumn columnTotal;
             
             private global::System.Data.DataColumn columnTotal_With_Tax;
             
@@ -338,25 +332,33 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnExpr1;
+                    return this.columnName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr2Column {
+            public global::System.Data.DataColumn Sub_TotalColumn {
                 get {
-                    return this.columnExpr2;
+                    return this.columnSub_Total;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr3Column {
+            public global::System.Data.DataColumn Unit_PriceColumn {
                 get {
-                    return this.columnExpr3;
+                    return this.columnUnit_Price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn QtyColumn {
+                get {
+                    return this.columnQty;
                 }
             }
             
@@ -386,41 +388,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr4Column {
+            public global::System.Data.DataColumn TotalColumn {
                 get {
-                    return this.columnExpr4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
-                get {
-                    return this.columnName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn QtyColumn {
-                get {
-                    return this.columnQty;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Unit_PriceColumn {
-                get {
-                    return this.columnUnit_Price;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Sub_TotalColumn {
-                get {
-                    return this.columnSub_Total;
+                    return this.columnTotal;
                 }
             }
             
@@ -469,20 +439,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row AddDataTable1Row(System.DateTime Expr2, string Expr3, System.DateTime Date, string Cashier_User_Name, double Expr4, string Name, double Qty, double Unit_Price, double Sub_Total, double Total_With_Tax) {
+            public DataTable1Row AddDataTable1Row(string Name, double Sub_Total, double Unit_Price, double Qty, System.DateTime Date, string Cashier_User_Name, double Total, double Total_With_Tax) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Expr2,
-                        Expr3,
+                        Name,
+                        Sub_Total,
+                        Unit_Price,
+                        Qty,
                         null,
                         Date,
                         Cashier_User_Name,
-                        Expr4,
-                        Name,
-                        Qty,
-                        Unit_Price,
-                        Sub_Total,
+                        Total,
                         Total_With_Tax};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
@@ -491,9 +458,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row FindByExpr1Serial_Number(int Expr1, int Serial_Number) {
+            public DataTable1Row FindBySerial_Number(int Serial_Number) {
                 return ((DataTable1Row)(this.Rows.Find(new object[] {
-                            Expr1,
                             Serial_Number})));
             }
             
@@ -514,66 +480,52 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnExpr1 = base.Columns["Expr1"];
-                this.columnExpr2 = base.Columns["Expr2"];
-                this.columnExpr3 = base.Columns["Expr3"];
+                this.columnName = base.Columns["Name"];
+                this.columnSub_Total = base.Columns["Sub_Total"];
+                this.columnUnit_Price = base.Columns["Unit_Price"];
+                this.columnQty = base.Columns["Qty"];
                 this.columnSerial_Number = base.Columns["Serial_Number"];
                 this.columnDate = base.Columns["Date"];
                 this.columnCashier_User_Name = base.Columns["Cashier_User_Name"];
-                this.columnExpr4 = base.Columns["Expr4"];
-                this.columnName = base.Columns["Name"];
-                this.columnQty = base.Columns["Qty"];
-                this.columnUnit_Price = base.Columns["Unit_Price"];
-                this.columnSub_Total = base.Columns["Sub_Total"];
+                this.columnTotal = base.Columns["Total"];
                 this.columnTotal_With_Tax = base.Columns["Total_With_Tax"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
-                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr2);
-                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr3);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnSub_Total = new global::System.Data.DataColumn("Sub_Total", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSub_Total);
+                this.columnUnit_Price = new global::System.Data.DataColumn("Unit_Price", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUnit_Price);
+                this.columnQty = new global::System.Data.DataColumn("Qty", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQty);
                 this.columnSerial_Number = new global::System.Data.DataColumn("Serial_Number", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSerial_Number);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
                 this.columnCashier_User_Name = new global::System.Data.DataColumn("Cashier_User_Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCashier_User_Name);
-                this.columnExpr4 = new global::System.Data.DataColumn("Expr4", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr4);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
-                this.columnQty = new global::System.Data.DataColumn("Qty", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQty);
-                this.columnUnit_Price = new global::System.Data.DataColumn("Unit_Price", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUnit_Price);
-                this.columnSub_Total = new global::System.Data.DataColumn("Sub_Total", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSub_Total);
+                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal);
                 this.columnTotal_With_Tax = new global::System.Data.DataColumn("Total_With_Tax", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal_With_Tax);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnExpr1,
                                 this.columnSerial_Number}, true));
-                this.columnExpr1.AutoIncrement = true;
-                this.columnExpr1.AutoIncrementSeed = -1;
-                this.columnExpr1.AutoIncrementStep = -1;
-                this.columnExpr1.AllowDBNull = false;
-                this.columnExpr1.ReadOnly = true;
-                this.columnExpr3.MaxLength = 50;
+                this.columnName.MaxLength = 50;
+                this.columnSub_Total.ReadOnly = true;
+                this.columnUnit_Price.AllowDBNull = false;
+                this.columnQty.AllowDBNull = false;
                 this.columnSerial_Number.AutoIncrement = true;
                 this.columnSerial_Number.AutoIncrementSeed = -1;
                 this.columnSerial_Number.AutoIncrementStep = -1;
                 this.columnSerial_Number.AllowDBNull = false;
                 this.columnSerial_Number.ReadOnly = true;
+                this.columnSerial_Number.Unique = true;
                 this.columnCashier_User_Name.MaxLength = 50;
-                this.columnName.MaxLength = 50;
-                this.columnQty.AllowDBNull = false;
-                this.columnUnit_Price.AllowDBNull = false;
-                this.columnSub_Total.ReadOnly = true;
+                this.columnTotal.ReadOnly = true;
                 this.columnTotal_With_Tax.ReadOnly = true;
             }
             
@@ -717,44 +669,55 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Expr1 {
+            public string Name {
                 get {
-                    return ((int)(this[this.tableDataTable1.Expr1Column]));
+                    try {
+                        return ((string)(this[this.tableDataTable1.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'DataTable1\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableDataTable1.Expr1Column] = value;
+                    this[this.tableDataTable1.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime Expr2 {
+            public double Sub_Total {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.Expr2Column]));
+                        return ((double)(this[this.tableDataTable1.Sub_TotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr2\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Sub_Total\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.Expr2Column] = value;
+                    this[this.tableDataTable1.Sub_TotalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Expr3 {
+            public double Unit_Price {
                 get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.Expr3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr3\' in table \'DataTable1\' is DBNull.", e);
-                    }
+                    return ((double)(this[this.tableDataTable1.Unit_PriceColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.Expr3Column] = value;
+                    this[this.tableDataTable1.Unit_PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double Qty {
+                get {
+                    return ((double)(this[this.tableDataTable1.QtyColumn]));
+                }
+                set {
+                    this[this.tableDataTable1.QtyColumn] = value;
                 }
             }
             
@@ -803,71 +766,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Expr4 {
+            public double Total {
                 get {
                     try {
-                        return ((double)(this[this.tableDataTable1.Expr4Column]));
+                        return ((double)(this[this.tableDataTable1.TotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr4\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.Expr4Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Name {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'DataTable1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Qty {
-                get {
-                    return ((double)(this[this.tableDataTable1.QtyColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.QtyColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Unit_Price {
-                get {
-                    return ((double)(this[this.tableDataTable1.Unit_PriceColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.Unit_PriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Sub_Total {
-                get {
-                    try {
-                        return ((double)(this[this.tableDataTable1.Sub_TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Sub_Total\' in table \'DataTable1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.Sub_TotalColumn] = value;
+                    this[this.tableDataTable1.TotalColumn] = value;
                 }
             }
             
@@ -889,26 +798,26 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsExpr2Null() {
-                return this.IsNull(this.tableDataTable1.Expr2Column);
+            public bool IsNameNull() {
+                return this.IsNull(this.tableDataTable1.NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetExpr2Null() {
-                this[this.tableDataTable1.Expr2Column] = global::System.Convert.DBNull;
+            public void SetNameNull() {
+                this[this.tableDataTable1.NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsExpr3Null() {
-                return this.IsNull(this.tableDataTable1.Expr3Column);
+            public bool IsSub_TotalNull() {
+                return this.IsNull(this.tableDataTable1.Sub_TotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetExpr3Null() {
-                this[this.tableDataTable1.Expr3Column] = global::System.Convert.DBNull;
+            public void SetSub_TotalNull() {
+                this[this.tableDataTable1.Sub_TotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -937,38 +846,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsExpr4Null() {
-                return this.IsNull(this.tableDataTable1.Expr4Column);
+            public bool IsTotalNull() {
+                return this.IsNull(this.tableDataTable1.TotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetExpr4Null() {
-                this[this.tableDataTable1.Expr4Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNameNull() {
-                return this.IsNull(this.tableDataTable1.NameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNameNull() {
-                this[this.tableDataTable1.NameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSub_TotalNull() {
-                return this.IsNull(this.tableDataTable1.Sub_TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSub_TotalNull() {
-                this[this.tableDataTable1.Sub_TotalColumn] = global::System.Convert.DBNull;
+            public void SetTotalNull() {
+                this[this.tableDataTable1.TotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1143,17 +1028,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
-            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
-            tableMapping.ColumnMappings.Add("Expr3", "Expr3");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Sub_Total", "Sub_Total");
+            tableMapping.ColumnMappings.Add("Unit_Price", "Unit_Price");
+            tableMapping.ColumnMappings.Add("Qty", "Qty");
             tableMapping.ColumnMappings.Add("Serial_Number", "Serial_Number");
             tableMapping.ColumnMappings.Add("Date", "Date");
             tableMapping.ColumnMappings.Add("Cashier_User_Name", "Cashier_User_Name");
-            tableMapping.ColumnMappings.Add("Expr4", "Expr4");
-            tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("Qty", "Qty");
-            tableMapping.ColumnMappings.Add("Unit_Price", "Unit_Price");
-            tableMapping.ColumnMappings.Add("Sub_Total", "Sub_Total");
+            tableMapping.ColumnMappings.Add("Total", "Total");
             tableMapping.ColumnMappings.Add("Total_With_Tax", "Total_With_Tax");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -1171,10 +1053,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Pri
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        CR.Bills.Serial_Number AS Expr1, CR.Bills.Date AS Expr2, CR.Bills.Cashier_User_Name AS Expr3, CR.Bills.[Total_With_Tax] AS Expr4, CR.Bills.Serial_Number, CR.Bills.Date, CR.Bills.Cashier_User_Name, CR.Bills.[Total_With_Tax],
-                         CR.Bills_Details.Name, CR.Bills_Details.Qty, CR.Bills_Details.Unit_Price, CR.Bills_Details.Sub_Total
-FROM            CR.Bills INNER JOIN
-                         CR.Bills_Details ON CR.Bills.Serial_Number = CR.Bills_Details.Serial_No";
+            this._commandCollection[0].CommandText = @"SELECT        CR.Bills_Details.Name, CR.Bills_Details.Sub_Total, CR.Bills_Details.Unit_Price, CR.Bills_Details.Qty, CR.Bills.Serial_Number, CR.Bills.Date, CR.Bills.Cashier_User_Name, CR.Bills.Total, CR.Bills.Total_With_Tax
+FROM            CR.Bills CROSS JOIN
+                         CR.Bills_Details";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

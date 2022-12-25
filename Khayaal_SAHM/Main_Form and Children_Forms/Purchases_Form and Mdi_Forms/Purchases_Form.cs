@@ -168,7 +168,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 
         private void Add_Purchase_Button_Click(object sender, EventArgs e)
         {
-            Add_PS_Mdi_Form form = new Add_PS_Mdi_Form();
+            Add_BG_Mdi_Form form = new Add_BG_Mdi_Form();
             form.MdiParent = this.Owner;
             form.Referesh_Current_Form += (obj, ef) =>
             {

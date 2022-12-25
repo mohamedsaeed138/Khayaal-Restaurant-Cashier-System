@@ -52,13 +52,15 @@ namespace Khayaal_SAHM
         /// <param name="Date">The Date_Time_Picker Value</param>
         /// <param name="Case">The Case Of Formatting</param>
         /// <returns>String</returns>
-        public static string Date_Formating(DateTime Date, string Case = "Normal")//activated
+        public static string Date_Formating(DateTime Date, string Case = "Normal", DateTime? Time = null)//activated
         {
             string Correct_Date;
             if (Case == "From_Payment")
                 Correct_Date = $"{Date.Year}-{Date.Month}-{Date.Day} 00:00:00";
             else if (Case == "To_Payment")
                 Correct_Date = $"{Date.Year}-{Date.Month}-{Date.Day} 23:59:59";
+            else if (Time != null && Case == "Normal")
+                Correct_Date = $"{Date.Year}-{Date.Month}-{Date.Day} {Time?.Hour}:{Time?.Minute}:{Time?.Second}";
             else
                 Correct_Date = $"{Date.Year}-{Date.Month}-{Date.Day} {Date.Hour}:{Date.Minute}:{Date.Second}";
             return Correct_Date;
@@ -77,20 +79,8 @@ namespace Khayaal_SAHM
         /// <param name="Bookings">List of Booking of the same table</param>
         /// <returns>bool</returns>
 
-        [Obsolete("Under_Development", true)]
-        public bool Check_Bookings_Conflicts(DataTable Bookings)//not activated
-        {
 
-            foreach (DataRow row in Bookings.Rows)
-            {
-                if (true)
-                {
-                    return false;
 
-                }
-            }
-            return true;
-        }
         public static bool Check_Sql_Injection(string String)
         {
             if (String.Contains("Delete") || String.Contains("Update") || String.Contains("Drop") || String.Contains("Truncate") || String.Contains("Insert") || String.Contains("Join"))

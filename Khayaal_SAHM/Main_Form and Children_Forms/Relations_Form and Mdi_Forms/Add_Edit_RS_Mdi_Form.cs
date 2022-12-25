@@ -123,14 +123,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
                         Insert_Query.ExecuteNonQuery();
 
                         conn.Close();
-                        this.Close();
-
+                        Qty_Text_Box.Text = "";
                         MessageBox.Show("Successfully Done");
                     }
 
-                    catch (Exception ex)
+                    catch
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There Relation is Already Existed");
 
                     }
                     finally
@@ -159,9 +158,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
                         MessageBox.Show("Successfully Done");
                     }
 
-                    catch (Exception ex)
+                    catch
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There Relation is Already Existed");
 
                     }
                     finally

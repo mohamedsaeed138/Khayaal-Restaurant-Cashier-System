@@ -111,7 +111,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         private static DataTable Select_Category_AS_Data_Table()
         {
             conn.Open();
-            string sql = "select Category from CR.Raw_Materials GROUP BY Category";
+            string sql = "select Category from CR.Raw_Materials GROUP BY Category ORDER BY Category";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -155,14 +155,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
                         Insert_Query.ExecuteNonQuery();
 
                         conn.Close();
-                        this.Close();
-
+                        Name_Text_Box.Text = "";
                         MessageBox.Show("Successfully Done");
                     }
 
-                    catch (Exception ex)
+                    catch
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There is a Raw Material With Same Name");
 
                     }
                     finally
@@ -186,13 +185,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
                         conn.Close();
                         this.Close();
-
                         MessageBox.Show("Successfully Done");
                     }
 
-                    catch (Exception ex)
+                    catch
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There is a Raw Material With Same Name");
 
                     }
                     finally
