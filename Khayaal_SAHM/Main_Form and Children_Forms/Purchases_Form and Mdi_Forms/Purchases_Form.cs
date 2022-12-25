@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
@@ -18,23 +17,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 
         public Purchases_Form()
         {
+            InitializeComponent();
             Reload();
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
         }
         void Reload()
         {
-
-            Size old = this.Size;
-            this.Controls.Clear();
-            this.Size = old;
-            InitializeComponent();
-
             Sort_By_Combo_Box.SelectedIndex = 0;
             Fill_Combo_Box();
             Fill_Table($"select Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
         }
         public void Fill_Combo_Box()
         {
+            Name_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
 
             conn.Open();

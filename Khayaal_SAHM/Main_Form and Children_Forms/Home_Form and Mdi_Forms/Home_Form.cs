@@ -14,21 +14,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         static System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(Connection_String.Value); public EventHandler On_Select = null;
         public Home_Form()
         {
+            InitializeComponent();
             Reload();
+            Date_Time_Timer.Interval = 1000;
+            Date_Time_Timer.Tick += new EventHandler(Refreash_Time);
+            Date_Time_Timer.Enabled = true;
         }
         void Reload()
         {
 
-            this.Controls.Clear();
-            InitializeComponent();
-
             Fill_Item_Panel();
             Fill_Combo_Box();
-
-            Date_Time_Timer.Interval = 1000;
-            Date_Time_Timer.Tick += new EventHandler(Refreash_Time);
-
-            Date_Time_Timer.Enabled = true;
 
         }
 
@@ -39,6 +35,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 
         public void Fill_Combo_Box()
         {
+            Category_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
             conn.Open();
             string sql = "SELECT Category FROM CR.Items GROUP BY Category";
@@ -69,6 +66,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 
         public void Fill_Item_Panel()
         {
+            Items_Nested_Flow_Layout_Panel.Controls.Clear();
             Formatter.Check_Connection(conn);
 
             SqlDataAdapter da = new SqlDataAdapter("SELECT Id,[Name],Category,Unit_Price,[Image],[Description] FROM CR.Items ORDER BY Category,[Name] ;", conn);

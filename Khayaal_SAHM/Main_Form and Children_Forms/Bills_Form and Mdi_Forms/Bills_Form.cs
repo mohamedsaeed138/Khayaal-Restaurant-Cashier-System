@@ -19,13 +19,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
         {
 
             Reload();
-
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
         }
         void Reload()
         {
             InitializeComponent();
             Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date from CR.Bills;");
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+
         }
 
 

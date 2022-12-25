@@ -275,6 +275,12 @@
     <Compile Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Add_Edit_RMF_Mdi_Form.Designer.cs">
       <DependentUpon>Add_Edit_RMF_Mdi_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Relations_Form and Mdi_Forms\Add_Edit_RS_Mdi_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form and Children_Forms\Relations_Form and Mdi_Forms\Add_Edit_RS_Mdi_Form.Designer.cs">
+      <DependentUpon>Add_Edit_RS_Mdi_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report_Path.cs" />
     <Compile Include="Connection_String.cs" />
     <Compile Include="Formatter.cs" />
@@ -420,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Raw_Materials_Form and Mdi_Forms\Raw_Materials_Form.resx">
       <DependentUpon>Raw_Materials_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Relations_Form and Mdi_Forms\Add_Edit_RS_Mdi_Form.resx">
+      <DependentUpon>Add_Edit_RS_Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Relations_Form and Mdi_Forms\Relations_Form.resx">
       <DependentUpon>Relations_Form.cs</DependentUpon>

@@ -18,12 +18,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         public Raw_Materials_Form()
         {
+            InitializeComponent();
             Reload();
         }
         void Reload()
         {
-            this.Controls.Clear();
-            InitializeComponent();
             Sorting_Combo_Box.SelectedIndex = 0;
             Fill_Category_Combo_Box();
             Fill_Table($"SELECT [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials ORDER BY [Name]");
@@ -33,6 +32,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         public void Fill_Category_Combo_Box()
         {
+            Category_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
             SqlDataAdapter da2 = new SqlDataAdapter($"SELECT [Category] FROM CR.Raw_Materials Group BY [Category] ORDER BY [Category] ASC;", conn);
             DataTable dt2 = new DataTable();

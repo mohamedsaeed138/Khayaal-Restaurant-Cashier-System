@@ -16,7 +16,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
         }
         void Reload()
         {
-            this.Controls.Clear();
             InitializeComponent();
             Fill_Combo_Box();
             Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;");

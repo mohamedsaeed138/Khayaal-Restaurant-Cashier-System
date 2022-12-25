@@ -14,23 +14,21 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 
         public Relations_Form()
         {
-
+            InitializeComponent();
             Reload();
 
         }
         void Reload()
         {
-            this.Controls.Clear();
-            InitializeComponent();
 
             Fill_Item_Combo_Boxe();
             Fill_Raw_Combo_Boxe();
 
             Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed] , [Id] FROM CR.Items_Relations ORDER BY [Item] ASC;");
-
         }
         public void Fill_Item_Combo_Boxe()
         {
+            Item_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
 
             SqlDataAdapter dai = new SqlDataAdapter("SELECT [Name] FROM CR.Items ORDER BY [Name] ASC;", conn);
@@ -48,6 +46,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         }
         public void Fill_Raw_Combo_Boxe()
         {
+            Raw_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
             SqlDataAdapter da2 = new SqlDataAdapter($"SELECT[Name] FROM CR.Raw_Materials ORDER BY[Name] ASC;", conn);
             DataTable dt2 = new DataTable();
@@ -151,17 +150,40 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 
         private void Relations_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
             {
-                if (Relations_Table.Columns[e.ColumnIndex].Name == "Delete")
+                DataGridViewRow row = Relations_Table.Rows[e.RowIndex];
+                string item = (string)row.Cells[0].Value;
+                string raw = (string)row.Cells[1].Value;
+                string qty = Formatter.Float($"{(double)row.Cells[2].Value}");
+                int id = (int)row.Cells[3].Value;
+                if (Relations_Table.Columns[e.ColumnIndex].Name == "Edit")
                 {
-                    // Enter Query To Delete 
+                    Add_Edit_RS_Mdi_Form form = new Add_Edit_RS_Mdi_Form(item, raw, qty, id);
+                    form.MdiParent = this.Owner;
+                    form.Referesh_Current_Form += (obj2, ef) =>
+                    {
+                        this.Reload();
+                    };
+                    form.ShowDialog();
                 }
-                if (Relations_Table.Columns[e.ColumnIndex].Name == "Edite")
+                else if (Relations_Table.Columns[e.ColumnIndex].Name == "Delete")
                 {
-                    //Enter Query To Edite
+                    try
+                    {
+                        string Query = $"DELETE CR.Items_Relations WHERE Id={id};\n";
+                        Formatter.Check_Connection(conn);
+                        SqlCommand Delete = new SqlCommand(Query, conn);
+                        conn.Open();
+                        Delete.ExecuteNonQuery();
+                        conn.Close();
+                        Choose_Query();
+                        MessageBox.Show("Successfully Done!");
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
-
             }
+            catch { }
         }
 
         private void Item_Combo_Box_TextChanged(object sender, EventArgs e)
@@ -174,9 +196,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             Choose_Query();
         }
 
-        private void Item_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+
+        private void Add_Button_Click(object sender, EventArgs e)
+        {
+            Add_Edit_RS_Mdi_Form form = new Add_Edit_RS_Mdi_Form();
+            form.MdiParent = this.Owner;
+            form.Referesh_Current_Form += (obj, ef) =>
+            {
+                this.Reload();
+            };
+            form.ShowDialog();
         }
     }
 }
