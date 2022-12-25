@@ -70,13 +70,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
                 Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
             }
             catch { }
-            Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
             string Qty = Formatter.Float($"{Best_Seller_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[1].Value))}");
 
             string Total = Formatter.Float($"{Best_Seller_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}");
             double Total_Double = Convert.ToDouble(Total);
 
             string Total_With_Tax = Formatter.Float($"{Total_Double + Total_Double * .14 / 100}");
+            Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
 
             Qty_Value_Label.Text = Qty;
 
