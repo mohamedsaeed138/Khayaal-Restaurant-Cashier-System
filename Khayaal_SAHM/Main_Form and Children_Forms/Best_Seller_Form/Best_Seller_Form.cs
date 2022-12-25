@@ -62,8 +62,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             Best_Seller_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
-
-                Best_Seller_Table.Rows.Add((string)row[0], (int)row[1], (double)row[2]);
+                double total = (double)row[2];
+                Best_Seller_Table.Rows.Add((string)row[0], (int)row[1], total, (total * .14 + total));
             }
             try
             {
@@ -79,8 +79,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
 
             Qty_Value_Label.Text = Qty;
-
-            Sum_Total_Value_Label.Text = $"{Total} $ - {Total_With_Tax} $";
+            Sum_Total_Value_Label.Text = $"{Total} $";
+            With_Tax_Value_Label.Text = Formatter.Float($"{Total_With_Tax}") + " $";
         }
         void Choose_Query()
         {

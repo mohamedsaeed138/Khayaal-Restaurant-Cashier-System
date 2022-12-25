@@ -392,6 +392,7 @@
             // Panel_Child
             // 
             this.Panel_Child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Panel_Child.BorderRadius = 10;
             this.Panel_Child.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Child.Location = new System.Drawing.Point(91, 23);
             this.Panel_Child.Name = "Panel_Child";
