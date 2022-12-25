@@ -46,10 +46,14 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Best_Seller_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Qty_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Qty_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -292,25 +296,6 @@
             this.Best_Seller_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Best_Seller_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
-            // Table_Croll_Bar
-            // 
-            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 8;
-            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Table_Croll_Bar.HoverState.Parent = null;
-            this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
-            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
-            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
-            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 18;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
-            this.Table_Croll_Bar.TabIndex = 18;
-            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
-            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
-            // 
             // Column1
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -342,12 +327,83 @@
             this.Column4.ReadOnly = true;
             this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // Table_Croll_Bar
+            // 
+            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Table_Croll_Bar.AutoRoundedCorners = true;
+            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Table_Croll_Bar.HoverState.Parent = null;
+            this.Table_Croll_Bar.LargeChange = 10;
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
+            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
+            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
+            this.Table_Croll_Bar.ScrollbarSize = 18;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.TabIndex = 18;
+            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
+            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
+            // 
+            // Sum_Total_Value_Label
+            // 
+            this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(799, 544);
+            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
+            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Total_Value_Label.TabIndex = 29;
+            this.Sum_Total_Value_Label.Text = "0";
+            // 
+            // Sum_Total_Label
+            // 
+            this.Sum_Total_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Total_Label.Location = new System.Drawing.Point(745, 543);
+            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Total_Label.Name = "Sum_Total_Label";
+            this.Sum_Total_Label.Size = new System.Drawing.Size(50, 27);
+            this.Sum_Total_Label.TabIndex = 28;
+            this.Sum_Total_Label.Text = "Sum : ";
+            // 
+            // Qty_Label
+            // 
+            this.Qty_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Qty_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Qty_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Qty_Label.Location = new System.Drawing.Point(460, 544);
+            this.Qty_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Qty_Label.Name = "Qty_Label";
+            this.Qty_Label.Size = new System.Drawing.Size(44, 27);
+            this.Qty_Label.TabIndex = 30;
+            this.Qty_Label.Text = "Qty  : ";
+            // 
+            // Qty_Value_Label
+            // 
+            this.Qty_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Qty_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Qty_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Qty_Value_Label.Location = new System.Drawing.Point(508, 543);
+            this.Qty_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Qty_Value_Label.Name = "Qty_Value_Label";
+            this.Qty_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Qty_Value_Label.TabIndex = 31;
+            this.Qty_Value_Label.Text = "0";
+            // 
             // Best_Sales_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Qty_Value_Label);
+            this.Controls.Add(this.Qty_Label);
+            this.Controls.Add(this.Sum_Total_Value_Label);
+            this.Controls.Add(this.Sum_Total_Label);
             this.Controls.Add(this.Table_Croll_Bar);
             this.Controls.Add(this.Best_Seller_Table);
             this.Controls.Add(this.Count_Value_Label);
@@ -383,5 +439,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Value_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Qty_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Qty_Value_Label;
     }
 }

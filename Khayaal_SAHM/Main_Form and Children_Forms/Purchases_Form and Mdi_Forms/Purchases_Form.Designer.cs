@@ -61,6 +61,10 @@
             this.Sort_By_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Sort_By_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Add_Purchase_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Sum_Sub_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Sub_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Qty_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Qty_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Purchases_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,9 +178,9 @@
             this.Count_Value_Label.Location = new System.Drawing.Point(117, 544);
             this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Value_Label.Name = "Count_Value_Label";
-            this.Count_Value_Label.Size = new System.Drawing.Size(3, 2);
+            this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
             this.Count_Value_Label.TabIndex = 15;
-            this.Count_Value_Label.Text = null;
+            this.Count_Value_Label.Text = "0";
             // 
             // Purchases_Table
             // 
@@ -441,12 +445,64 @@
             this.Add_Purchase_Button.Text = "Add Purchase";
             this.Add_Purchase_Button.Click += new System.EventHandler(this.Add_Purchase_Button_Click);
             // 
+            // Sum_Sub_Total_Value_Label
+            // 
+            this.Sum_Sub_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Sub_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Sub_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Sub_Total_Value_Label.Location = new System.Drawing.Point(522, 544);
+            this.Sum_Sub_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Sub_Total_Value_Label.Name = "Sum_Sub_Total_Value_Label";
+            this.Sum_Sub_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Sub_Total_Value_Label.TabIndex = 25;
+            this.Sum_Sub_Total_Value_Label.Text = "0";
+            // 
+            // Sum_Sub_Total_Label
+            // 
+            this.Sum_Sub_Total_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Sub_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Sub_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Sub_Total_Label.Location = new System.Drawing.Point(471, 543);
+            this.Sum_Sub_Total_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Sub_Total_Label.Name = "Sum_Sub_Total_Label";
+            this.Sum_Sub_Total_Label.Size = new System.Drawing.Size(50, 27);
+            this.Sum_Sub_Total_Label.TabIndex = 24;
+            this.Sum_Sub_Total_Label.Text = "Sum : ";
+            // 
+            // Sum_Qty_Value_Label
+            // 
+            this.Sum_Qty_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Qty_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Qty_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Qty_Value_Label.Location = new System.Drawing.Point(270, 544);
+            this.Sum_Qty_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Qty_Value_Label.Name = "Sum_Qty_Value_Label";
+            this.Sum_Qty_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Qty_Value_Label.TabIndex = 27;
+            this.Sum_Qty_Value_Label.Text = "0";
+            // 
+            // Sum_Qty_Label
+            // 
+            this.Sum_Qty_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Qty_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Qty_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Qty_Label.Location = new System.Drawing.Point(216, 543);
+            this.Sum_Qty_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Qty_Label.Name = "Sum_Qty_Label";
+            this.Sum_Qty_Label.Size = new System.Drawing.Size(50, 27);
+            this.Sum_Qty_Label.TabIndex = 26;
+            this.Sum_Qty_Label.Text = "Sum : ";
+            // 
             // Purchases_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Sum_Qty_Value_Label);
+            this.Controls.Add(this.Sum_Qty_Label);
+            this.Controls.Add(this.Sum_Sub_Total_Value_Label);
+            this.Controls.Add(this.Sum_Sub_Total_Label);
             this.Controls.Add(this.Add_Purchase_Button);
             this.Controls.Add(this.Sort_By_Label);
             this.Controls.Add(this.Sort_By_Combo_Box);
@@ -491,5 +547,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Sub_Total_Value_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Sub_Total_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Qty_Value_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Qty_Label;
     }
 }

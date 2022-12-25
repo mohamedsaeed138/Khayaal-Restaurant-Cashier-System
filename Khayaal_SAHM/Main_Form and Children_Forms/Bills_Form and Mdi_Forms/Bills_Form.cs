@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 {
@@ -21,7 +22,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
         void Reload()
         {
             InitializeComponent();
-            Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date from CR.Bills;");
+            Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date from CR.Bills;");
             if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
                 To_Date_Picker.Value = DateTime.Now;
             From_Date_Picker.Value = new DateTime(2022, 1, 1);
@@ -46,7 +47,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
             {
 
 
-                Bills_Table.Rows.Add((int)row[0], (string)row[1], (double)row[2], (DateTime)row[3]);
+                Bills_Table.Rows.Add((int)row[0], (string)row[1], (double)row[2], (double)row[3], (DateTime)row[4]);
 
 
             }
@@ -56,6 +57,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
             }
             catch { }
             Count_Value_Label.Text = $"{Bills_Table.Rows.Count}";
+            Sum_Without_Tax_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}") + " $";
+            Sum_Total_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[3].Value))}") + " $";
+
+
         }
         void Choose_Query()
         {
@@ -72,13 +77,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
                 string Serial = Formatter.String(Search_Serial_Number_Text_Box.Text);
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text == "")
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text != "")
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Serial_Number] LIKE '{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date FROM CR.Bills WHERE [Serial_Number] LIKE '{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text != "" && Search_Serial_Number_Text_Box.Text == "")
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total}  AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date FROM CR.Bills WHERE [Total] <= {Total}  AND Date BETWEEN '{From}' and '{To}' ;");
                 else
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total} AND [Serial_Number] LIKE '{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date FROM CR.Bills WHERE [Total] <= {Total} AND [Serial_Number] LIKE '{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
             }
         }
 

@@ -224,13 +224,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         {
 
             Clear_Order_Nested_Flow_Layout_Panel();
-
+            Calculate_Total();
         }
         void Clear_Order_Nested_Flow_Layout_Panel()
         {
-            Total_Label_Value.Text = "0";
+            Total_Value_Label.Text = "0";
+            With_Tax_Label.Text = "0";
             Order_Nested_Flow_Layout_Panel.Controls.Clear();
-
         }
 
         private void Save_Button_Click(object sender, EventArgs e)
@@ -350,12 +350,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                     Total += item.Sub_Total;
 
                 }
-                Total_Label_Value.Text = $"{Total}";
-
+                Total_Value_Label.Text = $"{Total}";
+                With_Tax_Label.Text = $"{Total + ((Total / 100) * 14)}";
             }
             else
             {
-                Total_Label_Value.Text = "0";
+                Total_Value_Label.Text = "0";
+                With_Tax_Label.Text = "0";
             }
         }
         void Copy_Data_From_Orig_To_Test()

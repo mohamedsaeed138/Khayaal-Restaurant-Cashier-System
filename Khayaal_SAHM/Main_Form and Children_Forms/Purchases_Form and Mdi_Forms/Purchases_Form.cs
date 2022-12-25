@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
@@ -74,6 +75,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             }
             catch { }
             Count_Value_Label.Text = $"{Purchases_Table.Rows.Count}";
+            string Sum_Qty = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[2].Value))}");
+            string Sum_Total = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[4].Value))}") + " $  - ";
+
+            Sum_Qty_Value_Label.Text = Sum_Qty;
+
+            Sum_Sub_Total_Value_Label.Text = Sum_Total;
         }
         void Choose_Query()
         {

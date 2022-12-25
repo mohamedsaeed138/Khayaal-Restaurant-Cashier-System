@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.Search_Serial_Number_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,12 +47,17 @@
             this.Bills_Table = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Serial_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Without_Taxes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Total_Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Sum_Without_Tax_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Without_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,22 +176,22 @@
             this.Count_Value_Label.Location = new System.Drawing.Point(117, 544);
             this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Value_Label.Name = "Count_Value_Label";
-            this.Count_Value_Label.Size = new System.Drawing.Size(3, 2);
+            this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
             this.Count_Value_Label.TabIndex = 15;
-            this.Count_Value_Label.Text = null;
+            this.Count_Value_Label.Text = "0";
             // 
             // Bills_Table
             // 
             this.Bills_Table.AllowUserToAddRows = false;
             this.Bills_Table.AllowUserToDeleteRows = false;
             this.Bills_Table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Bills_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Bills_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.Bills_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -193,54 +200,55 @@
             this.Bills_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Bills_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Bills_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bills_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bills_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.Bills_Table.ColumnHeadersHeight = 48;
             this.Bills_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Bills_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Serial_Number,
             this.Table_Number,
-            this.Total_Cost,
+            this.Without_Taxes,
+            this.Total,
             this.Column1,
             this.Print,
             this.Delete});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Bills_Table.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Bills_Table.DefaultCellStyle = dataGridViewCellStyle22;
             this.Bills_Table.EnableHeadersVisualStyles = false;
             this.Bills_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Bills_Table.Location = new System.Drawing.Point(49, 100);
             this.Bills_Table.MultiSelect = false;
             this.Bills_Table.Name = "Bills_Table";
             this.Bills_Table.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bills_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bills_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.Bills_Table.RowHeadersVisible = false;
             this.Bills_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Bills_Table.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Bills_Table.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.Bills_Table.RowTemplate.Height = 37;
             this.Bills_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Bills_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -274,8 +282,8 @@
             // 
             // Serial_Number
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Serial_Number.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Serial_Number.DefaultCellStyle = dataGridViewCellStyle19;
             this.Serial_Number.HeaderText = "Serial Number";
             this.Serial_Number.Name = "Serial_Number";
             this.Serial_Number.ReadOnly = true;
@@ -288,12 +296,24 @@
             this.Table_Number.ReadOnly = true;
             this.Table_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Total_Cost
+            // Without_Taxes
             // 
-            this.Total_Cost.HeaderText = "Total Cost";
-            this.Total_Cost.Name = "Total_Cost";
-            this.Total_Cost.ReadOnly = true;
-            this.Total_Cost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dataGridViewCellStyle20.Format = "C2";
+            dataGridViewCellStyle20.NullValue = null;
+            this.Without_Taxes.DefaultCellStyle = dataGridViewCellStyle20;
+            this.Without_Taxes.HeaderText = "Without Taxes";
+            this.Without_Taxes.Name = "Without_Taxes";
+            this.Without_Taxes.ReadOnly = true;
+            this.Without_Taxes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Total
+            // 
+            dataGridViewCellStyle21.Format = "C2";
+            dataGridViewCellStyle21.NullValue = null;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle21;
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // Column1
             // 
@@ -368,12 +388,64 @@
             this.Total_Search_Text_Box.TextChanged += new System.EventHandler(this.Total_Search_Text_Box_TextChanged);
             this.Total_Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Total_Search_Text_Box_KeyPress);
             // 
+            // Sum_Without_Tax_Value_Label
+            // 
+            this.Sum_Without_Tax_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Without_Tax_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Without_Tax_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(360, 544);
+            this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Without_Tax_Value_Label.Name = "Sum_Without_Tax_Value_Label";
+            this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Without_Tax_Value_Label.TabIndex = 25;
+            this.Sum_Without_Tax_Value_Label.Text = "0";
+            // 
+            // Sum_Without_Tax_Label
+            // 
+            this.Sum_Without_Tax_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Without_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Without_Tax_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(308, 543);
+            this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Without_Tax_Label.Name = "Sum_Without_Tax_Label";
+            this.Sum_Without_Tax_Label.Size = new System.Drawing.Size(50, 27);
+            this.Sum_Without_Tax_Label.TabIndex = 24;
+            this.Sum_Without_Tax_Label.Text = "Sum : ";
+            // 
+            // Sum_Total_Value_Label
+            // 
+            this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(511, 544);
+            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
+            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Total_Value_Label.TabIndex = 27;
+            this.Sum_Total_Value_Label.Text = "0";
+            // 
+            // Sum_Total_Label
+            // 
+            this.Sum_Total_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Total_Label.Location = new System.Drawing.Point(457, 543);
+            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Total_Label.Name = "Sum_Total_Label";
+            this.Sum_Total_Label.Size = new System.Drawing.Size(50, 27);
+            this.Sum_Total_Label.TabIndex = 26;
+            this.Sum_Total_Label.Text = "Sum : ";
+            // 
             // Bills_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Sum_Total_Value_Label);
+            this.Controls.Add(this.Sum_Total_Label);
+            this.Controls.Add(this.Sum_Without_Tax_Value_Label);
+            this.Controls.Add(this.Sum_Without_Tax_Label);
             this.Controls.Add(this.Total_Search_Text_Box);
             this.Controls.Add(this.Table_Croll_Bar);
             this.Controls.Add(this.Bills_Table);
@@ -408,9 +480,14 @@
         private Guna.UI2.WinForms.Guna2TextBox Total_Search_Text_Box;
         private System.Windows.Forms.DataGridViewTextBoxColumn Serial_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table_Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Without_Taxes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Print;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Without_Tax_Value_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Without_Tax_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Value_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Label;
     }
 }

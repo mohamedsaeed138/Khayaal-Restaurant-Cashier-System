@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
@@ -70,6 +71,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             }
             catch { }
             Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
+            string Qty = Formatter.Float($"{Best_Seller_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[1].Value))}");
+
+            string Total = Formatter.Float($"{Best_Seller_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}");
+            double Total_Double = Convert.ToDouble(Total);
+
+            string Total_With_Tax = Formatter.Float($"{Total_Double + Total_Double * .14 / 100}");
+
+            Qty_Value_Label.Text = Qty;
+
+            Sum_Total_Value_Label.Text = $"{Total} $ - {Total_With_Tax} $";
         }
         void Choose_Query()
         {
