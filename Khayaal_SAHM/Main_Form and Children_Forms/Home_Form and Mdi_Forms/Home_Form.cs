@@ -30,7 +30,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 
         private void Refreash_Time(object sender, EventArgs e)
         {
-            Date_Label.Text = DateTime.Now.ToString("ddd , dd MMM yyyy HH : mm : ss");
+            Date_Label.Text = DateTime.Now.ToString("ddd , dd MMM yyyy HH:mm:ss");
         }
 
         public void Fill_Combo_Box()

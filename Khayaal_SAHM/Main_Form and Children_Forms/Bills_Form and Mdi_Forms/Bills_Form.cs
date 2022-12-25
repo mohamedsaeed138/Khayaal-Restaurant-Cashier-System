@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-//Select [Name],Qty,Unit_Price,Sub_Total from cr.Bills_Details WHERE Serial_No=10;
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 {
     public partial class Bills_Form : Form
@@ -17,15 +16,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 
         public Bills_Form()
         {
-
             Reload();
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
         }
         void Reload()
         {
             InitializeComponent();
             Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date from CR.Bills;");
-
+            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
+                To_Date_Picker.Value = DateTime.Now;
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+            To_Date_Picker.Value = DateTime.Now;
         }
 
 

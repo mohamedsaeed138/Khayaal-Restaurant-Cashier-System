@@ -19,13 +19,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         {
             InitializeComponent();
             Reload();
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+
 
         }
         void Reload()
         {
             Fill_Combo_Box();
             Fill_Table($"SELECT * FROM CR.Tables_Booking_Details ORDER BY [From]");
+            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
+                To_Date_Picker.Value = DateTime.Now;
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+            To_Date_Picker.Value = DateTime.Now;
         }
         public void Fill_Combo_Box()
         {

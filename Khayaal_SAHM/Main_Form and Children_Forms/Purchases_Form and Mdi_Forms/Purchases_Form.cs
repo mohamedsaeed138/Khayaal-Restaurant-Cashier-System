@@ -19,13 +19,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
         {
             InitializeComponent();
             Reload();
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+
         }
         void Reload()
         {
             Sort_By_Combo_Box.SelectedIndex = 0;
             Fill_Combo_Box();
             Fill_Table($"select Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
+            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
+                To_Date_Picker.Value = DateTime.Now;
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+            To_Date_Picker.Value = DateTime.Now;
         }
         public void Fill_Combo_Box()
         {
