@@ -26,8 +26,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
     <ProductName>SAHM</ProductName>
-    <PublisherName>Mohamed Saeed</PublisherName>
+    <PublisherName>SAHM Company For Software Development</PublisherName>
     <SuiteName>SAHM Accountant Managment</SuiteName>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>0.0.0.0</ApplicationVersion>
