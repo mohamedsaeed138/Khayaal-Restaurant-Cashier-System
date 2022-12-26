@@ -74,7 +74,7 @@
             this.Raw_Combo_Box.Name = "Raw_Combo_Box";
             this.Raw_Combo_Box.ShadowDecoration.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.Size = new System.Drawing.Size(242, 36);
-            this.Raw_Combo_Box.TabIndex = 2;
+            this.Raw_Combo_Box.TabIndex = 1;
             this.Raw_Combo_Box.TabStop = false;
             // 
             // Add_Relation_Button
@@ -90,7 +90,7 @@
             this.Add_Relation_Button.Name = "Add_Relation_Button";
             this.Add_Relation_Button.ShadowDecoration.Parent = this.Add_Relation_Button;
             this.Add_Relation_Button.Size = new System.Drawing.Size(164, 49);
-            this.Add_Relation_Button.TabIndex = 6;
+            this.Add_Relation_Button.TabIndex = 3;
             this.Add_Relation_Button.Text = "Add";
             this.Add_Relation_Button.Click += new System.EventHandler(this.Add_Relation_Button_Click);
             // 
@@ -140,7 +140,7 @@
             this.Qty_Text_Box.SelectedText = "";
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
-            this.Qty_Text_Box.TabIndex = 22;
+            this.Qty_Text_Box.TabIndex = 2;
             this.Qty_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Qty_Text_Box_KeyPress);
             // 
             // Raw_Name_Label
@@ -175,7 +175,7 @@
             this.Item_Combo_Box.Name = "Item_Combo_Box";
             this.Item_Combo_Box.ShadowDecoration.Parent = this.Item_Combo_Box;
             this.Item_Combo_Box.Size = new System.Drawing.Size(242, 36);
-            this.Item_Combo_Box.TabIndex = 25;
+            this.Item_Combo_Box.TabIndex = 0;
             this.Item_Combo_Box.TabStop = false;
             // 
             // Qty_Needed_Label

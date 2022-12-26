@@ -75,7 +75,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
             Table_Combo_Box.DataSource = dt;
             Table_Combo_Box.DisplayMember = "Number";
-            Table_Combo_Box.SelectedIndex = 0;
 
 
         }

@@ -53,7 +53,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 
             Raw_Combo_Box.DataSource = dt;
             Raw_Combo_Box.DisplayMember = "Name";
-            Raw_Combo_Box.SelectedIndex = 0;
+
         }
         private void Fill_Item_Combo_Box()
         {
@@ -67,7 +67,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 
             Item_Combo_Box.DataSource = dt;
             Item_Combo_Box.DisplayMember = "Name";
-            Item_Combo_Box.SelectedIndex = 0;
+
         }
 
 

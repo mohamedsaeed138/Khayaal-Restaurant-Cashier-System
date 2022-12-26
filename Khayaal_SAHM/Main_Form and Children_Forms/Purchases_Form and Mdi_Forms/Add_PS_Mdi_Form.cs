@@ -43,7 +43,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 
             Raw_Combo_Box.DataSource = dt;
             Raw_Combo_Box.DisplayMember = "Name";
-            Raw_Combo_Box.SelectedIndex = 0;
+
         }
 
         private void Unite_Price_Text_Box_KeyPress(object sender, KeyPressEventArgs e)

@@ -79,7 +79,7 @@
             this.Name_Text_Box.SelectedText = "";
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
             this.Name_Text_Box.Size = new System.Drawing.Size(242, 43);
-            this.Name_Text_Box.TabIndex = 1;
+            this.Name_Text_Box.TabIndex = 0;
             // 
             // Category_Combo_Box
             // 
@@ -102,7 +102,7 @@
             this.Category_Combo_Box.Name = "Category_Combo_Box";
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Size = new System.Drawing.Size(242, 36);
-            this.Category_Combo_Box.TabIndex = 2;
+            this.Category_Combo_Box.TabIndex = 1;
             this.Category_Combo_Box.TabStop = false;
             // 
             // Category_Lbl
@@ -168,7 +168,7 @@
             this.Add_Raw_Button.Name = "Add_Raw_Button";
             this.Add_Raw_Button.ShadowDecoration.Parent = this.Add_Raw_Button;
             this.Add_Raw_Button.Size = new System.Drawing.Size(164, 49);
-            this.Add_Raw_Button.TabIndex = 6;
+            this.Add_Raw_Button.TabIndex = 4;
             this.Add_Raw_Button.Text = "Add";
             this.Add_Raw_Button.Click += new System.EventHandler(this.Add_Raw_Button_Click_1);
             // 
@@ -185,7 +185,7 @@
             this.Add_Category_Button.Name = "Add_Category_Button";
             this.Add_Category_Button.ShadowDecoration.Parent = this.Add_Category_Button;
             this.Add_Category_Button.Size = new System.Drawing.Size(55, 43);
-            this.Add_Category_Button.TabIndex = 16;
+            this.Add_Category_Button.TabIndex = 3;
             this.Add_Category_Button.Text = "Add";
             this.Add_Category_Button.Click += new System.EventHandler(this.Add_Category_Button_Click);
             // 

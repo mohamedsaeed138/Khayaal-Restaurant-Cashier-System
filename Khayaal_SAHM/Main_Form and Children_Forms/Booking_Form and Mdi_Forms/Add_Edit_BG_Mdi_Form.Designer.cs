@@ -82,7 +82,7 @@
             this.Customer_Name_Text_Box.SelectedText = "";
             this.Customer_Name_Text_Box.ShadowDecoration.Parent = this.Customer_Name_Text_Box;
             this.Customer_Name_Text_Box.Size = new System.Drawing.Size(242, 43);
-            this.Customer_Name_Text_Box.TabIndex = 1;
+            this.Customer_Name_Text_Box.TabIndex = 0;
             // 
             // Table_Combo_Box
             // 
@@ -105,7 +105,7 @@
             this.Table_Combo_Box.Name = "Table_Combo_Box";
             this.Table_Combo_Box.ShadowDecoration.Parent = this.Table_Combo_Box;
             this.Table_Combo_Box.Size = new System.Drawing.Size(242, 36);
-            this.Table_Combo_Box.TabIndex = 2;
+            this.Table_Combo_Box.TabIndex = 1;
             this.Table_Combo_Box.TabStop = false;
             // 
             // Tabel_Lbl
@@ -191,7 +191,7 @@
             this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Date_Picker.Name = "From_Date_Picker";
             this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
-            this.From_Date_Picker.TabIndex = 20;
+            this.From_Date_Picker.TabIndex = 2;
             // 
             // To_Date_Picker
             // 
@@ -205,7 +205,7 @@
             this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
-            this.To_Date_Picker.TabIndex = 21;
+            this.To_Date_Picker.TabIndex = 4;
             // 
             // From_Time_Picker
             // 
@@ -220,7 +220,7 @@
             this.From_Time_Picker.Name = "From_Time_Picker";
             this.From_Time_Picker.ShowUpDown = true;
             this.From_Time_Picker.Size = new System.Drawing.Size(121, 20);
-            this.From_Time_Picker.TabIndex = 22;
+            this.From_Time_Picker.TabIndex = 3;
             // 
             // To_Time_Picker
             // 
@@ -235,7 +235,7 @@
             this.To_Time_Picker.Name = "To_Time_Picker";
             this.To_Time_Picker.ShowUpDown = true;
             this.To_Time_Picker.Size = new System.Drawing.Size(121, 20);
-            this.To_Time_Picker.TabIndex = 23;
+            this.To_Time_Picker.TabIndex = 5;
             // 
             // Add_Edit_BG_Mdi_Form
             // 

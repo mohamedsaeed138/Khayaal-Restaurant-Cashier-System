@@ -69,7 +69,7 @@
             this.Unit_Price_Text_Box.SelectedText = "";
             this.Unit_Price_Text_Box.ShadowDecoration.Parent = this.Unit_Price_Text_Box;
             this.Unit_Price_Text_Box.Size = new System.Drawing.Size(242, 43);
-            this.Unit_Price_Text_Box.TabIndex = 4;
+            this.Unit_Price_Text_Box.TabIndex = 2;
             this.Unit_Price_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Unite_Price_Text_Box_KeyPress);
             // 
             // Item_Name_Lbl
@@ -115,7 +115,7 @@
             this.Raw_Combo_Box.Name = "Raw_Combo_Box";
             this.Raw_Combo_Box.ShadowDecoration.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.Size = new System.Drawing.Size(242, 36);
-            this.Raw_Combo_Box.TabIndex = 2;
+            this.Raw_Combo_Box.TabIndex = 0;
             this.Raw_Combo_Box.TabStop = false;
             // 
             // Add_Purchase_Button
@@ -131,7 +131,7 @@
             this.Add_Purchase_Button.Name = "Add_Purchase_Button";
             this.Add_Purchase_Button.ShadowDecoration.Parent = this.Add_Purchase_Button;
             this.Add_Purchase_Button.Size = new System.Drawing.Size(164, 49);
-            this.Add_Purchase_Button.TabIndex = 6;
+            this.Add_Purchase_Button.TabIndex = 4;
             this.Add_Purchase_Button.Text = "Add";
             this.Add_Purchase_Button.Click += new System.EventHandler(this.Add_Purchase_Button_Click);
             // 
@@ -181,7 +181,7 @@
             this.Qty_Text_Box.SelectedText = "";
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
-            this.Qty_Text_Box.TabIndex = 22;
+            this.Qty_Text_Box.TabIndex = 1;
             // 
             // Qty_Label
             // 
@@ -219,7 +219,7 @@
             this.Notes_Text_Box.SelectedText = "";
             this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
             this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
-            this.Notes_Text_Box.TabIndex = 24;
+            this.Notes_Text_Box.TabIndex = 3;
             this.Notes_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Notes_Text_Box_KeyPress);
             // 
             // Notes_Label
