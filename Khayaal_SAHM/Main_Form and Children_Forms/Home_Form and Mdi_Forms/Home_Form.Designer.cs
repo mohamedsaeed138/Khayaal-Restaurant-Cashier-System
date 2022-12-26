@@ -37,6 +37,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Order_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Clear_All_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Total_Nested_Panel = new System.Windows.Forms.Panel();
+            this.With_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.With_Tax = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Print_and_Save_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Save_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,9 +61,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Tool_Tip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.Date_Time_Timer = new System.Windows.Forms.Timer(this.components);
-            this.With_Tax = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.With_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
             this.Total_Nested_Panel.SuspendLayout();
@@ -159,6 +159,42 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Total_Nested_Panel.Name = "Total_Nested_Panel";
             this.Total_Nested_Panel.Size = new System.Drawing.Size(295, 201);
             this.Total_Nested_Panel.TabIndex = 1;
+            // 
+            // With_Tax_Label
+            // 
+            this.With_Tax_Label.BackColor = System.Drawing.Color.Transparent;
+            this.With_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.With_Tax_Label.ForeColor = System.Drawing.Color.White;
+            this.With_Tax_Label.Location = new System.Drawing.Point(196, 44);
+            this.With_Tax_Label.Name = "With_Tax_Label";
+            this.With_Tax_Label.Size = new System.Drawing.Size(15, 32);
+            this.With_Tax_Label.TabIndex = 35;
+            this.With_Tax_Label.Text = "0";
+            this.With_Tax_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(173, 44);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(15, 32);
+            this.guna2HtmlLabel2.TabIndex = 34;
+            this.guna2HtmlLabel2.Text = "$";
+            this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // With_Tax
+            // 
+            this.With_Tax.BackColor = System.Drawing.Color.Transparent;
+            this.With_Tax.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.With_Tax.ForeColor = System.Drawing.Color.White;
+            this.With_Tax.Location = new System.Drawing.Point(38, 44);
+            this.With_Tax.Name = "With_Tax";
+            this.With_Tax.Size = new System.Drawing.Size(104, 32);
+            this.With_Tax.TabIndex = 33;
+            this.With_Tax.Text = "With Tax : ";
+            this.With_Tax.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Print_and_Save_Button
             // 
@@ -279,7 +315,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Date_Label.Name = "Date_Label";
             this.Date_Label.Size = new System.Drawing.Size(309, 39);
             this.Date_Label.TabIndex = 27;
-            this.Date_Label.Text = "December 20 , 2022";
             this.Date_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Khayaal_Label
@@ -424,42 +459,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             // Date_Time_Timer
             // 
             this.Date_Time_Timer.Interval = 1000;
-            // 
-            // With_Tax
-            // 
-            this.With_Tax.BackColor = System.Drawing.Color.Transparent;
-            this.With_Tax.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.With_Tax.ForeColor = System.Drawing.Color.White;
-            this.With_Tax.Location = new System.Drawing.Point(38, 44);
-            this.With_Tax.Name = "With_Tax";
-            this.With_Tax.Size = new System.Drawing.Size(104, 32);
-            this.With_Tax.TabIndex = 33;
-            this.With_Tax.Text = "With Tax : ";
-            this.With_Tax.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(173, 44);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(15, 32);
-            this.guna2HtmlLabel2.TabIndex = 34;
-            this.guna2HtmlLabel2.Text = "$";
-            this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // With_Tax_Label
-            // 
-            this.With_Tax_Label.BackColor = System.Drawing.Color.Transparent;
-            this.With_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.With_Tax_Label.ForeColor = System.Drawing.Color.White;
-            this.With_Tax_Label.Location = new System.Drawing.Point(196, 44);
-            this.With_Tax_Label.Name = "With_Tax_Label";
-            this.With_Tax_Label.Size = new System.Drawing.Size(15, 32);
-            this.With_Tax_Label.TabIndex = 35;
-            this.With_Tax_Label.Text = "0";
-            this.With_Tax_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home_Form
             // 
