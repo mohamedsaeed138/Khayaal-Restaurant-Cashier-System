@@ -47,7 +47,7 @@ namespace Khayaal_SAHM
             txt_pass = Password.Text;
             try
             {
-                SqlCommand Verify_Login_Command = new SqlCommand($"Select * From CR.Users WHERE User_Name =N'{txt_user}' AND Password=N'{txt_pass}';", LoginCon);
+                SqlCommand Verify_Login_Command = new SqlCommand($"Select * From CR.Users WHERE User_Name =N'{txt_user}' COLLATE SQL_Latin1_General_CP1_CS_AS AND Password=N'{txt_pass}' COLLATE SQL_Latin1_General_CP1_CS_AS;", LoginCon);
                 SqlDataAdapter loginQ_adapter = new SqlDataAdapter(Verify_Login_Command);
                 DataTable loginQ_DT = new DataTable();
                 LoginCon.Open();
