@@ -392,7 +392,7 @@
             this.Delete_Table.BackColor = System.Drawing.Color.Transparent;
             this.Delete_Table.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete_Table.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Delete_Table.Location = new System.Drawing.Point(605, 13);
+            this.Delete_Table.Location = new System.Drawing.Point(591, 13);
             this.Delete_Table.Margin = new System.Windows.Forms.Padding(2);
             this.Delete_Table.Name = "Delete_Table";
             this.Delete_Table.Size = new System.Drawing.Size(90, 22);
@@ -408,7 +408,7 @@
             this.Add_Table_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_Table_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Table_Button.HoverState.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.Location = new System.Drawing.Point(678, 42);
+            this.Add_Table_Button.Location = new System.Drawing.Point(664, 41);
             this.Add_Table_Button.Name = "Add_Table_Button";
             this.Add_Table_Button.ShadowDecoration.Parent = this.Add_Table_Button;
             this.Add_Table_Button.Size = new System.Drawing.Size(112, 36);
@@ -432,7 +432,7 @@
             this.Delete_Table_Text_Box.FocusedState.Parent = this.Delete_Table_Text_Box;
             this.Delete_Table_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Delete_Table_Text_Box.HoverState.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.Location = new System.Drawing.Point(605, 41);
+            this.Delete_Table_Text_Box.Location = new System.Drawing.Point(591, 41);
             this.Delete_Table_Text_Box.Margin = new System.Windows.Forms.Padding(4);
             this.Delete_Table_Text_Box.Name = "Delete_Table_Text_Box";
             this.Delete_Table_Text_Box.PasswordChar = '\0';
@@ -454,10 +454,10 @@
             this.Add_Booking_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_Booking_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Booking_Button.HoverState.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.Location = new System.Drawing.Point(795, 42);
+            this.Add_Booking_Button.Location = new System.Drawing.Point(782, 42);
             this.Add_Booking_Button.Name = "Add_Booking_Button";
             this.Add_Booking_Button.ShadowDecoration.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.Size = new System.Drawing.Size(129, 36);
+            this.Add_Booking_Button.Size = new System.Drawing.Size(152, 36);
             this.Add_Booking_Button.TabIndex = 24;
             this.Add_Booking_Button.Text = "Add Booking";
             this.Add_Booking_Button.Click += new System.EventHandler(this.Add_Booking_Button_Click);
