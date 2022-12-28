@@ -399,6 +399,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Sound_Track\Intro_Music.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Loading_Screen_Form.resx">
       <DependentUpon>Loading_Screen_Form.cs</DependentUpon>
     </EmbeddedResource>

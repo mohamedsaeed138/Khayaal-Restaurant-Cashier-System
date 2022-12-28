@@ -8,7 +8,7 @@ namespace Khayaal_SAHM
     public partial class Loading_Screen_Form : Form
     {
         private double count = 0;
-        SoundPlayer Intro = new SoundPlayer(@"C:\Intro_Music.wav");
+        SoundPlayer Intro = new SoundPlayer($"{Environment.CurrentDirectory}\\Sound_Track\\Intro_Music.wav");
 
         public Loading_Screen_Form()
         {

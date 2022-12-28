@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
+
 namespace Khayaal_SAHM
 {
     internal static class Program
@@ -10,10 +13,22 @@ namespace Khayaal_SAHM
         [STAThread]
         static void Main()
         {
+            string Mac_Address = NetworkInterface
+.GetAllNetworkInterfaces()
+.Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+.Select(nic => nic.GetPhysicalAddress().ToString())
+.FirstOrDefault();
+            //if ("" == Mac_Address)
+            //{
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Loading_Screen_Form());
-            //Application.Run(new Main_Form_and_Children_Forms.Main_Form());
+            //}
+            //else
+            //{
+            //    MessageBox.Show("For  Activation \nCall +201228552872 ");
+            //}
+
         }
 
     }

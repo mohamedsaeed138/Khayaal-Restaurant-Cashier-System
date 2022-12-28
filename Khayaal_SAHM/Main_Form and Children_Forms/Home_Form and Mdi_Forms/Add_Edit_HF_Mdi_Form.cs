@@ -16,11 +16,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private DataTable dt = Select_Category_AS_Data_Table();
 
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
-        public Add_Edit_HF_Mdi_Form(int id, string category, string name, string description, float unite_price)
-        {
 
-
-        }
         public Add_Edit_HF_Mdi_Form()
         {
             Reload();
@@ -159,7 +155,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             OpenFileDialog File_Dialog = new OpenFileDialog();
             PictureBox p = sender as PictureBox;
             File_Dialog.Title = "Choose Image.";
-            File_Dialog.InitialDirectory = Environment.CurrentDirectory;
+            File_Dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
 
             if (p != null)
             {
