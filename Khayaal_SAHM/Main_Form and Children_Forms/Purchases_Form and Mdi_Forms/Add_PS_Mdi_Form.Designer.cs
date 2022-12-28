@@ -182,6 +182,7 @@
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Qty_Text_Box.TabIndex = 1;
+            this.Qty_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Qty_Text_Box_KeyPress);
             // 
             // Qty_Label
             // 

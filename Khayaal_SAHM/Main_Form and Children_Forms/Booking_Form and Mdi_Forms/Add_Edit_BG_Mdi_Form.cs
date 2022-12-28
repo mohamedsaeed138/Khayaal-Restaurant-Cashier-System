@@ -22,20 +22,22 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
             To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
         }
-        public Add_Edit_BG_Mdi_Form(string name, string From, string To, int table, int id)
+        public Add_Edit_BG_Mdi_Form(string name, string From, string To, int table, int id, string notes)
         {
             Add = false;
             Reload();
             this.id = id;
             Customer_Name_Text_Box.Text = name;
             Table_Combo_Box.Text = table.ToString();
-            if (DateTime.Parse(From) > DateTime.Now)
+            Notes_Text_Box.Text = notes;
+            if (DateTime.Parse(To) > DateTime.Now)
             {
-                From_Date_Picker.Text = DateTime.Parse(From).Date.ToString("MM/dd/yyyy h:mm tt");
-                From_Time_Picker.Text = DateTime.Parse(To).Date.ToString("MM/dd/yyyy h:mm tt");
-                To_Date_Picker.Text = DateTime.Parse(From).ToString("HH:mm:ss");
 
+                From_Date_Picker.Text = DateTime.Parse(From).ToString("MM/dd/yyyy");
+                From_Time_Picker.Text = DateTime.Parse(From).ToString("HH:mm:ss");
+                To_Date_Picker.Text = DateTime.Parse(To).ToString("MM/dd/yyyy");
                 To_Time_Picker.Text = DateTime.Parse(To).ToString("HH:mm:ss");
+
             }
             else
             {
@@ -96,6 +98,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                 {
 
                     string Name = Formatter.String(Customer_Name_Text_Box.Text);
+                    string Notes = Formatter.String(Notes_Text_Box.Text);
                     Formatter.Check_Connection(conn);
                     if (Add)
                     {
@@ -105,7 +108,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
 
                         Formatter.Check_Connection(conn);
-                        string Query = $"INSERT INTO CR.Tables_Booking_Details VALUES({table},N'{Name}','{From}','{To}');";
+                        string Query = $"INSERT INTO CR.Tables_Booking_Details VALUES({table},N'{Name}','{From}','{To}',N'{Notes}');";
                         SqlCommand Insert_Query = new SqlCommand(Query, conn);
                         try
                         {
@@ -139,7 +142,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                     else
                     {
 
-                        string Query = $"UPDATE CR.Tables_Booking_Details SET [Name]=N'{Name}',[From]='{From}',[To]='{To}'  WHERE Id={id};";
+                        string Query = $"UPDATE CR.Tables_Booking_Details SET [Name]=N'{Name}',[From]='{From}',[To]='{To}' ,[Notes]=N'{Notes}'  WHERE Id={id};";
                         SqlCommand Update_Query = new SqlCommand(Query, conn);
                         try
                         {
@@ -201,5 +204,25 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             return true;
         }
 
+
+        private void Notes_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Notes_Text_Box.Text.Length >= 100 && e.KeyChar != 8))
+                || (Notes_Text_Box.Text.Length > 1 && Notes_Text_Box.Text[Notes_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Notes_Text_Box.Text.Length == 0))
+
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Customer_Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Customer_Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            || (Customer_Name_Text_Box.Text.Length > 1 && Customer_Name_Text_Box.Text[Customer_Name_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Customer_Name_Text_Box.Text.Length == 0))
+
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

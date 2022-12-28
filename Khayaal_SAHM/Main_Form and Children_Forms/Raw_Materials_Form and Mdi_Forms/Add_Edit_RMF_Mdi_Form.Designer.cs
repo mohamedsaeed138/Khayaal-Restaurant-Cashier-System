@@ -80,6 +80,7 @@
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
             this.Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Name_Text_Box.TabIndex = 0;
+            this.Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_Text_Box_KeyPress);
             // 
             // Category_Combo_Box
             // 

@@ -130,5 +130,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
                 MessageBox.Show("Fill Empty Fields!!");
             }
         }
+
+        private void Qty_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != 8)
+            || (e.KeyChar == '.' && Qty_Text_Box.Text.Contains(".")))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

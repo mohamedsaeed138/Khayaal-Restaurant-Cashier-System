@@ -84,8 +84,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             Booking_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
-
-                Booking_Table.Rows.Add((int)row[0], (string)row[1], (DateTime)row[2], (DateTime)row[3], (int)row[4]);
+                Booking_Table.Rows.Add((int)row[0], (string)row[1], (DateTime)row[2], (DateTime)row[3], (int)row[4], (string)row[5]);
             }
             try
             {
@@ -216,8 +215,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                         sqlCommand = new SqlCommand($"DELETE FROM CR.Tables WHERE [Number]= {Table};", conn);
                         sqlCommand.ExecuteNonQuery();
                         conn.Close();
+                        Delete_Table_Text_Box.Text = "";
 
                         Reload();
+                        MessageBox.Show("Successfully Done!");
                     }
 
                 }
@@ -272,13 +273,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                 DataGridViewRow row = Booking_Table.Rows[e.RowIndex];
                 int table = (int)row.Cells[0].Value;
                 string name = (string)row.Cells[1].Value;
-
+                string notes = (string)row.Cells[5].Value;
                 string from = Formatter.Date_Formating((DateTime)row.Cells[2].Value);
                 string to = Formatter.Date_Formating((DateTime)row.Cells[3].Value);
                 int id = (int)row.Cells[4].Value;
                 if (Booking_Table.Columns[e.ColumnIndex].Name == "Edit")
                 {
-                    Add_Edit_BG_Mdi_Form form = new Add_Edit_BG_Mdi_Form(name, from, to, table, id);
+                    Add_Edit_BG_Mdi_Form form = new Add_Edit_BG_Mdi_Form(name, from, to, table, id, notes);
                     form.MdiParent = this.Owner;
                     form.Referesh_Current_Form += (obj2, ef) =>
                     {

@@ -44,6 +44,8 @@
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
+            this.Notes_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Notes_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // Customer_Name_Lbl
@@ -51,7 +53,7 @@
             this.Customer_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Customer_Name_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Customer_Name_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Customer_Name_Lbl.Location = new System.Drawing.Point(17, 32);
+            this.Customer_Name_Lbl.Location = new System.Drawing.Point(12, 32);
             this.Customer_Name_Lbl.Name = "Customer_Name_Lbl";
             this.Customer_Name_Lbl.Size = new System.Drawing.Size(201, 34);
             this.Customer_Name_Lbl.TabIndex = 4;
@@ -83,6 +85,7 @@
             this.Customer_Name_Text_Box.ShadowDecoration.Parent = this.Customer_Name_Text_Box;
             this.Customer_Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Customer_Name_Text_Box.TabIndex = 0;
+            this.Customer_Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Customer_Name_Text_Box_KeyPress);
             // 
             // Table_Combo_Box
             // 
@@ -113,7 +116,7 @@
             this.Tabel_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Tabel_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Tabel_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Tabel_Lbl.Location = new System.Drawing.Point(17, 117);
+            this.Tabel_Lbl.Location = new System.Drawing.Point(12, 117);
             this.Tabel_Lbl.Name = "Tabel_Lbl";
             this.Tabel_Lbl.Size = new System.Drawing.Size(79, 34);
             this.Tabel_Lbl.TabIndex = 11;
@@ -128,7 +131,7 @@
             this.Add_Booking_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Add_Booking_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Booking_Button.HoverState.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.Location = new System.Drawing.Point(191, 322);
+            this.Add_Booking_Button.Location = new System.Drawing.Point(191, 382);
             this.Add_Booking_Button.Name = "Add_Booking_Button";
             this.Add_Booking_Button.ShadowDecoration.Parent = this.Add_Booking_Button;
             this.Add_Booking_Button.Size = new System.Drawing.Size(164, 49);
@@ -162,7 +165,7 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.To_Label.ForeColor = System.Drawing.Color.White;
-            this.To_Label.Location = new System.Drawing.Point(17, 247);
+            this.To_Label.Location = new System.Drawing.Point(12, 243);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(46, 34);
             this.To_Label.TabIndex = 18;
@@ -237,12 +240,53 @@
             this.To_Time_Picker.Size = new System.Drawing.Size(121, 20);
             this.To_Time_Picker.TabIndex = 5;
             // 
+            // Notes_Label
+            // 
+            this.Notes_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Notes_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.Notes_Label.ForeColor = System.Drawing.Color.White;
+            this.Notes_Label.Location = new System.Drawing.Point(12, 326);
+            this.Notes_Label.Name = "Notes_Label";
+            this.Notes_Label.Size = new System.Drawing.Size(84, 34);
+            this.Notes_Label.TabIndex = 20;
+            this.Notes_Label.Text = "Notes  :";
+            // 
+            // Notes_Text_Box
+            // 
+            this.Notes_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Notes_Text_Box.BorderRadius = 10;
+            this.Notes_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Notes_Text_Box.DefaultText = "";
+            this.Notes_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Notes_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Notes_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Notes_Text_Box.DisabledState.Parent = this.Notes_Text_Box;
+            this.Notes_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Notes_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Notes_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Notes_Text_Box.FocusedState.Parent = this.Notes_Text_Box;
+            this.Notes_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Notes_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Notes_Text_Box.HoverState.Parent = this.Notes_Text_Box;
+            this.Notes_Text_Box.Location = new System.Drawing.Point(276, 317);
+            this.Notes_Text_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Notes_Text_Box.Name = "Notes_Text_Box";
+            this.Notes_Text_Box.PasswordChar = '\0';
+            this.Notes_Text_Box.PlaceholderText = "";
+            this.Notes_Text_Box.SelectedText = "";
+            this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
+            this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
+            this.Notes_Text_Box.TabIndex = 21;
+            this.Notes_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Notes_Text_Box_KeyPress);
+            // 
             // Add_Edit_BG_Mdi_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(550, 411);
+            this.ClientSize = new System.Drawing.Size(550, 460);
+            this.Controls.Add(this.Notes_Text_Box);
+            this.Controls.Add(this.Notes_Label);
             this.Controls.Add(this.To_Time_Picker);
             this.Controls.Add(this.From_Time_Picker);
             this.Controls.Add(this.To_Date_Picker);
@@ -281,5 +325,7 @@
         private System.Windows.Forms.DateTimePicker From_Date_Picker;
         private System.Windows.Forms.DateTimePicker To_Time_Picker;
         private System.Windows.Forms.DateTimePicker From_Time_Picker;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Notes_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Notes_Text_Box;
     }
 }
