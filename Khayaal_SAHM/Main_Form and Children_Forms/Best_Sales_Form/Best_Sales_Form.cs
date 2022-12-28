@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
+namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
 {
     public partial class Best_Sales_Form : Form
     {

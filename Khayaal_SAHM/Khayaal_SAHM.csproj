@@ -319,11 +319,11 @@
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form.cs">
+    <Compile Include="Main_Form and Children_Forms\Best_Sales_Form\Best_Sales_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form.Designer.cs">
-      <DependentUpon>Best_Seller_Form.cs</DependentUpon>
+    <Compile Include="Main_Form and Children_Forms\Best_Sales_Form\Best_Sales_Form.Designer.cs">
+      <DependentUpon>Best_Sales_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Bills_Form.cs">
       <SubType>Form</SubType>
@@ -408,8 +408,8 @@
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms\Best_Seller_Form\Best_Seller_Form.resx">
-      <DependentUpon>Best_Seller_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Main_Form and Children_Forms\Best_Sales_Form\Best_Sales_Form.resx">
+      <DependentUpon>Best_Sales_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Bills_Form.resx">
       <DependentUpon>Bills_Form.cs</DependentUpon>
@@ -529,22 +529,22 @@
     <None Include="Resources\SAHM GIF Intro.gif" />
     <None Include="Resources\Side Bar Icon.png" />
     <None Include="Resources\Rectangle 26.png" />
-    <None Include="Resources\Button-15.png" />
-    <None Include="Resources\Button-14.png" />
-    <None Include="Resources\Button-13.png" />
-    <None Include="Resources\Button-12.png" />
-    <None Include="Resources\Button-11.png" />
-    <None Include="Resources\Button-10.png" />
-    <None Include="Resources\Button-9.png" />
-    <None Include="Resources\Button-8.png" />
-    <None Include="Resources\Button-7.png" />
-    <None Include="Resources\Button-6.png" />
-    <None Include="Resources\Button-5.png" />
-    <None Include="Resources\Button-4.png" />
-    <None Include="Resources\Button-3.png" />
-    <None Include="Resources\Button-2.png" />
-    <None Include="Resources\Button-1.png" />
-    <None Include="Resources\Button.png" />
+    <None Include="Resources\Credit_OFF.png" />
+    <None Include="Resources\Best_Sales_OFF.png" />
+    <None Include="Resources\Purchases_OFF.png" />
+    <None Include="Resources\Bills_OFF.png" />
+    <None Include="Resources\Relations_OFF.png" />
+    <None Include="Resources\Raw_OFF.png" />
+    <None Include="Resources\Booking_OFF.png" />
+    <None Include="Resources\Home_OFF.png" />
+    <None Include="Resources\Credit_ON.png" />
+    <None Include="Resources\Best_Sales_ON.png" />
+    <None Include="Resources\Purchases_ON.png" />
+    <None Include="Resources\Bills_ON.png" />
+    <None Include="Resources\Relations_ON.png" />
+    <None Include="Resources\Raw_ON.png" />
+    <None Include="Resources\Booking_ON.png" />
+    <None Include="Resources\Home_ON.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\Image_Khayaal.Image.png" />
     <Content Include="DataBase\Restaurant_Cafe.mdf">
