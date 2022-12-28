@@ -81,13 +81,7 @@ namespace Khayaal_SAHM
 
 
 
-        public static bool Check_Sql_Injection(string String)
-        {
-            if (String.Contains("Delete") || String.Contains("Update") || String.Contains("Drop") || String.Contains("Truncate") || String.Contains("Insert") || String.Contains("Join"))
-                return false;
-            else
-                return true;
-        }
+       
         public static void Check_Connection(SqlConnection conn)
         {
 
