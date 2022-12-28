@@ -38,7 +38,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             Formatter.Check_Connection(conn);
 
             conn.Open();
-            string sql = "SELECT Name FROM CR.Raw_Materials ORDER BY [Name];";
+            string sql = "SELECT [Name] FROM CR.Purchases ORDER BY [Name];";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
