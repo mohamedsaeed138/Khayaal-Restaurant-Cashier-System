@@ -95,7 +95,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Seller_Form
             {
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;\r\n");
+                    Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}'  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;\r\n");
                 else if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
                     Fill_Table($"SELECT [Name] as [Item] , COUNT([Name]) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and [Name] Like '{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%'  GROUP BY [Name]  ORDER BY [Total] , Quantity   DESC;");
                 else if (Category_Combo_Box.Text != "All" && Search_Text_Box.Text == "")
