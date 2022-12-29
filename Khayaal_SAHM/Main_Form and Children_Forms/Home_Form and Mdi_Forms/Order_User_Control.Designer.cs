@@ -113,7 +113,7 @@
             this.Remove_Button.CheckedState.Parent = this.Remove_Button;
             this.Remove_Button.CustomImages.Parent = this.Remove_Button;
             this.Remove_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Remove_Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove_Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Button.ForeColor = System.Drawing.Color.White;
             this.Remove_Button.HoverState.Parent = this.Remove_Button;
             this.Remove_Button.Location = new System.Drawing.Point(259, 16);
@@ -132,7 +132,7 @@
             this.Decrease_Button.CheckedState.Parent = this.Decrease_Button;
             this.Decrease_Button.CustomImages.Parent = this.Decrease_Button;
             this.Decrease_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Decrease_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Decrease_Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Decrease_Button.ForeColor = System.Drawing.Color.White;
             this.Decrease_Button.HoverState.Parent = this.Decrease_Button;
             this.Decrease_Button.Location = new System.Drawing.Point(195, 16);
@@ -151,7 +151,7 @@
             this.Increase_Button.CheckedState.Parent = this.Increase_Button;
             this.Increase_Button.CustomImages.Parent = this.Increase_Button;
             this.Increase_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Increase_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Increase_Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Increase_Button.ForeColor = System.Drawing.Color.White;
             this.Increase_Button.HoverState.Parent = this.Increase_Button;
             this.Increase_Button.Location = new System.Drawing.Point(129, 16);

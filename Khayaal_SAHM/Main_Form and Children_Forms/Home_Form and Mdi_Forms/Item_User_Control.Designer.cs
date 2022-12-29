@@ -80,7 +80,7 @@
             this.Add_To_Order_Buttton.CheckedState.Parent = this.Add_To_Order_Buttton;
             this.Add_To_Order_Buttton.CustomImages.Parent = this.Add_To_Order_Buttton;
             this.Add_To_Order_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(173)))), ((int)(((byte)(98)))));
-            this.Add_To_Order_Buttton.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_To_Order_Buttton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Add_To_Order_Buttton.ForeColor = System.Drawing.Color.White;
             this.Add_To_Order_Buttton.HoverState.Parent = this.Add_To_Order_Buttton;
             this.Add_To_Order_Buttton.Location = new System.Drawing.Point(65, 112);
@@ -97,7 +97,7 @@
             this.Remove_Buttton.CheckedState.Parent = this.Remove_Buttton;
             this.Remove_Buttton.CustomImages.Parent = this.Remove_Buttton;
             this.Remove_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Remove_Buttton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove_Buttton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Buttton.ForeColor = System.Drawing.Color.White;
             this.Remove_Buttton.HoverState.Parent = this.Remove_Buttton;
             this.Remove_Buttton.Location = new System.Drawing.Point(117, 112);
