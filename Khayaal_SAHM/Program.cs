@@ -18,8 +18,9 @@ namespace Khayaal_SAHM
 .Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
 .Select(nic => nic.GetPhysicalAddress().ToString())
 .FirstOrDefault();
-            //if ("" == Mac_Address)
+            //if ("" == Mac_Address&&DateTime.Now < new DateTime(2023, 1, 5))
             //{
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Loading_Screen_Form());
@@ -28,6 +29,8 @@ namespace Khayaal_SAHM
             //{
             //    MessageBox.Show("For  Activation \nCall +201228552872 ");
             //}
+            //
+            //
 
         }
 
