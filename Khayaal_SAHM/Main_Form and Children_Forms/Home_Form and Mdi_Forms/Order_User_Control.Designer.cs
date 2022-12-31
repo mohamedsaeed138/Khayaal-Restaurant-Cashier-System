@@ -127,7 +127,7 @@
             // 
             // Decrease_Button
             // 
-            this.Decrease_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(203)))), ((int)(((byte)(103)))));
+            this.Decrease_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Decrease_Button.BorderThickness = 2;
             this.Decrease_Button.CheckedState.Parent = this.Decrease_Button;
             this.Decrease_Button.CustomImages.Parent = this.Decrease_Button;
