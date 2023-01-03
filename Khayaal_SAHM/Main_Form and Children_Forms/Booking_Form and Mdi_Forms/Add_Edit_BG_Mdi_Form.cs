@@ -182,11 +182,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         }
         private bool Check_Intersections(DateTime From, DateTime To, int Table)
         {
+            string Query = $"SELECT [Name],[From],[To] FROM CR.Tables_Booking_Details WHERE Table_No={Table} AND NOT(('{From}' <= [From] AND '{To}'<=[From]) OR( '{From}' >=[To] AND '{To}' >=[To] ));";
             string From_String = Formatter.Date_Formating(From);
             string To_String = Formatter.Date_Formating(To);
             Formatter.Check_Connection(conn);
             DataTable Bookings = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter($"SELECT [Name],[From],[To] FROM CR.Tables_Booking_Details WHERE Table_No={Table} AND NOT(('{From}' <= [From] AND '{To}'<=[From]) OR( '{From}' >=[To] AND '{To}' >=[To] ));", conn);
+            if (!Add)
+                Query = $"SELECT [Name],[From],[To] FROM CR.Tables_Booking_Details WHERE Id!={id} AND Table_No={Table} AND NOT(('{From}' <= [From] AND '{To}'<=[From]) OR( '{From}' >=[To] AND '{To}' >=[To] ));";
+
+            SqlDataAdapter da = new SqlDataAdapter(Query, conn);
             conn.Open();
             da.Fill(Bookings);
             conn.Close();
