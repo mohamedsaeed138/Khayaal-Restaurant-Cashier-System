@@ -252,7 +252,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             {
                 Create_a_Bill();
 
-                Bills_Form_and_Mdi_Forms.Print__Form.Print_Form Form = new Bills_Form_and_Mdi_Forms.Print__Form.Print_Form();
+                Bills_Form_and_Mdi_Forms.Print_Form.Print_Form Form = new Bills_Form_and_Mdi_Forms.Print_Form.Print_Form();
                 Form.Show();
 
             }

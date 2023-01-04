@@ -73,9 +73,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Best_Sales_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Best_Sales_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Best_Sales_ON {
             get {
                 object obj = ResourceManager.GetObject("Best_Sales_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Best_Sales_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Best_Sales_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bills_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Bills_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bills_ON {
             get {
                 object obj = ResourceManager.GetObject("Bills_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bills_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Bills_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +163,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Booking_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Booking_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Booking_ON {
             get {
                 object obj = ResourceManager.GetObject("Booking_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Booking_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Booking_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +213,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Credit_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Credit_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Credit_ON {
             get {
                 object obj = ResourceManager.GetObject("Credit_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Credit_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Credit_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,76 +283,6 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Frame_36 {
-            get {
-                object obj = ResourceManager.GetObject("Frame 36", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Frame_37 {
-            get {
-                object obj = ResourceManager.GetObject("Frame 37", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Frame_38 {
-            get {
-                object obj = ResourceManager.GetObject("Frame 38", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Frame_39 {
-            get {
-                object obj = ResourceManager.GetObject("Frame 39", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Frame_40 {
-            get {
-                object obj = ResourceManager.GetObject("Frame 40", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Frame_41 {
-            get {
-                object obj = ResourceManager.GetObject("Frame 41", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Frame_42 {
-            get {
-                object obj = ResourceManager.GetObject("Frame 42", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Home_OFF {
             get {
                 object obj = ResourceManager.GetObject("Home_OFF", resourceCulture);
@@ -283,9 +293,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Home_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Home_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_ON {
             get {
                 object obj = ResourceManager.GetObject("Home_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Home_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Home_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +343,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Purchases_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Purchases_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Purchases_ON {
             get {
                 object obj = ResourceManager.GetObject("Purchases_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purchases_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Purchases_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +383,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Raw_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Raw_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Raw_ON {
             get {
                 object obj = ResourceManager.GetObject("Raw_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Raw_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Raw_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +423,29 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Relations_OFF_AR {
+            get {
+                object obj = ResourceManager.GetObject("Relations_OFF_AR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Relations_ON {
             get {
                 object obj = ResourceManager.GetObject("Relations_ON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Relations_ON_AR {
+            get {
+                object obj = ResourceManager.GetObject("Relations_ON_AR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

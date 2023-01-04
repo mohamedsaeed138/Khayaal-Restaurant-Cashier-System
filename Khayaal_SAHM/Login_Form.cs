@@ -1,4 +1,4 @@
-﻿using Khayaal_SAHM.Main_Form_and_Children_Forms;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms_AR;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -22,7 +22,7 @@ namespace Khayaal_SAHM
 
         static void Mainformstart()
         {
-            Application.Run(new Main_Form());
+            Application.Run(new Main_Form_AR());
         }
 
         private void Close_B_Click(object sender, System.EventArgs e)

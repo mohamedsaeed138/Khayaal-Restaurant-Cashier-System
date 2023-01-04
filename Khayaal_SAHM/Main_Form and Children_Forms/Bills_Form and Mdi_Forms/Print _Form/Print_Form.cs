@@ -1,7 +1,7 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System.Windows.Forms;
 
-namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Print__Form
+namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms.Print_Form
 {
     public partial class Print_Form : Form
     {
