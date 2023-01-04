@@ -173,7 +173,7 @@
             this.Password.SelectedText = "";
             this.Password.ShadowDecoration.Parent = this.Password;
             this.Password.Size = new System.Drawing.Size(211, 48);
-            this.Password.TabIndex = 3;
+            this.Password.TabIndex = 2;
             this.Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
             // label4
@@ -203,7 +203,7 @@
             this.Login_B.Name = "Login_B";
             this.Login_B.ShadowDecoration.Parent = this.Login_B;
             this.Login_B.Size = new System.Drawing.Size(166, 48);
-            this.Login_B.TabIndex = 5;
+            this.Login_B.TabIndex = 4;
             this.Login_B.Text = "Login";
             this.Login_B.Click += new System.EventHandler(this.Login_B_Click_1);
             // 
@@ -279,7 +279,7 @@
             this.Language_Combo_Box.Name = "Language_Combo_Box";
             this.Language_Combo_Box.ShadowDecoration.Parent = this.Language_Combo_Box;
             this.Language_Combo_Box.Size = new System.Drawing.Size(90, 36);
-            this.Language_Combo_Box.TabIndex = 20;
+            this.Language_Combo_Box.TabIndex = 3;
             // 
             // Login_Form
             // 

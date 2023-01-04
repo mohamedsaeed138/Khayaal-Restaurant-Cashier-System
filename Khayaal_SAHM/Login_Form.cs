@@ -16,7 +16,7 @@ namespace Khayaal_SAHM
         public Login_Form()
         {
             InitializeComponent();
-
+            Language_Combo_Box.SelectedIndex = 0;
         }
 
 
