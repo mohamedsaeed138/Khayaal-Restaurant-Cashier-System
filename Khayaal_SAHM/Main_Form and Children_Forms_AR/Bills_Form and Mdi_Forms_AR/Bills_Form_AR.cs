@@ -24,6 +24,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         {
             InitializeComponent();
             Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date from CR.Bills;");
+
+
+        }
+
+        void Initialize_Date_Pickers()
+        {
             if (Bills_Table.Rows.Count == 0)
             {
                 From_Date_Picker.Value = DateTime.Now;
@@ -35,8 +41,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
                 From_Date_Picker.Value = Bills_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[4].Value));
             }
         }
-
-
         void Fill_Table(string Query)
         {
             if (ConnectionState.Open == conn.State)
@@ -66,7 +70,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             Count_Value_Label.Text = $"{Bills_Table.Rows.Count}";
             Sum_Without_Tax_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}") + " $";
             Sum_Total_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[3].Value))}") + " $";
-
+            Initialize_Date_Pickers();
 
         }
         void Choose_Query()
