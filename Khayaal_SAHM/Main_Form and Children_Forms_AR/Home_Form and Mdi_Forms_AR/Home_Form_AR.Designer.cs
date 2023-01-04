@@ -61,6 +61,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Tool_Tip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.Date_Time_Timer = new System.Windows.Forms.Timer(this.components);
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
             this.Total_Nested_Panel.SuspendLayout();
@@ -315,6 +316,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Date_Label.Name = "Date_Label";
             this.Date_Label.Size = new System.Drawing.Size(309, 39);
             this.Date_Label.TabIndex = 27;
+            this.Date_Label.Text = null;
             this.Date_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Khayaal_Label
@@ -336,6 +338,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Home_Nested_Panel_Controlers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Home_Nested_Panel_Controlers.Controls.Add(this.guna2HtmlLabel1);
             this.Home_Nested_Panel_Controlers.Controls.Add(this.Category_Label);
             this.Home_Nested_Panel_Controlers.Controls.Add(this.Category_Combo_Box);
             this.Home_Nested_Panel_Controlers.Controls.Add(this.Search_Text_Box);
@@ -350,11 +353,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Category_Label.BackColor = System.Drawing.Color.Transparent;
             this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Category_Label.Location = new System.Drawing.Point(10, 95);
+            this.Category_Label.Location = new System.Drawing.Point(11, 95);
             this.Category_Label.Name = "Category_Label";
-            this.Category_Label.Size = new System.Drawing.Size(55, 15);
+            this.Category_Label.Size = new System.Drawing.Size(36, 15);
             this.Category_Label.TabIndex = 28;
-            this.Category_Label.Text = "*Category";
+            this.Category_Label.Text = "القسم*";
             this.Category_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Category_Combo_Box
@@ -407,11 +410,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Search_Text_Box.Name = "Search_Text_Box";
             this.Search_Text_Box.PasswordChar = '\0';
             this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Search_Text_Box.PlaceholderText = "Search";
+            this.Search_Text_Box.PlaceholderText = "اسم العنصر";
             this.Search_Text_Box.SelectedText = "";
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(312, 36);
             this.Search_Text_Box.TabIndex = 27;
+            this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
@@ -460,7 +464,20 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             // 
             this.Date_Time_Timer.Interval = 1000;
             // 
-            // Home_Form
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(314, 0);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(23, 15);
+            this.guna2HtmlLabel1.TabIndex = 29;
+            this.guna2HtmlLabel1.Text = "بحث";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Home_Form_AR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -470,7 +487,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Controls.Add(this.Items_Main_Panel);
             this.Controls.Add(this.Home_Bar_Main_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Home_Form";
+            this.Name = "Home_Form_AR";
             this.Text = "Home_Form";
             this.TopMost = true;
             this.Items_Main_Panel.ResumeLayout(false);
@@ -518,5 +535,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
         private Guna.UI2.WinForms.Guna2HtmlLabel With_Tax_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel With_Tax;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

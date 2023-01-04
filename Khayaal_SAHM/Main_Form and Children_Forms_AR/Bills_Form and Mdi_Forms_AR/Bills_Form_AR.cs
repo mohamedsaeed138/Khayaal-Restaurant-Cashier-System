@@ -24,10 +24,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         {
             InitializeComponent();
             Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date from CR.Bills;");
-            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
+            if (Bills_Table.Rows.Count == 0)
+            {
+                From_Date_Picker.Value = DateTime.Now;
                 To_Date_Picker.Value = DateTime.Now;
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
-            To_Date_Picker.Value = DateTime.Now;
+            }
+            else
+            {
+                From_Date_Picker.Value = Bills_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[4].Value));
+                From_Date_Picker.Value = Bills_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[4].Value));
+            }
         }
 
 
@@ -67,8 +73,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         {
             if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
             {
-                MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 From_Date_Picker.Value = To_Date_Picker.Value;
+                MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
