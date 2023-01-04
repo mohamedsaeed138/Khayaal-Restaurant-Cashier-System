@@ -1,4 +1,5 @@
-﻿using Khayaal_SAHM.Main_Form_and_Children_Forms_AR;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms;
+using Khayaal_SAHM.Main_Form_and_Children_Forms_AR;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,10 +21,6 @@ namespace Khayaal_SAHM
 
 
 
-        static void Mainformstart()
-        {
-            Application.Run(new Main_Form_AR());
-        }
 
         private void Close_B_Click(object sender, System.EventArgs e)
         {
@@ -55,16 +52,19 @@ namespace Khayaal_SAHM
                 LoginCon.Close();
                 if (loginQ_DT.Rows.Count > 0)
                 {
+                    Thread Mainformthread;
                     txt_user = Username.Text;
                     txt_pass = Password.Text;
                     SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(User_Name, Date)VALUES(N'{txt_user}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
                     LoginCon.Open();
                     loginCOM.ExecuteNonQuery();
                     LoginCon.Close();
-
+                    if (Language_Combo_Box.SelectedIndex == 0)
+                        Mainformthread = new Thread(() => Application.Run(new Main_Form_AR()));
+                    else
+                        Mainformthread = new Thread(() => Application.Run(new Main_Form()));
 
                     this.Close();
-                    Thread Mainformthread = new Thread(Mainformstart);
                     Mainformthread.SetApartmentState(ApartmentState.STA);
                     Mainformthread.Start();
 
@@ -85,9 +85,6 @@ namespace Khayaal_SAHM
             }
         }
 
-        private void Login_Form_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
