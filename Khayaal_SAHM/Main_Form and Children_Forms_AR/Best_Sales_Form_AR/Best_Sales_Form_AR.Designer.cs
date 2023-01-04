@@ -78,12 +78,13 @@
             this.Category_Combo_Box.HoverState.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.ItemHeight = 30;
             this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
-            this.Category_Combo_Box.Location = new System.Drawing.Point(352, 43);
+            this.Category_Combo_Box.Location = new System.Drawing.Point(453, 43);
             this.Category_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Category_Combo_Box.Name = "Category_Combo_Box";
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Size = new System.Drawing.Size(160, 36);
             this.Category_Combo_Box.TabIndex = 5;
+            this.Category_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // From_Date_Picker
@@ -94,7 +95,7 @@
             this.From_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.From_Date_Picker.Location = new System.Drawing.Point(563, 59);
+            this.From_Date_Picker.Location = new System.Drawing.Point(280, 59);
             this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Date_Picker.Name = "From_Date_Picker";
             this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
@@ -109,7 +110,7 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(770, 59);
+            this.To_Date_Picker.Location = new System.Drawing.Point(77, 59);
             this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
@@ -121,7 +122,7 @@
             this.Search_Text_Box.BorderRadius = 10;
             this.Search_Text_Box.BorderThickness = 0;
             this.Search_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Search_Text_Box.DefaultText = "";
+            this.Search_Text_Box.DefaultText = "بحث";
             this.Search_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Search_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Search_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -132,16 +133,18 @@
             this.Search_Text_Box.FocusedState.Parent = this.Search_Text_Box;
             this.Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search_Text_Box.HoverState.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.Location = new System.Drawing.Point(49, 43);
+            this.Search_Text_Box.Location = new System.Drawing.Point(657, 43);
             this.Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
             this.Search_Text_Box.Name = "Search_Text_Box";
             this.Search_Text_Box.PasswordChar = '\0';
             this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Search_Text_Box.PlaceholderText = "Search";
             this.Search_Text_Box.SelectedText = "";
+            this.Search_Text_Box.SelectionStart = 3;
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(264, 36);
             this.Search_Text_Box.TabIndex = 9;
+            this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
@@ -150,36 +153,36 @@
             this.Category_Label.BackColor = System.Drawing.Color.Transparent;
             this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Category_Label.Location = new System.Drawing.Point(352, 11);
+            this.Category_Label.Location = new System.Drawing.Point(564, 12);
             this.Category_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Category_Label.Name = "Category_Label";
-            this.Category_Label.Size = new System.Drawing.Size(80, 27);
+            this.Category_Label.Size = new System.Drawing.Size(49, 27);
             this.Category_Label.TabIndex = 11;
-            this.Category_Label.Text = "Category";
+            this.Category_Label.Text = "القسم";
             // 
             // From_Label
             // 
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(563, 11);
+            this.From_Label.Location = new System.Drawing.Point(375, 11);
             this.From_Label.Margin = new System.Windows.Forms.Padding(2);
             this.From_Label.Name = "From_Label";
-            this.From_Label.Size = new System.Drawing.Size(46, 27);
+            this.From_Label.Size = new System.Drawing.Size(26, 27);
             this.From_Label.TabIndex = 12;
-            this.From_Label.Text = "From";
+            this.From_Label.Text = "من";
             // 
             // To_Label
             // 
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(770, 11);
+            this.To_Label.Location = new System.Drawing.Point(169, 12);
             this.To_Label.Margin = new System.Windows.Forms.Padding(2);
             this.To_Label.Name = "To_Label";
-            this.To_Label.Size = new System.Drawing.Size(25, 27);
+            this.To_Label.Size = new System.Drawing.Size(29, 27);
             this.To_Label.TabIndex = 13;
-            this.To_Label.Text = "To";
+            this.To_Label.Text = "إلى";
             // 
             // Count_Label
             // 
@@ -443,7 +446,7 @@
             this.Sum_Total_Value_Label.TabIndex = 33;
             this.Sum_Total_Value_Label.Text = "0";
             // 
-            // Best_Sales_Form
+            // Best_Sales_Form_AR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -467,7 +470,8 @@
             this.Controls.Add(this.From_Date_Picker);
             this.Controls.Add(this.Category_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Best_Sales_Form";
+            this.Name = "Best_Sales_Form_AR";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).EndInit();
             this.ResumeLayout(false);
