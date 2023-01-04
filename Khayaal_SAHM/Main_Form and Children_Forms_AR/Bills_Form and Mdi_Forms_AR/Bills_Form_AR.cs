@@ -25,7 +25,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             InitializeComponent();
             Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date from CR.Bills;");
 
-
         }
 
         void Initialize_Date_Pickers()
