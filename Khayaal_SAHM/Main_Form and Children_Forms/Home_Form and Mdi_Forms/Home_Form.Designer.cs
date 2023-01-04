@@ -315,6 +315,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Date_Label.Name = "Date_Label";
             this.Date_Label.Size = new System.Drawing.Size(309, 39);
             this.Date_Label.TabIndex = 27;
+            this.Date_Label.Text = null;
             this.Date_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Khayaal_Label
@@ -382,6 +383,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Size = new System.Drawing.Size(161, 36);
             this.Category_Combo_Box.TabIndex = 23;
+            this.Category_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // Search_Text_Box
@@ -412,6 +414,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(312, 36);
             this.Search_Text_Box.TabIndex = 27;
+            this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 

@@ -77,6 +77,7 @@
             this.Unit_Price_Text_Box.ShadowDecoration.Parent = this.Unit_Price_Text_Box;
             this.Unit_Price_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Unit_Price_Text_Box.TabIndex = 4;
+            this.Unit_Price_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Unit_Price_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Unite_Price_Text_Box_KeyPress);
             // 
             // Description_Text_Box
@@ -105,6 +106,7 @@
             this.Description_Text_Box.ShadowDecoration.Parent = this.Description_Text_Box;
             this.Description_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Description_Text_Box.TabIndex = 5;
+            this.Description_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Description_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Item_Description_Text_Box_KeyPress);
             // 
             // Item_Name_Lbl
@@ -166,6 +168,7 @@
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
             this.Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Name_Text_Box.TabIndex = 0;
+            this.Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Item_Name_Text_Box_KeyPress);
             // 
             // Category_Combo_Box
@@ -191,6 +194,7 @@
             this.Category_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Category_Combo_Box.TabIndex = 1;
             this.Category_Combo_Box.TabStop = false;
+            this.Category_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Category_Lbl
             // 
@@ -240,6 +244,7 @@
             this.Add_Category_Text_Box.ShadowDecoration.Parent = this.Add_Category_Text_Box;
             this.Add_Category_Text_Box.Size = new System.Drawing.Size(179, 43);
             this.Add_Category_Text_Box.TabIndex = 2;
+            this.Add_Category_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Add_Category_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Add_Category_Text_Box_KeyPress);
             // 
             // Add_Item_Button
