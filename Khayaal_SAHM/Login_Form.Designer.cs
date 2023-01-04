@@ -219,6 +219,7 @@
             this.Close_B.ShadowDecoration.Parent = this.Close_B;
             this.Close_B.Size = new System.Drawing.Size(26, 24);
             this.Close_B.TabIndex = 6;
+            this.Close_B.TabStop = false;
             this.Close_B.Click += new System.EventHandler(this.Close_B_Click);
             // 
             // guna2Elipse1

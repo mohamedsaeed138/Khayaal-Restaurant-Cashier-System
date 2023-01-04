@@ -229,6 +229,7 @@
             this.Btn_Minimize.Name = "Btn_Minimize";
             this.Btn_Minimize.Size = new System.Drawing.Size(45, 23);
             this.Btn_Minimize.TabIndex = 2;
+            this.Btn_Minimize.TabStop = false;
             this.Btn_Minimize.UseVisualStyleBackColor = true;
             this.Btn_Minimize.Click += new System.EventHandler(this.Btn_Minimize_Click);
             // 
@@ -247,6 +248,7 @@
             this.Btn_Maximize.Name = "Btn_Maximize";
             this.Btn_Maximize.Size = new System.Drawing.Size(45, 23);
             this.Btn_Maximize.TabIndex = 1;
+            this.Btn_Maximize.TabStop = false;
             this.Btn_Maximize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Maximize.UseVisualStyleBackColor = true;
             this.Btn_Maximize.Click += new System.EventHandler(this.Btn_Maximize_Click);
@@ -265,6 +267,7 @@
             this.Btn_Exit.ShadowDecoration.Parent = this.Btn_Exit;
             this.Btn_Exit.Size = new System.Drawing.Size(45, 23);
             this.Btn_Exit.TabIndex = 0;
+            this.Btn_Exit.TabStop = false;
             this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
             // 
             // Panel_Child
