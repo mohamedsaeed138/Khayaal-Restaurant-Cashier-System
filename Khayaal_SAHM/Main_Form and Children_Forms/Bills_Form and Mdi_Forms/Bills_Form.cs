@@ -34,8 +34,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
             }
             else
             {
-                From_Date_Picker.Value = Bills_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[4].Value));
-                To_Date_Picker.Value = Bills_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[4].Value));
+                From_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[0].Cells[4].Value);
+                To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[4].Value);
             }
         }
 
