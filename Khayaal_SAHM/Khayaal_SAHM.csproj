@@ -277,11 +277,11 @@
     <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form.cs">
+    <Compile Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form_AR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form.Designer.cs">
-      <DependentUpon>Best_Sales_Form.cs</DependentUpon>
+    <Compile Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form_AR.Designer.cs">
+      <DependentUpon>Best_Sales_Form_AR.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form and Children_Forms_AR\Bills_Form and Mdi_Forms_AR\Bills_Form_AR.cs">
       <SubType>Form</SubType>
@@ -510,8 +510,8 @@
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form.resx">
-      <DependentUpon>Best_Sales_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form_AR.resx">
+      <DependentUpon>Best_Sales_Form_AR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms_AR\Bills_Form and Mdi_Forms_AR\Bills_Form_AR.resx">
       <DependentUpon>Bills_Form_AR.cs</DependentUpon>
