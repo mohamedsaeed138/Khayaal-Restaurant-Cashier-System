@@ -26,6 +26,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
         {
             Fill_Combo_Box();
             Fill_Table($"select Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
+            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
+                To_Date_Picker.Value = DateTime.Now;
+            From_Date_Picker.Value = new DateTime(2022, 1, 1);
+            To_Date_Picker.Value = DateTime.Now;
         }
         public void Fill_Combo_Box()
         {
@@ -76,34 +80,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             Sum_Qty_Value_Label.Text = Sum_Qty;
 
             Sum_Sub_Total_Value_Label.Text = Sum_Total;
-            Initialize_Date_Picker();
-        }
-        void Initialize_Date_Picker()
-        {
-            if (Purchases_Table.Rows.Count == 0)
-            {
-                From_Date_Picker.Value = DateTime.Now;
-                To_Date_Picker.Value = DateTime.Now;
-            }
-            else
-            {
-                From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[5].Value);
-                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[5].Value);
-            }
         }
         void Choose_Query()
         {
             if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
             {
-                From_Date_Picker.Value = To_Date_Picker.Value;
                 MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                From_Date_Picker.Value = To_Date_Picker.Value;
 
 
             }
             else
             {
                 string Name = Formatter.String(Name_Combo_Box.Text);
-
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Name == "All")
                     Fill_Table($"SELECT Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
