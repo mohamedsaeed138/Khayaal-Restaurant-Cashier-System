@@ -182,7 +182,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
 
                     conn.Close();
                     Choose_Query();
-                    MessageBox.Show("!!تم بنجاح");
+                    MessageBox.Show("!!تمت بنجاح");
                 }
             }
             catch { }

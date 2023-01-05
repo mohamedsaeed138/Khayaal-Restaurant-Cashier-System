@@ -92,12 +92,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 else
                 {
 
-                    MessageBox.Show("The Category is Already Existed", "Information", MessageBoxButtons.OK);
+                    MessageBox.Show("!! هذا القسم موجود بالفعل", "معلومة", MessageBoxButtons.OK);
                     Add_Category_Text_Box.Text = string.Empty;
                 }
             }
             else
-                MessageBox.Show("Enter a New Category Name", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("!! أضف قسم جديد أولا", "خطأ", MessageBoxButtons.OK);
         }
         private bool Ensure_No_Duplicated_Categories(string New_Category)
         {
@@ -212,12 +212,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
                         Image_Picture_Box.Image = null;
 
-                        MessageBox.Show("Successfully Done");
+                        MessageBox.Show("!! تمت بنجاح");
                     }
 
                     catch
                     {
-                        MessageBox.Show("There is an Item With Same Name");
+                        MessageBox.Show("!! يوجد عنصر بنفس الاسم بالفعل");
 
                     }
                     finally
@@ -245,12 +245,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                         conn.Close();
                         this.Close();
 
-                        MessageBox.Show("Successfully Done");
+                        MessageBox.Show("!! تمت بنجاح");
                     }
 
                     catch
                     {
-                        MessageBox.Show("There is an Item With Same Name");
+                        MessageBox.Show("!! يوجد عنصر بنفس الاسم بالفعل");
 
                     }
                     finally
@@ -262,7 +262,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             }
             else
             {
-                MessageBox.Show("Fill Empty Fields");
+                MessageBox.Show("!! تأكد من ملئ السعر والاسم");
             }
         }
 
