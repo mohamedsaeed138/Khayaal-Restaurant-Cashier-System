@@ -27,10 +27,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
             Fill_Combo_Box();
             Fill_Table($"select Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
-            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
-                To_Date_Picker.Value = DateTime.Now;
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
-            To_Date_Picker.Value = DateTime.Now;
+            if (Purchases_Table.Rows.Count == 0)
+                From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
+            else
+            {
+                From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[5].Value);
+                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[5].Value);
+            }
+
+
         }
         public void Fill_Combo_Box()
         {

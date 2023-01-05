@@ -24,10 +24,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         {
             InitializeComponent();
             Fill_Table($"select Serial_Number, Cashier_User_Name, Total,[Total_With_Tax], Date from CR.Bills;");
-            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
-                To_Date_Picker.Value = DateTime.Now;
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
-            To_Date_Picker.Value = DateTime.Now;
+            if (Bills_Table.Rows.Count == 0)
+                From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
+            else
+            {
+                From_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[0].Cells[4].Value);
+                To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[4].Value);
+            }
         }
 
 
