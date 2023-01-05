@@ -18,9 +18,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
         public Purchases_Form_AR()
         {
+            Formatter.Check_Connection(conn);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Name From CR.Raw_Materials;", conn);
+            conn.Open();
+            da.Fill(dt);
+            conn.Close();
             InitializeComponent();
             Reload();
-
+            if (dt.Rows.Count == 0)
+                Add_Purchase_Button.Enabled = false;
         }
         void Reload()
         {
