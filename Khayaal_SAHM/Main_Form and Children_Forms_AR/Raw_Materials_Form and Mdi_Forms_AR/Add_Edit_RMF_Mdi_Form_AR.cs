@@ -156,7 +156,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
 
                         conn.Close();
                         Name_Text_Box.Text = "";
-                        MessageBox.Show("تمت العملية بنجاح");
+                        MessageBox.Show("!! تمت بنجاح");
                     }
 
                     catch
