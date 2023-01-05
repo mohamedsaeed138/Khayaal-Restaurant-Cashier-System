@@ -80,9 +80,9 @@
             this.Item_Name_Lbl.ForeColor = System.Drawing.Color.White;
             this.Item_Name_Lbl.Location = new System.Drawing.Point(3, 61);
             this.Item_Name_Lbl.Name = "Item_Name_Lbl";
-            this.Item_Name_Lbl.Size = new System.Drawing.Size(143, 34);
+            this.Item_Name_Lbl.Size = new System.Drawing.Size(139, 34);
             this.Item_Name_Lbl.TabIndex = 4;
-            this.Item_Name_Lbl.Text = "Item Name : ";
+            this.Item_Name_Lbl.Text = "Raw Name : ";
             // 
             // Unit_Price_Lbl
             // 
@@ -260,7 +260,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add_Mdi_Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_PS_Mdi_Form_FormClosed);
-            this.Load += new System.EventHandler(this.Add_BG_Mdi_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -61,7 +61,7 @@
             this.Unit_Price_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Unit_Price_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Unit_Price_Text_Box.HoverState.Parent = this.Unit_Price_Text_Box;
-            this.Unit_Price_Text_Box.Location = new System.Drawing.Point(276, 210);
+            this.Unit_Price_Text_Box.Location = new System.Drawing.Point(3, 210);
             this.Unit_Price_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Unit_Price_Text_Box.Name = "Unit_Price_Text_Box";
             this.Unit_Price_Text_Box.PasswordChar = '\0';
@@ -70,6 +70,7 @@
             this.Unit_Price_Text_Box.ShadowDecoration.Parent = this.Unit_Price_Text_Box;
             this.Unit_Price_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Unit_Price_Text_Box.TabIndex = 2;
+            this.Unit_Price_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Unit_Price_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Unite_Price_Text_Box_KeyPress);
             // 
             // Item_Name_Lbl
@@ -77,22 +78,22 @@
             this.Item_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Item_Name_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Item_Name_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Item_Name_Lbl.Location = new System.Drawing.Point(3, 61);
+            this.Item_Name_Lbl.Location = new System.Drawing.Point(406, 58);
             this.Item_Name_Lbl.Name = "Item_Name_Lbl";
-            this.Item_Name_Lbl.Size = new System.Drawing.Size(143, 34);
+            this.Item_Name_Lbl.Size = new System.Drawing.Size(112, 34);
             this.Item_Name_Lbl.TabIndex = 4;
-            this.Item_Name_Lbl.Text = "Item Name : ";
+            this.Item_Name_Lbl.Text = ": الخام اسم";
             // 
             // Unit_Price_Lbl
             // 
             this.Unit_Price_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Unit_Price_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Unit_Price_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Unit_Price_Lbl.Location = new System.Drawing.Point(3, 210);
+            this.Unit_Price_Lbl.Location = new System.Drawing.Point(386, 210);
             this.Unit_Price_Lbl.Name = "Unit_Price_Lbl";
-            this.Unit_Price_Lbl.Size = new System.Drawing.Size(129, 34);
+            this.Unit_Price_Lbl.Size = new System.Drawing.Size(132, 34);
             this.Unit_Price_Lbl.TabIndex = 7;
-            this.Unit_Price_Lbl.Text = "Unit Price : ";
+            this.Unit_Price_Lbl.Text = ": الوحدة سعر";
             // 
             // Raw_Combo_Box
             // 
@@ -111,12 +112,13 @@
             this.Raw_Combo_Box.HoverState.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.ItemHeight = 30;
             this.Raw_Combo_Box.ItemsAppearance.Parent = this.Raw_Combo_Box;
-            this.Raw_Combo_Box.Location = new System.Drawing.Point(276, 61);
+            this.Raw_Combo_Box.Location = new System.Drawing.Point(3, 58);
             this.Raw_Combo_Box.Name = "Raw_Combo_Box";
             this.Raw_Combo_Box.ShadowDecoration.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Raw_Combo_Box.TabIndex = 0;
             this.Raw_Combo_Box.TabStop = false;
+            this.Raw_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Add_Purchase_Button
             // 
@@ -173,7 +175,7 @@
             this.Qty_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Qty_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Qty_Text_Box.HoverState.Parent = this.Qty_Text_Box;
-            this.Qty_Text_Box.Location = new System.Drawing.Point(276, 131);
+            this.Qty_Text_Box.Location = new System.Drawing.Point(3, 131);
             this.Qty_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Qty_Text_Box.Name = "Qty_Text_Box";
             this.Qty_Text_Box.PasswordChar = '\0';
@@ -182,6 +184,7 @@
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Qty_Text_Box.TabIndex = 1;
+            this.Qty_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Qty_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Qty_Text_Box_KeyPress);
             // 
             // Qty_Label
@@ -189,11 +192,11 @@
             this.Qty_Label.BackColor = System.Drawing.Color.Transparent;
             this.Qty_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Qty_Label.ForeColor = System.Drawing.Color.White;
-            this.Qty_Label.Location = new System.Drawing.Point(3, 131);
+            this.Qty_Label.Location = new System.Drawing.Point(441, 131);
             this.Qty_Label.Name = "Qty_Label";
-            this.Qty_Label.Size = new System.Drawing.Size(50, 34);
+            this.Qty_Label.Size = new System.Drawing.Size(77, 34);
             this.Qty_Label.TabIndex = 23;
-            this.Qty_Label.Text = "Qty: ";
+            this.Qty_Label.Text = ": الكمية";
             // 
             // Notes_Text_Box
             // 
@@ -212,7 +215,7 @@
             this.Notes_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Notes_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Notes_Text_Box.HoverState.Parent = this.Notes_Text_Box;
-            this.Notes_Text_Box.Location = new System.Drawing.Point(276, 287);
+            this.Notes_Text_Box.Location = new System.Drawing.Point(3, 287);
             this.Notes_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Notes_Text_Box.Name = "Notes_Text_Box";
             this.Notes_Text_Box.PasswordChar = '\0';
@@ -221,6 +224,7 @@
             this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
             this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Notes_Text_Box.TabIndex = 3;
+            this.Notes_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Notes_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Notes_Text_Box_KeyPress);
             // 
             // Notes_Label
@@ -228,13 +232,13 @@
             this.Notes_Label.BackColor = System.Drawing.Color.Transparent;
             this.Notes_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Notes_Label.ForeColor = System.Drawing.Color.White;
-            this.Notes_Label.Location = new System.Drawing.Point(3, 287);
+            this.Notes_Label.Location = new System.Drawing.Point(411, 287);
             this.Notes_Label.Name = "Notes_Label";
-            this.Notes_Label.Size = new System.Drawing.Size(84, 34);
+            this.Notes_Label.Size = new System.Drawing.Size(107, 34);
             this.Notes_Label.TabIndex = 25;
-            this.Notes_Label.Text = "Notes : ";
+            this.Notes_Label.Text = ": ملاحظات";
             // 
-            // Add_BG_Mdi_Form
+            // Add_BG_Mdi_Form_AR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -252,7 +256,7 @@
             this.Controls.Add(this.Unit_Price_Text_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Add_BG_Mdi_Form";
+            this.Name = "Add_BG_Mdi_Form_AR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add_Mdi_Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_PS_Mdi_Form_FormClosed);
