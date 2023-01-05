@@ -102,21 +102,21 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
             else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty != "" && Sorting_Combo_Box.Text != "Name")
                 Fill_Table($"select [Name]  , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty}  AND [Category]=N'{Category}' ORDER BY [{Sorting_Combo_Box.Text}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty == "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE '{Search}%'  ORDER BY [Name] ASC ");
+                Fill_Table($"select [Name] , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE N'%{Search}%'  ORDER BY [Name] ASC ");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty == "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] , [Category] , [Qty] ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE '{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
+                Fill_Table($"select [Name] , [Category] , [Qty] ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE N'%{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty != "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE '{Search}%' ORDER BY [Name] ASC");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty != "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE '{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
+                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty == "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [Name] ASC");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty == "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
+                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty != "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [Name] ASC");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Category]=N'{Category}' AND [Name] LIKE N'${Search}%' ORDER BY [Name] ASC");
             else
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE '{Search}%'  ORDER BY [{Sorting_Combo_Box.Text}]");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%'  ORDER BY [{Sorting_Combo_Box.Text}]");
 
         }
 

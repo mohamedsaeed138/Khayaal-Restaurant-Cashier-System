@@ -79,6 +79,7 @@
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Size = new System.Drawing.Size(131, 36);
             this.Category_Combo_Box.TabIndex = 5;
+            this.Category_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Category_Combo_Box.SelectedValueChanged += new System.EventHandler(this.Category_Combo_Box_SelectedValueChanged);
             // 
             // Search_Text_Box
@@ -107,6 +108,7 @@
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(184, 36);
             this.Search_Text_Box.TabIndex = 9;
+            this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
@@ -373,6 +375,7 @@
             this.Sorting_Combo_Box.ShadowDecoration.Parent = this.Sorting_Combo_Box;
             this.Sorting_Combo_Box.Size = new System.Drawing.Size(131, 36);
             this.Sorting_Combo_Box.TabIndex = 19;
+            this.Sorting_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Sorting_Combo_Box.TextChanged += new System.EventHandler(this.Sorting_Combo_Box_TextChanged);
             // 
             // Add_Button
