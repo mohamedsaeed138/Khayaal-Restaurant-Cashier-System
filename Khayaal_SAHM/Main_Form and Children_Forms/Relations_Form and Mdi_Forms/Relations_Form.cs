@@ -25,6 +25,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             Fill_Raw_Combo_Boxe();
 
             Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed] , [Id] FROM CR.Items_Relations ORDER BY [Item] ASC;");
+            if (Item_Combo_Box.Items.Count == 1 || Raw_Combo_Box.Items.Count == 1)
+                Add_Button.Enabled = false;
+            else
+                Add_Button.Enabled = true;
         }
         public void Fill_Item_Combo_Boxe()
         {
@@ -36,10 +40,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             conn.Open();
             dai.Fill(dt1);
             conn.Close();
-            if (dt1.Rows.Count == 0)
-                Add_Button.Enabled = false;
-            else
-                Add_Button.Enabled = true;
+
             DataRow row1 = dt1.NewRow();
             dt1.Rows.InsertAt(row1, 0);
             row1["Name"] = "All";
@@ -57,10 +58,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
             conn.Open();
             da2.Fill(dt2);
             conn.Close();
-            if (dt2.Rows.Count == 0)
-                Add_Button.Enabled = false;
-            else
-                Add_Button.Enabled = true;
+
             DataRow row2 = dt2.NewRow();
             dt2.Rows.InsertAt(row2, 0);
             row2["Name"] = "All";
