@@ -58,6 +58,7 @@
             this.Sum_Without_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sum_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Search_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,11 +113,12 @@
             this.Search_Serial_Number_Text_Box.Name = "Search_Serial_Number_Text_Box";
             this.Search_Serial_Number_Text_Box.PasswordChar = '\0';
             this.Search_Serial_Number_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Search_Serial_Number_Text_Box.PlaceholderText = "Search";
+            this.Search_Serial_Number_Text_Box.PlaceholderText = "Serial Number";
             this.Search_Serial_Number_Text_Box.SelectedText = "";
             this.Search_Serial_Number_Text_Box.ShadowDecoration.Parent = this.Search_Serial_Number_Text_Box;
             this.Search_Serial_Number_Text_Box.Size = new System.Drawing.Size(264, 36);
             this.Search_Serial_Number_Text_Box.TabIndex = 9;
+            this.Search_Serial_Number_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Serial_Number_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Serial_Number_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
@@ -387,6 +389,7 @@
             this.Total_Search_Text_Box.ShadowDecoration.Parent = this.Total_Search_Text_Box;
             this.Total_Search_Text_Box.Size = new System.Drawing.Size(131, 36);
             this.Total_Search_Text_Box.TabIndex = 23;
+            this.Total_Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Total_Search_Text_Box.TextChanged += new System.EventHandler(this.Total_Search_Text_Box_TextChanged);
             this.Total_Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Total_Search_Text_Box_KeyPress);
             // 
@@ -442,12 +445,25 @@
             this.Sum_Total_Label.TabIndex = 26;
             this.Sum_Total_Label.Text = "Sum : ";
             // 
+            // Search_Label
+            // 
+            this.Search_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Search_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Search_Label.Location = new System.Drawing.Point(49, 11);
+            this.Search_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Search_Label.Name = "Search_Label";
+            this.Search_Label.Size = new System.Drawing.Size(60, 27);
+            this.Search_Label.TabIndex = 28;
+            this.Search_Label.Text = "Search";
+            // 
             // Bills_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Search_Label);
             this.Controls.Add(this.Sum_Total_Value_Label);
             this.Controls.Add(this.Sum_Total_Label);
             this.Controls.Add(this.Sum_Without_Tax_Value_Label);
@@ -495,5 +511,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Without_Tax_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Value_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Search_Label;
     }
 }
