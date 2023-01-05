@@ -110,7 +110,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
                 if (Name == "All")
                     Fill_Table($"SELECT Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
                 else
-                    Fill_Table($"SELECT Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases [Name]=N'{Name}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                    Fill_Table($"SELECT Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Name]=N'{Name}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
             }
         }
 
