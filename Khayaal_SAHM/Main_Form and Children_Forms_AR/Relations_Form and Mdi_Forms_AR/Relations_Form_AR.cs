@@ -43,9 +43,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
 
             DataRow row1 = dt1.NewRow();
             dt1.Rows.InsertAt(row1, 0);
-            row1["Name"] = "All";
+            row1["الاسم"] = "الجميع";
             Item_Combo_Box.DataSource = dt1;
-            Item_Combo_Box.DisplayMember = "Name";
+            Item_Combo_Box.DisplayMember = "الاسم";
 
         }
         public void Fill_Raw_Combo_Boxe()
@@ -60,9 +60,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
 
             DataRow row2 = dt2.NewRow();
             dt2.Rows.InsertAt(row2, 0);
-            row2["Name"] = "All";
+            row2["الاسم"] = "الجميع";
             Raw_Combo_Box.DataSource = dt2;
-            Raw_Combo_Box.DisplayMember = "Name";
+            Raw_Combo_Box.DisplayMember = "الاسم";
         }
 
         void Fill_Table(string Query)//ok
@@ -96,11 +96,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
         }
         void Choose_Query()
         {
-            if (Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text == "All")
+            if (Item_Combo_Box.Text == "الجميع" && Raw_Combo_Box.Text == "الجميع")
                 Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations ORDER BY [Item] ASC;");
-            else if (Item_Combo_Box.Text != "All" && Raw_Combo_Box.Text != "All")
+            else if (Item_Combo_Box.Text != "الجميع" && Raw_Combo_Box.Text != "الجميع")
                 Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}' and CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
-            else if (Item_Combo_Box.Text == "All" && Raw_Combo_Box.Text != "All")
+            else if (Item_Combo_Box.Text == "الجميع" && Raw_Combo_Box.Text != "الجميع")
                 Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations WHERE CR.Get_Raw_Mat_Name(Raw_Id)= N'{Raw_Combo_Box.Text}'  ORDER BY [Item] ASC;");
             else
                 Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] , CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material] , [Qty_Needed] , [Id]  FROM CR.Items_Relations WHERE CR.Get_Item_Name(Item_Id)= N'{Item_Combo_Box.Text}' ORDER BY [Item] ASC;");
@@ -162,7 +162,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
                 string raw = (string)row.Cells[1].Value;
                 string qty = Formatter.Float($"{(double)row.Cells[2].Value}");
                 int id = (int)row.Cells[3].Value;
-                if (Relations_Table.Columns[e.ColumnIndex].Name == "Edit")
+                if (Relations_Table.Columns[e.ColumnIndex].Name == "تعديل")
                 {
                     Add_Edit_RS_Mdi_Form_AR form = new Add_Edit_RS_Mdi_Form_AR(item, raw, qty, id);
                     form.MdiParent = this.Owner;
@@ -172,7 +172,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
                     };
                     form.ShowDialog();
                 }
-                else if (Relations_Table.Columns[e.ColumnIndex].Name == "Delete")
+                else if (Relations_Table.Columns[e.ColumnIndex].Name == "حذف")
                 {
                     try
                     {
@@ -183,7 +183,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
                         Delete.ExecuteNonQuery();
                         conn.Close();
                         Choose_Query();
-                        MessageBox.Show("Successfully Done!");
+                        MessageBox.Show("!تمت العملية بنجاح");
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }

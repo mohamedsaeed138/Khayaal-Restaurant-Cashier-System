@@ -28,7 +28,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             Item_Combo_Box.Text = item;
             Raw_Combo_Box.Text = raw;
             Qty_Text_Box.Text = qty;
-            Add_Relation_Button.Text = "Edit";
+            Add_Relation_Button.Text = "تعديل";
         }
 
         void Reload()
@@ -52,7 +52,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             conn.Close();
 
             Raw_Combo_Box.DataSource = dt;
-            Raw_Combo_Box.DisplayMember = "Name";
+            Raw_Combo_Box.DisplayMember = "الاسم";
 
         }
         private void Fill_Item_Combo_Box()
@@ -66,7 +66,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             conn.Close();
 
             Item_Combo_Box.DataSource = dt;
-            Item_Combo_Box.DisplayMember = "Name";
+            Item_Combo_Box.DisplayMember = "الاسم";
 
         }
 
@@ -124,12 +124,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
 
                         conn.Close();
                         Qty_Text_Box.Text = "";
-                        MessageBox.Show("Successfully Done");
+                        MessageBox.Show("تمت العملية بنجاح");
                     }
 
                     catch
                     {
-                        MessageBox.Show("There Relation is Already Existed");
+                        MessageBox.Show("عملية الربط موجودة بالفعل");
 
                     }
                     finally
@@ -155,12 +155,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
                         conn.Close();
                         this.Close();
 
-                        MessageBox.Show("Successfully Done");
+                        MessageBox.Show("تمت العملية بنجاح");
                     }
 
                     catch
                     {
-                        MessageBox.Show("There Relation is Already Existed");
+                        MessageBox.Show("عملية الربط موجودة بالفعل");
 
                     }
                     finally
@@ -172,7 +172,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             }
             else
             {
-                MessageBox.Show("Fill Empty Fields");
+                MessageBox.Show("قم بمـلء الفراغات");
             }
         }
     }

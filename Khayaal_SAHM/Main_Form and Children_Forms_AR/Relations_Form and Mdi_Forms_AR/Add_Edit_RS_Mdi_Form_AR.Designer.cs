@@ -47,11 +47,11 @@
             this.Item_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Item_Name_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Item_Name_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Item_Name_Lbl.Location = new System.Drawing.Point(12, 61);
+            this.Item_Name_Lbl.Location = new System.Drawing.Point(406, 61);
             this.Item_Name_Lbl.Name = "Item_Name_Lbl";
-            this.Item_Name_Lbl.Size = new System.Drawing.Size(143, 34);
+            this.Item_Name_Lbl.Size = new System.Drawing.Size(125, 34);
             this.Item_Name_Lbl.TabIndex = 4;
-            this.Item_Name_Lbl.Text = "Item Name : ";
+            this.Item_Name_Lbl.Text = ":العنصر اسم";
             // 
             // Raw_Combo_Box
             // 
@@ -70,12 +70,13 @@
             this.Raw_Combo_Box.HoverState.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.ItemHeight = 30;
             this.Raw_Combo_Box.ItemsAppearance.Parent = this.Raw_Combo_Box;
-            this.Raw_Combo_Box.Location = new System.Drawing.Point(276, 140);
+            this.Raw_Combo_Box.Location = new System.Drawing.Point(12, 140);
             this.Raw_Combo_Box.Name = "Raw_Combo_Box";
             this.Raw_Combo_Box.ShadowDecoration.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Raw_Combo_Box.TabIndex = 1;
             this.Raw_Combo_Box.TabStop = false;
+            this.Raw_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Add_Relation_Button
             // 
@@ -91,7 +92,7 @@
             this.Add_Relation_Button.ShadowDecoration.Parent = this.Add_Relation_Button;
             this.Add_Relation_Button.Size = new System.Drawing.Size(164, 49);
             this.Add_Relation_Button.TabIndex = 3;
-            this.Add_Relation_Button.Text = "Add";
+            this.Add_Relation_Button.Text = "أضف";
             this.Add_Relation_Button.Click += new System.EventHandler(this.Add_Relation_Button_Click);
             // 
             // guna2DragControl1
@@ -132,7 +133,7 @@
             this.Qty_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Qty_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Qty_Text_Box.HoverState.Parent = this.Qty_Text_Box;
-            this.Qty_Text_Box.Location = new System.Drawing.Point(276, 221);
+            this.Qty_Text_Box.Location = new System.Drawing.Point(12, 212);
             this.Qty_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Qty_Text_Box.Name = "Qty_Text_Box";
             this.Qty_Text_Box.PasswordChar = '\0';
@@ -141,6 +142,7 @@
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Qty_Text_Box.TabIndex = 2;
+            this.Qty_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Qty_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Qty_Text_Box_KeyPress);
             // 
             // Raw_Name_Label
@@ -148,11 +150,11 @@
             this.Raw_Name_Label.BackColor = System.Drawing.Color.Transparent;
             this.Raw_Name_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Raw_Name_Label.ForeColor = System.Drawing.Color.White;
-            this.Raw_Name_Label.Location = new System.Drawing.Point(12, 141);
+            this.Raw_Name_Label.Location = new System.Drawing.Point(426, 142);
             this.Raw_Name_Label.Name = "Raw_Name_Label";
-            this.Raw_Name_Label.Size = new System.Drawing.Size(139, 34);
+            this.Raw_Name_Label.Size = new System.Drawing.Size(105, 34);
             this.Raw_Name_Label.TabIndex = 23;
-            this.Raw_Name_Label.Text = "Raw Name :";
+            this.Raw_Name_Label.Text = ":الخام اسم";
             // 
             // Item_Combo_Box
             // 
@@ -171,25 +173,26 @@
             this.Item_Combo_Box.HoverState.Parent = this.Item_Combo_Box;
             this.Item_Combo_Box.ItemHeight = 30;
             this.Item_Combo_Box.ItemsAppearance.Parent = this.Item_Combo_Box;
-            this.Item_Combo_Box.Location = new System.Drawing.Point(276, 59);
+            this.Item_Combo_Box.Location = new System.Drawing.Point(12, 59);
             this.Item_Combo_Box.Name = "Item_Combo_Box";
             this.Item_Combo_Box.ShadowDecoration.Parent = this.Item_Combo_Box;
             this.Item_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Item_Combo_Box.TabIndex = 0;
             this.Item_Combo_Box.TabStop = false;
+            this.Item_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Qty_Needed_Label
             // 
             this.Qty_Needed_Label.BackColor = System.Drawing.Color.Transparent;
             this.Qty_Needed_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Qty_Needed_Label.ForeColor = System.Drawing.Color.White;
-            this.Qty_Needed_Label.Location = new System.Drawing.Point(12, 221);
+            this.Qty_Needed_Label.Location = new System.Drawing.Point(366, 221);
             this.Qty_Needed_Label.Name = "Qty_Needed_Label";
-            this.Qty_Needed_Label.Size = new System.Drawing.Size(152, 34);
+            this.Qty_Needed_Label.Size = new System.Drawing.Size(165, 34);
             this.Qty_Needed_Label.TabIndex = 26;
-            this.Qty_Needed_Label.Text = "Qty Needed :";
+            this.Qty_Needed_Label.Text = ":المطلوبة الكمية";
             // 
-            // Add_Edit_RS_Mdi_Form
+            // Add_Edit_RS_Mdi_Form_AR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,7 +208,7 @@
             this.Controls.Add(this.Item_Name_Lbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Add_Edit_RS_Mdi_Form";
+            this.Name = "Add_Edit_RS_Mdi_Form_AR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add_Mdi_Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_PS_Mdi_Form_FormClosed);
