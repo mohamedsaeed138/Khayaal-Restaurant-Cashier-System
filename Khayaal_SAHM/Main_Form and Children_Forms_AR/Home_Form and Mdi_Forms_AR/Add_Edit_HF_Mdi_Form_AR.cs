@@ -262,7 +262,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             }
             else
             {
-                MessageBox.Show("!! تأكد من ملئ السعر والاسم");
+                MessageBox.Show("!! تأكد من تعبئة الاسم والسعر");
             }
         }
 

@@ -262,7 +262,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             }
             else
             {
-                MessageBox.Show("Fill Empty Fields");
+                MessageBox.Show("Ensure Filling The Name and The Price !!");
             }
         }
 
