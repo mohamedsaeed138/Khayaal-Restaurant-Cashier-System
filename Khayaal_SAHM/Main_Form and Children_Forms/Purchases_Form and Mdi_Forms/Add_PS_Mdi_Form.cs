@@ -127,7 +127,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             }
             else
             {
-                MessageBox.Show("Fill Empty Fields!!");
+                MessageBox.Show("Ensure Filling Qty and Price !!");
             }
         }
 
@@ -139,5 +139,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
                 e.Handled = true;
             }
         }
+
+
     }
 }

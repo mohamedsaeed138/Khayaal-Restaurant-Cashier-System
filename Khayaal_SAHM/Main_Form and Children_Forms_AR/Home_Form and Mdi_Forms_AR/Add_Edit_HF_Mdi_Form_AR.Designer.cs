@@ -114,7 +114,7 @@
             this.Item_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Item_Name_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Item_Name_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Item_Name_Lbl.Location = new System.Drawing.Point(447, 32);
+            this.Item_Name_Lbl.Location = new System.Drawing.Point(458, 32);
             this.Item_Name_Lbl.Name = "Item_Name_Lbl";
             this.Item_Name_Lbl.Size = new System.Drawing.Size(71, 34);
             this.Item_Name_Lbl.TabIndex = 4;
@@ -125,7 +125,7 @@
             this.Item_Description_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Item_Description_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Item_Description_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Item_Description_Lbl.Location = new System.Drawing.Point(427, 280);
+            this.Item_Description_Lbl.Location = new System.Drawing.Point(438, 280);
             this.Item_Description_Lbl.Name = "Item_Description_Lbl";
             this.Item_Description_Lbl.Size = new System.Drawing.Size(91, 34);
             this.Item_Description_Lbl.TabIndex = 6;
@@ -136,11 +136,11 @@
             this.Unit_Price_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Unit_Price_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Unit_Price_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Unit_Price_Lbl.Location = new System.Drawing.Point(443, 225);
+            this.Unit_Price_Lbl.Location = new System.Drawing.Point(397, 225);
             this.Unit_Price_Lbl.Name = "Unit_Price_Lbl";
-            this.Unit_Price_Lbl.Size = new System.Drawing.Size(75, 34);
+            this.Unit_Price_Lbl.Size = new System.Drawing.Size(132, 34);
             this.Unit_Price_Lbl.TabIndex = 7;
-            this.Unit_Price_Lbl.Text = ": السعر";
+            this.Unit_Price_Lbl.Text = ": الوحدة سعر";
             // 
             // Name_Text_Box
             // 
@@ -201,7 +201,7 @@
             this.Category_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Category_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Category_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Category_Lbl.Location = new System.Drawing.Point(441, 94);
+            this.Category_Lbl.Location = new System.Drawing.Point(452, 94);
             this.Category_Lbl.Name = "Category_Lbl";
             this.Category_Lbl.Size = new System.Drawing.Size(77, 34);
             this.Category_Lbl.TabIndex = 11;
@@ -302,7 +302,7 @@
             this.New_Category_Label.BackColor = System.Drawing.Color.Transparent;
             this.New_Category_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.New_Category_Label.ForeColor = System.Drawing.Color.White;
-            this.New_Category_Label.Location = new System.Drawing.Point(397, 152);
+            this.New_Category_Label.Location = new System.Drawing.Point(408, 152);
             this.New_Category_Label.Name = "New_Category_Label";
             this.New_Category_Label.Size = new System.Drawing.Size(121, 34);
             this.New_Category_Label.TabIndex = 18;
@@ -326,7 +326,7 @@
             this.Choose_Image_Label.BackColor = System.Drawing.Color.Transparent;
             this.Choose_Image_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Choose_Image_Label.ForeColor = System.Drawing.Color.White;
-            this.Choose_Image_Label.Location = new System.Drawing.Point(400, 332);
+            this.Choose_Image_Label.Location = new System.Drawing.Point(411, 332);
             this.Choose_Image_Label.Name = "Choose_Image_Label";
             this.Choose_Image_Label.Size = new System.Drawing.Size(118, 34);
             this.Choose_Image_Label.TabIndex = 21;

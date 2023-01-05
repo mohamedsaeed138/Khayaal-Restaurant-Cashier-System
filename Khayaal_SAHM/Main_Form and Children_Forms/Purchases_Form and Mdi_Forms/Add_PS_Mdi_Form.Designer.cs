@@ -70,6 +70,7 @@
             this.Unit_Price_Text_Box.ShadowDecoration.Parent = this.Unit_Price_Text_Box;
             this.Unit_Price_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Unit_Price_Text_Box.TabIndex = 2;
+            this.Unit_Price_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Unit_Price_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Unite_Price_Text_Box_KeyPress);
             // 
             // Item_Name_Lbl
@@ -117,6 +118,7 @@
             this.Raw_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Raw_Combo_Box.TabIndex = 0;
             this.Raw_Combo_Box.TabStop = false;
+            this.Raw_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Add_Purchase_Button
             // 
@@ -182,6 +184,7 @@
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Qty_Text_Box.TabIndex = 1;
+            this.Qty_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Qty_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Qty_Text_Box_KeyPress);
             // 
             // Qty_Label
@@ -221,6 +224,7 @@
             this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
             this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Notes_Text_Box.TabIndex = 3;
+            this.Notes_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Notes_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Notes_Text_Box_KeyPress);
             // 
             // Notes_Label
@@ -256,6 +260,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add_Mdi_Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_PS_Mdi_Form_FormClosed);
+            this.Load += new System.EventHandler(this.Add_BG_Mdi_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
