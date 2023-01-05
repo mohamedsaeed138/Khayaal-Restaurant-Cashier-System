@@ -333,7 +333,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 string Warning_Message = " \t\t :  انت تحتاج الي\n";
                 foreach (DataRow row in Negative_Qty.Rows)
                 {
-                    Warning_Message += $" وحدات أكثر من {(string)row[0]}{(-1 * (double)row[1])}\n";
+                    Warning_Message += $"{(-1 * (double)row[1])} وحدات أكثر من {(string)row[0]}\n";
                 }
                 MessageBox.Show(Warning_Message + " لانشاء هذا الطلب");
 
