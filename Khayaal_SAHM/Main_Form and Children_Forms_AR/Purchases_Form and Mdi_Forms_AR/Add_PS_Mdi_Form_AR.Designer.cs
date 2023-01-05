@@ -61,7 +61,7 @@
             this.Unit_Price_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Unit_Price_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Unit_Price_Text_Box.HoverState.Parent = this.Unit_Price_Text_Box;
-            this.Unit_Price_Text_Box.Location = new System.Drawing.Point(3, 210);
+            this.Unit_Price_Text_Box.Location = new System.Drawing.Point(26, 210);
             this.Unit_Price_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Unit_Price_Text_Box.Name = "Unit_Price_Text_Box";
             this.Unit_Price_Text_Box.PasswordChar = '\0';
@@ -112,7 +112,7 @@
             this.Raw_Combo_Box.HoverState.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.ItemHeight = 30;
             this.Raw_Combo_Box.ItemsAppearance.Parent = this.Raw_Combo_Box;
-            this.Raw_Combo_Box.Location = new System.Drawing.Point(3, 58);
+            this.Raw_Combo_Box.Location = new System.Drawing.Point(26, 58);
             this.Raw_Combo_Box.Name = "Raw_Combo_Box";
             this.Raw_Combo_Box.ShadowDecoration.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.Size = new System.Drawing.Size(242, 36);
@@ -175,7 +175,7 @@
             this.Qty_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Qty_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Qty_Text_Box.HoverState.Parent = this.Qty_Text_Box;
-            this.Qty_Text_Box.Location = new System.Drawing.Point(3, 131);
+            this.Qty_Text_Box.Location = new System.Drawing.Point(26, 131);
             this.Qty_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Qty_Text_Box.Name = "Qty_Text_Box";
             this.Qty_Text_Box.PasswordChar = '\0';
@@ -215,7 +215,7 @@
             this.Notes_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Notes_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Notes_Text_Box.HoverState.Parent = this.Notes_Text_Box;
-            this.Notes_Text_Box.Location = new System.Drawing.Point(3, 287);
+            this.Notes_Text_Box.Location = new System.Drawing.Point(26, 287);
             this.Notes_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Notes_Text_Box.Name = "Notes_Text_Box";
             this.Notes_Text_Box.PasswordChar = '\0';

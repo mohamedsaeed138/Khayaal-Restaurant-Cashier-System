@@ -109,7 +109,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                     Unit_Price_Text_Box.Text = "";
                     Notes_Text_Box.Text = "";
 
-                    MessageBox.Show("Successfully Done");
+                    MessageBox.Show("!! تمت بنجاح");
                 }
 
                 catch (Exception ex)
@@ -127,7 +127,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             }
             else
             {
-                MessageBox.Show("Fill Empty Fields!!");
+                MessageBox.Show("!! تأكد من تعبئة الكمية والسعر");
             }
         }
 
