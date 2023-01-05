@@ -208,14 +208,13 @@
             // Count_Value_Label
             // 
             this.Count_Value_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Count_Value_Label.AutoSize = false;
             this.Count_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Count_Value_Label.Location = new System.Drawing.Point(770, 544);
             this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Value_Label.Name = "Count_Value_Label";
-            this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Count_Value_Label.Size = new System.Drawing.Size(13, 26);
             this.Count_Value_Label.TabIndex = 15;
             this.Count_Value_Label.Text = "0";
             // 
@@ -380,14 +379,13 @@
             // With_Tax_Value_Label
             // 
             this.With_Tax_Value_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.With_Tax_Value_Label.AutoSize = false;
             this.With_Tax_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.With_Tax_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.With_Tax_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.With_Tax_Value_Label.Location = new System.Drawing.Point(49, 543);
             this.With_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.With_Tax_Value_Label.Name = "With_Tax_Value_Label";
-            this.With_Tax_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.With_Tax_Value_Label.Size = new System.Drawing.Size(13, 26);
             this.With_Tax_Value_Label.TabIndex = 29;
             this.With_Tax_Value_Label.Text = "0";
             // 
@@ -408,7 +406,6 @@
             // Qty_Value_Label
             // 
             this.Qty_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Qty_Value_Label.AutoSize = false;
             this.Qty_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Qty_Value_Label.Enabled = false;
             this.Qty_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -416,7 +413,7 @@
             this.Qty_Value_Label.Location = new System.Drawing.Point(563, 544);
             this.Qty_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Qty_Value_Label.Name = "Qty_Value_Label";
-            this.Qty_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Qty_Value_Label.Size = new System.Drawing.Size(13, 26);
             this.Qty_Value_Label.TabIndex = 31;
             this.Qty_Value_Label.Text = "0";
             // 
@@ -451,14 +448,13 @@
             // Sum_Total_Value_Label
             // 
             this.Sum_Total_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Total_Value_Label.AutoSize = false;
             this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Sum_Total_Value_Label.Location = new System.Drawing.Point(331, 544);
             this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
-            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 26);
             this.Sum_Total_Value_Label.TabIndex = 33;
             this.Sum_Total_Value_Label.Text = "0";
             // 
@@ -479,6 +475,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
             this.Controls.Add(this.Search_Label);
