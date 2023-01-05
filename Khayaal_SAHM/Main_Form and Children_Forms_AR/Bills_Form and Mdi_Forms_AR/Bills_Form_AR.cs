@@ -67,7 +67,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         {
             if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
             {
-                MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("خطأ في المدي الزمني قم بتغيير المدي الزمني", "!!خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 From_Date_Picker.Value = To_Date_Picker.Value;
 
 
@@ -166,12 +166,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             try
             {
                 DataGridViewRow row = Bills_Table.Rows[e.RowIndex];
-                if (Bills_Table.Columns[e.ColumnIndex].Name == "Print")
+                if (Bills_Table.Columns[e.ColumnIndex].Name == "طباعة")
                 {
                     Print_Form Form = new Print_Form((int)row.Cells[0].Value);
                     Form.Show();
                 }
-                else if (Bills_Table.Columns[e.ColumnIndex].Name == "Delete")
+                else if (Bills_Table.Columns[e.ColumnIndex].Name == "حذف")
                 {
                     Formatter.Check_Connection(conn);
                     SqlCommand Delete = new SqlCommand($"DELETE CR.Bills_Details Where Serial_No={(int)row.Cells[0].Value};\nDELETE CR.Bills WHERE Serial_Number={(int)row.Cells[0].Value};", conn);
@@ -180,7 +180,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
 
                     conn.Close();
                     Choose_Query();
-                    MessageBox.Show("Successfully Done!");
+                    MessageBox.Show("!!تم بنجاح");
                 }
             }
             catch { }
