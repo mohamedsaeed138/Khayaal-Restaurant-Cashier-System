@@ -36,6 +36,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             conn.Open();
             dai.Fill(dt1);
             conn.Close();
+            if (dt1.Rows.Count == 0)
+                Add_Button.Enabled = false;
+            else
+                Add_Button.Enabled = true;
             DataRow row1 = dt1.NewRow();
             dt1.Rows.InsertAt(row1, 0);
             row1["Name"] = "All";
