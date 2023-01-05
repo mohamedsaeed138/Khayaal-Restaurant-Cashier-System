@@ -27,7 +27,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             InitializeComponent();
         }
 
-        public override string ToString() => $"Name : {Name},Category : {Category},Price : {Price} ,Description : {Description}";
+        public override string ToString() => $"الاسم : {Name},القسم : {Category},السعر : {Price} ,الوصف : {Description}";
 
 
 
