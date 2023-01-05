@@ -115,7 +115,7 @@
             this.Search_Serial_Number_Text_Box.Name = "Search_Serial_Number_Text_Box";
             this.Search_Serial_Number_Text_Box.PasswordChar = '\0';
             this.Search_Serial_Number_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Search_Serial_Number_Text_Box.PlaceholderText = "بحث";
+            this.Search_Serial_Number_Text_Box.PlaceholderText = "الرقم التسلسلي";
             this.Search_Serial_Number_Text_Box.SelectedText = "";
             this.Search_Serial_Number_Text_Box.ShadowDecoration.Parent = this.Search_Serial_Number_Text_Box;
             this.Search_Serial_Number_Text_Box.Size = new System.Drawing.Size(264, 36);
@@ -182,7 +182,7 @@
             this.Count_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Value_Label.Location = new System.Drawing.Point(756, 544);
+            this.Count_Value_Label.Location = new System.Drawing.Point(763, 544);
             this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Value_Label.Name = "Count_Value_Label";
             this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
@@ -402,11 +402,11 @@
             // 
             // Sum_Without_Tax_Value_Label
             // 
-            this.Sum_Without_Tax_Value_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Sum_Without_Tax_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Sum_Without_Tax_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Without_Tax_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Without_Tax_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(224, 543);
+            this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(581, 544);
             this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Without_Tax_Value_Label.Name = "Sum_Without_Tax_Value_Label";
             this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(13, 27);
@@ -415,11 +415,11 @@
             // 
             // Sum_Without_Tax_Label
             // 
-            this.Sum_Without_Tax_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Sum_Without_Tax_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Sum_Without_Tax_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Without_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Without_Tax_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(322, 543);
+            this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(499, 544);
             this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Without_Tax_Label.Name = "Sum_Without_Tax_Label";
             this.Sum_Without_Tax_Label.Size = new System.Drawing.Size(72, 27);
@@ -432,7 +432,7 @@
             this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(478, 544);
+            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(402, 544);
             this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
             this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
@@ -445,7 +445,7 @@
             this.Sum_Total_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Total_Label.Location = new System.Drawing.Point(568, 543);
+            this.Sum_Total_Label.Location = new System.Drawing.Point(680, 544);
             this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Total_Label.Name = "Sum_Total_Label";
             this.Sum_Total_Label.Size = new System.Drawing.Size(72, 27);
