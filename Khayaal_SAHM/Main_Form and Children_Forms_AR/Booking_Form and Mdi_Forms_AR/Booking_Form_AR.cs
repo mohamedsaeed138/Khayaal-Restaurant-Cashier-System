@@ -39,17 +39,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
         {
             Table_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
-            conn.Open();
+
             string sql = "SELECT [Number] FROM CR.Tables ORDER BY [Number]";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
+
             DataTable dt2 = new DataTable();
             dt2.Columns.Add("Number");
             DataRow row = dt2.NewRow();
             dt2.Rows.InsertAt(row, 0);
             row["Number"] = "All";
+            conn.Open();
             da.Fill(dt);
             conn.Close();
+            if (dt.Rows.Count == 0)
+                Add_Booking_Button.Enabled = false;
+            else
+                Add_Booking_Button.Enabled = true;
             foreach (DataRow row2 in dt.Rows)
             {
                 dt2.Rows.Add((int)row2[0]);
