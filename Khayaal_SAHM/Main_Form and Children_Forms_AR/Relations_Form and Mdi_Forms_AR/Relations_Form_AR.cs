@@ -53,6 +53,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             conn.Open();
             da2.Fill(dt2);
             conn.Close();
+            if (dt2.Rows.Count == 0)
+                Add_Button.Enabled = false;
+            else
+                Add_Button.Enabled = true;
             DataRow row2 = dt2.NewRow();
             dt2.Rows.InsertAt(row2, 0);
             row2["Name"] = "All";
