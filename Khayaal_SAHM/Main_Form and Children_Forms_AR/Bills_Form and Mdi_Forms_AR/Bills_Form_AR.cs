@@ -51,7 +51,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             {
                 double total = (double)row[2];
 
-                Bills_Table.Rows.Add((int)row[0], (string)row[1], total, (total * .14 + total), (DateTime)row[4]);
+                Bills_Table.Rows.Add((int)row[0], (string)row[1], total, (total * .14 + total), (DateTime)row[3]);
 
 
             }
