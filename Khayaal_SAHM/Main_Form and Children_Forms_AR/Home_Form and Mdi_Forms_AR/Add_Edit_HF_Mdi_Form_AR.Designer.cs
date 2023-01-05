@@ -261,7 +261,7 @@
             this.Add_Item_Button.ShadowDecoration.Parent = this.Add_Item_Button;
             this.Add_Item_Button.Size = new System.Drawing.Size(164, 49);
             this.Add_Item_Button.TabIndex = 6;
-            this.Add_Item_Button.Text = "Add";
+            this.Add_Item_Button.Text = "أضف";
             this.Add_Item_Button.Click += new System.EventHandler(this.Add_Item_Button_Click);
             // 
             // Add_Category_Button

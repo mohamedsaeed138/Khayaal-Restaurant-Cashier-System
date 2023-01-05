@@ -81,6 +81,7 @@
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
             this.Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Name_Text_Box.TabIndex = 0;
+            this.Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_Text_Box_KeyPress);
             // 
             // Category_Combo_Box
@@ -106,6 +107,7 @@
             this.Category_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Category_Combo_Box.TabIndex = 1;
             this.Category_Combo_Box.TabStop = false;
+            this.Category_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Category_Lbl
             // 
@@ -155,6 +157,7 @@
             this.Add_Category_Text_Box.ShadowDecoration.Parent = this.Add_Category_Text_Box;
             this.Add_Category_Text_Box.Size = new System.Drawing.Size(179, 43);
             this.Add_Category_Text_Box.TabIndex = 2;
+            this.Add_Category_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Add_Category_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Add_Category_Text_Box_KeyPress);
             // 
             // Add_Raw_Button
@@ -171,7 +174,7 @@
             this.Add_Raw_Button.ShadowDecoration.Parent = this.Add_Raw_Button;
             this.Add_Raw_Button.Size = new System.Drawing.Size(164, 49);
             this.Add_Raw_Button.TabIndex = 4;
-            this.Add_Raw_Button.Text = "Add";
+            this.Add_Raw_Button.Text = "أضف";
             this.Add_Raw_Button.Click += new System.EventHandler(this.Add_Raw_Button_Click_1);
             // 
             // Add_Category_Button

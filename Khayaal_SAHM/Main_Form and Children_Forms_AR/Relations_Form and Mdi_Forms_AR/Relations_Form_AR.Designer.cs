@@ -169,6 +169,7 @@
             this.Relations_Table.MultiSelect = false;
             this.Relations_Table.Name = "Relations_Table";
             this.Relations_Table.ReadOnly = true;
+            this.Relations_Table.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,9 +329,9 @@
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(436, 11);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(115, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(91, 27);
             this.guna2HtmlLabel1.TabIndex = 20;
-            this.guna2HtmlLabel1.Text = "Raw Material";
+            this.guna2HtmlLabel1.Text = "الخام المادة";
             // 
             // Add_Button
             // 
@@ -349,7 +350,7 @@
             this.Add_Button.Text = "Add Relation";
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
-            // Relations_Form
+            // Relations_Form_AR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,7 +366,7 @@
             this.Controls.Add(this.Item_Label);
             this.Controls.Add(this.Item_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Relations_Form";
+            this.Name = "Relations_Form_AR";
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Relations_Table)).EndInit();
             this.ResumeLayout(false);

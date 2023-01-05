@@ -134,7 +134,7 @@
             this.Add_Purchase_Button.ShadowDecoration.Parent = this.Add_Purchase_Button;
             this.Add_Purchase_Button.Size = new System.Drawing.Size(164, 49);
             this.Add_Purchase_Button.TabIndex = 4;
-            this.Add_Purchase_Button.Text = "Add";
+            this.Add_Purchase_Button.Text = "أضف";
             this.Add_Purchase_Button.Click += new System.EventHandler(this.Add_Purchase_Button_Click);
             // 
             // guna2DragControl1

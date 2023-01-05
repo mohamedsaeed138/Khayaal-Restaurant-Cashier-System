@@ -64,12 +64,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
                 else
                 {
 
-                    MessageBox.Show("The Category is Already Existed", "Information", MessageBoxButtons.OK);
+                    MessageBox.Show("!!القسم موجود بالفعل", "احذر", MessageBoxButtons.OK);
                     Add_Category_Text_Box.Text = string.Empty;
                 }
             }
             else
-                MessageBox.Show("Enter a New Category Name", "Error", MessageBoxButtons.OK);
+                MessageBox.Show(".قم بأدخال قسم جديد", "!!خطأ", MessageBoxButtons.OK);
         }
         private bool Ensure_No_Duplicated_Categories(string New_Category)
         {
@@ -156,12 +156,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
 
                         conn.Close();
                         Name_Text_Box.Text = "";
-                        MessageBox.Show("Successfully Done");
+                        MessageBox.Show("تمت العملية بنجاح");
                     }
 
                     catch
                     {
-                        MessageBox.Show("There is a Raw Material With Same Name");
+                        MessageBox.Show("!!يوجد بالفعل مادة خام بنفس الاسم");
 
                     }
                     finally
@@ -185,12 +185,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
 
                         conn.Close();
                         this.Close();
-                        MessageBox.Show("Successfully Done");
+                        MessageBox.Show("تمت العملية بنجاح");
                     }
 
                     catch
                     {
-                        MessageBox.Show("There is a Raw Material With Same Name");
+                        MessageBox.Show("!!يوجد بالفعل مادة خام بنفس الاسم");
 
                     }
                     finally
@@ -202,7 +202,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
             }
             else
             {
-                MessageBox.Show("Fill Empty Fields");
+                MessageBox.Show("قم بمـلء الفراغات");
             }
         }
 
