@@ -32,9 +32,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
             else
             {
-
-                From_Date_Picker.Value = Convert.ToDateTime(Booking_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDouble(t.Cells[2].Value)));
-                To_Date_Picker.Value = Convert.ToDateTime(Booking_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDouble(t.Cells[3].Value)));
+                To_Date_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[3].Value));
+                From_Date_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[2].Value));
             }
         }
         public void Fill_Combo_Box()
