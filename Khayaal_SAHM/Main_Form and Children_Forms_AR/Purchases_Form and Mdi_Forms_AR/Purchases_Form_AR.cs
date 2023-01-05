@@ -28,6 +28,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             Reload();
             if (dt.Rows.Count == 0)
                 Add_Purchase_Button.Enabled = false;
+            else
+                Add_Purchase_Button.Enabled = true;
         }
         void Reload()
         {
