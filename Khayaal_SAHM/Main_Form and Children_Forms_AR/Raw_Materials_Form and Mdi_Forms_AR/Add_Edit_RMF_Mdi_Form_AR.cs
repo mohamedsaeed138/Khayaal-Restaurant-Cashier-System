@@ -202,7 +202,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
             }
             else
             {
-                MessageBox.Show("قم بمـلء الفراغات");
+                MessageBox.Show("!! تأكد من ملئ اسم الخام");
             }
         }
 
