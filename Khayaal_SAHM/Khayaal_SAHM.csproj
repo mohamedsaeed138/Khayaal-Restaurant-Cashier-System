@@ -313,12 +313,6 @@
     <Compile Include="Main_Form and Children_Forms_AR\Home_Form and Mdi_Forms_AR\Home_Form_AR.Designer.cs">
       <DependentUpon>Home_Form_AR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Form and Children_Forms_AR\Home_Form and Mdi_Forms_AR\Item_User_Control_AR.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Main_Form and Children_Forms_AR\Home_Form and Mdi_Forms_AR\Item_User_Control_AR.Designer.cs">
-      <DependentUpon>Item_User_Control_AR.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main_Form and Children_Forms_AR\Main_Form_AR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -533,9 +527,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms_AR\Home_Form and Mdi_Forms_AR\Home_Form_AR.resx">
       <DependentUpon>Home_Form_AR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form and Children_Forms_AR\Home_Form and Mdi_Forms_AR\Item_User_Control_AR.resx">
-      <DependentUpon>Item_User_Control_AR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms_AR\Main_Form_AR.resx">
       <DependentUpon>Main_Form_AR.cs</DependentUpon>
