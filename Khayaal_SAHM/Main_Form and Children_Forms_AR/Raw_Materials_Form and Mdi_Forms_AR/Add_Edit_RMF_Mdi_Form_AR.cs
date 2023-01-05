@@ -27,7 +27,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
 
             Category_Combo_Box.Text = category;
 
-            Add_Raw_Button.Text = "Edit";
+            Add_Raw_Button.Text = "تعديل";
         }
 
         void Reload()

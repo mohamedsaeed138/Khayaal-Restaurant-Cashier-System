@@ -43,9 +43,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
 
             DataRow row1 = dt1.NewRow();
             dt1.Rows.InsertAt(row1, 0);
-            row1["الاسم"] = "الجميع";
+            row1["Name"] = "الجميع";
             Item_Combo_Box.DataSource = dt1;
-            Item_Combo_Box.DisplayMember = "الاسم";
+            Item_Combo_Box.DisplayMember = "Name";
 
         }
         public void Fill_Raw_Combo_Boxe()
@@ -60,9 +60,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
 
             DataRow row2 = dt2.NewRow();
             dt2.Rows.InsertAt(row2, 0);
-            row2["الاسم"] = "الجميع";
+            row2["Name"] = "الجميع";
             Raw_Combo_Box.DataSource = dt2;
-            Raw_Combo_Box.DisplayMember = "الاسم";
+            Raw_Combo_Box.DisplayMember = "Name";
         }
 
         void Fill_Table(string Query)//ok

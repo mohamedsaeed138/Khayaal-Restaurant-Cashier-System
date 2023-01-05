@@ -52,7 +52,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             conn.Close();
 
             Raw_Combo_Box.DataSource = dt;
-            Raw_Combo_Box.DisplayMember = "الاسم";
+            Raw_Combo_Box.DisplayMember = "Name";
 
         }
         private void Fill_Item_Combo_Box()
@@ -66,7 +66,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             conn.Close();
 
             Item_Combo_Box.DataSource = dt;
-            Item_Combo_Box.DisplayMember = "الاسم";
+            Item_Combo_Box.DisplayMember = "Name";
 
         }
 
@@ -172,7 +172,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             }
             else
             {
-                MessageBox.Show("قم بمـلء الفراغات");
+                MessageBox.Show("!! تأكد من ملئ الكمية المطلوبة");
             }
         }
     }
