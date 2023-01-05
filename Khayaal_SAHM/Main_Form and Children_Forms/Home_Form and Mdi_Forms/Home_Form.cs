@@ -204,11 +204,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 if (Caetgory == "All" && Search == "")
                     item.Visible = true;
                 else if (Caetgory == "All" && Search != "")
-                    item.Visible = item.Name.StartsWith(Search);
+                    item.Visible = item.Name.Contains(Search);
                 else if (Caetgory != "All" && Search == "")
                     item.Visible = item.Category == Caetgory;
                 else if (Caetgory != "All" && Search != "")
-                    item.Visible = item.Name.StartsWith(Search) && item.Category == Caetgory;
+                    item.Visible = item.Name.Contains(Search) && item.Category == Caetgory;
             }
         }
         private void Search_Text_Box_TextChanged(object sender, EventArgs e)
