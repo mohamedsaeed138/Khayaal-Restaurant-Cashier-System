@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
@@ -19,8 +20,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         {
             InitializeComponent();
             Reload();
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
-            To_Date_Picker.Value = DateTime.Now.AddYears(10);
 
 
         }
@@ -29,7 +28,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             Fill_Combo_Box();
             Fill_Table($"SELECT * FROM CR.Tables_Booking_Details ORDER BY [From]");
 
+            if (Booking_Table.Rows.Count == 0)
+                From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
+            else
+            {
 
+                From_Date_Picker.Value = Convert.ToDateTime(Booking_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDouble(t.Cells[2].Value)));
+                To_Date_Picker.Value = Convert.ToDateTime(Booking_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDouble(t.Cells[3].Value)));
+            }
         }
         public void Fill_Combo_Box()
         {
