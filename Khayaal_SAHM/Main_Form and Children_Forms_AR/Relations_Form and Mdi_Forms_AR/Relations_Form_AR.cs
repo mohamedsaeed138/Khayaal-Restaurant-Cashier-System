@@ -21,31 +21,31 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
         void Reload()
         {
 
-            Fill_Item_Combo_Boxe();
+            Fill_Item_Combo_Box();
             Fill_Raw_Combo_Boxe();
 
             Fill_Table($"SELECT  CR.Get_Item_Name(Item_Id) AS [Item] ,CR.Get_Raw_Mat_Name(Raw_Id) AS [Raw_Material],[Qty_Needed] , [Id] FROM CR.Items_Relations ORDER BY [Item] ASC;");
+            if (Item_Combo_Box.Items.Count == 1 || Raw_Combo_Box.Items.Count == 1)
+                Add_Button.Enabled = false;
+            else
+                Add_Button.Enabled = true;
         }
-        public void Fill_Item_Combo_Boxe()
+        public void Fill_Item_Combo_Box()
         {
             Item_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
 
-            SqlDataAdapter dai = new SqlDataAdapter("SELECT [Name] FROM CR.Items ORDER BY [Name] ASC;", conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT [Name] FROM CR.Items ORDER BY [Name] ASC;", conn);
             DataTable dt1 = new DataTable();
             conn.Open();
-            dai.Fill(dt1);
+            da.Fill(dt1);
             conn.Close();
-            if (dt1.Rows.Count == 0)
-                Add_Button.Enabled = false;
-            else
-                Add_Button.Enabled = true;
+
             DataRow row1 = dt1.NewRow();
             dt1.Rows.InsertAt(row1, 0);
             row1["Name"] = "All";
             Item_Combo_Box.DataSource = dt1;
             Item_Combo_Box.DisplayMember = "Name";
-
 
         }
         public void Fill_Raw_Combo_Boxe()
@@ -57,10 +57,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
             conn.Open();
             da2.Fill(dt2);
             conn.Close();
-            if (dt2.Rows.Count == 0)
-                Add_Button.Enabled = false;
-            else
-                Add_Button.Enabled = true;
+
             DataRow row2 = dt2.NewRow();
             dt2.Rows.InsertAt(row2, 0);
             row2["Name"] = "All";
