@@ -102,21 +102,21 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
             else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "الجميع" && Qty != "" && Sorting_Combo_Box.Text != "الأسم")
                 Fill_Table($"select [Name]  , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty}  AND [Category]=N'{Category}' ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "الجميع" && Qty == "" && Sorting_Combo_Box.Text == "الأسم")
-                Fill_Table($"select [Name] , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE '{Search}%'  ORDER BY [Name] ASC ");
+                Fill_Table($"select [Name] , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE N'%{Search}%'  ORDER BY [Name] ASC ");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "الجميع" && Qty == "" && Sorting_Combo_Box.Text != "الأسم")
-                Fill_Table($"select [Name] , [Category] , [Qty] ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE '{Search}%' ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
+                Fill_Table($"select [Name] , [Category] , [Qty] ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE N'%{Search}%' ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "الجميع" && Qty != "" && Sorting_Combo_Box.Text == "الأسم")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE '{Search}%' ORDER BY [Name] ASC");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "الجميع" && Qty != "" && Sorting_Combo_Box.Text != "الأسم")
-                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE '{Search}%' ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
+                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%' ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "الجميع" && Qty == "" && Sorting_Combo_Box.Text == "الأسم")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [Name] ASC");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "الجميع" && Qty == "" && Sorting_Combo_Box.Text != "الأسم")
-                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
+                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
             else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "الجميع" && Qty != "" && Sorting_Combo_Box.Text == "الأسم")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Category]=N'{Category}' AND [Name] LIKE '{Search}%' ORDER BY [Name] ASC");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
             else
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE '{Search}%'  ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
+                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%'  ORDER BY [{(Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty")}]");
 
         }
 
