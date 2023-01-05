@@ -51,6 +51,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Date_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Khayaal_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Home_Nested_Panel_Controlers = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,7 +62,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.restaurantCafeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Tool_Tip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.Date_Time_Timer = new System.Windows.Forms.Timer(this.components);
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Items_Main_Panel.SuspendLayout();
             this.Order_Main_Panel.SuspendLayout();
             this.Total_Nested_Panel.SuspendLayout();
@@ -92,6 +92,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Items_Nested_Flow_Layout_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Items_Nested_Flow_Layout_Panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Items_Nested_Flow_Layout_Panel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Items_Nested_Flow_Layout_Panel.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.Items_Nested_Flow_Layout_Panel.Location = new System.Drawing.Point(10, 8);
             this.Items_Nested_Flow_Layout_Panel.Name = "Items_Nested_Flow_Layout_Panel";
             this.Items_Nested_Flow_Layout_Panel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
@@ -119,10 +120,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Order_Label.ForeColor = System.Drawing.Color.White;
             this.Order_Label.Location = new System.Drawing.Point(11, 3);
             this.Order_Label.Name = "Order_Label";
-            this.Order_Label.Size = new System.Drawing.Size(90, 47);
+            this.Order_Label.Size = new System.Drawing.Size(89, 47);
             this.Order_Label.TabIndex = 28;
             this.Order_Label.Tag = "";
-            this.Order_Label.Text = "Order";
+            this.Order_Label.Text = "الطلب ";
             this.Order_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Clear_All_Button
@@ -140,7 +141,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Clear_All_Button.ShadowDecoration.Parent = this.Clear_All_Button;
             this.Clear_All_Button.Size = new System.Drawing.Size(118, 36);
             this.Clear_All_Button.TabIndex = 26;
-            this.Clear_All_Button.Text = "Clear All";
+            this.Clear_All_Button.Text = "تصفية الطلب";
             this.Clear_All_Button.Click += new System.EventHandler(this.Clear_All_Button_Click);
             // 
             // Total_Nested_Panel
@@ -166,7 +167,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.With_Tax_Label.BackColor = System.Drawing.Color.Transparent;
             this.With_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.With_Tax_Label.ForeColor = System.Drawing.Color.White;
-            this.With_Tax_Label.Location = new System.Drawing.Point(196, 44);
+            this.With_Tax_Label.Location = new System.Drawing.Point(38, 44);
             this.With_Tax_Label.Name = "With_Tax_Label";
             this.With_Tax_Label.Size = new System.Drawing.Size(15, 32);
             this.With_Tax_Label.TabIndex = 35;
@@ -178,7 +179,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(173, 44);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(16, 44);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(15, 32);
             this.guna2HtmlLabel2.TabIndex = 34;
@@ -190,11 +191,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.With_Tax.BackColor = System.Drawing.Color.Transparent;
             this.With_Tax.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.With_Tax.ForeColor = System.Drawing.Color.White;
-            this.With_Tax.Location = new System.Drawing.Point(38, 44);
+            this.With_Tax.Location = new System.Drawing.Point(126, 44);
             this.With_Tax.Name = "With_Tax";
-            this.With_Tax.Size = new System.Drawing.Size(104, 32);
+            this.With_Tax.Size = new System.Drawing.Size(167, 32);
             this.With_Tax.TabIndex = 33;
-            this.With_Tax.Text = "With Tax : ";
+            this.With_Tax.Text = ": المضافة القيمة + ";
             this.With_Tax.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Print_and_Save_Button
@@ -212,7 +213,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Print_and_Save_Button.ShadowDecoration.Parent = this.Print_and_Save_Button;
             this.Print_and_Save_Button.Size = new System.Drawing.Size(239, 36);
             this.Print_and_Save_Button.TabIndex = 32;
-            this.Print_and_Save_Button.Text = "Print & Save";
+            this.Print_and_Save_Button.Text = "طباعة و حفظ";
             this.Print_and_Save_Button.Click += new System.EventHandler(this.Print_and_Save_Button_Click);
             // 
             // Save_Button
@@ -230,7 +231,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Save_Button.ShadowDecoration.Parent = this.Save_Button;
             this.Save_Button.Size = new System.Drawing.Size(239, 36);
             this.Save_Button.TabIndex = 31;
-            this.Save_Button.Text = "Save";
+            this.Save_Button.Text = "حفظ";
             this.Save_Button.Click += new System.EventHandler(this.Save_Button_Click);
             // 
             // Total_Value_Label
@@ -238,19 +239,20 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total_Value_Label.ForeColor = System.Drawing.Color.White;
-            this.Total_Value_Label.Location = new System.Drawing.Point(196, 6);
+            this.Total_Value_Label.Location = new System.Drawing.Point(38, 6);
             this.Total_Value_Label.Name = "Total_Value_Label";
             this.Total_Value_Label.Size = new System.Drawing.Size(15, 32);
             this.Total_Value_Label.TabIndex = 30;
             this.Total_Value_Label.Text = "0";
             this.Total_Value_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Total_Value_Label.Click += new System.EventHandler(this.Total_Value_Label_Click);
             // 
             // Dolaar_Sign_Label
             // 
             this.Dolaar_Sign_Label.BackColor = System.Drawing.Color.Transparent;
             this.Dolaar_Sign_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dolaar_Sign_Label.ForeColor = System.Drawing.Color.White;
-            this.Dolaar_Sign_Label.Location = new System.Drawing.Point(173, 6);
+            this.Dolaar_Sign_Label.Location = new System.Drawing.Point(16, 6);
             this.Dolaar_Sign_Label.Name = "Dolaar_Sign_Label";
             this.Dolaar_Sign_Label.Size = new System.Drawing.Size(15, 32);
             this.Dolaar_Sign_Label.TabIndex = 29;
@@ -262,11 +264,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Total_Label_Tmp.BackColor = System.Drawing.Color.Transparent;
             this.Total_Label_Tmp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total_Label_Tmp.ForeColor = System.Drawing.Color.White;
-            this.Total_Label_Tmp.Location = new System.Drawing.Point(38, 5);
+            this.Total_Label_Tmp.Location = new System.Drawing.Point(196, 6);
             this.Total_Label_Tmp.Name = "Total_Label_Tmp";
-            this.Total_Label_Tmp.Size = new System.Drawing.Size(65, 32);
+            this.Total_Label_Tmp.Size = new System.Drawing.Size(87, 32);
             this.Total_Label_Tmp.TabIndex = 28;
-            this.Total_Label_Tmp.Text = "Total : ";
+            this.Total_Label_Tmp.Text = ": المجموع";
             this.Total_Label_Tmp.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Order_Nested_Flow_Layout_Panel
@@ -347,6 +349,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Home_Nested_Panel_Controlers.Name = "Home_Nested_Panel_Controlers";
             this.Home_Nested_Panel_Controlers.Size = new System.Drawing.Size(337, 110);
             this.Home_Nested_Panel_Controlers.TabIndex = 0;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(314, 0);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(23, 15);
+            this.guna2HtmlLabel1.TabIndex = 29;
+            this.guna2HtmlLabel1.Text = "بحث";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Category_Label
             // 
@@ -434,7 +449,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Add_Item_Button.ShadowDecoration.Parent = this.Add_Item_Button;
             this.Add_Item_Button.Size = new System.Drawing.Size(135, 36);
             this.Add_Item_Button.TabIndex = 25;
-            this.Add_Item_Button.Text = "Add Item";
+            this.Add_Item_Button.Text = "أضافة عنصر";
             this.Add_Item_Button.Click += new System.EventHandler(this.Add_Item_Button_Click);
             // 
             // bunifuElipse1
@@ -464,19 +479,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             // 
             this.Date_Time_Timer.Interval = 1000;
             // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(314, 0);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(23, 15);
-            this.guna2HtmlLabel1.TabIndex = 29;
-            this.guna2HtmlLabel1.Text = "بحث";
-            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Home_Form_AR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,6 +490,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Controls.Add(this.Home_Bar_Main_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home_Form_AR";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Home_Form";
             this.TopMost = true;
             this.Items_Main_Panel.ResumeLayout(false);

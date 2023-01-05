@@ -390,8 +390,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
         }
 
+        private void Total_Value_Label_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 
 
