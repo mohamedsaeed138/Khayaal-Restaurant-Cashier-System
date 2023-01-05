@@ -162,7 +162,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
                 string raw = (string)row.Cells[1].Value;
                 string qty = Formatter.Float($"{(double)row.Cells[2].Value}");
                 int id = (int)row.Cells[3].Value;
-                if (Relations_Table.Columns[e.ColumnIndex].Name == "تعديل")
+                if (Relations_Table.Columns[e.ColumnIndex].Index == 4)
                 {
                     Add_Edit_RS_Mdi_Form_AR form = new Add_Edit_RS_Mdi_Form_AR(item, raw, qty, id);
                     form.MdiParent = this.Owner;
@@ -172,7 +172,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
                     };
                     form.ShowDialog();
                 }
-                else if (Relations_Table.Columns[e.ColumnIndex].Name == "حذف")
+                else if (Relations_Table.Columns[e.ColumnIndex].Index == 5)
                 {
                     try
                     {
