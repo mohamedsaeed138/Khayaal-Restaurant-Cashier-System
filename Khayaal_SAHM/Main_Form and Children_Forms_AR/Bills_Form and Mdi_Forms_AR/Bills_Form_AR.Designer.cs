@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.Search_Serial_Number_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,6 +45,13 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Bills_Table = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Total_Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Sum_Without_Tax_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Without_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Search_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.serial_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Without_Taxes = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,12 +59,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Total_Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Sum_Without_Tax_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Without_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,10 +71,10 @@
             this.From_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.From_Date_Picker.Location = new System.Drawing.Point(285, 59);
-            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
+            this.From_Date_Picker.Location = new System.Drawing.Point(380, 73);
+            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.From_Date_Picker.Name = "From_Date_Picker";
-            this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
+            this.From_Date_Picker.Size = new System.Drawing.Size(160, 22);
             this.From_Date_Picker.TabIndex = 7;
             this.From_Date_Picker.ValueChanged += new System.EventHandler(this.From_Date_Picker_ValueChanged);
             // 
@@ -86,10 +87,10 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(88, 59);
-            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
+            this.To_Date_Picker.Location = new System.Drawing.Point(117, 73);
+            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.To_Date_Picker.Name = "To_Date_Picker";
-            this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
+            this.To_Date_Picker.Size = new System.Drawing.Size(160, 22);
             this.To_Date_Picker.TabIndex = 8;
             this.To_Date_Picker.ValueChanged += new System.EventHandler(this.To_Date_Picker_ValueChanged);
             // 
@@ -110,15 +111,15 @@
             this.Search_Serial_Number_Text_Box.FocusedState.Parent = this.Search_Serial_Number_Text_Box;
             this.Search_Serial_Number_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search_Serial_Number_Text_Box.HoverState.Parent = this.Search_Serial_Number_Text_Box;
-            this.Search_Serial_Number_Text_Box.Location = new System.Drawing.Point(641, 44);
-            this.Search_Serial_Number_Text_Box.Margin = new System.Windows.Forms.Padding(4);
+            this.Search_Serial_Number_Text_Box.Location = new System.Drawing.Point(855, 54);
+            this.Search_Serial_Number_Text_Box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Search_Serial_Number_Text_Box.Name = "Search_Serial_Number_Text_Box";
             this.Search_Serial_Number_Text_Box.PasswordChar = '\0';
             this.Search_Serial_Number_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Search_Serial_Number_Text_Box.PlaceholderText = "الرقم التسلسلي";
             this.Search_Serial_Number_Text_Box.SelectedText = "";
             this.Search_Serial_Number_Text_Box.ShadowDecoration.Parent = this.Search_Serial_Number_Text_Box;
-            this.Search_Serial_Number_Text_Box.Size = new System.Drawing.Size(264, 36);
+            this.Search_Serial_Number_Text_Box.Size = new System.Drawing.Size(352, 44);
             this.Search_Serial_Number_Text_Box.TabIndex = 9;
             this.Search_Serial_Number_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Serial_Number_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
@@ -130,10 +131,10 @@
             this.Total_Label.BackColor = System.Drawing.Color.Transparent;
             this.Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Total_Label.Location = new System.Drawing.Point(542, 11);
-            this.Total_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Total_Label.Location = new System.Drawing.Point(723, 14);
+            this.Total_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Total_Label.Name = "Total_Label";
-            this.Total_Label.Size = new System.Drawing.Size(67, 27);
+            this.Total_Label.Size = new System.Drawing.Size(82, 33);
             this.Total_Label.TabIndex = 11;
             this.Total_Label.Text = "المجموع";
             // 
@@ -143,10 +144,10 @@
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(380, 11);
-            this.From_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.From_Label.Location = new System.Drawing.Point(507, 14);
+            this.From_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.From_Label.Name = "From_Label";
-            this.From_Label.Size = new System.Drawing.Size(26, 27);
+            this.From_Label.Size = new System.Drawing.Size(31, 33);
             this.From_Label.TabIndex = 12;
             this.From_Label.Text = "من";
             // 
@@ -156,10 +157,10 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(180, 11);
-            this.To_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.To_Label.Location = new System.Drawing.Point(240, 14);
+            this.To_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.To_Label.Name = "To_Label";
-            this.To_Label.Size = new System.Drawing.Size(29, 27);
+            this.To_Label.Size = new System.Drawing.Size(36, 33);
             this.To_Label.TabIndex = 13;
             this.To_Label.Text = "الي";
             // 
@@ -169,10 +170,10 @@
             this.Count_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Label.Location = new System.Drawing.Point(857, 544);
-            this.Count_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Count_Label.Location = new System.Drawing.Point(1143, 670);
+            this.Count_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Count_Label.Name = "Count_Label";
-            this.Count_Label.Size = new System.Drawing.Size(48, 27);
+            this.Count_Label.Size = new System.Drawing.Size(60, 33);
             this.Count_Label.TabIndex = 14;
             this.Count_Label.Text = ":العدد";
             // 
@@ -182,10 +183,10 @@
             this.Count_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Value_Label.Location = new System.Drawing.Point(763, 544);
-            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Count_Value_Label.Location = new System.Drawing.Point(1017, 670);
+            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Count_Value_Label.Name = "Count_Value_Label";
-            this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Count_Value_Label.Size = new System.Drawing.Size(16, 33);
             this.Count_Value_Label.TabIndex = 15;
             this.Count_Value_Label.Text = "0";
             // 
@@ -194,13 +195,13 @@
             this.Bills_Table.AllowUserToAddRows = false;
             this.Bills_Table.AllowUserToDeleteRows = false;
             this.Bills_Table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Bills_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Bills_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Bills_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -209,14 +210,14 @@
             this.Bills_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Bills_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Bills_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bills_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bills_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Bills_Table.ColumnHeadersHeight = 48;
             this.Bills_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Bills_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -227,42 +228,43 @@
             this.Column1,
             this.Print,
             this.Delete});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Bills_Table.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Bills_Table.DefaultCellStyle = dataGridViewCellStyle6;
             this.Bills_Table.EnableHeadersVisualStyles = false;
             this.Bills_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Bills_Table.Location = new System.Drawing.Point(49, 100);
+            this.Bills_Table.Location = new System.Drawing.Point(65, 123);
+            this.Bills_Table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Bills_Table.MultiSelect = false;
             this.Bills_Table.Name = "Bills_Table";
             this.Bills_Table.ReadOnly = true;
             this.Bills_Table.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bills_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bills_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Bills_Table.RowHeadersVisible = false;
             this.Bills_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Bills_Table.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Bills_Table.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.Bills_Table.RowTemplate.Height = 37;
             this.Bills_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Bills_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.Bills_Table.Size = new System.Drawing.Size(875, 439);
+            this.Bills_Table.Size = new System.Drawing.Size(1167, 540);
             this.Bills_Table.TabIndex = 17;
             this.Bills_Table.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.Bills_Table.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
@@ -290,81 +292,22 @@
             this.Bills_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Bills_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
-            // serial_number
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.serial_number.DefaultCellStyle = dataGridViewCellStyle11;
-            this.serial_number.HeaderText = "الرقم التسلسلي";
-            this.serial_number.Name = "serial_number";
-            this.serial_number.ReadOnly = true;
-            this.serial_number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Table_Number
-            // 
-            this.Table_Number.HeaderText = "الكاشير";
-            this.Table_Number.Name = "Table_Number";
-            this.Table_Number.ReadOnly = true;
-            this.Table_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Without_Taxes
-            // 
-            dataGridViewCellStyle12.Format = "C2";
-            dataGridViewCellStyle12.NullValue = null;
-            this.Without_Taxes.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Without_Taxes.HeaderText = "بدون ضرائب";
-            this.Without_Taxes.Name = "Without_Taxes";
-            this.Without_Taxes.ReadOnly = true;
-            this.Without_Taxes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Total
-            // 
-            dataGridViewCellStyle13.Format = "C2";
-            dataGridViewCellStyle13.NullValue = null;
-            this.Total.DefaultCellStyle = dataGridViewCellStyle13;
-            this.Total.HeaderText = "المجموع";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "التاريخ";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Print
-            // 
-            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Print.HeaderText = "طباعة";
-            this.Print.Name = "Print";
-            this.Print.ReadOnly = true;
-            this.Print.Text = "طباعة";
-            this.Print.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "حذف";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "حذف";
-            this.Delete.UseColumnTextForButtonValue = true;
-            // 
             // Table_Croll_Bar
             // 
             this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.BorderRadius = 11;
             this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Table_Croll_Bar.HoverState.Parent = null;
             this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(1240, 186);
+            this.Table_Croll_Bar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
             this.Table_Croll_Bar.Name = "Table_Croll_Bar";
             this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 18;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.ScrollbarSize = 24;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(24, 478);
             this.Table_Croll_Bar.TabIndex = 18;
             this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
             this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
@@ -386,15 +329,15 @@
             this.Total_Search_Text_Box.FocusedState.Parent = this.Total_Search_Text_Box;
             this.Total_Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Total_Search_Text_Box.HoverState.Parent = this.Total_Search_Text_Box;
-            this.Total_Search_Text_Box.Location = new System.Drawing.Point(478, 44);
-            this.Total_Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
+            this.Total_Search_Text_Box.Location = new System.Drawing.Point(637, 54);
+            this.Total_Search_Text_Box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Total_Search_Text_Box.Name = "Total_Search_Text_Box";
             this.Total_Search_Text_Box.PasswordChar = '\0';
             this.Total_Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Total_Search_Text_Box.PlaceholderText = "المجموع >=";
             this.Total_Search_Text_Box.SelectedText = "";
             this.Total_Search_Text_Box.ShadowDecoration.Parent = this.Total_Search_Text_Box;
-            this.Total_Search_Text_Box.Size = new System.Drawing.Size(131, 36);
+            this.Total_Search_Text_Box.Size = new System.Drawing.Size(175, 44);
             this.Total_Search_Text_Box.TabIndex = 23;
             this.Total_Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Total_Search_Text_Box.TextChanged += new System.EventHandler(this.Total_Search_Text_Box_TextChanged);
@@ -406,10 +349,10 @@
             this.Sum_Without_Tax_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Without_Tax_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Without_Tax_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(581, 544);
-            this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(775, 670);
+            this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sum_Without_Tax_Value_Label.Name = "Sum_Without_Tax_Value_Label";
-            this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(16, 33);
             this.Sum_Without_Tax_Value_Label.TabIndex = 25;
             this.Sum_Without_Tax_Value_Label.Text = "0";
             // 
@@ -419,10 +362,10 @@
             this.Sum_Without_Tax_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Without_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Without_Tax_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(499, 544);
-            this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(665, 670);
+            this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sum_Without_Tax_Label.Name = "Sum_Without_Tax_Label";
-            this.Sum_Without_Tax_Label.Size = new System.Drawing.Size(72, 27);
+            this.Sum_Without_Tax_Label.Size = new System.Drawing.Size(88, 33);
             this.Sum_Without_Tax_Label.TabIndex = 24;
             this.Sum_Without_Tax_Label.Text = ":المجموع";
             // 
@@ -432,10 +375,10 @@
             this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(402, 544);
-            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(536, 670);
+            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
-            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(16, 33);
             this.Sum_Total_Value_Label.TabIndex = 27;
             this.Sum_Total_Value_Label.Text = "0";
             // 
@@ -445,19 +388,100 @@
             this.Sum_Total_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Total_Label.Location = new System.Drawing.Point(680, 544);
-            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Sum_Total_Label.Location = new System.Drawing.Point(907, 670);
+            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sum_Total_Label.Name = "Sum_Total_Label";
-            this.Sum_Total_Label.Size = new System.Drawing.Size(72, 27);
+            this.Sum_Total_Label.Size = new System.Drawing.Size(88, 33);
             this.Sum_Total_Label.TabIndex = 26;
             this.Sum_Total_Label.Text = ":المجموع";
             // 
+            // Search_Label
+            // 
+            this.Search_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Search_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Search_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Search_Label.Location = new System.Drawing.Point(1162, 14);
+            this.Search_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Search_Label.Name = "Search_Label";
+            this.Search_Label.Size = new System.Drawing.Size(45, 33);
+            this.Search_Label.TabIndex = 35;
+            this.Search_Label.Text = "بحث";
+            // 
+            // serial_number
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.serial_number.DefaultCellStyle = dataGridViewCellStyle3;
+            this.serial_number.HeaderText = "الرقم التسلسلي";
+            this.serial_number.MinimumWidth = 6;
+            this.serial_number.Name = "serial_number";
+            this.serial_number.ReadOnly = true;
+            this.serial_number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Table_Number
+            // 
+            this.Table_Number.HeaderText = "الكاشير";
+            this.Table_Number.MinimumWidth = 6;
+            this.Table_Number.Name = "Table_Number";
+            this.Table_Number.ReadOnly = true;
+            this.Table_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Without_Taxes
+            // 
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Without_Taxes.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Without_Taxes.HeaderText = "المجموع";
+            this.Without_Taxes.MinimumWidth = 6;
+            this.Without_Taxes.Name = "Without_Taxes";
+            this.Without_Taxes.ReadOnly = true;
+            this.Without_Taxes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Total
+            // 
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Total.HeaderText = "+ القيمة المضافة";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "التاريخ";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Print
+            // 
+            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print.HeaderText = "طباعة";
+            this.Print.MinimumWidth = 6;
+            this.Print.Name = "Print";
+            this.Print.ReadOnly = true;
+            this.Print.Text = "طباعة";
+            this.Print.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "حذف";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "حذف";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // Bills_Form_AR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(974, 581);
+            this.ClientSize = new System.Drawing.Size(1299, 715);
+            this.Controls.Add(this.Search_Label);
             this.Controls.Add(this.Sum_Total_Value_Label);
             this.Controls.Add(this.Sum_Total_Label);
             this.Controls.Add(this.Sum_Without_Tax_Value_Label);
@@ -474,6 +498,7 @@
             this.Controls.Add(this.To_Date_Picker);
             this.Controls.Add(this.From_Date_Picker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Bills_Form_AR";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
@@ -507,5 +532,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Print;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Search_Label;
     }
 }
