@@ -111,7 +111,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                     }
                     else
                     {
-                        MessageBox.Show("Finish Your Bill First!!");
+                        MessageBox.Show("!! أنهي الطلب أولا");
                     }
 
                 };
@@ -130,7 +130,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                     }
                     else
                     {
-                        MessageBox.Show("Finish Your Bill First!!");
+                        MessageBox.Show("!! أنهي الطلب أولا");
                     }
 
                 };
@@ -241,11 +241,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             if (Order_Nested_Flow_Layout_Panel.Controls.Count != 0)
             {
                 Create_a_Bill();
-                MessageBox.Show("Successfully Saved");
+                MessageBox.Show("!! تم الحفظ بنجاح");
             }
 
             else
-                MessageBox.Show("Insert Items To Your Bill First!!");
+                MessageBox.Show("!! ادخل عناصر فالطلب أولا");
         }
 
         private void Print_and_Save_Button_Click(object sender, EventArgs e)
@@ -259,7 +259,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
             }
             else
-                MessageBox.Show("Insert Items To Your Bill First!!");
+                MessageBox.Show("!! ادخل عناصر فالطلب أولا");
         }
         void Create_a_Bill()
         {
@@ -301,7 +301,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 conn.Close();
             }
             else
-                MessageBox.Show("Insert Items To Your Bill First!!");
+                MessageBox.Show("!! ادخل عناصر فالطلب أولا");
 
         }
         bool Check_Negative_Qty()
