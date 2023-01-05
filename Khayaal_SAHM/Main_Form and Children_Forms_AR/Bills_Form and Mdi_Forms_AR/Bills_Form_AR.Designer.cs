@@ -45,13 +45,6 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Bills_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Total_Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Sum_Without_Tax_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Without_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Search_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.serial_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Without_Taxes = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +52,13 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Total_Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Sum_Without_Tax_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Without_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Search_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,10 +71,10 @@
             this.From_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.From_Date_Picker.Location = new System.Drawing.Point(380, 73);
-            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.From_Date_Picker.Location = new System.Drawing.Point(285, 59);
+            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.From_Date_Picker.Name = "From_Date_Picker";
-            this.From_Date_Picker.Size = new System.Drawing.Size(160, 22);
+            this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.From_Date_Picker.TabIndex = 7;
             this.From_Date_Picker.ValueChanged += new System.EventHandler(this.From_Date_Picker_ValueChanged);
             // 
@@ -87,10 +87,10 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(117, 73);
-            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.To_Date_Picker.Location = new System.Drawing.Point(88, 59);
+            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.To_Date_Picker.Name = "To_Date_Picker";
-            this.To_Date_Picker.Size = new System.Drawing.Size(160, 22);
+            this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.To_Date_Picker.TabIndex = 8;
             this.To_Date_Picker.ValueChanged += new System.EventHandler(this.To_Date_Picker_ValueChanged);
             // 
@@ -111,15 +111,15 @@
             this.Search_Serial_Number_Text_Box.FocusedState.Parent = this.Search_Serial_Number_Text_Box;
             this.Search_Serial_Number_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search_Serial_Number_Text_Box.HoverState.Parent = this.Search_Serial_Number_Text_Box;
-            this.Search_Serial_Number_Text_Box.Location = new System.Drawing.Point(855, 54);
-            this.Search_Serial_Number_Text_Box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Search_Serial_Number_Text_Box.Location = new System.Drawing.Point(641, 44);
+            this.Search_Serial_Number_Text_Box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Search_Serial_Number_Text_Box.Name = "Search_Serial_Number_Text_Box";
             this.Search_Serial_Number_Text_Box.PasswordChar = '\0';
             this.Search_Serial_Number_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Search_Serial_Number_Text_Box.PlaceholderText = "الرقم التسلسلي";
             this.Search_Serial_Number_Text_Box.SelectedText = "";
             this.Search_Serial_Number_Text_Box.ShadowDecoration.Parent = this.Search_Serial_Number_Text_Box;
-            this.Search_Serial_Number_Text_Box.Size = new System.Drawing.Size(352, 44);
+            this.Search_Serial_Number_Text_Box.Size = new System.Drawing.Size(264, 36);
             this.Search_Serial_Number_Text_Box.TabIndex = 9;
             this.Search_Serial_Number_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Serial_Number_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
@@ -128,65 +128,70 @@
             // Total_Label
             // 
             this.Total_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Total_Label.AutoSize = false;
             this.Total_Label.BackColor = System.Drawing.Color.Transparent;
             this.Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Total_Label.Location = new System.Drawing.Point(723, 14);
-            this.Total_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Total_Label.Location = new System.Drawing.Point(542, 11);
+            this.Total_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Total_Label.Name = "Total_Label";
-            this.Total_Label.Size = new System.Drawing.Size(82, 33);
+            this.Total_Label.Size = new System.Drawing.Size(67, 27);
             this.Total_Label.TabIndex = 11;
             this.Total_Label.Text = "المجموع";
             // 
             // From_Label
             // 
             this.From_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.From_Label.AutoSize = false;
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(507, 14);
-            this.From_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.From_Label.Location = new System.Drawing.Point(380, 11);
+            this.From_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.From_Label.Name = "From_Label";
-            this.From_Label.Size = new System.Drawing.Size(31, 33);
+            this.From_Label.Size = new System.Drawing.Size(26, 27);
             this.From_Label.TabIndex = 12;
             this.From_Label.Text = "من";
             // 
             // To_Label
             // 
             this.To_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.To_Label.AutoSize = false;
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(240, 14);
-            this.To_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.To_Label.Location = new System.Drawing.Point(180, 11);
+            this.To_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.To_Label.Name = "To_Label";
-            this.To_Label.Size = new System.Drawing.Size(36, 33);
+            this.To_Label.Size = new System.Drawing.Size(29, 27);
             this.To_Label.TabIndex = 13;
             this.To_Label.Text = "الي";
             // 
             // Count_Label
             // 
             this.Count_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Count_Label.AutoSize = false;
             this.Count_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Label.Location = new System.Drawing.Point(1143, 670);
-            this.Count_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Count_Label.Location = new System.Drawing.Point(857, 544);
+            this.Count_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Count_Label.Name = "Count_Label";
-            this.Count_Label.Size = new System.Drawing.Size(60, 33);
+            this.Count_Label.Size = new System.Drawing.Size(48, 27);
             this.Count_Label.TabIndex = 14;
             this.Count_Label.Text = ":العدد";
             // 
             // Count_Value_Label
             // 
             this.Count_Value_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Count_Value_Label.AutoSize = false;
             this.Count_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Value_Label.Location = new System.Drawing.Point(1017, 670);
-            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Count_Value_Label.Location = new System.Drawing.Point(763, 544);
+            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Count_Value_Label.Name = "Count_Value_Label";
-            this.Count_Value_Label.Size = new System.Drawing.Size(16, 33);
+            this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
             this.Count_Value_Label.TabIndex = 15;
             this.Count_Value_Label.Text = "0";
             // 
@@ -238,8 +243,7 @@
             this.Bills_Table.DefaultCellStyle = dataGridViewCellStyle6;
             this.Bills_Table.EnableHeadersVisualStyles = false;
             this.Bills_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Bills_Table.Location = new System.Drawing.Point(65, 123);
-            this.Bills_Table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Bills_Table.Location = new System.Drawing.Point(49, 100);
             this.Bills_Table.MultiSelect = false;
             this.Bills_Table.Name = "Bills_Table";
             this.Bills_Table.ReadOnly = true;
@@ -264,7 +268,7 @@
             this.Bills_Table.RowTemplate.Height = 37;
             this.Bills_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Bills_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.Bills_Table.Size = new System.Drawing.Size(1167, 540);
+            this.Bills_Table.Size = new System.Drawing.Size(875, 439);
             this.Bills_Table.TabIndex = 17;
             this.Bills_Table.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.Bills_Table.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
@@ -291,122 +295,6 @@
             this.Bills_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Bills_Table_CellContentClick);
             this.Bills_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Bills_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
-            // 
-            // Table_Croll_Bar
-            // 
-            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 11;
-            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Table_Croll_Bar.HoverState.Parent = null;
-            this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(1240, 186);
-            this.Table_Croll_Bar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
-            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
-            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 24;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(24, 478);
-            this.Table_Croll_Bar.TabIndex = 18;
-            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
-            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
-            // 
-            // Total_Search_Text_Box
-            // 
-            this.Total_Search_Text_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Total_Search_Text_Box.BorderRadius = 10;
-            this.Total_Search_Text_Box.BorderThickness = 0;
-            this.Total_Search_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Total_Search_Text_Box.DefaultText = "";
-            this.Total_Search_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Total_Search_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Total_Search_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Total_Search_Text_Box.DisabledState.Parent = this.Total_Search_Text_Box;
-            this.Total_Search_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Total_Search_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Total_Search_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Total_Search_Text_Box.FocusedState.Parent = this.Total_Search_Text_Box;
-            this.Total_Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Total_Search_Text_Box.HoverState.Parent = this.Total_Search_Text_Box;
-            this.Total_Search_Text_Box.Location = new System.Drawing.Point(637, 54);
-            this.Total_Search_Text_Box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Total_Search_Text_Box.Name = "Total_Search_Text_Box";
-            this.Total_Search_Text_Box.PasswordChar = '\0';
-            this.Total_Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Total_Search_Text_Box.PlaceholderText = "المجموع >=";
-            this.Total_Search_Text_Box.SelectedText = "";
-            this.Total_Search_Text_Box.ShadowDecoration.Parent = this.Total_Search_Text_Box;
-            this.Total_Search_Text_Box.Size = new System.Drawing.Size(175, 44);
-            this.Total_Search_Text_Box.TabIndex = 23;
-            this.Total_Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Total_Search_Text_Box.TextChanged += new System.EventHandler(this.Total_Search_Text_Box_TextChanged);
-            this.Total_Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Total_Search_Text_Box_KeyPress);
-            // 
-            // Sum_Without_Tax_Value_Label
-            // 
-            this.Sum_Without_Tax_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Without_Tax_Value_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Without_Tax_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Without_Tax_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(775, 670);
-            this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Without_Tax_Value_Label.Name = "Sum_Without_Tax_Value_Label";
-            this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(16, 33);
-            this.Sum_Without_Tax_Value_Label.TabIndex = 25;
-            this.Sum_Without_Tax_Value_Label.Text = "0";
-            // 
-            // Sum_Without_Tax_Label
-            // 
-            this.Sum_Without_Tax_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Without_Tax_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Without_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Without_Tax_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(665, 670);
-            this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Without_Tax_Label.Name = "Sum_Without_Tax_Label";
-            this.Sum_Without_Tax_Label.Size = new System.Drawing.Size(88, 33);
-            this.Sum_Without_Tax_Label.TabIndex = 24;
-            this.Sum_Without_Tax_Label.Text = ":المجموع";
-            // 
-            // Sum_Total_Value_Label
-            // 
-            this.Sum_Total_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(536, 670);
-            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
-            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(16, 33);
-            this.Sum_Total_Value_Label.TabIndex = 27;
-            this.Sum_Total_Value_Label.Text = "0";
-            // 
-            // Sum_Total_Label
-            // 
-            this.Sum_Total_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Total_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Total_Label.Location = new System.Drawing.Point(907, 670);
-            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Total_Label.Name = "Sum_Total_Label";
-            this.Sum_Total_Label.Size = new System.Drawing.Size(88, 33);
-            this.Sum_Total_Label.TabIndex = 26;
-            this.Sum_Total_Label.Text = ":المجموع";
-            // 
-            // Search_Label
-            // 
-            this.Search_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Search_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Search_Label.Location = new System.Drawing.Point(1162, 14);
-            this.Search_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Search_Label.Name = "Search_Label";
-            this.Search_Label.Size = new System.Drawing.Size(45, 33);
-            this.Search_Label.TabIndex = 35;
-            this.Search_Label.Text = "بحث";
             // 
             // serial_number
             // 
@@ -475,12 +363,133 @@
             this.Delete.Text = "حذف";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // Table_Croll_Bar
+            // 
+            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Table_Croll_Bar.AutoRoundedCorners = true;
+            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Table_Croll_Bar.HoverState.Parent = null;
+            this.Table_Croll_Bar.LargeChange = 10;
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
+            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
+            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
+            this.Table_Croll_Bar.ScrollbarSize = 18;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.TabIndex = 18;
+            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
+            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
+            // 
+            // Total_Search_Text_Box
+            // 
+            this.Total_Search_Text_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Total_Search_Text_Box.BorderRadius = 10;
+            this.Total_Search_Text_Box.BorderThickness = 0;
+            this.Total_Search_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Total_Search_Text_Box.DefaultText = "";
+            this.Total_Search_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Total_Search_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Total_Search_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Total_Search_Text_Box.DisabledState.Parent = this.Total_Search_Text_Box;
+            this.Total_Search_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Total_Search_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Total_Search_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Total_Search_Text_Box.FocusedState.Parent = this.Total_Search_Text_Box;
+            this.Total_Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Total_Search_Text_Box.HoverState.Parent = this.Total_Search_Text_Box;
+            this.Total_Search_Text_Box.Location = new System.Drawing.Point(478, 44);
+            this.Total_Search_Text_Box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Total_Search_Text_Box.Name = "Total_Search_Text_Box";
+            this.Total_Search_Text_Box.PasswordChar = '\0';
+            this.Total_Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Total_Search_Text_Box.PlaceholderText = "المجموع >=";
+            this.Total_Search_Text_Box.SelectedText = "";
+            this.Total_Search_Text_Box.ShadowDecoration.Parent = this.Total_Search_Text_Box;
+            this.Total_Search_Text_Box.Size = new System.Drawing.Size(131, 36);
+            this.Total_Search_Text_Box.TabIndex = 23;
+            this.Total_Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Total_Search_Text_Box.TextChanged += new System.EventHandler(this.Total_Search_Text_Box_TextChanged);
+            this.Total_Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Total_Search_Text_Box_KeyPress);
+            // 
+            // Sum_Without_Tax_Value_Label
+            // 
+            this.Sum_Without_Tax_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Sum_Without_Tax_Value_Label.AutoSize = false;
+            this.Sum_Without_Tax_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Without_Tax_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Without_Tax_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(581, 544);
+            this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Without_Tax_Value_Label.Name = "Sum_Without_Tax_Value_Label";
+            this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Without_Tax_Value_Label.TabIndex = 25;
+            this.Sum_Without_Tax_Value_Label.Text = "0";
+            // 
+            // Sum_Without_Tax_Label
+            // 
+            this.Sum_Without_Tax_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Sum_Without_Tax_Label.AutoSize = false;
+            this.Sum_Without_Tax_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Without_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Without_Tax_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(499, 544);
+            this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Without_Tax_Label.Name = "Sum_Without_Tax_Label";
+            this.Sum_Without_Tax_Label.Size = new System.Drawing.Size(72, 27);
+            this.Sum_Without_Tax_Label.TabIndex = 24;
+            this.Sum_Without_Tax_Label.Text = ":المجموع";
+            // 
+            // Sum_Total_Value_Label
+            // 
+            this.Sum_Total_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Sum_Total_Value_Label.AutoSize = false;
+            this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Total_Value_Label.Location = new System.Drawing.Point(402, 544);
+            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
+            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Total_Value_Label.TabIndex = 27;
+            this.Sum_Total_Value_Label.Text = "0";
+            // 
+            // Sum_Total_Label
+            // 
+            this.Sum_Total_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Sum_Total_Label.AutoSize = false;
+            this.Sum_Total_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Total_Label.Location = new System.Drawing.Point(680, 544);
+            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Total_Label.Name = "Sum_Total_Label";
+            this.Sum_Total_Label.Size = new System.Drawing.Size(72, 27);
+            this.Sum_Total_Label.TabIndex = 26;
+            this.Sum_Total_Label.Text = ":المجموع";
+            // 
+            // Search_Label
+            // 
+            this.Search_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Search_Label.AutoSize = false;
+            this.Search_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Search_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Search_Label.Location = new System.Drawing.Point(872, 11);
+            this.Search_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Search_Label.Name = "Search_Label";
+            this.Search_Label.Size = new System.Drawing.Size(37, 27);
+            this.Search_Label.TabIndex = 35;
+            this.Search_Label.Text = "بحث";
+            // 
             // Bills_Form_AR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(1299, 715);
+            this.ClientSize = new System.Drawing.Size(974, 581);
             this.Controls.Add(this.Search_Label);
             this.Controls.Add(this.Sum_Total_Value_Label);
             this.Controls.Add(this.Sum_Total_Label);
@@ -498,14 +507,12 @@
             this.Controls.Add(this.To_Date_Picker);
             this.Controls.Add(this.From_Date_Picker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Bills_Form_AR";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
