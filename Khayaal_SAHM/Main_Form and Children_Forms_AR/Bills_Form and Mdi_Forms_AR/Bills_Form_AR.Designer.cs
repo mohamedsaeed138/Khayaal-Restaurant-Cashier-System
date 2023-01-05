@@ -72,7 +72,7 @@
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.From_Date_Picker.Location = new System.Drawing.Point(285, 59);
-            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Date_Picker.Name = "From_Date_Picker";
             this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.From_Date_Picker.TabIndex = 7;
@@ -88,7 +88,7 @@
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.To_Date_Picker.Location = new System.Drawing.Point(88, 59);
-            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.To_Date_Picker.TabIndex = 8;
@@ -112,7 +112,7 @@
             this.Search_Serial_Number_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search_Serial_Number_Text_Box.HoverState.Parent = this.Search_Serial_Number_Text_Box;
             this.Search_Serial_Number_Text_Box.Location = new System.Drawing.Point(641, 44);
-            this.Search_Serial_Number_Text_Box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Search_Serial_Number_Text_Box.Margin = new System.Windows.Forms.Padding(4);
             this.Search_Serial_Number_Text_Box.Name = "Search_Serial_Number_Text_Box";
             this.Search_Serial_Number_Text_Box.PasswordChar = '\0';
             this.Search_Serial_Number_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -133,7 +133,7 @@
             this.Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Total_Label.Location = new System.Drawing.Point(542, 11);
-            this.Total_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Total_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Total_Label.Name = "Total_Label";
             this.Total_Label.Size = new System.Drawing.Size(67, 27);
             this.Total_Label.TabIndex = 11;
@@ -147,7 +147,7 @@
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.From_Label.Location = new System.Drawing.Point(380, 11);
-            this.From_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Label.Margin = new System.Windows.Forms.Padding(2);
             this.From_Label.Name = "From_Label";
             this.From_Label.Size = new System.Drawing.Size(26, 27);
             this.From_Label.TabIndex = 12;
@@ -161,7 +161,7 @@
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.To_Label.Location = new System.Drawing.Point(180, 11);
-            this.To_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Label.Margin = new System.Windows.Forms.Padding(2);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(29, 27);
             this.To_Label.TabIndex = 13;
@@ -175,7 +175,7 @@
             this.Count_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Count_Label.Location = new System.Drawing.Point(857, 544);
-            this.Count_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Count_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Label.Name = "Count_Label";
             this.Count_Label.Size = new System.Drawing.Size(48, 27);
             this.Count_Label.TabIndex = 14;
@@ -184,14 +184,13 @@
             // Count_Value_Label
             // 
             this.Count_Value_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Count_Value_Label.AutoSize = false;
             this.Count_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Count_Value_Label.Location = new System.Drawing.Point(763, 544);
-            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Value_Label.Name = "Count_Value_Label";
-            this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Count_Value_Label.Size = new System.Drawing.Size(13, 26);
             this.Count_Value_Label.TabIndex = 15;
             this.Count_Value_Label.Text = "0";
             // 
@@ -373,7 +372,7 @@
             this.Table_Croll_Bar.HoverState.Parent = null;
             this.Table_Croll_Bar.LargeChange = 10;
             this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
-            this.Table_Croll_Bar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_Croll_Bar.Margin = new System.Windows.Forms.Padding(4);
             this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
             this.Table_Croll_Bar.Name = "Table_Croll_Bar";
             this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
@@ -401,7 +400,7 @@
             this.Total_Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Total_Search_Text_Box.HoverState.Parent = this.Total_Search_Text_Box;
             this.Total_Search_Text_Box.Location = new System.Drawing.Point(478, 44);
-            this.Total_Search_Text_Box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Total_Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
             this.Total_Search_Text_Box.Name = "Total_Search_Text_Box";
             this.Total_Search_Text_Box.PasswordChar = '\0';
             this.Total_Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -417,14 +416,13 @@
             // Sum_Without_Tax_Value_Label
             // 
             this.Sum_Without_Tax_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Without_Tax_Value_Label.AutoSize = false;
             this.Sum_Without_Tax_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Without_Tax_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Without_Tax_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Sum_Without_Tax_Value_Label.Location = new System.Drawing.Point(581, 544);
-            this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Without_Tax_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Without_Tax_Value_Label.Name = "Sum_Without_Tax_Value_Label";
-            this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Without_Tax_Value_Label.Size = new System.Drawing.Size(13, 26);
             this.Sum_Without_Tax_Value_Label.TabIndex = 25;
             this.Sum_Without_Tax_Value_Label.Text = "0";
             // 
@@ -436,7 +434,7 @@
             this.Sum_Without_Tax_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Without_Tax_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Sum_Without_Tax_Label.Location = new System.Drawing.Point(499, 544);
-            this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Without_Tax_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Without_Tax_Label.Name = "Sum_Without_Tax_Label";
             this.Sum_Without_Tax_Label.Size = new System.Drawing.Size(72, 27);
             this.Sum_Without_Tax_Label.TabIndex = 24;
@@ -445,14 +443,13 @@
             // Sum_Total_Value_Label
             // 
             this.Sum_Total_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Total_Value_Label.AutoSize = false;
             this.Sum_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Sum_Total_Value_Label.Location = new System.Drawing.Point(402, 544);
-            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Total_Value_Label.Name = "Sum_Total_Value_Label";
-            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Total_Value_Label.Size = new System.Drawing.Size(13, 26);
             this.Sum_Total_Value_Label.TabIndex = 27;
             this.Sum_Total_Value_Label.Text = "0";
             // 
@@ -464,7 +461,7 @@
             this.Sum_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Sum_Total_Label.Location = new System.Drawing.Point(680, 544);
-            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Total_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Total_Label.Name = "Sum_Total_Label";
             this.Sum_Total_Label.Size = new System.Drawing.Size(72, 27);
             this.Sum_Total_Label.TabIndex = 26;
@@ -478,7 +475,7 @@
             this.Search_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Search_Label.Location = new System.Drawing.Point(872, 11);
-            this.Search_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Search_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Search_Label.Name = "Search_Label";
             this.Search_Label.Size = new System.Drawing.Size(37, 27);
             this.Search_Label.TabIndex = 35;
@@ -513,6 +510,7 @@
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
