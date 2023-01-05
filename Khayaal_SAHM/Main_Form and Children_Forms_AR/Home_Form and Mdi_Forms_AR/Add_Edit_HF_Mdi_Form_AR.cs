@@ -31,7 +31,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             Description_Text_Box.Text = description;
             Category_Combo_Box.Text = category;
             Image_Picture_Box.Image = image;
-            Add_Item_Button.Text = "Edit";
+            Add_Item_Button.Text = "تعديل";
         }
 
         void Reload()
