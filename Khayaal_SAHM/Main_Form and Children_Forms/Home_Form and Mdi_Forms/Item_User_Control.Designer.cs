@@ -1,6 +1,6 @@
 ﻿namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
-    partial class Item_User_Control
+    partial class Item_User_Control_AR
     {
         /// <summary> 
         /// Required designer variable.

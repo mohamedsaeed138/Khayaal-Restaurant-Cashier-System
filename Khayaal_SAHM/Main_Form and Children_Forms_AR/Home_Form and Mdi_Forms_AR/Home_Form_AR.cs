@@ -81,7 +81,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             Items_Nested_Flow_Layout_Panel.Controls.Clear();
             foreach (DataRow row in dt.Rows)
             {
-                Item_User_Control Item = new Item_User_Control();
+                Item_User_Control_AR Item = new Item_User_Control_AR();
                 Item.Id = (int)row[0];
                 Item.Name = (string)row[1];
                 Item.Category = (string)row[2];
@@ -100,11 +100,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                         {
                             Formatter.Check_Connection(conn);
 
-                            SqlCommand Delete = new SqlCommand($"DELETE CR.Items_Relations WHERE Item_Id={((Item_User_Control)obj).Id};\nDELETE CR.Items Where Id ={((Item_User_Control)obj).Id};   ", conn);
+                            SqlCommand Delete = new SqlCommand($"DELETE CR.Items_Relations WHERE Item_Id={((Item_User_Control_AR)obj).Id};\nDELETE CR.Items Where Id ={((Item_User_Control_AR)obj).Id};   ", conn);
                             conn.Open();
                             Delete.ExecuteNonQuery();
                             conn.Close();
-                            ((Item_User_Control)obj).Dispose();
+                            ((Item_User_Control_AR)obj).Dispose();
                             System.Windows.Forms.MessageBox.Show("Successfully Done!!");
                         }
 
@@ -119,7 +119,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 {
                     if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                     {
-                        Item_User_Control i = (Item_User_Control)obj;
+                        Item_User_Control_AR i = (Item_User_Control_AR)obj;
                         Add_Edit_HF_Mdi_Form_AR form = new Add_Edit_HF_Mdi_Form_AR(i.Name, $"{i.Price}", $"{i.Description}", $"{i.Category}", i.Image, i.Id);
                         form.MdiParent = this.Owner;
                         form.Referesh_Current_Form += (obj2, ef) =>
@@ -138,7 +138,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 {
                     foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())
                     {
-                        if (((Item_User_Control)obj).Id == item.Id)
+                        if (((Item_User_Control_AR)obj).Id == item.Id)
                         {
 
                             ((Order_User_Control)item).Qty += 1;
@@ -153,11 +153,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                         }
                     }
                     Order_User_Control item2 = new Order_User_Control();
-                    item2.Id = ((Item_User_Control)obj).Id;
-                    item2.Name = ((Item_User_Control)obj).Name;
-                    item2.Price = ((Item_User_Control)obj).Price;
+                    item2.Id = ((Item_User_Control_AR)obj).Id;
+                    item2.Name = ((Item_User_Control_AR)obj).Name;
+                    item2.Price = ((Item_User_Control_AR)obj).Price;
                     item2.Qty = 1;
-                    item2.Image = ((Item_User_Control)obj).Image;
+                    item2.Image = ((Item_User_Control_AR)obj).Image;
                     item2.Sub_Total = item2.Price;
                     Order_Nested_Flow_Layout_Panel.Controls.Add(item2);
                     if (!Check_Negative_Qty())
@@ -201,7 +201,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
         {
             string Search = Formatter.String(Search_Text_Box.Text);
             string Caetgory = Category_Combo_Box.Text;
-            foreach (var item in Items_Nested_Flow_Layout_Panel.Controls.OfType<Item_User_Control>())
+            foreach (var item in Items_Nested_Flow_Layout_Panel.Controls.OfType<Item_User_Control_AR>())
             {
                 if (Caetgory == "All" && Search == "")
                     item.Visible = true;

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 {
-    public partial class Item_User_Control : UserControl
+    public partial class Item_User_Control_AR : UserControl
     {
         private int id;
         private string name;
@@ -22,7 +22,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         public event EventHandler Add_Event = null;
         public event EventHandler Edit_Event = null;
         public event EventHandler Remove_Event = null;
-        public Item_User_Control()
+        public Item_User_Control_AR()
         {
             InitializeComponent();
         }
