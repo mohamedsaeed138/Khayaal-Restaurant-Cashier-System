@@ -84,7 +84,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
             string Total = Formatter.Float($"{Best_Sales_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}");
             double Total_Double = Convert.ToDouble(Total);
 
-            string Total_With_Tax = Formatter.Float($"{Total_Double + Total_Double * .14 / 100}");
+            string Total_With_Tax = Formatter.Float($"{Total_Double + Total_Double * .14}");
             Count_Value_Label.Text = $"{Best_Sales_Table.Rows.Count}";
 
             Qty_Value_Label.Text = Qty;
