@@ -95,7 +95,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 {
                     if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                     {
-                        DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "تحذير", MessageBoxButtons.YesNo);
                         if (DialogResult.Yes == r)
                         {
                             Formatter.Check_Connection(conn);
@@ -105,7 +105,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                             Delete.ExecuteNonQuery();
                             conn.Close();
                             ((Item_User_Control)obj).Dispose();
-                            System.Windows.Forms.MessageBox.Show("Successfully Done!!");
+                            System.Windows.Forms.MessageBox.Show("!! تمت بنجاح");
                         }
 
                     }
@@ -330,12 +330,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             Copy_Data_From_Orig_To_Test();
             if (Negative_Qty.Rows.Count > 0)
             {
-                string Warning_Message = "You Need : ";
+                string Warning_Message = " :  انت تحتاج الي";
                 foreach (DataRow row in Negative_Qty.Rows)
                 {
-                    Warning_Message += $"{(-1 * (double)row[1])} Units more from {(string)row[0]}\n";
+                    Warning_Message += $"\n{(string)row[0]} وحدات أكثر من {(-1 * (double)row[1])}";
                 }
-                MessageBox.Show(Warning_Message + "\n To Create The Order");
+                MessageBox.Show(Warning_Message + " لانشاء هذا الطلب");
 
                 return false;
 
