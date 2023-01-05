@@ -46,7 +46,7 @@
             this.To_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Best_Seller_Table = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Best_Sales_Table = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             this.Qty_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.With_Tax_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sum_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_Table)).BeginInit();
             this.SuspendLayout();
             // 
             // Category_Combo_Box
@@ -209,27 +209,27 @@
             this.Count_Value_Label.TabIndex = 15;
             this.Count_Value_Label.Text = "0";
             // 
-            // Best_Seller_Table
+            // Best_Sales_Table
             // 
-            this.Best_Seller_Table.AllowUserToAddRows = false;
-            this.Best_Seller_Table.AllowUserToDeleteRows = false;
-            this.Best_Seller_Table.AllowUserToResizeColumns = false;
-            this.Best_Seller_Table.AllowUserToResizeRows = false;
+            this.Best_Sales_Table.AllowUserToAddRows = false;
+            this.Best_Sales_Table.AllowUserToDeleteRows = false;
+            this.Best_Sales_Table.AllowUserToResizeColumns = false;
+            this.Best_Sales_Table.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Best_Seller_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Best_Seller_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Best_Sales_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Best_Sales_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Best_Seller_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Best_Seller_Table.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.Best_Seller_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Best_Seller_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.Best_Seller_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Best_Sales_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Best_Sales_Table.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Best_Sales_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Best_Sales_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Best_Sales_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,10 +237,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Best_Seller_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Best_Seller_Table.ColumnHeadersHeight = 48;
-            this.Best_Seller_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Best_Seller_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Best_Sales_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Best_Sales_Table.ColumnHeadersHeight = 48;
+            this.Best_Sales_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Best_Sales_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column3,
             this.Column4,
@@ -252,13 +252,13 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Best_Seller_Table.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Best_Seller_Table.EnableHeadersVisualStyles = false;
-            this.Best_Seller_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Best_Seller_Table.Location = new System.Drawing.Point(49, 100);
-            this.Best_Seller_Table.MultiSelect = false;
-            this.Best_Seller_Table.Name = "Best_Seller_Table";
-            this.Best_Seller_Table.ReadOnly = true;
+            this.Best_Sales_Table.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Best_Sales_Table.EnableHeadersVisualStyles = false;
+            this.Best_Sales_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Best_Sales_Table.Location = new System.Drawing.Point(49, 100);
+            this.Best_Sales_Table.MultiSelect = false;
+            this.Best_Sales_Table.Name = "Best_Sales_Table";
+            this.Best_Sales_Table.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,45 +266,45 @@
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Best_Seller_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.Best_Seller_Table.RowHeadersVisible = false;
-            this.Best_Seller_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.Best_Sales_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.Best_Sales_Table.RowHeadersVisible = false;
+            this.Best_Sales_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Best_Seller_Table.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.Best_Seller_Table.RowTemplate.Height = 37;
-            this.Best_Seller_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Best_Seller_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.Best_Seller_Table.Size = new System.Drawing.Size(875, 439);
-            this.Best_Seller_Table.TabIndex = 17;
-            this.Best_Seller_Table.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Best_Seller_Table.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Best_Seller_Table.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.Best_Seller_Table.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Best_Seller_Table.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.Best_Seller_Table.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.Best_Seller_Table.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Best_Seller_Table.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.Best_Seller_Table.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Best_Seller_Table.ThemeStyle.HeaderStyle.Height = 48;
-            this.Best_Seller_Table.ThemeStyle.ReadOnly = true;
-            this.Best_Seller_Table.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.Best_Seller_Table.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.Best_Seller_Table.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.Best_Seller_Table.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Best_Seller_Table.ThemeStyle.RowsStyle.Height = 37;
-            this.Best_Seller_Table.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.Best_Seller_Table.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Best_Seller_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
-            this.Best_Seller_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
+            this.Best_Sales_Table.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.Best_Sales_Table.RowTemplate.Height = 37;
+            this.Best_Sales_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Best_Sales_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.Best_Sales_Table.Size = new System.Drawing.Size(875, 439);
+            this.Best_Sales_Table.TabIndex = 17;
+            this.Best_Sales_Table.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.Best_Sales_Table.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Best_Sales_Table.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Best_Sales_Table.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Best_Sales_Table.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Best_Sales_Table.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Best_Sales_Table.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Best_Sales_Table.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Best_Sales_Table.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Best_Sales_Table.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Best_Sales_Table.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Best_Sales_Table.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.Best_Sales_Table.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Best_Sales_Table.ThemeStyle.HeaderStyle.Height = 48;
+            this.Best_Sales_Table.ThemeStyle.ReadOnly = true;
+            this.Best_Sales_Table.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Best_Sales_Table.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Best_Sales_Table.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.Best_Sales_Table.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Best_Sales_Table.ThemeStyle.RowsStyle.Height = 37;
+            this.Best_Sales_Table.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Best_Sales_Table.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Best_Sales_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
+            this.Best_Sales_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
             // Column1
             // 
@@ -458,7 +458,7 @@
             this.Controls.Add(this.With_Tax_Value_Label);
             this.Controls.Add(this.Sum_Total_Label);
             this.Controls.Add(this.Table_Croll_Bar);
-            this.Controls.Add(this.Best_Seller_Table);
+            this.Controls.Add(this.Best_Sales_Table);
             this.Controls.Add(this.Count_Value_Label);
             this.Controls.Add(this.Count_Label);
             this.Controls.Add(this.To_Label);
@@ -471,7 +471,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Best_Sales_Form";
             this.Text = "Best_Seller_Form";
-            ((System.ComponentModel.ISupportInitialize)(this.Best_Seller_Table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Best_Sales_Table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,7 +487,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel To_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Value_Label;
-        private Guna.UI2.WinForms.Guna2DataGridView Best_Seller_Table;
+        private Guna.UI2.WinForms.Guna2DataGridView Best_Sales_Table;
         private Guna.UI2.WinForms.Guna2VScrollBar Table_Croll_Bar;
         private Guna.UI2.WinForms.Guna2HtmlLabel With_Tax_Value_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Label;

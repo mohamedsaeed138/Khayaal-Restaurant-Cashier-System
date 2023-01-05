@@ -20,10 +20,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
             InitializeComponent();
             Fill_Combo_Box();
             Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;");
-            if (To_Date_Picker.Value < new DateTime(2022, 1, 1))
-                To_Date_Picker.Value = DateTime.Now;
-            From_Date_Picker.Value = new DateTime(2022, 1, 1);
-            To_Date_Picker.Value = DateTime.Now;
+            if (Best_Sales_Table.Rows.Count == 0)
+                From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
+            else
+            {
+                DataTable x = new DataTable();
+                Formatter.Check_Connection(conn);
+                SqlDataAdapter Date_Adapter = new SqlDataAdapter("SELECT MIN([Date]),MAX([Date]) FROM CR.Bills;", conn);
+                conn.Open();
+                Date_Adapter.Fill(x);
+                conn.Close();
+                From_Date_Picker.Value = Convert.ToDateTime(x.Rows[0][0]);
+                To_Date_Picker.Value = Convert.ToDateTime(x.Rows[0][1]);
+            }
         }
         public Best_Sales_Form()
         {
@@ -59,24 +68,24 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
 
 
             conn.Close();
-            Best_Seller_Table.Rows.Clear();
+            Best_Sales_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
                 double total = (double)row[2];
-                Best_Seller_Table.Rows.Add((string)row[0], (int)row[1], total, (total * .14 + total));
+                Best_Sales_Table.Rows.Add((string)row[0], (int)row[1], total, (total * .14 + total));
             }
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Best_Sales_Table.Rows.Count - 1;
             }
             catch { }
-            string Qty = Formatter.Float($"{Best_Seller_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[1].Value))}");
+            string Qty = Formatter.Float($"{Best_Sales_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[1].Value))}");
 
-            string Total = Formatter.Float($"{Best_Seller_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}");
+            string Total = Formatter.Float($"{Best_Sales_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}");
             double Total_Double = Convert.ToDouble(Total);
 
             string Total_With_Tax = Formatter.Float($"{Total_Double + Total_Double * .14 / 100}");
-            Count_Value_Label.Text = $"{Best_Seller_Table.Rows.Count}";
+            Count_Value_Label.Text = $"{Best_Sales_Table.Rows.Count}";
 
             Qty_Value_Label.Text = Qty;
             Sum_Total_Value_Label.Text = $"{Total} $";
@@ -140,9 +149,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Best_Sales_Table.Rows.Count - 1;
 
-                Best_Seller_Table.FirstDisplayedScrollingRowIndex = Best_Seller_Table.Rows[e.NewValue].Index;
+                Best_Sales_Table.FirstDisplayedScrollingRowIndex = Best_Sales_Table.Rows[e.NewValue].Index;
             }
             catch { }
 
@@ -152,7 +161,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Best_Sales_Table.Rows.Count - 1;
             }
             catch { }
         }
@@ -161,7 +170,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
         {
             try
             {
-                Table_Croll_Bar.Maximum = Best_Seller_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Best_Sales_Table.Rows.Count - 1;
             }
             catch { }
         }
