@@ -330,10 +330,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             Copy_Data_From_Orig_To_Test();
             if (Negative_Qty.Rows.Count > 0)
             {
-                string Warning_Message = " :  انت تحتاج الي";
+                string Warning_Message = " \t\t :  انت تحتاج الي\n";
                 foreach (DataRow row in Negative_Qty.Rows)
                 {
-                    Warning_Message += $"\n{(string)row[0]} وحدات أكثر من {(-1 * (double)row[1])}";
+                    Warning_Message += $" وحدات أكثر من {(string)row[0]}{(-1 * (double)row[1])}\n";
                 }
                 MessageBox.Show(Warning_Message + " لانشاء هذا الطلب");
 
