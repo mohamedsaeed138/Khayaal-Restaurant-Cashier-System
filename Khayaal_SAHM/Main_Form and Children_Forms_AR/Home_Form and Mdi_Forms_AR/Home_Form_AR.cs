@@ -48,7 +48,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             conn.Close();
             DataRow row = dt.NewRow();
             dt.Rows.InsertAt(row, 0);
-            row["Category"] = "All";
+            row["Category"] = "الجميع";
             Category_Combo_Box.DataSource = dt;
             Category_Combo_Box.DisplayMember = "Category";
 
@@ -203,13 +203,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             string Caetgory = Category_Combo_Box.Text;
             foreach (var item in Items_Nested_Flow_Layout_Panel.Controls.OfType<Item_User_Control>())
             {
-                if (Caetgory == "All" && Search == "")
+                if (Caetgory == "الجميع" && Search == "")
                     item.Visible = true;
-                else if (Caetgory == "All" && Search != "")
+                else if (Caetgory == "الجميع" && Search != "")
                     item.Visible = item.Name.StartsWith(Search);
-                else if (Caetgory != "All" && Search == "")
+                else if (Caetgory != "الجميع" && Search == "")
                     item.Visible = item.Category == Caetgory;
-                else if (Caetgory != "All" && Search != "")
+                else if (Caetgory != "الجميع" && Search != "")
                     item.Visible = item.Name.StartsWith(Search) && item.Category == Caetgory;
             }
         }
@@ -385,15 +385,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             }
             else
             {
-                MessageBox.Show("Finish Your Bill First!!");
+                MessageBox.Show("!! أنهي الطلب أولا");
             }
 
         }
 
-        private void Total_Value_Label_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 
 

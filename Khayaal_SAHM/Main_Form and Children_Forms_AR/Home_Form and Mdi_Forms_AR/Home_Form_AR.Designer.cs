@@ -245,7 +245,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Total_Value_Label.TabIndex = 30;
             this.Total_Value_Label.Text = "0";
             this.Total_Value_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Total_Value_Label.Click += new System.EventHandler(this.Total_Value_Label_Click);
             // 
             // Dolaar_Sign_Label
             // 
@@ -400,6 +399,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
             this.Category_Combo_Box.Size = new System.Drawing.Size(161, 36);
             this.Category_Combo_Box.TabIndex = 23;
+            this.Category_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // Search_Text_Box
