@@ -120,11 +120,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
                 if (Table_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' ORDER BY [From] ");
                 else if (Table_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Name] LIKE '{Name}%' ORDER BY [From] ");
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Name] LIKE N'%{Name}%' ORDER BY [From] ");
                 else if (Table_Combo_Box.Text != "All" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  ORDER BY [From] ");
                 else
-                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  AND [Name] LIKE '{Name}%'  ORDER BY [From] ");
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  AND [Name] LIKE N'%{Name}%'  ORDER BY [From] ");
             }
         }
 
