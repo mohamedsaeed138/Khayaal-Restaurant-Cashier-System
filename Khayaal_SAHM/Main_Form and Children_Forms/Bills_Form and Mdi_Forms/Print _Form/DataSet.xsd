@@ -9,11 +9,12 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Restaurant_CafeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Restaurant_CafeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        CR.Bills_Details.Name, CR.Bills_Details.Sub_Total, CR.Bills_Details.Unit_Price, CR.Bills_Details.Qty, CR.Bills.Serial_Number, CR.Bills.Date, CR.Bills.Cashier_User_Name, CR.Bills.Total, CR.Bills.Total_With_Tax
-FROM            CR.Bills CROSS JOIN
+                    <CommandText>SELECT   CR.Bills_Details.Name, CR.Bills_Details.Sub_Total, CR.Bills_Details.Unit_Price, CR.Bills_Details.Qty, CR.Bills.Serial_Number, CR.Bills.Date, CR.Bills.Cashier_User_Name, CR.Bills.Total
+                         
+FROM         CR.Bills CROSS JOIN
                          CR.Bills_Details</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -29,7 +30,6 @@ FROM            CR.Bills CROSS JOIN
               <Mapping SourceColumn="Date" DataSetColumn="Date" />
               <Mapping SourceColumn="Cashier_User_Name" DataSetColumn="Cashier_User_Name" />
               <Mapping SourceColumn="Total" DataSetColumn="Total" />
-              <Mapping SourceColumn="Total_With_Tax" DataSetColumn="Total_With_Tax" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -41,30 +41,29 @@ FROM            CR.Bills CROSS JOIN
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+        <xs:element name="DataTable1" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" minOccurs="0">
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sub_Total" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Sub_Total" msprop:Generator_ColumnPropNameInTable="Sub_TotalColumn" msprop:Generator_ColumnVarNameInTable="columnSub_Total" msprop:Generator_UserColumnName="Sub_Total" type="xs:double" minOccurs="0" />
-              <xs:element name="Unit_Price" msprop:Generator_ColumnPropNameInRow="Unit_Price" msprop:Generator_ColumnPropNameInTable="Unit_PriceColumn" msprop:Generator_ColumnVarNameInTable="columnUnit_Price" msprop:Generator_UserColumnName="Unit_Price" type="xs:double" />
-              <xs:element name="Qty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_UserColumnName="Qty" type="xs:double" />
-              <xs:element name="Serial_Number" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Serial_Number" msprop:Generator_ColumnPropNameInTable="Serial_NumberColumn" msprop:Generator_ColumnVarNameInTable="columnSerial_Number" msprop:Generator_UserColumnName="Serial_Number" type="xs:int" />
-              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Cashier_User_Name" msprop:Generator_ColumnPropNameInRow="Cashier_User_Name" msprop:Generator_ColumnPropNameInTable="Cashier_User_NameColumn" msprop:Generator_ColumnVarNameInTable="columnCashier_User_Name" msprop:Generator_UserColumnName="Cashier_User_Name" minOccurs="0">
+              <xs:element name="Sub_Total" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Sub_Total" msprop:Generator_ColumnPropNameInTable="Sub_TotalColumn" msprop:Generator_ColumnPropNameInRow="Sub_Total" msprop:Generator_ColumnVarNameInTable="columnSub_Total" type="xs:double" minOccurs="0" />
+              <xs:element name="Unit_Price" msprop:Generator_UserColumnName="Unit_Price" msprop:Generator_ColumnPropNameInTable="Unit_PriceColumn" msprop:Generator_ColumnPropNameInRow="Unit_Price" msprop:Generator_ColumnVarNameInTable="columnUnit_Price" type="xs:double" />
+              <xs:element name="Qty" msprop:Generator_UserColumnName="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" type="xs:double" />
+              <xs:element name="Serial_Number" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Serial_Number" msprop:Generator_ColumnPropNameInTable="Serial_NumberColumn" msprop:Generator_ColumnPropNameInRow="Serial_Number" msprop:Generator_ColumnVarNameInTable="columnSerial_Number" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnVarNameInTable="columnDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cashier_User_Name" msprop:Generator_UserColumnName="Cashier_User_Name" msprop:Generator_ColumnPropNameInTable="Cashier_User_NameColumn" msprop:Generator_ColumnPropNameInRow="Cashier_User_Name" msprop:Generator_ColumnVarNameInTable="columnCashier_User_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_UserColumnName="Total" type="xs:double" minOccurs="0" />
-              <xs:element name="Total_With_Tax" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Total_With_Tax" msprop:Generator_ColumnPropNameInTable="Total_With_TaxColumn" msprop:Generator_ColumnVarNameInTable="columnTotal_With_Tax" msprop:Generator_UserColumnName="Total_With_Tax" type="xs:double" minOccurs="0" />
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
