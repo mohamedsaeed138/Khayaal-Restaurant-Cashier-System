@@ -304,12 +304,12 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(443, 135);
+            this.label6.Location = new System.Drawing.Point(457, 137);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 25);
+            this.label6.Size = new System.Drawing.Size(85, 25);
             this.label6.TabIndex = 12;
-            this.label6.Text = "الرقم السري";
+            this.label6.Text = "كلمة السر";
             // 
             // Login_Form
             // 
