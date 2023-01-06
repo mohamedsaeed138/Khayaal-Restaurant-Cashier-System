@@ -89,7 +89,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             {
                 if (DateTime.Parse(From) < DateTime.Now)
                 {
-                    MessageBox.Show("Insert a Recent Date", "Change Date Range!");
+                    MessageBox.Show("!أدخل تاريخ حديث", "!غير التاريخ");
                     return;
                 }
 
@@ -121,7 +121,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                             conn.Close();
 
 
-                            MessageBox.Show("Successfully Done");
+                            MessageBox.Show("تمت العملية بنجاح");
                             Customer_Name_Text_Box.Text = "";
                             From_Date_Picker.Text = DateTime.Now.ToString();
                             To_Date_Picker.Text = DateTime.Now.ToString();
@@ -131,7 +131,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
 
                         catch (Exception ex)
                         {
-                            MessageBox.Show("There are Bookings Intersections!!", "Change Date Range!");
+                            MessageBox.Show("!!هناك تعارض في الحجوزات", "!غير التاريخ");
 
                         }
                         finally
@@ -156,7 +156,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                             conn.Close();
                             this.Close();
 
-                            MessageBox.Show("Successfully Done");
+                            MessageBox.Show("تمت العملية بنجاح");
                         }
 
                         catch (Exception ex)
@@ -178,7 +178,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             }
 
             else
-                MessageBox.Show("  Change Date Range!", "Error : From Date is After From Date!");
+                MessageBox.Show("!! خطأ في المدي الزمني , قم بتغييره ", "!! خطأ");
         }
         private bool Check_Intersections(DateTime From, DateTime To, int Table)
         {
@@ -196,12 +196,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             conn.Close();
             if (Bookings.Rows.Count > 0)
             {
-                string message = "There are Bookings Intersections!!\n";
+                string message = "هناك تعارض في الحجوزات!!\n";
                 foreach (DataRow row in Bookings.Rows)
                 {
-                    message += $"Name: {(string)row[0]},From: {(DateTime)row[1]},To:{(DateTime)row[2]}\n";
+                    message += $"الاسم: {(string)row[0]}, من: {(DateTime)row[1]}, إلى:{(DateTime)row[2]}\n";
                 }
-                MessageBox.Show(message, "Change Date Range!");
+                MessageBox.Show(message, "غير التاريخ!", MessageBoxButtons.OK,MessageBoxIcon.None, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
                 return false;
             }
 

@@ -48,7 +48,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             dt2.Columns.Add("Number");
             DataRow row = dt2.NewRow();
             dt2.Rows.InsertAt(row, 0);
-            row["Number"] = "All";
+            row["Number"] = "الجميع";
             conn.Open();
             da.Fill(dt);
             conn.Close();
@@ -108,7 +108,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
             {
                 From_Date_Picker.Value = To_Date_Picker.Value;
-                MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("!! خطأ في المدي الزمني , قم بتغييره ", "!! خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
@@ -118,14 +118,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                 string Name = Formatter.String(Search_Text_Box.Text);
 
                 string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
-                if (Table_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
+                if (Table_Combo_Box.Text == "الجميع" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' ORDER BY [From] ");
-                else if (Table_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Name] LIKE '{Name}%' ORDER BY [From] ");
-                else if (Table_Combo_Box.Text != "All" && Search_Text_Box.Text == "")
+                else if (Table_Combo_Box.Text == "الجميع" && Search_Text_Box.Text != "")
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Name] LIKE N'%{Name}%' ORDER BY [From] ");
+                else if (Table_Combo_Box.Text != "الجميع" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  ORDER BY [From] ");
                 else
-                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  AND [Name] LIKE '{Name}%'  ORDER BY [From] ");
+                    Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' AND [Table_No]={Table_No}  AND [Name] LIKE N'%{Name}%'  ORDER BY [From] ");
             }
         }
 
@@ -212,7 +212,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             {
                 if (Delete_Table_Text_Box.Text != string.Empty)
                 {
-                    DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
+                    DialogResult r = System.Windows.Forms.MessageBox.Show("هل أنت متأكد؟", "تحذير", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
                     if (DialogResult.Yes == r)
                     {
                         Formatter.Check_Connection(conn);
@@ -228,7 +228,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                         Delete_Table_Text_Box.Text = "";
 
                         Reload();
-                        MessageBox.Show("Successfully Done!");
+                        MessageBox.Show("تمت العملية بنجاح");
                     }
 
                 }
@@ -308,7 +308,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                         Delete.ExecuteNonQuery();
                         conn.Close();
                         Choose_Query();
-                        MessageBox.Show("Successfully Done!");
+                        MessageBox.Show("تمت العملية بنجاح");
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
