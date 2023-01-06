@@ -245,7 +245,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             }
 
             else
-                MessageBox.Show("!! ادخل عناصر فالطلب أولا");
+                MessageBox.Show("!! ادخل عناصر في الطلب أولا");
         }
 
         private void Print_and_Save_Button_Click(object sender, EventArgs e)
@@ -259,7 +259,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
             }
             else
-                MessageBox.Show("!! ادخل عناصر فالطلب أولا");
+                MessageBox.Show("!! ادخل عناصر في الطلب أولا");
         }
         void Create_a_Bill()
         {
