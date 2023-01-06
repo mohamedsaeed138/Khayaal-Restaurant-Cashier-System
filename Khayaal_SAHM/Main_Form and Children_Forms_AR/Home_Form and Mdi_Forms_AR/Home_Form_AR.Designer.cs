@@ -133,7 +133,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Clear_All_Button.CheckedState.Parent = this.Clear_All_Button;
             this.Clear_All_Button.CustomImages.Parent = this.Clear_All_Button;
             this.Clear_All_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Clear_All_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_All_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Clear_All_Button.ForeColor = System.Drawing.Color.White;
             this.Clear_All_Button.HoverState.Parent = this.Clear_All_Button;
             this.Clear_All_Button.Location = new System.Drawing.Point(188, 10);
