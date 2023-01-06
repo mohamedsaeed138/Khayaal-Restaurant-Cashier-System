@@ -133,6 +133,7 @@
             this.Username.ShadowDecoration.Parent = this.Username;
             this.Username.Size = new System.Drawing.Size(211, 48);
             this.Username.TabIndex = 1;
+            this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -176,6 +177,7 @@
             this.Password.ShadowDecoration.Parent = this.Password;
             this.Password.Size = new System.Drawing.Size(211, 48);
             this.Password.TabIndex = 2;
+            this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
             // label4
@@ -283,6 +285,7 @@
             this.Language_Combo_Box.ShadowDecoration.Parent = this.Language_Combo_Box;
             this.Language_Combo_Box.Size = new System.Drawing.Size(90, 36);
             this.Language_Combo_Box.TabIndex = 3;
+            this.Language_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
