@@ -1,4 +1,11 @@
+<<<<<<< Updated upstream
 ﻿using System;
+=======
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_Forms;
+using Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Forms_AR;
+using Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Mdi_Forms_AR;
+using System;
+>>>>>>> Stashed changes
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
@@ -31,7 +38,11 @@ namespace Khayaal_SAHM
             //}
             //
             //
+<<<<<<< Updated upstream
 
+=======
+            Application.Run(new Raw_Materials_Form_AR());
+>>>>>>> Stashed changes
 
         }
 

@@ -82,11 +82,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
                 if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text == "")
                     Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text != "")
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Serial_Number] LIKE '{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Serial_Number] LIKE N'%{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text != "" && Search_Serial_Number_Text_Box.Text == "")
                     Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total}  AND Date BETWEEN '{From}' and '{To}' ;");
                 else
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total} AND [Serial_Number] LIKE '{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total} AND [Serial_Number] LIKE N'%{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
             }
         }
 
