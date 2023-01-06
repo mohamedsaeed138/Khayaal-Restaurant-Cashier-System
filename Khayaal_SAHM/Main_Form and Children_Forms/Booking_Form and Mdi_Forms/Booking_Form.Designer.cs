@@ -81,6 +81,7 @@
             this.Table_Combo_Box.ShadowDecoration.Parent = this.Table_Combo_Box;
             this.Table_Combo_Box.Size = new System.Drawing.Size(105, 36);
             this.Table_Combo_Box.TabIndex = 5;
+            this.Table_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Table_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // From_Date_Picker
@@ -139,6 +140,7 @@
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(155, 36);
             this.Search_Text_Box.TabIndex = 9;
+            this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
             this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
@@ -442,6 +444,7 @@
             this.Delete_Table_Text_Box.ShadowDecoration.Parent = this.Delete_Table_Text_Box;
             this.Delete_Table_Text_Box.Size = new System.Drawing.Size(66, 36);
             this.Delete_Table_Text_Box.TabIndex = 23;
+            this.Delete_Table_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Delete_Table_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Delete_Table_Text_Box_KeyPress);
             this.Delete_Table_Text_Box.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Delete_Table_Text_Box_KeyUp);
             // 

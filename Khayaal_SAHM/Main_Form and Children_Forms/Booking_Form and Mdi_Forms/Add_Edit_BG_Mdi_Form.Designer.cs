@@ -85,6 +85,7 @@
             this.Customer_Name_Text_Box.ShadowDecoration.Parent = this.Customer_Name_Text_Box;
             this.Customer_Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Customer_Name_Text_Box.TabIndex = 0;
+            this.Customer_Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Customer_Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Customer_Name_Text_Box_KeyPress);
             // 
             // Table_Combo_Box
@@ -110,6 +111,7 @@
             this.Table_Combo_Box.Size = new System.Drawing.Size(242, 36);
             this.Table_Combo_Box.TabIndex = 1;
             this.Table_Combo_Box.TabStop = false;
+            this.Table_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Tabel_Lbl
             // 
@@ -277,6 +279,7 @@
             this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
             this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Notes_Text_Box.TabIndex = 21;
+            this.Notes_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Notes_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Notes_Text_Box_KeyPress);
             // 
             // Add_Edit_BG_Mdi_Form
