@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Forms_AR;
+using System;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
@@ -23,7 +24,7 @@ namespace Khayaal_SAHM
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loading_Screen_Form());
+            //Application.Run(new Loading_Screen_Form());
             //}
             //else
             //{
@@ -31,6 +32,7 @@ namespace Khayaal_SAHM
             //}
             //
             //
+            Application.Run(new Booking_Form_AR());
 
         }
 
