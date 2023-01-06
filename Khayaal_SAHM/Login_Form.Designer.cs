@@ -65,7 +65,7 @@
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(301, 391);
+            this.guna2Panel1.Size = new System.Drawing.Size(301, 385);
             this.guna2Panel1.TabIndex = 0;
             // 
             // label2
@@ -74,7 +74,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(56, 278);
+            this.label2.Location = new System.Drawing.Point(46, 277);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 37);
@@ -303,7 +303,6 @@
             this.label5.Size = new System.Drawing.Size(122, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "اسم المستخدم";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
