@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -47,8 +49,8 @@
             this.Language_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +69,32 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(301, 385);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(81, 187);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(183, 40);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "في نظام خيال";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(169, 139);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 40);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "مرحبا بك ";
             // 
             // label2
             // 
@@ -201,16 +229,17 @@
             // 
             this.Login_B.BorderRadius = 10;
             this.Login_B.CheckedState.Parent = this.Login_B;
+            this.Login_B.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Login_B.CustomImages.Parent = this.Login_B;
             this.Login_B.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             this.Login_B.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_B.ForeColor = System.Drawing.Color.White;
             this.Login_B.HoverState.Parent = this.Login_B;
-            this.Login_B.Location = new System.Drawing.Point(329, 290);
+            this.Login_B.Location = new System.Drawing.Point(338, 282);
             this.Login_B.Margin = new System.Windows.Forms.Padding(2);
             this.Login_B.Name = "Login_B";
             this.Login_B.ShadowDecoration.Parent = this.Login_B;
-            this.Login_B.Size = new System.Drawing.Size(166, 48);
+            this.Login_B.Size = new System.Drawing.Size(166, 37);
             this.Login_B.TabIndex = 4;
             this.Login_B.Text = "Login";
             this.Login_B.Click += new System.EventHandler(this.Login_B_Click_1);
@@ -244,7 +273,7 @@
             this.Language_AR_Label.BackColor = System.Drawing.Color.Transparent;
             this.Language_AR_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Language_AR_Label.ForeColor = System.Drawing.Color.White;
-            this.Language_AR_Label.Location = new System.Drawing.Point(475, 230);
+            this.Language_AR_Label.Location = new System.Drawing.Point(483, 239);
             this.Language_AR_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Language_AR_Label.Name = "Language_AR_Label";
             this.Language_AR_Label.Size = new System.Drawing.Size(41, 21);
@@ -257,7 +286,7 @@
             this.Language_EN_Label.BackColor = System.Drawing.Color.Transparent;
             this.Language_EN_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Language_EN_Label.ForeColor = System.Drawing.Color.White;
-            this.Language_EN_Label.Location = new System.Drawing.Point(300, 230);
+            this.Language_EN_Label.Location = new System.Drawing.Point(300, 235);
             this.Language_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Language_EN_Label.Name = "Language_EN_Label";
             this.Language_EN_Label.Size = new System.Drawing.Size(85, 21);
@@ -283,7 +312,7 @@
             "عربي",
             "EN"});
             this.Language_Combo_Box.ItemsAppearance.Parent = this.Language_Combo_Box;
-            this.Language_Combo_Box.Location = new System.Drawing.Point(389, 224);
+            this.Language_Combo_Box.Location = new System.Drawing.Point(389, 233);
             this.Language_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Language_Combo_Box.Name = "Language_Combo_Box";
             this.Language_Combo_Box.ShadowDecoration.Parent = this.Language_Combo_Box;
@@ -317,31 +346,33 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "كلمة السر";
             // 
-            // label7
+            // label9
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(169, 139);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 40);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "مرحبا بك ";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(456, 331);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 21);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "المستخدمين";
             // 
-            // label8
+            // label10
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(81, 187);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(183, 40);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "في نظام خيال";
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(301, 331);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 21);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Users";
             // 
             // Login_Form
             // 
@@ -349,6 +380,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(544, 375);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Language_Combo_Box);
@@ -396,5 +429,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
