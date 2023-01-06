@@ -85,6 +85,9 @@ namespace Khayaal_SAHM
             }
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

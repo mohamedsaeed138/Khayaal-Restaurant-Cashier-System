@@ -45,6 +45,8 @@
             this.Language_AR_Label = new System.Windows.Forms.Label();
             this.Language_EN_Label = new System.Windows.Forms.Label();
             this.Language_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -138,7 +140,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(308, 34);
+            this.label3.Location = new System.Drawing.Point(299, 34);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 30);
@@ -182,7 +184,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(308, 131);
+            this.label4.Location = new System.Drawing.Point(299, 130);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 30);
@@ -249,7 +251,7 @@
             this.Language_EN_Label.BackColor = System.Drawing.Color.Transparent;
             this.Language_EN_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Language_EN_Label.ForeColor = System.Drawing.Color.White;
-            this.Language_EN_Label.Location = new System.Drawing.Point(308, 230);
+            this.Language_EN_Label.Location = new System.Drawing.Point(300, 230);
             this.Language_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Language_EN_Label.Name = "Language_EN_Label";
             this.Language_EN_Label.Size = new System.Drawing.Size(85, 21);
@@ -282,12 +284,41 @@
             this.Language_Combo_Box.Size = new System.Drawing.Size(90, 36);
             this.Language_Combo_Box.TabIndex = 3;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(420, 39);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "اسم المستخدم";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(443, 135);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "الرقم السري";
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(544, 375);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.Language_Combo_Box);
             this.Controls.Add(this.Language_EN_Label);
             this.Controls.Add(this.Language_AR_Label);
@@ -329,5 +360,7 @@
         private System.Windows.Forms.Label Language_EN_Label;
         private System.Windows.Forms.Label Language_AR_Label;
         private Guna.UI2.WinForms.Guna2ComboBox Language_Combo_Box;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
