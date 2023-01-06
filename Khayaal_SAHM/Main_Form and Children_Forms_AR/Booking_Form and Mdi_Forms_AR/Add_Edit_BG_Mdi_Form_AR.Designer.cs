@@ -54,11 +54,11 @@
             this.Customer_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Customer_Name_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Customer_Name_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Customer_Name_Lbl.Location = new System.Drawing.Point(401, 32);
+            this.Customer_Name_Lbl.Location = new System.Drawing.Point(388, 32);
             this.Customer_Name_Lbl.Name = "Customer_Name_Lbl";
-            this.Customer_Name_Lbl.Size = new System.Drawing.Size(117, 34);
+            this.Customer_Name_Lbl.Size = new System.Drawing.Size(130, 34);
             this.Customer_Name_Lbl.TabIndex = 4;
-            this.Customer_Name_Lbl.Text = ":الزبون اسم";
+            this.Customer_Name_Lbl.Text = ": العميل اسم ";
             // 
             // Customer_Name_Text_Box
             // 

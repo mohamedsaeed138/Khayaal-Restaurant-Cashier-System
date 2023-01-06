@@ -46,7 +46,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                 From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
                 To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
             }
-            Add_Booking_Button.Text = "Edit";
+            Add_Booking_Button.Text = "تعديل";
         }
 
         void Reload()
@@ -201,7 +201,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                 {
                     message += $"الاسم: {(string)row[0]}, من: {(DateTime)row[1]}, إلى:{(DateTime)row[2]}\n";
                 }
-                MessageBox.Show(message, "غير التاريخ!", MessageBoxButtons.OK,MessageBoxIcon.None, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+                MessageBox.Show(message, "غير التاريخ!", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
                 return false;
             }
 
