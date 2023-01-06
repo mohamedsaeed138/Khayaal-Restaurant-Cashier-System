@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Table_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
@@ -43,11 +43,6 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Booking_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Delete_Table = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Add_Table_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Delete_Table_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Add_Booking_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +51,11 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Delete_Table = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Add_Table_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Delete_Table_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Add_Booking_Button = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,13 +220,13 @@
             this.Booking_Table.AllowUserToAddRows = false;
             this.Booking_Table.AllowUserToDeleteRows = false;
             this.Booking_Table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Booking_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Booking_Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Booking_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -235,14 +235,14 @@
             this.Booking_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Booking_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Booking_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Booking_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Booking_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Booking_Table.ColumnHeadersHeight = 48;
             this.Booking_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Booking_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -254,14 +254,14 @@
             this.Column6,
             this.Edit,
             this.Delete});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Booking_Table.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Booking_Table.DefaultCellStyle = dataGridViewCellStyle3;
             this.Booking_Table.EnableHeadersVisualStyles = false;
             this.Booking_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Booking_Table.Location = new System.Drawing.Point(49, 100);
@@ -269,23 +269,23 @@
             this.Booking_Table.Name = "Booking_Table";
             this.Booking_Table.ReadOnly = true;
             this.Booking_Table.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Booking_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(123)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Booking_Table.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Booking_Table.RowHeadersVisible = false;
             this.Booking_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Booking_Table.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Booking_Table.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.Booking_Table.RowTemplate.Height = 37;
             this.Booking_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Booking_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -316,105 +316,6 @@
             this.Booking_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Booking_Table_CellContentClick);
             this.Booking_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Booking_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
-            // 
-            // Table_Croll_Bar
-            // 
-            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 8;
-            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Table_Croll_Bar.HoverState.Parent = null;
-            this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
-            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
-            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
-            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 18;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
-            this.Table_Croll_Bar.TabIndex = 18;
-            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
-            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
-            // 
-            // Delete_Table
-            // 
-            this.Delete_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Delete_Table.BackColor = System.Drawing.Color.Transparent;
-            this.Delete_Table.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete_Table.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Delete_Table.Location = new System.Drawing.Point(583, 14);
-            this.Delete_Table.Margin = new System.Windows.Forms.Padding(2);
-            this.Delete_Table.Name = "Delete_Table";
-            this.Delete_Table.Size = new System.Drawing.Size(86, 22);
-            this.Delete_Table.TabIndex = 20;
-            this.Delete_Table.Text = "الطاولة حذف";
-            // 
-            // Add_Table_Button
-            // 
-            this.Add_Table_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Add_Table_Button.BorderRadius = 10;
-            this.Add_Table_Button.CheckedState.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.CustomImages.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Add_Table_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Table_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Table_Button.HoverState.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.Location = new System.Drawing.Point(664, 41);
-            this.Add_Table_Button.Name = "Add_Table_Button";
-            this.Add_Table_Button.ShadowDecoration.Parent = this.Add_Table_Button;
-            this.Add_Table_Button.Size = new System.Drawing.Size(112, 36);
-            this.Add_Table_Button.TabIndex = 22;
-            this.Add_Table_Button.Text = "أضف طاولة";
-            this.Add_Table_Button.Click += new System.EventHandler(this.Add_Table_Button_Click);
-            // 
-            // Delete_Table_Text_Box
-            // 
-            this.Delete_Table_Text_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Delete_Table_Text_Box.BorderRadius = 10;
-            this.Delete_Table_Text_Box.BorderThickness = 0;
-            this.Delete_Table_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Delete_Table_Text_Box.DefaultText = "";
-            this.Delete_Table_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Delete_Table_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Delete_Table_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Delete_Table_Text_Box.DisabledState.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Delete_Table_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Delete_Table_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Delete_Table_Text_Box.FocusedState.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Delete_Table_Text_Box.HoverState.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.Location = new System.Drawing.Point(583, 41);
-            this.Delete_Table_Text_Box.Margin = new System.Windows.Forms.Padding(4);
-            this.Delete_Table_Text_Box.Name = "Delete_Table_Text_Box";
-            this.Delete_Table_Text_Box.PasswordChar = '\0';
-            this.Delete_Table_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Delete_Table_Text_Box.PlaceholderText = "رقم الطاولة";
-            this.Delete_Table_Text_Box.SelectedText = "";
-            this.Delete_Table_Text_Box.ShadowDecoration.Parent = this.Delete_Table_Text_Box;
-            this.Delete_Table_Text_Box.Size = new System.Drawing.Size(74, 36);
-            this.Delete_Table_Text_Box.TabIndex = 23;
-            this.Delete_Table_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Delete_Table_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Delete_Table_Text_Box_KeyPress);
-            this.Delete_Table_Text_Box.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Delete_Table_Text_Box_KeyUp);
-            // 
-            // Add_Booking_Button
-            // 
-            this.Add_Booking_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Add_Booking_Button.BorderRadius = 10;
-            this.Add_Booking_Button.CheckedState.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.CustomImages.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Add_Booking_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Booking_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Booking_Button.HoverState.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.Location = new System.Drawing.Point(782, 42);
-            this.Add_Booking_Button.Name = "Add_Booking_Button";
-            this.Add_Booking_Button.ShadowDecoration.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.Size = new System.Drawing.Size(142, 36);
-            this.Add_Booking_Button.TabIndex = 24;
-            this.Add_Booking_Button.Text = "أضف حجز";
-            this.Add_Booking_Button.Click += new System.EventHandler(this.Add_Booking_Button_Click);
             // 
             // Column2
             // 
@@ -478,6 +379,105 @@
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Delete.Text = "حذف";
             this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // Table_Croll_Bar
+            // 
+            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Table_Croll_Bar.AutoRoundedCorners = true;
+            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Table_Croll_Bar.HoverState.Parent = null;
+            this.Table_Croll_Bar.LargeChange = 10;
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
+            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
+            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
+            this.Table_Croll_Bar.ScrollbarSize = 18;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.TabIndex = 18;
+            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
+            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
+            // 
+            // Delete_Table
+            // 
+            this.Delete_Table.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete_Table.BackColor = System.Drawing.Color.Transparent;
+            this.Delete_Table.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_Table.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Delete_Table.Location = new System.Drawing.Point(583, 14);
+            this.Delete_Table.Margin = new System.Windows.Forms.Padding(2);
+            this.Delete_Table.Name = "Delete_Table";
+            this.Delete_Table.Size = new System.Drawing.Size(86, 22);
+            this.Delete_Table.TabIndex = 20;
+            this.Delete_Table.Text = "الطاولة حذف";
+            // 
+            // Add_Table_Button
+            // 
+            this.Add_Table_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add_Table_Button.BorderRadius = 10;
+            this.Add_Table_Button.CheckedState.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.CustomImages.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Table_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Add_Table_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Table_Button.HoverState.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.Location = new System.Drawing.Point(664, 41);
+            this.Add_Table_Button.Name = "Add_Table_Button";
+            this.Add_Table_Button.ShadowDecoration.Parent = this.Add_Table_Button;
+            this.Add_Table_Button.Size = new System.Drawing.Size(112, 36);
+            this.Add_Table_Button.TabIndex = 22;
+            this.Add_Table_Button.Text = "أضف طاولة";
+            this.Add_Table_Button.Click += new System.EventHandler(this.Add_Table_Button_Click);
+            // 
+            // Delete_Table_Text_Box
+            // 
+            this.Delete_Table_Text_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete_Table_Text_Box.BorderRadius = 10;
+            this.Delete_Table_Text_Box.BorderThickness = 0;
+            this.Delete_Table_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Delete_Table_Text_Box.DefaultText = "";
+            this.Delete_Table_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Delete_Table_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Delete_Table_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Delete_Table_Text_Box.DisabledState.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Delete_Table_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Delete_Table_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Delete_Table_Text_Box.FocusedState.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Delete_Table_Text_Box.HoverState.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.Location = new System.Drawing.Point(583, 41);
+            this.Delete_Table_Text_Box.Margin = new System.Windows.Forms.Padding(4);
+            this.Delete_Table_Text_Box.Name = "Delete_Table_Text_Box";
+            this.Delete_Table_Text_Box.PasswordChar = '\0';
+            this.Delete_Table_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Delete_Table_Text_Box.PlaceholderText = "رقم الطاولة";
+            this.Delete_Table_Text_Box.SelectedText = "";
+            this.Delete_Table_Text_Box.ShadowDecoration.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.Size = new System.Drawing.Size(74, 36);
+            this.Delete_Table_Text_Box.TabIndex = 23;
+            this.Delete_Table_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Delete_Table_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Delete_Table_Text_Box_KeyPress);
+            this.Delete_Table_Text_Box.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Delete_Table_Text_Box_KeyUp);
+            // 
+            // Add_Booking_Button
+            // 
+            this.Add_Booking_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add_Booking_Button.BorderRadius = 10;
+            this.Add_Booking_Button.CheckedState.Parent = this.Add_Booking_Button;
+            this.Add_Booking_Button.CustomImages.Parent = this.Add_Booking_Button;
+            this.Add_Booking_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Booking_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Add_Booking_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Booking_Button.HoverState.Parent = this.Add_Booking_Button;
+            this.Add_Booking_Button.Location = new System.Drawing.Point(782, 42);
+            this.Add_Booking_Button.Name = "Add_Booking_Button";
+            this.Add_Booking_Button.ShadowDecoration.Parent = this.Add_Booking_Button;
+            this.Add_Booking_Button.Size = new System.Drawing.Size(142, 36);
+            this.Add_Booking_Button.TabIndex = 24;
+            this.Add_Booking_Button.Text = "أضف حجز";
+            this.Add_Booking_Button.Click += new System.EventHandler(this.Add_Booking_Button_Click);
             // 
             // Booking_Form_AR
             // 
