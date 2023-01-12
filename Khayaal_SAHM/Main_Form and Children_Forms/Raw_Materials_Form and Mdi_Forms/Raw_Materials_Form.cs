@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_Forms
 {
     public partial class Raw_Materials_Form : Form
@@ -250,6 +251,24 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
                 }
             }
             catch { }
+        }
+
+        private void Export_Excel_Click(object sender, EventArgs e)
+        {
+            Raw_Material_Table.SelectAll();
+            DataObject Copy_Data = Raw_Material_Table.GetClipboardContent();
+            if(Copy_Data != null ) { Clipboard.SetDataObject(Copy_Data); }
+            Microsoft.Office.Interop.Excel.Application XLApp=new Microsoft.Office.Interop.Excel.Application();
+            XLApp.Visible= true;
+            Microsoft.Office.Interop.Excel.Workbook XLWbook;
+            Microsoft.Office.Interop.Excel.Worksheet XLSheet;
+            object Missed_Data = System.Reflection.Missing.Value;
+            XLWbook = XLApp.Workbooks.Add(Missed_Data);
+            XLSheet = (Microsoft.Office.Interop.Excel.Worksheet)XLWbook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Range XLR = (Microsoft.Office.Interop.Excel.Range)XLSheet.Cells[1,1];
+            XLR.Select();
+            XLSheet.PasteSpecial(XLR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+
         }
     }
 }

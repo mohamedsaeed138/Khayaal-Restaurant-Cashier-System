@@ -54,6 +54,7 @@
             this.Sorting_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Add_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Qty_Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Export_Excel = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.Raw_Material_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -424,12 +425,30 @@
             this.Qty_Search_Text_Box.TextChanged += new System.EventHandler(this.Qty_Search_Text_Box_TextChanged);
             this.Qty_Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Qty_Search_Text_Box_KeyPress);
             // 
+            // Export_Excel
+            // 
+            this.Export_Excel.BorderRadius = 10;
+            this.Export_Excel.CheckedState.Parent = this.Export_Excel;
+            this.Export_Excel.CustomImages.Parent = this.Export_Excel;
+            this.Export_Excel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Export_Excel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Export_Excel.ForeColor = System.Drawing.Color.White;
+            this.Export_Excel.HoverState.Parent = this.Export_Excel;
+            this.Export_Excel.Location = new System.Drawing.Point(793, 543);
+            this.Export_Excel.Name = "Export_Excel";
+            this.Export_Excel.ShadowDecoration.Parent = this.Export_Excel;
+            this.Export_Excel.Size = new System.Drawing.Size(131, 36);
+            this.Export_Excel.TabIndex = 23;
+            this.Export_Excel.Text = "Export to Excel";
+            this.Export_Excel.Click += new System.EventHandler(this.Export_Excel_Click);
+            // 
             // Raw_Materials_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Export_Excel);
             this.Controls.Add(this.Qty_Search_Text_Box);
             this.Controls.Add(this.Add_Button);
             this.Controls.Add(this.Sorting_Combo_Box);
@@ -470,5 +489,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private Guna.UI2.WinForms.Guna2Button Export_Excel;
     }
 }
