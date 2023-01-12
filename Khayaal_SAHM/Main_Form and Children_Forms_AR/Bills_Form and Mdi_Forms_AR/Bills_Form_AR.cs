@@ -68,9 +68,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         }
         void Choose_Query()
         {
-            if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
+            string From = Formatter.Date_Formating(From_Date_Picker.Value, "Normal", From_Time_Picker.Value);
+            string To = Formatter.Date_Formating(To_Date_Picker.Value, "Normal", To_Time_Picker.Value);
+
+            if (DateTime.Parse(From) > DateTime.Parse(To))
             {
+                From_Time_Picker.Value = To_Time_Picker.Value;
                 From_Date_Picker.Value = To_Date_Picker.Value;
+
                 MessageBox.Show("!! خطأ في المدي الزمني , قم بتغييره ", "!! خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -78,7 +83,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             {
                 string Total = Formatter.String(Total_Search_Text_Box.Text);
                 string Serial = Formatter.String(Search_Serial_Number_Text_Box.Text);
-                string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text == "")
                     Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text != "")
@@ -190,6 +194,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
 
         }
 
+        private void From_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
 
+        private void To_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
     }
 }
