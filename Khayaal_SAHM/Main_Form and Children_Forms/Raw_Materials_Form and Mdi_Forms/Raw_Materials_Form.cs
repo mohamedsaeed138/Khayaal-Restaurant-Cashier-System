@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Excel=Microsoft.Office.Interop.Excel;
 
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_Forms
@@ -255,19 +256,29 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
         private void Export_Excel_Click(object sender, EventArgs e)
         {
-            Raw_Material_Table.SelectAll();
-            DataObject Copy_Data = Raw_Material_Table.GetClipboardContent();
-            if(Copy_Data != null ) { Clipboard.SetDataObject(Copy_Data); }
-            Microsoft.Office.Interop.Excel.Application XLApp=new Microsoft.Office.Interop.Excel.Application();
-            XLApp.Visible= true;
-            Microsoft.Office.Interop.Excel.Workbook XLWbook;
-            Microsoft.Office.Interop.Excel.Worksheet XLSheet;
-            object Missed_Data = System.Reflection.Missing.Value;
-            XLWbook = XLApp.Workbooks.Add(Missed_Data);
-            XLSheet = (Microsoft.Office.Interop.Excel.Worksheet)XLWbook.Worksheets.get_Item(1);
-            Microsoft.Office.Interop.Excel.Range XLR = (Microsoft.Office.Interop.Excel.Range)XLSheet.Cells[1,1];
-            XLR.Select();
-            XLSheet.PasteSpecial(XLR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            Excel.Application app= new Excel.Application();
+            Excel.Workbook Work_Book= app.Workbooks.Add();
+            Excel.Worksheet Work_Sheet = null;
+            app.Visible = true;
+            Work_Sheet = Work_Book.Sheets["Sheet1"];
+            Work_Sheet = Work_Book.ActiveSheet;
+
+            for(int i=0;i<Raw_Material_Table.ColumnCount;i++)
+            {
+                Work_Sheet.Cells[1, i + 1] = Raw_Material_Table.Columns[i].HeaderText;
+            }
+
+
+            for (int j = 0; j < Raw_Material_Table.Rows.Count; j++)
+            {
+                for (int i = 0; i < Raw_Material_Table.Columns.Count; i++)
+                {
+                    Work_Sheet.Cells[j+2, i + 1] = Raw_Material_Table.Rows[j].Cells[i].Value.ToString();
+                }
+
+            }
+            Work_Sheet.Columns.AutoFit();
+
 
         }
     }
