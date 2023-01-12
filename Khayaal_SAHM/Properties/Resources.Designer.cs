@@ -273,6 +273,16 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Excel_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Excel_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Food_Drink_Template {
             get {
                 object obj = ResourceManager.GetObject("Food_Drink_Template", resourceCulture);

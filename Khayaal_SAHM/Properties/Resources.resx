@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Credit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Credit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Purchases_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Purchases_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,14 +133,20 @@
   <data name="Best_Sales_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Best_Sales_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Home_OFF_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home_OFF_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Credit_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Credit_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Edit_Item_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit_Item_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Credit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Credit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Credit_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Credit_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Best_Sales_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Best_Sales_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bills_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bills_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,9 +169,6 @@
   <data name="Booking_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Booking_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Relations_OFF_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Relations_OFF_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Raw_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Raw_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +180,6 @@
   </data>
   <data name="Purchases_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Purchases_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Booking_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Booking_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Raw_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Raw_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +196,8 @@
   <data name="Credit_OFF_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Credit_OFF_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Best_Sales_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Best_Sales_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Relations_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Relations_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Edit_Item_Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit_Item_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -204,9 +207,6 @@
   </data>
   <data name="Side Bar Icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side Bar Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Best_Sales_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Best_Sales_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Side Bar Icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side Bar Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,14 +220,17 @@
   <data name="Home_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Relations_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Relations_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Home_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Raw_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Raw_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bills_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bills_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Raw_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Raw_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Booking_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Booking_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Purchases_OFF_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Purchases_OFF_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,11 +238,11 @@
   <data name="Raw_OFF_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Raw_OFF_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home_OFF_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home_OFF_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Relations_OFF_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Relations_OFF_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Best_Sales_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Best_Sales_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Relations_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Relations_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +250,7 @@
   <data name="Side Bar Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side Bar Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Credit_ON_AR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Credit_ON_AR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Excel_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Excel_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

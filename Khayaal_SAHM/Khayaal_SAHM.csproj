@@ -501,6 +501,7 @@
     <None Include="Resources\Purchases_ON_AR.png" />
     <None Include="Resources\Best_Sales_ON_AR.png" />
     <None Include="Resources\Credit_ON_AR.png" />
+    <None Include="Resources\Excel_Logo.png" />
     <Content Include="Sound_Track\Intro_Music.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

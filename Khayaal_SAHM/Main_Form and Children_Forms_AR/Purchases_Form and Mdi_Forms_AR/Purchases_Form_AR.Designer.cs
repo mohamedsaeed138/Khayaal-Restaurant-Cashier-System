@@ -49,14 +49,6 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Purchases_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Add_Purchase_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Sum_Sub_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Sub_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Qty_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Qty_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
-            this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +58,15 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Add_Purchase_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Sum_Sub_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Sub_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Qty_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Qty_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
+            this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
+            this.Edit_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.Purchases_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,11 +87,11 @@
             this.Name_Combo_Box.HoverState.Parent = this.Name_Combo_Box;
             this.Name_Combo_Box.ItemHeight = 30;
             this.Name_Combo_Box.ItemsAppearance.Parent = this.Name_Combo_Box;
-            this.Name_Combo_Box.Location = new System.Drawing.Point(924, 53);
-            this.Name_Combo_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name_Combo_Box.Location = new System.Drawing.Point(693, 43);
+            this.Name_Combo_Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name_Combo_Box.Name = "Name_Combo_Box";
             this.Name_Combo_Box.ShadowDecoration.Parent = this.Name_Combo_Box;
-            this.Name_Combo_Box.Size = new System.Drawing.Size(307, 36);
+            this.Name_Combo_Box.Size = new System.Drawing.Size(231, 36);
             this.Name_Combo_Box.TabIndex = 5;
             this.Name_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Name_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
@@ -104,10 +105,10 @@
             this.From_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.From_Date_Picker.Location = new System.Drawing.Point(659, 53);
-            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.From_Date_Picker.Location = new System.Drawing.Point(494, 43);
+            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.From_Date_Picker.Name = "From_Date_Picker";
-            this.From_Date_Picker.Size = new System.Drawing.Size(160, 22);
+            this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.From_Date_Picker.TabIndex = 7;
             this.From_Date_Picker.ValueChanged += new System.EventHandler(this.From_Date_Picker_ValueChanged);
             // 
@@ -120,10 +121,10 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(394, 53);
-            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.To_Date_Picker.Location = new System.Drawing.Point(296, 43);
+            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.To_Date_Picker.Name = "To_Date_Picker";
-            this.To_Date_Picker.Size = new System.Drawing.Size(160, 22);
+            this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.To_Date_Picker.TabIndex = 8;
             this.To_Date_Picker.ValueChanged += new System.EventHandler(this.To_Date_Picker_ValueChanged);
             // 
@@ -133,8 +134,8 @@
             this.Name_Label.BackColor = System.Drawing.Color.Transparent;
             this.Name_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Name_Label.Location = new System.Drawing.Point(1161, 14);
-            this.Name_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name_Label.Location = new System.Drawing.Point(871, 11);
+            this.Name_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name_Label.Name = "Name_Label";
             this.Name_Label.Size = new System.Drawing.Size(45, 27);
             this.Name_Label.TabIndex = 11;
@@ -146,8 +147,8 @@
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(793, 14);
-            this.From_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.From_Label.Location = new System.Drawing.Point(595, 11);
+            this.From_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.From_Label.Name = "From_Label";
             this.From_Label.Size = new System.Drawing.Size(26, 27);
             this.From_Label.TabIndex = 12;
@@ -159,8 +160,8 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(525, 14);
-            this.To_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.To_Label.Location = new System.Drawing.Point(394, 11);
+            this.To_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(29, 27);
             this.To_Label.TabIndex = 13;
@@ -172,8 +173,8 @@
             this.Count_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Label.Location = new System.Drawing.Point(1161, 670);
-            this.Count_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Count_Label.Location = new System.Drawing.Point(871, 544);
+            this.Count_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Count_Label.Name = "Count_Label";
             this.Count_Label.Size = new System.Drawing.Size(53, 27);
             this.Count_Label.TabIndex = 14;
@@ -185,8 +186,8 @@
             this.Count_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Count_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Count_Value_Label.Location = new System.Drawing.Point(1055, 668);
-            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Count_Value_Label.Location = new System.Drawing.Point(791, 543);
+            this.Count_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Count_Value_Label.Name = "Count_Value_Label";
             this.Count_Value_Label.Size = new System.Drawing.Size(13, 27);
             this.Count_Value_Label.TabIndex = 15;
@@ -242,8 +243,7 @@
             this.Purchases_Table.DefaultCellStyle = dataGridViewCellStyle10;
             this.Purchases_Table.EnableHeadersVisualStyles = false;
             this.Purchases_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Purchases_Table.Location = new System.Drawing.Point(65, 123);
-            this.Purchases_Table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Purchases_Table.Location = new System.Drawing.Point(49, 100);
             this.Purchases_Table.MultiSelect = false;
             this.Purchases_Table.Name = "Purchases_Table";
             this.Purchases_Table.ReadOnly = true;
@@ -268,7 +268,7 @@
             this.Purchases_Table.RowTemplate.Height = 37;
             this.Purchases_Table.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Purchases_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.Purchases_Table.Size = new System.Drawing.Size(1167, 540);
+            this.Purchases_Table.Size = new System.Drawing.Size(875, 439);
             this.Purchases_Table.TabIndex = 17;
             this.Purchases_Table.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.Purchases_Table.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
@@ -295,131 +295,6 @@
             this.Purchases_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Purchases_Table_CellContentClick);
             this.Purchases_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Purchases_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
-            // 
-            // Table_Croll_Bar
-            // 
-            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Table_Croll_Bar.AutoRoundedCorners = true;
-            this.Table_Croll_Bar.BorderRadius = 11;
-            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Table_Croll_Bar.HoverState.Parent = null;
-            this.Table_Croll_Bar.LargeChange = 10;
-            this.Table_Croll_Bar.Location = new System.Drawing.Point(1240, 186);
-            this.Table_Croll_Bar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
-            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
-            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
-            this.Table_Croll_Bar.ScrollbarSize = 24;
-            this.Table_Croll_Bar.Size = new System.Drawing.Size(24, 478);
-            this.Table_Croll_Bar.TabIndex = 18;
-            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
-            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
-            // 
-            // Add_Purchase_Button
-            // 
-            this.Add_Purchase_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Add_Purchase_Button.BorderRadius = 10;
-            this.Add_Purchase_Button.CheckedState.Parent = this.Add_Purchase_Button;
-            this.Add_Purchase_Button.CustomImages.Parent = this.Add_Purchase_Button;
-            this.Add_Purchase_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Add_Purchase_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Purchase_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Purchase_Button.HoverState.Parent = this.Add_Purchase_Button;
-            this.Add_Purchase_Button.Location = new System.Drawing.Point(99, 53);
-            this.Add_Purchase_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Add_Purchase_Button.Name = "Add_Purchase_Button";
-            this.Add_Purchase_Button.ShadowDecoration.Parent = this.Add_Purchase_Button;
-            this.Add_Purchase_Button.Size = new System.Drawing.Size(200, 44);
-            this.Add_Purchase_Button.TabIndex = 23;
-            this.Add_Purchase_Button.Text = "أضافة";
-            this.Add_Purchase_Button.Click += new System.EventHandler(this.Add_Purchase_Button_Click);
-            // 
-            // Sum_Sub_Total_Value_Label
-            // 
-            this.Sum_Sub_Total_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Sub_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Sub_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Sub_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Sub_Total_Value_Label.Location = new System.Drawing.Point(525, 670);
-            this.Sum_Sub_Total_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Sub_Total_Value_Label.Name = "Sum_Sub_Total_Value_Label";
-            this.Sum_Sub_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
-            this.Sum_Sub_Total_Value_Label.TabIndex = 25;
-            this.Sum_Sub_Total_Value_Label.Text = "0";
-            // 
-            // Sum_Sub_Total_Label
-            // 
-            this.Sum_Sub_Total_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Sum_Sub_Total_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Sub_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Sub_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Sub_Total_Label.Location = new System.Drawing.Point(667, 668);
-            this.Sum_Sub_Total_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Sub_Total_Label.Name = "Sum_Sub_Total_Label";
-            this.Sum_Sub_Total_Label.Size = new System.Drawing.Size(77, 27);
-            this.Sum_Sub_Total_Label.TabIndex = 24;
-            this.Sum_Sub_Total_Label.Text = ": المجموع";
-            // 
-            // Sum_Qty_Value_Label
-            // 
-            this.Sum_Qty_Value_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Sum_Qty_Value_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Qty_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Qty_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Qty_Value_Label.Location = new System.Drawing.Point(784, 670);
-            this.Sum_Qty_Value_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Qty_Value_Label.Name = "Sum_Qty_Value_Label";
-            this.Sum_Qty_Value_Label.Size = new System.Drawing.Size(13, 27);
-            this.Sum_Qty_Value_Label.TabIndex = 27;
-            this.Sum_Qty_Value_Label.Text = "0";
-            // 
-            // Sum_Qty_Label
-            // 
-            this.Sum_Qty_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Sum_Qty_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Sum_Qty_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sum_Qty_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Qty_Label.Location = new System.Drawing.Point(953, 670);
-            this.Sum_Qty_Label.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sum_Qty_Label.Name = "Sum_Qty_Label";
-            this.Sum_Qty_Label.Size = new System.Drawing.Size(72, 27);
-            this.Sum_Qty_Label.TabIndex = 26;
-            this.Sum_Qty_Label.Text = ": الكميات";
-            // 
-            // From_Time_Picker
-            // 
-            this.From_Time_Picker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.From_Time_Picker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.From_Time_Picker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.From_Time_Picker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.From_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.From_Time_Picker.CustomFormat = "";
-            this.From_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.From_Time_Picker.Location = new System.Drawing.Point(659, 79);
-            this.From_Time_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.From_Time_Picker.Name = "From_Time_Picker";
-            this.From_Time_Picker.ShowUpDown = true;
-            this.From_Time_Picker.Size = new System.Drawing.Size(160, 22);
-            this.From_Time_Picker.TabIndex = 37;
-            this.From_Time_Picker.ValueChanged += new System.EventHandler(this.From_Time_Picker_ValueChanged);
-            // 
-            // To_Time_Picker
-            // 
-            this.To_Time_Picker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.To_Time_Picker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.To_Time_Picker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.To_Time_Picker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.To_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.To_Time_Picker.CustomFormat = "";
-            this.To_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.To_Time_Picker.Location = new System.Drawing.Point(394, 79);
-            this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.To_Time_Picker.Name = "To_Time_Picker";
-            this.To_Time_Picker.ShowUpDown = true;
-            this.To_Time_Picker.Size = new System.Drawing.Size(160, 22);
-            this.To_Time_Picker.TabIndex = 38;
-            this.To_Time_Picker.ValueChanged += new System.EventHandler(this.To_Time_Picker_ValueChanged);
             // 
             // Column1
             // 
@@ -516,12 +391,157 @@
             this.Delete.Text = "حذف";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // Table_Croll_Bar
+            // 
+            this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Table_Croll_Bar.AutoRoundedCorners = true;
+            this.Table_Croll_Bar.BorderRadius = 8;
+            this.Table_Croll_Bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Table_Croll_Bar.HoverState.Parent = null;
+            this.Table_Croll_Bar.LargeChange = 10;
+            this.Table_Croll_Bar.Location = new System.Drawing.Point(930, 151);
+            this.Table_Croll_Bar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_Croll_Bar.MouseWheelBarPartitions = 10;
+            this.Table_Croll_Bar.Name = "Table_Croll_Bar";
+            this.Table_Croll_Bar.PressedState.Parent = this.Table_Croll_Bar;
+            this.Table_Croll_Bar.ScrollbarSize = 18;
+            this.Table_Croll_Bar.Size = new System.Drawing.Size(18, 388);
+            this.Table_Croll_Bar.TabIndex = 18;
+            this.Table_Croll_Bar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(95)))));
+            this.Table_Croll_Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Table_Croll_Bar_Scroll);
+            // 
+            // Add_Purchase_Button
+            // 
+            this.Add_Purchase_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add_Purchase_Button.BorderRadius = 10;
+            this.Add_Purchase_Button.CheckedState.Parent = this.Add_Purchase_Button;
+            this.Add_Purchase_Button.CustomImages.Parent = this.Add_Purchase_Button;
+            this.Add_Purchase_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Add_Purchase_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Purchase_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Purchase_Button.HoverState.Parent = this.Add_Purchase_Button;
+            this.Add_Purchase_Button.Location = new System.Drawing.Point(74, 43);
+            this.Add_Purchase_Button.Name = "Add_Purchase_Button";
+            this.Add_Purchase_Button.ShadowDecoration.Parent = this.Add_Purchase_Button;
+            this.Add_Purchase_Button.Size = new System.Drawing.Size(150, 36);
+            this.Add_Purchase_Button.TabIndex = 23;
+            this.Add_Purchase_Button.Text = "أضافة";
+            this.Add_Purchase_Button.Click += new System.EventHandler(this.Add_Purchase_Button_Click);
+            // 
+            // Sum_Sub_Total_Value_Label
+            // 
+            this.Sum_Sub_Total_Value_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Sum_Sub_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Sub_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Sub_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Sub_Total_Value_Label.Location = new System.Drawing.Point(394, 544);
+            this.Sum_Sub_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Sub_Total_Value_Label.Name = "Sum_Sub_Total_Value_Label";
+            this.Sum_Sub_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Sub_Total_Value_Label.TabIndex = 25;
+            this.Sum_Sub_Total_Value_Label.Text = "0";
+            // 
+            // Sum_Sub_Total_Label
+            // 
+            this.Sum_Sub_Total_Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Sum_Sub_Total_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Sub_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Sub_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Sub_Total_Label.Location = new System.Drawing.Point(500, 543);
+            this.Sum_Sub_Total_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Sub_Total_Label.Name = "Sum_Sub_Total_Label";
+            this.Sum_Sub_Total_Label.Size = new System.Drawing.Size(77, 27);
+            this.Sum_Sub_Total_Label.TabIndex = 24;
+            this.Sum_Sub_Total_Label.Text = ": المجموع";
+            // 
+            // Sum_Qty_Value_Label
+            // 
+            this.Sum_Qty_Value_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sum_Qty_Value_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Qty_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Qty_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Qty_Value_Label.Location = new System.Drawing.Point(588, 544);
+            this.Sum_Qty_Value_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Qty_Value_Label.Name = "Sum_Qty_Value_Label";
+            this.Sum_Qty_Value_Label.Size = new System.Drawing.Size(13, 27);
+            this.Sum_Qty_Value_Label.TabIndex = 27;
+            this.Sum_Qty_Value_Label.Text = "0";
+            // 
+            // Sum_Qty_Label
+            // 
+            this.Sum_Qty_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sum_Qty_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Sum_Qty_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sum_Qty_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Sum_Qty_Label.Location = new System.Drawing.Point(715, 544);
+            this.Sum_Qty_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sum_Qty_Label.Name = "Sum_Qty_Label";
+            this.Sum_Qty_Label.Size = new System.Drawing.Size(72, 27);
+            this.Sum_Qty_Label.TabIndex = 26;
+            this.Sum_Qty_Label.Text = ": الكميات";
+            // 
+            // From_Time_Picker
+            // 
+            this.From_Time_Picker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.From_Time_Picker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.From_Time_Picker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.From_Time_Picker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.From_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.From_Time_Picker.CustomFormat = "";
+            this.From_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.From_Time_Picker.Location = new System.Drawing.Point(494, 64);
+            this.From_Time_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Time_Picker.Name = "From_Time_Picker";
+            this.From_Time_Picker.ShowUpDown = true;
+            this.From_Time_Picker.Size = new System.Drawing.Size(121, 20);
+            this.From_Time_Picker.TabIndex = 37;
+            this.From_Time_Picker.ValueChanged += new System.EventHandler(this.From_Time_Picker_ValueChanged);
+            // 
+            // To_Time_Picker
+            // 
+            this.To_Time_Picker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.To_Time_Picker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.To_Time_Picker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.To_Time_Picker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.To_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.To_Time_Picker.CustomFormat = "";
+            this.To_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.To_Time_Picker.Location = new System.Drawing.Point(296, 64);
+            this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Time_Picker.Name = "To_Time_Picker";
+            this.To_Time_Picker.ShowUpDown = true;
+            this.To_Time_Picker.Size = new System.Drawing.Size(121, 20);
+            this.To_Time_Picker.TabIndex = 38;
+            this.To_Time_Picker.ValueChanged += new System.EventHandler(this.To_Time_Picker_ValueChanged);
+            // 
+            // Edit_Buttton
+            // 
+            this.Edit_Buttton.BackColor = System.Drawing.Color.Transparent;
+            this.Edit_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Edit_Buttton.BorderThickness = 2;
+            this.Edit_Buttton.CheckedState.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.CustomImages.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Edit_Buttton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_Buttton.ForeColor = System.Drawing.Color.White;
+            this.Edit_Buttton.HoverState.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
+            this.Edit_Buttton.ImageSize = new System.Drawing.Size(30, 25);
+            this.Edit_Buttton.Location = new System.Drawing.Point(31, 3);
+            this.Edit_Buttton.Name = "Edit_Buttton";
+            this.Edit_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Edit_Buttton.ShadowDecoration.Parent = this.Edit_Buttton;
+            this.Edit_Buttton.Size = new System.Drawing.Size(35, 35);
+            this.Edit_Buttton.TabIndex = 39;
+            // 
             // Purchases_Form_AR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(1299, 715);
+            this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Edit_Buttton);
             this.Controls.Add(this.To_Time_Picker);
             this.Controls.Add(this.From_Time_Picker);
             this.Controls.Add(this.Sum_Qty_Value_Label);
@@ -540,7 +560,6 @@
             this.Controls.Add(this.From_Date_Picker);
             this.Controls.Add(this.Name_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Purchases_Form_AR";
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Purchases_Table)).EndInit();
@@ -576,5 +595,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private Guna.UI2.WinForms.Guna2CircleButton Edit_Buttton;
     }
 }
