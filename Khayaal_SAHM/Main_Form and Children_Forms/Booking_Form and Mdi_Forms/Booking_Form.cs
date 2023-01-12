@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 {
@@ -345,6 +346,32 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         private void To_Time_Picker_ValueChanged(object sender, EventArgs e)
         {
             Choose_Query();
+        }
+
+        private void Edit_Buttton_Click(object sender, EventArgs e)
+        {
+            Excel.Application app = new Excel.Application();
+            Excel.Workbook Work_Book = app.Workbooks.Add();
+            Excel.Worksheet Work_Sheet = null;
+            app.Visible = true;
+            Work_Sheet = Work_Book.Sheets["Sheet1"];
+            Work_Sheet = Work_Book.ActiveSheet;
+
+            for (int i = 0; i < Booking_Table.ColumnCount; i++)
+            {
+                Work_Sheet.Cells[1, i + 1] = Booking_Table.Columns[i].HeaderText;
+            }
+
+
+            for (int j = 0; j < Booking_Table.Rows.Count; j++)
+            {
+                for (int i = 0; i < Booking_Table.Columns.Count; i++)
+                {
+                    Work_Sheet.Cells[j + 2, i + 1] = Booking_Table.Rows[j].Cells[i].Value.ToString();
+                }
+
+            }
+            Work_Sheet.Columns.AutoFit();
         }
     }
 }

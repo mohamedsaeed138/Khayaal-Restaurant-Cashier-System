@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+using Excel = Microsoft.Office.Interop.Excel;
 namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 {
     public partial class Relations_Form : Form
@@ -213,6 +213,32 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
                 this.Reload();
             };
             form.ShowDialog();
+        }
+
+        private void Edit_Buttton_Click(object sender, EventArgs e)
+        {
+            Excel.Application app = new Excel.Application();
+            Excel.Workbook Work_Book = app.Workbooks.Add();
+            Excel.Worksheet Work_Sheet = null;
+            app.Visible = true;
+            Work_Sheet = Work_Book.Sheets["Sheet1"];
+            Work_Sheet = Work_Book.ActiveSheet;
+
+            for (int i = 0; i < Relations_Table.ColumnCount; i++)
+            {
+                Work_Sheet.Cells[1, i + 1] = Relations_Table.Columns[i].HeaderText;
+            }
+
+
+            for (int j = 0; j < Relations_Table.Rows.Count; j++)
+            {
+                for (int i = 0; i < Relations_Table.Columns.Count; i++)
+                {
+                    Work_Sheet.Cells[j + 2, i + 1] = Relations_Table.Rows[j].Cells[i].Value.ToString();
+                }
+
+            }
+            Work_Sheet.Columns.AutoFit();
         }
     }
 }

@@ -281,5 +281,31 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
 
 
         }
+
+        private void Edit_Buttton_Click(object sender, EventArgs e)
+        {
+            Excel.Application app = new Excel.Application();
+            Excel.Workbook Work_Book = app.Workbooks.Add();
+            Excel.Worksheet Work_Sheet = null;
+            app.Visible = true;
+            Work_Sheet = Work_Book.Sheets["Sheet1"];
+            Work_Sheet = Work_Book.ActiveSheet;
+
+            for (int i = 0; i < Raw_Material_Table.ColumnCount; i++)
+            {
+                Work_Sheet.Cells[1, i + 1] = Raw_Material_Table.Columns[i].HeaderText;
+            }
+
+
+            for (int j = 0; j < Raw_Material_Table.Rows.Count; j++)
+            {
+                for (int i = 0; i < Raw_Material_Table.Columns.Count; i++)
+                {
+                    Work_Sheet.Cells[j + 2, i + 1] = Raw_Material_Table.Rows[j].Cells[i].Value.ToString();
+                }
+
+            }
+            Work_Sheet.Columns.AutoFit();
+        }
     }
 }
