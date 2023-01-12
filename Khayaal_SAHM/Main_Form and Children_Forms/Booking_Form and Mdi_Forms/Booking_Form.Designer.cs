@@ -58,7 +58,7 @@
             this.Add_Booking_Button = new Guna.UI2.WinForms.Guna2Button();
             this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
-            this.Export_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Export_Button = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -501,27 +501,27 @@
             this.To_Time_Picker.TabIndex = 38;
             this.To_Time_Picker.ValueChanged += new System.EventHandler(this.To_Time_Picker_ValueChanged);
             // 
-            // Export_Buttton
+            // Export_Button
             // 
-            this.Export_Buttton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Export_Buttton.BackColor = System.Drawing.Color.Transparent;
-            this.Export_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Export_Buttton.BorderThickness = 2;
-            this.Export_Buttton.CheckedState.Parent = this.Export_Buttton;
-            this.Export_Buttton.CustomImages.Parent = this.Export_Buttton;
-            this.Export_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Export_Buttton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Export_Buttton.ForeColor = System.Drawing.Color.White;
-            this.Export_Buttton.HoverState.Parent = this.Export_Buttton;
-            this.Export_Buttton.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
-            this.Export_Buttton.ImageSize = new System.Drawing.Size(40, 30);
-            this.Export_Buttton.Location = new System.Drawing.Point(927, 7);
-            this.Export_Buttton.Name = "Export_Buttton";
-            this.Export_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Export_Buttton.ShadowDecoration.Parent = this.Export_Buttton;
-            this.Export_Buttton.Size = new System.Drawing.Size(40, 40);
-            this.Export_Buttton.TabIndex = 46;
-            this.Export_Buttton.Click += new System.EventHandler(this.Edit_Buttton_Click);
+            this.Export_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Export_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Export_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Export_Button.BorderThickness = 2;
+            this.Export_Button.CheckedState.Parent = this.Export_Button;
+            this.Export_Button.CustomImages.Parent = this.Export_Button;
+            this.Export_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Export_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Export_Button.ForeColor = System.Drawing.Color.White;
+            this.Export_Button.HoverState.Parent = this.Export_Button;
+            this.Export_Button.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
+            this.Export_Button.ImageSize = new System.Drawing.Size(40, 30);
+            this.Export_Button.Location = new System.Drawing.Point(927, 7);
+            this.Export_Button.Name = "Export_Button";
+            this.Export_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Export_Button.ShadowDecoration.Parent = this.Export_Button;
+            this.Export_Button.Size = new System.Drawing.Size(40, 40);
+            this.Export_Button.TabIndex = 46;
+            this.Export_Button.Click += new System.EventHandler(this.Edit_Buttton_Click);
             // 
             // Booking_Form
             // 
@@ -529,7 +529,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
-            this.Controls.Add(this.Export_Buttton);
+            this.Controls.Add(this.Export_Button);
             this.Controls.Add(this.To_Time_Picker);
             this.Controls.Add(this.From_Time_Picker);
             this.Controls.Add(this.Add_Booking_Button);
@@ -582,6 +582,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DateTimePicker From_Time_Picker;
         private System.Windows.Forms.DateTimePicker To_Time_Picker;
-        private Guna.UI2.WinForms.Guna2CircleButton Export_Buttton;
+        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
     }
 }
