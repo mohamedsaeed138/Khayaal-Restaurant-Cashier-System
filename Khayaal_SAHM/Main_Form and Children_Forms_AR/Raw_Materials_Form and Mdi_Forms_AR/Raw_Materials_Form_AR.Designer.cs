@@ -55,7 +55,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Raw_Material_Table = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Edit_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Export_Button = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.Raw_Material_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -454,26 +454,26 @@
             this.Count_Value_Label.TabIndex = 38;
             this.Count_Value_Label.Text = null;
             // 
-            // Edit_Buttton
+            // Export_Button
             // 
-            this.Edit_Buttton.BackColor = System.Drawing.Color.Transparent;
-            this.Edit_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Edit_Buttton.BorderThickness = 2;
-            this.Edit_Buttton.CheckedState.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.CustomImages.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Edit_Buttton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit_Buttton.ForeColor = System.Drawing.Color.White;
-            this.Edit_Buttton.HoverState.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
-            this.Edit_Buttton.ImageSize = new System.Drawing.Size(40, 30);
-            this.Edit_Buttton.Location = new System.Drawing.Point(7, 7);
-            this.Edit_Buttton.Name = "Edit_Buttton";
-            this.Edit_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Edit_Buttton.ShadowDecoration.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.Size = new System.Drawing.Size(40, 40);
-            this.Edit_Buttton.TabIndex = 40;
-            this.Edit_Buttton.Click += new System.EventHandler(this.Edit_Buttton_Click);
+            this.Export_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Export_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Export_Button.BorderThickness = 2;
+            this.Export_Button.CheckedState.Parent = this.Export_Button;
+            this.Export_Button.CustomImages.Parent = this.Export_Button;
+            this.Export_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Export_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Export_Button.ForeColor = System.Drawing.Color.White;
+            this.Export_Button.HoverState.Parent = this.Export_Button;
+            this.Export_Button.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
+            this.Export_Button.ImageSize = new System.Drawing.Size(40, 30);
+            this.Export_Button.Location = new System.Drawing.Point(7, 7);
+            this.Export_Button.Name = "Export_Button";
+            this.Export_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Export_Button.ShadowDecoration.Parent = this.Export_Button;
+            this.Export_Button.Size = new System.Drawing.Size(40, 40);
+            this.Export_Button.TabIndex = 40;
+            this.Export_Button.Click += new System.EventHandler(this.Edit_Buttton_Click);
             // 
             // Raw_Materials_Form_AR
             // 
@@ -481,7 +481,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
-            this.Controls.Add(this.Edit_Buttton);
+            this.Controls.Add(this.Export_Button);
             this.Controls.Add(this.Count_Value_Label);
             this.Controls.Add(this.Search_Label);
             this.Controls.Add(this.Qty_Search_Text_Box);
@@ -524,6 +524,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private Guna.UI2.WinForms.Guna2DataGridView Raw_Material_Table;
         private Guna.UI2.WinForms.Guna2HtmlLabel Count_Value_Label;
-        private Guna.UI2.WinForms.Guna2CircleButton Edit_Buttton;
+        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
     }
 }

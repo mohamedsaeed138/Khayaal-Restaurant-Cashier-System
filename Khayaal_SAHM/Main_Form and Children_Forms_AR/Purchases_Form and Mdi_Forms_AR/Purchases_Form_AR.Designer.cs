@@ -49,15 +49,6 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Purchases_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.Add_Purchase_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Sum_Sub_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Sub_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Qty_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Sum_Qty_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
-            this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
-            this.Edit_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.الرقم = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +58,15 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.Add_Purchase_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.Sum_Sub_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Sub_Total_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Qty_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sum_Qty_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
+            this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
+            this.Export_Button = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.Purchases_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -296,6 +296,101 @@
             this.Purchases_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Purchases_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
+            // الرقم
+            // 
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.الرقم.DefaultCellStyle = dataGridViewCellStyle3;
+            this.الرقم.HeaderText = "Id";
+            this.الرقم.Name = "الرقم";
+            this.الرقم.ReadOnly = true;
+            this.الرقم.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.الرقم.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.الرقم.Visible = false;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column2.HeaderText = "الأسم";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "الكاشير";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Quantity
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Quantity.HeaderText = "الكمية";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Unit_Price
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Unit_Price.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Unit_Price.HeaderText = "سعر الوحدة";
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.ReadOnly = true;
+            this.Unit_Price.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Unit_Price.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Sub_Total
+            // 
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Sub_Total.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Sub_Total.HeaderText = "المجموع";
+            this.Sub_Total.Name = "Sub_Total";
+            this.Sub_Total.ReadOnly = true;
+            this.Sub_Total.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Sub_Total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Date
+            // 
+            dataGridViewCellStyle8.Format = "g";
+            dataGridViewCellStyle8.NullValue = null;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Date.HeaderText = "التاريخ";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Notes
+            // 
+            dataGridViewCellStyle9.NullValue = "\"\"";
+            this.Notes.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Notes.HeaderText = "ملاحظات";
+            this.Notes.Name = "Notes";
+            this.Notes.ReadOnly = true;
+            this.Notes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Notes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Delete
+            // 
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "حذف";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Delete.Text = "حذف";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // Table_Croll_Bar
             // 
             this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -420,121 +515,26 @@
             this.To_Time_Picker.TabIndex = 38;
             this.To_Time_Picker.ValueChanged += new System.EventHandler(this.To_Time_Picker_ValueChanged);
             // 
-            // Edit_Buttton
+            // Export_Button
             // 
-            this.Edit_Buttton.BackColor = System.Drawing.Color.Transparent;
-            this.Edit_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Edit_Buttton.BorderThickness = 2;
-            this.Edit_Buttton.CheckedState.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.CustomImages.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Edit_Buttton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit_Buttton.ForeColor = System.Drawing.Color.White;
-            this.Edit_Buttton.HoverState.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
-            this.Edit_Buttton.ImageSize = new System.Drawing.Size(40, 30);
-            this.Edit_Buttton.Location = new System.Drawing.Point(7, 7);
-            this.Edit_Buttton.Name = "Edit_Buttton";
-            this.Edit_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Edit_Buttton.ShadowDecoration.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.Size = new System.Drawing.Size(40, 40);
-            this.Edit_Buttton.TabIndex = 39;
-            this.Edit_Buttton.Click += new System.EventHandler(this.Edit_Buttton_Click);
-            // 
-            // الرقم
-            // 
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.الرقم.DefaultCellStyle = dataGridViewCellStyle3;
-            this.الرقم.HeaderText = "Id";
-            this.الرقم.Name = "الرقم";
-            this.الرقم.ReadOnly = true;
-            this.الرقم.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.الرقم.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.الرقم.Visible = false;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "الأسم";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "الكاشير";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Quantity
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Quantity.HeaderText = "الكمية";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            this.Quantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Unit_Price
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Unit_Price.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Unit_Price.HeaderText = "سعر الوحدة";
-            this.Unit_Price.Name = "Unit_Price";
-            this.Unit_Price.ReadOnly = true;
-            this.Unit_Price.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Unit_Price.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Sub_Total
-            // 
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.Sub_Total.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Sub_Total.HeaderText = "المجموع";
-            this.Sub_Total.Name = "Sub_Total";
-            this.Sub_Total.ReadOnly = true;
-            this.Sub_Total.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Sub_Total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Date
-            // 
-            dataGridViewCellStyle8.Format = "g";
-            dataGridViewCellStyle8.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Date.HeaderText = "التاريخ";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Notes
-            // 
-            dataGridViewCellStyle9.NullValue = "\"\"";
-            this.Notes.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Notes.HeaderText = "ملاحظات";
-            this.Notes.Name = "Notes";
-            this.Notes.ReadOnly = true;
-            this.Notes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Notes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Delete
-            // 
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "حذف";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Delete.Text = "حذف";
-            this.Delete.UseColumnTextForButtonValue = true;
+            this.Export_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Export_Button.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Export_Button.BorderThickness = 2;
+            this.Export_Button.CheckedState.Parent = this.Export_Button;
+            this.Export_Button.CustomImages.Parent = this.Export_Button;
+            this.Export_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Export_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Export_Button.ForeColor = System.Drawing.Color.White;
+            this.Export_Button.HoverState.Parent = this.Export_Button;
+            this.Export_Button.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
+            this.Export_Button.ImageSize = new System.Drawing.Size(40, 30);
+            this.Export_Button.Location = new System.Drawing.Point(7, 7);
+            this.Export_Button.Name = "Export_Button";
+            this.Export_Button.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Export_Button.ShadowDecoration.Parent = this.Export_Button;
+            this.Export_Button.Size = new System.Drawing.Size(40, 40);
+            this.Export_Button.TabIndex = 39;
+            this.Export_Button.Click += new System.EventHandler(this.Edit_Buttton_Click);
             // 
             // Purchases_Form_AR
             // 
@@ -542,7 +542,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
-            this.Controls.Add(this.Edit_Buttton);
+            this.Controls.Add(this.Export_Button);
             this.Controls.Add(this.To_Time_Picker);
             this.Controls.Add(this.From_Time_Picker);
             this.Controls.Add(this.Sum_Qty_Value_Label);
@@ -587,7 +587,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Qty_Label;
         private System.Windows.Forms.DateTimePicker From_Time_Picker;
         private System.Windows.Forms.DateTimePicker To_Time_Picker;
-        private Guna.UI2.WinForms.Guna2CircleButton Edit_Buttton;
+        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn الرقم;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
