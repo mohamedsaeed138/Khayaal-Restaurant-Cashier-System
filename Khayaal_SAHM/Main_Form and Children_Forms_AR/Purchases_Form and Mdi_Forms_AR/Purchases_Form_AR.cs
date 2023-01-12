@@ -37,11 +37,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             Fill_Combo_Box();
             Fill_Table($"select Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
             if (Purchases_Table.Rows.Count == 0)
+            {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
+                From_Time_Picker.Value = To_Time_Picker.Value = DateTime.Now;
+            }
             else
             {
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
+
                 From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[5].Value);
                 To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[5].Value);
+
             }
 
 
@@ -98,17 +105,20 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
         }
         void Choose_Query()
         {
-            if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
+            string From = Formatter.Date_Formating(From_Date_Picker.Value, "Normal", From_Time_Picker.Value);
+            string To = Formatter.Date_Formating(To_Date_Picker.Value, "Normal", To_Time_Picker.Value);
+
+            if (DateTime.Parse(From) > DateTime.Parse(To))
             {
-                MessageBox.Show("!! خطأ في المدي الزمني , قم بتغييره ", "!! خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                From_Time_Picker.Value = To_Time_Picker.Value;
                 From_Date_Picker.Value = To_Date_Picker.Value;
 
+                MessageBox.Show("!! خطأ في المدي الزمني , قم بتغييره ", "!! خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
                 string Name = Formatter.String(Name_Combo_Box.Text);
-                string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Name == "الجميع")
                     Fill_Table($"SELECT Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
                 else
@@ -212,6 +222,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                 }
             }
             catch { }
+        }
+
+        private void To_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
+
+        private void From_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
         }
     }
 }
