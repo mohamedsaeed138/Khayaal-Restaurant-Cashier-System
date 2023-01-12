@@ -26,12 +26,20 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
         {
             Fill_Combo_Box();
             Fill_Table($"SELECT * FROM CR.Tables_Booking_Details ORDER BY [From]");
+
             if (Booking_Table.Rows.Count == 0)
+            {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
+                From_Time_Picker.Value = To_Time_Picker.Value = DateTime.Now;
+            }
             else
             {
+                To_Time_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[3].Value));
+                From_Time_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[2].Value));
+
                 To_Date_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[3].Value));
                 From_Date_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[2].Value));
+
             }
 
         }
@@ -105,19 +113,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
         }
         void Choose_Query()
         {
-            if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
+            string From = Formatter.Date_Formating(From_Date_Picker.Value, "Normal", From_Time_Picker.Value);
+            string To = Formatter.Date_Formating(To_Date_Picker.Value, "Normal", To_Time_Picker.Value);
+
+            if (DateTime.Parse(From) > DateTime.Parse(To))
             {
+                From_Time_Picker.Value = To_Time_Picker.Value;
                 From_Date_Picker.Value = To_Date_Picker.Value;
+
                 MessageBox.Show("!! خطأ في المدي الزمني , قم بتغييره ", "!! خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
             }
+
             else
             {
                 string Table_No = Table_Combo_Box.Text;
                 string Name = Formatter.String(Search_Text_Box.Text);
 
-                string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Table_Combo_Box.Text == "الجميع" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' ORDER BY [From] ");
                 else if (Table_Combo_Box.Text == "الجميع" && Search_Text_Box.Text != "")
@@ -325,6 +337,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                 this.Reload();
             };
             form.ShowDialog();
+        }
+
+        private void From_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
+
+        private void To_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
         }
     }
 }
