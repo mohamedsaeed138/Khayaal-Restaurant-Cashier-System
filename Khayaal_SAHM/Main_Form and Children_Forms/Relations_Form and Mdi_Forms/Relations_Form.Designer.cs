@@ -52,7 +52,7 @@
             this.Raw_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Add_Button = new Guna.UI2.WinForms.Guna2Button();
-            this.Edit_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Export_Buttton = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.Relations_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             this.Item_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Item_Combo_Box.Name = "Item_Combo_Box";
             this.Item_Combo_Box.ShadowDecoration.Parent = this.Item_Combo_Box;
-            this.Item_Combo_Box.Size = new System.Drawing.Size(344, 36);
+            this.Item_Combo_Box.Size = new System.Drawing.Size(315, 36);
             this.Item_Combo_Box.TabIndex = 5;
             this.Item_Combo_Box.TextChanged += new System.EventHandler(this.Item_Combo_Box_TextChanged);
             // 
@@ -313,11 +313,11 @@
             this.Raw_Combo_Box.HoverState.Parent = this.Raw_Combo_Box;
             this.Raw_Combo_Box.ItemHeight = 30;
             this.Raw_Combo_Box.ItemsAppearance.Parent = this.Raw_Combo_Box;
-            this.Raw_Combo_Box.Location = new System.Drawing.Point(436, 43);
+            this.Raw_Combo_Box.Location = new System.Drawing.Point(390, 43);
             this.Raw_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Raw_Combo_Box.Name = "Raw_Combo_Box";
             this.Raw_Combo_Box.ShadowDecoration.Parent = this.Raw_Combo_Box;
-            this.Raw_Combo_Box.Size = new System.Drawing.Size(344, 36);
+            this.Raw_Combo_Box.Size = new System.Drawing.Size(315, 36);
             this.Raw_Combo_Box.TabIndex = 19;
             this.Raw_Combo_Box.TextChanged += new System.EventHandler(this.Raw_Combo_Box_TextChanged);
             // 
@@ -326,7 +326,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(436, 11);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(390, 11);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(115, 27);
@@ -342,7 +342,7 @@
             this.Add_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Button.HoverState.Parent = this.Add_Button;
-            this.Add_Button.Location = new System.Drawing.Point(793, 43);
+            this.Add_Button.Location = new System.Drawing.Point(736, 43);
             this.Add_Button.Name = "Add_Button";
             this.Add_Button.ShadowDecoration.Parent = this.Add_Button;
             this.Add_Button.Size = new System.Drawing.Size(131, 36);
@@ -350,27 +350,27 @@
             this.Add_Button.Text = "Add Relation";
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
-            // Edit_Buttton
+            // Export_Buttton
             // 
-            this.Edit_Buttton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Edit_Buttton.BackColor = System.Drawing.Color.Transparent;
-            this.Edit_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Edit_Buttton.BorderThickness = 2;
-            this.Edit_Buttton.CheckedState.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.CustomImages.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Edit_Buttton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit_Buttton.ForeColor = System.Drawing.Color.White;
-            this.Edit_Buttton.HoverState.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
-            this.Edit_Buttton.ImageSize = new System.Drawing.Size(40, 30);
-            this.Edit_Buttton.Location = new System.Drawing.Point(922, -2);
-            this.Edit_Buttton.Name = "Edit_Buttton";
-            this.Edit_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Edit_Buttton.ShadowDecoration.Parent = this.Edit_Buttton;
-            this.Edit_Buttton.Size = new System.Drawing.Size(40, 40);
-            this.Edit_Buttton.TabIndex = 46;
-            this.Edit_Buttton.Click += new System.EventHandler(this.Edit_Buttton_Click);
+            this.Export_Buttton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Export_Buttton.BackColor = System.Drawing.Color.Transparent;
+            this.Export_Buttton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Export_Buttton.BorderThickness = 2;
+            this.Export_Buttton.CheckedState.Parent = this.Export_Buttton;
+            this.Export_Buttton.CustomImages.Parent = this.Export_Buttton;
+            this.Export_Buttton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Export_Buttton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Export_Buttton.ForeColor = System.Drawing.Color.White;
+            this.Export_Buttton.HoverState.Parent = this.Export_Buttton;
+            this.Export_Buttton.Image = global::Khayaal_SAHM.Properties.Resources.Excel_Logo;
+            this.Export_Buttton.ImageSize = new System.Drawing.Size(40, 30);
+            this.Export_Buttton.Location = new System.Drawing.Point(927, 7);
+            this.Export_Buttton.Name = "Export_Buttton";
+            this.Export_Buttton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Export_Buttton.ShadowDecoration.Parent = this.Export_Buttton;
+            this.Export_Buttton.Size = new System.Drawing.Size(40, 40);
+            this.Export_Buttton.TabIndex = 46;
+            this.Export_Buttton.Click += new System.EventHandler(this.Edit_Buttton_Click);
             // 
             // Relations_Form
             // 
@@ -378,7 +378,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
-            this.Controls.Add(this.Edit_Buttton);
+            this.Controls.Add(this.Export_Buttton);
             this.Controls.Add(this.Add_Button);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.Raw_Combo_Box);
@@ -413,6 +413,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private Guna.UI2.WinForms.Guna2Button Add_Button;
-        private Guna.UI2.WinForms.Guna2CircleButton Edit_Buttton;
+        private Guna.UI2.WinForms.Guna2CircleButton Export_Buttton;
     }
 }
