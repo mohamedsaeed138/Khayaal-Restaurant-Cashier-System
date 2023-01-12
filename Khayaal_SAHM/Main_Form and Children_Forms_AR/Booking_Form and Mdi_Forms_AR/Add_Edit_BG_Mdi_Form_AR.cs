@@ -122,10 +122,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
 
                         MessageBox.Show("تمت العملية بنجاح");
                         Customer_Name_Text_Box.Text = "";
-                        From_Date_Picker.Text = DateTime.Now.ToString();
-                        To_Date_Picker.Text = DateTime.Now.ToString();
-                        From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
-                        To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
+
                     }
 
                     catch
