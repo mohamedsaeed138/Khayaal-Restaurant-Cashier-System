@@ -35,7 +35,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
         {
 
             Fill_Combo_Box();
-            Fill_Table($"select Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
+            Fill_Table($"select Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
             if (Purchases_Table.Rows.Count == 0)
             {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
@@ -46,8 +46,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                 To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
                 From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
 
-                From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[5].Value);
-                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[5].Value);
+                From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[6].Value);
+                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[6].Value);
 
             }
 
@@ -88,7 +88,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             foreach (DataRow row in dt.Rows)
             {
 
-                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (double)row[2], (double)row[3], (double)row[4], (DateTime)row[5], (string)row[6]);
+                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (string)row[2], (double)row[3], (double)row[4], (double)row[5], (DateTime)row[6], (string)row[7]);
             }
             try
             {
@@ -96,8 +96,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             }
             catch { }
             Count_Value_Label.Text = $"{Purchases_Table.Rows.Count}";
-            string Sum_Qty = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[2].Value))}");
-            string Sum_Total = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[4].Value))}") + " $";
+            string Sum_Qty = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[3].Value))}");
+            string Sum_Total = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[5].Value))}") + " $";
 
             Sum_Qty_Value_Label.Text = Sum_Qty;
 
@@ -120,9 +120,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             {
                 string Name = Formatter.String(Name_Combo_Box.Text);
                 if (Name == "الجميع")
-                    Fill_Table($"SELECT Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
                 else
-                    Fill_Table($"SELECT Id,Name,Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Name]=N'{Name}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Name]=N'{Name}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
             }
         }
 
@@ -204,7 +204,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
 
 
-                if (Purchases_Table.Columns[e.ColumnIndex].Index == 7)
+                if (Purchases_Table.Columns[e.ColumnIndex].Index == 8)
                 {
                     int id = (int)row.Cells[0].Value;
                     try
