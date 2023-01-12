@@ -53,7 +53,8 @@
             this.Customer_Name_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Customer_Name_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Customer_Name_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Customer_Name_Lbl.Location = new System.Drawing.Point(12, 32);
+            this.Customer_Name_Lbl.Location = new System.Drawing.Point(16, 39);
+            this.Customer_Name_Lbl.Margin = new System.Windows.Forms.Padding(4);
             this.Customer_Name_Lbl.Name = "Customer_Name_Lbl";
             this.Customer_Name_Lbl.Size = new System.Drawing.Size(201, 34);
             this.Customer_Name_Lbl.TabIndex = 4;
@@ -76,14 +77,14 @@
             this.Customer_Name_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Customer_Name_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Customer_Name_Text_Box.HoverState.Parent = this.Customer_Name_Text_Box;
-            this.Customer_Name_Text_Box.Location = new System.Drawing.Point(276, 32);
-            this.Customer_Name_Text_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Customer_Name_Text_Box.Location = new System.Drawing.Point(368, 39);
+            this.Customer_Name_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Customer_Name_Text_Box.Name = "Customer_Name_Text_Box";
             this.Customer_Name_Text_Box.PasswordChar = '\0';
             this.Customer_Name_Text_Box.PlaceholderText = "";
             this.Customer_Name_Text_Box.SelectedText = "";
             this.Customer_Name_Text_Box.ShadowDecoration.Parent = this.Customer_Name_Text_Box;
-            this.Customer_Name_Text_Box.Size = new System.Drawing.Size(242, 43);
+            this.Customer_Name_Text_Box.Size = new System.Drawing.Size(323, 53);
             this.Customer_Name_Text_Box.TabIndex = 0;
             this.Customer_Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Customer_Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Customer_Name_Text_Box_KeyPress);
@@ -105,10 +106,11 @@
             this.Table_Combo_Box.HoverState.Parent = this.Table_Combo_Box;
             this.Table_Combo_Box.ItemHeight = 30;
             this.Table_Combo_Box.ItemsAppearance.Parent = this.Table_Combo_Box;
-            this.Table_Combo_Box.Location = new System.Drawing.Point(276, 117);
+            this.Table_Combo_Box.Location = new System.Drawing.Point(368, 144);
+            this.Table_Combo_Box.Margin = new System.Windows.Forms.Padding(4);
             this.Table_Combo_Box.Name = "Table_Combo_Box";
             this.Table_Combo_Box.ShadowDecoration.Parent = this.Table_Combo_Box;
-            this.Table_Combo_Box.Size = new System.Drawing.Size(242, 36);
+            this.Table_Combo_Box.Size = new System.Drawing.Size(321, 36);
             this.Table_Combo_Box.TabIndex = 1;
             this.Table_Combo_Box.TabStop = false;
             this.Table_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -118,7 +120,8 @@
             this.Tabel_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Tabel_Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Tabel_Lbl.ForeColor = System.Drawing.Color.White;
-            this.Tabel_Lbl.Location = new System.Drawing.Point(12, 117);
+            this.Tabel_Lbl.Location = new System.Drawing.Point(16, 144);
+            this.Tabel_Lbl.Margin = new System.Windows.Forms.Padding(4);
             this.Tabel_Lbl.Name = "Tabel_Lbl";
             this.Tabel_Lbl.Size = new System.Drawing.Size(79, 34);
             this.Tabel_Lbl.TabIndex = 11;
@@ -133,13 +136,14 @@
             this.Add_Booking_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Add_Booking_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Booking_Button.HoverState.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.Location = new System.Drawing.Point(191, 382);
+            this.Add_Booking_Button.Location = new System.Drawing.Point(255, 470);
+            this.Add_Booking_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Add_Booking_Button.Name = "Add_Booking_Button";
             this.Add_Booking_Button.ShadowDecoration.Parent = this.Add_Booking_Button;
-            this.Add_Booking_Button.Size = new System.Drawing.Size(164, 49);
+            this.Add_Booking_Button.Size = new System.Drawing.Size(219, 60);
             this.Add_Booking_Button.TabIndex = 6;
             this.Add_Booking_Button.Text = "Add";
-            this.Add_Booking_Button.Click += new System.EventHandler(this.Add_Raw_Button_Click_1);
+            this.Add_Booking_Button.Click += new System.EventHandler(this.Add_Booking_Button_Click);
             // 
             // guna2DragControl1
             // 
@@ -151,10 +155,11 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(518, -1);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(691, -1);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(32, 24);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(43, 30);
             this.guna2ControlBox1.TabIndex = 17;
             // 
             // bunifuElipse1
@@ -167,7 +172,8 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.To_Label.ForeColor = System.Drawing.Color.White;
-            this.To_Label.Location = new System.Drawing.Point(12, 243);
+            this.To_Label.Location = new System.Drawing.Point(16, 299);
+            this.To_Label.Margin = new System.Windows.Forms.Padding(4);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(46, 34);
             this.To_Label.TabIndex = 18;
@@ -178,7 +184,8 @@
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.From_Label.ForeColor = System.Drawing.Color.White;
-            this.From_Label.Location = new System.Drawing.Point(12, 185);
+            this.From_Label.Location = new System.Drawing.Point(16, 228);
+            this.From_Label.Margin = new System.Windows.Forms.Padding(4);
             this.From_Label.Name = "From_Label";
             this.From_Label.Size = new System.Drawing.Size(76, 34);
             this.From_Label.TabIndex = 19;
@@ -192,11 +199,12 @@
             this.From_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.From_Date_Picker.Location = new System.Drawing.Point(276, 195);
-            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
+            this.From_Date_Picker.Location = new System.Drawing.Point(368, 240);
+            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.From_Date_Picker.Name = "From_Date_Picker";
-            this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
+            this.From_Date_Picker.Size = new System.Drawing.Size(160, 22);
             this.From_Date_Picker.TabIndex = 2;
+            this.From_Date_Picker.ValueChanged += new System.EventHandler(this.From_Date_Picker_ValueChanged);
             // 
             // To_Date_Picker
             // 
@@ -206,11 +214,12 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(276, 257);
-            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
+            this.To_Date_Picker.Location = new System.Drawing.Point(368, 316);
+            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.To_Date_Picker.Name = "To_Date_Picker";
-            this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
+            this.To_Date_Picker.Size = new System.Drawing.Size(160, 22);
             this.To_Date_Picker.TabIndex = 4;
+            this.To_Date_Picker.ValueChanged += new System.EventHandler(this.To_Date_Picker_ValueChanged);
             // 
             // From_Time_Picker
             // 
@@ -220,12 +229,13 @@
             this.From_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Time_Picker.CustomFormat = "";
             this.From_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.From_Time_Picker.Location = new System.Drawing.Point(401, 195);
-            this.From_Time_Picker.Margin = new System.Windows.Forms.Padding(2);
+            this.From_Time_Picker.Location = new System.Drawing.Point(535, 240);
+            this.From_Time_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.From_Time_Picker.Name = "From_Time_Picker";
             this.From_Time_Picker.ShowUpDown = true;
-            this.From_Time_Picker.Size = new System.Drawing.Size(121, 20);
+            this.From_Time_Picker.Size = new System.Drawing.Size(160, 22);
             this.From_Time_Picker.TabIndex = 3;
+            this.From_Time_Picker.ValueChanged += new System.EventHandler(this.From_Time_Picker_ValueChanged);
             // 
             // To_Time_Picker
             // 
@@ -235,19 +245,21 @@
             this.To_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Time_Picker.CustomFormat = "";
             this.To_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.To_Time_Picker.Location = new System.Drawing.Point(401, 257);
-            this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(2);
+            this.To_Time_Picker.Location = new System.Drawing.Point(535, 316);
+            this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.To_Time_Picker.Name = "To_Time_Picker";
             this.To_Time_Picker.ShowUpDown = true;
-            this.To_Time_Picker.Size = new System.Drawing.Size(121, 20);
+            this.To_Time_Picker.Size = new System.Drawing.Size(160, 22);
             this.To_Time_Picker.TabIndex = 5;
+            this.To_Time_Picker.ValueChanged += new System.EventHandler(this.To_Time_Picker_ValueChanged);
             // 
             // Notes_Label
             // 
             this.Notes_Label.BackColor = System.Drawing.Color.Transparent;
             this.Notes_Label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Notes_Label.ForeColor = System.Drawing.Color.White;
-            this.Notes_Label.Location = new System.Drawing.Point(12, 326);
+            this.Notes_Label.Location = new System.Drawing.Point(16, 401);
+            this.Notes_Label.Margin = new System.Windows.Forms.Padding(4);
             this.Notes_Label.Name = "Notes_Label";
             this.Notes_Label.Size = new System.Drawing.Size(84, 34);
             this.Notes_Label.TabIndex = 20;
@@ -270,24 +282,24 @@
             this.Notes_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Notes_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Notes_Text_Box.HoverState.Parent = this.Notes_Text_Box;
-            this.Notes_Text_Box.Location = new System.Drawing.Point(276, 317);
-            this.Notes_Text_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Notes_Text_Box.Location = new System.Drawing.Point(368, 390);
+            this.Notes_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Notes_Text_Box.Name = "Notes_Text_Box";
             this.Notes_Text_Box.PasswordChar = '\0';
             this.Notes_Text_Box.PlaceholderText = "";
             this.Notes_Text_Box.SelectedText = "";
             this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
-            this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
+            this.Notes_Text_Box.Size = new System.Drawing.Size(323, 53);
             this.Notes_Text_Box.TabIndex = 21;
             this.Notes_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Notes_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Notes_Text_Box_KeyPress);
             // 
             // Add_Edit_BG_Mdi_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(550, 460);
+            this.ClientSize = new System.Drawing.Size(733, 566);
             this.Controls.Add(this.Notes_Text_Box);
             this.Controls.Add(this.Notes_Label);
             this.Controls.Add(this.To_Time_Picker);
@@ -304,6 +316,7 @@
             this.Controls.Add(this.Customer_Name_Lbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_Edit_BG_Mdi_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add_Mdi_Form";

@@ -17,10 +17,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
         public Add_Edit_BG_Mdi_Form()
         {
             Reload();
+            To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
+            From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
             From_Date_Picker.Text = DateTime.Now.ToString();
             To_Date_Picker.Text = DateTime.Now.ToString();
-            From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
-            To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
         }
         public Add_Edit_BG_Mdi_Form(string name, string From, string To, int table, int id, string notes)
         {
@@ -32,19 +32,20 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             Notes_Text_Box.Text = notes;
             if (DateTime.Parse(To) > DateTime.Now)
             {
-
-                From_Date_Picker.Text = DateTime.Parse(From).ToString("MM/dd/yyyy");
-                From_Time_Picker.Text = DateTime.Parse(From).ToString("HH:mm:ss");
                 To_Date_Picker.Text = DateTime.Parse(To).ToString("MM/dd/yyyy");
                 To_Time_Picker.Text = DateTime.Parse(To).ToString("HH:mm:ss");
+                From_Date_Picker.Text = DateTime.Parse(From).ToString("MM/dd/yyyy");
+                From_Time_Picker.Text = DateTime.Parse(From).ToString("HH:mm:ss");
+
 
             }
             else
             {
+                To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
+                From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
                 From_Date_Picker.Text = DateTime.Now.ToString();
                 To_Date_Picker.Text = DateTime.Now.ToString();
-                From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
-                To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
+
             }
             Add_Booking_Button.Text = "Edit";
         }
@@ -80,105 +81,102 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
 
         }
-        private void Add_Raw_Button_Click_1(object sender, EventArgs e)
+        private void Add_Booking_Button_Click(object sender, EventArgs e)
         {
             string From = Formatter.Date_Formating(From_Date_Picker.Value, "Normal", From_Time_Picker.Value);
             string To = Formatter.Date_Formating(To_Date_Picker.Value, "Normal", To_Time_Picker.Value);
 
-            if (DateTime.Parse(From) < DateTime.Parse(To))
+
+            if (DateTime.Parse(From) < DateTime.Now)
             {
-                if (DateTime.Parse(From) < DateTime.Now)
-                {
-                    MessageBox.Show("Insert a Recent Date", "Change Date Range!");
-                    return;
-                }
+                MessageBox.Show("Insert a Recent Date", "Change Date Range!");
+                return;
+            }
 
-                int table = Int32.Parse(Table_Combo_Box.Text);
-                if (Check_Intersections(DateTime.Parse(From), DateTime.Parse(To), table))
+            int table = Int32.Parse(Table_Combo_Box.Text);
+            if (Check_Intersections(DateTime.Parse(From), DateTime.Parse(To), table))
+            {
+
+                string Name = Formatter.String(Customer_Name_Text_Box.Text);
+                string Notes = Formatter.String(Notes_Text_Box.Text);
+                Formatter.Check_Connection(conn);
+                if (Add)
                 {
 
-                    string Name = Formatter.String(Customer_Name_Text_Box.Text);
-                    string Notes = Formatter.String(Notes_Text_Box.Text);
+
+
+
+
                     Formatter.Check_Connection(conn);
-                    if (Add)
+                    string Query = $"INSERT INTO CR.Tables_Booking_Details VALUES({table},N'{Name}','{From}','{To}',N'{Notes}');";
+                    SqlCommand Insert_Query = new SqlCommand(Query, conn);
+                    try
                     {
 
+                        Formatter.Check_Connection(conn);
+                        conn.Open();
+
+                        Insert_Query.ExecuteNonQuery();
+
+                        conn.Close();
 
 
+                        MessageBox.Show("Successfully Done");
+                        Customer_Name_Text_Box.Text = "";
+                        From_Date_Picker.Text = DateTime.Now.ToString();
+                        To_Date_Picker.Text = DateTime.Now.ToString();
+                        From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
+                        To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("There are Bookings Intersections!!", "Change Date Range!");
+
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+                else
+                {
+
+                    string Query = $"UPDATE CR.Tables_Booking_Details SET [Name]=N'{Name}',[From]='{From}',[To]='{To}' ,[Notes]=N'{Notes}'  WHERE Id={id};";
+                    SqlCommand Update_Query = new SqlCommand(Query, conn);
+                    try
+                    {
 
 
                         Formatter.Check_Connection(conn);
-                        string Query = $"INSERT INTO CR.Tables_Booking_Details VALUES({table},N'{Name}','{From}','{To}',N'{Notes}');";
-                        SqlCommand Insert_Query = new SqlCommand(Query, conn);
-                        try
-                        {
+                        conn.Open();
 
-                            Formatter.Check_Connection(conn);
-                            conn.Open();
+                        Update_Query.ExecuteNonQuery();
 
-                            Insert_Query.ExecuteNonQuery();
+                        conn.Close();
+                        this.Close();
 
-                            conn.Close();
-
-
-                            MessageBox.Show("Successfully Done");
-                            Customer_Name_Text_Box.Text = "";
-                            From_Date_Picker.Text = DateTime.Now.ToString();
-                            To_Date_Picker.Text = DateTime.Now.ToString();
-                            From_Time_Picker.Text = DateTime.Now.AddHours(1).ToString();
-                            To_Time_Picker.Text = DateTime.Now.AddHours(2).ToString();
-                        }
-
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("There are Bookings Intersections!!", "Change Date Range!");
-
-                        }
-                        finally
-                        {
-                            conn.Close();
-                        }
+                        MessageBox.Show("Successfully Done");
                     }
-                    else
+
+                    catch (Exception ex)
                     {
-
-                        string Query = $"UPDATE CR.Tables_Booking_Details SET [Name]=N'{Name}',[From]='{From}',[To]='{To}' ,[Notes]=N'{Notes}'  WHERE Id={id};";
-                        SqlCommand Update_Query = new SqlCommand(Query, conn);
-                        try
-                        {
-
-
-                            Formatter.Check_Connection(conn);
-                            conn.Open();
-
-                            Update_Query.ExecuteNonQuery();
-
-                            conn.Close();
-                            this.Close();
-
-                            MessageBox.Show("Successfully Done");
-                        }
-
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-
-                        }
-                        finally
-                        {
-                            conn.Close();
-                        }
-
+                        MessageBox.Show(ex.Message);
 
                     }
+                    finally
+                    {
+                        conn.Close();
+                    }
+
+
                 }
-
-
-
             }
 
-            else
-                MessageBox.Show("  Change Date Range!", "Error : From Date is After From Date!");
+
+
+
+
         }
         private bool Check_Intersections(DateTime From, DateTime To, int Table)
         {
@@ -227,6 +225,40 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             {
                 e.Handled = true;
             }
+        }
+
+
+        void Check_Date_Range()
+        {
+            string From = Formatter.Date_Formating(From_Date_Picker.Value, "Normal", From_Time_Picker.Value);
+            string To = Formatter.Date_Formating(To_Date_Picker.Value, "Normal", To_Time_Picker.Value);
+
+            if (DateTime.Parse(From) > DateTime.Parse(To))
+            {
+                From_Time_Picker.Value = To_Time_Picker.Value;
+                From_Date_Picker.Value = To_Date_Picker.Value;
+
+                MessageBox.Show("  Change Date Range!", "Error : From Date is After From Date!");
+
+            }
+        }
+        private void From_Date_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Check_Date_Range();
+        }
+        private void From_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Check_Date_Range();
+        }
+
+        private void To_Date_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Check_Date_Range();
+        }
+
+        private void To_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Check_Date_Range();
         }
     }
 }
