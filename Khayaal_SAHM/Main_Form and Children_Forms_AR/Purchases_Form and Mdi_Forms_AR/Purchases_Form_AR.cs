@@ -233,5 +233,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
         {
             Choose_Query();
         }
+
+        private void Edit_Buttton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
