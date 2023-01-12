@@ -30,108 +30,108 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Left_Side_Panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.In_System_AR_Label = new System.Windows.Forms.Label();
+            this.Hello_AR_Label = new System.Windows.Forms.Label();
+            this.In_System_EN_Label = new System.Windows.Forms.Label();
+            this.Hello_EN_Label = new System.Windows.Forms.Label();
+            this.Logo_Picture_Box = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Username_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Login_B = new Guna.UI2.WinForms.Guna2Button();
+            this.Username_Label = new System.Windows.Forms.Label();
+            this.Password_Label = new System.Windows.Forms.Label();
+            this.Login_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Close_B = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.Language_EN_Label = new System.Windows.Forms.Label();
+            this.Language_Label = new System.Windows.Forms.Label();
             this.Language_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Users_Label = new System.Windows.Forms.Label();
             this.Password_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.Change_Password_Label = new System.Windows.Forms.Label();
+            this.Left_Side_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo_Picture_Box)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // Left_Side_Panel
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.guna2Panel1.Controls.Add(this.label8);
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(301, 420);
-            this.guna2Panel1.TabIndex = 0;
+            this.Left_Side_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.Left_Side_Panel.Controls.Add(this.In_System_AR_Label);
+            this.Left_Side_Panel.Controls.Add(this.Hello_AR_Label);
+            this.Left_Side_Panel.Controls.Add(this.In_System_EN_Label);
+            this.Left_Side_Panel.Controls.Add(this.Hello_EN_Label);
+            this.Left_Side_Panel.Controls.Add(this.Logo_Picture_Box);
+            this.Left_Side_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Left_Side_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Left_Side_Panel.Name = "Left_Side_Panel";
+            this.Left_Side_Panel.ShadowDecoration.Parent = this.Left_Side_Panel;
+            this.Left_Side_Panel.Size = new System.Drawing.Size(301, 420);
+            this.Left_Side_Panel.TabIndex = 0;
             // 
-            // label8
+            // In_System_AR_Label
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(71, 196);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(197, 42);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "في نظام خيال";
+            this.In_System_AR_Label.AutoSize = true;
+            this.In_System_AR_Label.BackColor = System.Drawing.Color.Transparent;
+            this.In_System_AR_Label.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
+            this.In_System_AR_Label.ForeColor = System.Drawing.Color.White;
+            this.In_System_AR_Label.Location = new System.Drawing.Point(71, 196);
+            this.In_System_AR_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.In_System_AR_Label.Name = "In_System_AR_Label";
+            this.In_System_AR_Label.Size = new System.Drawing.Size(197, 42);
+            this.In_System_AR_Label.TabIndex = 4;
+            this.In_System_AR_Label.Text = "في نظام خيال";
             // 
-            // label7
+            // Hello_AR_Label
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(159, 148);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 42);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "مرحبا بك ";
+            this.Hello_AR_Label.AutoSize = true;
+            this.Hello_AR_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Hello_AR_Label.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
+            this.Hello_AR_Label.ForeColor = System.Drawing.Color.White;
+            this.Hello_AR_Label.Location = new System.Drawing.Point(159, 148);
+            this.Hello_AR_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Hello_AR_Label.Name = "Hello_AR_Label";
+            this.Hello_AR_Label.Size = new System.Drawing.Size(139, 42);
+            this.Hello_AR_Label.TabIndex = 3;
+            this.Hello_AR_Label.Text = "مرحبا بك ";
             // 
-            // label2
+            // In_System_EN_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 298);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 41);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Khayaal System";
+            this.In_System_EN_Label.AutoSize = true;
+            this.In_System_EN_Label.BackColor = System.Drawing.Color.Transparent;
+            this.In_System_EN_Label.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.In_System_EN_Label.ForeColor = System.Drawing.Color.White;
+            this.In_System_EN_Label.Location = new System.Drawing.Point(46, 298);
+            this.In_System_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.In_System_EN_Label.Name = "In_System_EN_Label";
+            this.In_System_EN_Label.Size = new System.Drawing.Size(236, 41);
+            this.In_System_EN_Label.TabIndex = 2;
+            this.In_System_EN_Label.Text = "Khayaal System";
             // 
-            // label1
+            // Hello_EN_Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 253);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome To";
+            this.Hello_EN_Label.AutoSize = true;
+            this.Hello_EN_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Hello_EN_Label.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.Hello_EN_Label.ForeColor = System.Drawing.Color.White;
+            this.Hello_EN_Label.Location = new System.Drawing.Point(15, 253);
+            this.Hello_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Hello_EN_Label.Name = "Hello_EN_Label";
+            this.Hello_EN_Label.Size = new System.Drawing.Size(188, 41);
+            this.Hello_EN_Label.TabIndex = 1;
+            this.Hello_EN_Label.Text = "Welcome To";
             // 
-            // guna2PictureBox1
+            // Logo_Picture_Box
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 20;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 19);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(278, 110);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.Logo_Picture_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Logo_Picture_Box.BorderRadius = 20;
+            this.Logo_Picture_Box.Image = ((System.Drawing.Image)(resources.GetObject("Logo_Picture_Box.Image")));
+            this.Logo_Picture_Box.Location = new System.Drawing.Point(11, 19);
+            this.Logo_Picture_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Logo_Picture_Box.Name = "Logo_Picture_Box";
+            this.Logo_Picture_Box.ShadowDecoration.Parent = this.Logo_Picture_Box;
+            this.Logo_Picture_Box.Size = new System.Drawing.Size(278, 110);
+            this.Logo_Picture_Box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo_Picture_Box.TabIndex = 0;
+            this.Logo_Picture_Box.TabStop = false;
             // 
             // Username_Text_Box
             // 
@@ -164,51 +164,50 @@
             this.Username_Text_Box.TabIndex = 1;
             this.Username_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label3
+            // Username_Label
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(305, 36);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(260, 30);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Username  اسم المستخدم";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.Username_Label.AutoSize = true;
+            this.Username_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Username_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_Label.ForeColor = System.Drawing.Color.White;
+            this.Username_Label.Location = new System.Drawing.Point(305, 36);
+            this.Username_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Username_Label.Name = "Username_Label";
+            this.Username_Label.Size = new System.Drawing.Size(260, 30);
+            this.Username_Label.TabIndex = 2;
+            this.Username_Label.Text = "Username  اسم المستخدم";
             // 
-            // label4
+            // Password_Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(305, 130);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 30);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Password       الرقم السري";
+            this.Password_Label.AutoSize = true;
+            this.Password_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Password_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_Label.ForeColor = System.Drawing.Color.White;
+            this.Password_Label.Location = new System.Drawing.Point(305, 130);
+            this.Password_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Password_Label.Name = "Password_Label";
+            this.Password_Label.Size = new System.Drawing.Size(258, 30);
+            this.Password_Label.TabIndex = 4;
+            this.Password_Label.Text = "Password       الرقم السري";
             // 
-            // Login_B
+            // Login_Button
             // 
-            this.Login_B.BorderRadius = 10;
-            this.Login_B.CheckedState.Parent = this.Login_B;
-            this.Login_B.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Login_B.CustomImages.Parent = this.Login_B;
-            this.Login_B.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.Login_B.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_B.ForeColor = System.Drawing.Color.White;
-            this.Login_B.HoverState.Parent = this.Login_B;
-            this.Login_B.Location = new System.Drawing.Point(359, 305);
-            this.Login_B.Margin = new System.Windows.Forms.Padding(2);
-            this.Login_B.Name = "Login_B";
-            this.Login_B.ShadowDecoration.Parent = this.Login_B;
-            this.Login_B.Size = new System.Drawing.Size(166, 37);
-            this.Login_B.TabIndex = 4;
-            this.Login_B.Text = "Login";
-            this.Login_B.Click += new System.EventHandler(this.Login_B_Click_1);
+            this.Login_Button.BorderRadius = 10;
+            this.Login_Button.CheckedState.Parent = this.Login_Button;
+            this.Login_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Login_Button.CustomImages.Parent = this.Login_Button;
+            this.Login_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.Login_Button.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_Button.ForeColor = System.Drawing.Color.White;
+            this.Login_Button.HoverState.Parent = this.Login_Button;
+            this.Login_Button.Location = new System.Drawing.Point(359, 305);
+            this.Login_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Login_Button.Name = "Login_Button";
+            this.Login_Button.ShadowDecoration.Parent = this.Login_Button;
+            this.Login_Button.Size = new System.Drawing.Size(166, 37);
+            this.Login_Button.TabIndex = 4;
+            this.Login_Button.Text = "Login";
+            this.Login_Button.Click += new System.EventHandler(this.Login_B_Click_1);
             // 
             // Close_B
             // 
@@ -233,18 +232,18 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
-            // Language_EN_Label
+            // Language_Label
             // 
-            this.Language_EN_Label.AutoSize = true;
-            this.Language_EN_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Language_EN_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Language_EN_Label.ForeColor = System.Drawing.Color.White;
-            this.Language_EN_Label.Location = new System.Drawing.Point(334, 225);
-            this.Language_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Language_EN_Label.Name = "Language_EN_Label";
-            this.Language_EN_Label.Size = new System.Drawing.Size(204, 21);
-            this.Language_EN_Label.TabIndex = 10;
-            this.Language_EN_Label.Text = "Language                      اللغة";
+            this.Language_Label.AutoSize = true;
+            this.Language_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Language_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Language_Label.ForeColor = System.Drawing.Color.White;
+            this.Language_Label.Location = new System.Drawing.Point(334, 225);
+            this.Language_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Language_Label.Name = "Language_Label";
+            this.Language_Label.Size = new System.Drawing.Size(204, 21);
+            this.Language_Label.TabIndex = 10;
+            this.Language_Label.Text = "Language                      اللغة";
             // 
             // Language_Combo_Box
             // 
@@ -273,20 +272,19 @@
             this.Language_Combo_Box.TabIndex = 3;
             this.Language_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label10
+            // Users_Label
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(377, 390);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 21);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Users  المستخدمين";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.Users_Label.AutoSize = true;
+            this.Users_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Users_Label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Users_Label.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Users_Label.ForeColor = System.Drawing.Color.Silver;
+            this.Users_Label.Location = new System.Drawing.Point(377, 396);
+            this.Users_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Users_Label.Name = "Users_Label";
+            this.Users_Label.Size = new System.Drawing.Size(137, 21);
+            this.Users_Label.TabIndex = 6;
+            this.Users_Label.Text = "Users  المستخدمين";
             // 
             // Password_Text_Box
             // 
@@ -320,19 +318,19 @@
             this.Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Password_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
-            // label6
+            // Change_Password_Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(313, 361);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(253, 21);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Change Password   تغيير كلمة السر";
+            this.Change_Password_Label.AutoSize = true;
+            this.Change_Password_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Change_Password_Label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Change_Password_Label.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Change_Password_Label.ForeColor = System.Drawing.Color.Silver;
+            this.Change_Password_Label.Location = new System.Drawing.Point(313, 364);
+            this.Change_Password_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Change_Password_Label.Name = "Change_Password_Label";
+            this.Change_Password_Label.Size = new System.Drawing.Size(253, 21);
+            this.Change_Password_Label.TabIndex = 5;
+            this.Change_Password_Label.Text = "Change Password   تغيير كلمة السر";
             // 
             // Login_Form
             // 
@@ -340,26 +338,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(575, 420);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.Change_Password_Label);
+            this.Controls.Add(this.Users_Label);
             this.Controls.Add(this.Language_Combo_Box);
-            this.Controls.Add(this.Language_EN_Label);
+            this.Controls.Add(this.Language_Label);
             this.Controls.Add(this.Close_B);
-            this.Controls.Add(this.Login_B);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Login_Button);
+            this.Controls.Add(this.Password_Label);
             this.Controls.Add(this.Password_Text_Box);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Username_Label);
             this.Controls.Add(this.Username_Text_Box);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.Left_Side_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Form";
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.Left_Side_Panel.ResumeLayout(false);
+            this.Left_Side_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo_Picture_Box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,23 +365,23 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel Left_Side_Panel;
+        private System.Windows.Forms.Label In_System_EN_Label;
+        private System.Windows.Forms.Label Hello_EN_Label;
+        private Guna.UI2.WinForms.Guna2PictureBox Logo_Picture_Box;
         private Guna.UI2.WinForms.Guna2TextBox Username_Text_Box;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button Login_B;
+        private System.Windows.Forms.Label Username_Label;
+        private System.Windows.Forms.Label Password_Label;
+        private Guna.UI2.WinForms.Guna2Button Login_Button;
         private Guna.UI2.WinForms.Guna2ControlBox Close_B;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.Label Language_EN_Label;
+        private System.Windows.Forms.Label Language_Label;
         private Guna.UI2.WinForms.Guna2ComboBox Language_Combo_Box;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label In_System_AR_Label;
+        private System.Windows.Forms.Label Hello_AR_Label;
+        private System.Windows.Forms.Label Users_Label;
         private Guna.UI2.WinForms.Guna2TextBox Password_Text_Box;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Change_Password_Label;
     }
 }

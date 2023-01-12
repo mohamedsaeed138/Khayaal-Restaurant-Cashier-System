@@ -41,7 +41,7 @@ namespace Khayaal_SAHM
         {
             string txt_user, txt_pass;
             txt_user = Username_Text_Box.Text;
-            txt_pass = guna2TextBox1.Text;
+            txt_pass = Password_Text_Box.Text;
             try
             {
                 SqlCommand Verify_Login_Command = new SqlCommand($"Select * From CR.Users WHERE User_Name =N'{txt_user}' COLLATE SQL_Latin1_General_CP1_CS_AS AND Password=N'{txt_pass}' COLLATE SQL_Latin1_General_CP1_CS_AS;", LoginCon);
@@ -53,8 +53,7 @@ namespace Khayaal_SAHM
                 if (loginQ_DT.Rows.Count > 0)
                 {
                     Thread Mainformthread;
-                    txt_user = Username_Text_Box.Text;
-                    txt_pass = guna2TextBox1.Text;
+
                     SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(User_Name, Date)VALUES(N'{txt_user}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
                     LoginCon.Open();
                     loginCOM.ExecuteNonQuery();
@@ -85,14 +84,6 @@ namespace Khayaal_SAHM
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
