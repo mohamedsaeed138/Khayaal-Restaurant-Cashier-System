@@ -16,6 +16,8 @@ namespace Khayaal_SAHM
         {
             InitializeComponent();
             this.Username = Username;
+            Change_Password_Text_Box.UseSystemPasswordChar = true;
+
         }
 
 
@@ -77,6 +79,12 @@ namespace Khayaal_SAHM
                 Edit_Button_Click(sender, e);
             else if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Change_Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
                 e.Handled = true;
+        }
+
+        private void Show_Password_Check_Box_CheckedChanged(object sender, EventArgs e)
+        {
+            Change_Password_Text_Box.UseSystemPasswordChar = Change_Password_Text_Box.UseSystemPasswordChar == false ? true : false;
+
         }
     }
 }

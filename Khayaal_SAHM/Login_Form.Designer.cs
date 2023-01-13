@@ -310,7 +310,7 @@
             this.Password_Text_Box.Location = new System.Drawing.Point(311, 166);
             this.Password_Text_Box.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Password_Text_Box.Name = "Password_Text_Box";
-            this.Password_Text_Box.PasswordChar = '*';
+            this.Password_Text_Box.PasswordChar = '\0';
             this.Password_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Password_Text_Box.PlaceholderText = "";
             this.Password_Text_Box.SelectedText = "";
@@ -346,6 +346,7 @@
             this.Show_Password_Check_Box.TabIndex = 5;
             this.Show_Password_Check_Box.Text = "Show Password اظهر كلمة السر";
             this.Show_Password_Check_Box.UseVisualStyleBackColor = true;
+            this.Show_Password_Check_Box.CheckedChanged += new System.EventHandler(this.Show_Password_Check_Box_CheckedChanged);
             // 
             // Login_Form
             // 

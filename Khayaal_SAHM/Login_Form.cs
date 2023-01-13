@@ -21,6 +21,7 @@ namespace Khayaal_SAHM
         {
             InitializeComponent();
             Language_Combo_Box.SelectedIndex = 0;
+            Password_Text_Box.UseSystemPasswordChar = true;
         }
 
 
@@ -118,6 +119,11 @@ namespace Khayaal_SAHM
         private void Change_Password_Label_Click(object sender, EventArgs e)
         {
             Input_Process(Cases.Change_Password);
+        }
+
+        private void Show_Password_Check_Box_CheckedChanged(object sender, EventArgs e)
+        {
+            Password_Text_Box.UseSystemPasswordChar = Password_Text_Box.UseSystemPasswordChar == false ? true : false;
         }
     }
 }

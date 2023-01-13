@@ -37,6 +37,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Add_a_New_Cat_Lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Show_Password_Check_Box = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Password_Label
@@ -89,7 +90,7 @@
             this.Add_Raw_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Add_Raw_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Raw_Button.HoverState.Parent = this.Add_Raw_Button;
-            this.Add_Raw_Button.Location = new System.Drawing.Point(159, 174);
+            this.Add_Raw_Button.Location = new System.Drawing.Point(159, 192);
             this.Add_Raw_Button.Name = "Add_Raw_Button";
             this.Add_Raw_Button.ShadowDecoration.Parent = this.Add_Raw_Button;
             this.Add_Raw_Button.Size = new System.Drawing.Size(242, 49);
@@ -123,7 +124,7 @@
             this.Add_a_New_Cat_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Add_a_New_Cat_Lbl.Font = new System.Drawing.Font("Tahoma", 8F);
             this.Add_a_New_Cat_Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(61, 149);
+            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(61, 78);
             this.Add_a_New_Cat_Lbl.Name = "Add_a_New_Cat_Lbl";
             this.Add_a_New_Cat_Lbl.Size = new System.Drawing.Size(139, 15);
             this.Add_a_New_Cat_Lbl.TabIndex = 18;
@@ -135,12 +136,25 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 8F);
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(349, 149);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(349, 78);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(117, 15);
             this.guna2HtmlLabel1.TabIndex = 19;
             this.guna2HtmlLabel1.TabStop = false;
             this.guna2HtmlLabel1.Text = "فقط ارقاما و حروفا ادخل*";
+            // 
+            // Show_Password_Check_Box
+            // 
+            this.Show_Password_Check_Box.AutoSize = true;
+            this.Show_Password_Check_Box.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.Show_Password_Check_Box.ForeColor = System.Drawing.Color.Silver;
+            this.Show_Password_Check_Box.Location = new System.Drawing.Point(61, 152);
+            this.Show_Password_Check_Box.Name = "Show_Password_Check_Box";
+            this.Show_Password_Check_Box.Size = new System.Drawing.Size(182, 17);
+            this.Show_Password_Check_Box.TabIndex = 20;
+            this.Show_Password_Check_Box.Text = "Show Password اظهر كلمة السر";
+            this.Show_Password_Check_Box.UseVisualStyleBackColor = true;
+            this.Show_Password_Check_Box.CheckedChanged += new System.EventHandler(this.Show_Password_Check_Box_CheckedChanged);
             // 
             // Change_Password_Mdi_Form
             // 
@@ -148,6 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(531, 253);
+            this.Controls.Add(this.Show_Password_Check_Box);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.Add_a_New_Cat_Lbl);
             this.Controls.Add(this.guna2ControlBox1);
@@ -173,5 +188,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel Add_a_New_Cat_Lbl;
+        private System.Windows.Forms.CheckBox Show_Password_Check_Box;
     }
 }
