@@ -85,7 +85,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR
                 return;
             Turn_OFF_Side_Bar();
             Home_Picture_Box.Image = Resources.Home_ON_AR;
-            Open_Child_form(new Home_Form_AR());
+            Open_Child_form(new Home_Form_AR(Cashier));
         }
         void Turn_OFF_Side_Bar()
         {
@@ -115,7 +115,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR
                 return;
             Turn_OFF_Side_Bar();
             Raw_Picture_Box.Image = Resources.Raw_ON_AR;
-            Open_Child_form(new Raw_Materials_Form_AR());
+            Open_Child_form(new Raw_Materials_Form_AR(Cashier));
         }
 
         private void Relations_Picture_Box_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR
                 return;
             Turn_OFF_Side_Bar();
             Relations_Picture_Box.Image = Resources.Relations_ON_AR;
-            Open_Child_form(new Relations_Form_AR());
+            Open_Child_form(new Relations_Form_AR(Cashier));
         }
 
         private void Bills_Picture_Box_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR
                 return;
             Turn_OFF_Side_Bar();
             Bills_Picture_Box.Image = Resources.Bills_ON_AR;
-            Open_Child_form(new Bills_Form_AR());
+            Open_Child_form(new Bills_Form_AR(Cashier));
         }
 
 
