@@ -112,9 +112,9 @@
             this.Count_Label.Location = new System.Drawing.Point(49, 543);
             this.Count_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Count_Label.Name = "Count_Label";
-            this.Count_Label.Size = new System.Drawing.Size(64, 27);
+            this.Count_Label.Size = new System.Drawing.Size(109, 27);
             this.Count_Label.TabIndex = 14;
-            this.Count_Label.Text = "Count : ";
+            this.Count_Label.Text = "Count العدد :";
             // 
             // Count_Value_Label
             // 
