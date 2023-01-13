@@ -48,6 +48,7 @@
             this.Users_Label = new System.Windows.Forms.Label();
             this.Password_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Change_Password_Label = new System.Windows.Forms.Label();
+            this.Show_Password_Check_Box = new System.Windows.Forms.CheckBox();
             this.Left_Side_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_Picture_Box)).BeginInit();
             this.SuspendLayout();
@@ -309,7 +310,7 @@
             this.Password_Text_Box.Location = new System.Drawing.Point(311, 166);
             this.Password_Text_Box.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Password_Text_Box.Name = "Password_Text_Box";
-            this.Password_Text_Box.PasswordChar = '\0';
+            this.Password_Text_Box.PasswordChar = '*';
             this.Password_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Password_Text_Box.PlaceholderText = "";
             this.Password_Text_Box.SelectedText = "";
@@ -334,12 +335,25 @@
             this.Change_Password_Label.Text = "Change Password   تغيير كلمة السر";
             this.Change_Password_Label.Click += new System.EventHandler(this.Change_Password_Label_Click);
             // 
+            // Show_Password_Check_Box
+            // 
+            this.Show_Password_Check_Box.AutoSize = true;
+            this.Show_Password_Check_Box.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.Show_Password_Check_Box.ForeColor = System.Drawing.Color.Silver;
+            this.Show_Password_Check_Box.Location = new System.Drawing.Point(317, 223);
+            this.Show_Password_Check_Box.Name = "Show_Password_Check_Box";
+            this.Show_Password_Check_Box.Size = new System.Drawing.Size(182, 17);
+            this.Show_Password_Check_Box.TabIndex = 5;
+            this.Show_Password_Check_Box.Text = "Show Password اظهر كلمة السر";
+            this.Show_Password_Check_Box.UseVisualStyleBackColor = true;
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(575, 455);
+            this.Controls.Add(this.Show_Password_Check_Box);
             this.Controls.Add(this.Change_Password_Label);
             this.Controls.Add(this.Users_Label);
             this.Controls.Add(this.Language_Combo_Box);
@@ -385,5 +399,6 @@
         private System.Windows.Forms.Label Users_Label;
         private Guna.UI2.WinForms.Guna2TextBox Password_Text_Box;
         private System.Windows.Forms.Label Change_Password_Label;
+        private System.Windows.Forms.CheckBox Show_Password_Check_Box;
     }
 }
