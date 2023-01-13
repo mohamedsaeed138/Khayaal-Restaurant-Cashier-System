@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Khayaal_SAHM
+namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 {
     public partial class Change_Password_Mdi_Form : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace Khayaal_SAHM
+﻿namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 {
     partial class Login_Form
     {

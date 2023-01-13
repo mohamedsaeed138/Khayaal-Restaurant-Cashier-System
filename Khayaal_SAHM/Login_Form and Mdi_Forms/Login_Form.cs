@@ -10,7 +10,7 @@ enum Cases
     Log_In, Change_Password, Users
 }
 
-namespace Khayaal_SAHM
+namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 {
 
     public partial class Login_Form : Form
