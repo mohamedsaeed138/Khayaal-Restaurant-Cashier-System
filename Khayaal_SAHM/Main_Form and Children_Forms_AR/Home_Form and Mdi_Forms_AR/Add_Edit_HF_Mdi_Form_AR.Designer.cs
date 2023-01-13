@@ -212,7 +212,7 @@
             this.Add_a_New_Cat_Lbl.BackColor = System.Drawing.Color.Transparent;
             this.Add_a_New_Cat_Lbl.Font = new System.Drawing.Font("Tahoma", 8F);
             this.Add_a_New_Cat_Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(103, 197);
+            this.Add_a_New_Cat_Lbl.Location = new System.Drawing.Point(160, 197);
             this.Add_a_New_Cat_Lbl.Name = "Add_a_New_Cat_Lbl";
             this.Add_a_New_Cat_Lbl.Size = new System.Drawing.Size(82, 15);
             this.Add_a_New_Cat_Lbl.TabIndex = 12;
@@ -235,7 +235,7 @@
             this.Add_Category_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Add_Category_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Add_Category_Text_Box.HoverState.Parent = this.Add_Category_Text_Box;
-            this.Add_Category_Text_Box.Location = new System.Drawing.Point(6, 152);
+            this.Add_Category_Text_Box.Location = new System.Drawing.Point(69, 152);
             this.Add_Category_Text_Box.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Add_Category_Text_Box.Name = "Add_Category_Text_Box";
             this.Add_Category_Text_Box.PasswordChar = '\0';
@@ -273,7 +273,7 @@
             this.Add_Category_Button.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.Add_Category_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Add_Category_Button.HoverState.Parent = this.Add_Category_Button;
-            this.Add_Category_Button.Location = new System.Drawing.Point(193, 152);
+            this.Add_Category_Button.Location = new System.Drawing.Point(6, 152);
             this.Add_Category_Button.Name = "Add_Category_Button";
             this.Add_Category_Button.ShadowDecoration.Parent = this.Add_Category_Button;
             this.Add_Category_Button.Size = new System.Drawing.Size(55, 43);

@@ -183,7 +183,7 @@
             this.Add_Category_Button.CheckedState.Parent = this.Add_Category_Button;
             this.Add_Category_Button.CustomImages.Parent = this.Add_Category_Button;
             this.Add_Category_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Add_Category_Button.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Add_Category_Button.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.Add_Category_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.Add_Category_Button.HoverState.Parent = this.Add_Category_Button;
             this.Add_Category_Button.Location = new System.Drawing.Point(31, 186);
@@ -191,7 +191,7 @@
             this.Add_Category_Button.ShadowDecoration.Parent = this.Add_Category_Button;
             this.Add_Category_Button.Size = new System.Drawing.Size(55, 43);
             this.Add_Category_Button.TabIndex = 3;
-            this.Add_Category_Button.Text = "إضافة";
+            this.Add_Category_Button.Text = "أضف";
             this.Add_Category_Button.Click += new System.EventHandler(this.Add_Category_Button_Click);
             // 
             // guna2DragControl1
