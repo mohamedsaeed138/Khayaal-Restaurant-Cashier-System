@@ -93,49 +93,52 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 Tool_Tip.SetToolTip(Item.Controls["Information_Button"], Item.ToString());
 
                 Items_Nested_Flow_Layout_Panel.Controls.Add(Item);
-                Item.Remove_Event += (obj, e) =>
+                if (!Cashier)
                 {
-                    if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
+                    Item.Remove_Event += (obj, e) =>
                     {
-                        DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
-                        if (DialogResult.Yes == r)
+                        if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                         {
-                            Formatter.Check_Connection(conn);
+                            DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
+                            if (DialogResult.Yes == r)
+                            {
+                                Formatter.Check_Connection(conn);
 
-                            SqlCommand Delete = new SqlCommand($"DELETE CR.Items_Relations WHERE Item_Id={((Item_User_Control)obj).Id};\nDELETE CR.Items Where Id ={((Item_User_Control)obj).Id};   ", conn);
-                            conn.Open();
-                            Delete.ExecuteNonQuery();
-                            conn.Close();
-                            ((Item_User_Control)obj).Dispose();
-                            System.Windows.Forms.MessageBox.Show("Successfully Done!!");
+                                SqlCommand Delete = new SqlCommand($"DELETE CR.Items_Relations WHERE Item_Id={((Item_User_Control)obj).Id};\nDELETE CR.Items Where Id ={((Item_User_Control)obj).Id};   ", conn);
+                                conn.Open();
+                                Delete.ExecuteNonQuery();
+                                conn.Close();
+                                ((Item_User_Control)obj).Dispose();
+                                System.Windows.Forms.MessageBox.Show("Successfully Done!!");
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Finish Your Bill First!!");
                         }
 
-                    }
-                    else
+                    };
+                    Item.Edit_Event += (obj, e) =>
                     {
-                        MessageBox.Show("Finish Your Bill First!!");
-                    }
-
-                };
-                Item.Edit_Event += (obj, e) =>
-                {
-                    if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
-                    {
-                        Item_User_Control i = (Item_User_Control)obj;
-                        Add_Edit_HF_Mdi_Form form = new Add_Edit_HF_Mdi_Form(i.Name, $"{i.Price}", $"{i.Description}", $"{i.Category}", i.Image, i.Id);
-                        form.MdiParent = this.Owner;
-                        form.Referesh_Current_Form += (obj2, ef) =>
+                        if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                         {
-                            this.Reload();
-                        };
-                        form.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Finish Your Bill First!!");
-                    }
+                            Item_User_Control i = (Item_User_Control)obj;
+                            Add_Edit_HF_Mdi_Form form = new Add_Edit_HF_Mdi_Form(i.Name, $"{i.Price}", $"{i.Description}", $"{i.Category}", i.Image, i.Id);
+                            form.MdiParent = this.Owner;
+                            form.Referesh_Current_Form += (obj2, ef) =>
+                            {
+                                this.Reload();
+                            };
+                            form.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Finish Your Bill First!!");
+                        }
 
-                };
+                    };
+                }
                 Item.Add_Event += (obj, e) =>
                 {
                     foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())

@@ -1,4 +1,4 @@
-using Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Forms_AR;
+using Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms;
 using System;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -24,7 +24,7 @@ namespace Khayaal_SAHM
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Relations_Form_AR(true));
+            Application.Run(new Home_Form(true));
             //}
             //else
             //{
