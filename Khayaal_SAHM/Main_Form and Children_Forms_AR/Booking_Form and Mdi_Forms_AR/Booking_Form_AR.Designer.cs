@@ -160,10 +160,10 @@
             this.Table_Label.BackColor = System.Drawing.Color.Transparent;
             this.Table_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Table_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Table_Label.Location = new System.Drawing.Point(721, 17);
+            this.Table_Label.Location = new System.Drawing.Point(721, 11);
             this.Table_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Table_Label.Name = "Table_Label";
-            this.Table_Label.Size = new System.Drawing.Size(44, 22);
+            this.Table_Label.Size = new System.Drawing.Size(67, 30);
             this.Table_Label.TabIndex = 11;
             this.Table_Label.Text = "الطاولة";
             // 
@@ -174,10 +174,10 @@
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(628, 13);
+            this.From_Label.Location = new System.Drawing.Point(637, 11);
             this.From_Label.Margin = new System.Windows.Forms.Padding(2);
             this.From_Label.Name = "From_Label";
-            this.From_Label.Size = new System.Drawing.Size(20, 22);
+            this.From_Label.Size = new System.Drawing.Size(25, 26);
             this.From_Label.TabIndex = 12;
             this.From_Label.Text = "من";
             // 
@@ -188,10 +188,10 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(476, 17);
+            this.To_Label.Location = new System.Drawing.Point(497, 11);
             this.To_Label.Margin = new System.Windows.Forms.Padding(2);
             this.To_Label.Name = "To_Label";
-            this.To_Label.Size = new System.Drawing.Size(22, 22);
+            this.To_Label.Size = new System.Drawing.Size(32, 22);
             this.To_Label.TabIndex = 13;
             this.To_Label.Text = "إلى ";
             // 
@@ -413,10 +413,10 @@
             this.Delete_Table.BackColor = System.Drawing.Color.Transparent;
             this.Delete_Table.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete_Table.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Delete_Table.Location = new System.Drawing.Point(323, 21);
+            this.Delete_Table.Location = new System.Drawing.Point(314, 11);
             this.Delete_Table.Margin = new System.Windows.Forms.Padding(2);
             this.Delete_Table.Name = "Delete_Table";
-            this.Delete_Table.Size = new System.Drawing.Size(64, 18);
+            this.Delete_Table.Size = new System.Drawing.Size(89, 25);
             this.Delete_Table.TabIndex = 20;
             this.Delete_Table.Text = "الطاولة حذف";
             // 
