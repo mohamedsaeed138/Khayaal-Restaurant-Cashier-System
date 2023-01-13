@@ -8,13 +8,14 @@ namespace Khayaal_SAHM
     public partial class Loading_Screen_Form : Form
     {
         private double count = 0;
-        SoundPlayer Intro = new SoundPlayer($"{Environment.CurrentDirectory}\\Sound_Track\\Intro_Music.wav");
+        
 
         public Loading_Screen_Form()
         {
             InitializeComponent();
-
-            Intro.Play();
+            string filename = $"{Environment.CurrentDirectory}\\Intro Video\\Last Intro.mp4";
+            axWindowsMediaPlayer1.uiMode = "none";
+            axWindowsMediaPlayer1.URL= filename;
         }
 
 
@@ -23,18 +24,16 @@ namespace Khayaal_SAHM
         private void timer1_Tick(object sender, EventArgs e)
         {
             count++;
-            if (count == 5)
+           
+            if (count == 6)
             {
-                pictureBox1.Dispose();
-            }
-            else if (count == 7)
-            {
+                axWindowsMediaPlayer1.Dispose();
                 Thread Login_Start_Thread = new Thread(Start_A_Login_Form);
                 Login_Start_Thread.SetApartmentState(ApartmentState.STA);
                 Login_Start_Thread.Start();
                 Thread.Sleep(100);
                 timer1.Enabled = false;
-                Intro.Stop();
+                
                 this.Close();
             }
         }
