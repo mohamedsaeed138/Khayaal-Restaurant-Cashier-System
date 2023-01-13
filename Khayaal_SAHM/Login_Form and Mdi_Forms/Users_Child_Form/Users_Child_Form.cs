@@ -33,7 +33,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
         public void Fill_Category_Combo_Box()
         {
-            Category_Combo_Box.DataSource = null;
+            Jop_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
             SqlDataAdapter da2 = new SqlDataAdapter($"SELECT [Category] FROM CR.Raw_Materials Group BY [Category] ORDER BY [Category] ASC;", conn);
             DataTable dt2 = new DataTable();
@@ -43,9 +43,9 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             DataRow row2 = dt2.NewRow();
             dt2.Rows.InsertAt(row2, 0);
             row2["Category"] = "All";
-            Category_Combo_Box.DataSource = dt2;
-            Category_Combo_Box.DisplayMember = "Category";
-            Category_Combo_Box.Text = "All";
+            Jop_Combo_Box.DataSource = dt2;
+            Jop_Combo_Box.DisplayMember = "Category";
+            Jop_Combo_Box.Text = "All";
         }
 
 
@@ -84,7 +84,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         void Choose_Query()
         {
 
-            string Category = Category_Combo_Box.Text;
+            string Category = Jop_Combo_Box.Text;
 
         }
 
