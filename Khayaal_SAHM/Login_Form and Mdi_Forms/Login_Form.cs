@@ -50,11 +50,16 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
                     bool Owner_or_Developer = Type == "Owner مالك" || Type == "Developer مطور" ? true : false;
                     if (Case == Cases.Log_In)
                     {
+                        string Date = Formatter.Date_Formating(new DateTime(DateTime.Now.Year - 2, 1, 1));
+
                         Thread Mainformthread;
-                        SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(N'{Username}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
+
+                        SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(N'{Username}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\nDELETE CR.Bills WHERE [Date]<'{Date}';\nDELETE CR.Bills_Details WHERE [Date]<'{Date}';\nDELETE CR.Purchases WHERE [Date]<'{Date}';\n\r", LoginCon);
+
                         LoginCon.Open();
                         loginCOM.ExecuteNonQuery();
                         LoginCon.Close();
+
                         if (Language_Combo_Box.SelectedIndex == 0)
                             Mainformthread = new Thread(() => Application.Run(new Main_Form_AR()));
                         else
