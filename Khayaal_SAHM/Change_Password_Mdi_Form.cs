@@ -75,7 +75,7 @@ namespace Khayaal_SAHM
         {
             if (e.KeyChar == '\r')
                 Edit_Button_Click(sender, e);
-            else if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && (Change_Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            else if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Change_Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
                 e.Handled = true;
         }
     }
