@@ -25,7 +25,7 @@ namespace Khayaal_SAHM
         {
             count++;
 
-            if (count == 6)
+            if (count == 7)
             {
                 axWindowsMediaPlayer1.Dispose();
                 Thread Login_Start_Thread = new Thread(Start_A_Login_Form);
