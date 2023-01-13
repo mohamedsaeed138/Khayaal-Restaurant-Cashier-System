@@ -295,6 +295,11 @@
     <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form and Children_Forms\Main_Form2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main_Form.resx</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form_AR.cs">
       <SubType>Form</SubType>
     </Compile>

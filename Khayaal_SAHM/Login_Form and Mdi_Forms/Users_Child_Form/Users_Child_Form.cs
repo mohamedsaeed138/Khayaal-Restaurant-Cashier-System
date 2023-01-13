@@ -25,9 +25,8 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         }
         void Reload()
         {
-            Sorting_Combo_Box.SelectedIndex = 0;
+
             Fill_Category_Combo_Box();
-            Fill_Table($"SELECT [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials ORDER BY [Name]");
 
         }
 
@@ -84,41 +83,8 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         }
         void Choose_Query()
         {
-            string Qty = Formatter.String(Qty_Search_Text_Box.Text);
+
             string Category = Category_Combo_Box.Text;
-            string Search = Formatter.String(Search_Text_Box.Text);
-            if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty == "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category],[Qty] ,[Id] from CR.Raw_Materials ORDER BY [Name]");
-            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty == "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials ORDER BY [{Sorting_Combo_Box.Text}]");
-            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty != "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Qty] <= {Qty} ORDER BY Name ASC;");
-            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text == "All" && Qty != "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] ,[Category]  ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty}  ORDER BY [{Sorting_Combo_Box.Text}]");
-            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty == "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category]  , [Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' ORDER BY [Name] ASC");
-            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty == "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] , [Category] , [Qty]  ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' ORDER BY [{Sorting_Combo_Box.Text}]");
-            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty != "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] , [Qty]  ,[Id] from CR.Raw_Materials  WHERE   [Category]=N'{Category}' AND [Qty] <= {Qty} ORDER BY [Name] ASC");
-            else if (Search_Text_Box.Text == "" && Category_Combo_Box.Text != "All" && Qty != "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name]  , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty}  AND [Category]=N'{Category}' ORDER BY [{Sorting_Combo_Box.Text}]");
-            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty == "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty]  ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE N'%{Search}%'  ORDER BY [Name] ASC ");
-            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty == "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] , [Category] , [Qty] ,[Id] from CR.Raw_Materials WHERE  [Name] LIKE N'%{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
-            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty != "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
-            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text == "All" && Qty != "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
-            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty == "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
-            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty == "" && Sorting_Combo_Box.Text != "Name")
-                Fill_Table($"select [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials WHERE [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [{Sorting_Combo_Box.Text}]");
-            else if (Search_Text_Box.Text != "" && Category_Combo_Box.Text != "All" && Qty != "" && Sorting_Combo_Box.Text == "Name")
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Category]=N'{Category}' AND [Name] LIKE N'%{Search}%' ORDER BY [Name] ASC");
-            else
-                Fill_Table($"select [Name] , [Category] ,[Qty] ,[Id] from CR.Raw_Materials  WHERE [Qty] <= {Qty} AND [Name] LIKE N'%{Search}%'  ORDER BY [{Sorting_Combo_Box.Text}]");
 
         }
 
@@ -137,15 +103,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             Choose_Query();
         }
 
-        private void Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Search_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-           || (Search_Text_Box.Text.Length > 1 && Search_Text_Box.Text[Search_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Search_Text_Box.Text.Length == 0))
 
-            {
-                e.Handled = true;
-            }
-        }
 
         private void Table_Croll_Bar_Scroll(object sender, ScrollEventArgs e)
         {
@@ -327,6 +285,29 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_Minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void Btn_Maximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
             }
         }
     }
