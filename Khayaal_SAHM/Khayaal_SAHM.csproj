@@ -274,6 +274,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Change_Password_Mdi_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_Password_Mdi_Form.Designer.cs">
+      <DependentUpon>Change_Password_Mdi_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
@@ -505,6 +511,9 @@
     <Content Include="Sound_Track\Intro_Music.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Change_Password_Mdi_Form.resx">
+      <DependentUpon>Change_Password_Mdi_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loading_Screen_Form.resx">
       <DependentUpon>Loading_Screen_Form.cs</DependentUpon>
     </EmbeddedResource>

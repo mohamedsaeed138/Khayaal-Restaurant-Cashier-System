@@ -163,6 +163,7 @@
             this.Username_Text_Box.Size = new System.Drawing.Size(255, 48);
             this.Username_Text_Box.TabIndex = 1;
             this.Username_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Username_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Username_Text_Box_KeyPress);
             // 
             // Username_Label
             // 
@@ -207,7 +208,7 @@
             this.Login_Button.Size = new System.Drawing.Size(166, 37);
             this.Login_Button.TabIndex = 4;
             this.Login_Button.Text = "Login";
-            this.Login_Button.Click += new System.EventHandler(this.Login_B_Click_1);
+            this.Login_Button.Click += new System.EventHandler(this.Login_Button_Click);
             // 
             // Close_B
             // 
@@ -222,7 +223,7 @@
             this.Close_B.Size = new System.Drawing.Size(26, 24);
             this.Close_B.TabIndex = 6;
             this.Close_B.TabStop = false;
-            this.Close_B.Click += new System.EventHandler(this.Close_B_Click);
+            this.Close_B.Click += new System.EventHandler(this.Close_Button_Click);
             // 
             // guna2Elipse1
             // 
@@ -331,6 +332,7 @@
             this.Change_Password_Label.Size = new System.Drawing.Size(253, 21);
             this.Change_Password_Label.TabIndex = 5;
             this.Change_Password_Label.Text = "Change Password   تغيير كلمة السر";
+            this.Change_Password_Label.Click += new System.EventHandler(this.Change_Password_Label_Click);
             // 
             // Login_Form
             // 
