@@ -18,19 +18,19 @@ namespace Khayaal_SAHM
 .Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
 .Select(nic => nic.GetPhysicalAddress().ToString())
 .FirstOrDefault();
-            //if ("" == Mac_Address&&DateTime.Now < new DateTime(2023, 1, 5))
-            //{
+            if (DateTime.Now < new DateTime(2023, 2, 23)/*&& Mac_Address== "" */ )
+            {
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loading_Screen_Form());
-            //}
-            //else
-            //{
-            //    MessageBox.Show("For  Activation \nCall +201228552872 ");
-            //}
-            //
-            //
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Loading_Screen_Form());
+            }
+            else
+            {
+                MessageBox.Show("For  Activation \nCall +201228552872 ");
+            }
+
+
 
         }
 
