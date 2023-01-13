@@ -67,7 +67,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             if (Jop == "All الجميع")
                 Fill_Table("SELECT * FROM CR.Users Where Type!=N'Developer مطور' Order By Type desc,Name ASC;");
             else
-                Fill_Table($"SELECT * FROM CR.Users Where Type!=N'{Jop}' Order By Type desc,Name ASC;");
+                Fill_Table($"SELECT * FROM CR.Users Where Type==N'{Jop}'  Order By Type desc,Name ASC;");
 
         }
 
