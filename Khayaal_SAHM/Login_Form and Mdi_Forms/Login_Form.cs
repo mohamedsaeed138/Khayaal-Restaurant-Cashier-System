@@ -71,7 +71,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
                     }
                     else if (Case == Cases.Change_Password)
                     {
-                        Add_Edit_User_Mdi_Form form = new Change_Password_Mdi_Form(Username);
+                        Change_Password_Mdi_Form form = new Change_Password_Mdi_Form(Username);
                         form.MdiParent = this.Owner;
 
                         form.ShowDialog();

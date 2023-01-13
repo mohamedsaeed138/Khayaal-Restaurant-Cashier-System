@@ -262,7 +262,10 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
         private void Add_Button_Click_1(object sender, EventArgs e)
         {
+            Add_Edit_User_Mdi_Form form = new Add_Edit_User_Mdi_Form();
+            form.MdiParent = this.Owner;
 
+            form.ShowDialog();
         }
 
         private void Jop_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
