@@ -14,9 +14,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
     public partial class Home_Form_AR : Form
     {
         static System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(Connection_String.Value); public EventHandler On_Select = null;
-        public Home_Form_AR()
+        bool Cashier = false;
+        public Home_Form_AR(bool cashier = false)
         {
             InitializeComponent();
+            Cashier = cashier;
             Reload();
 
             Date_Time_Timer.Interval = 1000;

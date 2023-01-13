@@ -12,14 +12,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
     public partial class Home_Form : Form
     {
         static System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(Connection_String.Value); public EventHandler On_Select = null;
-        public Home_Form()
+        bool Cashier = false;
+        public Home_Form(bool cashier = false)
         {
             InitializeComponent();
+            Cashier = cashier;
             Reload();
 
             Date_Time_Timer.Interval = 1000;
             Date_Time_Timer.Tick += new EventHandler(Refreash_Time);
             Date_Time_Timer.Enabled = true;
+
         }
         void Reload()
         {
