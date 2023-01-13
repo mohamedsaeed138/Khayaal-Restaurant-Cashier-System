@@ -41,7 +41,7 @@ namespace Khayaal_SAHM
 
         static void Start_A_Login_Form()
         {
-            Application.Run(new Login_Form());
+            Application.Run(new Login_Form_and_Mdi_Forms.Login_Form());
 
         }
 
