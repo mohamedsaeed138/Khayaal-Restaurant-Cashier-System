@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -17,8 +18,9 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         {
             InitializeComponent();
             Reload();
+
         }
-        void Reload()
+        public void Reload()
         {
             Fill_Table("SELECT * FROM CR.Users Where Type!=N'Developer مطور' Order By Type desc,Name ASC;");
             Jop_Combo_Box.SelectedIndex = 0;
@@ -43,18 +45,18 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 conn.Close();
             }
             conn.Close();
-            Raw_Material_Table.Rows.Clear();
+            Users_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
 
-                Raw_Material_Table.Rows.Add((string)row[0], (string)row[1], (double)row[2], (int)row[3]);
+                Users_Table.Rows.Add((string)row[3], (string)row[3], (string)row[0], (string)row[1]);
             }
             try
             {
-                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Users_Table.Rows.Count - 1;
             }
             catch { }
-            Count_Value_Label.Text = $"{Raw_Material_Table.Rows.Count}";
+            Count_Value_Label.Text = $"{Users_Table.Rows.Count}";
         }
         void Choose_Query()
         {
@@ -63,7 +65,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             if (Jop == "All الجميع")
                 Fill_Table("SELECT * FROM CR.Users Where Type!=N'Developer مطور' Order By Type desc,Name ASC;");
             else
-                Fill_Table($"SELECT * FROM CR.Users Where Type==N'{Jop}'  Order By Type desc,Name ASC;");
+                Fill_Table($"SELECT * FROM CR.Users Where Type=N'{Jop}'  Order By Type desc,Name ASC;");
 
         }
 
@@ -88,9 +90,9 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         {
             try
             {
-                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Users_Table.Rows.Count - 1;
 
-                Raw_Material_Table.FirstDisplayedScrollingRowIndex = Raw_Material_Table.Rows[e.NewValue].Index;
+                Users_Table.FirstDisplayedScrollingRowIndex = Users_Table.Rows[e.NewValue].Index;
             }
             catch { }
 
@@ -100,7 +102,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         {
             try
             {
-                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Users_Table.Rows.Count - 1;
             }
             catch { }
         }
@@ -109,7 +111,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         {
             try
             {
-                Table_Croll_Bar.Maximum = Raw_Material_Table.Rows.Count - 1;
+                Table_Croll_Bar.Maximum = Users_Table.Rows.Count - 1;
             }
             catch { }
         }
@@ -121,47 +123,39 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
 
 
-        private void Add_Button_Click(object sender, EventArgs e)
-        {
-            //Add_Edit_User_Mdi_Form form = new Add_Edit_RMF_Mdi_Form();
-            //form.MdiParent = this.Owner;
-            //form.Referesh_Current_Form += (obj, ef) =>
-            //{
-            //    this.Reload();
-            //};
-            //form.ShowDialog();
-        }
+
 
         private void Raw_Material_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                DataGridViewRow row = Raw_Material_Table.Rows[e.RowIndex];
+                DataGridViewRow row = Users_Table.Rows[e.RowIndex];
                 string name = (string)row.Cells[0].Value;
-                string category = (string)row.Cells[1].Value;
-                int id = (int)row.Cells[3].Value;
-                if (Raw_Material_Table.Columns[e.ColumnIndex].Index == 4)
+                string jop = (string)row.Cells[1].Value;
+                string username = (string)row.Cells[2].Value;
+                string password = (string)row.Cells[3].Value;
+                if (Users_Table.Columns[e.ColumnIndex].Index == 4)
                 {
-                    //Add_Edit_User_Mdi_Form form = new Add_Edit_RMF_Mdi_Form(name, category, id);
-                    //form.MdiParent = this.Owner;
-                    //form.Referesh_Current_Form += (obj2, ef) =>
-                    //{
-                    //    this.Reload();
-                    //};
-                    //form.ShowDialog();
+                    Add_Edit_User_Mdi_Form form = new Add_Edit_User_Mdi_Form(username, jop, name, password);
+                    form.MdiParent = this.Owner;
+                    form.Referesh_Current_Form += (obj2, ef) =>
+                    {
+                        ((Users_Child_Form)this.Owner.MdiChildren[0]).Reload();
+                    };
+                    form.ShowDialog();
                 }
-                else if (Raw_Material_Table.Columns[e.ColumnIndex].Index == 5)
+                else if (Users_Table.Columns[e.ColumnIndex].Index == 5)
                 {
                     try
                     {
-                        string Query = $"DELETE CR.Items_Relations WHERE Raw_Id={id};\nDELETE CR.Raw_Materials Where Id={id};";
+                        string Query = $"DELETE CR.Users WHERE Username={username};";
                         Formatter.Check_Connection(conn);
                         SqlCommand Delete = new SqlCommand(Query, conn);
                         conn.Open();
                         Delete.ExecuteNonQuery();
                         conn.Close();
                         Choose_Query();
-                        MessageBox.Show("Successfully Done!");
+                        MessageBox.Show("Successfully Done! !تم بنجاح  ");
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
@@ -178,17 +172,17 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             Work_Sheet = Work_Book.Sheets["Sheet1"];
             Work_Sheet = Work_Book.ActiveSheet;
 
-            for (int i = 0; i < Raw_Material_Table.ColumnCount; i++)
+            for (int i = 0; i < Users_Table.ColumnCount; i++)
             {
-                Work_Sheet.Cells[1, i + 1] = Raw_Material_Table.Columns[i].HeaderText;
+                Work_Sheet.Cells[1, i + 1] = Users_Table.Columns[i].HeaderText;
             }
 
 
-            for (int j = 0; j < Raw_Material_Table.Rows.Count; j++)
+            for (int j = 0; j < Users_Table.Rows.Count; j++)
             {
-                for (int i = 0; i < Raw_Material_Table.Columns.Count; i++)
+                for (int i = 0; i < Users_Table.Columns.Count; i++)
                 {
-                    Work_Sheet.Cells[j + 2, i + 1] = Raw_Material_Table.Rows[j].Cells[i].Value.ToString();
+                    Work_Sheet.Cells[j + 2, i + 1] = Users_Table.Rows[j].Cells[i].Value.ToString();
                 }
 
             }
@@ -208,10 +202,10 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 Work_Sheet = Work_Book.Sheets["Sheet1"];
                 Work_Sheet = Work_Book.ActiveSheet;
 
-                for (int i = 0; i < Raw_Material_Table.ColumnCount - 2; i++)
+                for (int i = 0; i < Users_Table.ColumnCount - 2; i++)
                 {
 
-                    Work_Sheet.Cells[1, i + 1] = Raw_Material_Table.Columns[i].HeaderText;
+                    Work_Sheet.Cells[1, i + 1] = Users_Table.Columns[i].HeaderText;
 
 
 
@@ -219,12 +213,12 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 }
 
 
-                for (int j = 0; j < Raw_Material_Table.Rows.Count; j++)
+                for (int j = 0; j < Users_Table.Rows.Count; j++)
                 {
-                    for (int i = 0; i < Raw_Material_Table.Columns.Count - 2; i++)
+                    for (int i = 0; i < Users_Table.Columns.Count - 2; i++)
                     {
 
-                        Work_Sheet.Cells[j + 2, i + 1] = Raw_Material_Table.Rows[j].Cells[i].Value.ToString();
+                        Work_Sheet.Cells[j + 2, i + 1] = Users_Table.Rows[j].Cells[i].Value.ToString();
 
                     }
 
@@ -264,7 +258,11 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         {
             Add_Edit_User_Mdi_Form form = new Add_Edit_User_Mdi_Form();
             form.MdiParent = this.Owner;
-
+            form.Referesh_Current_Form += (obj, ef) =>
+            {
+                foreach (var Child in this.MdiParent.MdiChildren.OfType<Users_Child_Form>())
+                    Child.Reload();
+            };
             form.ShowDialog();
         }
 

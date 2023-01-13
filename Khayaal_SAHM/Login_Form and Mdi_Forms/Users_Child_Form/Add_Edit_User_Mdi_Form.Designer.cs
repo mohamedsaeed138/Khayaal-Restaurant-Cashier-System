@@ -106,6 +106,7 @@
             this.Add_Edit_Button.Size = new System.Drawing.Size(242, 49);
             this.Add_Edit_Button.TabIndex = 2;
             this.Add_Edit_Button.Text = "Add أَضف";
+            this.Add_Edit_Button.Click += new System.EventHandler(this.Add_Edit_Button_Click);
             // 
             // guna2DragControl1
             // 
@@ -216,6 +217,7 @@
             this.Name_Text_Box.Size = new System.Drawing.Size(405, 43);
             this.Name_Text_Box.TabIndex = 22;
             this.Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_Text_Box_KeyPress);
             // 
             // guna2HtmlLabel3
             // 
