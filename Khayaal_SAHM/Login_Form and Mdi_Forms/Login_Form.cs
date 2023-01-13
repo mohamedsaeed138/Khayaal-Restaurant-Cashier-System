@@ -54,7 +54,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 
                         Thread Mainformthread;
 
-                        SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(N'{Username}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\nDELETE CR.Bills WHERE [Date]<'{Date}';\nDELETE CR.Bills_Details WHERE [Date]<'{Date}';\nDELETE CR.Purchases WHERE [Date]<'{Date}';\n\r", LoginCon);
+                        SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(CR.Get_Name_By_Username(N'{Username}'), GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\nDELETE CR.Bills WHERE [Date]<'{Date}';\nDELETE CR.Bills_Details WHERE [Date]<'{Date}';\nDELETE CR.Purchases WHERE [Date]<'{Date}';\n\r", LoginCon);
 
                         LoginCon.Open();
                         loginCOM.ExecuteNonQuery();
