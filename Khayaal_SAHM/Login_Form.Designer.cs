@@ -64,7 +64,7 @@
             this.Left_Side_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Left_Side_Panel.Name = "Left_Side_Panel";
             this.Left_Side_Panel.ShadowDecoration.Parent = this.Left_Side_Panel;
-            this.Left_Side_Panel.Size = new System.Drawing.Size(301, 420);
+            this.Left_Side_Panel.Size = new System.Drawing.Size(301, 455);
             this.Left_Side_Panel.TabIndex = 0;
             // 
             // In_System_AR_Label
@@ -73,7 +73,7 @@
             this.In_System_AR_Label.BackColor = System.Drawing.Color.Transparent;
             this.In_System_AR_Label.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
             this.In_System_AR_Label.ForeColor = System.Drawing.Color.White;
-            this.In_System_AR_Label.Location = new System.Drawing.Point(71, 196);
+            this.In_System_AR_Label.Location = new System.Drawing.Point(71, 213);
             this.In_System_AR_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.In_System_AR_Label.Name = "In_System_AR_Label";
             this.In_System_AR_Label.Size = new System.Drawing.Size(197, 42);
@@ -86,7 +86,7 @@
             this.Hello_AR_Label.BackColor = System.Drawing.Color.Transparent;
             this.Hello_AR_Label.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
             this.Hello_AR_Label.ForeColor = System.Drawing.Color.White;
-            this.Hello_AR_Label.Location = new System.Drawing.Point(159, 148);
+            this.Hello_AR_Label.Location = new System.Drawing.Point(159, 165);
             this.Hello_AR_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Hello_AR_Label.Name = "Hello_AR_Label";
             this.Hello_AR_Label.Size = new System.Drawing.Size(139, 42);
@@ -99,7 +99,7 @@
             this.In_System_EN_Label.BackColor = System.Drawing.Color.Transparent;
             this.In_System_EN_Label.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.In_System_EN_Label.ForeColor = System.Drawing.Color.White;
-            this.In_System_EN_Label.Location = new System.Drawing.Point(46, 298);
+            this.In_System_EN_Label.Location = new System.Drawing.Point(53, 328);
             this.In_System_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.In_System_EN_Label.Name = "In_System_EN_Label";
             this.In_System_EN_Label.Size = new System.Drawing.Size(236, 41);
@@ -112,7 +112,7 @@
             this.Hello_EN_Label.BackColor = System.Drawing.Color.Transparent;
             this.Hello_EN_Label.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.Hello_EN_Label.ForeColor = System.Drawing.Color.White;
-            this.Hello_EN_Label.Location = new System.Drawing.Point(15, 253);
+            this.Hello_EN_Label.Location = new System.Drawing.Point(22, 283);
             this.Hello_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Hello_EN_Label.Name = "Hello_EN_Label";
             this.Hello_EN_Label.Size = new System.Drawing.Size(188, 41);
@@ -201,7 +201,7 @@
             this.Login_Button.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_Button.ForeColor = System.Drawing.Color.White;
             this.Login_Button.HoverState.Parent = this.Login_Button;
-            this.Login_Button.Location = new System.Drawing.Point(359, 305);
+            this.Login_Button.Location = new System.Drawing.Point(359, 328);
             this.Login_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Login_Button.Name = "Login_Button";
             this.Login_Button.ShadowDecoration.Parent = this.Login_Button;
@@ -239,7 +239,7 @@
             this.Language_Label.BackColor = System.Drawing.Color.Transparent;
             this.Language_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Language_Label.ForeColor = System.Drawing.Color.White;
-            this.Language_Label.Location = new System.Drawing.Point(334, 225);
+            this.Language_Label.Location = new System.Drawing.Point(334, 253);
             this.Language_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Language_Label.Name = "Language_Label";
             this.Language_Label.Size = new System.Drawing.Size(204, 21);
@@ -265,7 +265,7 @@
             "عربي",
             "EN"});
             this.Language_Combo_Box.ItemsAppearance.Parent = this.Language_Combo_Box;
-            this.Language_Combo_Box.Location = new System.Drawing.Point(338, 253);
+            this.Language_Combo_Box.Location = new System.Drawing.Point(338, 279);
             this.Language_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Language_Combo_Box.Name = "Language_Combo_Box";
             this.Language_Combo_Box.ShadowDecoration.Parent = this.Language_Combo_Box;
@@ -280,7 +280,7 @@
             this.Users_Label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Users_Label.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Users_Label.ForeColor = System.Drawing.Color.Silver;
-            this.Users_Label.Location = new System.Drawing.Point(377, 396);
+            this.Users_Label.Location = new System.Drawing.Point(377, 416);
             this.Users_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Users_Label.Name = "Users_Label";
             this.Users_Label.Size = new System.Drawing.Size(137, 21);
@@ -309,7 +309,7 @@
             this.Password_Text_Box.Location = new System.Drawing.Point(311, 166);
             this.Password_Text_Box.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Password_Text_Box.Name = "Password_Text_Box";
-            this.Password_Text_Box.PasswordChar = '*';
+            this.Password_Text_Box.PasswordChar = '\0';
             this.Password_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Password_Text_Box.PlaceholderText = "";
             this.Password_Text_Box.SelectedText = "";
@@ -326,7 +326,7 @@
             this.Change_Password_Label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Change_Password_Label.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Change_Password_Label.ForeColor = System.Drawing.Color.Silver;
-            this.Change_Password_Label.Location = new System.Drawing.Point(313, 364);
+            this.Change_Password_Label.Location = new System.Drawing.Point(313, 384);
             this.Change_Password_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Change_Password_Label.Name = "Change_Password_Label";
             this.Change_Password_Label.Size = new System.Drawing.Size(253, 21);
@@ -339,7 +339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(575, 420);
+            this.ClientSize = new System.Drawing.Size(575, 455);
             this.Controls.Add(this.Change_Password_Label);
             this.Controls.Add(this.Users_Label);
             this.Controls.Add(this.Language_Combo_Box);
