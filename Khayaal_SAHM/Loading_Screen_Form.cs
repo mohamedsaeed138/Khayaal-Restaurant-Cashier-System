@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Media;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -8,14 +7,15 @@ namespace Khayaal_SAHM
     public partial class Loading_Screen_Form : Form
     {
         private double count = 0;
-        
+
 
         public Loading_Screen_Form()
         {
             InitializeComponent();
             string filename = $"{Environment.CurrentDirectory}\\Intro Video\\Last Intro.mp4";
             axWindowsMediaPlayer1.uiMode = "none";
-            axWindowsMediaPlayer1.URL= filename;
+            axWindowsMediaPlayer1.URL = filename;
+
         }
 
 
@@ -24,7 +24,7 @@ namespace Khayaal_SAHM
         private void timer1_Tick(object sender, EventArgs e)
         {
             count++;
-           
+
             if (count == 6)
             {
                 axWindowsMediaPlayer1.Dispose();
@@ -33,7 +33,7 @@ namespace Khayaal_SAHM
                 Login_Start_Thread.Start();
                 Thread.Sleep(100);
                 timer1.Enabled = false;
-                
+
                 this.Close();
             }
         }

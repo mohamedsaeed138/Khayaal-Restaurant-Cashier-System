@@ -23,6 +23,7 @@ namespace Khayaal_SAHM
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+
                 Application.Run(new Loading_Screen_Form());
             }
             else

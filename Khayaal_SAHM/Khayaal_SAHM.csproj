@@ -523,9 +523,6 @@
     <Content Include="Intro Video\Last Intro.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sound_Track\Intro_Music.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <EmbeddedResource Include="Login_Form and Mdi_Forms\Change_Password_Mdi_Form.resx">
       <DependentUpon>Change_Password_Mdi_Form.cs</DependentUpon>
     </EmbeddedResource>
