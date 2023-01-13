@@ -130,5 +130,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
         {
             Password_Text_Box.UseSystemPasswordChar = Password_Text_Box.UseSystemPasswordChar == false ? true : false;
         }
+
+
     }
 }

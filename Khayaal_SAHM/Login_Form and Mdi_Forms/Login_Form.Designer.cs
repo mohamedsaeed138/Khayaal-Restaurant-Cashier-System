@@ -162,7 +162,7 @@
             this.Username_Text_Box.SelectedText = "";
             this.Username_Text_Box.ShadowDecoration.Parent = this.Username_Text_Box;
             this.Username_Text_Box.Size = new System.Drawing.Size(255, 48);
-            this.Username_Text_Box.TabIndex = 1;
+            this.Username_Text_Box.TabIndex = 0;
             this.Username_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Username_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Username_Text_Box_KeyPress);
             // 
@@ -316,7 +316,7 @@
             this.Password_Text_Box.SelectedText = "";
             this.Password_Text_Box.ShadowDecoration.Parent = this.Password_Text_Box;
             this.Password_Text_Box.Size = new System.Drawing.Size(255, 48);
-            this.Password_Text_Box.TabIndex = 2;
+            this.Password_Text_Box.TabIndex = 1;
             this.Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Password_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
@@ -343,7 +343,7 @@
             this.Show_Password_Check_Box.Location = new System.Drawing.Point(317, 223);
             this.Show_Password_Check_Box.Name = "Show_Password_Check_Box";
             this.Show_Password_Check_Box.Size = new System.Drawing.Size(182, 17);
-            this.Show_Password_Check_Box.TabIndex = 5;
+            this.Show_Password_Check_Box.TabIndex = 2;
             this.Show_Password_Check_Box.Text = "Show Password اظهر كلمة السر";
             this.Show_Password_Check_Box.UseVisualStyleBackColor = true;
             this.Show_Password_Check_Box.CheckedChanged += new System.EventHandler(this.Show_Password_Check_Box_CheckedChanged);

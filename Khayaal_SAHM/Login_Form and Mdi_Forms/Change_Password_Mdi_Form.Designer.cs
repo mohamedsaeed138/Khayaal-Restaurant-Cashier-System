@@ -95,7 +95,7 @@
             this.Add_Raw_Button.Name = "Add_Raw_Button";
             this.Add_Raw_Button.ShadowDecoration.Parent = this.Add_Raw_Button;
             this.Add_Raw_Button.Size = new System.Drawing.Size(242, 49);
-            this.Add_Raw_Button.TabIndex = 1;
+            this.Add_Raw_Button.TabIndex = 2;
             this.Add_Raw_Button.Text = "Edit تعديل";
             this.Add_Raw_Button.Click += new System.EventHandler(this.Edit_Button_Click);
             // 
@@ -152,7 +152,7 @@
             this.Show_Password_Check_Box.Location = new System.Drawing.Point(61, 152);
             this.Show_Password_Check_Box.Name = "Show_Password_Check_Box";
             this.Show_Password_Check_Box.Size = new System.Drawing.Size(182, 17);
-            this.Show_Password_Check_Box.TabIndex = 20;
+            this.Show_Password_Check_Box.TabIndex = 1;
             this.Show_Password_Check_Box.Text = "Show Password اظهر كلمة السر";
             this.Show_Password_Check_Box.UseVisualStyleBackColor = true;
             this.Show_Password_Check_Box.CheckedChanged += new System.EventHandler(this.Show_Password_Check_Box_CheckedChanged);
