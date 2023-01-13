@@ -347,7 +347,7 @@
             this.Add_Button.ShadowDecoration.Parent = this.Add_Button;
             this.Add_Button.Size = new System.Drawing.Size(151, 36);
             this.Add_Button.TabIndex = 22;
-            this.Add_Button.Text = "Add Relation";
+            this.Add_Button.Text = "Add";
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // Export_Button

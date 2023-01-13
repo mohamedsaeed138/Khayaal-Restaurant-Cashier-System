@@ -458,7 +458,7 @@
             this.Add_Booking_Button.CheckedState.Parent = this.Add_Booking_Button;
             this.Add_Booking_Button.CustomImages.Parent = this.Add_Booking_Button;
             this.Add_Booking_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Add_Booking_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Booking_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Add_Booking_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Booking_Button.HoverState.Parent = this.Add_Booking_Button;
             this.Add_Booking_Button.Location = new System.Drawing.Point(780, 42);
