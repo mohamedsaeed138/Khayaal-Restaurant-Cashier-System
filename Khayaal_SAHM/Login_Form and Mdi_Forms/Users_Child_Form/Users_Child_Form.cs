@@ -12,11 +12,6 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
 
 
-        private void Search_Text_Box_TextChanged(object sender, EventArgs e)
-        {
-
-            Choose_Query();
-        }
 
         public Users_Child_Form()
         {
@@ -25,28 +20,12 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         }
         void Reload()
         {
-
-            Fill_Category_Combo_Box();
-
+            Fill_Table("SELECT * FROM CR.Users Where Type!=N'Developer مطور' Order By Type desc,Name ASC;");
+            Jop_Combo_Box.SelectedIndex = 0;
         }
 
 
-        public void Fill_Category_Combo_Box()
-        {
-            Jop_Combo_Box.DataSource = null;
-            Formatter.Check_Connection(conn);
-            SqlDataAdapter da2 = new SqlDataAdapter($"SELECT [Category] FROM CR.Raw_Materials Group BY [Category] ORDER BY [Category] ASC;", conn);
-            DataTable dt2 = new DataTable();
-            conn.Open();
-            da2.Fill(dt2);
-            conn.Close();
-            DataRow row2 = dt2.NewRow();
-            dt2.Rows.InsertAt(row2, 0);
-            row2["Category"] = "All";
-            Jop_Combo_Box.DataSource = dt2;
-            Jop_Combo_Box.DisplayMember = "Category";
-            Jop_Combo_Box.Text = "All";
-        }
+
 
 
         void Fill_Table(string Query)
@@ -84,7 +63,11 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         void Choose_Query()
         {
 
-            string Category = Jop_Combo_Box.Text;
+            string Jop = Jop_Combo_Box.Text;
+            if (Jop == "All الجميع")
+                Fill_Table("SELECT * FROM CR.Users Where Type!=N'Developer مطور' Order By Type desc,Name ASC;");
+            else
+                Fill_Table($"SELECT * FROM CR.Users Where Type!=N'{Jop}' Order By Type desc,Name ASC;");
 
         }
 
@@ -139,30 +122,8 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
 
 
-        private void Sorting_Combo_Box_TextChanged(object sender, EventArgs e)
-        {
-            Choose_Query();
-        }
 
-        private void Qty_Search_Text_Box_TextChanged(object sender, EventArgs e)
-        {
-            Choose_Query();
-        }
 
-        private void Qty_Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8))
-
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void Category_Combo_Box_SelectedValueChanged(object sender, EventArgs e)
-        {
-            Choose_Query();
-        }
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
@@ -183,7 +144,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 string name = (string)row.Cells[0].Value;
                 string category = (string)row.Cells[1].Value;
                 int id = (int)row.Cells[3].Value;
-                if (Raw_Material_Table.Columns[e.ColumnIndex].Name == "Edit")
+                if (Raw_Material_Table.Columns[e.ColumnIndex].Index == 4)
                 {
                     //Add_Edit_User_Mdi_Form form = new Add_Edit_RMF_Mdi_Form(name, category, id);
                     //form.MdiParent = this.Owner;
@@ -193,7 +154,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                     //};
                     //form.ShowDialog();
                 }
-                else if (Raw_Material_Table.Columns[e.ColumnIndex].Name == "Delete")
+                else if (Raw_Material_Table.Columns[e.ColumnIndex].Index == 5)
                 {
                     try
                     {
@@ -251,14 +212,10 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 Work_Sheet = Work_Book.Sheets["Sheet1"];
                 Work_Sheet = Work_Book.ActiveSheet;
 
-                for (int i = 0, k = 0; i < Raw_Material_Table.ColumnCount - 2; i++, k++)
+                for (int i = 0; i < Raw_Material_Table.ColumnCount - 2; i++)
                 {
-                    if (i == 3)
-                    {
-                        k--;
-                        continue;
-                    }
-                    Work_Sheet.Cells[1, k + 1] = Raw_Material_Table.Columns[i].HeaderText;
+
+                    Work_Sheet.Cells[1, i + 1] = Raw_Material_Table.Columns[i].HeaderText;
 
 
 
@@ -268,14 +225,10 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
                 for (int j = 0; j < Raw_Material_Table.Rows.Count; j++)
                 {
-                    for (int i = 0, m = 0; i < Raw_Material_Table.Columns.Count - 2; i++, m++)
+                    for (int i = 0; i < Raw_Material_Table.Columns.Count - 2; i++)
                     {
-                        if (i == 3)
-                        {
-                            m--;
-                            continue;
-                        }
-                        Work_Sheet.Cells[j + 2, m + 1] = Raw_Material_Table.Rows[j].Cells[i].Value.ToString();
+
+                        Work_Sheet.Cells[j + 2, i + 1] = Raw_Material_Table.Rows[j].Cells[i].Value.ToString();
 
                     }
 
@@ -309,6 +262,16 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             {
                 WindowState = FormWindowState.Normal;
             }
+        }
+
+        private void Add_Button_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Jop_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
         }
     }
 }
