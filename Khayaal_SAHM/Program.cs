@@ -1,3 +1,7 @@
+using Khayaal_SAHM.Main_Form_and_Children_Forms;
+using Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_Forms;
+using Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms;
+using Khayaal_SAHM.Main_Form_and_Children_Forms_AR;
 using System;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -23,7 +27,7 @@ namespace Khayaal_SAHM
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loading_Screen_Form());
+            Application.Run(new Main_Form());
             //}
             //else
             //{
