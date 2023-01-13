@@ -9,7 +9,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
     public partial class Raw_Materials_Form_AR : Form
     {
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
-
+        bool Cashier = false;
 
         private void Search_Text_Box_TextChanged(object sender, EventArgs e)
         {
@@ -17,17 +17,25 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
             Choose_Query();
         }
 
-        public Raw_Materials_Form_AR()
+        public Raw_Materials_Form_AR(bool cashier = false)
         {
             InitializeComponent();
+            Cashier = cashier;
             Reload();
+
         }
         void Reload()
         {
             Sorting_Combo_Box.SelectedIndex = 0;
             Fill_Category_Combo_Box();
             Fill_Table($"SELECT [Name] ,[Category] ,[Qty] ,[Id] from CR.Raw_Materials ORDER BY [Name]");
+            if (Cashier)
+            {
+                Add_Button.Enabled = false;
+                Raw_Material_Table.Columns.RemoveAt(5);
+                Raw_Material_Table.Columns.RemoveAt(4);
 
+            }
         }
 
 
