@@ -20,7 +20,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
             InitializeComponent();
             Cashier = cashier;
             Current_Child_Form?.Close();
-            Current_Child_Form = new Home_Form();
+            Current_Child_Form = new Home_Form(Cashier);
             Current_Child_Form.TopLevel = false;
             Current_Child_Form.FormBorderStyle = FormBorderStyle.None;
             Current_Child_Form.Dock = DockStyle.Fill;
@@ -82,7 +82,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
                 return;
             Turn_OFF_Side_Bar();
             Home_Picture_Box.Image = Resources.Home_ON;
-            Open_Child_form(new Home_Form());
+            Open_Child_form(new Home_Form(Cashier));
         }
         void Turn_OFF_Side_Bar()
         {
@@ -112,7 +112,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
                 return;
             Turn_OFF_Side_Bar();
             Raw_Picture_Box.Image = Resources.Raw_ON;
-            Open_Child_form(new Raw_Materials_Form());
+            Open_Child_form(new Raw_Materials_Form(Cashier));
         }
 
         private void Relations_Picture_Box_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
                 return;
             Turn_OFF_Side_Bar();
             Relations_Picture_Box.Image = Resources.Relations_ON;
-            Open_Child_form(new Relations_Form());
+            Open_Child_form(new Relations_Form(Cashier));
         }
 
         private void Bills_Picture_Box_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms
                 return;
             Turn_OFF_Side_Bar();
             Bills_Picture_Box.Image = Resources.Bills_ON;
-            Open_Child_form(new Bills_Form());
+            Open_Child_form(new Bills_Form(Cashier));
         }
 
 
