@@ -11,16 +11,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
     public partial class Bills_Form_AR : Form
     {
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
-
+        bool Cashier = false;
 
         private void Search_Text_Box_TextChanged(object sender, EventArgs e)
         {
             Choose_Query();
         }
 
-        public Bills_Form_AR()
+        public Bills_Form_AR(bool cashier = false)
         {
+            Cashier = cashier;
             Reload();
+
         }
         void Reload()
         {
@@ -41,6 +43,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
                 To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[4].Value);
 
             }
+
+            if (Cashier)
+                Bills_Table.Columns.RemoveAt(6);
         }
 
 

@@ -1,4 +1,4 @@
-using Khayaal_SAHM.Main_Form_and_Children_Forms;
+using Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms;
 using System;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -24,7 +24,7 @@ namespace Khayaal_SAHM
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Form(true));
+            Application.Run(new Bills_Form(true));
             //}
             //else
             //{
