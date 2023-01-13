@@ -54,7 +54,7 @@ namespace Khayaal_SAHM
                 {
                     Thread Mainformthread;
 
-                    SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(N'{txt_user}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
+                    SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(CR.Get_Name_By_Username(N'{txt_user}'), GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
                     LoginCon.Open();
                     loginCOM.ExecuteNonQuery();
                     LoginCon.Close();
