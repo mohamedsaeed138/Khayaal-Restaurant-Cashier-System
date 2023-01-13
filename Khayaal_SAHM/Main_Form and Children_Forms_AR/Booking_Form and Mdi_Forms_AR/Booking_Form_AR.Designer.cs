@@ -83,7 +83,7 @@
             this.Table_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
             this.Table_Combo_Box.Name = "Table_Combo_Box";
             this.Table_Combo_Box.ShadowDecoration.Parent = this.Table_Combo_Box;
-            this.Table_Combo_Box.Size = new System.Drawing.Size(89, 36);
+            this.Table_Combo_Box.Size = new System.Drawing.Size(112, 36);
             this.Table_Combo_Box.TabIndex = 5;
             this.Table_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Table_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
@@ -139,7 +139,7 @@
             this.Search_Text_Box.FocusedState.Parent = this.Search_Text_Box;
             this.Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search_Text_Box.HoverState.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.Location = new System.Drawing.Point(770, 50);
+            this.Search_Text_Box.Location = new System.Drawing.Point(794, 50);
             this.Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
             this.Search_Text_Box.Name = "Search_Text_Box";
             this.Search_Text_Box.PasswordChar = '\0';
@@ -147,7 +147,7 @@
             this.Search_Text_Box.PlaceholderText = "بحث";
             this.Search_Text_Box.SelectedText = "";
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
-            this.Search_Text_Box.Size = new System.Drawing.Size(155, 36);
+            this.Search_Text_Box.Size = new System.Drawing.Size(131, 36);
             this.Search_Text_Box.TabIndex = 9;
             this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
