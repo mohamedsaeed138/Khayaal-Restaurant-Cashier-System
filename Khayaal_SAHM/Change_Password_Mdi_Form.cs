@@ -14,6 +14,7 @@ namespace Khayaal_SAHM
 
         public Change_Password_Mdi_Form(string Username)
         {
+            InitializeComponent();
             this.Username = Username;
         }
 
