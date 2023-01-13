@@ -245,17 +245,32 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             Work_Sheet = Work_Book.Sheets["Sheet1"];
             Work_Sheet = Work_Book.ActiveSheet;
 
-            for (int i = 0; i < Purchases_Table.ColumnCount; i++)
+            for (int i = 0, k = 0; i < Purchases_Table.ColumnCount - 1; i++, k++)
             {
-                Work_Sheet.Cells[1, i + 1] = Purchases_Table.Columns[i].HeaderText;
+                if (i == 0)
+                {
+                    k--;
+                    continue;
+                }
+                Work_Sheet.Cells[1, k + 1] = Purchases_Table.Columns[i].HeaderText;
+
+
+
+
             }
 
 
             for (int j = 0; j < Purchases_Table.Rows.Count; j++)
             {
-                for (int i = 0; i < Purchases_Table.Columns.Count; i++)
+                for (int i = 0, m = 0; i < Purchases_Table.Columns.Count - 1; i++, m++)
                 {
-                    Work_Sheet.Cells[j + 2, i + 1] = Purchases_Table.Rows[j].Cells[i].Value.ToString();
+                    if (i == 0)
+                    {
+                        m--;
+                        continue;
+                    }
+                    Work_Sheet.Cells[j + 2, m + 1] = Purchases_Table.Rows[j].Cells[i].Value.ToString();
+
                 }
 
             }

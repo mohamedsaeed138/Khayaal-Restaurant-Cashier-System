@@ -217,28 +217,47 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
 
         private void Edit_Buttton_Click(object sender, EventArgs e)
         {
-            Excel.Application app = new Excel.Application();
-            Excel.Workbook Work_Book = app.Workbooks.Add();
-            Excel.Worksheet Work_Sheet = null;
-            app.Visible = true;
-            Work_Sheet = Work_Book.Sheets["Sheet1"];
-            Work_Sheet = Work_Book.ActiveSheet;
-
-            for (int i = 0; i < Relations_Table.ColumnCount; i++)
+            try
             {
-                Work_Sheet.Cells[1, i + 1] = Relations_Table.Columns[i].HeaderText;
-            }
+                Excel.Application app = new Excel.Application();
+                Excel.Workbook Work_Book = app.Workbooks.Add();
+                Excel.Worksheet Work_Sheet = null;
+                app.Visible = true;
+                Work_Sheet = Work_Book.Sheets["Sheet1"];
+                Work_Sheet = Work_Book.ActiveSheet;
 
-
-            for (int j = 0; j < Relations_Table.Rows.Count; j++)
-            {
-                for (int i = 0; i < Relations_Table.Columns.Count; i++)
+                for (int i = 0,k=0; i < Relations_Table.ColumnCount-2; i++,k++)
                 {
-                    Work_Sheet.Cells[j + 2, i + 1] = Relations_Table.Rows[j].Cells[i].Value.ToString();
+                    if (i == 3) 
+                    {
+                        k--;
+                        continue;
+                    }
+                       Work_Sheet.Cells[1, k + 1] = Relations_Table.Columns[i].HeaderText;
+                    
+                    
+
+                    
                 }
 
+
+                for (int j = 0; j < Relations_Table.Rows.Count; j++)
+                {
+                    for (int i = 0, m = 0; i < Relations_Table.Columns.Count-2; i++, m++)
+                    {
+                        if (i == 3)
+                        {
+                            m--;
+                            continue;
+                        }
+                        Work_Sheet.Cells[j + 2, m + 1] = Relations_Table.Rows[j].Cells[i].Value.ToString();
+                     
+                    }
+
+                }
+                Work_Sheet.Columns.AutoFit();
             }
-            Work_Sheet.Columns.AutoFit();
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

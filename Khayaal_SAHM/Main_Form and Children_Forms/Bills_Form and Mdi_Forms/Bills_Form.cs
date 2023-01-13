@@ -223,17 +223,32 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
             Work_Sheet = Work_Book.Sheets["Sheet1"];
             Work_Sheet = Work_Book.ActiveSheet;
 
-            for (int i = 0; i < Bills_Table.ColumnCount; i++)
+            for (int i = 0, k = 0; i < Bills_Table.ColumnCount - 2; i++, k++)
             {
-                Work_Sheet.Cells[1, i + 1] = Bills_Table.Columns[i].HeaderText;
+                if (i == 0)
+                {
+                    k--;
+                    continue;
+                }
+                Work_Sheet.Cells[1, k + 1] = Bills_Table.Columns[i].HeaderText;
+
+
+
+
             }
 
 
             for (int j = 0; j < Bills_Table.Rows.Count; j++)
             {
-                for (int i = 0; i < Bills_Table.Columns.Count; i++)
+                for (int i = 0, m = 0; i < Bills_Table.Columns.Count - 2; i++, m++)
                 {
-                    Work_Sheet.Cells[j + 2, i + 1] = Bills_Table.Rows[j].Cells[i].Value.ToString();
+                    if (i == 0)
+                    {
+                        m--;
+                        continue;
+                    }
+                    Work_Sheet.Cells[j + 2, m + 1] = Bills_Table.Rows[j].Cells[i].Value.ToString();
+
                 }
 
             }

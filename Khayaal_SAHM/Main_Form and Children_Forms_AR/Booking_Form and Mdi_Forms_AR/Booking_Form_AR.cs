@@ -359,17 +359,32 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             Work_Sheet = Work_Book.Sheets["Sheet1"];
             Work_Sheet = Work_Book.ActiveSheet;
 
-            for (int i = 0; i < Booking_Table.ColumnCount; i++)
+            for (int i = 0, k = 0; i < Booking_Table.ColumnCount - 2; i++, k++)
             {
-                Work_Sheet.Cells[1, i + 1] = Booking_Table.Columns[i].HeaderText;
+                if (i == 4)
+                {
+                    k--;
+                    continue;
+                }
+                Work_Sheet.Cells[1, k + 1] = Booking_Table.Columns[i].HeaderText;
+
+
+
+
             }
 
 
             for (int j = 0; j < Booking_Table.Rows.Count; j++)
             {
-                for (int i = 0; i < Booking_Table.Columns.Count; i++)
+                for (int i = 0, m = 0; i < Booking_Table.Columns.Count - 2; i++, m++)
                 {
-                    Work_Sheet.Cells[j + 2, i + 1] = Booking_Table.Rows[j].Cells[i].Value.ToString();
+                    if (i == 4)
+                    {
+                        m--;
+                        continue;
+                    }
+                    Work_Sheet.Cells[j + 2, m + 1] = Booking_Table.Rows[j].Cells[i].Value.ToString();
+
                 }
 
             }
