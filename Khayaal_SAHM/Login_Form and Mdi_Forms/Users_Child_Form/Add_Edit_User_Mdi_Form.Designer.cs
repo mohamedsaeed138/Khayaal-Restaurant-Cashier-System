@@ -89,6 +89,7 @@
             this.Password_Text_Box.Size = new System.Drawing.Size(405, 43);
             this.Password_Text_Box.TabIndex = 3;
             this.Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Password_Text_Box.TextChanged += new System.EventHandler(this.Password_Text_Box_TextChanged);
             this.Password_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Change_Password_Text_Box_KeyPress);
             // 
             // Add_Edit_Button
