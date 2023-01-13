@@ -61,10 +61,22 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
                         LoginCon.Close();
 
                         if (Language_Combo_Box.SelectedIndex == 0)
-                            Mainformthread = new Thread(() => Application.Run(new Main_Form_AR()));
-                        else
-                            Mainformthread = new Thread(() => Application.Run(new Main_Form()));
+                        {
+                            if (Normal_user)
+                                Mainformthread = new Thread(() => Application.Run(new Main_Form_AR(true)));
 
+                            else
+                                Mainformthread = new Thread(() => Application.Run(new Main_Form_AR()));
+                        }
+                        else
+                        {
+                            if (Normal_user)
+                                Mainformthread = new Thread(() => Application.Run(new Main_Form(true)));
+
+                            else
+                                Mainformthread = new Thread(() => Application.Run(new Main_Form()));
+
+                        }
                         this.Close();
                         Mainformthread.SetApartmentState(ApartmentState.STA);
                         Mainformthread.Start();
@@ -86,7 +98,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 
                         }
                         else
-                            MessageBox.Show("");
+                            MessageBox.Show("You have no permisson !! ليس لديك تصريح");
 
                     }
 

@@ -13,12 +13,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR
 {
     public partial class Main_Form_AR : Form
     {
+        bool Cashier = false;
         private Form Current_Child_Form;
-        public Main_Form_AR()
+        public Main_Form_AR(bool cashier = false)
         {
 
             InitializeComponent();
-
+            Cashier = cashier;
             Current_Child_Form?.Close();
             Current_Child_Form = new Home_Form_AR();
             Current_Child_Form.TopLevel = false;
@@ -31,7 +32,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            if (Cashier)
+                Purchases_Picture_Box.Enabled = false;
         }
+
+
         private void Open_Child_form(Form Child_Form)
         {
             Current_Child_Form?.Close();
