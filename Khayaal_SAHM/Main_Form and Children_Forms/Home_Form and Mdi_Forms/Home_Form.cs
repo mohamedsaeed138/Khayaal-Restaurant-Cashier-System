@@ -29,7 +29,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
 
             Fill_Item_Panel();
             Fill_Combo_Box();
-
+            if (Cashier)
+                Add_Item_Button.Enabled = false;
         }
 
         private void Refreash_Time(object sender, EventArgs e)
