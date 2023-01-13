@@ -156,5 +156,15 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
         {
             Input_Process(Cases.Users);
         }
+
+        private void In_System_EN_Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Hello_EN_Label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
