@@ -280,6 +280,18 @@
     <Compile Include="Login_Form and Mdi_Forms\Change_Password_Mdi_Form.Designer.cs">
       <DependentUpon>Change_Password_Mdi_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_Form and Mdi_Forms\Users_Child_Form\Add_Edit_User_Mdi_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form and Mdi_Forms\Users_Child_Form\Add_Edit_User_Mdi_Form.Designer.cs">
+      <DependentUpon>Add_Edit_User_Mdi_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form and Mdi_Forms\Users_Child_Form\Users_Child_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form and Mdi_Forms\Users_Child_Form\Users_Child_Form.Designer.cs">
+      <DependentUpon>Users_Child_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form and Children_Forms\Bills_Form and Mdi_Forms\Print _Form\DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
@@ -520,6 +532,12 @@
     <EmbeddedResource Include="Login_Form and Mdi_Forms\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form and Mdi_Forms\Users_Child_Form\Add_Edit_User_Mdi_Form.resx">
+      <DependentUpon>Add_Edit_User_Mdi_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form and Mdi_Forms\Users_Child_Form\Users_Child_Form.resx">
+      <DependentUpon>Users_Child_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form and Children_Forms_AR\Best_Sales_Form_AR\Best_Sales_Form_AR.resx">
       <DependentUpon>Best_Sales_Form_AR.cs</DependentUpon>
     </EmbeddedResource>
@@ -752,6 +770,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

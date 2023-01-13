@@ -78,6 +78,15 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
                     }
                     else
                     {
+                        if (Owner_or_Developer)
+                        {
+                            Users_Child_Form.Users_Child_Form form = new Users_Child_Form.Users_Child_Form();
+
+                            form.ShowDialog();
+
+                        }
+                        else
+                            MessageBox.Show("");
 
                     }
 
@@ -131,6 +140,9 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
             Password_Text_Box.UseSystemPasswordChar = Password_Text_Box.UseSystemPasswordChar == false ? true : false;
         }
 
-
+        private void Users_Label_Click(object sender, EventArgs e)
+        {
+            Input_Process(Cases.Users);
+        }
     }
 }

@@ -287,6 +287,7 @@
             this.Users_Label.Size = new System.Drawing.Size(137, 21);
             this.Users_Label.TabIndex = 6;
             this.Users_Label.Text = "Users  المستخدمين";
+            this.Users_Label.Click += new System.EventHandler(this.Users_Label_Click);
             // 
             // Password_Text_Box
             // 
