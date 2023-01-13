@@ -98,7 +98,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 
                         }
                         else
-                            MessageBox.Show("You have no permisson !! ليس لديك تصريح");
+                            MessageBox.Show("You have no permission !! ليس لديك اذن");
 
                     }
 
