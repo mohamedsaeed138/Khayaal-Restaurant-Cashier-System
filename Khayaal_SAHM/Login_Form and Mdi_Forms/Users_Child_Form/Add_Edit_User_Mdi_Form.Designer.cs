@@ -87,7 +87,7 @@
             this.Password_Text_Box.SelectedText = "";
             this.Password_Text_Box.ShadowDecoration.Parent = this.Password_Text_Box;
             this.Password_Text_Box.Size = new System.Drawing.Size(405, 43);
-            this.Password_Text_Box.TabIndex = 0;
+            this.Password_Text_Box.TabIndex = 3;
             this.Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Password_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Change_Password_Text_Box_KeyPress);
             // 
@@ -104,7 +104,7 @@
             this.Add_Edit_Button.Name = "Add_Edit_Button";
             this.Add_Edit_Button.ShadowDecoration.Parent = this.Add_Edit_Button;
             this.Add_Edit_Button.Size = new System.Drawing.Size(242, 49);
-            this.Add_Edit_Button.TabIndex = 2;
+            this.Add_Edit_Button.TabIndex = 5;
             this.Add_Edit_Button.Text = "Add أَضف";
             this.Add_Edit_Button.Click += new System.EventHandler(this.Add_Edit_Button_Click);
             // 
@@ -161,7 +161,7 @@
             this.Show_Password_Check_Box.Location = new System.Drawing.Point(64, 413);
             this.Show_Password_Check_Box.Name = "Show_Password_Check_Box";
             this.Show_Password_Check_Box.Size = new System.Drawing.Size(182, 17);
-            this.Show_Password_Check_Box.TabIndex = 1;
+            this.Show_Password_Check_Box.TabIndex = 4;
             this.Show_Password_Check_Box.Text = "Show Password اظهر كلمة السر";
             this.Show_Password_Check_Box.UseVisualStyleBackColor = true;
             this.Show_Password_Check_Box.CheckedChanged += new System.EventHandler(this.Show_Password_Check_Box_CheckedChanged);
@@ -215,7 +215,7 @@
             this.Name_Text_Box.SelectedText = "";
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
             this.Name_Text_Box.Size = new System.Drawing.Size(405, 43);
-            this.Name_Text_Box.TabIndex = 22;
+            this.Name_Text_Box.TabIndex = 0;
             this.Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Name_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_Text_Box_KeyPress);
             // 
@@ -269,7 +269,7 @@
             this.Jop_Combo_Box.Name = "Jop_Combo_Box";
             this.Jop_Combo_Box.ShadowDecoration.Parent = this.Jop_Combo_Box;
             this.Jop_Combo_Box.Size = new System.Drawing.Size(405, 36);
-            this.Jop_Combo_Box.TabIndex = 25;
+            this.Jop_Combo_Box.TabIndex = 2;
             this.Jop_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Username_Text_Box
@@ -297,7 +297,7 @@
             this.Username_Text_Box.SelectedText = "";
             this.Username_Text_Box.ShadowDecoration.Parent = this.Username_Text_Box;
             this.Username_Text_Box.Size = new System.Drawing.Size(405, 43);
-            this.Username_Text_Box.TabIndex = 26;
+            this.Username_Text_Box.TabIndex = 1;
             this.Username_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Username_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Username_Text_Box_KeyPress);
             // 
