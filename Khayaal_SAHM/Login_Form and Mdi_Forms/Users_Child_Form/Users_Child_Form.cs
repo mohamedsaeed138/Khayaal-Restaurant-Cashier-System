@@ -24,10 +24,6 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             Jop_Combo_Box.SelectedIndex = 0;
         }
 
-
-
-
-
         void Fill_Table(string Query)
         {
             Formatter.Check_Connection(conn);
