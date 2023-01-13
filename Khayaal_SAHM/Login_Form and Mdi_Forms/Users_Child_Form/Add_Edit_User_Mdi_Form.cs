@@ -26,8 +26,8 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         private void Change_Password_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             //if (e.KeyChar == '\r')
-
-            //else if 
+            //Edit_Button_Click(sender, e);
+            // else
             if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
                 e.Handled = true;
         }
@@ -36,6 +36,12 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         {
             Password_Text_Box.UseSystemPasswordChar = Password_Text_Box.UseSystemPasswordChar == false ? true : false;
 
+        }
+
+        private void Username_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Username_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+                e.Handled = true;
         }
     }
 }
