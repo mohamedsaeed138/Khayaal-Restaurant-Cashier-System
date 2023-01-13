@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -49,7 +48,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             foreach (DataRow row in dt.Rows)
             {
 
-                Users_Table.Rows.Add((string)row[3], (string)row[3], (string)row[0], (string)row[1]);
+                Users_Table.Rows.Add((string)row[3], (string)row[2], (string)row[0], (string)row[1]);
             }
             try
             {
@@ -138,9 +137,9 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 {
                     Add_Edit_User_Mdi_Form form = new Add_Edit_User_Mdi_Form(username, jop, name, password);
                     form.MdiParent = this.Owner;
-                    form.Referesh_Current_Form += (obj2, ef) =>
+                    form.Referesh_Current_Form += (obj, ef) =>
                     {
-                        ((Users_Child_Form)this.Owner.MdiChildren[0]).Reload();
+                        this.Reload();
                     };
                     form.ShowDialog();
                 }
@@ -260,8 +259,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             form.MdiParent = this.Owner;
             form.Referesh_Current_Form += (obj, ef) =>
             {
-                foreach (var Child in this.MdiParent.MdiChildren.OfType<Users_Child_Form>())
-                    Child.Reload();
+                this.Reload();
             };
             form.ShowDialog();
         }

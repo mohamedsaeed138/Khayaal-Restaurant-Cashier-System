@@ -16,11 +16,13 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
         {
             InitializeComponent();
             Password_Text_Box.UseSystemPasswordChar = true;
-
+            Jop_Combo_Box.SelectedIndex = 0;
         }
 
         public Add_Edit_User_Mdi_Form(string username, string jop, string name, string pass)
         {
+            InitializeComponent();
+
             Add = false;
             Add_Edit_Button.Text = "Edit تعديل";
             Password_Text_Box.UseSystemPasswordChar = true;
@@ -141,10 +143,12 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 MessageBox.Show("Ensure Filling All Fields !!  !!تأكد من تعبئة جميع الحقول ");
             }
         }
-        private void Add_HF_Mdi_Form_FormClosed(object sender, FormClosedEventArgs e)
+
+
+        private void Add_Edit_User_Mdi_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             Referesh_Current_Form?.Invoke(this, e);
-        }
 
+        }
     }
 }

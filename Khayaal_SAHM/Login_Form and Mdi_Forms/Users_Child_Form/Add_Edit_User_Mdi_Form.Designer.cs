@@ -352,6 +352,7 @@
             this.Name = "Add_Edit_User_Mdi_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit_Button";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_Edit_User_Mdi_Form_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
