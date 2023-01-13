@@ -44,7 +44,7 @@ namespace Khayaal_SAHM
             txt_pass = Password_Text_Box.Text;
             try
             {
-                SqlCommand Verify_Login_Command = new SqlCommand($"Select * From CR.Users WHERE User_Name =N'{txt_user}' COLLATE SQL_Latin1_General_CP1_CS_AS AND Password=N'{txt_pass}' COLLATE SQL_Latin1_General_CP1_CS_AS;", LoginCon);
+                SqlCommand Verify_Login_Command = new SqlCommand($"Select * From CR.Users WHERE Username =N'{txt_user}' COLLATE SQL_Latin1_General_CP1_CS_AS AND Password=N'{txt_pass}' COLLATE SQL_Latin1_General_CP1_CS_AS;", LoginCon);
                 SqlDataAdapter loginQ_adapter = new SqlDataAdapter(Verify_Login_Command);
                 DataTable loginQ_DT = new DataTable();
                 LoginCon.Open();
@@ -54,7 +54,7 @@ namespace Khayaal_SAHM
                 {
                     Thread Mainformthread;
 
-                    SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(User_Name, Date)VALUES(N'{txt_user}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
+                    SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(N'{txt_user}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\n", LoginCon);
                     LoginCon.Open();
                     loginCOM.ExecuteNonQuery();
                     LoginCon.Close();
