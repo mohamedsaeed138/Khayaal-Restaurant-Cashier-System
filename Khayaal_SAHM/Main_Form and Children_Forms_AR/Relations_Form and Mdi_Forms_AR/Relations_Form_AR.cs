@@ -8,13 +8,14 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
     public partial class Relations_Form_AR : Form
     {
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
+        bool Cashier = false;
 
 
 
-
-        public Relations_Form_AR()
+        public Relations_Form_AR(bool cashier = false)
         {
             InitializeComponent();
+            Cashier = cashier;
             Reload();
 
         }
@@ -29,6 +30,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Relations_Form_and_Mdi_Fo
                 Add_Button.Enabled = false;
             else
                 Add_Button.Enabled = true;
+            if (Cashier)
+            {
+                Add_Button.Enabled = false;
+                Relations_Table.Columns.RemoveAt(5);
+                Relations_Table.Columns.RemoveAt(4);
+
+            }
         }
         public void Fill_Item_Combo_Box()
         {
