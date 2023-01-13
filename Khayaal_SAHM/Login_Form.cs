@@ -94,14 +94,14 @@ namespace Khayaal_SAHM
 
         private void Username_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8)
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
                 e.Handled = true;
         }
         private void Password_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '\r')
                 Input_Process(Cases.Log_In);
-            else if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8)
+            else if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
                 e.Handled = true;
         }
 
