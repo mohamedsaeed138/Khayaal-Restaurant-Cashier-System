@@ -345,7 +345,7 @@
             this.Btn_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Minimize.FlatAppearance.BorderSize = 0;
             this.Btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Minimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.Btn_Minimize.IconChar = FontAwesome.Sharp.IconChar.Subtract;
             this.Btn_Minimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
             this.Btn_Minimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.Btn_Minimize.IconSize = 19;
@@ -432,7 +432,7 @@
             this.Controls.Add(this.Jop_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Users_Child_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Users_Table)).EndInit();
             this.ResumeLayout(false);
