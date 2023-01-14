@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -18,8 +19,16 @@ namespace Khayaal_SAHM
         {
             if (String != string.Empty)
             {
-
                 string[] Strings = String.Trim().Split(' ');
+
+                List<string> Tmp = new List<string>();
+                foreach (string str in Strings)
+                {
+                    if (!string.IsNullOrWhiteSpace(str))
+                        Tmp.Add(str);
+                }
+
+                Strings = Tmp.ToArray();
                 for (int i = 0; i < Strings.Length; i++)
                 {
                     Strings[i] = char.ToUpper(Strings[i][0]) + Strings[i].ToLower().Remove(0, 1);
@@ -27,6 +36,7 @@ namespace Khayaal_SAHM
                 }
 
                 String = string.Join(" ", Strings);
+
             }
 
             return String;
@@ -81,7 +91,7 @@ namespace Khayaal_SAHM
 
 
 
-       
+
         public static void Check_Connection(SqlConnection conn)
         {
 
