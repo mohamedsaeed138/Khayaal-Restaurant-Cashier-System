@@ -344,12 +344,15 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
                 MessageBox.Show(Warning_Message + "\n To Create The Order");
 
                 //Start of Removable Area
+
                 DialogResult r = System.Windows.Forms.MessageBox.Show("Do you want to add though ?", "Warning", MessageBoxButtons.YesNo);
                 if (DialogResult.Yes == r)
                 {
                     return true;
                 }
+
                 //End of Removable Area
+
                 return false;//never remove this line !!
 
             }
