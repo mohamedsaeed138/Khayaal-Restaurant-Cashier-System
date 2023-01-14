@@ -74,7 +74,7 @@
             this.In_System_AR_Label.BackColor = System.Drawing.Color.Transparent;
             this.In_System_AR_Label.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.In_System_AR_Label.ForeColor = System.Drawing.Color.White;
-            this.In_System_AR_Label.Location = new System.Drawing.Point(21, 227);
+            this.In_System_AR_Label.Location = new System.Drawing.Point(28, 227);
             this.In_System_AR_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.In_System_AR_Label.Name = "In_System_AR_Label";
             this.In_System_AR_Label.Size = new System.Drawing.Size(242, 47);
@@ -102,12 +102,13 @@
             this.In_System_EN_Label.BackColor = System.Drawing.Color.Transparent;
             this.In_System_EN_Label.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
             this.In_System_EN_Label.ForeColor = System.Drawing.Color.White;
-            this.In_System_EN_Label.Location = new System.Drawing.Point(33, 371);
+            this.In_System_EN_Label.Location = new System.Drawing.Point(12, 371);
             this.In_System_EN_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.In_System_EN_Label.Name = "In_System_EN_Label";
-            this.In_System_EN_Label.Size = new System.Drawing.Size(266, 46);
+            this.In_System_EN_Label.Size = new System.Drawing.Size(286, 46);
             this.In_System_EN_Label.TabIndex = 2;
-            this.In_System_EN_Label.Text = "Khayaal System";
+            this.In_System_EN_Label.Text = "Khayaal System !";
+            this.In_System_EN_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.In_System_EN_Label.Click += new System.EventHandler(this.In_System_EN_Label_Click);
             // 
             // Hello_EN_Label
