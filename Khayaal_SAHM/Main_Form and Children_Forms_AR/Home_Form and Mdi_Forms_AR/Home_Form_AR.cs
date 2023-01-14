@@ -125,7 +125,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                         if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                         {
                             Item_User_Control i = (Item_User_Control)obj;
-                            Add_Edit_HF_Mdi_Form form = new Add_Edit_HF_Mdi_Form(i.Name, $"{i.Price}", $"{i.Description}", $"{i.Category}", i.Image, i.Id);
+                            Add_Edit_HF_Mdi_Form_AR form = new Add_Edit_HF_Mdi_Form_AR(i.Name, $"{i.Price}", $"{i.Description}", $"{i.Category}", i.Image, i.Id);
                             form.MdiParent = this.Owner;
                             form.Referesh_Current_Form += (obj2, ef) =>
                             {
