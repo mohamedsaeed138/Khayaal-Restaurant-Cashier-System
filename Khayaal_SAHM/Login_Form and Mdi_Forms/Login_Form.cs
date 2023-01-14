@@ -93,7 +93,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
                         if (Owner_or_Developer)
                         {
                             Users_Child_Form.Users_Child_Form form = new Users_Child_Form.Users_Child_Form();
-
+                            form.MdiParent = this.Owner;
                             form.ShowDialog();
 
                         }
