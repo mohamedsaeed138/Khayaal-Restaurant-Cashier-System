@@ -432,7 +432,7 @@
             this.Controls.Add(this.Jop_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Users_Child_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Best_Seller_Form";
             ((System.ComponentModel.ISupportInitialize)(this.Users_Table)).EndInit();
             this.ResumeLayout(false);
