@@ -9,7 +9,7 @@ namespace Khayaal_SAHM
     /// </summary>
     public class Connection_String
     {
-        public static string Value = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Environment.CurrentDirectory}\\DataBase\\Restaurant_Cafe.mdf;Integrated Security=True";
+        public static string Value = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Environment.CurrentDirectory}\\DataBase\\Restaurant_Cafe.mdf;Integrated Security=True; Connect Timeout = 30";
     }
 
 }
