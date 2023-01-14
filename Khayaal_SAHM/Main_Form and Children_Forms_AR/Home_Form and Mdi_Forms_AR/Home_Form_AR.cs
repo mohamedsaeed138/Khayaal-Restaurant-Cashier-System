@@ -343,7 +343,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 }
                 MessageBox.Show(Warning_Message + " لانشاء هذا الطلب");
 
-                return false;
+                //Start of Removable Area
+
+                DialogResult r = System.Windows.Forms.MessageBox.Show("هل تريد اضافته رغم ذلك ؟", "Warning", MessageBoxButtons.YesNo);
+                if (DialogResult.Yes == r)
+                {
+                    return true;
+                }
+
+                //End of Removable Area
+
+                return false;//never remove this line !!
+
 
             }
             return true;
