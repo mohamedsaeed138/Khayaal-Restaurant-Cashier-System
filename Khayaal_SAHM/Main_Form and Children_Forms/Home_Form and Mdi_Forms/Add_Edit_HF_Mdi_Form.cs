@@ -59,7 +59,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private void Item_Description_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Description_Text_Box.Text.Length >= 200 && e.KeyChar != 8))
-            || (Description_Text_Box.Text.Length > 1 && Description_Text_Box.Text[Description_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Description_Text_Box.Text.Length == 0))
+          || (e.KeyChar == ' ' && Description_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
@@ -120,7 +120,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private void Item_Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-           || (Name_Text_Box.Text.Length > 1 && Name_Text_Box.Text[Name_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
+        || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
@@ -130,7 +130,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         private void Add_Category_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Add_Category_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-              || (Add_Category_Text_Box.Text.Length > 1 && Add_Category_Text_Box.Text[Add_Category_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Add_Category_Text_Box.Text.Length == 0))
+      || (e.KeyChar == ' ' && Add_Category_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
@@ -271,6 +271,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             Referesh_Current_Form?.Invoke(this, e);
         }
 
+        private void Add_Category_Text_Box_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

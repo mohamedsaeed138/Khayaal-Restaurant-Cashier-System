@@ -72,7 +72,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
         private void Notes_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Notes_Text_Box.Text.Length >= 100 && e.KeyChar != 8))
-           || (Notes_Text_Box.Text.Length > 1 && Notes_Text_Box.Text[Notes_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Notes_Text_Box.Text.Length == 0))
+            || (e.KeyChar == ' ' && Notes_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
