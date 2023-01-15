@@ -108,7 +108,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 else
                 {
 
-                    string Query = $"Update CR.Users SET Password = N'{Password}',Name=N'{Name}',Type=N'{Jop}' WHERE Id = {Id};\nUpdate CR.Bills  SET [Cashier_User_Name]=N'{Name}' WHERE [Cashier_User_Name]=N'{Old_Name}';\nUpdate CR.Purchases  SET [Cashier_User_Name]=N'{Name}' WHERE [Cashier_User_Name]=N'{Old_Name}';";
+                    string Query = $"Update CR.Users SET Password = N'{Password}',Name=N'{Name}',Type=N'{Jop}' WHERE Id = {Id};\nUpdate CR.Bills  SET [Cashier_User_Name]=N'{Name}' WHERE [Cashier_User_Id]={Id};\nUpdate CR.Purchases  SET [Cashier_User_Name]=N'{Name}' WHERE [Cashier_User_Id]={Id};";
                     SqlCommand Update_Query = new SqlCommand(Query, conn);
                     try
                     {
