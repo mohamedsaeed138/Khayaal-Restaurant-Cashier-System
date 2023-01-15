@@ -8,6 +8,8 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
     {
         public event EventHandler Referesh_Current_Form = null;
         bool Add = true;
+        int Id;
+        string Old_Name;
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
 
 
@@ -19,17 +21,16 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             Jop_Combo_Box.SelectedIndex = 0;
         }
 
-        public Add_Edit_User_Mdi_Form(string username, string jop, string name, string pass)
+        public Add_Edit_User_Mdi_Form(int Id, string jop, string name, string pass)
         {
             InitializeComponent();
 
             Add = false;
             Add_Edit_Button.Text = "Edit تعديل";
             Password_Text_Box.UseSystemPasswordChar = true;
-            Username_Text_Box.Text = username;
-            Username_Text_Box.ReadOnly = true;
+            this.Id = Id;
             Jop_Combo_Box.Text = jop;
-            Name_Text_Box.Text = name;
+            Name_Text_Box.Text = Old_Name = name;
             Password_Text_Box.Text = pass;
         }
 
@@ -47,11 +48,6 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
         }
 
-        private void Username_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Username_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-                e.Handled = true;
-        }
 
         private void Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -65,9 +61,9 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
         private void Add_Edit_Button_Click(object sender, EventArgs e)
         {
-            if (Name_Text_Box.Text != "" && Username_Text_Box.Text != "" && Password_Text_Box.Text != "")
+            if (Name_Text_Box.Text != "" && Password_Text_Box.Text != "")
             {
-                string Username = Username_Text_Box.Text;
+
                 string Name = Formatter.String(Name_Text_Box.Text);
                 string Jop = Jop_Combo_Box.Text;
                 string Password = Password_Text_Box.Text;
@@ -79,7 +75,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
 
 
-                    string Query = $"INSERT INTO CR.Users VALUES(N'{Username}',N'{Password}',N'{Jop}',N'{Name}') ;";
+                    string Query = $"INSERT INTO CR.Users VALUES(N'{Password}',N'{Jop}',N'{Name}') ;";
                     SqlCommand Insert_Query = new SqlCommand(Query, conn);
                     try
                     {
@@ -91,7 +87,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                         conn.Close();
 
                         Name_Text_Box.Text = "";
-                        Username_Text_Box.Text = "";
+
                         Password_Text_Box.Text = "";
 
 
@@ -101,7 +97,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
                     catch
                     {
-                        MessageBox.Show("There is a User With Same Name or Username or Both!! !!يوجد مستخدم بنفس الاسم او اسم المستخدم او كلاهما ");
+                        MessageBox.Show("There is a User With Same Name !! !! يوجد مستخدم بنفس الاسم");
 
                     }
                     finally
@@ -112,7 +108,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 else
                 {
 
-                    string Query = $"Update CR.Users SET Password = N'{Password}',Name=N'{Name}',Type=N'{Jop}' WHERE Username =N'{Username}';";
+                    string Query = $"Update CR.Users SET Password = N'{Password}',Name=N'{Name}',Type=N'{Jop}' WHERE Id = {Id};\nUpdate CR.Bills  SET [Cashier_User_Name]=N'{Name}' WHERE [Cashier_User_Name]=N'{Old_Name}';\nUpdate CR.Purchases  SET [Cashier_User_Name]=N'{Name}' WHERE [Cashier_User_Name]=N'{Old_Name}';";
                     SqlCommand Update_Query = new SqlCommand(Query, conn);
                     try
                     {
@@ -128,7 +124,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
                     catch
                     {
-                        MessageBox.Show("There is a User With Same Name or Username or Both!! !!يوجد مستخدم بنفس الاسم او اسم المستخدم او كلاهما ");
+                        MessageBox.Show("There is a User With The Same Name !! !! يوجد مستخدم بنفس الاسم");
 
                     }
                     finally

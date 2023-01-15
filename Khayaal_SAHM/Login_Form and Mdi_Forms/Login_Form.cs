@@ -33,94 +33,101 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 
         private void Input_Process(Cases Case)
         {
-            string Username, Password;
-            Username = Username_Text_Box.Text;
-            Password = Password_Text_Box.Text;
-            try
+            if (Id_Text_Box.Text != "" && Password_Text_Box.Text != "")
             {
-                SqlDataAdapter loginQ_adapter = new SqlDataAdapter($"Select * From CR.Users WHERE Username =N'{Username}' COLLATE SQL_Latin1_General_CP1_CS_AS AND Password=N'{Password}' COLLATE SQL_Latin1_General_CP1_CS_AS;", LoginCon);
-                DataTable loginQ_DT = new DataTable();
-                LoginCon.Open();
-                loginQ_adapter.Fill(loginQ_DT);
-                LoginCon.Close();
-                if (loginQ_DT.Rows.Count > 0)
+                int Id; string Password;
+                Id = Int32.Parse(Id_Text_Box.Text);
+                Password = Password_Text_Box.Text;
+                try
                 {
-                    string Type = (string)loginQ_DT.Rows[0][2];
-                    bool Normal_user = Type == "Cashier كاشير" ? true : false;
-                    bool Owner_or_Developer = Type == "Owner مالك" || Type == "Developer مطور" ? true : false;
-                    if (Case == Cases.Log_In)
+                    SqlDataAdapter loginQ_adapter = new SqlDataAdapter($"Select * From CR.Users WHERE Id ={Id} AND Password=N'{Password}' COLLATE SQL_Latin1_General_CP1_CS_AS;", LoginCon);
+                    DataTable loginQ_DT = new DataTable();
+                    LoginCon.Open();
+                    loginQ_adapter.Fill(loginQ_DT);
+                    LoginCon.Close();
+                    if (loginQ_DT.Rows.Count > 0)
                     {
-                        string Date = Formatter.Date_Formating(new DateTime(DateTime.Now.Year - 2, 1, 1));
-
-                        Thread Mainformthread;
-
-                        SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(CR.Get_Name_By_Username(N'{Username}'), GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\nDELETE CR.Bills WHERE [Date]<'{Date}';\nDELETE CR.Bills_Details WHERE [Date]<'{Date}';\nDELETE CR.Purchases WHERE [Date]<'{Date}';\n\r", LoginCon);
-
-                        LoginCon.Open();
-                        loginCOM.ExecuteNonQuery();
-                        LoginCon.Close();
-
-                        if (Language_Combo_Box.SelectedIndex == 0)
+                        string Type = (string)loginQ_DT.Rows[0][2];
+                        bool Normal_user = Type == "Cashier كاشير" ? true : false;
+                        bool Owner_or_Developer = Type == "Owner مالك" || Type == "Developer مطور" ? true : false;
+                        if (Case == Cases.Log_In)
                         {
-                            if (Normal_user)
-                                Mainformthread = new Thread(() => Application.Run(new Main_Form_AR(true)));
+                            string Date = Formatter.Date_Formating(new DateTime(DateTime.Now.Year - 2, 1, 1));
 
+                            Thread Mainformthread;
+
+                            SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(CR.Get_Name_By_Id({Id}), GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\nDELETE CR.Bills WHERE [Date]<'{Date}';\nDELETE CR.Bills_Details WHERE [Date]<'{Date}';\nDELETE CR.Purchases WHERE [Date]<'{Date}';\n\r", LoginCon);
+
+                            LoginCon.Open();
+                            loginCOM.ExecuteNonQuery();
+                            LoginCon.Close();
+
+                            if (Language_Combo_Box.SelectedIndex == 0)
+                            {
+                                if (Normal_user)
+                                    Mainformthread = new Thread(() => Application.Run(new Main_Form_AR(true)));
+
+                                else
+                                    Mainformthread = new Thread(() => Application.Run(new Main_Form_AR()));
+                            }
                             else
-                                Mainformthread = new Thread(() => Application.Run(new Main_Form_AR()));
+                            {
+                                if (Normal_user)
+                                    Mainformthread = new Thread(() => Application.Run(new Main_Form(true)));
+
+                                else
+                                    Mainformthread = new Thread(() => Application.Run(new Main_Form()));
+
+                            }
+                            this.Close();
+                            Mainformthread.SetApartmentState(ApartmentState.STA);
+                            Mainformthread.Start();
+                        }
+                        else if (Case == Cases.Change_Password)
+                        {
+                            Change_Password_Mdi_Form form = new Change_Password_Mdi_Form(Id);
+                            form.MdiParent = this.Owner;
+
+                            form.ShowDialog();
                         }
                         else
                         {
-                            if (Normal_user)
-                                Mainformthread = new Thread(() => Application.Run(new Main_Form(true)));
+                            if (Owner_or_Developer)
+                            {
+                                Users_Child_Form.Users_Child_Form form = new Users_Child_Form.Users_Child_Form();
+                                form.ShowDialog();
 
+                            }
                             else
-                                Mainformthread = new Thread(() => Application.Run(new Main_Form()));
+                                MessageBox.Show("You have no permission !! ليس لديك اذن");
 
                         }
-                        this.Close();
-                        Mainformthread.SetApartmentState(ApartmentState.STA);
-                        Mainformthread.Start();
-                    }
-                    else if (Case == Cases.Change_Password)
-                    {
-                        Change_Password_Mdi_Form form = new Change_Password_Mdi_Form(Username);
-                        form.MdiParent = this.Owner;
 
-                        form.ShowDialog();
+
                     }
                     else
                     {
-                        if (Owner_or_Developer)
-                        {
-                            Users_Child_Form.Users_Child_Form form = new Users_Child_Form.Users_Child_Form();
-                            form.ShowDialog();
-
-                        }
-                        else
-                            MessageBox.Show("You have no permission !! ليس لديك اذن");
-
+                        MessageBox.Show("Wrong Username or Password! اسم المستخدم او الرقم السري خاطئ", "Error  خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-
                 }
-                else
+                catch (Exception EX)
                 {
-                    MessageBox.Show("Wrong Username or Password! اسم المستخدم او الرقم السري خاطئ", "Error  خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(EX.Message);
+                }
+                finally
+                {
+                    LoginCon.Close();
                 }
             }
-            catch (Exception EX)
+            else
             {
-                MessageBox.Show(EX.Message);
-            }
-            finally
-            {
-                LoginCon.Close();
+                MessageBox.Show("Fill The Fields !! قم بتعبئة الحقول");
             }
         }
 
         private void Username_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Username_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8) || (Id_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
                 e.Handled = true;
         }
         private void Password_KeyPress(object sender, KeyPressEventArgs e)
@@ -156,14 +163,6 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
             Input_Process(Cases.Users);
         }
 
-        private void In_System_EN_Label_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Hello_EN_Label_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

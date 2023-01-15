@@ -36,8 +36,7 @@
             this.In_System_EN_Label = new System.Windows.Forms.Label();
             this.Hello_EN_Label = new System.Windows.Forms.Label();
             this.Logo_Picture_Box = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Username_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Username_Label = new System.Windows.Forms.Label();
+            this.Id_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Password_Label = new System.Windows.Forms.Label();
             this.Login_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Close_B = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -49,6 +48,8 @@
             this.Password_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Change_Password_Label = new System.Windows.Forms.Label();
             this.Show_Password_Check_Box = new System.Windows.Forms.CheckBox();
+            this.Id_Label = new System.Windows.Forms.Label();
+            this.Id_AR_Label = new System.Windows.Forms.Label();
             this.Left_Side_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_Picture_Box)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +110,6 @@
             this.In_System_EN_Label.TabIndex = 2;
             this.In_System_EN_Label.Text = "Khayaal System !";
             this.In_System_EN_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.In_System_EN_Label.Click += new System.EventHandler(this.In_System_EN_Label_Click);
             // 
             // Hello_EN_Label
             // 
@@ -123,7 +123,6 @@
             this.Hello_EN_Label.Size = new System.Drawing.Size(214, 46);
             this.Hello_EN_Label.TabIndex = 1;
             this.Hello_EN_Label.Text = "Welcome To";
-            this.Hello_EN_Label.Click += new System.EventHandler(this.Hello_EN_Label_Click);
             // 
             // Logo_Picture_Box
             // 
@@ -139,50 +138,37 @@
             this.Logo_Picture_Box.TabIndex = 0;
             this.Logo_Picture_Box.TabStop = false;
             // 
-            // Username_Text_Box
+            // Id_Text_Box
             // 
-            this.Username_Text_Box.BackColor = System.Drawing.Color.Transparent;
-            this.Username_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Username_Text_Box.BorderRadius = 10;
-            this.Username_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Username_Text_Box.DefaultText = "";
-            this.Username_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Username_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Username_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Username_Text_Box.DisabledState.Parent = this.Username_Text_Box;
-            this.Username_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Username_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Username_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Username_Text_Box.FocusedState.Parent = this.Username_Text_Box;
-            this.Username_Text_Box.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username_Text_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Username_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Username_Text_Box.HoverState.Parent = this.Username_Text_Box;
-            this.Username_Text_Box.Location = new System.Drawing.Point(311, 72);
-            this.Username_Text_Box.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Username_Text_Box.Name = "Username_Text_Box";
-            this.Username_Text_Box.PasswordChar = '\0';
-            this.Username_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
-            this.Username_Text_Box.PlaceholderText = "";
-            this.Username_Text_Box.SelectedText = "";
-            this.Username_Text_Box.ShadowDecoration.Parent = this.Username_Text_Box;
-            this.Username_Text_Box.Size = new System.Drawing.Size(255, 48);
-            this.Username_Text_Box.TabIndex = 0;
-            this.Username_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Username_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Username_Text_Box_KeyPress);
-            // 
-            // Username_Label
-            // 
-            this.Username_Label.AutoSize = true;
-            this.Username_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Username_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username_Label.ForeColor = System.Drawing.Color.White;
-            this.Username_Label.Location = new System.Drawing.Point(305, 36);
-            this.Username_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Username_Label.Name = "Username_Label";
-            this.Username_Label.Size = new System.Drawing.Size(260, 30);
-            this.Username_Label.TabIndex = 2;
-            this.Username_Label.Text = "Username  اسم المستخدم";
+            this.Id_Text_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Id_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Id_Text_Box.BorderRadius = 10;
+            this.Id_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Id_Text_Box.DefaultText = "";
+            this.Id_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Id_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Id_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Id_Text_Box.DisabledState.Parent = this.Id_Text_Box;
+            this.Id_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Id_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Id_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Id_Text_Box.FocusedState.Parent = this.Id_Text_Box;
+            this.Id_Text_Box.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_Text_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Id_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Id_Text_Box.HoverState.Parent = this.Id_Text_Box;
+            this.Id_Text_Box.Location = new System.Drawing.Point(311, 72);
+            this.Id_Text_Box.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Id_Text_Box.Name = "Id_Text_Box";
+            this.Id_Text_Box.PasswordChar = '\0';
+            this.Id_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
+            this.Id_Text_Box.PlaceholderText = "";
+            this.Id_Text_Box.SelectedText = "";
+            this.Id_Text_Box.ShadowDecoration.Parent = this.Id_Text_Box;
+            this.Id_Text_Box.Size = new System.Drawing.Size(255, 48);
+            this.Id_Text_Box.TabIndex = 0;
+            this.Id_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Id_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Username_Text_Box_KeyPress);
             // 
             // Password_Label
             // 
@@ -354,12 +340,39 @@
             this.Show_Password_Check_Box.UseVisualStyleBackColor = true;
             this.Show_Password_Check_Box.CheckedChanged += new System.EventHandler(this.Show_Password_Check_Box_CheckedChanged);
             // 
+            // Id_Label
+            // 
+            this.Id_Label.AutoSize = true;
+            this.Id_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Id_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_Label.ForeColor = System.Drawing.Color.White;
+            this.Id_Label.Location = new System.Drawing.Point(306, 36);
+            this.Id_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Id_Label.Name = "Id_Label";
+            this.Id_Label.Size = new System.Drawing.Size(34, 30);
+            this.Id_Label.TabIndex = 2;
+            this.Id_Label.Text = "Id";
+            // 
+            // Id_AR_Label
+            // 
+            this.Id_AR_Label.AutoSize = true;
+            this.Id_AR_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Id_AR_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_AR_Label.ForeColor = System.Drawing.Color.White;
+            this.Id_AR_Label.Location = new System.Drawing.Point(371, 36);
+            this.Id_AR_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Id_AR_Label.Name = "Id_AR_Label";
+            this.Id_AR_Label.Size = new System.Drawing.Size(195, 30);
+            this.Id_AR_Label.TabIndex = 11;
+            this.Id_AR_Label.Text = "رقم الهوية الشخصية";
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(575, 486);
+            this.Controls.Add(this.Id_AR_Label);
             this.Controls.Add(this.Show_Password_Check_Box);
             this.Controls.Add(this.Change_Password_Label);
             this.Controls.Add(this.Users_Label);
@@ -369,8 +382,8 @@
             this.Controls.Add(this.Login_Button);
             this.Controls.Add(this.Password_Label);
             this.Controls.Add(this.Password_Text_Box);
-            this.Controls.Add(this.Username_Label);
-            this.Controls.Add(this.Username_Text_Box);
+            this.Controls.Add(this.Id_Label);
+            this.Controls.Add(this.Id_Text_Box);
             this.Controls.Add(this.Left_Side_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -392,8 +405,7 @@
         private System.Windows.Forms.Label In_System_EN_Label;
         private System.Windows.Forms.Label Hello_EN_Label;
         private Guna.UI2.WinForms.Guna2PictureBox Logo_Picture_Box;
-        private Guna.UI2.WinForms.Guna2TextBox Username_Text_Box;
-        private System.Windows.Forms.Label Username_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Id_Text_Box;
         private System.Windows.Forms.Label Password_Label;
         private Guna.UI2.WinForms.Guna2Button Login_Button;
         private Guna.UI2.WinForms.Guna2ControlBox Close_B;
@@ -407,5 +419,7 @@
         private Guna.UI2.WinForms.Guna2TextBox Password_Text_Box;
         private System.Windows.Forms.Label Change_Password_Label;
         private System.Windows.Forms.CheckBox Show_Password_Check_Box;
+        private System.Windows.Forms.Label Id_AR_Label;
+        private System.Windows.Forms.Label Id_Label;
     }
 }

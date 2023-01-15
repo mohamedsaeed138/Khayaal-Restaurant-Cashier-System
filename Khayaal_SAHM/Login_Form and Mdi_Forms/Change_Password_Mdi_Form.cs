@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -7,15 +6,15 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 {
     public partial class Change_Password_Mdi_Form : Form
     {
-        string Username;
+        int Id;
         static SqlConnection conn = new SqlConnection(Connection_String.Value);
 
 
 
-        public Change_Password_Mdi_Form(string Username)
+        public Change_Password_Mdi_Form(int Id)
         {
             InitializeComponent();
-            this.Username = Username;
+            this.Id = Id;
             Change_Password_Text_Box.UseSystemPasswordChar = true;
 
         }
@@ -24,17 +23,6 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 
 
 
-        private static DataTable Select_Category_AS_Data_Table()
-        {
-            conn.Open();
-            string sql = "select Category from CR.Raw_Materials GROUP BY Category ORDER BY Category";
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            return dt;
-
-        }
 
 
 
@@ -50,7 +38,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
                 string Password = Change_Password_Text_Box.Text;
                 Formatter.Check_Connection(conn);
 
-                SqlCommand Update_Query = new SqlCommand($"Update CR.Users SET [Password]=N'{Password}' WHERE Username=N'{Username}';", conn);
+                SqlCommand Update_Query = new SqlCommand($"Update CR.Users SET [Password]=N'{Password}' WHERE Id={Id};", conn);
 
 
                 Formatter.Check_Connection(conn);
@@ -69,7 +57,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
             }
             else
             {
-                MessageBox.Show("Enter The New Password    ادخل الرقم السري الجديد ");
+                MessageBox.Show("Enter The New Password !    ! ادخل الرقم السري الجديد ");
             }
         }
 

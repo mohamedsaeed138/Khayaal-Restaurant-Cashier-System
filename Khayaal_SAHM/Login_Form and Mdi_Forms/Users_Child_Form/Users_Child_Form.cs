@@ -48,7 +48,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             foreach (DataRow row in dt.Rows)
             {
 
-                Users_Table.Rows.Add((string)row[3], (string)row[2], (string)row[0], (string)row[1]);
+                Users_Table.Rows.Add((int)row[0], (string)row[3], (string)row[2], (string)row[1]);
             }
             try
             {
@@ -129,13 +129,13 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             try
             {
                 DataGridViewRow row = Users_Table.Rows[e.RowIndex];
-                string name = (string)row.Cells[0].Value;
-                string jop = (string)row.Cells[1].Value;
-                string username = (string)row.Cells[2].Value;
+                int id = (int)row.Cells[0].Value;
+                string name = (string)row.Cells[1].Value;
+                string jop = (string)row.Cells[2].Value;
                 string password = (string)row.Cells[3].Value;
                 if (Users_Table.Columns[e.ColumnIndex].Index == 4)
                 {
-                    Add_Edit_User_Mdi_Form form = new Add_Edit_User_Mdi_Form(username, jop, name, password);
+                    Add_Edit_User_Mdi_Form form = new Add_Edit_User_Mdi_Form(id, jop, name, password);
                     form.MdiParent = this.Owner;
                     form.Referesh_Current_Form += (obj, ef) =>
                     {
@@ -147,7 +147,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
                 {
                     try
                     {
-                        string Query = $"DELETE CR.Users WHERE Username={username};";
+                        string Query = $"DELETE CR.Users WHERE Id={id};";
                         Formatter.Check_Connection(conn);
                         SqlCommand Delete = new SqlCommand(Query, conn);
                         conn.Open();
