@@ -47,7 +47,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                 From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
 
                 From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[7].Value);
-                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[6].Value);
+                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[7].Value);
 
             }
 
@@ -204,7 +204,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
 
 
-                if (Purchases_Table.Columns[e.ColumnIndex].Index == 8)
+                if (Purchases_Table.Columns[e.ColumnIndex].Index == 9)
                 {
                     int id = (int)row.Cells[0].Value;
                     try
