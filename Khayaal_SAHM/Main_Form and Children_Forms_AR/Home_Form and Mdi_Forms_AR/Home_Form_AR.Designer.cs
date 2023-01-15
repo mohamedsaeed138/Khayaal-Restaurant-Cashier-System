@@ -330,8 +330,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Khayaal_Label.Name = "Khayaal_Label";
             this.Khayaal_Label.Size = new System.Drawing.Size(321, 70);
             this.Khayaal_Label.TabIndex = 26;
-            this.Khayaal_Label.Text = "خيال";
-            this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.Khayaal_Label.Text = "Khayaal";
+            this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Home_Nested_Panel_Controlers
             // 
