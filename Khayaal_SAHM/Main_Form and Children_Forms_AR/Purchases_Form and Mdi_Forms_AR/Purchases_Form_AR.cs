@@ -35,7 +35,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
         {
 
             Fill_Combo_Box();
-            Fill_Table($"select Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
+            Fill_Table($"select Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes,[Cashier_User_Id] FROM CR.Purchases ORDER BY [Date];");
             if (Purchases_Table.Rows.Count == 0)
             {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
@@ -120,9 +120,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             {
                 string Name = Formatter.String(Name_Combo_Box.Text);
                 if (Name == "الجميع")
-                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes,[Cashier_User_Id] FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
                 else
-                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Name]=N'{Name}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes,[Cashier_User_Id] FROM CR.Purchases WHERE [Name]=N'{Name}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
             }
         }
 
