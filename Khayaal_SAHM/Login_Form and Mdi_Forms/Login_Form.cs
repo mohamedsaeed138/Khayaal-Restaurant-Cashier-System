@@ -47,6 +47,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
                     LoginCon.Close();
                     if (loginQ_DT.Rows.Count > 0)
                     {
+                        string Name = (string)loginQ_DT.Rows[0][3];
                         string Type = (string)loginQ_DT.Rows[0][2];
                         bool Normal_user = Type == "Cashier كاشير" ? true : false;
                         bool Owner_or_Developer = Type == "Owner مالك" || Type == "Developer مطور" ? true : false;
@@ -56,7 +57,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
 
                             Thread Mainformthread;
 
-                            SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History(Name, Date)VALUES(CR.Get_Name_By_Id({Id}), GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\nDELETE CR.Bills WHERE [Date]<'{Date}';\nDELETE CR.Bills_Details WHERE [Date]<'{Date}';\nDELETE CR.Purchases WHERE [Date]<'{Date}';\n\r", LoginCon);
+                            SqlCommand loginCOM = new SqlCommand($"TRUNCATE TABLE CR.Users_Login_History;\nINSERT INTO CR.Users_Login_History VALUES({Id},N'{Name}', GETDATE());\nDELETE CR.Tables_Booking_Details WHERE [TO]<GETDATE();\r\nDELETE CR.Bills WHERE [Date]<'{Date}';\nDELETE CR.Bills_Details WHERE [Date]<'{Date}';\nDELETE CR.Purchases WHERE [Date]<'{Date}';\n\r", LoginCon);
 
                             LoginCon.Open();
                             loginCOM.ExecuteNonQuery();
