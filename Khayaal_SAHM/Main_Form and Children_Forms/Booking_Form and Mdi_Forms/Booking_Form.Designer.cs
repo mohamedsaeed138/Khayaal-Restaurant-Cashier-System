@@ -59,6 +59,7 @@
             this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.Export_Button = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Booking_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +139,7 @@
             this.Search_Text_Box.Name = "Search_Text_Box";
             this.Search_Text_Box.PasswordChar = '\0';
             this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Search_Text_Box.PlaceholderText = "Search";
+            this.Search_Text_Box.PlaceholderText = "Customer Name";
             this.Search_Text_Box.SelectedText = "";
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
             this.Search_Text_Box.Size = new System.Drawing.Size(155, 36);
@@ -523,12 +524,25 @@
             this.Export_Button.TabIndex = 46;
             this.Export_Button.Click += new System.EventHandler(this.Edit_Buttton_Click);
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 12);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(60, 27);
+            this.guna2HtmlLabel1.TabIndex = 47;
+            this.guna2HtmlLabel1.Text = "Search";
+            // 
             // Booking_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.Export_Button);
             this.Controls.Add(this.To_Time_Picker);
             this.Controls.Add(this.From_Time_Picker);
@@ -583,5 +597,6 @@
         private System.Windows.Forms.DateTimePicker From_Time_Picker;
         private System.Windows.Forms.DateTimePicker To_Time_Picker;
         private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
