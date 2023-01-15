@@ -45,13 +45,6 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Bills_Table = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Serial_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Without_Taxes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Total_Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Sum_Without_Tax_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,6 +55,14 @@
             this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.Export_Button = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Serial_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Without_Taxes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,6 +224,7 @@
             this.Bills_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Serial_Number,
             this.Table_Number,
+            this.Column2,
             this.Without_Taxes,
             this.Total,
             this.Column1,
@@ -289,66 +291,6 @@
             this.Bills_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Bills_Table_CellContentClick);
             this.Bills_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Bills_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
-            // 
-            // Serial_Number
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Serial_Number.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Serial_Number.HeaderText = "Serial Number";
-            this.Serial_Number.Name = "Serial_Number";
-            this.Serial_Number.ReadOnly = true;
-            this.Serial_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Table_Number
-            // 
-            this.Table_Number.HeaderText = "Cashier";
-            this.Table_Number.Name = "Table_Number";
-            this.Table_Number.ReadOnly = true;
-            this.Table_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Without_Taxes
-            // 
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Without_Taxes.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Without_Taxes.HeaderText = "Without Taxes";
-            this.Without_Taxes.Name = "Without_Taxes";
-            this.Without_Taxes.ReadOnly = true;
-            this.Without_Taxes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Total
-            // 
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Total.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Date";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Print
-            // 
-            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Print.HeaderText = "Print";
-            this.Print.Name = "Print";
-            this.Print.ReadOnly = true;
-            this.Print.Text = "Print";
-            this.Print.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // Table_Croll_Bar
             // 
@@ -519,6 +461,74 @@
             this.Export_Button.TabIndex = 46;
             this.Export_Button.Click += new System.EventHandler(this.Edit_Buttton_Click);
             // 
+            // Serial_Number
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Serial_Number.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Serial_Number.HeaderText = "Serial Number";
+            this.Serial_Number.Name = "Serial_Number";
+            this.Serial_Number.ReadOnly = true;
+            this.Serial_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Table_Number
+            // 
+            this.Table_Number.HeaderText = "User";
+            this.Table_Number.Name = "Table_Number";
+            this.Table_Number.ReadOnly = true;
+            this.Table_Number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Users_Id";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Without_Taxes
+            // 
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Without_Taxes.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Without_Taxes.HeaderText = "Without Taxes";
+            this.Without_Taxes.Name = "Without_Taxes";
+            this.Without_Taxes.ReadOnly = true;
+            this.Without_Taxes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Total
+            // 
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Date";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Print
+            // 
+            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print.HeaderText = "Print";
+            this.Print.Name = "Print";
+            this.Print.ReadOnly = true;
+            this.Print.Text = "Print";
+            this.Print.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // Bills_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,13 +575,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView Bills_Table;
         private Guna.UI2.WinForms.Guna2VScrollBar Table_Croll_Bar;
         private Guna.UI2.WinForms.Guna2TextBox Total_Search_Text_Box;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Serial_Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Table_Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Without_Taxes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Print;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Without_Tax_Value_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Without_Tax_Label;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sum_Total_Value_Label;
@@ -580,5 +583,13 @@
         private System.Windows.Forms.DateTimePicker From_Time_Picker;
         private System.Windows.Forms.DateTimePicker To_Time_Picker;
         private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Serial_Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table_Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Without_Taxes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn Print;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
