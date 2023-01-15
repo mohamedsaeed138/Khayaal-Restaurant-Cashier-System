@@ -187,12 +187,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             try
             {
                 DataGridViewRow row = Bills_Table.Rows[e.RowIndex];
-                if (Bills_Table.Columns[e.ColumnIndex].Index == 5)
+                if (Bills_Table.Columns[e.ColumnIndex].Index == 6)
                 {
                     Print_Form Form = new Print_Form((int)row.Cells[0].Value);
                     Form.Show();
                 }
-                else if (Bills_Table.Columns[e.ColumnIndex].Index == 6)
+                else if (Bills_Table.Columns[e.ColumnIndex].Index == 7)
                 {
                     Formatter.Check_Connection(conn);
                     SqlCommand Delete = new SqlCommand($"DELETE CR.Bills_Details Where Serial_No={(int)row.Cells[0].Value};\nDELETE CR.Bills WHERE Serial_Number={(int)row.Cells[0].Value};", conn);
