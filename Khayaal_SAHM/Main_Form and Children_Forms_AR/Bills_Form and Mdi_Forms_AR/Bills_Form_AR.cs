@@ -27,7 +27,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         void Reload()
         {
             InitializeComponent();
-            Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date from CR.Bills;");
+            Fill_Table($"select Serial_Number, Cashier_User_Name, Total,Date,[Cashier_User_Id] from CR.Bills;");
             if (Bills_Table.Rows.Count == 0)
             {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
@@ -39,8 +39,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
                 To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
                 From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
 
-                From_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[0].Cells[4].Value);
-                To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[4].Value);
+                From_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[0].Cells[5].Value);
+                To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[5].Value);
 
             }
 
@@ -66,7 +66,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             {
                 double total = (double)row[2];
 
-                Bills_Table.Rows.Add((int)row[0], (string)row[1], total, (total * .14 + total), (DateTime)row[3]);
+                Bills_Table.Rows.Add((int)row[0], (string)row[1], (int)row[4], total, (total * .14 + total), (DateTime)row[3]);
 
 
             }
@@ -99,13 +99,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
                 string Total = Formatter.String(Total_Search_Text_Box.Text);
                 string Serial = Formatter.String(Search_Serial_Number_Text_Box.Text);
                 if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text == "")
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date,[Cashier_User_Id] FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text != "")
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Serial_Number] LIKE N'%{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date,[Cashier_User_Id] FROM CR.Bills WHERE [Serial_Number] LIKE N'%{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text != "" && Search_Serial_Number_Text_Box.Text == "")
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total}  AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date,[Cashier_User_Id] FROM CR.Bills WHERE [Total] <= {Total}  AND Date BETWEEN '{From}' and '{To}' ;");
                 else
-                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date FROM CR.Bills WHERE [Total] <= {Total} AND [Serial_Number] LIKE N'%{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
+                    Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date,[Cashier_User_Id] FROM CR.Bills WHERE [Total] <= {Total} AND [Serial_Number] LIKE N'%{Serial}%' AND Date BETWEEN '{From}' and '{To}' ;");
             }
         }
 
@@ -228,14 +228,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             Work_Sheet = Work_Book.Sheets["Sheet1"];
             Work_Sheet = Work_Book.ActiveSheet;
 
-            for (int i = 0, k = 0; i < Bills_Table.ColumnCount - 2; i++, k++)
+            for (int i = 0; i < Bills_Table.ColumnCount - 2; i++)
             {
-                if (i == 0)
-                {
-                    k--;
-                    continue;
-                }
-                Work_Sheet.Cells[1, k + 1] = Bills_Table.Columns[i].HeaderText;
+
+                Work_Sheet.Cells[1, i + 1] = Bills_Table.Columns[i].HeaderText;
 
 
 
@@ -245,14 +241,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
 
             for (int j = 0; j < Bills_Table.Rows.Count; j++)
             {
-                for (int i = 0, m = 0; i < Bills_Table.Columns.Count - 2; i++, m++)
+                for (int i = 0; i < Bills_Table.Columns.Count - 2; i++)
                 {
-                    if (i == 0)
-                    {
-                        m--;
-                        continue;
-                    }
-                    Work_Sheet.Cells[j + 2, m + 1] = Bills_Table.Rows[j].Cells[i].Value.ToString();
+
+                    Work_Sheet.Cells[j + 2, i + 1] = Bills_Table.Rows[j].Cells[i].Value.ToString();
 
                 }
 

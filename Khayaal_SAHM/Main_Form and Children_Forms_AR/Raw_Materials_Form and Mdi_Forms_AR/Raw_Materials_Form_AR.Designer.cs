@@ -261,7 +261,7 @@
             this.Qty_Search_Text_Box.Name = "Qty_Search_Text_Box";
             this.Qty_Search_Text_Box.PasswordChar = '\0';
             this.Qty_Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Qty_Search_Text_Box.PlaceholderText = "< = Number";
+            this.Qty_Search_Text_Box.PlaceholderText = "الرقم=>";
             this.Qty_Search_Text_Box.SelectedText = "";
             this.Qty_Search_Text_Box.ShadowDecoration.Parent = this.Qty_Search_Text_Box;
             this.Qty_Search_Text_Box.Size = new System.Drawing.Size(131, 36);
