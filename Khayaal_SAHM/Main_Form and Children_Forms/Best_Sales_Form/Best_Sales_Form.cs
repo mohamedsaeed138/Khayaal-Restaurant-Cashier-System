@@ -22,7 +22,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
             Fill_Combo_Box();
             Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;");
             if (Best_Sales_Table.Rows.Count == 0)
+            {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
+                From_Time_Picker.Value = To_Time_Picker.Value = DateTime.Now;
+            }
             else
             {
                 DataTable x = new DataTable();
@@ -31,6 +34,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
                 conn.Open();
                 Date_Adapter.Fill(x);
                 conn.Close();
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
+
                 From_Date_Picker.Value = Convert.ToDateTime(x.Rows[0][0]);
                 To_Date_Picker.Value = Convert.ToDateTime(x.Rows[0][1]);
             }
@@ -94,15 +100,18 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
         }
         void Choose_Query()
         {
-            if (!(Khayaal_SAHM.Formatter.Check_Payment_Date_Range(From_Date_Picker.Value, To_Date_Picker.Value)))
+            string From = Formatter.Date_Formating(From_Date_Picker.Value, "Normal", From_Time_Picker.Value);
+            string To = Formatter.Date_Formating(To_Date_Picker.Value, "Normal", To_Time_Picker.Value);
+
+            if (DateTime.Parse(From) > DateTime.Parse(To))
             {
+                From_Time_Picker.Value = To_Time_Picker.Value;
                 From_Date_Picker.Value = To_Date_Picker.Value;
                 MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
-                string From = Khayaal_SAHM.Formatter.Date_Formating(From_Date_Picker.Value, "From_Payment"), To = Khayaal_SAHM.Formatter.Date_Formating(To_Date_Picker.Value, "To_Payment");
                 if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}'  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;\r\n");
                 else if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text != "")
@@ -200,6 +209,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
 
             }
             Work_Sheet.Columns.AutoFit();
+        }
+
+        private void From_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
+
+        private void To_Time_Picker_ValueChanged(object sender, EventArgs e)
+        {
+            Choose_Query();
         }
     }
 }
