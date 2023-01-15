@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -36,7 +37,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
         private void Refreash_Time(object sender, EventArgs e)
         {
-            Date_Label.Text = DateTime.Now.ToString("ddd , dd MMM yyyy HH:mm:ss");
+            Date_Label.Text = DateTime.Now.ToString("tt hh:mm:ss , yyyy MMM dd , ddd", new CultureInfo("ar-AE"));
         }
 
         public void Fill_Combo_Box()
@@ -406,8 +407,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             }
 
         }
-
-
     }
 
 
