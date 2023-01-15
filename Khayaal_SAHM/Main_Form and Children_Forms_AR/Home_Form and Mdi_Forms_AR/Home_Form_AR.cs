@@ -288,7 +288,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 Copy_Data_From_Orig_To_Test();
 
                 string Current_Date = Formatter.Date_Formating(DateTime.Now);
-                SqlCommand Create_a_Bill = new SqlCommand($" INSERT INTO CR.Bills VALUES('{Current_Date}',CR.Get_Last_User_Name_Logged());\r\n", conn);
+                SqlCommand Create_a_Bill = new SqlCommand($" INSERT INTO CR.Bills VALUES('{Current_Date}',CR.Get_Last_User_Name_Logged(),CR.Get_Last_User_Id_Logged());\r\n", conn);
                 Formatter.Check_Connection(conn);
                 conn.Open();
                 Create_a_Bill.ExecuteNonQuery();
