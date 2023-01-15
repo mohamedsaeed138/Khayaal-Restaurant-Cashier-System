@@ -311,9 +311,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Date_Label.BackColor = System.Drawing.Color.Transparent;
             this.Date_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date_Label.ForeColor = System.Drawing.Color.White;
-            this.Date_Label.Location = new System.Drawing.Point(12, 68);
+            this.Date_Label.Location = new System.Drawing.Point(0, 68);
             this.Date_Label.Name = "Date_Label";
-            this.Date_Label.Size = new System.Drawing.Size(309, 39);
+            this.Date_Label.Size = new System.Drawing.Size(321, 39);
             this.Date_Label.TabIndex = 27;
             this.Date_Label.Text = null;
             this.Date_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,9 +324,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
             this.Khayaal_Label.BackColor = System.Drawing.Color.Transparent;
             this.Khayaal_Label.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Khayaal_Label.ForeColor = System.Drawing.Color.White;
-            this.Khayaal_Label.Location = new System.Drawing.Point(10, -3);
+            this.Khayaal_Label.Location = new System.Drawing.Point(0, 0);
             this.Khayaal_Label.Name = "Khayaal_Label";
-            this.Khayaal_Label.Size = new System.Drawing.Size(311, 73);
+            this.Khayaal_Label.Size = new System.Drawing.Size(321, 70);
             this.Khayaal_Label.TabIndex = 26;
             this.Khayaal_Label.Text = "Khayaal";
             this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;

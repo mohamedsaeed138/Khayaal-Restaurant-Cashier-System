@@ -326,9 +326,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Khayaal_Label.BackColor = System.Drawing.Color.Transparent;
             this.Khayaal_Label.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Khayaal_Label.ForeColor = System.Drawing.Color.White;
-            this.Khayaal_Label.Location = new System.Drawing.Point(0, -3);
+            this.Khayaal_Label.Location = new System.Drawing.Point(0, 0);
             this.Khayaal_Label.Name = "Khayaal_Label";
-            this.Khayaal_Label.Size = new System.Drawing.Size(321, 73);
+            this.Khayaal_Label.Size = new System.Drawing.Size(321, 70);
             this.Khayaal_Label.TabIndex = 26;
             this.Khayaal_Label.Text = "خيال";
             this.Khayaal_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
