@@ -89,7 +89,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             foreach (DataRow row in dt.Rows)
             {
 
-                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (string)row[2], (double)row[3], (double)row[4], (double)row[5], (DateTime)row[6], (string)row[7]);
+                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (string)row[2], (int)row[8], (double)row[3], (double)row[4], (double)row[5], (DateTime)row[6], (string)row[7]);
             }
             try
             {
