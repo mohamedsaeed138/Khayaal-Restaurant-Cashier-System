@@ -417,7 +417,7 @@
             this.Total_Search_Text_Box.Name = "Total_Search_Text_Box";
             this.Total_Search_Text_Box.PasswordChar = '\0';
             this.Total_Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Total_Search_Text_Box.PlaceholderText = "الرقم=>";
+            this.Total_Search_Text_Box.PlaceholderText = "الرقم <=";
             this.Total_Search_Text_Box.SelectedText = "";
             this.Total_Search_Text_Box.ShadowDecoration.Parent = this.Total_Search_Text_Box;
             this.Total_Search_Text_Box.Size = new System.Drawing.Size(131, 36);
