@@ -161,8 +161,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
 
         private void Total_Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8))
-
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != 8)
+           || (e.KeyChar == '.' && Total_Search_Text_Box.Text.Contains(".")))
             {
                 e.Handled = true;
             }
