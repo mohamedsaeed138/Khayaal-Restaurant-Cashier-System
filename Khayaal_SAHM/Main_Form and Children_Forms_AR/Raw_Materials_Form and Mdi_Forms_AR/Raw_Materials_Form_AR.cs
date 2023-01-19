@@ -201,8 +201,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
         private void Qty_Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8))
-
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != 8)
+               || (e.KeyChar == '.' && Qty_Search_Text_Box.Text.Contains(".")))
             {
                 e.Handled = true;
             }
