@@ -46,10 +46,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
         private void Unite_Price_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != 8)
-            || (e.KeyChar == '.' && Unit_Price_Text_Box.Text.Contains(".")))
+            || (e.KeyChar == '.' && Unit_Price_Text_Box.Text.Contains(".")) || (Unit_Price_Text_Box.Text.Length >= 9 && e.KeyChar != 8))
             {
                 e.Handled = true;
             }
+
         }
 
 
