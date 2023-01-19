@@ -205,7 +205,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Raw_Materials_Form_and_Mdi_F
         private void Qty_Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != 8)
-               || (e.KeyChar == '.' && Qty_Search_Text_Box.Text.Contains(".")))
+               || (e.KeyChar == '.' && Qty_Search_Text_Box.Text.Contains(".")) || (Qty_Search_Text_Box.Text.Length >= 9 && e.KeyChar != 8))
             {
                 e.Handled = true;
             }
