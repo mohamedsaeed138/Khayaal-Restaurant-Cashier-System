@@ -217,14 +217,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                     int id = (int)row.Cells[0].Value;
                     try
                     {
-                        string Query = $"DELETE CR.Purchases WHERE Id={id};";
-                        Formatter.Check_Connection(conn);
-                        SqlCommand Delete = new SqlCommand(Query, conn);
-                        conn.Open();
-                        Delete.ExecuteNonQuery();
-                        conn.Close();
-                        Choose_Query();
-                        MessageBox.Show(" ! تم بنجاح");
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "تحذير", MessageBoxButtons.YesNo);
+                        if (DialogResult.Yes == r)
+                        {
+                            string Query = $"DELETE CR.Purchases WHERE Id={id};";
+                            Formatter.Check_Connection(conn);
+                            SqlCommand Delete = new SqlCommand(Query, conn);
+                            conn.Open();
+                            Delete.ExecuteNonQuery();
+                            conn.Close();
+                            Choose_Query();
+                            MessageBox.Show(" ! تم بنجاح");
+                        }
+
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }

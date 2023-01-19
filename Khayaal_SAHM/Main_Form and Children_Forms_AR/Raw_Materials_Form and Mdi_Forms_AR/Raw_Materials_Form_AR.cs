@@ -248,14 +248,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
                 {
                     try
                     {
-                        string Query = $"DELETE CR.Items_Relations WHERE Raw_Id={id};\nDELETE CR.Raw_Materials Where Id={id};\nUpdate CR.Purchases Set Category=N'Deleted' Where Raw_Id={id};";
-                        Formatter.Check_Connection(conn);
-                        SqlCommand Delete = new SqlCommand(Query, conn);
-                        conn.Open();
-                        Delete.ExecuteNonQuery();
-                        conn.Close();
-                        Choose_Query();
-                        MessageBox.Show("!تمت بنجاح");
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "تحذير", MessageBoxButtons.YesNo);
+                        if (DialogResult.Yes == r)
+                        {
+                            string Query = $"DELETE CR.Items_Relations WHERE Raw_Id={id};\nDELETE CR.Raw_Materials Where Id={id};\nUpdate CR.Purchases Set Category=N'Deleted' Where Raw_Id={id};";
+                            Formatter.Check_Connection(conn);
+                            SqlCommand Delete = new SqlCommand(Query, conn);
+                            conn.Open();
+                            Delete.ExecuteNonQuery();
+                            conn.Close();
+                            Choose_Query();
+                            MessageBox.Show("!تمت بنجاح");
+                        }
+
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
