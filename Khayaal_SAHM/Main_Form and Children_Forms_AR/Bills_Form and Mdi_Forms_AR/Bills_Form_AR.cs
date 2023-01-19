@@ -96,8 +96,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             }
             else
             {
-                string Total = Formatter.Float(Total_Search_Text_Box.Text);
+                string Total = "";
+                if (Total_Search_Text_Box.Text != "")
+                    Total = Formatter.Float(Total_Search_Text_Box.Text);
+
                 string Serial = Formatter.String(Search_Serial_Number_Text_Box.Text);
+
                 if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text == "")
                     Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date,[Cashier_User_Id] FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");
                 else if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text != "")
