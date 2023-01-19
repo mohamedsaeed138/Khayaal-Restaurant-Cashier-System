@@ -314,14 +314,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
                 {
                     try
                     {
-                        string Query = $"DELETE CR.Tables_Booking_Details WHERE Id={id};\n";
-                        Formatter.Check_Connection(conn);
-                        SqlCommand Delete = new SqlCommand(Query, conn);
-                        conn.Open();
-                        Delete.ExecuteNonQuery();
-                        conn.Close();
-                        Choose_Query();
-                        MessageBox.Show("تمت العملية بنجاح");
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "تحذير", MessageBoxButtons.YesNo);
+                        if (DialogResult.Yes == r)
+                        {
+                            string Query = $"DELETE CR.Tables_Booking_Details WHERE Id={id};\n";
+                            Formatter.Check_Connection(conn);
+                            SqlCommand Delete = new SqlCommand(Query, conn);
+                            conn.Open();
+                            Delete.ExecuteNonQuery();
+                            conn.Close();
+                            Choose_Query();
+                            MessageBox.Show("تمت العملية بنجاح");
+                        }
+
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }

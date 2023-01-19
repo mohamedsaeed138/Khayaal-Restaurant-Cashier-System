@@ -101,7 +101,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                     {
                         if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                         {
-                            DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "Warning", MessageBoxButtons.YesNo);
+                            DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "تحذير", MessageBoxButtons.YesNo);
                             if (DialogResult.Yes == r)
                             {
                                 Formatter.Check_Connection(conn);

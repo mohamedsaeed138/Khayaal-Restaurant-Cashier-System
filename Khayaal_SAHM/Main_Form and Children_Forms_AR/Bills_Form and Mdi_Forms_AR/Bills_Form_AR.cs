@@ -198,14 +198,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
                 }
                 else if (Bills_Table.Columns[e.ColumnIndex].Index == 7)
                 {
-                    Formatter.Check_Connection(conn);
-                    SqlCommand Delete = new SqlCommand($"DELETE CR.Bills_Details Where Serial_No={(int)row.Cells[0].Value};\nDELETE CR.Bills WHERE Serial_Number={(int)row.Cells[0].Value};", conn);
-                    conn.Open();
-                    Delete.ExecuteNonQuery();
+                    DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "تحذير", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == r)
+                    {
+                        Formatter.Check_Connection(conn);
+                        SqlCommand Delete = new SqlCommand($"DELETE CR.Bills_Details Where Serial_No={(int)row.Cells[0].Value};\nDELETE CR.Bills WHERE Serial_Number={(int)row.Cells[0].Value};", conn);
+                        conn.Open();
+                        Delete.ExecuteNonQuery();
 
-                    conn.Close();
-                    Choose_Query();
-                    MessageBox.Show("!!تمت بنجاح");
+                        conn.Close();
+                        Choose_Query();
+                        MessageBox.Show("!!تمت بنجاح");
+                    }
+
                 }
             }
             catch { }
