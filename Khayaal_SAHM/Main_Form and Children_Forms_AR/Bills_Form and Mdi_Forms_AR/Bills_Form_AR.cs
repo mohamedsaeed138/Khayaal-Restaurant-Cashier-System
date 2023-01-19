@@ -125,7 +125,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
 
         private void Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8))
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8) || (Search_Serial_Number_Text_Box.Text.Length >= 9 && e.KeyChar != 8))
 
             {
                 e.Handled = true;
@@ -165,7 +165,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
         private void Total_Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != 8)
-           || (e.KeyChar == '.' && Total_Search_Text_Box.Text.Contains(".")))
+           || (e.KeyChar == '.' && Total_Search_Text_Box.Text.Contains(".")) || (Total_Search_Text_Box.Text.Length >= 9 && e.KeyChar != 8))
             {
                 e.Handled = true;
             }

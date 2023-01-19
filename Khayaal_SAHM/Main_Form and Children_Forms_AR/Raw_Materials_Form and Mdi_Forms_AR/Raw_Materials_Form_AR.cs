@@ -204,7 +204,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
         {
 
             if ((!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != 8)
-               || (e.KeyChar == '.' && Qty_Search_Text_Box.Text.Contains(".")))
+               || (e.KeyChar == '.' && Qty_Search_Text_Box.Text.Contains(".")) || (Qty_Search_Text_Box.Text.Length >= 9 && e.KeyChar != 8))
             {
                 e.Handled = true;
             }

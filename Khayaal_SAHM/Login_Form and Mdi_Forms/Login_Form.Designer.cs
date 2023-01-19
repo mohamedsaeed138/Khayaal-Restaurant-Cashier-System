@@ -159,6 +159,7 @@
             this.Id_Text_Box.HoverState.Parent = this.Id_Text_Box;
             this.Id_Text_Box.Location = new System.Drawing.Point(311, 72);
             this.Id_Text_Box.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Id_Text_Box.MaxLength = 10;
             this.Id_Text_Box.Name = "Id_Text_Box";
             this.Id_Text_Box.PasswordChar = '\0';
             this.Id_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(110)))), ((int)(((byte)(123)))));
