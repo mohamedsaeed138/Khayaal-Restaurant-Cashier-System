@@ -40,7 +40,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Name_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
             this.From_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.To_Date_Picker = new System.Windows.Forms.DateTimePicker();
             this.Name_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,6 +48,17 @@
             this.Count_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Count_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Purchases_Table = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sub_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Table_Croll_Bar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Add_Purchase_Button = new Guna.UI2.WinForms.Guna2Button();
             this.Sum_Sub_Total_Value_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,43 +68,11 @@
             this.To_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.From_Time_Picker = new System.Windows.Forms.DateTimePicker();
             this.Export_Button = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sub_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Category_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Category_Combo_Box = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Search_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Purchases_Table)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Name_Combo_Box
-            // 
-            this.Name_Combo_Box.BackColor = System.Drawing.Color.Transparent;
-            this.Name_Combo_Box.BorderRadius = 10;
-            this.Name_Combo_Box.BorderThickness = 0;
-            this.Name_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Name_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Name_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Name_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
-            this.Name_Combo_Box.FocusedState.Parent = this.Name_Combo_Box;
-            this.Name_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Name_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Name_Combo_Box.FormattingEnabled = true;
-            this.Name_Combo_Box.HoverState.Parent = this.Name_Combo_Box;
-            this.Name_Combo_Box.ItemHeight = 30;
-            this.Name_Combo_Box.ItemsAppearance.Parent = this.Name_Combo_Box;
-            this.Name_Combo_Box.Location = new System.Drawing.Point(52, 43);
-            this.Name_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.Name_Combo_Box.Name = "Name_Combo_Box";
-            this.Name_Combo_Box.ShadowDecoration.Parent = this.Name_Combo_Box;
-            this.Name_Combo_Box.Size = new System.Drawing.Size(231, 36);
-            this.Name_Combo_Box.TabIndex = 5;
-            this.Name_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Name_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
             // From_Date_Picker
             // 
@@ -104,7 +82,7 @@
             this.From_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.From_Date_Picker.Location = new System.Drawing.Point(364, 43);
+            this.From_Date_Picker.Location = new System.Drawing.Point(427, 43);
             this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Date_Picker.Name = "From_Date_Picker";
             this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
@@ -119,7 +97,7 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(566, 43);
+            this.To_Date_Picker.Location = new System.Drawing.Point(586, 43);
             this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
@@ -143,7 +121,7 @@
             this.From_Label.BackColor = System.Drawing.Color.Transparent;
             this.From_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.From_Label.Location = new System.Drawing.Point(364, 11);
+            this.From_Label.Location = new System.Drawing.Point(427, 12);
             this.From_Label.Margin = new System.Windows.Forms.Padding(2);
             this.From_Label.Name = "From_Label";
             this.From_Label.Size = new System.Drawing.Size(46, 27);
@@ -155,7 +133,7 @@
             this.To_Label.BackColor = System.Drawing.Color.Transparent;
             this.To_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.To_Label.Location = new System.Drawing.Point(566, 11);
+            this.To_Label.Location = new System.Drawing.Point(586, 11);
             this.To_Label.Margin = new System.Windows.Forms.Padding(2);
             this.To_Label.Name = "To_Label";
             this.To_Label.Size = new System.Drawing.Size(25, 27);
@@ -192,7 +170,6 @@
             // 
             this.Purchases_Table.AllowUserToAddRows = false;
             this.Purchases_Table.AllowUserToDeleteRows = false;
-            this.Purchases_Table.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,6 +198,7 @@
             this.Purchases_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column5,
             this.Column3,
             this.Column4,
             this.Quantity,
@@ -291,6 +269,117 @@
             this.Purchases_Table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Best_Seller_Table_RowsAdded);
             this.Purchases_Table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Best_Seller_Table_RowsRemoved);
             // 
+            // Column1
+            // 
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Category";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "User";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "User Id";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Quantity
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Unit_Price
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Unit_Price.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Unit_Price.HeaderText = "Unit Price";
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.ReadOnly = true;
+            this.Unit_Price.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Unit_Price.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Sub_Total
+            // 
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Sub_Total.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Sub_Total.HeaderText = "Sub Total";
+            this.Sub_Total.Name = "Sub_Total";
+            this.Sub_Total.ReadOnly = true;
+            this.Sub_Total.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sub_Total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Date
+            // 
+            dataGridViewCellStyle8.Format = "g";
+            dataGridViewCellStyle8.NullValue = null;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Notes
+            // 
+            dataGridViewCellStyle9.NullValue = "\"\"";
+            this.Notes.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Notes.HeaderText = "Notes";
+            this.Notes.Name = "Notes";
+            this.Notes.ReadOnly = true;
+            this.Notes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Notes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Delete
+            // 
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // Table_Croll_Bar
             // 
             this.Table_Croll_Bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -334,7 +423,7 @@
             this.Sum_Sub_Total_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Sub_Total_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Sub_Total_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Sub_Total_Value_Label.Location = new System.Drawing.Point(522, 544);
+            this.Sum_Sub_Total_Value_Label.Location = new System.Drawing.Point(577, 544);
             this.Sum_Sub_Total_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Sub_Total_Value_Label.Name = "Sum_Sub_Total_Value_Label";
             this.Sum_Sub_Total_Value_Label.Size = new System.Drawing.Size(13, 27);
@@ -347,7 +436,7 @@
             this.Sum_Sub_Total_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Sub_Total_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Sub_Total_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Sub_Total_Label.Location = new System.Drawing.Point(471, 543);
+            this.Sum_Sub_Total_Label.Location = new System.Drawing.Point(526, 543);
             this.Sum_Sub_Total_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Sub_Total_Label.Name = "Sum_Sub_Total_Label";
             this.Sum_Sub_Total_Label.Size = new System.Drawing.Size(50, 27);
@@ -360,7 +449,7 @@
             this.Sum_Qty_Value_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Qty_Value_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Qty_Value_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Qty_Value_Label.Location = new System.Drawing.Point(270, 544);
+            this.Sum_Qty_Value_Label.Location = new System.Drawing.Point(383, 545);
             this.Sum_Qty_Value_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Qty_Value_Label.Name = "Sum_Qty_Value_Label";
             this.Sum_Qty_Value_Label.Size = new System.Drawing.Size(13, 27);
@@ -373,7 +462,7 @@
             this.Sum_Qty_Label.BackColor = System.Drawing.Color.Transparent;
             this.Sum_Qty_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sum_Qty_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.Sum_Qty_Label.Location = new System.Drawing.Point(216, 543);
+            this.Sum_Qty_Label.Location = new System.Drawing.Point(329, 544);
             this.Sum_Qty_Label.Margin = new System.Windows.Forms.Padding(2);
             this.Sum_Qty_Label.Name = "Sum_Qty_Label";
             this.Sum_Qty_Label.Size = new System.Drawing.Size(50, 27);
@@ -388,7 +477,7 @@
             this.To_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Time_Picker.CustomFormat = "";
             this.To_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.To_Time_Picker.Location = new System.Drawing.Point(566, 64);
+            this.To_Time_Picker.Location = new System.Drawing.Point(586, 64);
             this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Time_Picker.Name = "To_Time_Picker";
             this.To_Time_Picker.ShowUpDown = true;
@@ -404,7 +493,7 @@
             this.From_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.From_Time_Picker.CustomFormat = "";
             this.From_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.From_Time_Picker.Location = new System.Drawing.Point(364, 64);
+            this.From_Time_Picker.Location = new System.Drawing.Point(427, 64);
             this.From_Time_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Time_Picker.Name = "From_Time_Picker";
             this.From_Time_Picker.ShowUpDown = true;
@@ -434,108 +523,72 @@
             this.Export_Button.TabIndex = 44;
             this.Export_Button.Click += new System.EventHandler(this.Edit_Buttton_Click);
             // 
-            // Column1
+            // Category_Label
             // 
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Visible = false;
+            this.Category_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Category_Label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Category_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.Category_Label.Location = new System.Drawing.Point(230, 11);
+            this.Category_Label.Margin = new System.Windows.Forms.Padding(2);
+            this.Category_Label.Name = "Category_Label";
+            this.Category_Label.Size = new System.Drawing.Size(80, 27);
+            this.Category_Label.TabIndex = 45;
+            this.Category_Label.Text = "Category";
             // 
-            // Column2
+            // Category_Combo_Box
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Category_Combo_Box.BackColor = System.Drawing.Color.Transparent;
+            this.Category_Combo_Box.BorderRadius = 10;
+            this.Category_Combo_Box.BorderThickness = 0;
+            this.Category_Combo_Box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Category_Combo_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Category_Combo_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Category_Combo_Box.FocusedColor = System.Drawing.Color.Empty;
+            this.Category_Combo_Box.FocusedState.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Category_Combo_Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Category_Combo_Box.FormattingEnabled = true;
+            this.Category_Combo_Box.HoverState.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.ItemHeight = 30;
+            this.Category_Combo_Box.ItemsAppearance.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Location = new System.Drawing.Point(230, 42);
+            this.Category_Combo_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Category_Combo_Box.Name = "Category_Combo_Box";
+            this.Category_Combo_Box.ShadowDecoration.Parent = this.Category_Combo_Box;
+            this.Category_Combo_Box.Size = new System.Drawing.Size(164, 36);
+            this.Category_Combo_Box.TabIndex = 46;
+            this.Category_Combo_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Category_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Category_Combo_Box_SelectedIndexChanged);
             // 
-            // Column3
+            // Search_Text_Box
             // 
-            this.Column3.HeaderText = "User";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "User Id";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Quantity
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            this.Quantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Unit_Price
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Unit_Price.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Unit_Price.HeaderText = "Unit Price";
-            this.Unit_Price.Name = "Unit_Price";
-            this.Unit_Price.ReadOnly = true;
-            this.Unit_Price.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Unit_Price.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Sub_Total
-            // 
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.Sub_Total.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Sub_Total.HeaderText = "Sub Total";
-            this.Sub_Total.Name = "Sub_Total";
-            this.Sub_Total.ReadOnly = true;
-            this.Sub_Total.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Sub_Total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Date
-            // 
-            dataGridViewCellStyle8.Format = "g";
-            dataGridViewCellStyle8.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Notes
-            // 
-            dataGridViewCellStyle9.NullValue = "\"\"";
-            this.Notes.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Notes.HeaderText = "Notes";
-            this.Notes.Name = "Notes";
-            this.Notes.ReadOnly = true;
-            this.Notes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Notes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Delete
-            // 
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
+            this.Search_Text_Box.BorderRadius = 10;
+            this.Search_Text_Box.BorderThickness = 0;
+            this.Search_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Search_Text_Box.DefaultText = "";
+            this.Search_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Search_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Search_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Search_Text_Box.DisabledState.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Search_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Search_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Search_Text_Box.FocusedState.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Search_Text_Box.HoverState.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.Location = new System.Drawing.Point(49, 42);
+            this.Search_Text_Box.Margin = new System.Windows.Forms.Padding(4);
+            this.Search_Text_Box.Name = "Search_Text_Box";
+            this.Search_Text_Box.PasswordChar = '\0';
+            this.Search_Text_Box.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Search_Text_Box.PlaceholderText = "Raw Name";
+            this.Search_Text_Box.SelectedText = "";
+            this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.Size = new System.Drawing.Size(153, 36);
+            this.Search_Text_Box.TabIndex = 47;
+            this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Search_Text_Box.TextChanged += new System.EventHandler(this.Search_Text_Box_TextChanged);
+            this.Search_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_Text_Box_KeyPress);
             // 
             // Purchases_Form
             // 
@@ -543,6 +596,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(974, 581);
+            this.Controls.Add(this.Search_Text_Box);
+            this.Controls.Add(this.Category_Combo_Box);
+            this.Controls.Add(this.Category_Label);
             this.Controls.Add(this.Export_Button);
             this.Controls.Add(this.From_Time_Picker);
             this.Controls.Add(this.To_Time_Picker);
@@ -560,7 +616,6 @@
             this.Controls.Add(this.Name_Label);
             this.Controls.Add(this.To_Date_Picker);
             this.Controls.Add(this.From_Date_Picker);
-            this.Controls.Add(this.Name_Combo_Box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Purchases_Form";
             this.Text = "Best_Seller_Form";
@@ -571,7 +626,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2ComboBox Name_Combo_Box;
         private System.Windows.Forms.DateTimePicker From_Date_Picker;
         private System.Windows.Forms.DateTimePicker To_Date_Picker;
         private Guna.UI2.WinForms.Guna2HtmlLabel Name_Label;
@@ -589,8 +643,12 @@
         private System.Windows.Forms.DateTimePicker To_Time_Picker;
         private System.Windows.Forms.DateTimePicker From_Time_Picker;
         private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Category_Label;
+        private Guna.UI2.WinForms.Guna2ComboBox Category_Combo_Box;
+        private Guna.UI2.WinForms.Guna2TextBox Search_Text_Box;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;

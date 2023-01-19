@@ -35,7 +35,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
         {
 
             Fill_Combo_Box();
-            Fill_Table($"select Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes,[Cashier_User_Id] FROM CR.Purchases ORDER BY [Date];");
+            Fill_Table($"select Id,Name,Category,[Cashier_User_Name],[Cashier_User_Id],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases ORDER BY [Date];");
             if (Purchases_Table.Rows.Count == 0)
             {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
@@ -46,8 +46,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                 To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
                 From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
 
-                From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[7].Value);
-                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[7].Value);
+                From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[8].Value);
+                To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[8].Value);
 
             }
 
@@ -55,20 +55,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
         }
         public void Fill_Combo_Box()
         {
-            Name_Combo_Box.DataSource = null;
+            Category_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
 
             conn.Open();
-            string sql = "SELECT [Name] FROM CR.Purchases ORDER BY [Name];";
+            string sql = "SELECT Category FROM CR.Raw_Materials GROUP BY Category ORDER BY Category;";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
             DataRow row = dt.NewRow();
             dt.Rows.InsertAt(row, 0);
-            row["Name"] = "الجميع";
-            Name_Combo_Box.DataSource = dt;
-            Name_Combo_Box.DisplayMember = "Name";
+            row["Category"] = "الجميع";
+            row = dt.NewRow();
+            dt.Rows.InsertAt(row, 1);
+            row["Category"] = "المحذوف";
+            Category_Combo_Box.DataSource = dt;
+            Category_Combo_Box.DisplayMember = "Category";
 
         }
 
@@ -88,7 +91,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             foreach (DataRow row in dt.Rows)
             {
 
-                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (string)row[2], (int)row[8], (double)row[3], (double)row[4], (double)row[5], (DateTime)row[6], (string)row[7]);
+                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (((string)row[2] == "Deleted") ? "المحذوف" : (string)row[2]), (string)row[3], (int)row[4], (double)row[5], (double)row[6], (double)row[7], (DateTime)row[8], (string)row[9]);
             }
             try
             {
@@ -96,8 +99,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             }
             catch { }
             Count_Value_Label.Text = $"{Purchases_Table.Rows.Count}";
-            string Sum_Qty = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[3].Value))}");
-            string Sum_Total = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[5].Value))}") + " $";
+            string Sum_Qty = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[5].Value))}");
+            string Sum_Total = Formatter.Float($"{Purchases_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value))}") + " $";
 
             Sum_Qty_Value_Label.Text = Sum_Qty;
 
@@ -118,11 +121,16 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             }
             else
             {
-                string Name = Formatter.String(Name_Combo_Box.Text);
-                if (Name == "الجميع")
-                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes,[Cashier_User_Id] FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                string Name = Formatter.String(Search_Text_Box.Text);
+                string Category = Category_Combo_Box.Text == "المحذوف" ? "Deleted" : Category_Combo_Box.Text;
+                if (Name == "" && Category == "الجميع")
+                    Fill_Table($"select Id,Name,Category,[Cashier_User_Name],[Cashier_User_Id],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                else if (Name == "" && Category != "الجميع")
+                    Fill_Table($"select Id,Name,Category,[Cashier_User_Name],[Cashier_User_Id],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE  Category=N'{Category}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];\n");
+                else if (Name != "" && Category == "الجميع")
+                    Fill_Table($"select Id,Name,Category,[Cashier_User_Name],[Cashier_User_Id],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE NAME LIKE N'%{Name}%' AND [Date] BETWEEN '{From}' AND '{To}'  ORDER BY [Date];\n");
                 else
-                    Fill_Table($"SELECT Id,Name,[Cashier_User_Name],Qty,Unit_Price,Sub_Total,[Date],Notes,[Cashier_User_Id] FROM CR.Purchases WHERE [Name]=N'{Name}' AND [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");
+                    Fill_Table($"select Id,Name,Category,[Cashier_User_Name],[Cashier_User_Id],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE NAME LIKE N'%{Name}%' AND [Date] BETWEEN '{From}' AND '{To}' AND Category=N'{Category}' ORDER BY [Date];\n");
             }
         }
 
@@ -204,7 +212,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
 
 
-                if (Purchases_Table.Columns[e.ColumnIndex].Index == 9)
+                if (Purchases_Table.Columns[e.ColumnIndex].Index == 10)
                 {
                     int id = (int)row.Cells[0].Value;
                     try
@@ -216,7 +224,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                         Delete.ExecuteNonQuery();
                         conn.Close();
                         Choose_Query();
-                        MessageBox.Show("Successfully Done!");
+                        MessageBox.Show(" ! تم بنجاح");
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
@@ -273,6 +281,21 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
             }
             Work_Sheet.Columns.AutoFit();
+        }
+
+        private void Search_Text_Box_TextChanged_1(object sender, EventArgs e)
+        {
+            Choose_Query();
+        }
+
+        private void Search_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Search_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            || (e.KeyChar == ' ' && Search_Text_Box.Text.Length == 0))
+
+            {
+                e.Handled = true;
+            }
         }
     }
 }

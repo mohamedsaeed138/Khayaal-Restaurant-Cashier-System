@@ -133,8 +133,6 @@
             // 
             this.Users_Table.AllowUserToAddRows = false;
             this.Users_Table.AllowUserToDeleteRows = false;
-            this.Users_Table.AllowUserToResizeColumns = false;
-            this.Users_Table.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -379,7 +377,7 @@
             this.Column1.HeaderText = "Name الاسم";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column3
@@ -387,12 +385,14 @@
             this.Column3.HeaderText = "Jop الوظيفة";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Password الرقم السري";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Edit
             // 

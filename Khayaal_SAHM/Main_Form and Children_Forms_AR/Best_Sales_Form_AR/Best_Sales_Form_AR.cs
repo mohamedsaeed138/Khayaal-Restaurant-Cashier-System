@@ -20,7 +20,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
         {
             InitializeComponent();
             Fill_Combo_Box();
-            Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;");
+            Fill_Table("SELECT [Name] as [Item],[Category], COUNT([Item_Id]) as [Quantity],SUM([Sub_Total]) as [Total],MIN([Date]) as First_Sale,MAX([Date]) as Last_Sale From CR.Bills_Details  GROUP BY [Item_Id],[Name],[Category]  ORDER BY [Total] , [Quantity]  DESC;");
             if (Best_Sales_Table.Rows.Count == 0)
             {
                 From_Date_Picker.Value = To_Date_Picker.Value = DateTime.Now;
@@ -28,17 +28,13 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
             }
             else
             {
-                DataTable x = new DataTable();
-                Formatter.Check_Connection(conn);
-                SqlDataAdapter Date_Adapter = new SqlDataAdapter("SELECT MIN([Date]),MAX([Date]) FROM CR.Bills;", conn);
-                conn.Open();
-                Date_Adapter.Fill(x);
-                conn.Close();
                 To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
                 From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
 
-                From_Date_Picker.Value = Convert.ToDateTime(x.Rows[0][0]);
-                To_Date_Picker.Value = Convert.ToDateTime(x.Rows[0][1]);
+                From_Date_Picker.Value = Best_Sales_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[5].Value));
+                To_Date_Picker.Value = Best_Sales_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[6].Value));
+
+
             }
         }
         public Best_Sales_Form_AR()
@@ -48,9 +44,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
         }
         public void Fill_Combo_Box()
         {
+
+            Category_Combo_Box.DataSource = null;
             Formatter.Check_Connection(conn);
+
             conn.Open();
-            string sql = "SELECT Category FROM CR.Items GROUP BY Category";
+            string sql = "SELECT Category FROM CR.Items GROUP BY Category ORDER BY Category;";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -58,6 +57,9 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
             DataRow row = dt.NewRow();
             dt.Rows.InsertAt(row, 0);
             row["Category"] = "الجميع";
+            row = dt.NewRow();
+            dt.Rows.InsertAt(row, 1);
+            row["Category"] = "المحذوف";
             Category_Combo_Box.DataSource = dt;
             Category_Combo_Box.DisplayMember = "Category";
 
@@ -78,17 +80,17 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
             Best_Sales_Table.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
-                double total = (double)row[2];
-                Best_Sales_Table.Rows.Add((string)row[0], (int)row[1], total, (total * .14 + total));
+                double total = (double)row[3];
+                Best_Sales_Table.Rows.Add((string)row[0], ((string)row[1] == "Deleted") ? "المحذوف" : (string)row[1], (int)row[2], total, (total * .14 + total), (DateTime)row[4], (DateTime)row[5]);
             }
             try
             {
                 Table_Croll_Bar.Maximum = Best_Sales_Table.Rows.Count - 1;
             }
             catch { }
-            string Qty = Formatter.Float($"{Best_Sales_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[1].Value))}");
+            string Qty = Formatter.Float($"{Best_Sales_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[2].Value))}");
 
-            string Total = Formatter.Float($"{Best_Sales_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}");
+            string Total = Formatter.Float($"{Best_Sales_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[3].Value))}");
             double Total_Double = Convert.ToDouble(Total);
 
             string Total_With_Tax = Formatter.Float($"{Total_Double + Total_Double * .14}");
@@ -107,19 +109,24 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
             {
                 From_Time_Picker.Value = To_Time_Picker.Value;
                 From_Date_Picker.Value = To_Date_Picker.Value;
-                MessageBox.Show("Data Range Error Change The Date Range!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("!! خطأ في المدي الزمني , قم بتغييره ", "!! خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
+                string Name = Formatter.String(Search_Text_Box.Text);
+                string Category = Category_Combo_Box.Text == "المحذوف" ? "Deleted" : Category_Combo_Box.Text;
                 if (Category_Combo_Box.Text == "الجميع" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT [Name] as [Item]  , COUNT([Name]) as [Quantity],SUM([Sub_Total]) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}'  GROUP BY [Name]  ORDER BY [Total] , [Quantity]  DESC;\r\n");
+                    Fill_Table($"SELECT [Name] as [Item],[Category], COUNT([Item_Id]) as [Quantity],SUM([Sub_Total]) as [Total],MIN([Date]) as First_Sale,MAX([Date]) as Last_Sale From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' GROUP BY [Item_Id],[Name],[Category]  ORDER BY [Total] , [Quantity]  DESC;");
+
                 else if (Category_Combo_Box.Text == "الجميع" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT [Name] as [Item] , COUNT([Name]) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and [Name] Like N'%{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%'  GROUP BY [Name]  ORDER BY [Total] , Quantity   DESC;");
+                    Fill_Table($"SELECT [Name] as [Item],[Category], COUNT([Item_Id]) as [Quantity],SUM([Sub_Total]) as [Total],MIN([Date]) as First_Sale,MAX([Date]) as Last_Sale From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' AND [Name] LIKE N'%{Name}%' GROUP BY [Item_Id],[Name],[Category]  ORDER BY [Total] , [Quantity]  DESC;");
+
                 else if (Category_Combo_Box.Text != "الجميع" && Search_Text_Box.Text == "")
-                    Fill_Table($"SELECT [Name] as [Item] , COUNT([Name]) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and CR.Get_Item_Category([Name]) = N'{Category_Combo_Box.Text}'  GROUP BY [Name]  ORDER BY [Total] , Quantity  DESC;");
-                else if (Category_Combo_Box.Text != "الجميع" && Search_Text_Box.Text != "")
-                    Fill_Table($"SELECT [Name] as [Item] , COUNT([Name]) as Quantity,SUM(Sub_Total) as [Total] From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' and [Name] Like N'%{Khayaal_SAHM.Formatter.String(Search_Text_Box.Text)}%' and CR.Get_Item_Category([Name]) = N'{Category_Combo_Box.Text}'  GROUP BY [Name]  ORDER BY [Total] , Quantity   DESC;");
+                    Fill_Table($"SELECT [Name] as [Item],[Category], COUNT([Item_Id]) as [Quantity],SUM([Sub_Total]) as [Total],MIN([Date]) as First_Sale,MAX([Date]) as Last_Sale From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' AND Category=N'{Category}' GROUP BY [Item_Id],[Name],[Category]  ORDER BY [Total] , [Quantity]  DESC;");
+
+                else
+                    Fill_Table($"SELECT [Name] as [Item],[Category], COUNT([Item_Id]) as [Quantity],SUM([Sub_Total]) as [Total],MIN([Date]) as First_Sale,MAX([Date]) as Last_Sale From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' AND [Name] LIKE N'%{Name}%' AND Category=N'{Category}' GROUP BY [Item_Id],[Name],[Category]  ORDER BY [Total] , [Quantity]  DESC;");
             }
         }
 

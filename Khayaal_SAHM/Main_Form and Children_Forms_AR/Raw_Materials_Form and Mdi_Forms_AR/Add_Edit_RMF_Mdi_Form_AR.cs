@@ -172,7 +172,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
                 else
                 {
 
-                    string Query = $"Update CR.Raw_Materials SET Category = N'{Category}',Name=N'{Name}'  WHERE Id ={id};\nUpdate CR.Purchases set Name=N'{Name}' WHERE Raw_Id= {id};";
+                    string Query = $"Update CR.Raw_Materials SET Category = N'{Category}',Name=N'{Name}'  WHERE Id ={id};\nUpdate CR.Purchases set Name=N'{Name}',Category=N'{Category}' WHERE Raw_Id= {id};";
                     SqlCommand Update_Query = new SqlCommand(Query, conn);
                     try
                     {

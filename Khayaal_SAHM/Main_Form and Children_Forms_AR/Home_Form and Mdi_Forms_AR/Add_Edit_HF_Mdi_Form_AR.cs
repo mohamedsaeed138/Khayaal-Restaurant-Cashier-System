@@ -229,7 +229,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 else
                 {
 
-                    string Query = $"Update CR.Items SET Category = N'{Category}',Name=N'{Name}',Unit_Price={Price},Description=N'{Description}' WHERE Id ={id};\nUpdate CR.Bills_Details SET Name=N'{Name}' Where Item_Id={id};";
+                    string Query = $"Update CR.Items SET Category = N'{Category}',Name=N'{Name}',Unit_Price={Price},Description=N'{Description}' WHERE Id ={id};\nUpdate CR.Bills_Details SET Name=N'{Name}' ,Category=N'{Category}' Where Item_Id={id};";
                     SqlCommand Update_Query = new SqlCommand(Query, conn);
                     try
                     {

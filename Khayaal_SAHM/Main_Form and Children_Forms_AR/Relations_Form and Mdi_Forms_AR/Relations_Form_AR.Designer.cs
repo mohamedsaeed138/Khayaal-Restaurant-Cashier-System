@@ -125,8 +125,6 @@
             // 
             this.Relations_Table.AllowUserToAddRows = false;
             this.Relations_Table.AllowUserToDeleteRows = false;
-            this.Relations_Table.AllowUserToResizeColumns = false;
-            this.Relations_Table.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,6 +254,7 @@
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column1.Visible = false;
             // 
             // Edit
@@ -414,12 +413,12 @@
         private Guna.UI2.WinForms.Guna2ComboBox Raw_Combo_Box;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button Add_Button;
+        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
     }
 }

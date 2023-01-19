@@ -101,23 +101,23 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                     {
                         if (Order_Nested_Flow_Layout_Panel.Controls.Count == 0)
                         {
-                            DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure?", "Warning", MessageBoxButtons.YesNo);
+                            DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "Warning", MessageBoxButtons.YesNo);
                             if (DialogResult.Yes == r)
                             {
                                 Formatter.Check_Connection(conn);
-
-                                SqlCommand Delete = new SqlCommand($"DELETE CR.Items_Relations WHERE Item_Id={((Item_User_Control)obj).Id};\nDELETE CR.Items Where Id ={((Item_User_Control)obj).Id};   ", conn);
+                                Item_User_Control item = (Item_User_Control)obj;
+                                SqlCommand Delete = new SqlCommand($"DELETE CR.Items_Relations WHERE Item_Id={item.Id};\nDELETE CR.Items Where Id ={item.Id};\nUpdate CR.Bills_Details Set Category=N'Deleted' Where Item_Id={item.Id};", conn);
                                 conn.Open();
                                 Delete.ExecuteNonQuery();
                                 conn.Close();
                                 ((Item_User_Control)obj).Dispose();
-                                System.Windows.Forms.MessageBox.Show("Successfully Done!!");
+                                System.Windows.Forms.MessageBox.Show("!! تمت بنجاح ");
                             }
 
                         }
                         else
                         {
-                            MessageBox.Show("Finish Your Bill First!!");
+                            MessageBox.Show("! أنهي الطلب أولا");
                         }
 
                     };
@@ -297,7 +297,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 string Insert_Bills_Details_Query = "";
                 foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())
                 {
-                    Insert_Bills_Details_Query += $"INSERT INTO CR.Bills_Details VALUES(CR.GET_Last_Bill_Serial(),{item.Id},{item.Qty},{item.Price},N'{item.Name}','{Current_Date}');\r\n";
+                    Insert_Bills_Details_Query += $"INSERT INTO CR.Bills_Details VALUES(CR.GET_Last_Bill_Serial(),{item.Id},{item.Qty},{item.Price},N'{item.Name}','{Current_Date}',CR.Get_Item_Category(N'{item.Name}'));\r\n";
                 }
                 Clear_Order_Nested_Flow_Layout_Panel();
                 Formatter.Check_Connection(conn);

@@ -311,7 +311,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             // 
             this.Date_Label.AutoSize = false;
             this.Date_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Date_Label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_Label.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.Date_Label.ForeColor = System.Drawing.Color.White;
             this.Date_Label.Location = new System.Drawing.Point(0, 68);
             this.Date_Label.Name = "Date_Label";

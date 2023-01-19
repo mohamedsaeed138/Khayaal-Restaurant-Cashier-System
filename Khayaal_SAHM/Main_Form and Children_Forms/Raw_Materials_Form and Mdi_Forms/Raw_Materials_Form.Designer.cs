@@ -180,8 +180,6 @@
             // 
             this.Raw_Material_Table.AllowUserToAddRows = false;
             this.Raw_Material_Table.AllowUserToDeleteRows = false;
-            this.Raw_Material_Table.AllowUserToResizeColumns = false;
-            this.Raw_Material_Table.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,7 +281,7 @@
             this.Column1.HeaderText = "Name";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column2
@@ -502,13 +500,13 @@
         private Guna.UI2.WinForms.Guna2ComboBox Sorting_Combo_Box;
         private Guna.UI2.WinForms.Guna2Button Add_Button;
         private Guna.UI2.WinForms.Guna2TextBox Qty_Search_Text_Box;
+        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

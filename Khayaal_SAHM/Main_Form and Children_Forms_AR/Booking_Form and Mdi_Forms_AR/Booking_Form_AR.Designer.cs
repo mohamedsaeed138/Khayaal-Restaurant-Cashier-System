@@ -226,7 +226,6 @@
             // 
             this.Booking_Table.AllowUserToAddRows = false;
             this.Booking_Table.AllowUserToDeleteRows = false;
-            this.Booking_Table.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,7 +328,7 @@
             this.Column2.HeaderText = "رقم الطاولة";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column3
@@ -358,6 +357,7 @@
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column1.Visible = false;
             // 
             // Column6
@@ -373,7 +373,7 @@
             this.Edit.HeaderText = "تعديل";
             this.Edit.Name = "Edit";
             this.Edit.ReadOnly = true;
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Edit.Text = "تعديل";
             this.Edit.UseColumnTextForButtonValue = true;
             // 
@@ -383,7 +383,7 @@
             this.Delete.HeaderText = "حذف";
             this.Delete.Name = "Delete";
             this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.Text = "حذف";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
@@ -607,6 +607,10 @@
         private Guna.UI2.WinForms.Guna2Button Add_Table_Button;
         private Guna.UI2.WinForms.Guna2TextBox Delete_Table_Text_Box;
         private Guna.UI2.WinForms.Guna2Button Add_Booking_Button;
+        private System.Windows.Forms.DateTimePicker To_Time_Picker;
+        private System.Windows.Forms.DateTimePicker From_Time_Picker;
+        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -615,9 +619,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.DateTimePicker To_Time_Picker;
-        private System.Windows.Forms.DateTimePicker From_Time_Picker;
-        private Guna.UI2.WinForms.Guna2CircleButton Export_Button;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

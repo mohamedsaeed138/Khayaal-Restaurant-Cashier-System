@@ -95,7 +95,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
 
 
 
-                string Query = $"INSERT INTO CR.Purchases VALUES(CR.Get_Raw_Mat_Id(N'{Name}') ,{Qty},{Price},N'{Notes}',GetDate(),N'{Name}',CR.Get_Last_User_Name_Logged(),CR.Get_Last_User_Id_Logged());\nUPDATE CR.Raw_Materials SET Qty+= {Qty} WHERE [Name]=\tN'{Name}';\r\n";
+                string Query = $"INSERT INTO CR.Purchases VALUES(CR.Get_Raw_Mat_Id(N'{Name}') ,{Qty},{Price},N'{Notes}',GetDate(),N'{Name}',CR.Get_Last_User_Name_Logged(),CR.Get_Last_User_Id_Logged(),CR.Get_Raw_Category(N'{Name}'));\nUPDATE CR.Raw_Materials SET Qty+= {Qty} WHERE [Name]=\tN'{Name}';\r\n";
                 SqlCommand Insert_Query = new SqlCommand(Query, conn);
                 try
                 {
