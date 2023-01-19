@@ -91,7 +91,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             foreach (DataRow row in dt.Rows)
             {
 
-                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (((string)row[2] == "Deleted") ? "المحذوف" : (string)row[2]), (string)row[3], (int)row[4], (double)row[5], (double)row[6], (double)row[7], (DateTime)row[8], (string)row[9]);
+                Purchases_Table.Rows.Add((int)row[0], (string)row[1], (((string)row[2] == "Deleted") ? "محذوف" : (string)row[2]), (string)row[3], (int)row[4], (double)row[5], (double)row[6], (double)row[7], (DateTime)row[8], (string)row[9]);
             }
             try
             {

@@ -81,7 +81,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
             foreach (DataRow row in dt.Rows)
             {
                 double total = (double)row[3];
-                Best_Sales_Table.Rows.Add((string)row[0], ((string)row[1] == "Deleted") ? "المحذوف" : (string)row[1], (int)row[2], total, (total * .14 + total), (DateTime)row[4], (DateTime)row[5]);
+                Best_Sales_Table.Rows.Add((string)row[0], ((string)row[1] == "Deleted") ? "محذوف" : (string)row[1], (int)row[2], total, (total * .14 + total), (DateTime)row[4], (DateTime)row[5]);
             }
             try
             {
