@@ -217,7 +217,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
                     int id = (int)row.Cells[0].Value;
                     try
                     {
-                        DialogResult r = System.Windows.Forms.MessageBox.Show("هل انت متأكد ؟", "تحذير", MessageBoxButtons.YesNo);
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure ?", "Warning", MessageBoxButtons.YesNo);
                         if (DialogResult.Yes == r)
                         {
                             string Query = $"DELETE CR.Purchases WHERE Id={id};";
@@ -227,7 +227,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
                             Delete.ExecuteNonQuery();
                             conn.Close();
                             Choose_Query();
-                            MessageBox.Show("Successfully Done!");
+                            MessageBox.Show("Successfully Done!!");
                         }
 
                     }

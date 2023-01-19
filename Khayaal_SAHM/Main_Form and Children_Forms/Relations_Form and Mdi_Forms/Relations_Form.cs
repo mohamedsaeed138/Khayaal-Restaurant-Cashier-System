@@ -185,14 +185,21 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
                 {
                     try
                     {
-                        string Query = $"DELETE CR.Items_Relations WHERE Id={id};\n";
-                        Formatter.Check_Connection(conn);
-                        SqlCommand Delete = new SqlCommand(Query, conn);
-                        conn.Open();
-                        Delete.ExecuteNonQuery();
-                        conn.Close();
-                        Choose_Query();
-                        MessageBox.Show("Successfully Done!");
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure ?", "Warning", MessageBoxButtons.YesNo);
+                        if (DialogResult.Yes == r)
+                        {
+                            string Query = $"DELETE CR.Items_Relations WHERE Id={id};\n";
+                            Formatter.Check_Connection(conn);
+                            SqlCommand Delete = new SqlCommand(Query, conn);
+                            conn.Open();
+                            Delete.ExecuteNonQuery();
+                            conn.Close();
+                            Choose_Query();
+                            MessageBox.Show("Successfully Done!!");
+                        }
+
+
+
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
