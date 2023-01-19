@@ -111,7 +111,7 @@
             this.To_Date_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Date_Picker.CustomFormat = "yyyy-mm-dd";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.To_Date_Picker.Location = new System.Drawing.Point(464, 42);
+            this.To_Date_Picker.Location = new System.Drawing.Point(464, 43);
             this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
@@ -494,7 +494,7 @@
             this.To_Time_Picker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.To_Time_Picker.CustomFormat = "";
             this.To_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.To_Time_Picker.Location = new System.Drawing.Point(465, 64);
+            this.To_Time_Picker.Location = new System.Drawing.Point(464, 64);
             this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Time_Picker.Name = "To_Time_Picker";
             this.To_Time_Picker.ShowUpDown = true;
