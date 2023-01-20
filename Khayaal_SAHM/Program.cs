@@ -24,11 +24,11 @@ namespace Khayaal_SAHM
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
 
-                Application.Run(new Login_Form_and_Mdi_Forms.Login_Form());
+                Application.Run(new Loading_Screen_Form());
             }
             else
             {
-                MessageBox.Show("For  Activation Call +20 122 855 2872 للتفعيل اتصل ب ");
+                MessageBox.Show("For  Activation Call OR Message us on WhatsApp +20 122 855 2872 للتفعيل اتصل او راسلنا ع واتس اب ");
             }
 
 
