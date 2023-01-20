@@ -245,7 +245,6 @@
             this.Add_Category_Text_Box.Size = new System.Drawing.Size(179, 43);
             this.Add_Category_Text_Box.TabIndex = 2;
             this.Add_Category_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Add_Category_Text_Box.TextChanged += new System.EventHandler(this.Add_Category_Text_Box_TextChanged);
             this.Add_Category_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Add_Category_Text_Box_KeyPress);
             // 
             // Add_Item_Button

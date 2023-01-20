@@ -206,8 +206,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
         private void Notes_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Notes_Text_Box.Text.Length >= 100 && e.KeyChar != 8))
-                || (e.KeyChar == ' ' && Notes_Text_Box.Text.Length == 0))
+            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' || (Notes_Text_Box.Text.Length >= 100 && e.KeyChar != 8))
+          || (e.KeyChar == ' ' && Notes_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
@@ -216,9 +216,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
 
         private void Customer_Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Customer_Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-         || (e.KeyChar == ' ' && Customer_Name_Text_Box.Text.Length == 0))
+            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' || (Customer_Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+              || (e.KeyChar == ' ' && Customer_Name_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;

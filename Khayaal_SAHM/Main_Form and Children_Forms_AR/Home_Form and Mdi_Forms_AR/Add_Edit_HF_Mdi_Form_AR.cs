@@ -59,8 +59,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
         private void Item_Description_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Description_Text_Box.Text.Length >= 200 && e.KeyChar != 8))
-          || (e.KeyChar == ' ' && Description_Text_Box.Text.Length == 0))
+            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' && e.KeyChar != '+' && e.KeyChar != '-' || (Description_Text_Box.Text.Length >= 200 && e.KeyChar != 8))
+         || (e.KeyChar == ' ' && Description_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
@@ -120,7 +120,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
         }
         private void Item_Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' && e.KeyChar != '+' && e.KeyChar != '-' || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
          || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
 
             {
@@ -130,9 +130,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
         private void Add_Category_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Add_Category_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-      || (e.KeyChar == ' ' && Add_Category_Text_Box.Text.Length == 0))
+            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' || (Add_Category_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+             || (e.KeyChar == ' ' && Add_Category_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
