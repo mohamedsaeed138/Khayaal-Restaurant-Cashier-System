@@ -314,47 +314,75 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
         bool Check_Negative_Qty()
         {
+
             Copy_Data_From_Orig_To_Test();
             Formatter.Check_Connection(conn);
             string Query = "";
+            string Items_Ids_With_Relation = "";
+            string Raw_Ids_With_Relation = "";
             foreach (var item in Order_Nested_Flow_Layout_Panel.Controls.OfType<Order_User_Control>())
             {
                 Query += $"EXEC CR.Decrease_Raw_Materials_Qty_Test @Item_Id={item.Id},@Qty={item.Qty};\r\n";
+                Items_Ids_With_Relation += $" OR Item_Id={item.Id}";
             }
-            SqlCommand Decrease_From_Test = new SqlCommand(Query, conn);
+            Items_Ids_With_Relation = Items_Ids_With_Relation.Remove(0, 3);
+
+
+
+            SqlDataAdapter Select_Raw_Relation_Ids = new SqlDataAdapter($"Select Raw_Id From CR.Items_Relations WHERE {Items_Ids_With_Relation} Group By Raw_Id; \r\n", conn);
+            DataTable Table_Raw_Relation_Ids = new DataTable();
             Formatter.Check_Connection(conn);
 
             conn.Open();
-            Decrease_From_Test.ExecuteNonQuery();
+            Select_Raw_Relation_Ids.Fill(Table_Raw_Relation_Ids);
             conn.Close();
 
-
-            SqlDataAdapter Check_Negative_Qty = new SqlDataAdapter("SELECT [Name],Qty FROM CR.Raw_Materials_Test Where Qty<0; \r\n", conn);
-            DataTable Negative_Qty = new DataTable();
-            Formatter.Check_Connection(conn);
-            conn.Open();
-            Check_Negative_Qty.Fill(Negative_Qty);
-            conn.Close();
-            Copy_Data_From_Orig_To_Test();
-            if (Negative_Qty.Rows.Count > 0)
+            if (Table_Raw_Relation_Ids.Rows.Count > 0)
             {
-                string Warning_Message = "You Need : ";
-                foreach (DataRow row in Negative_Qty.Rows)
-                {
-                    Warning_Message += $"{(-1 * (double)row[1])} Units more from {(string)row[0]}\n";
-                }
-                MessageBox.Show(Warning_Message + "\n To Create The Order");
+                Formatter.Check_Connection(conn);
+                SqlCommand Decrease_From_Test = new SqlCommand(Query, conn);
+                conn.Open();
+                Decrease_From_Test.ExecuteNonQuery();
+                conn.Close();
 
-                //Start of Removable Area
-                if (!Cashier)
+                Raw_Ids_With_Relation = "AND (";
+                foreach (DataRow row in Table_Raw_Relation_Ids.Rows)
                 {
-                    DialogResult r = System.Windows.Forms.MessageBox.Show("Do you want to add though ?", "Warning", MessageBoxButtons.YesNo);
-                    if (DialogResult.Yes == r)
-                        return true;
+                    Raw_Ids_With_Relation += $" OR Id={(int)row[0]}";
                 }
-                //End of Removable Area
+                Raw_Ids_With_Relation = Raw_Ids_With_Relation.Remove(5, 3) + ")";
+                SqlDataAdapter Check_Negative_Qty = new SqlDataAdapter($"SELECT [Name],Qty FROM CR.Raw_Materials_Test Where Qty<0 {Raw_Ids_With_Relation} ; \r\n", conn);
+                DataTable Negative_Qty = new DataTable();
 
-                return false;//never remove this line !!
+                Formatter.Check_Connection(conn);
+                conn.Open();
+                Check_Negative_Qty.Fill(Negative_Qty);
+                conn.Close();
+
+
+                Copy_Data_From_Orig_To_Test();
+
+                if (Negative_Qty.Rows.Count > 0)
+                {
+                    string Warning_Message = "You Need : ";
+                    foreach (DataRow row in Negative_Qty.Rows)
+                    {
+                        Warning_Message += $"{(-1 * (double)row[1])} Units more from {(string)row[0]}\n";
+                    }
+                    MessageBox.Show(Warning_Message + "\n To Create The Order");
+
+                    //Start of Removable Area
+                    if (!Cashier)
+                    {
+                        DialogResult r = System.Windows.Forms.MessageBox.Show("Do you want to add though ?", "Warning", MessageBoxButtons.YesNo);
+                        if (DialogResult.Yes == r)
+                            return true;
+                    }
+                    //End of Removable Area
+
+                    return false;//never remove this line !!
+
+                }
 
             }
             return true;
