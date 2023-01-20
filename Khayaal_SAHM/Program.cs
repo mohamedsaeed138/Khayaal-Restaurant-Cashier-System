@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
@@ -28,7 +28,7 @@ namespace Khayaal_SAHM
             }
             else
             {
-                MessageBox.Show("For  Activation \nCall +201228552872 ");
+                MessageBox.Show("For  Activation Call +20 122 855 2872 للتفعيل اتصل ب ");
             }
 
 

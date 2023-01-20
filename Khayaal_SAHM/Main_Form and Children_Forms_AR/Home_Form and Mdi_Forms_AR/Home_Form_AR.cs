@@ -136,7 +136,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                         }
                         else
                         {
-                            MessageBox.Show("Finish Your Bill First!!");
+                            MessageBox.Show("! أنهي الطلب أولا");
                         }
 
                     };
@@ -347,7 +347,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
                 //Start of Removable Area
                 if (!Cashier)
                 {
-                    DialogResult r = System.Windows.Forms.MessageBox.Show("هل تريد اضافته رغم ذلك ؟", "Warning", MessageBoxButtons.YesNo);
+                    DialogResult r = System.Windows.Forms.MessageBox.Show("هل تريد اضافته رغم ذلك ؟", "تحذير", MessageBoxButtons.YesNo);
                     if (DialogResult.Yes == r)
                         return true;
                 }
