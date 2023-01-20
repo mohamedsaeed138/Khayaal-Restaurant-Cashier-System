@@ -238,7 +238,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
                     }
                     else
                     {
-                        MessageBox.Show("! هذة المادة الخام غير موجودة بالنظام", "خطأ ");
+                        MessageBox.Show("! هذة المادة الخام غير موجودة,قد حذفت من النظام مسبقا ", "خطأ ");
                     }
 
                 }

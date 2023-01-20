@@ -210,11 +210,40 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             {
                 DataGridViewRow row = Purchases_Table.Rows[e.RowIndex];
 
-
-
+                int id = (int)row.Cells[0].Value;
                 if (Purchases_Table.Columns[e.ColumnIndex].Index == 10)
                 {
-                    int id = (int)row.Cells[0].Value;
+                    if ((string)row.Cells[2].Value != "Deleted")
+                    {
+                        try
+                        {
+                            DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure ?", "Warning", MessageBoxButtons.YesNo);
+                            if (DialogResult.Yes == r)
+                            {
+                                string Name = (string)row.Cells[1].Value;
+                                string Qty = $"{(double)row.Cells[5].Value}";
+                                string Query = $"DELETE CR.Purchases WHERE Id={id};\nUpdate CR.Raw_Materials Set Qty=Qty-{Qty} Where Name=N'{Name}';";
+                                Formatter.Check_Connection(conn);
+                                SqlCommand Delete = new SqlCommand(Query, conn);
+                                conn.Open();
+                                Delete.ExecuteNonQuery();
+                                conn.Close();
+                                Choose_Query();
+                                MessageBox.Show("Successfully Done!!");
+                            }
+
+                        }
+                        catch (Exception ex) { MessageBox.Show(ex.Message); }
+                    }
+                    else
+                    {
+                        MessageBox.Show("This Raw Material is not Existed ,has been deleted before !", "Error");
+                    }
+
+                }
+                else if (Purchases_Table.Columns[e.ColumnIndex].Index == 11)
+                {
+
                     try
                     {
                         DialogResult r = System.Windows.Forms.MessageBox.Show("Are You Sure ?", "Warning", MessageBoxButtons.YesNo);
