@@ -286,7 +286,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
             Work_Sheet = Work_Book.Sheets["Sheet1"];
             Work_Sheet = Work_Book.ActiveSheet;
 
-            for (int i = 0, k = 0; i < Purchases_Table.ColumnCount - 1; i++, k++)
+            for (int i = 0, k = 0; i < Purchases_Table.ColumnCount - 2; i++, k++)
             {
                 if (i == 0)
                 {
@@ -303,7 +303,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
             for (int j = 0; j < Purchases_Table.Rows.Count; j++)
             {
-                for (int i = 0, m = 0; i < Purchases_Table.Columns.Count - 1; i++, m++)
+                for (int i = 0, m = 0; i < Purchases_Table.Columns.Count - 2; i++, m++)
                 {
                     if (i == 0)
                     {
