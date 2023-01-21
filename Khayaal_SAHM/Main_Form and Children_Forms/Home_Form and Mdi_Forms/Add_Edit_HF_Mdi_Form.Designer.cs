@@ -75,6 +75,7 @@
             this.Unit_Price_Text_Box.PlaceholderText = "";
             this.Unit_Price_Text_Box.SelectedText = "";
             this.Unit_Price_Text_Box.ShadowDecoration.Parent = this.Unit_Price_Text_Box;
+            this.Unit_Price_Text_Box.ShortcutsEnabled = false;
             this.Unit_Price_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Unit_Price_Text_Box.TabIndex = 4;
             this.Unit_Price_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -104,6 +105,7 @@
             this.Description_Text_Box.PlaceholderText = "";
             this.Description_Text_Box.SelectedText = "";
             this.Description_Text_Box.ShadowDecoration.Parent = this.Description_Text_Box;
+            this.Description_Text_Box.ShortcutsEnabled = false;
             this.Description_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Description_Text_Box.TabIndex = 5;
             this.Description_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -166,6 +168,7 @@
             this.Name_Text_Box.PlaceholderText = "";
             this.Name_Text_Box.SelectedText = "";
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
+            this.Name_Text_Box.ShortcutsEnabled = false;
             this.Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Name_Text_Box.TabIndex = 0;
             this.Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -242,6 +245,7 @@
             this.Add_Category_Text_Box.PlaceholderText = "";
             this.Add_Category_Text_Box.SelectedText = "";
             this.Add_Category_Text_Box.ShadowDecoration.Parent = this.Add_Category_Text_Box;
+            this.Add_Category_Text_Box.ShortcutsEnabled = false;
             this.Add_Category_Text_Box.Size = new System.Drawing.Size(179, 43);
             this.Add_Category_Text_Box.TabIndex = 2;
             this.Add_Category_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -296,6 +300,7 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 24);
             this.guna2ControlBox1.TabIndex = 17;
+            this.guna2ControlBox1.TabStop = false;
             // 
             // New_Category_Label
             // 

@@ -108,6 +108,7 @@
             this.Search_Text_Box.PlaceholderText = "Name";
             this.Search_Text_Box.SelectedText = "";
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.ShortcutsEnabled = false;
             this.Search_Text_Box.Size = new System.Drawing.Size(184, 36);
             this.Search_Text_Box.TabIndex = 9;
             this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -419,6 +420,7 @@
             this.Qty_Search_Text_Box.PlaceholderText = "< = Number";
             this.Qty_Search_Text_Box.SelectedText = "";
             this.Qty_Search_Text_Box.ShadowDecoration.Parent = this.Qty_Search_Text_Box;
+            this.Qty_Search_Text_Box.ShortcutsEnabled = false;
             this.Qty_Search_Text_Box.Size = new System.Drawing.Size(131, 36);
             this.Qty_Search_Text_Box.TabIndex = 22;
             this.Qty_Search_Text_Box.TextChanged += new System.EventHandler(this.Qty_Search_Text_Box_TextChanged);

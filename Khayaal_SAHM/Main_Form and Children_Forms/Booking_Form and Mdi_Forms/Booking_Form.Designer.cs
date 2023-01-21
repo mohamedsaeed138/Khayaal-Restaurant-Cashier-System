@@ -142,6 +142,7 @@
             this.Search_Text_Box.PlaceholderText = "Customer Name";
             this.Search_Text_Box.SelectedText = "";
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.ShortcutsEnabled = false;
             this.Search_Text_Box.Size = new System.Drawing.Size(155, 36);
             this.Search_Text_Box.TabIndex = 9;
             this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -447,6 +448,7 @@
             this.Delete_Table_Text_Box.PlaceholderText = "Table No";
             this.Delete_Table_Text_Box.SelectedText = "";
             this.Delete_Table_Text_Box.ShadowDecoration.Parent = this.Delete_Table_Text_Box;
+            this.Delete_Table_Text_Box.ShortcutsEnabled = false;
             this.Delete_Table_Text_Box.Size = new System.Drawing.Size(66, 36);
             this.Delete_Table_Text_Box.TabIndex = 23;
             this.Delete_Table_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
