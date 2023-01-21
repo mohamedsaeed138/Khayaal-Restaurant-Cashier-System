@@ -77,6 +77,7 @@
             this.Change_Password_Text_Box.PlaceholderText = "";
             this.Change_Password_Text_Box.SelectedText = "";
             this.Change_Password_Text_Box.ShadowDecoration.Parent = this.Change_Password_Text_Box;
+            this.Change_Password_Text_Box.ShortcutsEnabled = false;
             this.Change_Password_Text_Box.Size = new System.Drawing.Size(405, 43);
             this.Change_Password_Text_Box.TabIndex = 0;
             this.Change_Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

@@ -83,6 +83,7 @@
             this.Password_Text_Box.PlaceholderText = "";
             this.Password_Text_Box.SelectedText = "";
             this.Password_Text_Box.ShadowDecoration.Parent = this.Password_Text_Box;
+            this.Password_Text_Box.ShortcutsEnabled = false;
             this.Password_Text_Box.Size = new System.Drawing.Size(405, 43);
             this.Password_Text_Box.TabIndex = 3;
             this.Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -211,6 +212,7 @@
             this.Name_Text_Box.PlaceholderText = "";
             this.Name_Text_Box.SelectedText = "";
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
+            this.Name_Text_Box.ShortcutsEnabled = false;
             this.Name_Text_Box.Size = new System.Drawing.Size(405, 43);
             this.Name_Text_Box.TabIndex = 0;
             this.Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
