@@ -68,6 +68,7 @@
             this.Unit_Price_Text_Box.PlaceholderText = "";
             this.Unit_Price_Text_Box.SelectedText = "";
             this.Unit_Price_Text_Box.ShadowDecoration.Parent = this.Unit_Price_Text_Box;
+            this.Unit_Price_Text_Box.ShortcutsEnabled = false;
             this.Unit_Price_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Unit_Price_Text_Box.TabIndex = 2;
             this.Unit_Price_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -152,6 +153,7 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 24);
             this.guna2ControlBox1.TabIndex = 17;
+            this.guna2ControlBox1.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -182,6 +184,7 @@
             this.Qty_Text_Box.PlaceholderText = "";
             this.Qty_Text_Box.SelectedText = "";
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
+            this.Qty_Text_Box.ShortcutsEnabled = false;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Qty_Text_Box.TabIndex = 1;
             this.Qty_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -222,6 +225,7 @@
             this.Notes_Text_Box.PlaceholderText = "";
             this.Notes_Text_Box.SelectedText = "";
             this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
+            this.Notes_Text_Box.ShortcutsEnabled = false;
             this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Notes_Text_Box.TabIndex = 3;
             this.Notes_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

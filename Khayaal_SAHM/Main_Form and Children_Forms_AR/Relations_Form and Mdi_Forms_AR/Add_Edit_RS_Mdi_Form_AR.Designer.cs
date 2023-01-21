@@ -110,6 +110,7 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 24);
             this.guna2ControlBox1.TabIndex = 17;
+            this.guna2ControlBox1.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -140,6 +141,7 @@
             this.Qty_Text_Box.PlaceholderText = "";
             this.Qty_Text_Box.SelectedText = "";
             this.Qty_Text_Box.ShadowDecoration.Parent = this.Qty_Text_Box;
+            this.Qty_Text_Box.ShortcutsEnabled = false;
             this.Qty_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Qty_Text_Box.TabIndex = 2;
             this.Qty_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

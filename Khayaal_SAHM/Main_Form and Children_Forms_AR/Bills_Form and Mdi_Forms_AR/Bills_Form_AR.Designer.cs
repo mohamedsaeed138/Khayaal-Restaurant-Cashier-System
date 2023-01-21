@@ -123,6 +123,7 @@
             this.Search_Serial_Number_Text_Box.PlaceholderText = "الرقم التسلسلي";
             this.Search_Serial_Number_Text_Box.SelectedText = "";
             this.Search_Serial_Number_Text_Box.ShadowDecoration.Parent = this.Search_Serial_Number_Text_Box;
+            this.Search_Serial_Number_Text_Box.ShortcutsEnabled = false;
             this.Search_Serial_Number_Text_Box.Size = new System.Drawing.Size(264, 36);
             this.Search_Serial_Number_Text_Box.TabIndex = 9;
             this.Search_Serial_Number_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -420,6 +421,7 @@
             this.Total_Search_Text_Box.PlaceholderText = "الرقم <=";
             this.Total_Search_Text_Box.SelectedText = "";
             this.Total_Search_Text_Box.ShadowDecoration.Parent = this.Total_Search_Text_Box;
+            this.Total_Search_Text_Box.ShortcutsEnabled = false;
             this.Total_Search_Text_Box.Size = new System.Drawing.Size(131, 36);
             this.Total_Search_Text_Box.TabIndex = 23;
             this.Total_Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

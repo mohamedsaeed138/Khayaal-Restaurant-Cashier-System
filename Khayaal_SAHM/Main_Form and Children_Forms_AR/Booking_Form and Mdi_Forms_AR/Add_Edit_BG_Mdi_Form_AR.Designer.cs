@@ -85,6 +85,7 @@
             this.Customer_Name_Text_Box.PlaceholderText = "";
             this.Customer_Name_Text_Box.SelectedText = "";
             this.Customer_Name_Text_Box.ShadowDecoration.Parent = this.Customer_Name_Text_Box;
+            this.Customer_Name_Text_Box.ShortcutsEnabled = false;
             this.Customer_Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Customer_Name_Text_Box.TabIndex = 0;
             this.Customer_Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -160,6 +161,7 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 24);
             this.guna2ControlBox1.TabIndex = 17;
+            this.guna2ControlBox1.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -201,7 +203,7 @@
             this.From_Date_Picker.CustomFormat = "";
             this.From_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.From_Date_Picker.Location = new System.Drawing.Point(12, 195);
-            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Date_Picker.Name = "From_Date_Picker";
             this.From_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.From_Date_Picker.TabIndex = 2;
@@ -216,7 +218,7 @@
             this.To_Date_Picker.CustomFormat = "";
             this.To_Date_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.To_Date_Picker.Location = new System.Drawing.Point(12, 257);
-            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Date_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Date_Picker.Name = "To_Date_Picker";
             this.To_Date_Picker.Size = new System.Drawing.Size(121, 20);
             this.To_Date_Picker.TabIndex = 4;
@@ -231,7 +233,7 @@
             this.From_Time_Picker.CustomFormat = "";
             this.From_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.From_Time_Picker.Location = new System.Drawing.Point(137, 195);
-            this.From_Time_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.From_Time_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.From_Time_Picker.Name = "From_Time_Picker";
             this.From_Time_Picker.ShowUpDown = true;
             this.From_Time_Picker.Size = new System.Drawing.Size(121, 20);
@@ -247,7 +249,7 @@
             this.To_Time_Picker.CustomFormat = "";
             this.To_Time_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.To_Time_Picker.Location = new System.Drawing.Point(137, 257);
-            this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.To_Time_Picker.Margin = new System.Windows.Forms.Padding(2);
             this.To_Time_Picker.Name = "To_Time_Picker";
             this.To_Time_Picker.ShowUpDown = true;
             this.To_Time_Picker.Size = new System.Drawing.Size(121, 20);
@@ -291,6 +293,7 @@
             this.Notes_Text_Box.PlaceholderText = "";
             this.Notes_Text_Box.SelectedText = "";
             this.Notes_Text_Box.ShadowDecoration.Parent = this.Notes_Text_Box;
+            this.Notes_Text_Box.ShortcutsEnabled = false;
             this.Notes_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Notes_Text_Box.TabIndex = 21;
             this.Notes_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

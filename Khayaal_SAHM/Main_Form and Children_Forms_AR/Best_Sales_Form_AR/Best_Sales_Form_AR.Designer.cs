@@ -152,6 +152,7 @@
             this.Search_Text_Box.PlaceholderText = "اسم العنصر";
             this.Search_Text_Box.SelectedText = "";
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.ShortcutsEnabled = false;
             this.Search_Text_Box.Size = new System.Drawing.Size(264, 36);
             this.Search_Text_Box.TabIndex = 9;
             this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

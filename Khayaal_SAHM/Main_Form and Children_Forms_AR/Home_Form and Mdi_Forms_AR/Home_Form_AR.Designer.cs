@@ -428,6 +428,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
             this.Search_Text_Box.PlaceholderText = "اسم العنصر";
             this.Search_Text_Box.SelectedText = "";
             this.Search_Text_Box.ShadowDecoration.Parent = this.Search_Text_Box;
+            this.Search_Text_Box.ShortcutsEnabled = false;
             this.Search_Text_Box.Size = new System.Drawing.Size(312, 36);
             this.Search_Text_Box.TabIndex = 27;
             this.Search_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

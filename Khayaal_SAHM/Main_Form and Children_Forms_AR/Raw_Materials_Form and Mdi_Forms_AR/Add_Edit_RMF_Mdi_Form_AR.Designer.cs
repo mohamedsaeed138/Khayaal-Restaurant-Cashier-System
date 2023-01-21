@@ -79,6 +79,7 @@
             this.Name_Text_Box.PlaceholderText = "";
             this.Name_Text_Box.SelectedText = "";
             this.Name_Text_Box.ShadowDecoration.Parent = this.Name_Text_Box;
+            this.Name_Text_Box.ShortcutsEnabled = false;
             this.Name_Text_Box.Size = new System.Drawing.Size(242, 43);
             this.Name_Text_Box.TabIndex = 0;
             this.Name_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -155,6 +156,7 @@
             this.Add_Category_Text_Box.PlaceholderText = "";
             this.Add_Category_Text_Box.SelectedText = "";
             this.Add_Category_Text_Box.ShadowDecoration.Parent = this.Add_Category_Text_Box;
+            this.Add_Category_Text_Box.ShortcutsEnabled = false;
             this.Add_Category_Text_Box.Size = new System.Drawing.Size(179, 43);
             this.Add_Category_Text_Box.TabIndex = 2;
             this.Add_Category_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -209,6 +211,7 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 24);
             this.guna2ControlBox1.TabIndex = 17;
+            this.guna2ControlBox1.TabStop = false;
             // 
             // New_Category_Label
             // 
