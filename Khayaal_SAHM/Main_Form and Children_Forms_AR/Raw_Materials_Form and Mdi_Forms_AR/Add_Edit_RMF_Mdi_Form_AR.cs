@@ -89,19 +89,19 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
             return existed;
 
         }
-        private void Raw_Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' ' || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-           || (Name_Text_Box.Text.Length > 1 && Name_Text_Box.Text[Name_Text_Box.Text.Length - 1] == ' ' && e.KeyChar == ' ') || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
+            if ((e.KeyChar == '"' || e.KeyChar == '=' || e.KeyChar == '\'' || e.KeyChar == ';') || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8)
+         || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
             }
         }
-
         private void Add_Category_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' || (Add_Category_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            if ((e.KeyChar == '"' || e.KeyChar == '=' || e.KeyChar == '\'' || e.KeyChar == ';') || (Add_Category_Text_Box.Text.Length >= 50 && e.KeyChar != 8)
           || (e.KeyChar == ' ' && Add_Category_Text_Box.Text.Length == 0))
 
             {
@@ -211,14 +211,6 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
             Referesh_Current_Form?.Invoke(this, e);
         }
 
-        private void Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-         || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
 
-            {
-                e.Handled = true;
-            }
-        }
     }
 }
