@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Change_Password_Mdi_Form));
             this.Password_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Change_Password_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Password_Text_Box = new Guna.UI2.WinForms.Guna2TextBox();
             this.Add_Raw_Button = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -53,35 +53,35 @@
             this.Password_Label.TabStop = false;
             this.Password_Label.Text = "The New Password  الجديد السري الرقم";
             // 
-            // Change_Password_Text_Box
+            // Password_Text_Box
             // 
-            this.Change_Password_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            this.Change_Password_Text_Box.BorderRadius = 10;
-            this.Change_Password_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Change_Password_Text_Box.DefaultText = "";
-            this.Change_Password_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Change_Password_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Change_Password_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Change_Password_Text_Box.DisabledState.Parent = this.Change_Password_Text_Box;
-            this.Change_Password_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Change_Password_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
-            this.Change_Password_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Change_Password_Text_Box.FocusedState.Parent = this.Change_Password_Text_Box;
-            this.Change_Password_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Change_Password_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Change_Password_Text_Box.HoverState.Parent = this.Change_Password_Text_Box;
-            this.Change_Password_Text_Box.Location = new System.Drawing.Point(61, 101);
-            this.Change_Password_Text_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Change_Password_Text_Box.Name = "Change_Password_Text_Box";
-            this.Change_Password_Text_Box.PasswordChar = '\0';
-            this.Change_Password_Text_Box.PlaceholderText = "";
-            this.Change_Password_Text_Box.SelectedText = "";
-            this.Change_Password_Text_Box.ShadowDecoration.Parent = this.Change_Password_Text_Box;
-            this.Change_Password_Text_Box.ShortcutsEnabled = false;
-            this.Change_Password_Text_Box.Size = new System.Drawing.Size(405, 43);
-            this.Change_Password_Text_Box.TabIndex = 0;
-            this.Change_Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Change_Password_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Change_Password_Text_Box_KeyPress);
+            this.Password_Text_Box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.Password_Text_Box.BorderRadius = 10;
+            this.Password_Text_Box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Password_Text_Box.DefaultText = "";
+            this.Password_Text_Box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Password_Text_Box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Password_Text_Box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Password_Text_Box.DisabledState.Parent = this.Password_Text_Box;
+            this.Password_Text_Box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Password_Text_Box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
+            this.Password_Text_Box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Password_Text_Box.FocusedState.Parent = this.Password_Text_Box;
+            this.Password_Text_Box.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Password_Text_Box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Password_Text_Box.HoverState.Parent = this.Password_Text_Box;
+            this.Password_Text_Box.Location = new System.Drawing.Point(61, 101);
+            this.Password_Text_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Password_Text_Box.Name = "Password_Text_Box";
+            this.Password_Text_Box.PasswordChar = '\0';
+            this.Password_Text_Box.PlaceholderText = "";
+            this.Password_Text_Box.SelectedText = "";
+            this.Password_Text_Box.ShadowDecoration.Parent = this.Password_Text_Box;
+            this.Password_Text_Box.ShortcutsEnabled = false;
+            this.Password_Text_Box.Size = new System.Drawing.Size(405, 43);
+            this.Password_Text_Box.TabIndex = 0;
+            this.Password_Text_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Password_Text_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_Text_Box_KeyPress);
             // 
             // Add_Raw_Button
             // 
@@ -170,7 +170,7 @@
             this.Controls.Add(this.Add_a_New_Cat_Lbl);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.Add_Raw_Button);
-            this.Controls.Add(this.Change_Password_Text_Box);
+            this.Controls.Add(this.Password_Text_Box);
             this.Controls.Add(this.Password_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -184,7 +184,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2HtmlLabel Password_Label;
-        private Guna.UI2.WinForms.Guna2TextBox Change_Password_Text_Box;
+        private Guna.UI2.WinForms.Guna2TextBox Password_Text_Box;
         private Guna.UI2.WinForms.Guna2Button Add_Raw_Button;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;

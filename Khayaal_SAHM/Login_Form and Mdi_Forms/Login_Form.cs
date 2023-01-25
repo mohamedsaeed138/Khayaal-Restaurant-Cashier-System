@@ -135,7 +135,8 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
         {
             if (e.KeyChar == '\r')
                 Input_Process(Cases.Log_In);
-            else if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            else if ((e.KeyChar == '"' || e.KeyChar == '=' || e.KeyChar == '\'' || e.KeyChar == ';') || (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8)
+            || (e.KeyChar == ' ' && Password_Text_Box.Text.Length == 0))
                 e.Handled = true;
         }
 

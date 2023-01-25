@@ -15,7 +15,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
         {
             InitializeComponent();
             this.Id = Id;
-            Change_Password_Text_Box.UseSystemPasswordChar = true;
+            Password_Text_Box.UseSystemPasswordChar = true;
 
         }
 
@@ -33,9 +33,9 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
         private void Edit_Button_Click(object sender, EventArgs e)
         {
 
-            if (Change_Password_Text_Box.Text != "")
+            if (Password_Text_Box.Text != "")
             {
-                string Password = Change_Password_Text_Box.Text;
+                string Password = Password_Text_Box.Text;
                 Formatter.Check_Connection(conn);
 
                 SqlCommand Update_Query = new SqlCommand($"Update CR.Users SET [Password]=N'{Password}' WHERE Id={Id};", conn);
@@ -61,17 +61,18 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms
             }
         }
 
-        private void Change_Password_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        private void Password_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '\r')
                 Edit_Button_Click(sender, e);
-            else if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Change_Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            else if ((e.KeyChar == '"' || e.KeyChar == '=' || e.KeyChar == '\'' || e.KeyChar == ';') || (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8)
+            || (e.KeyChar == ' ' && Password_Text_Box.Text.Length == 0))
                 e.Handled = true;
         }
 
         private void Show_Password_Check_Box_CheckedChanged(object sender, EventArgs e)
         {
-            Change_Password_Text_Box.UseSystemPasswordChar = Change_Password_Text_Box.UseSystemPasswordChar == false ? true : false;
+            Password_Text_Box.UseSystemPasswordChar = Password_Text_Box.UseSystemPasswordChar == false ? true : false;
 
         }
     }

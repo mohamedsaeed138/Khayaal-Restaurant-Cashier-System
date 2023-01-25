@@ -34,13 +34,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             Password_Text_Box.Text = pass;
         }
 
-        private void Change_Password_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '\r')
-                Add_Edit_Button_Click(sender, e);
-            else if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8) || (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
-                e.Handled = true;
-        }
+
 
         private void Show_Password_Check_Box_CheckedChanged(object sender, EventArgs e)
         {
@@ -51,12 +45,20 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
         private void Name_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ' ' || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8))
+            if ((e.KeyChar == '"' || e.KeyChar == '=' || e.KeyChar == '\'' || e.KeyChar == ';') || (Name_Text_Box.Text.Length >= 50 && e.KeyChar != 8)
           || (e.KeyChar == ' ' && Name_Text_Box.Text.Length == 0))
 
             {
                 e.Handled = true;
             }
+        }
+        private void Change_Password_Text_Box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+                Add_Edit_Button_Click(sender, e);
+            else if ((e.KeyChar == '"' || e.KeyChar == '=' || e.KeyChar == '\'' || e.KeyChar == ';') || (Password_Text_Box.Text.Length >= 50 && e.KeyChar != 8)
+            || (e.KeyChar == ' ' && Password_Text_Box.Text.Length == 0))
+                e.Handled = true;
         }
 
         private void Add_Edit_Button_Click(object sender, EventArgs e)
