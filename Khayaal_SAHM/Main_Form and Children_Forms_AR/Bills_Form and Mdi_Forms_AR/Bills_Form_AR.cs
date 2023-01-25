@@ -76,8 +76,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             }
             catch { }
             Count_Value_Label.Text = $"{Bills_Table.Rows.Count}";
-            Sum_Without_Tax_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[2].Value))}") + " $";
-            Sum_Total_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[3].Value))}") + " $";
+            Sum_Without_Tax_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[3].Value))}") + " $";
+            Sum_Total_Value_Label.Text = Formatter.Float($"{Bills_Table.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[4].Value))}") + " $";
 
 
         }
