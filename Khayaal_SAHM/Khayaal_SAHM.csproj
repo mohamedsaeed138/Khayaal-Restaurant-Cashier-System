@@ -16,7 +16,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>E:\SAHM\Khayaal\Khayaal 1\</PublishUrl>
+    <PublishUrl>D:\Files\Desktop Project\KHAYAAL\V 6.5.0.0\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,15 +27,16 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
     <TargetCulture>en</TargetCulture>
-    <ProductName>Khayaal SAHM 1</ProductName>
+    <ProductName>SAHM Khayaal</ProductName>
     <PublisherName>SAHM Company For Software Development</PublisherName>
-    <SuiteName>Khayaal SAHM 1 Accountant Managment</SuiteName>
+    <SuiteName>SAHM Accountant Managment</SuiteName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>0.0.0.0</ApplicationVersion>
+    <ApplicationVersion>6.5.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -667,6 +668,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="SqlLocalDB.msi">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -689,6 +693,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ndp48-x86-x64-allos-enu.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Screenshot %28501%291668896236.ico" />
     <None Include="Resources\Info_Icon.png" />
     <None Include="Resources\Edit_Item_Icon.png" />
