@@ -463,16 +463,6 @@ namespace Khayaal_SAHM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SAHM_GIF_Intro {
-            get {
-                object obj = ResourceManager.GetObject("SAHM GIF Intro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Side_Bar_Icon {
             get {
                 object obj = ResourceManager.GetObject("Side Bar Icon", resourceCulture);
