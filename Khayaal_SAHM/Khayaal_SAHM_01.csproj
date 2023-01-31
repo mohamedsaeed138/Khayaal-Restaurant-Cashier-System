@@ -8,7 +8,7 @@
     <ProjectGuid>{2B3D809B-F181-45BD-A99C-5A288535D298}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Khayaal_SAHM</RootNamespace>
-    <AssemblyName>Khayaal_SAHM</AssemblyName>
+    <AssemblyName>Khayaal_SAHM_01</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -29,7 +29,7 @@
     <TargetCulture>en</TargetCulture>
     <ProductName>SAHM Khayaal 1</ProductName>
     <PublisherName>SAHM Company For Software Development</PublisherName>
-    <SuiteName>SAHM Accountant Managment</SuiteName>
+    <SuiteName>SAHM Accountant Managment 1</SuiteName>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>0.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
