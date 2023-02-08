@@ -19,21 +19,16 @@ namespace Khayaal_SAHM
         {
             if (String != string.Empty)
             {
-                if (String != string.Empty)
-                {
-                    String = string.Join(" ", String.Trim().Split(' ').
+                String = string.Join(" ", String.Trim().Split(' ').
 
-                                        Where(x => !string.IsNullOrWhiteSpace(x))
+                                    Where(x => !string.IsNullOrWhiteSpace(x))
 
-                                       .Select(x => char.ToUpper(x[0]) + x.ToLower().Remove(0, 1)).ToArray<string>()
-                                       );
-                }
-
-                return String;
-
+                                   .Select(x => char.ToUpper(x[0]) + x.ToLower().Remove(0, 1)).ToArray<string>()
+                                   );
             }
 
             return String;
+
         }
 
 
