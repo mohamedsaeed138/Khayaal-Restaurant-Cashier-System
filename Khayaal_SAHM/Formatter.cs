@@ -1,8 +1,8 @@
 ﻿
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace Khayaal_SAHM
 {
@@ -19,23 +19,17 @@ namespace Khayaal_SAHM
         {
             if (String != string.Empty)
             {
-                string[] Strings = String.Trim().Split(' ');
-
-                List<string> Tmp = new List<string>();
-                foreach (string str in Strings)
+                if (String != string.Empty)
                 {
-                    if (!string.IsNullOrWhiteSpace(str))
-                        Tmp.Add(str);
+                    String = string.Join(" ", String.Trim().Split(' ').
+
+                                        Where(x => !string.IsNullOrWhiteSpace(x))
+
+                                       .Select(x => char.ToUpper(x[0]) + x.ToLower().Remove(0, 1)).ToArray<string>()
+                                       );
                 }
 
-                Strings = Tmp.ToArray();
-                for (int i = 0; i < Strings.Length; i++)
-                {
-                    Strings[i] = char.ToUpper(Strings[i][0]) + Strings[i].ToLower().Remove(0, 1);
-
-                }
-
-                String = string.Join(" ", Strings);
+                return String;
 
             }
 
