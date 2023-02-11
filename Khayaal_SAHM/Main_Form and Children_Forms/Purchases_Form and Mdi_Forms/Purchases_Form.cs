@@ -41,12 +41,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             }
             else
             {
-                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
-                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
-
                 From_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[0].Cells[8].Value);
                 To_Date_Picker.Value = Convert.ToDateTime(Purchases_Table.Rows[Purchases_Table.Rows.Count - 1].Cells[8].Value);
 
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
             }
 
         }
@@ -119,7 +118,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Purchases_Form_and_Mdi_Forms
             }
             else
             {
-                string Name = Formatter.String(Search_Text_Box.Text);
+                string Name = Formatter.Special_Formatting(Search_Text_Box.Text);
                 string Category = Category_Combo_Box.Text;
                 if (Name == "" && Category == "All")
                     Fill_Table($"select Id,Name,Category,[Cashier_User_Name],[Cashier_User_Id],Qty,Unit_Price,Sub_Total,[Date],Notes FROM CR.Purchases WHERE [Date] BETWEEN '{From}' AND '{To}' ORDER BY [Date];");

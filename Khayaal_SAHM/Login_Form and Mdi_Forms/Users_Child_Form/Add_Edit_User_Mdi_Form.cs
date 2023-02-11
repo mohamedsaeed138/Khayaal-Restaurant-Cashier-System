@@ -66,7 +66,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
             if (Name_Text_Box.Text != "" && Password_Text_Box.Text != "")
             {
 
-                string Name = Formatter.String(Name_Text_Box.Text);
+                string Name = Formatter.Special_Formatting(Name_Text_Box.Text);
                 string Jop = Jop_Combo_Box.Text;
                 string Password = Password_Text_Box.Text;
 

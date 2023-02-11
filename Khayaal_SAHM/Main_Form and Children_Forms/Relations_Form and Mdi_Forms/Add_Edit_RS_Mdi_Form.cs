@@ -101,8 +101,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Relations_Form_and_Mdi_Forms
         {
             if (Qty_Text_Box.Text != "")
             {
-                string item = Formatter.String(Item_Combo_Box.Text);
-                string raw = Formatter.String(Raw_Combo_Box.Text);
+                string item = Formatter.Special_Formatting(Item_Combo_Box.Text);
+                string raw = Formatter.Special_Formatting(Raw_Combo_Box.Text);
                 string qty = Formatter.Float(Qty_Text_Box.Text);
                 Formatter.Check_Connection(conn);
                 if (Add)

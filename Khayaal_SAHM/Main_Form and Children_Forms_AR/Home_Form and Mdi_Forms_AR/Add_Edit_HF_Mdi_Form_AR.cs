@@ -79,7 +79,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
         {
             if (Add_Category_Text_Box.Text != String.Empty)
             {
-                string Category = Formatter.String(Add_Category_Text_Box.Text);
+                string Category = Formatter.Special_Formatting(Add_Category_Text_Box.Text);
                 if (Ensure_No_Duplicated_Categories(Category))
                     Fill_ComboBox(Category);
                 else
@@ -179,10 +179,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
 
             if (Name_Text_Box.Text != "" && Unit_Price_Text_Box.Text != "")
             {
-                string Name = Formatter.String(Name_Text_Box.Text);
-                string Category = Formatter.String(Category_Combo_Box.Text);
+                string Name = Formatter.Special_Formatting(Name_Text_Box.Text);
+                string Category = Formatter.Special_Formatting(Category_Combo_Box.Text);
                 string Price = Formatter.Float(Unit_Price_Text_Box.Text);
-                string Description = Formatter.String(Description_Text_Box.Text);
+                string Description = Formatter.Special_Formatting(Description_Text_Box.Text);
                 Image Image = Image_Picture_Box.Image;
                 if (Image_Picture_Box.Image == null)
                     Image = Resources.Food_Drink_Template;

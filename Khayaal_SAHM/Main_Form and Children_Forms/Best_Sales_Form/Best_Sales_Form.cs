@@ -28,13 +28,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
             }
             else
             {
-                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
-                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
-
                 From_Date_Picker.Value = Best_Sales_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[5].Value));
                 To_Date_Picker.Value = Best_Sales_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[6].Value));
 
-
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
             }
         }
         public Best_Sales_Form()
@@ -114,7 +112,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Best_Sales_Form
             }
             else
             {
-                string Name = Formatter.String(Search_Text_Box.Text);
+                string Name = Search_Text_Box.Text.Special_Formatting();
                 string Category = Category_Combo_Box.Text;
                 if (Category_Combo_Box.Text == "All" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT [Name] as [Item],[Category], COUNT([Item_Id]) as [Quantity],SUM([Sub_Total]) as [Total],MIN([Date]) as First_Sale,MAX([Date]) as Last_Sale From CR.Bills_Details WHERE Date BETWEEN '{From}' and '{To}' GROUP BY [Item_Id],[Name],[Category]  ORDER BY [Total] , [Quantity]  DESC;");

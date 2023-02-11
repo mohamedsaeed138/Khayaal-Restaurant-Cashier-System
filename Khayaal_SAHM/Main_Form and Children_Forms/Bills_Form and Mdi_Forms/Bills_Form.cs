@@ -34,13 +34,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
             }
             else
             {
-
-                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
-                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
-
                 From_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[0].Cells[5].Value);
                 To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[5].Value);
 
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
             }
 
             if (Cashier)
@@ -102,7 +100,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Bills_Form_and_Mdi_Forms
                 if (Total_Search_Text_Box.Text != "")
                     Total = Formatter.Float(Total_Search_Text_Box.Text);
 
-                string Serial = Formatter.String(Search_Serial_Number_Text_Box.Text);
+                string Serial = Formatter.Special_Formatting(Search_Serial_Number_Text_Box.Text);
 
                 if (Total_Search_Text_Box.Text == "" && Search_Serial_Number_Text_Box.Text == "")
                     Fill_Table($"select Serial_Number, Cashier_User_Name, Total, Date,[Cashier_User_Id] FROM CR.Bills WHERE Date BETWEEN '{From}' and '{To}' ;");

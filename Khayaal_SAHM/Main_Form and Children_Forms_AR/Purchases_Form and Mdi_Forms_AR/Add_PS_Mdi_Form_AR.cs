@@ -84,10 +84,10 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Purchases_Form_and_Mdi_Fo
 
             if (Qty_Text_Box.Text != "" && Unit_Price_Text_Box.Text != "")
             {
-                string Name = Formatter.String(Raw_Combo_Box.Text);
+                string Name = Formatter.Special_Formatting(Raw_Combo_Box.Text);
                 string Qty = Formatter.Float(Qty_Text_Box.Text);
                 string Price = Formatter.Float(Unit_Price_Text_Box.Text);
-                string Notes = Formatter.String(Notes_Text_Box.Text);
+                string Notes = Formatter.Special_Formatting(Notes_Text_Box.Text);
 
 
                 Formatter.Check_Connection(conn);

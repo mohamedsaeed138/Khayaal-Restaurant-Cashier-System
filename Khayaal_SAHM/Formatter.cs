@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Khayaal_SAHM
 {
-    public class Formatter
+    public static class Formatter
     {
         /// <summary>
         /// to Put any text in Foramt "Mmmmmmm Ssssssss" and erased the first and last space if was existed
@@ -15,21 +15,14 @@ namespace Khayaal_SAHM
         /// <example> "  MMsassa ssaddedAS" => "Mmsassa Ssaddedas"</example>
         /// <param name="String"></param>
         /// <returns></returns>
-        public static string String(string String)
-        {
-            if (String != string.Empty)
-            {
-                String = string.Join(" ", String.Trim().Split(' ').
+        public static string Special_Formatting(this string String) => String == string.Empty ? string.Empty :
 
-                                    Where(x => !string.IsNullOrWhiteSpace(x))
+                            string.Join(" ", String.Trim().Split(' ')
 
-                                   .Select(x => char.ToUpper(x[0]) + x.ToLower().Remove(0, 1)).ToArray<string>()
-                                   );
-            }
+                            .Where(x => !string.IsNullOrWhiteSpace(x))
 
-            return String;
-
-        }
+                            .Select(x => char.ToUpper(x[0]) + x.ToLower().Substring(1)).ToArray<string>()
+                           );
 
 
 

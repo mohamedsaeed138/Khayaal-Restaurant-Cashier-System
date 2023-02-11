@@ -91,7 +91,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
         }
         void Choose_Query()
         {
-            string Search = Formatter.String(Search_Text_Box.Text);
+            string Search = Formatter.Special_Formatting(Search_Text_Box.Text);
             string Category = Category_Combo_Box.Text;
             string Qty = "";
             string Sorting = Sorting_Combo_Box.Text == "القسم" ? "Category" : "Qty";

@@ -129,7 +129,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             else
             {
                 string Table_No = Table_Combo_Box.Text;
-                string Name = Formatter.String(Search_Text_Box.Text);
+                string Name = Formatter.Special_Formatting(Search_Text_Box.Text);
 
                 if (Table_Combo_Box.Text == "الجميع" && Search_Text_Box.Text == "")
                     Fill_Table($"SELECT * FROM CR.Tables_Booking_Details  WHERE[From] BETWEEN '{From}' AND '{To}' ORDER BY [From] ");

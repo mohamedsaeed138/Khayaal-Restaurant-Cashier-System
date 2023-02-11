@@ -207,7 +207,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Home_Form_and_Mdi_Forms
         }
         void Choose_Query()
         {
-            string Search = Formatter.String(Search_Text_Box.Text);
+            string Search = Formatter.Special_Formatting(Search_Text_Box.Text);
             string Caetgory = Category_Combo_Box.Text;
             foreach (var item in Items_Nested_Flow_Layout_Panel.Controls.OfType<Item_User_Control>())
             {

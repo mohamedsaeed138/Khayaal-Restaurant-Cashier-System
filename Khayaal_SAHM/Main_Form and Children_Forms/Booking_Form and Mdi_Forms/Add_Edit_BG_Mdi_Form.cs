@@ -97,8 +97,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms.Booking_Form_and_Mdi_Forms
             if (Check_Intersections(DateTime.Parse(From), DateTime.Parse(To), table))
             {
 
-                string Name = Formatter.String(Customer_Name_Text_Box.Text);
-                string Notes = Formatter.String(Notes_Text_Box.Text);
+                string Name = Formatter.Special_Formatting(Customer_Name_Text_Box.Text);
+                string Notes = Formatter.Special_Formatting(Notes_Text_Box.Text);
                 Formatter.Check_Connection(conn);
                 if (Add)
                 {

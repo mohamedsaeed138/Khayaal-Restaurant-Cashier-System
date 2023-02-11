@@ -58,7 +58,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
         {
             if (Add_Category_Text_Box.Text != String.Empty)
             {
-                string Category = Formatter.String(Add_Category_Text_Box.Text);
+                string Category = Formatter.Special_Formatting(Add_Category_Text_Box.Text);
                 if (Ensure_No_Duplicated_Categories(Category))
                     Fill_ComboBox(Category);
                 else
@@ -134,8 +134,8 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
 
             if (Name_Text_Box.Text != "")
             {
-                string Name = Formatter.String(Name_Text_Box.Text);
-                string Category = Formatter.String(Category_Combo_Box.Text);
+                string Name = Formatter.Special_Formatting(Name_Text_Box.Text);
+                string Category = Formatter.Special_Formatting(Category_Combo_Box.Text);
 
                 Formatter.Check_Connection(conn);
                 if (Add)
