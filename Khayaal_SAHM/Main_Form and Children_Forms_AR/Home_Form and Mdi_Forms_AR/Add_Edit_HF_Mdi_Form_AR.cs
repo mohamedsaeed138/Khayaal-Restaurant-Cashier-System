@@ -177,7 +177,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Home_Form_and_Mdi_Forms_A
         private void Add_Item_Button_Click(object sender, EventArgs e)
         {
 
-            if (Name_Text_Box.Text != "" && Unit_Price_Text_Box.Text != "")
+            if (Name_Text_Box.Text.Trim() != "" && Unit_Price_Text_Box.Text != "")
             {
                 string Name = Formatter.Special_Formatting(Name_Text_Box.Text);
                 string Category = Formatter.Special_Formatting(Category_Combo_Box.Text);

@@ -132,7 +132,7 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Raw_Materials_Form_and_Md
         private void Add_Raw_Button_Click_1(object sender, EventArgs e)
         {
 
-            if (Name_Text_Box.Text != "")
+            if (Name_Text_Box.Text.Trim() != "")
             {
                 string Name = Formatter.Special_Formatting(Name_Text_Box.Text);
                 string Category = Formatter.Special_Formatting(Category_Combo_Box.Text);

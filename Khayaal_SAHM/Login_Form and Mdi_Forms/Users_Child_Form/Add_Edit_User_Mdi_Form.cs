@@ -63,7 +63,7 @@ namespace Khayaal_SAHM.Login_Form_and_Mdi_Forms.Users_Child_Form
 
         private void Add_Edit_Button_Click(object sender, EventArgs e)
         {
-            if (Name_Text_Box.Text != "" && Password_Text_Box.Text != "")
+            if (Name_Text_Box.Text.Trim() != "" && Password_Text_Box.Text != "")
             {
 
                 string Name = Formatter.Special_Formatting(Name_Text_Box.Text);
