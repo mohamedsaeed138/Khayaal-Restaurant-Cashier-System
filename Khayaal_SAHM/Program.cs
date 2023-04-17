@@ -39,11 +39,11 @@ namespace Khayaal_SAHM
 
         private static bool IsRunning()
         {
-            Process curr = Process.GetCurrentProcess();
-            Process[] procs = Process.GetProcessesByName(curr.ProcessName);
-            foreach (var p in procs)
+            Process current = Process.GetCurrentProcess();
+            Process[] proccesses = Process.GetProcessesByName(current.ProcessName);
+            foreach (var opened_proccess in proccesses)
             {
-                if (p.Id != curr.Id && p.MainModule.FileName == curr.MainModule.FileName)
+                if (opened_proccess.Id != current.Id && opened_proccess.MainModule.FileName == current.MainModule.FileName)
                     return true;
             }
 
