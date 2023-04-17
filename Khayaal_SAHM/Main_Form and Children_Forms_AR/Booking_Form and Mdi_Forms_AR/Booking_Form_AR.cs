@@ -35,11 +35,11 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Booking_Form_and_Mdi_Form
             }
             else
             {
-                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
-                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
-
                 From_Date_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[2].Value));
                 To_Date_Picker.Value = Booking_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[3].Value));
+
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
 
             }
 
