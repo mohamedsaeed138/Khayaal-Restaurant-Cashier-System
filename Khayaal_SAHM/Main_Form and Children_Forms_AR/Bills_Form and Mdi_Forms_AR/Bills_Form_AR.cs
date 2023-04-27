@@ -35,12 +35,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Bills_Form_and_Mdi_Forms_
             }
             else
             {
-
                 From_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[0].Cells[5].Value);
-                To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[5].Value);
 
-                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
                 From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+
+                To_Date_Picker.Value = Convert.ToDateTime(Bills_Table.Rows[Bills_Table.Rows.Count - 1].Cells[5].Value);
             }
 
             if (Cashier)

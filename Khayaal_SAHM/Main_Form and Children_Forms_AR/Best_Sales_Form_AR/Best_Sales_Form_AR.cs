@@ -30,10 +30,12 @@ namespace Khayaal_SAHM.Main_Form_and_Children_Forms_AR.Best_Sales_Form_AR
             {
 
                 From_Date_Picker.Value = Best_Sales_Table.Rows.Cast<DataGridViewRow>().Min(t => Convert.ToDateTime(t.Cells[5].Value));
+
+                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
+                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
+
                 To_Date_Picker.Value = Best_Sales_Table.Rows.Cast<DataGridViewRow>().Max(t => Convert.ToDateTime(t.Cells[6].Value));
 
-                To_Time_Picker.Value = new DateTime(2023, 1, 12, 23, 59, 59);
-                From_Time_Picker.Value = new DateTime(2023, 1, 12, 0, 0, 0);
             }
         }
         public Best_Sales_Form_AR()
