@@ -64,7 +64,15 @@ Khayaal Restaurant Cashier System is a CRUD desktop (for Windows only) project t
 
 ## Screenshots
 
-<!-- Placeholder for screenshots -->
+- Login Form ![Login Form](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/login.png?raw=true)
+- Create new item ![Create new item](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/new%20item.png?raw=true)
+- Home Form ![Home Form](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/home.png?raw=true)
+- Best sales Form ![Best sales Form](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/best%20sales.png?raw=true)
+- Bills Form ![Bills Form](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/bills.png?raw=true)
+- Raw materials Form ![Raw materials Form](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/raw%20materials.png?raw=true)
+- Relations Form ![Relations Form](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/relations.png?raw=true)
+- Purchases Form ![Purchases Form](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/purchases.png?raw=true)
+- Create new booking ![Create new booking](https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/blob/master/Screenshots/new%20booking.png?raw=true)
 
 ## Contribution Guidelines
 
