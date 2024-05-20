@@ -3,8 +3,7 @@
 <p align="center"> 
   <a href="https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/stargazers"><img src="https://img.shields.io/github/stars/mohamedsaeed138/Khayaal-Restaurant-Cashier-System" alt="Stars Badge"/></a>
 <a href="https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/network/members"><img src="https://img.shields.io/github/forks/mohamedsaeed138/Khayaal-Restaurant-Cashier-System" alt="Forks Badge"/></a>
-<a href="https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/network/members"><img src="https://img.shields.io/github/last-commit/mohamedsaeed138/Khayaal-Restaurant-Cashier-System
-" alt="Forks Badge"/></a>
+<a href="https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/network/members"><img src="https://img.shields.io/github/last-commit/mohamedsaeed138/Khayaal-Restaurant-Cashier-System" alt="Last Commit"/></a>
 <a href="https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/pulls"><img src="https://img.shields.io/github/issues-pr/mohamedsaeed138/Khayaal-Restaurant-Cashier-System" alt="Pull Requests Badge"/></a>
 <a href="https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/issues"><img src="https://img.shields.io/github/issues/mohamedsaeed138/Khayaal-Restaurant-Cashier-System" alt="Issues Badge"/></a>
 <a href="https://github.com/mohamedsaeed138/Khayaal-Restaurant-Cashier-System/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/mohamedsaeed138/Khayaal-Restaurant-Cashier-System?color=2b9348"></a>
