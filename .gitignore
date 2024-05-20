@@ -357,3 +357,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Khayaal_SAHM/ndp48-x86-x64-allos-enu.exe
+
+.vscode/
+.idea/
